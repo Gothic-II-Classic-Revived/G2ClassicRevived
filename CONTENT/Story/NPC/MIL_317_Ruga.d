@@ -17,7 +17,7 @@ instance Mil_317_Ruga (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
-	EquipItem 			(self, ItRw_Mil_Crossbow);
+	EquipItem 			(self, ITRW_REVIVED_CROSSBOW_LIGHT_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

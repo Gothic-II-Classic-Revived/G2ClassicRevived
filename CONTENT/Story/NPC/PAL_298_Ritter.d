@@ -23,7 +23,7 @@ instance PAL_298_Ritter (Npc_Default)
 	
 	// ------ Equippte Waffen ------														
 	EquipItem			(self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
-	EquipItem			(self, ItRw_Mil_Crossbow);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

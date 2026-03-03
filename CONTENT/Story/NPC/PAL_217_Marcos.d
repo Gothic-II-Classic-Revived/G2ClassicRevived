@@ -17,7 +17,7 @@ instance PAL_217_Marcos  (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_PALADIN_02);
-	EquipItem			(self, ItRw_Mil_Crossbow);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_02);
 	
 	// ------ Inventory ------
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_03,5);
