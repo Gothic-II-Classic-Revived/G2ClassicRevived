@@ -19,6 +19,11 @@ const int	REV_Condition_1H_Axe_03				=	90;
 const int	REV_Range_1H_Axe_03					=	70;
 const int	REV_Value_1H_Axe_03					=	500;
 //******************************************************************//
+const int	REV_Damage_1H_Axe_Great_01			=	110;
+const int	REV_Condition_1H_Axe_Great_01		=	110;
+const int	REV_Range_1H_Axe_Great_01			=	80;
+const int	REV_Value_1H_Axe_Great_01			=	1250;
+//******************************************************************//
 //******************************************************************//
 const int	REV_Damage_1H_Axe_Cord				=	60;
 const int	REV_Condition_1H_Axe_Cord			=	50;
@@ -131,6 +136,31 @@ INSTANCE ITMW_REVIVED_1H_AXE_03 (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_1H_Axe_03;
 	visual 				=	"ItMw_1H_Axe_03.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_1H_AXE_GREAT_01 (C_Item)
+{	
+	name 				=	"Torturer's Axe";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_Great_01;
+
+	damageTotal			= 	REV_Damage_1H_Axe_Great_01;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_Great_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_Great_01;
+	visual 				=	"ItMw_065_2h_greataxe_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
