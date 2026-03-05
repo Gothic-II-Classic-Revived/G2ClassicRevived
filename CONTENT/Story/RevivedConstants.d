@@ -93,6 +93,7 @@ const string NAME_HIGHWAYMAN			=	"Highwayman";
 
 // Items
 const string NAME_OrcWeapon				=	"Orc Weapon";
+const string NAME_OrcWeaponFix			=	"Orc Weapon (Reforged)";
 const string NAME_HolyWeapon1H			=	"One-Handed Weapon (Holy)";
 const string NAME_HolyWeapon2H			=	"Two-Handed Weapon (Holy)";
 const string NAME_BlessedWeapon1H		=	"One-Handed Weapon (Blessed)";
@@ -625,19 +626,72 @@ const int NPC_TALENT_TOBACCO			= 21;
 // Swordmaking
 // ***************
 
+const string NAME_1H_COMMON_01_DESC		= "Crude Sword (One-Handed)";
+
 const int WEAPON_1H_REVIVED_01			= 13;
+const string NAME_1H_REVIVED_01			= "Short Sword";
+const string NAME_1H_REVIVED_01_DESC	= "Short Sword (One-Handed)";
 const int WEAPON_1H_REVIVED_02			= 14;
+const string NAME_1H_REVIVED_02			= "Long Sword";
+const string NAME_1H_REVIVED_02_DESC	= "Long Sword (One-Handed)";
 const int WEAPON_1H_REVIVED_03			= 15;
+const string NAME_1H_REVIVED_03			= "Broad Sword";
+const string NAME_1H_REVIVED_03_DESC	= "Broad Sword (One-Handed)";
 const int WEAPON_1H_REVIVED_04			= 16;
+const string NAME_1H_REVIVED_04			= "Sword";
+const string NAME_1H_REVIVED_04_DESC	= "Sword (One-Handed)";
 const int WEAPON_1H_REVIVED_05			= 17;
+const string NAME_1H_REVIVED_05			= "Bastard Sword";
+const string NAME_1H_REVIVED_05_DESC	= "Bastard Sword (One-Handed)";
 const int WEAPON_2H_REVIVED_01			= 18;
+const string NAME_2H_REVIVED_01			= "Light Sword";
+const string NAME_2H_REVIVED_01_DESC	= "Light Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_02			= 19;
+const string NAME_2H_REVIVED_02			= "Heavy Sword";
+const string NAME_2H_REVIVED_02_DESC	= "Heavy Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_03			= 20;
+const string NAME_2H_REVIVED_03			= "Broad Sword";
+const string NAME_2H_REVIVED_03_DESC	= "Broad Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_04			= 21;
+const string NAME_2H_REVIVED_04			= "Sword";
+const string NAME_2H_REVIVED_04_DESC	= "Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_05			= 22;
+const string NAME_2H_REVIVED_05			= "Bastard Sword";
+const string NAME_2H_REVIVED_05_DESC	= "Bastard Sword (Two-Handed)";
+
+const int WEAPON_1H_REVIVED_ORE_01		= 23;
+const string NAME_1H_REVIVED_ORE_01		= "Ore Short Sword";
+const string NAME_1H_REVIVED_ORE_01_DESC= "Ore Short Sword (One-Handed)";
+const int WEAPON_1H_REVIVED_ORE_02		= 24;
+const string NAME_1H_REVIVED_ORE_02		= "Ore Long Sword";
+const string NAME_1H_REVIVED_ORE_02_DESC= "Ore Long  Sword (One-Handed)";
+const int WEAPON_1H_REVIVED_ORE_03		= 25;
+const string NAME_1H_REVIVED_ORE_03		= "Ore Broad Sword";
+const string NAME_1H_REVIVED_ORE_03_DESC= "Ore Broad Sword (One-Handed)";
+const int WEAPON_1H_REVIVED_ORE_04		= 26;
+const string NAME_1H_REVIVED_ORE_04		= "Ore Sword";
+const string NAME_1H_REVIVED_ORE_04_DESC= "Ore Sword (One-Handed)";
+const int WEAPON_1H_REVIVED_ORE_05		= 27;
+const string NAME_1H_REVIVED_ORE_05		= "Ore Bastard Sword";
+const string NAME_1H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (One-Handed)";
+const int WEAPON_2H_REVIVED_ORE_01		= 28;
+const string NAME_2H_REVIVED_ORE_01		= "Ore Light Sword";
+const string NAME_2H_REVIVED_ORE_01_DESC= "Ore Light Sword (Two-Handed)";
+const int WEAPON_2H_REVIVED_ORE_02		= 29;
+const string NAME_2H_REVIVED_ORE_02		= "Ore Long Sword";
+const string NAME_2H_REVIVED_ORE_02_DESC= "Ore Long Sword (Two-Handed)";
+const int WEAPON_2H_REVIVED_ORE_03		= 30;
+const string NAME_2H_REVIVED_ORE_03		= "Ore Broad Sword";
+const string NAME_2H_REVIVED_ORE_03_DESC= "Ore Broad Sword (Two-Handed)";
+const int WEAPON_2H_REVIVED_ORE_04		= 31;
+const string NAME_2H_REVIVED_ORE_04		= "Ore Sword";
+const string NAME_2H_REVIVED_ORE_04_DESC= "Ore Sword (Two-Handed)";
+const int WEAPON_2H_REVIVED_ORE_05		= 32;
+const string NAME_2H_REVIVED_ORE_05		= "Ore Bastard Sword";
+const string NAME_2H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (Two-Handed)";
 
 
-const int MAX_WEAPONS_MELEE 			= 23;
+const int MAX_WEAPONS_MELEE 			= 33;
 var int PLAYER_TALENT_SMITH[MAX_WEAPONS_MELEE];
 
 
@@ -647,13 +701,21 @@ var int PLAYER_TALENT_SMITH[MAX_WEAPONS_MELEE];
 // ***************
 
 const int WEAPON_BOW_REVIVED_01			= 1;
-const int WEAPON_BOW_REVIVED_02			= 3;
-const int WEAPON_BOW_REVIVED_03			= 5;
-const int WEAPON_BOW_REVIVED_04			= 7;
-const int WEAPON_CBOW_REVIVED_01		= 2;
-const int WEAPON_CBOW_REVIVED_02		= 4;
-const int WEAPON_CBOW_REVIVED_03		= 6;
+const string NAME_BOW_REVIVED_01		= "Ore Bastard Sword";
+const int WEAPON_BOW_REVIVED_02			= 2;
+const string NAME_BOW_REVIVED_02		= "Ore Bastard Sword";
+const int WEAPON_BOW_REVIVED_03			= 3;
+const string NAME_BOW_REVIVED_03		= "Ore Bastard Sword";
+const int WEAPON_BOW_REVIVED_04			= 4;
+const string NAME_BOW_REVIVED_04		= "Ore Bastard Sword";
+const int WEAPON_CBOW_REVIVED_01		= 5;
+const string NAME_CBOW_REVIVED_01		= "Ore Bastard Sword";
+const int WEAPON_CBOW_REVIVED_02		= 6;
+const string NAME_CBOW_REVIVED_02		= "Ore Bastard Sword";
+const int WEAPON_CBOW_REVIVED_03		= 7;
+const string NAME_CBOW_REVIVED_03		= "Ore Bastard Sword";
 const int WEAPON_CBOW_REVIVED_04		= 8;
+const string NAME_CBOW_REVIVED_04		= "Ore Bastard Sword";
 
 
 const int MAX_WEAPONS_RANGED 			= 9;

@@ -800,52 +800,52 @@ func void B_HaradSmithChoices()
 	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Bastard Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05))		,DIA_Harad_TeachSmith_Harad05_2H);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_05_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05))		,DIA_Harad_TeachSmith_Harad05_2H);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04))		,DIA_Harad_TeachSmith_Harad04_2H);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_04_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04))		,DIA_Harad_TeachSmith_Harad04_2H);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Broad Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03))		,DIA_Harad_TeachSmith_Harad03_2H);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_03_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03))		,DIA_Harad_TeachSmith_Harad03_2H);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Heavy Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02))		,DIA_Harad_TeachSmith_Harad02_2H);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_02_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02))		,DIA_Harad_TeachSmith_Harad02_2H);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Light Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01))		,DIA_Harad_TeachSmith_Harad01_2H);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_01_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01))		,DIA_Harad_TeachSmith_Harad01_2H);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Bastard Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05))		,DIA_Harad_TeachSmith_Harad05);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_05_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05))		,DIA_Harad_TeachSmith_Harad05);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04))		,DIA_Harad_TeachSmith_Harad04);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_04_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04))		,DIA_Harad_TeachSmith_Harad04);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Broad Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03))		,DIA_Harad_TeachSmith_Harad03);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_03_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03))		,DIA_Harad_TeachSmith_Harad03);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Long Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02))		,DIA_Harad_TeachSmith_Harad02);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_02_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02))		,DIA_Harad_TeachSmith_Harad02);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Short Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01))		,DIA_Harad_TeachSmith_Harad01);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_01_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01))		,DIA_Harad_TeachSmith_Harad01);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
 	{

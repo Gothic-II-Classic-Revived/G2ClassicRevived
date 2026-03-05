@@ -500,48 +500,48 @@ func void DIA_Bennet_TeachSmith_Info ()
 	Info_ClearChoices (DIA_Bennet_TeachSmith);
 	Info_AddChoice (DIA_Bennet_TeachSmith, DIALOG_BACK, DIA_Bennet_TeachSmith_BACK);
 	// ------ Kapitel 2 ------
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_01] == FALSE)
 	&& (Kapitel >= 2) 
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_1H_Special_01 , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_01))		,DIA_Bennet_TeachSmith_1hSpecial1);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_01))		,DIA_Bennet_TeachSmith_1hSpecial1);
 	};
-	if (PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_01] == FALSE)
 	&& (Kapitel >= 2) 
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_2H_Special_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_01))		,DIA_Bennet_TeachSmith_2hSpecial1);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_01))		,DIA_Bennet_TeachSmith_2hSpecial1);
 	};
 	// ------ Kapitel 3 ------
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_02] == FALSE)
 	&& (Kapitel >= 3)
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_1H_Special_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_02))		,DIA_Bennet_TeachSmith_1hSpecial2);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_02))		,DIA_Bennet_TeachSmith_1hSpecial2);
 	};
-	if (PLAYER_TALENT_SMITH[WEAPON_2H_Special_02] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_02] == FALSE)
 	&& (Kapitel >= 3)
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_2H_Special_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_02))		,DIA_Bennet_TeachSmith_2hSpecial2);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_02))		,DIA_Bennet_TeachSmith_2hSpecial2);
 	};
 	// ------ Kapitel 4 ------
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_03] == FALSE)
 	&& (Kapitel >= 4)
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_1H_Special_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_03))		,DIA_Bennet_TeachSmith_1hSpecial3);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_03))		,DIA_Bennet_TeachSmith_1hSpecial3);
 	};
-	if (PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_03] == FALSE)
 	&& (Kapitel >= 4)
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_2H_Special_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_03))		,DIA_Bennet_TeachSmith_2hSpecial3);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_03))		,DIA_Bennet_TeachSmith_2hSpecial3);
 	};
 	// ------ Kapitel 5 ------
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] == FALSE)
 	&& (Kapitel >= 5)
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_1H_Special_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_04))		,DIA_Bennet_TeachSmith_1hSpecial4);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_04))		,DIA_Bennet_TeachSmith_1hSpecial4);
 	};  
-	if (PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] == FALSE)
 	&& (Kapitel >= 5)
 	{
-		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_ItMw_2H_Special_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_04))		,DIA_Bennet_TeachSmith_2hSpecial4);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_04))		,DIA_Bennet_TeachSmith_2hSpecial4);
 	};
 };
 
@@ -552,42 +552,42 @@ FUNC VOID DIA_Bennet_TeachSmith_Back ()
 func VOID DIA_Bennet_TeachSmith_1hSpecial1 ()
 {
 	
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_01);	
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_ORE_01);	
 };
 FUNC VOID DIA_Bennet_TeachSmith_2hSpecial1 ()
 {
 
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_01);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_ORE_01);
 };
 FUNC VOID DIA_Bennet_TeachSmith_1hSpecial2 ()
 {
 
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_02);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_ORE_02);
 };
 FUNC VOID DIA_Bennet_TeachSmith_2hSpecial2 ()
 {
 
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_02);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_ORE_02);
 };
 FUNC VOID DIA_Bennet_TeachSmith_1hSpecial3 ()
 {
 
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_03);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_ORE_03);
 };
 FUNC VOID DIA_Bennet_TeachSmith_2hSpecial3 ()
 {
 
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_03);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_ORE_03);
 };
 FUNC VOID DIA_Bennet_TeachSmith_1hSpecial4 ()
 {
 	
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_04);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_ORE_04);
 };
 FUNC VOID DIA_Bennet_TeachSmith_2hSpecial4 ()
 {
 
-	B_TeachPlayerTalentSmith(self, other, WEAPON_2H_Special_04);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_ORE_04);
 };
 
 

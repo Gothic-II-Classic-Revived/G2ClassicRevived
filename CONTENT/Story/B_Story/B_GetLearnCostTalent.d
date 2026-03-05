@@ -109,15 +109,26 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == WEAPON_1H_Harad_04)		{	kosten = (10);	}
 
 		else if (skill == WEAPON_1H_REVIVED_01)		{	kosten = (2);	}
-		else if (skill == WEAPON_2H_REVIVED_01)		{	kosten = (2);	}
 		else if (skill == WEAPON_1H_REVIVED_02)		{	kosten = (4);	}
-		else if (skill == WEAPON_2H_REVIVED_02)		{	kosten = (4);	}
 		else if (skill == WEAPON_1H_REVIVED_03)		{	kosten = (6);	}
-		else if (skill == WEAPON_2H_REVIVED_03)		{	kosten = (6);	}
 		else if (skill == WEAPON_1H_REVIVED_04)		{	kosten = (8);	}
-		else if (skill == WEAPON_2H_REVIVED_04)		{	kosten = (8);	}
 		else if (skill == WEAPON_1H_REVIVED_05)		{	kosten = (10);	}
-		else if (skill == WEAPON_2H_REVIVED_05)		{	kosten = (10);	};
+		else if (skill == WEAPON_2H_REVIVED_01)		{	kosten = (2);	}
+		else if (skill == WEAPON_2H_REVIVED_02)		{	kosten = (4);	}
+		else if (skill == WEAPON_2H_REVIVED_03)		{	kosten = (6);	}
+		else if (skill == WEAPON_2H_REVIVED_04)		{	kosten = (8);	}
+		else if (skill == WEAPON_2H_REVIVED_05)		{	kosten = (10);	}
+
+		else if (skill == WEAPON_1H_REVIVED_ORE_01)		{	kosten = (4);	}
+		else if (skill == WEAPON_1H_REVIVED_ORE_02)		{	kosten = (6);	}
+		else if (skill == WEAPON_1H_REVIVED_ORE_03)		{	kosten = (8);	}
+		else if (skill == WEAPON_1H_REVIVED_ORE_04)		{	kosten = (10);	}
+		else if (skill == WEAPON_1H_REVIVED_ORE_05)		{	kosten = (12);	}
+		else if (skill == WEAPON_2H_REVIVED_ORE_01)		{	kosten = (4);	}
+		else if (skill == WEAPON_2H_REVIVED_ORE_02)		{	kosten = (6);	}
+		else if (skill == WEAPON_2H_REVIVED_ORE_03)		{	kosten = (8);	}
+		else if (skill == WEAPON_2H_REVIVED_ORE_04)		{	kosten = (10);	}
+		else if (skill == WEAPON_2H_REVIVED_ORE_05)		{	kosten = (12);	};
 	};
 
 	// ------ Kosten für Alchemie ------

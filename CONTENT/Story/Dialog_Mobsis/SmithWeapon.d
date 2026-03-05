@@ -167,7 +167,7 @@ INSTANCE PC_ITMW_1H_SWORD_01 (C_INFO)
 	condition		= PC_ITMW_1H_SWORD_01_Condition;
 	information		= PC_ITMW_1H_SWORD_01_Info;
 	permanent		= TRUE;
-	description		= "Crude Sword";
+	description		= NAME_1H_COMMON_01_DESC;
 };
 
 FUNC INT PC_ITMW_1H_SWORD_01_Condition()
@@ -199,7 +199,7 @@ INSTANCE PC_WEAPON_1H_REVIVED_01 (C_INFO)
 	condition		= PC_WEAPON_1H_REVIVED_01_Condition;
 	information		= PC_WEAPON_1H_REVIVED_01_Info;
 	permanent		= TRUE;
-	description		= "Short Sword (One-Handed)";
+	description		= NAME_1H_REVIVED_01_DESC;
 };
 
 FUNC INT PC_WEAPON_1H_REVIVED_01_Condition()
@@ -227,7 +227,7 @@ INSTANCE PC_WEAPON_1H_REVIVED_02 (C_INFO)
 	condition		= PC_WEAPON_1H_REVIVED_02_Condition;
 	information		= PC_WEAPON_1H_REVIVED_02_Info;
 	permanent		= TRUE;
-	description		= "Long Sword (One-Handed)";
+	description		= NAME_1H_REVIVED_02_DESC;
 };
 
 FUNC INT PC_WEAPON_1H_REVIVED_02_Condition()
@@ -255,7 +255,7 @@ INSTANCE PC_WEAPON_1H_REVIVED_03 (C_INFO)
 	condition		= PC_WEAPON_1H_REVIVED_03_Condition;
 	information		= PC_WEAPON_1H_REVIVED_03_Info;
 	permanent		= TRUE;
-	description		= "Broad Sword (One-Handed)";
+	description		= NAME_1H_REVIVED_03_DESC;
 };
 
 FUNC INT PC_WEAPON_1H_REVIVED_03_Condition()
@@ -283,7 +283,7 @@ INSTANCE PC_WEAPON_1H_REVIVED_04 (C_INFO)
 	condition		= PC_WEAPON_1H_REVIVED_04_Condition;
 	information		= PC_WEAPON_1H_REVIVED_04_Info;
 	permanent		= TRUE;
-	description		= "Sword (One-Handed)";
+	description		= NAME_1H_REVIVED_04_DESC;
 };
 
 FUNC INT PC_WEAPON_1H_REVIVED_04_Condition()
@@ -311,7 +311,7 @@ INSTANCE PC_WEAPON_1H_REVIVED_05 (C_INFO)
 	condition		= PC_WEAPON_1H_REVIVED_05_Condition;
 	information		= PC_WEAPON_1H_REVIVED_05_Info;
 	permanent		= TRUE;
-	description		= "Bastard Sword (One-Handed)";
+	description		= NAME_1H_REVIVED_05_DESC;
 };
 
 FUNC INT PC_WEAPON_1H_REVIVED_05_Condition()
@@ -344,7 +344,7 @@ INSTANCE PC_WEAPON_2H_REVIVED_01 (C_INFO)
 	condition		= PC_WEAPON_2H_REVIVED_01_Condition;
 	information		= PC_WEAPON_2H_REVIVED_01_Info;
 	permanent		= TRUE;
-	description		= "Light Sword (Two-Handed)";
+	description		= NAME_2H_REVIVED_01_DESC;
 };
 
 FUNC INT PC_WEAPON_2H_REVIVED_01_Condition()
@@ -372,7 +372,7 @@ INSTANCE PC_WEAPON_2H_REVIVED_02 (C_INFO)
 	condition		= PC_WEAPON_2H_REVIVED_02_Condition;
 	information		= PC_WEAPON_2H_REVIVED_02_Info;
 	permanent		= TRUE;
-	description		= "Heavy Sword (Two-Handed)";
+	description		= NAME_2H_REVIVED_02_DESC;
 };
 
 FUNC INT PC_WEAPON_2H_REVIVED_02_Condition()
@@ -400,7 +400,7 @@ INSTANCE PC_WEAPON_2H_REVIVED_03 (C_INFO)
 	condition		= PC_WEAPON_2H_REVIVED_03_Condition;
 	information		= PC_WEAPON_2H_REVIVED_03_Info;
 	permanent		= TRUE;
-	description		= "Broad Sword (Two-Handed)";
+	description		= NAME_2H_REVIVED_03_DESC;
 };
 
 FUNC INT PC_WEAPON_2H_REVIVED_03_Condition()
@@ -428,7 +428,7 @@ INSTANCE PC_WEAPON_2H_REVIVED_04 (C_INFO)
 	condition		= PC_WEAPON_2H_REVIVED_04_Condition;
 	information		= PC_WEAPON_2H_REVIVED_04_Info;
 	permanent		= TRUE;
-	description		= "Sword (Two-Handed)";
+	description		= NAME_2H_REVIVED_04_DESC;
 };
 
 FUNC INT PC_WEAPON_2H_REVIVED_04_Condition()
@@ -456,7 +456,7 @@ INSTANCE PC_WEAPON_2H_REVIVED_05 (C_INFO)
 	condition		= PC_WEAPON_2H_REVIVED_05_Condition;
 	information		= PC_WEAPON_2H_REVIVED_05_Info;
 	permanent		= TRUE;
-	description		= "Bastard Sword (Two-Handed)";
+	description		= NAME_2H_REVIVED_05_DESC;
 };
 
 FUNC INT PC_WEAPON_2H_REVIVED_05_Condition()
@@ -482,31 +482,32 @@ FUNC VOID PC_WEAPON_2H_REVIVED_05_Info ()
 //****************************************************************************
 //****************************************************************************
 
-INSTANCE PC_ItMw_1H_Special_01 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_ORE_01 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_ItMw_1H_Special_01_Condition;
-	information		= PC_ItMw_1H_Special_01_Info;
+	condition		= PC_WEAPON_1H_REVIVED_ORE_01_Condition;
+	information		= PC_WEAPON_1H_REVIVED_ORE_01_Info;
 	permanent		= TRUE;
+	description		= NAME_1H_REVIVED_ORE_01_DESC;
 };
 
-FUNC INT PC_ItMw_1H_Special_01_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_ORE_01_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_01] == TRUE))
 	&& (Erzwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_ItMw_1H_Special_01_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_ORE_01_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 1)
 	{
 		Npc_RemoveInvItems (hero, ItMi_Nugget, 1);
 		
-		CreateInvItems 	   (hero, ItMw_1H_Special_01,1); 
+		CreateInvItems 	   (hero, ITMW_REVIVED_1H_SWORD_0RE_01,1); 
 		Print (PRINT_SmithSuccess);
 	}
 	else
@@ -519,31 +520,32 @@ FUNC VOID PC_ItMw_1H_Special_01_Info ()
 };
 //*******************************************************
 
-INSTANCE PC_ItMw_2H_Special_01 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_ORE_02 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_ItMw_2H_Special_01_Condition;
-	information		= PC_ItMw_2H_Special_01_Info;
+	condition		= PC_WEAPON_1H_REVIVED_ORE_02_Condition;
+	information		= PC_WEAPON_1H_REVIVED_ORE_02_Info;
 	permanent		= TRUE;
+	description		= NAME_1H_REVIVED_ORE_02_DESC;
 };
 
-FUNC INT PC_ItMw_2H_Special_01_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_ORE_02_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_02] == TRUE))
 	&& (Erzwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_ItMw_2H_Special_01_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_ORE_02_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 2)
 	{
 		Npc_RemoveInvItems  (hero,ItMi_Nugget,2);
 		
-		CreateInvItems 	    (hero,ItMw_2H_Special_01,1); 
+		CreateInvItems 	   (hero,ITMW_REVIVED_1H_SWORD_ORE_02,1); 
 		Print (PRINT_SmithSuccess);
 	}
 	else 
@@ -555,105 +557,32 @@ FUNC VOID PC_ItMw_2H_Special_01_Info ()
 	Erzwaffen = FALSE;
 };
 //*******************************************************
-
-INSTANCE PC_ItMw_1H_Special_02 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_ORE_03 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_ItMw_1H_Special_02_Condition;
-	information		= PC_ItMw_1H_Special_02_Info;
+	condition		= PC_WEAPON_1H_REVIVED_ORE_03_Condition;
+	information		= PC_WEAPON_1H_REVIVED_ORE_03_Info;
 	permanent		= TRUE;
+	description		= NAME_1H_REVIVED_ORE_03_DESC;
 };
 
-FUNC INT PC_ItMw_1H_Special_02_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_ORE_03_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_03] == TRUE))
 	&& (Erzwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_ItMw_1H_Special_02_Info ()
-{
-	if (Npc_HasItems (hero, ItMi_Nugget) >= 2)
-	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,2);
-		
-		CreateInvItems 	   (hero,ItMw_1H_Special_02,1); 
-		Print (PRINT_SmithSuccess);
-	}
-	else 
-	{
-		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
-};
-//*******************************************************
-
-INSTANCE PC_ItMw_2H_Special_02 (C_INFO)
-{
-	npc				= PC_Hero;
-	condition		= PC_ItMw_2H_Special_02_Condition;
-	information		= PC_ItMw_2H_Special_02_Info;
-	permanent		= TRUE;
-};
-
-FUNC INT PC_ItMw_2H_Special_02_Condition()
-{	
-	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_2H_Special_02] == TRUE))
-	&& (Erzwaffen == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_ItMw_2H_Special_02_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_ORE_03_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 3)
 	{
 		Npc_RemoveInvItems  (hero,ItMi_Nugget,3);
 		
-		CreateInvItems 	    (hero,ItMw_2H_Special_02,1); 
-		Print (PRINT_SmithSuccess);
-	}
-	else 
-	{
-		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
-};
-//*******************************************************
-INSTANCE PC_ItMw_1H_Special_03 (C_INFO)
-{
-	npc				= PC_Hero;
-	condition		= PC_ItMw_1H_Special_03_Condition;
-	information		= PC_ItMw_1H_Special_03_Info;
-	permanent		= TRUE;
-};
-
-FUNC INT PC_ItMw_1H_Special_03_Condition()
-{	
-	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] == TRUE))
-	&& (Erzwaffen == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_ItMw_1H_Special_03_Info ()
-{
-	if (Npc_HasItems (hero, ItMi_Nugget) >= 3)
-	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,3);
-		
-		CreateInvItems 	   (hero,ItMw_1H_Special_03,1); 
+		CreateInvItems 	   (hero,ITMW_REVIVED_1H_SWORD_ORE_03,1); 
 		Print (PRINT_SmithSuccess);
 	}
 	else 
@@ -666,62 +595,26 @@ FUNC VOID PC_ItMw_1H_Special_03_Info ()
 };
 //*******************************************************
 
-INSTANCE PC_ItMw_2H_Special_03 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_ORE_04 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_ItMw_2H_Special_03_Condition;
-	information		= PC_ItMw_2H_Special_03_Info;
+	condition		= PC_WEAPON_1H_REVIVED_ORE_04_Condition;
+	information		= PC_WEAPON_1H_REVIVED_ORE_04_Info;
 	permanent		= TRUE;
+	description		= NAME_1H_REVIVED_ORE_04_DESC;
 };
 
-FUNC INT PC_ItMw_2H_Special_03_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_ORE_04_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] == TRUE))
 	&& (Erzwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_ItMw_2H_Special_03_Info ()
-{
-	if (Npc_HasItems (hero, ItMi_Nugget) >= 4)
-	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,4);
-		
-		CreateInvItems 	    (hero,ItMw_2H_Special_03,1); 
-		Print (PRINT_SmithSuccess);
-	}
-	else 
-	{
-		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
-	B_ENDPRODUCTIONDIALOG ();
-	Erzwaffen = FALSE;
-};
-//*******************************************************
-
-INSTANCE PC_ItMw_1H_Special_04 (C_INFO)
-{
-	npc				= PC_Hero;
-	condition		= PC_ItMw_1H_Special_04_Condition;
-	information		= PC_ItMw_1H_Special_04_Info;
-	permanent		= TRUE;
-};
-
-FUNC INT PC_ItMw_1H_Special_04_Condition()
-{	
-	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] == TRUE))
-	&& (Erzwaffen == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_ItMw_1H_Special_04_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_ORE_04_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 4)
 	&& (Npc_HasItems (hero, ItAt_DragonBlood) >= 5)
@@ -729,7 +622,7 @@ FUNC VOID PC_ItMw_1H_Special_04_Info ()
 		Npc_RemoveInvItems  (hero,ItMi_Nugget,4);
 		Npc_RemoveInvItems  (hero,ItAt_DragonBlood,5);
 		
-		CreateInvItems 	   (hero,ItMw_1H_Special_04,1); 
+		CreateInvItems 	   (hero,ITMW_REVIVED_1H_SWORD_ORE_04,1); 
 		Print (PRINT_SmithSuccess);
 	}
 	else 
@@ -742,25 +635,140 @@ FUNC VOID PC_ItMw_1H_Special_04_Info ()
 };
 //*******************************************************
 
-INSTANCE PC_ItMw_2H_Special_04 (C_INFO)
+INSTANCE PC_WEAPON_2H_REVIVED_ORE_01 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_ItMw_2H_Special_04_Condition;
-	information		= PC_ItMw_2H_Special_04_Info;
+	condition		= PC_WEAPON_2H_REVIVED_ORE_01_Condition;
+	information		= PC_WEAPON_2H_REVIVED_ORE_01_Info;
 	permanent		= TRUE;
+	description		= NAME_2H_REVIVED_ORE_01_DESC;
 };
 
-FUNC INT PC_ItMw_2H_Special_04_Condition()
+FUNC INT PC_WEAPON_2H_REVIVED_ORE_01_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_01] == TRUE))
 	&& (Erzwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_ItMw_2H_Special_04_Info ()
+FUNC VOID PC_WEAPON_2H_REVIVED_ORE_01_Info ()
+{
+	if (Npc_HasItems (hero, ItMi_Nugget) >= 2)
+	{
+		Npc_RemoveInvItems  (hero,ItMi_Nugget,2);
+		
+		CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_ORE_01,1); 
+		Print (PRINT_SmithSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMiSwordRaw,1);
+	};	
+	B_ENDPRODUCTIONDIALOG ();
+	Erzwaffen = FALSE;
+};
+//*******************************************************
+
+INSTANCE PC_WEAPON_2H_REVIVED_ORE_02 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_ORE_02_Condition;
+	information		= PC_WEAPON_2H_REVIVED_ORE_02_Info;
+	permanent		= TRUE;
+	description		= NAME_2H_REVIVED_ORE_02_DESC;
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_ORE_02_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_02] == TRUE))
+	&& (Erzwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_ORE_02_Info ()
+{
+	if (Npc_HasItems (hero, ItMi_Nugget) >= 3)
+	{
+		Npc_RemoveInvItems  (hero,ItMi_Nugget,3);
+		
+		CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_ORE_02,1); 
+		Print (PRINT_SmithSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMiSwordRaw,1);
+	};	
+	B_ENDPRODUCTIONDIALOG ();
+	Erzwaffen = FALSE;
+};
+//*******************************************************
+
+INSTANCE PC_WEAPON_2H_REVIVED_ORE_03 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_ORE_03_Condition;
+	information		= PC_WEAPON_2H_REVIVED_ORE_03_Info;
+	permanent		= TRUE;
+	description		= NAME_2H_REVIVED_ORE_03_DESC;
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_ORE_03_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_03] == TRUE))
+	&& (Erzwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_ORE_03_Info ()
+{
+	if (Npc_HasItems (hero, ItMi_Nugget) >= 4)
+	{
+		Npc_RemoveInvItems  (hero,ItMi_Nugget,4);
+		
+		CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_ORE_03,1); 
+		Print (PRINT_SmithSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMiSwordRaw,1);
+	};	
+	B_ENDPRODUCTIONDIALOG ();
+	Erzwaffen = FALSE;
+};
+//*******************************************************
+
+INSTANCE PC_WEAPON_2H_REVIVED_ORE_04 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_ORE_04_Condition;
+	information		= PC_WEAPON_2H_REVIVED_ORE_04_Info;
+	permanent		= TRUE;
+	description		= NAME_2H_REVIVED_ORE_04_DESC;
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_ORE_04_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] == TRUE))
+	&& (Erzwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_ORE_04_Info ()
 {
 	if (Npc_HasItems  (hero, ItMi_Nugget) >= 5)
 	&& (Npc_HasItems  (hero, ItAt_DragonBlood) >= 5)
@@ -768,7 +776,7 @@ FUNC VOID PC_ItMw_2H_Special_04_Info ()
 		Npc_RemoveInvItems  (hero,ItMi_Nugget,5);
 		Npc_RemoveInvItems  (hero,ItAt_DragonBlood,5);
 		
-		CreateInvItems 	   (hero,ItMw_2H_Special_04,1); 
+		CreateInvItems 	   (hero,ITMW_REVIVED_2H_SWORD_ORE_04,1); 
 		Print (PRINT_SmithSuccess);
 	}
 	else 
