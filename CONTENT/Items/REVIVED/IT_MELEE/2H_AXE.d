@@ -51,6 +51,12 @@ const int	REV_Range_2H_Axe_Heavy_04			=	100;
 const int	REV_Value_2H_Axe_Heavy_04			=	3800;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Damage_2H_Axe_Ore_01			=	110;
+const int	REV_Condition_2H_Axe_Ore_01			=	110;
+const int	REV_Range_2H_Axe_Ore_01				=	80;
+const int	REV_Value_2H_Axe_Ore_01				=	1250;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_2H_Axe_Lee				=	105;
 const int	REV_Condition_2H_Axe_Lee			=	95;
 const int	REV_Range_2H_Axe_Lee				=	130;
@@ -318,6 +324,36 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_04 (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Axe_Heavy_04;
 	visual 				=	"ItMw_2H_Axe_Heavy_04.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+
+//****************************************************************************
+//			MAGICLESS ORE
+//****************************************************************************
+
+INSTANCE ITMW_REVIVED_2H_AXE_ORE_01 (C_Item)
+{	
+	name 				=	"Ore Axe";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_2H_Axe_Ore_01;
+
+	damageTotal			= 	REV_Damage_2H_Axe_Ore_01;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_2H_Axe_Ore_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Axe_Ore_01;
+	visual 				=	"REV_2H_AXE_ORE_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;

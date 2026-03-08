@@ -261,7 +261,7 @@ instance DIA_Garwig_THIEF		(C_INFO)
 func int DIA_Garwig_THIEF_Condition ()
 {	
 	if  (Npc_IsInState (self, ZS_Talk))
-	&&  (Npc_HasItems (hero, ITMW_REVIVED_2H_HAMMER_HOLY) == 1)
+	&&  (Npc_HasItems (hero, ITMW_REVIVED_1H_HAMMER_HOLY) == 1)
 	{
 		return TRUE;
 	};
@@ -295,7 +295,7 @@ instance DIA_Garwig_Abgeben		(C_INFO)
 };
 func int DIA_Garwig_Abgeben_Condition ()
 {	
-	if (Npc_HasItems (other, ITMW_REVIVED_2H_HAMMER_HOLY) >= 1)
+	if (Npc_HasItems (other, ITMW_REVIVED_1H_HAMMER_HOLY) >= 1)
 	{
 		return TRUE;
 	};
@@ -314,7 +314,7 @@ func void DIA_Garwig_Abgeben_Info ()
 	};
 	AI_Output (self, other, "DIA_Garwig_Abgeben_06_03"); //But it is not my place to judge you. Innos shall administer his justice upon you, and you shall receive his punishment!
 	
-	B_GiveInvItems (other,self, ITMW_REVIVED_2H_HAMMER_HOLY,1);
+	B_GiveInvItems (other,self, ITMW_REVIVED_1H_HAMMER_HOLY,1);
 	Hammer_Taken = FALSE;
 };
 

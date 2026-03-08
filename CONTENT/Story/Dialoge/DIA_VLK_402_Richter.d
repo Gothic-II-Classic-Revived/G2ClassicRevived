@@ -185,7 +185,7 @@ INSTANCE DIA_Richter_KillMorgahard (C_INFO)
 
 FUNC INT DIA_Richter_KillMorgahard_Condition()
 {
-	if (Npc_HasItems (other,ITMW_REVIVED_2H_HAMMER_HOLY))
+	if (Npc_HasItems (other,ITMW_REVIVED_1H_HAMMER_HOLY))
 	&& (MIS_Richter_BringHolyHammer == LOG_RUNNING)
 	{
 		return TRUE;
@@ -195,7 +195,7 @@ FUNC INT DIA_Richter_KillMorgahard_Condition()
 FUNC VOID DIA_Richter_KillMorgahard_Info()
 {	
 	AI_Output (other,self ,"DIA_Richter_KillMorgahard_15_00"); //Here's the sacred hammer of the magicians.
-	B_GiveInvItems (other, self, ITMW_REVIVED_2H_HAMMER_HOLY,1);
+	B_GiveInvItems (other, self, ITMW_REVIVED_1H_HAMMER_HOLY,1);
 	AI_Output (self ,other,"DIA_Richter_KillMorgahard_10_01"); //I am truly impressed. You're really serious about this, aren't you? Here's your pay.
 	CreateInvItems (self, ItMi_Gold, 300);									
 	B_GiveInvItems (self, other, ItMi_Gold, 300);					

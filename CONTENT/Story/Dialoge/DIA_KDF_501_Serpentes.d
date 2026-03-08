@@ -256,12 +256,12 @@ func void DIA_Serpentes_SUCCESS_Info ()
 	{
 		AI_Output (self, other, "DIA_Serpentes_SUCCESS_10_04"); //(regretfully) Nevertheless, I must admit that you have fulfilled the task I have given you.
 	};
-	if (Npc_HasItems (other, ITMW_REVIVED_2H_HAMMER_HOLY) >= 1)
+	if (Npc_HasItems (other, ITMW_REVIVED_1H_HAMMER_HOLY) >= 1)
 	{
 		AI_Output (self, other, "DIA_Serpentes_SUCCESS_10_05"); //And I had best take the hammer myself.
 		
-		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_HAMMER_HOLY,1); 
-		Wld_InsertItem (ITMW_REVIVED_2H_HAMMER_HOLY,"FP_HAMMER");
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_HAMMER_HOLY,1); 
+		Wld_InsertItem (ITMW_REVIVED_1H_HAMMER_HOLY,"FP_HAMMER");
 	};
 	
 	MIS_GOLEM = LOG_SUCCESS;

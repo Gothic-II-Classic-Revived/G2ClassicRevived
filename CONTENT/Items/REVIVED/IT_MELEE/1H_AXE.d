@@ -25,6 +25,28 @@ const int	REV_Range_1H_Axe_Great_01			=	80;
 const int	REV_Value_1H_Axe_Great_01			=	1250;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Damage_1H_Axe_Heavy_01			=	110;
+const int	REV_Condition_1H_Axe_Heavy_01		=	110;
+const int	REV_Range_1H_Axe_Heavy_01			=	90;
+const int	REV_Value_1H_Axe_Heavy_01			=	1250;
+//******************************************************************//
+const int	REV_Damage_1H_Axe_Heavy_02			=	110;
+const int	REV_Condition_1H_Axe_Heavy_02		=	110;
+const int	REV_Range_1H_Axe_Heavy_02			=	90;
+const int	REV_Value_1H_Axe_Heavy_02			=	1250;
+//******************************************************************//
+const int	REV_Damage_1H_Axe_Heavy_03			=	110;
+const int	REV_Condition_1H_Axe_Heavy_03		=	110;
+const int	REV_Range_1H_Axe_Heavy_03			=	90;
+const int	REV_Value_1H_Axe_Heavy_03			=	1250;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Damage_1H_Axe_Ore_01			=	110;
+const int	REV_Condition_1H_Axe_Ore_01			=	110;
+const int	REV_Range_1H_Axe_Ore_01				=	80;
+const int	REV_Value_1H_Axe_Ore_01				=	1250;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_1H_Axe_Cord				=	60;
 const int	REV_Condition_1H_Axe_Cord			=	50;
 const int	REV_Range_1H_Axe_Cord				=	100;
@@ -169,6 +191,115 @@ INSTANCE ITMW_REVIVED_1H_AXE_GREAT_01 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
+
+//****************************************************************************
+//			HEAVY
+//****************************************************************************
+
+INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_01 (C_Item)
+{	
+	name 				=	"Twinclaw";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_Heavy_01;
+
+	damageTotal			= 	REV_Damage_1H_Axe_Heavy_01;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_Heavy_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_Heavy_01;
+	visual 				=	"REV_1H_AXE_HEAVY_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_02 (C_Item)
+{	
+	name 				=	"Bloodfly Wing";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_Heavy_02;
+
+	damageTotal			= 	REV_Damage_1H_Axe_Heavy_02;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_Heavy_02;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_Heavy_02;
+	visual 				=	"REV_1H_AXE_HEAVY_02.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_03 (C_Item)
+{	
+	name 				=	"Heavy Hacker";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_Heavy_03;
+
+	damageTotal			= 	REV_Damage_1H_Axe_Heavy_03;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_Heavy_03;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_Heavy_03;
+	visual 				=	"REV_1H_AXE_HEAVY_03.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+
+//****************************************************************************
+//			MAGICLESS ORE
+//****************************************************************************
+
+INSTANCE ITMW_REVIVED_1H_AXE_ORE_01 (C_Item)
+{	
+	name 				=	"Ore Axe";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_Ore_01;
+
+	damageTotal			= 	REV_Damage_1H_Axe_Ore_01;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_Ore_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_Ore_01;
+	visual 				=	"REV_1H_AXE_ORE_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
 
 
 
