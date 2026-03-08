@@ -129,31 +129,32 @@ func void DIA_Sagitta_TeachAlchemyRequest_Info ()
 	
 	Info_ClearChoices	(DIA_Sagitta_TeachAlchemyRequest);
 	Info_AddChoice	(DIA_Sagitta_TeachAlchemyRequest, "Sorry, not interested.", DIA_Sagitta_TeachAlchemyRequest_nein );
-	Info_AddChoice	(DIA_Sagitta_TeachAlchemyRequest, "Where can I find this ingredient?", DIA_Sagitta_TeachAlchemyRequest_wo );
 	Info_AddChoice	(DIA_Sagitta_TeachAlchemyRequest, "What ingredient is that?", DIA_Sagitta_TeachAlchemyRequest_was );
-	
 };
 func void DIA_Sagitta_TeachAlchemyRequest_was ()
 {
 	AI_Output			(other, self, "DIA_Sagitta_TeachAlchemyRequest_was_15_00"); //What ingredient is that?
 	AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_was_17_01"); //It's an extremely rare plant - an herb called sun aloe. You can recognize it by its intensive almond scent.
-	
-};
 
-func void DIA_Sagitta_TeachAlchemyRequest_wo ()
-{
-	AI_Output			(other, self, "DIA_Sagitta_TeachAlchemyRequest_wo_15_00"); //Where can I find this ingredient?
 	AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_wo_17_01"); //The herb I require only grows in places where it can get all the nutrients it needs.
 	AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_wo_17_02"); //These are found in the excrements of a black troll.
 	AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_wo_17_03"); //That's why it's so difficult for me to get the herb, you see?
 	Info_AddChoice	(DIA_Sagitta_TeachAlchemyRequest, "Let's see if I can get hold of it somewhere.", DIA_Sagitta_TeachAlchemyRequest_wo_ja );
 };
+
 func void DIA_Sagitta_TeachAlchemyRequest_wo_ja ()
 {
 	AI_Output			(other, self, "DIA_Sagitta_TeachAlchemyRequest_wo_ja_15_00"); //Let's see if I can get hold of it somewhere.
 	AI_Output			(self, other, "DIA_Sagitta_TeachAlchemyRequest_wo_ja_17_01"); //Well, then, good luck with your search.
 	Info_ClearChoices	(DIA_Sagitta_TeachAlchemyRequest);
 	MIS_Sagitta_Herb = LOG_RUNNING;
+	
+	if (Npc_IsDead(Troll_Black))
+	{
+		Wld_InsertNpc 	(Troll_Black_Sagitta, 			"NW_TROLLAREA_PATH_84");
+	};
+	
+	Wld_InsertItem	(ItPl_Sagitta_Herb_MIS, "FP_NW_ITEM_TROLL_05");
 	
 	Log_CreateTopic (TOPIC_SagittaHerb,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_SagittaHerb,LOG_RUNNING);

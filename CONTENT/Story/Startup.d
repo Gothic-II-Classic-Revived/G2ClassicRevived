@@ -3999,7 +3999,6 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 
 	//----- Schwarzer Troll -----
 	Wld_InsertNpc 	(Troll_Black, 			"NW_TROLLAREA_PATH_84");
-	Wld_InsertItem	(ItPl_Sagitta_Herb_MIS, "FP_NW_ITEM_TROLL_05");
 	Wld_InsertNpc 	(OUT_982_GRIMBALD, 		"TROLL");
 
 	//----- Der Weg -----

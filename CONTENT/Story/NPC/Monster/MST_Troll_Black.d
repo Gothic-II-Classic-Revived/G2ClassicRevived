@@ -81,3 +81,16 @@ INSTANCE Troll_Black	(Mst_Default_Troll_Black)
 	B_SetVisuals_Troll_Black();
 	Npc_SetToFistMode(self);
 };
+
+INSTANCE Troll_Black_Sagitta	(Mst_Default_Troll_Black)
+{
+	attribute	[ATR_STRENGTH]		=	300;
+	attribute	[ATR_DEXTERITY]		=	300;
+	attribute	[ATR_HITPOINTS_MAX]	=	2000;
+	attribute	[ATR_HITPOINTS]		=	2000;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	B_SetVisuals_Troll_Black();
+	Npc_SetToFistMode(self);
+};
