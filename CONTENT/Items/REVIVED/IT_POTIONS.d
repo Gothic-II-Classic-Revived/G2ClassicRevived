@@ -789,7 +789,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_01 (C_Item)
 	scemeName		=	"POTIONFAST";
 
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_MANAPOTION";
+	effect			=	"SPELLFX_YELLOWPOTION";
 
 	inv_rotz		= 1;
 
@@ -818,7 +818,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 	scemeName		=	"POTIONFAST";
 	
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_MANAPOTION";
+	effect			=	"SPELLFX_YELLOWPOTION";
 
 	inv_rotz		= 1;
 
@@ -850,7 +850,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_01 (C_Item)
 	scemeName		=	"POTIONFAST";
 
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_MANAPOTION";
+	effect			=	"SPELLFX_YELLOWPOTION";
 
 	inv_rotz		= 1;
 
@@ -879,7 +879,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_02 (C_Item)
 	scemeName		=	"POTIONFAST";
 	
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_MANAPOTION";
+	effect			=	"SPELLFX_YELLOWPOTION";
 
 	inv_rotz		= 1;
 
