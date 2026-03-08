@@ -79,5 +79,4 @@ INSTANCE Dragon_Swamp	(Mst_Default_Dragon_Swamp)
 	fight_tactic	=	FAI_DRAGON;
 	B_SetVisuals_Dragon_Swamp();
 	Npc_SetToFistMode(self);
-	bodyStateInterruptableOverride = TRUE;
 };
