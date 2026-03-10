@@ -96,34 +96,10 @@ FUNC INT DIA_Edda_Kochen_Condition()
 FUNC VOID DIA_Edda_Kochen_Info()
 {	
 	AI_Output (other ,self,"DIA_Edda_Kochen_15_00"); //Could you cook me some soup?
-	AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //I cook for everybody. For you, too, if you want. All you need to do is bring me a fish.
-};			
-// ************************************************************
-// 		tägliche Suppe abholen
-// ************************************************************
-INSTANCE DIA_Edda_Suppe(C_INFO)
-{
-	npc			= VLK_471_Edda;
-	nr			= 6;
-	condition	= DIA_Edda_Suppe_Condition;
-	information	= DIA_Edda_Suppe_Info;
-	permanent	= TRUE;
-	description = "Could you cook me some soup?";
-};                       
-
-FUNC INT DIA_Edda_Suppe_Condition()
-{	
-	if Npc_KnowsInfo (other,DIA_Edda_Kochen)
-	{
-		return TRUE;
-	};
-};
-FUNC VOID DIA_Edda_Suppe_Info()
-{	
-	AI_Output (other ,self,"DIA_Edda_Suppe_15_00"); //Could you cook me some soup?
 	
 	if (Wld_GetDay() == 0)
 	{
+		AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //I cook for everybody. For you, too, if you want. All you need to do is bring me a fish.
 		AI_Output (self ,other,"DIA_Edda_Suppe_17_02"); //Starting tomorrow, you can come and get some soup every day.
 	}
 	else if (Edda_Day != Wld_GetDay())
@@ -131,8 +107,35 @@ FUNC VOID DIA_Edda_Suppe_Info()
 		if B_GiveInvItems (other, self, ItFo_Fish,1)
 		{
 			AI_Output (self ,other,"DIA_Edda_Suppe_17_01"); //Nothing could be simpler. Here, have a plate.
-			B_GiveInvItems (self, other, ItFo_Fishsoup, 1);
-			Edda_Day = Wld_GetDay ();
+			if(Kapitel == 1 && EddaSoup_Chapter1 == FALSE)
+			{
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				EddaSoup_Chapter1 = TRUE;
+			}
+			else if(Kapitel == 2 && EddaSoup_Chapter2 == FALSE)
+			{
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				EddaSoup_Chapter2 = TRUE;
+			}
+			else if(Kapitel == 3 && EddaSoup_Chapter3 == FALSE)
+			{
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				EddaSoup_Chapter3 = TRUE;
+			}
+			else if(Kapitel == 4 && EddaSoup_Chapter4 == FALSE)
+			{
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				EddaSoup_Chapter4 = TRUE;
+			}
+			else if(Kapitel == 5 && EddaSoup_Chapter5 == FALSE)
+			{
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				EddaSoup_Chapter5 = TRUE;
+			}
+			else {
+				B_GiveInvItems (self, other, ItFo_FishSoup, 1);
+			};
+				Edda_Day = Wld_GetDay ();
 		}
 		else
 		{
@@ -160,7 +163,7 @@ INSTANCE DIA_Edda_Statue(C_INFO)
 FUNC INT DIA_Edda_Statue_Condition()
 {	
 	if Npc_KnowsInfo (other,DIA_Edda_Stadt)
-	&& (Npc_HasItems (other, ItMI_InnosStatue) >= 1) 
+	&& (Npc_HasItems (other, ItMI_EddasStatue) >= 1) 
 	{
 		return TRUE;
 	};
@@ -171,7 +174,7 @@ FUNC VOID DIA_Edda_Statue_Info()
 	AI_Output (self ,other,"DIA_Edda_Statue_17_01"); //Oh - thank you very, very much. May Innos let his light shine on you...
 	AI_Output (other ,self,"DIA_Edda_Statue_15_02"); //Yeah, never mind.
 	
-	B_GiveInvItems (other, self,ItMI_InnosStatue, 1); 
+	B_GiveInvItems (other, self,ItMI_EddasStatue, 1); 
 	B_GivePlayerXP (XP_Edda_Statue);
 };				 
 	
@@ -186,14 +189,14 @@ INSTANCE DIA_Edda_PICKPOCKET (C_INFO)
 	condition	= DIA_Edda_PICKPOCKET_Condition;
 	information	= DIA_Edda_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be child's play to steal her statue)";
+	description = "(It would be child's play to steal from her purse)";
 };                       
 
 FUNC INT DIA_Edda_PICKPOCKET_Condition()
 {
 	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
 	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
-	&& (Npc_HasItems(self, ItMI_EddasStatue) >= 1)
+	&& (Npc_HasItems(self, ItFo_Fish) >= 1)
 	&& (other.attribute[ATR_DEXTERITY] >= (20 - Theftdiff))
 	{
 		return TRUE;
@@ -211,7 +214,7 @@ func void DIA_Edda_PICKPOCKET_DoIt()
 {
 	if (other.attribute[ATR_DEXTERITY] >= 20)
 	{
-		B_GiveInvItems (self, other, ItMI_EddasStatue, 1);
+		B_GiveInvItems (self, other, ItFo_Fish, 1);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
 		B_GiveThiefXP();
 		Info_ClearChoices (DIA_Edda_PICKPOCKET);
@@ -228,9 +231,3 @@ func void DIA_Edda_PICKPOCKET_BACK()
 {
 	Info_ClearChoices (DIA_Edda_PICKPOCKET);
 };
-
-	 
-
-
-
-

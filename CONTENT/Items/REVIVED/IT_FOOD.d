@@ -651,12 +651,37 @@ INSTANCE ITFO_REVIVED_MEAD (C_Item)
 
 
 
-
-
-
 //****************************************************************************
 //			COOKING
 //****************************************************************************
+
+INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
+{	
+	name 				=	"Edda's Fish Soup";
+	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_FishSoup;
+
+	visual 				=	"ItFo_FishSoup.3ds"; 
+	material 			=	MAT_LEATHER;
+	scemeName			=	"RICE";
+	on_state[0]			=	UseMeatbugragout;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_FishSoup;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseMeatbugragout()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FishSoup);
+		Snd_Play	("LevelUp");
+		B_RaiseAttribute (self, ATR_DEXTERITY, 1);
+	};
+
+/******************************************************************************************/
 
 INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
 {	

@@ -10,7 +10,7 @@ const int	Value_Fish		=	15;		const int	HP_Fish			=	5;
 const int	Value_Rawmeat	=	3;		const int	HP_RawMeat		=	6;
 const int	Value_Meat		=	6;		const int	HP_Meat			=	12;
 const int	Value_Stew		=	8;		const int	HP_Stew			=	20;
-const int	Value_FishSoup	=	20;		const int	HP_FishSoup		=	10;
+const int	Value_FishSoup	=	8;		const int	HP_FishSoup		=	10;
 const int	Value_Sausage	=	30;		const int	HP_Sausage		=	12;
 const int	Value_Honey		=	30;		const int	HP_Honey		=	12;
 

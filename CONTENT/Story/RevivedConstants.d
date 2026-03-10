@@ -9,7 +9,6 @@ const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
 
 const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
 
-
 const string	TOPIC_Tobacco						=	"Mixing tobacco";
 const string	LogText_TobaccoLearned				=	"By mixing Abuyin's apple tobacco at an alchemist's bench I can make:";
 
@@ -195,7 +194,6 @@ const string Print_PRAYADANOS_BlessBOW				= "BOW BONUS";
 const string Print_PRAYADANOS_BlessCBOW				= "CBOW BONUS";
 const string Print_PRAYADANOS_BlessWisp				= "Adanos blesses you.";
 const string Print_PRAYADANOS_BlessNone				= "Adanos thanks you for your prayer.";
-
 const string Print_PRAYADANOS_BlessCant				= "Adanos can't take your offering.";
 const string PRINT_BlessMANA_MAX					= "Adanos grants you: Mana + ";
 
@@ -394,6 +392,12 @@ var int DIA_Peck_BUYARMOR_perm;
 var int DIA_Revived_Gordon_Trade_OneTime;
 
 var int CipherBuysWeed;
+
+var int EddaSoup_Chapter1;
+var int EddaSoup_Chapter2;
+var int EddaSoup_Chapter3;
+var int EddaSoup_Chapter4;
+var int EddaSoup_Chapter5;
 
 var int BusterLOGAcrobat;
 
