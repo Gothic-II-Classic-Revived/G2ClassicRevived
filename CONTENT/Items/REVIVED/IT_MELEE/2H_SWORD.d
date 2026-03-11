@@ -1080,13 +1080,13 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_01 (C_Item)
 	damagetype 			=	DAM_EDGE;		
 	range    			=  	REV_Range_2H_Sword_Ore_01;		
 
-	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_Ore_01;
 	visual 				=	"REV_2H_SWORD_ORE_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

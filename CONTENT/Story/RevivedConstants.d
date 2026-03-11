@@ -168,6 +168,19 @@ CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
 CONST STRING MOBNAME_ALCHEMIST_01			= "Constantino Alchemist";
 
 
+
+CONST STRING TESTLEVEL_TELEPORT_NW			= "NEWWORLD.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_VALLEY		= "OLDWORLD.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_OW			= "OLDWORLD_G2.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_AM			= "ABANDONEDMINE.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_OM			= "OLDMINE.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_FM			= "ABANDONEDMINE.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_OGY			= "ORCGRAVEYARD.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_OT			= "ORCTEMPEL.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_ADDON		= "ADDONWORLD.ZEN";
+CONST STRING TESTLEVEL_TELEPORT_DI			= "DRAGONISLAND.ZEN";
+
+
 // Graves
 CONST STRING MOBNAME_GRAVE_REVIVED_01		= "";
 CONST STRING MOBNAME_GRAVE_REVIVED_02		= "";
@@ -714,32 +727,32 @@ const string NAME_2H_REVIVED_05			= "Bastard Sword";
 const string NAME_2H_REVIVED_05_DESC	= "Bastard Sword (Two-Handed)";
 
 const int WEAPON_1H_REVIVED_ORE_01		= 23;
-const string NAME_1H_REVIVED_ORE_01		= "Ore Short Sword";
-const string NAME_1H_REVIVED_ORE_01_DESC= "Ore Short Sword (One-Handed)";
+const string NAME_1H_REVIVED_ORE_01		= "Rough Ore Blade";
+const string NAME_1H_REVIVED_ORE_01_DESC= "Rough Ore Blade (One-Handed)";
 const int WEAPON_1H_REVIVED_ORE_02		= 24;
-const string NAME_1H_REVIVED_ORE_02		= "Ore Long Sword";
-const string NAME_1H_REVIVED_ORE_02_DESC= "Ore Long  Sword (One-Handed)";
+const string NAME_1H_REVIVED_ORE_02		= "Master Ore Blade";
+const string NAME_1H_REVIVED_ORE_02_DESC= "Master Ore Blade (One-Handed)";
 const int WEAPON_1H_REVIVED_ORE_03		= 25;
-const string NAME_1H_REVIVED_ORE_03		= "Ore Broad Sword";
-const string NAME_1H_REVIVED_ORE_03_DESC= "Ore Broad Sword (One-Handed)";
+const string NAME_1H_REVIVED_ORE_03		= "Ore Battle Blade";
+const string NAME_1H_REVIVED_ORE_03_DESC= "Ore Battle Blade (One-Handed)";
 const int WEAPON_1H_REVIVED_ORE_04		= 26;
-const string NAME_1H_REVIVED_ORE_04		= "Ore Sword";
-const string NAME_1H_REVIVED_ORE_04_DESC= "Ore Sword (One-Handed)";
+const string NAME_1H_REVIVED_ORE_04		= "Ore Dragon Slayer";
+const string NAME_1H_REVIVED_ORE_04_DESC= "Ore Dragon Slayer (One-Handed)";
 const int WEAPON_1H_REVIVED_ORE_05		= 27;
 const string NAME_1H_REVIVED_ORE_05		= "Ore Bastard Sword";
 const string NAME_1H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (One-Handed)";
 const int WEAPON_2H_REVIVED_ORE_01		= 28;
-const string NAME_2H_REVIVED_ORE_01		= "Ore Light Sword";
-const string NAME_2H_REVIVED_ORE_01_DESC= "Ore Light Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_01		= "Master Ore Sword";
+const string NAME_2H_REVIVED_ORE_01_DESC= "Master Ore Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_ORE_02		= 29;
-const string NAME_2H_REVIVED_ORE_02		= "Ore Long Sword";
-const string NAME_2H_REVIVED_ORE_02_DESC= "Ore Long Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_02		= "Rough Ore Sword";
+const string NAME_2H_REVIVED_ORE_02_DESC= "Rough Ore Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_ORE_03		= 30;
-const string NAME_2H_REVIVED_ORE_03		= "Ore Broad Sword";
-const string NAME_2H_REVIVED_ORE_03_DESC= "Ore Broad Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_03		= "Ore Battle Sword";
+const string NAME_2H_REVIVED_ORE_03_DESC= "Ore Battle Sword (Two-Handed)";
 const int WEAPON_2H_REVIVED_ORE_04		= 31;
-const string NAME_2H_REVIVED_ORE_04		= "Ore Sword";
-const string NAME_2H_REVIVED_ORE_04_DESC= "Ore Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_04		= "Heavy Ore Dragon Slayer";
+const string NAME_2H_REVIVED_ORE_04_DESC= "Heavy Ore Dragon Slayer (Two-Handed)";
 const int WEAPON_2H_REVIVED_ORE_05		= 32;
 const string NAME_2H_REVIVED_ORE_05		= "Ore Bastard Sword";
 const string NAME_2H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (Two-Handed)";
