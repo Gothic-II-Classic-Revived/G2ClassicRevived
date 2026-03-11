@@ -639,9 +639,9 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	//******************************************************************//
 
 	// IT_PLANTS.d
-	CreateInvItems(self, ITPL_REVIVED_BERRIES, 20);
-	CreateInvItems(self, ITPL_REVIVED_GRAPES, 20);
-	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 20);
+	CreateInvItems(self, ITPL_REVIVED_BERRIES, 1);
+	CreateInvItems(self, ITPL_REVIVED_GRAPES, 1);
+	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 1);
 
 	//******************************************************************//
 
@@ -697,8 +697,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRW_REVIVED_BOW_WAR_03, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_WAR_04, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_WAR_05, 1);
-	CreateInvItems(self, ITRW_REVIVED_MAGICARROW, 1);
-	CreateInvItems(self, ITRW_REVIVED_FIREARROW, 1);
+	CreateInvItems(self, ITRW_REVIVED_MAGICARROW, 20);
+	CreateInvItems(self, ITRW_REVIVED_FIREARROW, 20);
 	CreateInvItems(self, ITRW_REVIVED_BOW_MAGIC_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_FIRE_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_DIEGO, 1);
@@ -718,8 +718,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_HEAVY_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_HEAVY_02, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_HEAVY_03, 1);
-	CreateInvItems(self, ITRW_REVIVED_MAGICBOLT, 1);
-	CreateInvItems(self, ITRW_REVIVED_FIREBOLT, 1);
+	CreateInvItems(self, ITRW_REVIVED_MAGICBOLT, 20);
+	CreateInvItems(self, ITRW_REVIVED_FIREBOLT, 20);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_MAGIC_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_FIRE_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_DRAGOMIR, 1);
@@ -834,15 +834,15 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAT_REVIVED_SKIN_ALLIGATOR, 10);
 	CreateInvItems(self, ITAT_REVIVED_DEMONHEART, 10);
 	CreateInvItems(self, ITAT_REVIVED_DEMONLORDHEART, 10);
-	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_FIRE, 10);
-	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_ICE, 10);
-	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_ROCK, 10);
-	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_SWAMP, 10);
-	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_UNDEAD, 10);
-	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_FIRE, 10);
-	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_ICE, 10);
-	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_ROCK, 10);
-	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_SWAMP, 10);
+	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_FIRE, 1);
+	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_ICE, 1);
+	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_ROCK, 1);
+	CreateInvItems(self, ITAT_REVIVED_GOLEMHEART_SWAMP, 1);
+	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_UNDEAD, 1);
+	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_FIRE, 1);
+	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_ICE, 1);
+	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_ROCK, 1);
+	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_SWAMP, 1);
 
 	//******************************************************************//
 
