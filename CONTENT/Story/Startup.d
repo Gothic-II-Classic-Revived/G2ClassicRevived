@@ -1396,79 +1396,6 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_07_05");
 
 
-
-	// Old Camp Area
-	Wld_InsertNpc   	(OrcWarrior_Sit,"OC_ROUND_22_CF_1");	
-	Wld_InsertNpc   	(OrcWarrior_Sit,"OC_ROUND_22_CF_2");	
-	Wld_InsertNpc   	(OrcWarrior_Sit,"OC_ROUND_22_CF_2_MOVEMENT");	
-
-	Wld_InsertNpc		(Giant_Bug,"OW_SCAVENGER_SPAWN_TREE");
-	Wld_InsertNpc		(Giant_Bug,"OW_SCAVENGER_SPAWN_TREE");
-
-	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_AL_ORC");	
-	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_AL_ORC");
-	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_AL_ORC");
-
-	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_PATH_GUARD1");	
-	Wld_InsertNpc   	(OrcDog,"SPAWN_PATH_GUARD1");
-
-	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_06_04");	
-	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_06_04");	
-	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_06_04");
-	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_06_04");
-
-	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
-	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
-	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
-
-	Wld_InsertNpc		(GRD_4152_Olav, 		"LOCATION_15_IN_2");
-	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
-	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
-	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
-
-	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
-	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
-	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
-
-	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI3");
-	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI3");
-	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI3");
-
-	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_OCWOODL2");
-	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_OCWOODL2");
-	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_OCWOODL2");
-
-	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_05_02");
-	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_05_02");
-
-	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLY_OC_WOOD03");
-	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLY_OC_WOOD03");
-	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLY_OC_WOOD03");
-
-	Wld_InsertNpc		(Lurker,"OW_PATH_OW_PATH_WARAN05_SPAWN01");
-	Wld_InsertNpc		(Lurker,"OW_PATH_OW_PATH_WARAN05_SPAWN01");
-	Wld_InsertNpc		(Lurker,"OW_PATH_OW_PATH_WARAN05_SPAWN01");
-
-
-	// Hosh-Pak
-	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
-	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
-	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
-	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
-	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
-	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
-
-	Wld_InsertNpc		(DragonSnapper,"LOCATION_16_IN");
-
-	Wld_InsertNpc   (OrcShaman_Hosh_Pak	,"OW_HOSHPAK_CAMPFIRE");
-	Wld_InsertNpc   (OrcShaman_Sit	,"OW_HOSHPAK_CAMPFIRE");	
-	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_10");
-	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_03");	
-	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_08");
-	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_06");
-	Wld_InsertNpc   (OrcElite_Sit,"OW_HOSHPAK_TENT");	
-
-
 	// Orc Territory (Near Diego)
 	Wld_InsertNpc		(PC_Thief_OW, 				"LOCATION_02_05");
 	Wld_InsertNpc		(PAL_2006_Leiche, 			"LOCATION_02_01");
@@ -1978,6 +1905,113 @@ func void STARTUP_SURFACE ()
 	
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_006");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_006");
+	
+
+	// Orc Tents (Old Camp)
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_001");
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OC1_MOVE");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OC1_MOVE");	
+
+	Wld_InsertNpc		(OrcElite_Roam,"PATH_OC_NC_28");
+	Wld_InsertNpc		(OrcDog,"PATH_OC_NC_28B");
+	Wld_InsertNpc   	(OrcDog,"PATH_OC_NC_28B");	
+	Wld_InsertNpc   	(OrcDog,"PATH_OC_NC_28B");	
+
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_002");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_029");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_029");
+
+	Wld_InsertNpc   	(OrcWarrior_Sit,"OC_ROUND_22_CF_1");	
+	Wld_InsertNpc   	(OrcWarrior_Sit,"OC_ROUND_22_CF_2");	
+	Wld_InsertNpc   	(OrcWarrior_Sit,"OC_ROUND_22_CF_2_MOVEMENT");	
+	
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_003");
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_003_A");
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_003_B");
+	Wld_InsertNpc	    (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_003");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_031");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_031");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_031");
+	
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_004");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OW_PATH_298A");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OW_PATH_298A");
+	
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_005");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_25");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_25");
+	
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_006");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_032");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_032");
+	
+	Wld_InsertNpc       (OrcElite_Sit,"OC_ORCTENT_007");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_033");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OC_ROUND_033");
+
+
+	// Old Camp Area
+	Wld_InsertNpc		(Giant_Bug,"OW_SCAVENGER_SPAWN_TREE");
+	Wld_InsertNpc		(Giant_Bug,"OW_SCAVENGER_SPAWN_TREE");
+
+	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_AL_ORC");	
+	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_AL_ORC");
+	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_AL_ORC");
+
+	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_PATH_GUARD1");	
+	Wld_InsertNpc   	(OrcDog,"SPAWN_PATH_GUARD1");
+
+	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_06_04");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_06_04");	
+	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_06_04");
+	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_06_04");
+
+	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
+	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
+	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
+
+	Wld_InsertNpc		(GRD_4152_Olav, 		"LOCATION_15_IN_2");
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
+
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
+
+	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI3");
+	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI3");
+	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI3");
+
+	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_05_02");
+	Wld_InsertNpc		(Scavenger,"SPAWN_O_SCAVENGER_05_02");
+
+	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLY_OC_WOOD03");
+	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLY_OC_WOOD03");
+	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLY_OC_WOOD03");
+
+	Wld_InsertNpc		(Lurker,"OW_PATH_OW_PATH_WARAN05_SPAWN01");
+	Wld_InsertNpc		(Lurker,"OW_PATH_OW_PATH_WARAN05_SPAWN01");
+	Wld_InsertNpc		(Lurker,"OW_PATH_OW_PATH_WARAN05_SPAWN01");
+
+
+	// Hosh-Pak
+	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
+	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
+	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
+	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
+	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
+	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_SNAPPER_OW_ORC");
+
+	Wld_InsertNpc		(DragonSnapper,"LOCATION_16_IN");
+
+	Wld_InsertNpc   (OrcShaman_Hosh_Pak	,"OW_HOSHPAK_CAMPFIRE");
+	Wld_InsertNpc   (OrcShaman_Sit	,"OW_HOSHPAK_CAMPFIRE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_10");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_03");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_08");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_06");
+	Wld_InsertNpc   (OrcElite_Sit,"OW_HOSHPAK_TENT");	
 };
 
 	func void INIT_SUB_SURFACE ()
