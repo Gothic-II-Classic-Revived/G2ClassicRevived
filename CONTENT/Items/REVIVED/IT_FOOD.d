@@ -19,20 +19,20 @@ const int	REV_Value_StaleWater		=	 3;		const int	REV_HP_StaleWater		=	2;
 const int	REV_Value_OldBeer			=	 6;		const int	REV_HP_OldBeer			=	3;
 const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;
 
-const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	3;
-const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	3;
-const int	REV_Value_MageWine			=	30;		const int	REV_HP_MageWine			=	3;
-const int	REV_Value_MonsterDrink		=	50;		const int	REV_HP_MonsterDrink		=	3;
+const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	5;
+const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	20;
+const int	REV_Value_MageWine			=	30;		const int	REV_HP_MageWine			=	10;
+const int	REV_Value_MonsterDrink		=	50;		const int	REV_HP_MonsterDrink		=	30;		const int	REV_Time_MonsterDrink	=	10000;
 const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
-const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	3;
+const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	8;
 
-const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	 9;
-const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	 7;
+const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	10;
+const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	8;
 const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	15;
-const int	REV_Value_Rice				=	 5;		const int	REV_HP_Rice				=	10;
-const int	REV_Value_Marmalade			=	25;		const int	REV_HP_Marmalade		=	10;
-const int	REV_Value_FruitSalad		=	20;		const int	REV_HP_FruitSalad		=	10;
-const int	REV_Value_OldStew			=	 1;		const int	REV_HP_OldStew			=	10;
+const int	REV_Value_Rice				=	 5;		const int	REV_HP_Rice				=	5;
+const int	REV_Value_Marmalade			=	25;		const int	REV_HP_Marmalade		=	20;
+const int	REV_Value_FruitSalad		=	20;		const int	REV_HP_FruitSalad		=	15;
+const int	REV_Value_OldStew			=	 1;		const int	REV_HP_OldStew			=	5;
 
 
 //****************************************************************************
@@ -499,21 +499,21 @@ INSTANCE ITFO_REVIVED_TURNIPBOOZE (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	REV_Value_RiceSchnapps;
+	value 				=	REV_Value_TurnipBooze;
 
-	visual 				=	"ItFo_Booze_01.3ds";
+	visual 				=	"REV_ITFO_TURNIPBOOZE.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseTurnipBooze;
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_TurnipBooze;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseTurnipBooze()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_TurnipBooze);
 	};
 
 /******************************************************************************************/
@@ -525,21 +525,21 @@ INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	REV_Value_RiceSchnapps;
+	value 				=	REV_Value_VinoBooze;
 
-	visual 				=	"ItFo_Booze_01.3ds";
+	visual 				=	"REV_ITFO_VINOBOOZE.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseVinoBooze;
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_VinoBooze;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseVinoBooze()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_VinoBooze);
 	};
 
 /******************************************************************************************/
@@ -551,21 +551,22 @@ INSTANCE ITFO_REVIVED_MAGEWINE (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	REV_Value_RiceSchnapps;
+	value 				=	REV_Value_MageWine;
 
-	visual 				=	"ItFo_Booze_01.3ds";
+	visual 				=	"REV_ITFO_MAGEWINE.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseMageWine;
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[1]				= NAME_BonusHPMP;				COUNT[1]	= REV_HP_MageWine;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMageWine()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MageWine);
+		Npc_ChangeAttribute	(self,	ATR_MANA,		REV_HP_MageWine);
 	};
 
 /******************************************************************************************/
@@ -577,21 +578,23 @@ INSTANCE ITFO_REVIVED_MONSTERDRINK (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	REV_Value_RiceSchnapps;
+	value 				=	REV_Value_MonsterDrink;
 
-	visual 				=	"ItFo_Booze_01.3ds";
+	visual 				=	"REV_ITFO_MONSTERDRINK.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseMonsterDrink;
-	scemeName			=	"POTION";
+	scemeName			=	"POTIONFAST";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MonsterDrink;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMonsterDrink()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+		B_Say_Overlay (hero, hero , "$COUGH");
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MonsterDrink);
+		Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", REV_Time_MonsterDrink);
 	};
 
 /******************************************************************************************/
@@ -629,21 +632,21 @@ INSTANCE ITFO_REVIVED_MEAD (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	REV_Value_RiceSchnapps;
+	value 				=	REV_Value_Mead;
 
-	visual 				=	"ItFo_Booze_01.3ds";
+	visual 				=	"REV_ITFO_MEAD.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseMead;
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Mead;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMead()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Mead);
 	};
 
 
@@ -667,14 +670,14 @@ INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
 	visual 				=	"ItFo_FishSoup.3ds"; 
 	material 			=	MAT_LEATHER;
 	scemeName			=	"RICE";
-	on_state[0]			=	UseMeatbugragout;
+	on_state[0]			=	UseEddaFishSoup;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_FishSoup;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-	FUNC VOID UseMeatbugragout()
+	FUNC VOID UseEddaFishSoup()
 	{
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FishSoup);
 		Snd_Play	("LevelUp");
@@ -719,6 +722,7 @@ INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
 	value 				=	REV_Value_RootSoup;
 
 	visual 				=	"ItFo_Soup_01.3ds";
+	material 			=	MAT_LEATHER;
 	scemeName			=	"RICE";
 	on_state[0]			=	UseSoup;
 
@@ -743,7 +747,7 @@ INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)
                                                                     
 	value 				=	REV_Value_CrawlerSoup;              
                                                                     
-	visual 				=	"ItFo_Crawlersoup_01.3ds";    
+	visual 				=	"ItFo_Crawlersoup_01.3ds";  
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	UseCrawlersoup;   
 	scemeName			=	"RICE";
@@ -771,6 +775,7 @@ INSTANCE ITFO_REVIVED_RICE (C_Item)
 	value 				=	REV_Value_Rice;
 
 	visual 				=	"ItFo_Rice_01.3ds";
+	material 			=	MAT_LEATHER;
 	scemeName			=	"RICE";
 	on_state[0]			=	UseRice;
 
@@ -795,21 +800,21 @@ INSTANCE ITFO_REVIVED_MARMALADE (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 	
-	value 				=	Value_Honey;
+	value 				=	REV_Value_Marmalade;
 	
-	visual 				=	"ItFo_Honey.3DS";
+	visual 				=	"REV_ITFO_MARMALADE.3DS";
 	material 			=	MAT_STONE;
 	scemeName			=	"FOODHUGE";
 	on_state[0]			=	UseMarmalade;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= HP_Honey;
-	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Honey;
+	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= REV_HP_Marmalade;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= value;
 };
 
 	FUNC VOID UseMarmalade()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Honey);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Marmalade);
 	};
 
 
@@ -822,21 +827,21 @@ INSTANCE ITFO_REVIVED_FRUITSALAD (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 	
-	value 				=	Value_Honey;
+	value 				=	REV_Value_FruitSalad;
 	
-	visual 				=	"ItFo_Rice_01.3DS";
+	visual 				=	"REV_ITFO_FRUITSALAD.3DS";
 	material 			=	MAT_STONE;
-	scemeName			=	"FOODHUGE";
+	scemeName			=	"RICE";
 	on_state[0]			=	UseFruitSalad;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= HP_Honey;
-	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Honey;
+	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= REV_HP_FruitSalad;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= value;
 };
 
 	FUNC VOID UseFruitSalad()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Honey);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_FruitSalad);
 	};
 
 
@@ -849,19 +854,19 @@ INSTANCE ITFO_REVIVED_OLDSTEW (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	REV_Value_MeatbugRagout;
+	value 				=	REV_Value_OldStew;
 
-	visual 				=	"ItFo_Meatbugragout_01.3ds"; 
+	visual 				=	"REV_ITFO_OLDSTEW.3ds"; 
 	material 			=	MAT_LEATHER;
 	scemeName			=	"RICE";
 	on_state[0]			=	UseOldstew;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatbugRagout;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_OldStew;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseOldstew()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatbugRagout);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_OldStew);
 	};

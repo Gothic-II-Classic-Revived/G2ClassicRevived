@@ -812,14 +812,14 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_VinoBooze)
 		{
-			if (Npc_HasItems (self, ITPL_REVIVED_BERRIES) 			>= amount * 2)
+			if (Npc_HasItems (self, ITPL_REVIVED_BERRIES) 			>= amount * 4)
 			&& (Npc_HasItems (self, ItFo_Apple)						>= amount * 2)
-			&& (Npc_HasItems (self, ITFO_REVIVED_PEAR)				>= amount * 4)
+			&& (Npc_HasItems (self, ITFO_REVIVED_PEAR)				>= amount * 2)
 			&& (Npc_HasItems (self, ItAt_Wing) 						>= amount)
 			{
 				Npc_RemoveInvItems (self, ITPL_REVIVED_BERRIES,		amount * 2);
 				Npc_RemoveInvItems (self, ItFo_Apple,				amount * 2);
-				Npc_RemoveInvItems (self, ITFO_REVIVED_PEAR,		amount * 4);
+				Npc_RemoveInvItems (self, ITFO_REVIVED_PEAR,		amount * 2);
 				Npc_RemoveInvItems (self, ItAt_Wing,				amount);
 				
 				CreateInvItems	   (hero,ITFO_REVIVED_VINOBOOZE,	amount);  

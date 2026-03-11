@@ -52,7 +52,7 @@ INSTANCE PC_Cook_MeatStew (C_INFO)
 	condition		= PC_Cook_MeatStew_Condition;
 	information		= PC_Cook_MeatStew_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Meat Stew"; 
+	description		= PRINT_CookingDesc_MeatStew; 
 };
 FUNC INT PC_Cook_MeatStew_Condition()
 {	
@@ -64,12 +64,19 @@ FUNC INT PC_Cook_MeatStew_Condition()
 };
 FUNC VOID PC_Cook_MeatStew_Info ()
 {
-	if (Npc_HasItems (hero, ItFoMuttonRaw) 				>= 2) 
+	if ((Npc_HasItems (hero, ItFoMuttonRaw) 				>= 2) || (Npc_HasItems (hero, ItFoMutton) 				>= 2))
 	&& (Npc_HasItems (hero, ItFo_Addon_Shellflesh) 	  	>= 2) 
 	&& (Npc_HasItems (hero, ItFo_Sausage) 				>= 1) 
 	&& (Npc_HasItems (hero, ItFo_Bacon) 				>= 1) 
 	{
-		Npc_RemoveInvItems (hero,ItFoMuttonRaw,				2);
+		if (Npc_HasItems (hero, ItFoMuttonRaw) >= 2)
+		{
+			Npc_RemoveInvItems (hero, ItFoMuttonRaw, 			2);
+		}
+		else if (Npc_HasItems (hero, ItFoMutton) >= 2)
+		{
+			Npc_RemoveInvItems (hero, ItFoMutton, 2);
+		};
 		Npc_RemoveInvItems (hero,ItFo_Addon_Shellflesh, 	2);
 		Npc_RemoveInvItems (hero,ItFo_Sausage, 				1);
 		Npc_RemoveInvItems (hero,ItFo_Bacon, 				1);
@@ -94,7 +101,7 @@ INSTANCE PC_Cook_FishSoup (C_INFO)
 	condition		= PC_Cook_FishSoup_Condition;
 	information		= PC_Cook_FishSoup_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Fish Soup"; 
+	description		= PRINT_CookingDesc_FishSoup; 
 };
 FUNC INT PC_Cook_FishSoup_Condition()
 {	
@@ -112,7 +119,7 @@ FUNC VOID PC_Cook_FishSoup_Info ()
 		Npc_RemoveInvItems (hero,ItFo_Fish,				2);
 		Npc_RemoveInvItems (hero,ItFo_Water, 			1);
 				
-		CreateInvItems	   (hero,ItFo_FishSoup,			1); // Update Fish Soup
+		CreateInvItems	   (hero,ItFo_FishSoup,			1);  // replace with updated Fish Soup
 		Print (PRINT_CookingSuccess);
 	}
 	else 
@@ -132,7 +139,7 @@ INSTANCE PC_Cook_MeatbugSoup (C_INFO)
 	condition		= PC_Cook_MeatbugSoup_Condition;
 	information		= PC_Cook_MeatbugSoup_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Meatbug Ragout"; 
+	description		= PRINT_CookingDesc_MeatbugRagout; 
 };
 FUNC INT PC_Cook_MeatbugSoup_Condition()
 {	
@@ -172,7 +179,7 @@ INSTANCE PC_Cook_RootSoup (C_INFO)
 	condition		= PC_Cook_RootSoup_Condition;
 	information		= PC_Cook_RootSoup_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Root Soup"; 
+	description		= PRINT_CookingDesc_RootSoup; 
 };
 FUNC INT PC_Cook_RootSoup_Condition()
 {	
@@ -212,7 +219,7 @@ INSTANCE PC_Cook_MinecrawlerSoup (C_INFO)
 	condition		= PC_Cook_MinecrawlerSoup_Condition;
 	information		= PC_Cook_MinecrawlerSoup_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Minecrawler Soup"; 
+	description		= PRINT_CookingDesc_MinecrawlerSoup; 
 };
 FUNC INT PC_Cook_MinecrawlerSoup_Condition()
 {	
@@ -250,7 +257,7 @@ INSTANCE PC_Cook_RiceBowl (C_INFO)
 	condition		= PC_Cook_RiceBowl_Condition;
 	information		= PC_Cook_RiceBowl_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Rice bowl"; 
+	description		= PRINT_CookingDesc_RiceBowl; 
 };
 FUNC INT PC_Cook_RiceBowl_Condition()
 {	
@@ -286,7 +293,7 @@ INSTANCE PC_Cook_Marmalade (C_INFO)
 	condition		= PC_Cook_Marmalade_Condition;
 	information		= PC_Cook_Marmalade_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Berry marmalade"; 
+	description		= PRINT_CookingDesc_Marmalade; 
 };
 FUNC INT PC_Cook_Marmalade_Condition()
 {	
@@ -328,7 +335,7 @@ INSTANCE PC_Cook_FruitSalad (C_INFO)
 	condition		= PC_Cook_FruitSalad_Condition;
 	information		= PC_Cook_FruitSalad_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Fruit salad"; 
+	description		= PRINT_CookingDesc_FruitSalad; 
 };
 FUNC INT PC_Cook_FruitSalad_Condition()
 {	
@@ -340,15 +347,25 @@ FUNC INT PC_Cook_FruitSalad_Condition()
 };
 FUNC VOID PC_Cook_FruitSalad_Info ()
 {
-	if (Npc_HasItems (hero, ItFo_Apple) 				>= 1) 
+	if ((Npc_HasItems (hero, ItFo_Apple) 				>= 1) || (Npc_HasItems (hero, ITFO_REVIVED_APPLE_01) 				>= 1))
 	&& (Npc_HasItems (hero, ITFO_REVIVED_PEAR) 	  		>= 1) 
 	&& (Npc_HasItems (hero, ITPL_REVIVED_BERRIES) 		>= 1) 
-	&& (Npc_HasItems (hero, ItFo_Milk) 					>= 1) 
+	&& (Npc_HasItems (hero, ITPL_REVIVED_GRAPES) 		>= 1) 
+	&& (Npc_HasItems (hero, ITFO_MILK) 					>= 1) 
 	{
-		Npc_RemoveInvItems (hero,ItFo_Apple,				1);
+		if (Npc_HasItems (hero, ItFo_Apple) >= 1)
+		{
+			Npc_RemoveInvItems (hero, ItFo_Apple, 			1);
+		}
+		else if (Npc_HasItems (hero, ITFO_REVIVED_APPLE_01) >= 1)
+		{
+			Npc_RemoveInvItems (hero, ITFO_REVIVED_APPLE_01, 1);
+		};
+	
 		Npc_RemoveInvItems (hero,ITFO_REVIVED_PEAR, 		1);
 		Npc_RemoveInvItems (hero,ITPL_REVIVED_BERRIES, 		1);
-		Npc_RemoveInvItems (hero,ItFo_Milk, 				1);
+		Npc_RemoveInvItems (hero,ITPL_REVIVED_GRAPES, 		1);
+		Npc_RemoveInvItems (hero,ITFO_MILK, 				1);
 				
 		CreateInvItems	   (hero,ITFO_REVIVED_FRUITSALAD,	1);  
 		Print (PRINT_CookingSuccess);
@@ -370,7 +387,7 @@ INSTANCE PC_Cook_ConvictStew (C_INFO)
 	condition		= PC_Cook_ConvictStew_Condition;
 	information		= PC_Cook_ConvictStew_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Convict's Stew"; 
+	description		= PRINT_CookingDesc_ConvictStew; 
 };
 FUNC INT PC_Cook_ConvictStew_Condition()
 {	

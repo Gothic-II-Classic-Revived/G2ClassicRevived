@@ -1522,7 +1522,833 @@ func VOID Use_KalomsRecipe()
 //****************************************************************************
 //			RECIPES
 //****************************************************************************
+INSTANCE ITWR_REVIVED_RECIPE_TURNIPBOOZE		(C_Item)
+{
+	name 				=	"Recipe for Turnip Booze";
 
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_TurnipBooze;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making Turnip Booze";
+};
+func void UseRecipe_TurnipBooze ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		()			  ;							// DocManager
+					Doc_SetPages	( nDocID,  1 	);                         //wieviel Pages
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
+					Doc_PrintLine	( nDocID,  0, "Turnip Booze"					);
+					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
+					Doc_PrintLine	( nDocID,  0, "");	
+					Doc_PrintLine	( nDocID,  0, "Ingredients for brewing turnip based alcohol:");	
+					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLines	( nDocID,  0, "Take a water bottle, two turnips and a decent portion of swampweed.");	
+					Doc_PrintLines	( nDocID,  0, "Add the ground teeth of a swampshark."					);
+					Doc_PrintLines	( nDocID,  0, "Put it all in the bottle and boil with a shot of beer."					);
+					Doc_PrintLine	( nDocID,  0, "");	
+					Doc_PrintLine	( nDocID,  0, "");	
+					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLines	( nDocID,  0, "");	
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_TurnipBooze == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Booze, LOG_NOTE);
+		B_LogEntry (TOPIC_Booze, LOGENTRY_RECIPE_TURNIPBOOZE);
+		PrintScreen	(PRINT_LearnBooze, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_TurnipBooze = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_TurnipBooze] = TRUE;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_VINOSPECIAL		(C_Item)
+{
+	name 				=	"Recipe for Vino's Special";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_VinoSpecial;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making Vino's Special";
+};
+func void UseRecipe_VinoSpecial ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Vino's Special" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLine	( nDocID,  0, "Ingredients for brewing Vino's Special:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "Take two handfuls of berries and crush them well." );
+					Doc_PrintLines	( nDocID,  0, "Add two apples and two pears to sweeten the mixture." );
+					Doc_PrintLines	( nDocID,  0, "Stir in the dried wings of a bloodfly." );
+					Doc_PrintLines	( nDocID,  0, "Let the mixture ferment in a sealed bottle." );
+
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "" );
+
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_VinoBooze == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Booze, LOG_NOTE);
+		B_LogEntry (TOPIC_Booze, LOGENTRY_RECIPE_VINOBOOZE);
+		PrintScreen	(PRINT_LearnBooze, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_VinoBooze = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_VinoBooze] = TRUE;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_MONSTERDRINK		(C_Item)
+{
+	name 				=	"Recipe for Monster Drink";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_MonsterDrink;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making Monster Drink";
+};
+func void UseRecipe_MonsterDrink ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Monster Drink" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLine	( nDocID,  0, "Ingredients for brewing Monster Drink:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "Crush two King's Sorrel leaves into a paste." );
+					Doc_PrintLines	( nDocID,  0, "Add ground troll tusk powder from two pieces." );
+					Doc_PrintLines	( nDocID,  0, "Mix in four teeth and four claws from beasts." );
+					Doc_PrintLines	( nDocID,  0, "Boil everything together until the drink thickens." );
+
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "" );
+
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_MonsterDrink == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Booze, LOG_NOTE);
+		B_LogEntry (TOPIC_Booze, LOGENTRY_RECIPE_MONSTERDRINK);
+		PrintScreen	(PRINT_LearnBooze, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_MonsterDrink = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_MonsterDrink] = TRUE;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_MAGEWINE		(C_Item)
+{
+	name 				=	"Recipe for Monastery's Wine";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_MageWine;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making Monastery's Wine";
+};
+func void UseRecipe_MageWine ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Monastery Wine" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLine	( nDocID,  0, "Ingredients for brewing Monastery Wine:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "Press four ripe grapes into juice." );
+					Doc_PrintLines	( nDocID,  0, "Add the stinger of a bloodfly to strengthen the flavor." );
+					Doc_PrintLines	( nDocID,  0, "Seal the mixture in a bottle and let it age." );
+
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "" );
+
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_MageWine == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Booze, LOG_NOTE);
+		B_LogEntry (TOPIC_Booze, LOGENTRY_RECIPE_MAGEWINE);
+		PrintScreen	(PRINT_LearnBooze, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_MageWine = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_MageWine] = TRUE;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_RICESCHNAPPS		(C_Item)
+{
+	name 				=	"Recipe for Rice Schnapps";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_RiceBooze;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making Rice Schnapps";
+};
+func void UseRecipe_RiceBooze ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Rice Schnapps" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLine	( nDocID,  0, "Ingredients for brewing Rice Schnapps:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "Take four rice plants and crush the grains." );
+					Doc_PrintLines	( nDocID,  0, "Add finely chopped lurker claws." );
+					Doc_PrintLines	( nDocID,  0, "Boil the mixture in a bottle and let it cool." );
+
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "" );
+
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_RiceSchnaps == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Booze, LOG_NOTE);
+		B_LogEntry (TOPIC_Booze, LOGENTRY_RECIPE_RICESCHNAPS);
+		PrintScreen	(PRINT_LearnBooze, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_RiceSchnaps = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_RiceSchnaps] = TRUE;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_MEAD		(C_Item)
+{
+	name 				=	"Recipe for Mead";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_Mead;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making Mead";
+};
+func void UseRecipe_Mead ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Mead" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLine	( nDocID,  0, "Ingredients for brewing Mead:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "Take two honey combs and dissolve them in warm water." );
+					Doc_PrintLines	( nDocID,  0, "Add the mandibles of a field raider." );
+					Doc_PrintLines	( nDocID,  0, "Let the mixture ferment until the drink becomes strong." );
+
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+
+					Doc_PrintLines	( nDocID,  0, "" );
+
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_Mead == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Booze, LOG_NOTE);
+		B_LogEntry (TOPIC_Booze, LOGENTRY_RECIPE_MEAD);
+		PrintScreen	(PRINT_LearnBooze, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_Mead = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_Mead] = TRUE;
+	};
+};
+
+/******************************************************************************************/
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_MEATSTEW		(C_Item)
+{
+	name 				=	"Recipe for Meat Stew";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_MeatStew;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a meat stew";
+};
+func void UseRecipe_MeatStew ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Meat Stew" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for cooking Meat Stew:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take two pieces of meat and two portions of clam meat." );
+					Doc_PrintLines	( nDocID,  0, "Add one sausage and a strip of bacon." );
+					Doc_PrintLines	( nDocID,  0, "Boil everything slowly until the stew thickens." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_MeatSoup == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_MEATSTEW);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_MeatSoup = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_MeatStew] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_FISHSOUP		(C_Item)
+{
+	name 				=	"Recipe for Fish Soup";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_FishSoup;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a fish soup";
+};
+func void UseRecipe_FishSoup ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Fish Soup" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for cooking Fish Soup:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take two fish and clean them well." );
+					Doc_PrintLines	( nDocID,  0, "Put them into a pot with water." );
+					Doc_PrintLines	( nDocID,  0, "Let the soup boil until the fish softens." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_FishSoup == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_FISHSOUP);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_FishSoup = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_FishSoup] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_BUGSOUP		(C_Item)
+{
+	name 				=	"Recipe for Meatbug Ragout";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_BugSoup;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a meat stew";
+};
+func void UseRecipe_BugSoup ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Meatbug Ragout" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for cooking Meatbug Ragout:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take five dark mushrooms and three portions of meatbug meat." );
+					Doc_PrintLines	( nDocID,  0, "Add two rice plants to give the ragout some body." );
+					Doc_PrintLines	( nDocID,  0, "Cook it slowly until the mushrooms dissolve into the sauce." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Don't get confused by the meatbugs ugly looks. Once cooked they are tasty." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_BugSoup == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_MEATBUGRAGOUT);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_BugSoup = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_MeatbugRagout] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_ROOTSOUP		(C_Item)
+{
+	name 				=	"Recipe for Root Soup";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_RootSoup;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a Root Soup";
+};
+func void UseRecipe_RootSoup ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Root Soup" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for cooking Root Soup:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take two meadow berries and two forest berries." );
+					Doc_PrintLines	( nDocID,  0, "Add two portions of swamp weed." );
+					Doc_PrintLines	( nDocID,  0, "Boil the mixture carefully into a strange but filling soup." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_RootSoup == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_ROOTSOUP);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_RootSoup = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_RootSoup] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_CRAWLERSOUP		(C_Item)
+{
+	name 				=	"Recipe for Minecrawler Soup";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_CrawlerSoup;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a Minecrawler Soup";
+};
+func void UseRecipe_CrawlerSoup ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Minecrawler Soup" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for cooking Minecrawler Soup:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take two minecrawler mandibles and crush them." );
+					Doc_PrintLines	( nDocID,  0, "Mix in four portions of swamp weed." );
+					Doc_PrintLines	( nDocID,  0, "Boil the brew until the broth turns dark and bitter." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_CrawlerSoup == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_MINECRAWLERSOUP);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_CrawlerSoup = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_MinecrawlerSoup] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_RICEBOWL		(C_Item)
+{
+	name 				=	"Recipe for Rice bowl";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_RiceBowl;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a bowl of rice";
+};
+func void UseRecipe_RiceBowl ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Rice bowl" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for preparing Rice bowl:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take three rice plants and separate the grains." );
+					Doc_PrintLines	( nDocID,  0, "Cook them in a small pot until soft." );
+					Doc_PrintLines	( nDocID,  0, "Serve while still warm." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_Rice == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_RICEBOWL);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_Rice = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_RiceBowl] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_MARMALADE		(C_Item)
+{
+	name 				=	"Recipe for Berry Marmalade";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_Marmalade;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a berry marmalade";
+};
+func void UseRecipe_Marmalade ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Berry Marmalade" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for preparing Berry Marmalade:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take two grapes, two berries, two meadow berries and two forest berries." );
+					Doc_PrintLines	( nDocID,  0, "Crush all fruit into a thick mash." );
+					Doc_PrintLines	( nDocID,  0, "Boil it down until it becomes a sweet marmalade." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_Marmalade == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_BERRYMARMALADE);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_Marmalade = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_Marmalade] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_FRUITSALAD		(C_Item)
+{
+	name 				=	"Recipe for Fruit Salad";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_FruitSalad;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a fruit salad";
+};
+func void UseRecipe_FruitSalad ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Fruit salad" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for preparing Fruit salad:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take one apple, one pear, one berry and one grape." );
+					Doc_PrintLines	( nDocID,  0, "Cut the fruit into pieces without crushing them." );
+					Doc_PrintLines	( nDocID,  0, "Place everything in a bowl and pour a bottle of milk over it." );
+					Doc_PrintLines	( nDocID,  0, "Serve the dish fresh." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_FruitSalad == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_FRUITSALAD);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_FruitSalad = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_FruitSalad] = TRUE;
+	};
+};
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_RECIPE_OLDSTEW		(C_Item)
+{
+	name 				=	"Recipe for Convict's Stew";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	0;
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_01.3DS";	
+	material 			=	MAT_LEATHER;
+	on_state[0]			=   UseRecipe_OldStew;
+	scemeName			=	"MAP";
+
+	description			= 	name;
+	text[0]				= 	"Recipe for making a Convict's Stew";
+};
+func void UseRecipe_OldStew ()
+{
+		var int nDocID;
+
+		nDocID = 	Doc_Create		();
+					Doc_SetPages	( nDocID,  1 );
+					Doc_SetPage 	( nDocID,  0, "letters.TGA", 0 );
+					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
+					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
+
+					Doc_PrintLine	( nDocID,  0, "Convict's Stew" );
+					Doc_SetFont 	( nDocID,  0, FONT_Book );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "Ingredients for cooking Convict's Stew:" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "Take one hard bread and break it into pieces." );
+					Doc_PrintLines	( nDocID,  0, "Add one stinky cheese, one old beer and one stale water." );
+					Doc_PrintLines	( nDocID,  0, "Cook the miserable mixture until even a paladin can stomach it." );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLine	( nDocID,  0, "" );
+					Doc_PrintLines	( nDocID,  0, "" );
+					Doc_Show		( nDocID );
+
+	if(KnowsRecipe_OldStew == FALSE)
+	{
+		Log_CreateTopic (TOPIC_Cooking, LOG_NOTE);
+		B_LogEntry (TOPIC_Cooking, LOGENTRY_RECIPE_CONVICTSTEW);
+		PrintScreen	(PRINT_LearnCooking, -1, -1, "FONT_OLD_20_WHITE.TGA", 2);
+
+		KnowsRecipe_OldStew = TRUE;
+		PLAYER_TALENT_COOKING[COOKING_ConvictStew] = TRUE;
+	};
+};
 
 
 //****************************************************************************

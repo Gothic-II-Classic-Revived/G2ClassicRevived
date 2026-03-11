@@ -12,6 +12,10 @@ const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
 const string	TOPIC_Tobacco						=	"Mixing tobacco";
 const string	LogText_TobaccoLearned				=	"By mixing Abuyin's apple tobacco at an alchemist's bench I can make:";
 
+const string	TOPIC_Cooking						=	"Cooking";
+
+const string	TOPIC_Booze							=	"Distilling booze";
+
 
 const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower can sell me food and frying pans.";
 
@@ -78,12 +82,21 @@ const string LOGENTRY_RECIPE_LOUHAMMER			= "Ingredients for 'Lou's Hammer':\n2 T
 const string LOGENTRY_RECIPE_LOUHAMMERDOUBLE	= "Ingredients for 'Lou's Double Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 Lou's Hammer";
 const string LOGENTRY_RECIPE_FASTHERRING		= "Ingredients for 'Hasty Herring':\n1 Fish\n1 Snapperweed\n1 White Rum";
 const string LOGENTRY_RECIPE_TURNIPBOOZE		= "Ingredients for 'Turnip Booze':\n4 Turnip\n1 Beer\n1 Minecrawler Mandibles";
-const string LOGENTRY_RECIPE_VINOBOOZE			= "Ingredients for 'Vino's Special':\n2 Berries\n2 Apple\n4 Pear\n1 Bloodfly's wings";
+const string LOGENTRY_RECIPE_VINOBOOZE			= "Ingredients for 'Vino's Special':\n4 Berries\n2 Apple\n2 Pear\n1 Bloodfly's wings";
 const string LOGENTRY_RECIPE_MONSTERDRINK		= "Ingredients for 'Monster Drink':\n2 King's Sorrel\n2 Troll Tusk\n4 Teeth\n4 Claws";
 const string LOGENTRY_RECIPE_MAGEWINE			= "Ingredients for 'Monastery Wine':\n4 Grapes\n1 Bloodfly's stinger";
 const string LOGENTRY_RECIPE_RICESCHNAPS		= "Ingredients for 'Rice Schnapps':\n4 Riceplant\n1 Lurker claws";
 const string LOGENTRY_RECIPE_MEAD				= "Ingredients for 'Mead':\n2 Honey comb\n1 Field Raider mandibles";
 
+const string LOGENTRY_RECIPE_MEATSTEW        	= "Ingredients for 'Meat Stew':\n2 Meat\n2 Clam Meat\n1 Sausage\n1 Bacon";
+const string LOGENTRY_RECIPE_FISHSOUP        	= "Ingredients for 'Fish Soup':\n2 Fish\n1 Water";
+const string LOGENTRY_RECIPE_MEATBUGRAGOUT  	= "Ingredients for 'Meatbug Ragout':\n5 Dark Mushroom\n3 Meatbug Meat\n2 Rice plants";
+const string LOGENTRY_RECIPE_ROOTSOUP        	= "Ingredients for 'Root Soup':\n2 Meadow Berry\n2 Forest Berry\n2 Swamp weed";
+const string LOGENTRY_RECIPE_MINECRAWLERSOUP 	= "Ingredients for 'Minecrawler Soup':\n2 Minecrawler Mandibles\n4 Swamp weed";
+const string LOGENTRY_RECIPE_RICEBOWL        	= "Ingredients for 'Rice bowl':\n3 Rice plants";
+const string LOGENTRY_RECIPE_BERRYMARMALADE  	= "Ingredients for 'Berry Marmalade':\n2 Grapes\n2 Berries\n2 Meadow berry\n2 Forest berry";
+const string LOGENTRY_RECIPE_FRUITSALAD      	= "Ingredients for 'Fruit salad':\n1 Apple\n1 Pear\n1 Berry\n1 Grape\n1 Milk bottle";
+const string LOGENTRY_RECIPE_CONVICTSTEW    	= "Ingredients for 'Convict's Stew':\n1 Hard Bread\n1 Stinky Cheese\n1 Old Beer\n1 Stale Water";
 
 // NPC Names
 const string NAME_LOAFER				=	"Loafer";
@@ -119,6 +132,8 @@ const string NAME_Damage_Fire			=	"Fire Damage";
 const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
 const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
 const string NAME_RaiseWeaponSkill		=	"Melee Weapon Talent Bonus";
+
+const string NAME_BonusHPMP				=	"Hitpoints and Mana bonus";
 
 const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
 
@@ -204,6 +219,15 @@ const string Print_PRAYBELIAR_GETLP					= "Beliar grants you 1 learn point.";
 
 // Cooking
 const string PRINT_CookingSuccess					= "Recipe prepared!";
+const string PRINT_CookingDesc_MeatStew				= "Prepare a 'Meat Stew'";
+const string PRINT_CookingDesc_FishSoup				= "Prepare a 'Fish Soup'";
+const string PRINT_CookingDesc_MeatbugRagout		= "Prepare a 'Meatbug Ragout'";
+const string PRINT_CookingDesc_RootSoup				= "Prepare a 'Root Soup'";
+const string PRINT_CookingDesc_MinecrawlerSoup		= "Prepare a 'Minecrawler Soup'";
+const string PRINT_CookingDesc_RiceBowl				= "Prepare a 'Rice bowl'";
+const string PRINT_CookingDesc_Marmalade			= "Prepare a 'Berry marmalade'";
+const string PRINT_CookingDesc_FruitSalad			= "Prepare a 'Fruit salad'";
+const string PRINT_CookingDesc_ConvictStew			= "Prepare a 'Convict's Stew'";
 
 
 // Alchemy
@@ -218,13 +242,13 @@ const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";
 const string Print_LearnFromBookstand				= "You seem to have learned something new.";
 const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";	
 
-const string PRINT_LearnBowyer					= "Learn: Bowmaking";
-const string PRINT_LearnCooking					= "Learn: Cooking";
-const string PRINT_LearnTobacco					= "Learn: Blend tobacco";
-const string PRINT_LearnBooze					= "Learn: Distill booze";
+const string PRINT_LearnBowyer						= "Learn: Bowmaking";
+const string PRINT_LearnCooking						= "Learn: Cooking";
+const string PRINT_LearnTobacco						= "Learn: Blend tobacco";
+const string PRINT_LearnBooze						= "Learn: Distill booze";
 
 // Output
-const string PRINT_NoMorePicklocks				= "No more lock picks!";
+const string PRINT_NoMorePicklocks					= "No more lock picks!";
 
 
 // ***************
@@ -274,6 +298,32 @@ var int BookMagic;
 var int BookHistory;
 var int BookFighting;
 var int BookPersonal;
+
+
+// ***************
+// Recipe Constants
+// ***************
+
+var int KnowsRecipe_LousHammer;
+var int KnowsRecipe_LousDoubleHammer;
+var int KnowsRecipe_HastyHerring;
+var int KnowsRecipe_TurnipBooze;
+var int KnowsRecipe_VinoBooze;
+var int KnowsRecipe_MonsterDrink;
+var int KnowsRecipe_MageWine;
+var int KnowsRecipe_RiceSchnaps;
+var int KnowsRecipe_Mead;
+
+var int KnowsRecipe_MeatSoup;
+var int KnowsRecipe_FishSoup;
+var int KnowsRecipe_BugSoup;
+var int KnowsRecipe_RootSoup;
+var int KnowsRecipe_CrawlerSoup;
+var int KnowsRecipe_Rice;
+var int KnowsRecipe_Marmalade;
+var int KnowsRecipe_FruitSalad;
+var int KnowsRecipe_OldStew;
+
 
 
 // ***************
