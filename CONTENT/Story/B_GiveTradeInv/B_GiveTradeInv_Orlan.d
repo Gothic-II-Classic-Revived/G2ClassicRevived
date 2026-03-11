@@ -38,6 +38,9 @@ FUNC VOID B_GiveTradeInv_Orlan (var C_NPC slf)
 		// ------ Revived ------
 		CreateInvItems (slf, ITBE_REVIVED_ARCHER, 1); 
 		CreateInvItems (slf, ITSC_REVIVED_TELEPORT_TAVERNE, 3);
+			
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_FRUITSALAD, 1); 
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_MARMALADE, 1); 
 		
 		Orlan_ItemsGiven_Chapter_1 = TRUE;
 	};

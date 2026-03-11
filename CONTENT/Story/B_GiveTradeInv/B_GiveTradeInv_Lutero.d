@@ -23,6 +23,7 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 		CreateInvItems (slf,ItAt_CrawlerMandibles, 1);
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEPORT_CITY, 3);
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_MONSTERDRINK, 1); 
 				
 		Lutero_ItemsGiven_Chapter_1 = TRUE;
 	};

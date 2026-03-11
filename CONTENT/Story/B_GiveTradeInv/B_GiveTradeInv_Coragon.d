@@ -17,6 +17,8 @@ FUNC VOID B_GiveTradeInv_Coragon (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Apple, 5); 
 		CreateInvItems (slf, ItFo_Stew, 5); 
 			
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_MEAD, 1); 
+
 		Coragon_ItemsGiven_Chapter_1 = TRUE;
 	};
 	if ((Kapitel >= 2)

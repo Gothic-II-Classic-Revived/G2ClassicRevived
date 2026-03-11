@@ -21,8 +21,8 @@ const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;
 
 const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	5;
 const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	20;
-const int	REV_Value_MageWine			=	30;		const int	REV_HP_MageWine			=	10;
-const int	REV_Value_MonsterDrink		=	50;		const int	REV_HP_MonsterDrink		=	30;		const int	REV_Time_MonsterDrink	=	10000;
+const int	REV_Value_MageWine			=	50;		const int	REV_HP_MageWine			=	30;
+const int	REV_Value_MonsterDrink		=	30;		const int	REV_HP_MonsterDrink		=	30;		const int	REV_Time_MonsterDrink	=	10000;
 const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
 const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	8;
 

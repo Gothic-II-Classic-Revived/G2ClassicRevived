@@ -14,6 +14,9 @@ FUNC VOID B_GiveTradeInv_Fenia (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Water , 5);
 		CreateInvItems (slf,ItFo_Bread , 3);
 		CreateInvItems (slf, ItFo_Fish, 5);
+			
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_MEATSTEW, 1); 
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_FISHSOUP, 1); 
 		
 		Fenia_ItemsGiven_Chapter_1 = TRUE;
 	};

@@ -2865,6 +2865,7 @@ func void INIT_NewWorld_Part_Xardas_01()
 FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 {
 	Wld_InsertItem 	(ItWr_Manarezept, 	"FP_ITEM_KLOSTER_01");
+	Wld_InsertItem 	(ITWR_REVIVED_RECIPE_MAGEWINE ,"FP_ITEM_KLOSTER_02"); 
 	
 	Wld_InsertNpc 	(PAL_299_Sergio, 	"NW_MONASTERY_ENTRY_01");
 	
@@ -3743,6 +3744,7 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 		(Giant_Rat ,"NW_FOREST_VINOSKELLEREI_01"); 
 	Wld_InsertNpc 		(Giant_Rat ,"NW_FOREST_VINOSKELLEREI_01"); 
 	Wld_InsertItem 		(ItWr_VinosKellergeister_Mis ,"FP_ITEM_NW_VINOKELLEREI"); 
+	Wld_InsertItem 		(ITWR_REVIVED_RECIPE_VINOSPECIAL ,"FP_ITEM_NW_VINOKELLEREI"); 
 
 	// ----------- Lighthouse ------------
 	

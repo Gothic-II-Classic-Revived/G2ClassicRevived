@@ -38,6 +38,8 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Crossbow_L_02, 1);  
 		
 		CreateInvItems (slf, ItRw_Crossbow_H_01, 1); 
+
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_OLDSTEW, 1); 
 		
 		Engor_ItemsGiven_Chapter_1 = TRUE;
 	};

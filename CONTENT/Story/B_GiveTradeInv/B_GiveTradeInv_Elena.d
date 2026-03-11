@@ -17,6 +17,7 @@ FUNC VOID B_GiveTradeInv_Elena (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Milk , 5); 
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEPORT_BIGFARM, 3);
+		CreateInvItems (slf, ITWR_REVIVED_RECIPE_TURNIPBOOZE, 1); 
 		
 		Elena_ItemsGiven_Chapter_1 = TRUE;
 	};
