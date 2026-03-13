@@ -1,3 +1,5 @@
+const int	REV_VALUE_RECIPE	=	25;
+
 //****************************************************************************
 //			BOOKS
 //****************************************************************************
@@ -1528,7 +1530,7 @@ INSTANCE ITWR_REVIVED_RECIPE_TURNIPBOOZE		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1581,7 +1583,7 @@ INSTANCE ITWR_REVIVED_RECIPE_VINOSPECIAL		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1641,7 +1643,7 @@ INSTANCE ITWR_REVIVED_RECIPE_MONSTERDRINK		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1701,7 +1703,7 @@ INSTANCE ITWR_REVIVED_RECIPE_MAGEWINE		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1760,7 +1762,7 @@ INSTANCE ITWR_REVIVED_RECIPE_RICESCHNAPPS		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1819,7 +1821,7 @@ INSTANCE ITWR_REVIVED_RECIPE_MEAD		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1879,7 +1881,7 @@ INSTANCE ITWR_REVIVED_RECIPE_MEATSTEW		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1932,7 +1934,7 @@ INSTANCE ITWR_REVIVED_RECIPE_FISHSOUP		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -1985,7 +1987,7 @@ INSTANCE ITWR_REVIVED_RECIPE_BUGSOUP		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -2038,7 +2040,7 @@ INSTANCE ITWR_REVIVED_RECIPE_ROOTSOUP		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -2091,7 +2093,7 @@ INSTANCE ITWR_REVIVED_RECIPE_CRAWLERSOUP		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -2144,7 +2146,7 @@ INSTANCE ITWR_REVIVED_RECIPE_RICEBOWL		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -2197,7 +2199,7 @@ INSTANCE ITWR_REVIVED_RECIPE_MARMALADE		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -2250,7 +2252,7 @@ INSTANCE ITWR_REVIVED_RECIPE_FRUITSALAD		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
@@ -2304,7 +2306,7 @@ INSTANCE ITWR_REVIVED_RECIPE_OLDSTEW		(C_Item)
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
-	value 				=	0;
+	value 				=	REV_VALUE_RECIPE;
 
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
