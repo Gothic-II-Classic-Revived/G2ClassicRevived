@@ -153,9 +153,9 @@ func void EVT_TELEPORTSTATION_FUNC ()
 		&& (SCUsed_OW_TELEPORTSTATION_MONASTERY == TRUE)
 		&& (SCUsed_OW_TELEPORTSTATION_CLIFF == TRUE)
 		&& (SCUsed_OW_TELEPORTSTATION_STONEFORTRESS == TRUE)
-		&& (SCUsed_AllOWTeleporststones != TRUE)
+		&& (SCUsed_AllOWTeleportStones != TRUE)
 		{
-			SCUsed_AllOWTeleporststones = TRUE;
+			SCUsed_AllOWTeleportStones = TRUE;
 			B_GivePlayerXP (XP_Addon_AllOWTeleporststones);
 		};			
 };
