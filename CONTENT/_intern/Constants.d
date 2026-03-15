@@ -315,7 +315,6 @@ const int GIL_OUT						= 12	; 	// Outlander (z.B. kleine Bauernhöfe)
 
 const int GIL_PIR						= 13	;	//Pirat
 const int GIL_KDW						= 14	;	//KDW
-const int GIL_EMPTY_D					= 15	;	// NICHT VERWENDEN!
 //-----------------------------------------------
 const int GIL_PUBLIC					= 15	; 	// für öffentliche Portalräume
 //-----------------------------------------------
@@ -362,8 +361,8 @@ const int GIL_Gargoyle					= 52	;
 //const int GIL_Empty_A					= 53	;
 const int GIL_SummonedGuardian			= 54	;
 const int GIL_SummonedZombie			= 55	;
-const int GIL_EMPTY_B					= 56	;
-const int GIL_EMPTY_C					= 57	;
+//const int GIL_EMPTY_B					= 56	;
+//const int GIL_EMPTY_C					= 57	;
 
 const int GIL_SEPERATOR_ORC				= 58	;	// (ehem. 37)
 
@@ -372,9 +371,9 @@ const int GIL_FRIENDLY_ORC				= 60	;	// Ork-Sklave / Ur-Shak
 const int GIL_UNDEADORC					= 61	;
 const int GIL_DRACONIAN					= 62	;
 
-const int GIL_EMPTY_X					= 63	;
-const int GIL_EMPTY_Y					= 64	;
-const int GIL_EMPTY_Z					= 65	;
+//const int GIL_EMPTY_X					= 63	;
+//const int GIL_EMPTY_Y					= 64	;
+//const int GIL_EMPTY_Z					= 65	;
 
 const int GIL_MAX						= 66	;	// (ehem. 42)
 

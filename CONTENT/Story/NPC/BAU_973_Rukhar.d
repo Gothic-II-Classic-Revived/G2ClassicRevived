@@ -8,7 +8,7 @@ instance BAU_973_Rukhar (Npc_Default)
 	id 			= 973;
 	voice 		= 12;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_AMBIENT;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 5);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

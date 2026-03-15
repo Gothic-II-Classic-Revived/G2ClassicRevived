@@ -8,7 +8,7 @@ instance BAU_941_Kati (Npc_Default)
 	id 			= 941;
 	voice 		= 16;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly:nur solange Alnveres da ist!																	
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 4);																		

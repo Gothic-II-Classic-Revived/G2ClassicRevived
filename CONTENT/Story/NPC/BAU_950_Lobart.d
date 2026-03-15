@@ -8,7 +8,7 @@ instance BAU_950_Lobart (Npc_Default)
 	id 			= 950;
 	voice 		= 5;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 6);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

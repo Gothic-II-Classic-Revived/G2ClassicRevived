@@ -87,6 +87,8 @@ FUNC void ZS_Talk ()
 		|| (self.npctype == NPCTYPE_OCAMBIENT)
 		|| (self.npctype == NPCTYPE_BL_AMBIENT)
 		|| (self.npctype == NPCTYPE_TAL_AMBIENT)
+		|| (self.npctype == NPCTYPE_BAUOUT_AMBIENT)
+		|| (self.npctype == NPCTYPE_SLDOUT_AMBIENT)
 		{
 			B_AssignAmbientInfos	(self);
 			

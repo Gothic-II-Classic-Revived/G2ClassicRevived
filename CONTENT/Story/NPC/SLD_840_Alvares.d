@@ -7,7 +7,7 @@ instance SLD_840_Alvares (Npc_Default)
 	id 			= 840;
 	voice 		= 11;
 	flags       = 0;						
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_SLDOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 20);																	

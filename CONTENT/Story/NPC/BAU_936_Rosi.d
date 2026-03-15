@@ -8,7 +8,7 @@ instance BAU_936_Rosi  (Npc_Default)
 	id 			= 936;
 	voice 		= 17;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 4);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

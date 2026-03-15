@@ -8,7 +8,7 @@ instance BAU_935_Bronko (Npc_Default)
 	id 			= 935;
 	voice 		= 6;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ AIVARS ------
 	aivar[AIV_ToughGuy] 			= TRUE;

@@ -7,7 +7,7 @@ instance BAU_937_Bauer (Npc_Default)
 	id 			= 937;
 	voice 		= 1;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_AMBIENT;
+	npctype		= NPCTYPE_BAUOUT_AMBIENT;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 5);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

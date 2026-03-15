@@ -7,7 +7,7 @@ instance Mil_337_Mika (Npc_Default)
 	id 			= 337;
 	voice 		= 12;
 	flags       = 0;																
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_MILOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 50);																

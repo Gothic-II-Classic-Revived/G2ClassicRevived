@@ -8,7 +8,7 @@ instance BAU_944_Ehnim (Npc_Default)
 	id 			= 944;
 	voice 		= 12;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 5);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

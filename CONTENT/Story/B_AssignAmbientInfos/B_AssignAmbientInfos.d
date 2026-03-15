@@ -71,6 +71,7 @@ FUNC VOID B_AssignAmbientInfos (var C_NPC slf)
 	if (slf.guild == GIL_SLD)
 	{	
 		if (slf.npctype == NPCTYPE_AMBIENT)
+		|| (slf.npctype == NPCTYPE_SLDOUT_AMBIENT)
 		{
 			if (slf.voice == 6)		{	B_AssignAmbientInfos_Sld_6 (slf);	};	
 			if (slf.voice == 7) 	{	B_AssignAmbientInfos_Sld_7 (slf);	};
@@ -97,6 +98,7 @@ FUNC VOID B_AssignAmbientInfos (var C_NPC slf)
 	{		
 		// ------ NW Ambient-Bauern auf den kleinen Höfen -------
 		if (slf.npctype == NPCTYPE_AMBIENT)
+		|| (slf.npctype == NPCTYPE_BAUOUT_AMBIENT)
 		{
 			if (slf.voice == 1)		{	B_AssignAmbientInfos_Out_1 (slf);	};
 			if (slf.voice == 7) 	{	B_AssignAmbientInfos_Out_7 (slf);	};

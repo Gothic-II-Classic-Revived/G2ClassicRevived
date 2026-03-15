@@ -7,7 +7,7 @@ instance SLD_841_Engardo (Npc_Default)
 	id 			= 841;
 	voice 		= 13;
 	flags       = 0;						
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_SLDOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 20);																

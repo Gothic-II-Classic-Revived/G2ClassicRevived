@@ -7,7 +7,7 @@ instance Mil_336_Rick (Npc_Default)
 	id 			= 336;
 	voice 		= 10;
 	flags       = 0;																
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_MILOUT_MAIN;
 	
 	// ------ AIVARs ------
 	aivar[AIV_DropDeadAndKill] = TRUE;

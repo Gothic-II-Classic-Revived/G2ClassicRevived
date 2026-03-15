@@ -158,70 +158,70 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 
 	"Guildless"		,
 	"Paladin"		,
-	"Militia"			,
+	"Militia"		,
 	"Citizen"		,
 	"Fire Mage"		,
 	"Novice"		,
 	"Dragon Hunter"	,
 	"Mercenary"		,
-	"Farmer"			,
+	"Farmer"		,
 	"Bandit"		,
 	"Convict"		,
 	"Seeker"		,
-	"Outlander"	,
-	"Pirate"			, //Addon
-	"Water Mage"	, //Addon
-	"D"				,
+	"Outlander"		,
+	"Pirate"		,
+	"Water Mage"	,
+	""				, //15 - GIL_PUBLIC
 	""				, //16 - Gil_Seperator_Hum
-	"Meatbug"	,
+	"Meatbug"		,
 	"Sheep"			,
 	"Goblin"		,
 	"Goblin Skeleton",
 	"S. Goblin Skeleton",
 	"Scavenger"		,
-	"Giant Rat"	,
+	"Giant Rat"		,
 	"Field Raider"	,
-	"Bloodfly"	,
-	"Lizard"			,
+	"Bloodfly"		,
+	"Lizard"		,
 	"Wolf"			,
 	"S. Wolf"		,
 	"Minecrawler"	,
 	"Lurker"		,
 	"Skeleton"		,
 	"S. Skeleton"	,
-	"Skeleton Mage",
+	"Skeleton Mage"	,
 	"Zombie"		,
 	"Snapper"		,
-	"Shadowbeast",
+	"Shadowbeast"	,
 	"Skeleton Monster",
-	"Harpy"		,
+	"Harpy"			,
 	"Stone Golem"	,
 	"Fire Golem"	,
 	"Ice Golem"		,
-	"S. Golem"		, //beschworener Golem
+	"S. Golem"		,
 	"Demon"			,
 	"S. Demon"		,
 	"Troll"			,
-	"Swampshark"		,
+	"Swampshark"	,
 	"Dragon"		,
 	"Molerat"		,
-	"Alligator"		, //Addon
-	"Swamp Golem"	, //Addon
-	"Guard"		, //Addon
-	"Stone Puma"		, //Addon
-	"Fanatic",		//53 - GIL_FANATIC | "A"				, //Addon
-	"Guard"		, //Addon
-	"Zombie"		, //Addon
-	""				,
-	""				,
+	"Alligator"		,
+	"Swamp Golem"	,
+	"Stone Sentinel",
+	"Stone Puma"	,
+	"Fanatic"		, //53 "A"				,
+	"S. Sentinel"	,
+	"S. Zombie"		,
+	""				, //56 ""				,
+	""				, //57 ""				,
 	""				, //58 - Gil_Seperator_Orc
 	"Orc"			,
 	"Friendly Orc"	,
 	"Undead Orc"	,
 	"Draconian"		,
-	"X"				,
-	"Y"				,
-	"Z"				
+	""				, //63 "X"				,
+	""				, //64 "Y"				,
+	""				  //65 "Z"				
 };
 
 

@@ -8,7 +8,7 @@ instance BAU_930_Sekob (Npc_Default)
 	id 			= 930;
 	voice 		= 1;
 	flags       = NPC_FLAG_IMMORTAL; 															//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ AIVARS ------
 	aivar[AIV_ToughGuy] 		= TRUE;

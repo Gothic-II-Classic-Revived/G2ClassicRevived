@@ -371,7 +371,19 @@ const int ID_FANATIC				=	70;
 // ***************
 // Guilds
 // ***************
+const int NPCTYPE_BAUOUT_AMBIENT	=	8;
+const int NPCTYPE_BAUOUT_MAIN		=	9;
+const int NPCTYPE_SLDOUT_AMBIENT	=	10;
+const int NPCTYPE_SLDOUT_MAIN		=	11;
+const int NPCTYPE_MILOUT_AMBIENT	=	12;
+const int NPCTYPE_MILOUT_MAIN		=	13;
+
 const int GIL_FANATIC				=	53;
+const int GIL_56					=	56;
+const int GIL_57					=	57;
+const int GIL_63					=	63;
+const int GIL_64					=	64;
+const int GIL_65					=	65;
 
 
 

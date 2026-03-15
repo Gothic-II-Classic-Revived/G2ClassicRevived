@@ -8,7 +8,7 @@ instance BAU_960_Bengar (Npc_Default)
 	id 			= 960;
 	voice 		= 10;
 	flags       = NPC_FLAG_IMMORTAL;													//NPC_FLAG_IMMORTAL oder 0
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 7);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)

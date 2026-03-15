@@ -8,7 +8,7 @@ instance BAU_940_Akil (Npc_Default)
 	id 			= 940;
 	voice 		= 13;
 	flags       = NPC_FLAG_IMMORTAL;		//Joly:nur solange Alnveres da ist!																	
-	npctype		= NPCTYPE_MAIN;
+	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 7);	

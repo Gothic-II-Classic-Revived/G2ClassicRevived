@@ -29,6 +29,8 @@ func int C_NpcBelongsToOldCamp (var C_NPC slf)
 func int C_NpcBelongsToCity (var C_NPC slf)
 {
 	if (! C_NpcBelongsToOldCamp (slf))
+	&& (slf.npctype != NPCTYPE_MILOUT_MAIN)
+	&& (slf.npctype != NPCTYPE_MILOUT_AMBIENT)
 	{
 		if (slf.guild == GIL_VLK)
 		|| (slf.guild == GIL_MIL)
@@ -58,10 +60,16 @@ func int C_NpcBelongsToMonastery (var C_NPC slf)
 
 func int C_NpcBelongsToFarm (var C_NPC slf)
 {
-	if (slf.guild == GIL_BAU)
-	|| (slf.guild == GIL_SLD)
+	if (slf.npctype != NPCTYPE_BAUOUT_MAIN)
+	&& (slf.npctype != NPCTYPE_BAUOUT_AMBIENT)
+	&& (slf.npctype != NPCTYPE_SLDOUT_MAIN)
+	&& (slf.npctype != NPCTYPE_SLDOUT_AMBIENT)
 	{
-		return TRUE;
+		if (slf.guild == GIL_BAU)
+		|| (slf.guild == GIL_SLD)
+		{
+			return TRUE;
+		};
 	};
 	
 	return FALSE;
