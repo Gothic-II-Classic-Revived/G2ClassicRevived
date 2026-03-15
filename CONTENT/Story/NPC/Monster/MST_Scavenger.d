@@ -99,7 +99,8 @@ INSTANCE ScavengerJuvenile	(Mst_Default_Scavenger)
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 
-	B_SetVisuals_ScavengerJuvenile();
+	//B_SetVisuals_ScavengerJuvenile();
+	B_SetVisuals_Scavenger();
 	
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
