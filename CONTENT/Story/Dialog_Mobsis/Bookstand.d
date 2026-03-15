@@ -149,7 +149,7 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 			B_LogEntry (TOPIC_TalentSmith,"If I add 4 units of ore and 5 of dragon blood, I can forge an ORE DRAGON SLAYER.");
 			B_LogEntry (TOPIC_TalentSmith,"If I add 5 units of ore and 5 of dragon blood, I can forge a LARGE ORE DRAGON SLAYER.");
 			PlayerGetsFinalDJGArmor = TRUE;
-			DJG_KnowsAbout_Puryfing = TRUE;
+			DJG_KnowsAbout_Purifying = TRUE;
 						
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
