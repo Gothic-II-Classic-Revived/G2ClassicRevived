@@ -568,6 +568,22 @@ const int	Value_Lurkerklaue		=	15;
 const int	Value_Joint3			=	20;
 
 
+// ***************
+// Pray Shrines
+// ***************
+
+const int	BLESS_HITPOINTS			= 1;
+const int	BLESS_MANA				= 2;
+const int	BLESS_STRENGTH			= 3;
+const int	BLESS_DEXTERITY			= 4;
+const int 	BLESS_HITPOINTS_MAX		= 5;
+const int	BLESS_MANA_MAX			= 6;
+const int	BLESS_TALENT_1H			= 7;
+const int	BLESS_TALENT_2H			= 8;
+const int	BLESS_TALENT_BOW		= 9;
+const int	BLESS_TALENT_CROSSBOW	= 10;
+
+
 
 // ***************
 // Magic

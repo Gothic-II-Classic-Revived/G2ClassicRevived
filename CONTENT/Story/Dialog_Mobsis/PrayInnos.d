@@ -171,6 +171,9 @@ FUNC VOID PC_PrayInnos_Paladine_Info()
 	PrintScreen	(Pray_Paladin2, -1, 36,FONT_ScreenSmall,4);
 	PrintScreen	(Pray_Paladin3, -1, 39,FONT_ScreenSmall,5);
 	PrintScreen	(Pray_Paladin4, -1, 42,FONT_ScreenSmall,6);
+
+	Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
+	Snd_Play ("MFX_Heal_Cast" );
 }; 
 //*******************************************************
 //	Beten
@@ -242,7 +245,7 @@ FUNC VOID PC_PrayInnos_Pray_NoPay ()
 	}
 	else if (zufall < 5) //heute noch nicht gebetet
 	{
-		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 1);
+		B_BlessAttribute (hero, BLESS_HITPOINTS_MAX, 1);
 	}
 	else
 	{
@@ -266,7 +269,7 @@ func VOID PC_PrayInnos_Pray_SmallPay ()
 	}
 	else
 	{
-		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 1);
+		B_BlessAttribute (hero, BLESS_HITPOINTS_MAX, 1);
 	};
 	
 	PrayInnosDay = Wld_GetDay ();
@@ -287,7 +290,7 @@ FUNC VOID PC_PrayInnos_Pray_MediumPay ()
 	}
 	else//heute noch nicht gebetet
 	{
-		B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 2);
+		B_BlessAttribute (hero, BLESS_HITPOINTS_MAX, 2);
 	};
 	
 	PrayInnosDay = Wld_GetDay ();
@@ -315,7 +318,7 @@ func VOID PC_PrayInnos_Pray_BigPay ()
 		&& (hero.guild != GIL_NOV)
 		&& (zufall < 50)
 		{
-			B_BlessAttribute (hero, ATR_STRENGTH, 1);
+			B_BlessAttribute (hero, BLESS_STRENGTH, 1);
 			Shrine_STR_Bonus += 1;
 		}
 		else if (Shrine_DEX_Bonus < 10)
@@ -323,12 +326,12 @@ func VOID PC_PrayInnos_Pray_BigPay ()
 		&& (hero.guild != GIL_NOV)
 		&& (zufall >= 50)
 		{
-			B_BlessAttribute (hero, ATR_DEXTERITY, 1);
+			B_BlessAttribute (hero, BLESS_DEXTERITY, 1);
 			Shrine_DEX_Bonus += 1;
 		}
 		else
 		{
-			B_BlessAttribute (hero, ATR_HITPOINTS_MAX, 3);
+			B_BlessAttribute (hero, BLESS_HITPOINTS_MAX, 3);
 		};
 	};
 	
@@ -351,7 +354,7 @@ INSTANCE PC_PrayInnos_BlessSword (C_Info)
 
 FUNC INT PC_PrayInnos_BlessSword_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE)
 	&& (hero.guild == GIL_PAL)
 	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500)   
 	&& ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)
@@ -363,40 +366,31 @@ FUNC INT PC_PrayInnos_BlessSword_Condition ()
 
 FUNC VOID PC_PrayInnos_BlessSword_Info()
 {
-	if (ShrineIsObsessed == TRUE)
+	if (Npc_HasItems (hero,ItMi_Gold) >= Gold_BlessSword)
 	{
-		SC_IsObsessed = TRUE;
-		PrintScreen	(PRINT_SCIsObsessed, -1,-1,FONT_Screen,2);
-		Snd_Play ("DEM_Die");
+		Npc_RemoveInvItems  (hero,ItMi_Gold, Gold_BlessSword);
+		concatDonation = ConcatStrings(IntToString(Gold_BlessSword), PRINT_GoldGegeben);				
+		AI_PrintScreen	(concatDonation, -1, -1, FONT_SCREENSmall, 2);
+			
+		if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)		//1H-Waffe
+		{	
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
+		}
+		else	//2H-Waffe
+		{
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_02, 1);
+		};
+
+			Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
+			Snd_Play ("MFX_Heal_Cast" );
+			B_GivePlayerXP (XP_SwordBlessed);
 	}
 	else
-	{	
-		if (Npc_HasItems (hero,ItMi_Gold) >= Gold_BlessSword)
-		{
-			Npc_RemoveInvItems  (hero,ItMi_Gold, Gold_BlessSword);
-			concatDonation = ConcatStrings(IntToString(Gold_BlessSword), PRINT_GoldGegeben);				
-			AI_PrintScreen	(concatDonation, -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
-			
-			if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)		//1H-Waffe
-			{	
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
-			}
-			else	//2H-Waffe
-			{
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_02, 1);
-			};
-
-				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-				Snd_Play ("MFX_Heal_Cast" );
-				B_GivePlayerXP (XP_SwordBlessed);
-		}
-		else
-		{
-			AI_PrintScreen	(PRINT_NotEnoughGold, -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
-		};	
-	};
+	{
+		AI_PrintScreen	(PRINT_NotEnoughGold, -1, -1, FONT_SCREENSmall, 2);
+	};	
 }; 
 
 //*******************************************************
@@ -414,7 +408,7 @@ INSTANCE PC_PrayInnos_BlessSword_Final (C_Info)
 
 FUNC INT PC_PrayInnos_BlessSword_Final_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE)
 	&& (hero.guild == GIL_PAL)
 	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500) 
 	&& (PAL_KnowsAbout_FINAL_BLESSING == TRUE)  
@@ -429,50 +423,41 @@ FUNC INT PC_PrayInnos_BlessSword_Final_Condition ()
 
 FUNC VOID PC_PrayInnos_BlessSword_FINAL_Info()
 {
-	if (ShrineIsObsessed == TRUE)
+	if (Npc_HasItems (hero,ItPo_PotionOfDeath_01_Mis) >= 1)
+	|| (Npc_HasItems (hero,ItPo_PotionOfDeath_02_Mis) >= 1)
 	{
-		SC_IsObsessed = TRUE;
-		PrintScreen	(PRINT_SCIsObsessed, -1,-1,FONT_Screen,2);
-		Snd_Play ("DEM_Die");
+		Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_01_Mis, 1);
+		Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_02_Mis, 1);
+		
+		if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)			//1H Regular
+		{	
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
+		}
+		else if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02) >= 1)		//1H Blessed
+		{	
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
+		}
+		else if (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01) >= 1)		//2H Regular
+		{
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_03, 1);
+		}
+		else if (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02) >= 1)		//2H Blessed
+		{	
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_03, 1);
+		};
+
+			Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
+			Snd_Play ("MFX_Heal_Cast" );
+			B_GivePlayerXP (XP_SwordBlessed2);
 	}
 	else
-	{	
-		if (Npc_HasItems (hero,ItPo_PotionOfDeath_01_Mis) >= 1)
-		|| (Npc_HasItems (hero,ItPo_PotionOfDeath_02_Mis) >= 1)
-		{
-			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_01_Mis, 1);
-			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_02_Mis, 1);
-			
-			if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)			//1H Regular
-			{	
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
-			}
-			else if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02) >= 1)		//1H Blessed
-			{	
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
-			}
-			else if (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01) >= 1)		//2H Regular
-			{
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_03, 1);
-			}
-			else if (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02) >= 1)		//2H Blessed
-			{	
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_03, 1);
-			};
-
-				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-				Snd_Play ("MFX_Heal_Cast" );
-				B_GivePlayerXP (XP_SwordBlessed2);
-		}
-		else
-		{
-			AI_PrintScreen	(PRINT_NoInnosTears, -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
-		};	
-	};
+	{
+		AI_PrintScreen	(PRINT_NoInnosTears, -1, -1, FONT_SCREENSmall, 2);
+	};	
 }; 
 
 
@@ -491,10 +476,10 @@ INSTANCE PC_PrayInnos_PurifySword (C_Info)
 
 FUNC INT PC_PrayInnos_PurifySword_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE)
 	&& (hero.guild == GIL_DJG)
 	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500) 
-	&& (DJG_KnowsAbout_Puryfing == TRUE)  
+	&& (DJG_KnowsAbout_Purifying == TRUE)  
 	&& (Npc_HasItems (hero,ITMW_REVIVED_2H_INNOS_SWORD_01) >= 1)
 	{	
 		return TRUE;
@@ -503,32 +488,23 @@ FUNC INT PC_PrayInnos_PurifySword_Condition ()
 
 FUNC VOID PC_PrayInnos_PurifySword_Info()
 {
-	if (ShrineIsObsessed == TRUE)
+	if (Npc_HasItems (hero,ItPo_PotionOfDeath_01_Mis) >= 1)
+	|| (Npc_HasItems (hero,ItPo_PotionOfDeath_02_Mis) >= 1)
 	{
-		SC_IsObsessed = TRUE;
-		PrintScreen	(PRINT_SCIsObsessed, -1,-1,FONT_Screen,2);
-		Snd_Play ("DEM_Die");
+		Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_01_Mis, 1);
+		Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_02_Mis, 1);
+		
+		if (Npc_HasItems (hero,ITMW_REVIVED_2H_INNOS_SWORD_01) >= 1)		//2H-Waffe
+		{	
+			Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_INNOS_SWORD_01, 1);
+			CreateInvItems 		(hero,ITMW_REVIVED_2H_INNOS_SWORD_02, 1);
+			Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
+			Snd_Play ("MFX_Heal_Cast" );
+			B_GivePlayerXP (XP_SwordBlessed2);
+		};
 	}
 	else
-	{	
-		if (Npc_HasItems (hero,ItPo_PotionOfDeath_01_Mis) >= 1)
-		|| (Npc_HasItems (hero,ItPo_PotionOfDeath_02_Mis) >= 1)
-		{
-			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_01_Mis, 1);
-			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_02_Mis, 1);
-			
-			if (Npc_HasItems (hero,ITMW_REVIVED_2H_INNOS_SWORD_01) >= 1)		//2H-Waffe
-			{	
-				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_INNOS_SWORD_01, 1);
-				CreateInvItems 		(hero,ITMW_REVIVED_2H_INNOS_SWORD_02, 1);
-				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-				Snd_Play ("MFX_Heal_Cast" );
-				B_GivePlayerXP (XP_SwordBlessed2);
-			};
-		}
-		else
-		{
-			AI_PrintScreen	(PRINT_NoInnosTears, -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
-		};	
-	};
+	{
+		AI_PrintScreen	(PRINT_NoInnosTears, -1, -1, FONT_SCREENSmall, 2);
+	};	
 }; 

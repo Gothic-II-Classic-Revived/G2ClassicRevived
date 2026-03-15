@@ -25,29 +25,29 @@ FUNC VOID PC_PrayAdanos_BonusLogic(var int lpAmount)
 {
 	var int zufall;	zufall = Hlp_Random(100);
 	
-	if (zufall >= 20 && zufall < 39)
+	if (zufall >= 20 && zufall <= 39)
 	&& (hero.HitChance[NPC_TALENT_1H] <= 97)
 	{
-		B_BlessAttribute (hero, NPC_TALENT_1H, lpAmount);
+		B_BlessAttribute (hero, BLESS_TALENT_1H, lpAmount);
 	}
-	else if (zufall >= 40 && zufall < 59)
+	else if (zufall >= 40 && zufall <= 59)
 	&& (hero.HitChance[NPC_TALENT_2H] <= 97)
 	{
-		B_BlessAttribute (hero, NPC_TALENT_2H, lpAmount);
+		B_BlessAttribute (hero, BLESS_TALENT_2H, lpAmount);
 	}
 	else if (zufall >= 60 && zufall <= 79)
 	&& (hero.HitChance[NPC_TALENT_BOW] <= 97)
 	{
-		B_BlessAttribute (hero, NPC_TALENT_BOW, lpAmount);
+		B_BlessAttribute (hero, BLESS_TALENT_BOW, lpAmount);
 	}
 	else if (zufall >= 80 && zufall <= 100)
 	&& (hero.HitChance[NPC_TALENT_CROSSBOW] <= 97)
 	{
-		B_BlessAttribute (hero, NPC_TALENT_CROSSBOW, lpAmount);
+		B_BlessAttribute (hero, BLESS_TALENT_CROSSBOW, lpAmount);
 	}
 	else
 	{
-		B_BlessAttribute (hero, ATR_MANA_MAX, lpAmount + 2);
+		B_BlessAttribute (hero, BLESS_MANA_MAX, lpAmount + 2);
 	};
 	
 		hero.lp = hero.lp - lpAmount;
@@ -82,7 +82,7 @@ func int B_LearnTalentWispDetector (var C_NPC slf, var int WispSkill)
 	if (WispSkill == WISPSKILL_FOOD) 				{	PLAYER_TALENT_WISPDETECTOR[WISPSKILL_FOOD] 			= TRUE;	B_WISPSHRINE_LearnEffect(); B_LogEntry (TOPIC_WispDetector,LogText_Addon_WispLearned_FOOD);};
 	if (WispSkill == WISPSKILL_POTIONS) 			{	PLAYER_TALENT_WISPDETECTOR[WISPSKILL_POTIONS] 		= TRUE;	B_WISPSHRINE_LearnEffect(); B_LogEntry (TOPIC_WispDetector,LogText_Addon_WispLearned_POTIONS);};
                                                                                                                                                                                                         
-	PrintScreen			(PRINT_LearnWispDetector, -1, -1, FONT_Screen, 2);                                                                                                                                
+	PrintScreen			(PRINT_LearnWispDetector, -1, -1, FONT_SCREEN, 2);                                                                                                                                
 	
 	// ------ bei jedem Körperteil: WispDetector-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------
 	Npc_SetTalentSkill 	(slf, NPC_TALENT_WISPDETECTOR , 1);
@@ -238,13 +238,13 @@ FUNC VOID PC_PrayAdanos_Pray_AltPay ()
 		};
 
 		hero.exp = hero.exp - 1000;
+		PrayAdanosDay = Wld_GetDay ();
 	}
 	else
 	{
 		PrintScreen	(Print_PRAYADANOS_BlessCant, -1, -1, FONT_SCREEN, 2);
 	};
 	
-	PrayAdanosDay = Wld_GetDay ();
 	Info_ClearChoices (PC_PrayAdanos_Pray);
 };
 
@@ -263,7 +263,7 @@ FUNC VOID PC_PrayAdanos_Pray_NoPay ()
 	}
 	else if (zufall <= 5) //heute noch nicht gebetet
 	{
-		B_BlessAttribute (hero, ATR_MANA_MAX, 1);
+		B_BlessAttribute (hero, BLESS_MANA_MAX, 1);
 	}
 	else
 	{
