@@ -15,7 +15,7 @@ instance VLK_405_Fernando (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------
-	EquipItem (self,ITMW_REVIVED_1H_MACE_WAR_02);
+	EquipItem (self, ITMW_REVIVED_1H_MACE_WAR_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

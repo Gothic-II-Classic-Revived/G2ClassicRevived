@@ -20,7 +20,7 @@ instance BDT_446_JESPER (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BROAD_02); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BROAD_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -16,7 +16,7 @@ instance OUT_4130_TALBIN_NW (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_MACE_01);
-	EquipItem			(self, ITRW_REVIVED_BOW_LONG_04);
+	EquipItem			(self, ITRW_REVIVED_BOW_LONG_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

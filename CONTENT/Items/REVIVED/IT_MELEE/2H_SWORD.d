@@ -4,8 +4,8 @@ const int	REV_Range_2H_Sword_Old_01			=	150;
 const int	REV_Value_2H_Sword_Old_01			=	50;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Light_01		=	80;
-const int	REV_Condition_2H_Sword_Light_01		=	65;
+const int	REV_Damage_2H_Sword_Light_01		=	75;
+const int	REV_Condition_2H_Sword_Light_01		=	60;
 const int	REV_Range_2H_Sword_Light_01			=	100;
 const int	REV_Value_2H_Sword_Light_01			=	300;
 //******************************************************************//

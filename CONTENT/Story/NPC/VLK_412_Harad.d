@@ -10,7 +10,7 @@ instance VLK_412_Harad (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 15);																
+	B_SetAttributesForLevel(self, 25);																
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

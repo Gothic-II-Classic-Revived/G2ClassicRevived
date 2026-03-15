@@ -16,7 +16,7 @@ instance BDT_1019_LeuchtturmBandit (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BASTARD_01);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

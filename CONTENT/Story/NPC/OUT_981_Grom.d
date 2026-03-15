@@ -15,7 +15,7 @@ INSTANCE OUT_981_GROM (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_SHORT_04); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

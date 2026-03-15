@@ -18,7 +18,7 @@ instance OUT_961_GAAN (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_03);
-	EquipItem			(self, ITRW_REVIVED_BOW_LONG_09);
+	EquipItem			(self, ITRW_REVIVED_BOW_LONG_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

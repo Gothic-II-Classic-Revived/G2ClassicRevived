@@ -17,7 +17,7 @@ instance VLK_4131_Engrom (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_AXE_01);
-	EquipItem			(self, ITRW_REVIVED_CROSSBOW_02);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_02);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

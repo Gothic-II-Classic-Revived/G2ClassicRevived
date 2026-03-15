@@ -16,7 +16,7 @@ INSTANCE OUT_982_GRIMBALD (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01); 
-	EquipItem	(self, ITRW_REVIVED_BOW_LONG_02);
+	EquipItem	(self, ITRW_REVIVED_BOW_LONG_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

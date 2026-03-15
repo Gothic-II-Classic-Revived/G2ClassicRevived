@@ -3,7 +3,7 @@ instance GRD_350_Martin (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Martin";	
-	guild 		= GIL_MIL;//wegen Rangermeeting
+	guild 		= GIL_MIL;
 	id 			= 350;
 	voice 		= 7;
 	flags       = 0;																
@@ -18,7 +18,7 @@ instance GRD_350_Martin (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

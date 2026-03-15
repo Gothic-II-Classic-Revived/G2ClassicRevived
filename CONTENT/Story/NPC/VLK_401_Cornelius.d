@@ -16,7 +16,7 @@ instance VLK_401_Cornelius (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------
-	EquipItem (self,ITMW_REVIVED_1H_SWORD_CORNELIUS);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_CORNELIUS);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

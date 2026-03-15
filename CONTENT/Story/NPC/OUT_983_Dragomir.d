@@ -16,7 +16,7 @@ INSTANCE OUT_983_DRAGOMIR (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01);
-	EquipItem 	(self,ITRW_REVIVED_CROSSBOW_LIGHT_02); 
+	EquipItem 	(self,ITRW_REVIVED_CROSSBOW_LIGHT_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

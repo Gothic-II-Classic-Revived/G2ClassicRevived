@@ -16,7 +16,7 @@ instance STRF_1116_Kervo (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_1H_AXE_01 );
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_OLD_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

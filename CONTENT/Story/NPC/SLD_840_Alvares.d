@@ -19,7 +19,7 @@ instance SLD_840_Alvares (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ITMW_REVIVED_2H_AXE_LIGHT_03);
+	EquipItem			(self, ITMW_REVIVED_2H_AXE_LIGHT_01);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

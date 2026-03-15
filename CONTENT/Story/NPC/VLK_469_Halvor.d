@@ -18,7 +18,7 @@ instance VLK_469_Halvor (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ITMW_REVIVED_1H_MACE_02); 
+	EquipItem	(self, ITMW_REVIVED_1H_MACE_01); 
 	
 	// ------ Inventory ------
 	// Händler

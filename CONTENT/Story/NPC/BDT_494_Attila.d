@@ -2,7 +2,7 @@
 instance BDT_494_ATTILA (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Attile";
+	name 		= "Attila";
 	guild 		= GIL_NONE;
 	id 			= 494;
 	voice 		= 9;
@@ -20,7 +20,7 @@ instance BDT_494_ATTILA (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_AXE_02);
-	EquipItem			(self, ITRW_REVIVED_CROSSBOW_01);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_02);
 	
 	// ------ Inventory ------
 	CreateInvItem (self, ItKe_ThiefGuildKey_MIS);  // Schlüssel zur geheimen Diebesgilde

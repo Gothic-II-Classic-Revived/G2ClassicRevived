@@ -16,13 +16,13 @@ instance BDT_328_Miliz (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 10);																		
+	B_SetAttributesForLevel(self, 13);																		
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ITMW_REVIVED_1H_SWORD_03);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

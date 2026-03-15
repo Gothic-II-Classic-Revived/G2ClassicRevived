@@ -1,5 +1,5 @@
-const int	REV_Damage_1H_Mace_01				=	60;
-const int	REV_Condition_1H_Mace_01			=	60;
+const int	REV_Damage_1H_Mace_01				=	45;
+const int	REV_Condition_1H_Mace_01			=	45;
 const int	REV_Range_1H_Mace_01				=	90;
 const int	REV_Value_1H_Mace_01				=	400;
 //******************************************************************//
@@ -14,7 +14,7 @@ const int	REV_Range_1H_Mace_03				=	90;
 const int	REV_Value_1H_Mace_03				=	600;
 //******************************************************************//
 const int	REV_Damage_1H_Mace_War_01			=	50;
-const int	REV_Condition_1H_Mace_War_01		=	50;
+const int	REV_Condition_1H_Mace_War_01		=	45;
 const int	REV_Range_1H_Mace_War_01			=	90;
 const int	REV_Value_1H_Mace_War_01			=	350;
 //******************************************************************//

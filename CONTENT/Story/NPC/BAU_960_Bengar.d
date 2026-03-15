@@ -11,7 +11,7 @@ instance BAU_960_Bengar (Npc_Default)
 	npctype		= NPCTYPE_BAUOUT_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 7);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 10);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
