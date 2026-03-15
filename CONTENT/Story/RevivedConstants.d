@@ -262,6 +262,8 @@ const string PRINT_LearnBooze						= "Learn: Distill booze";
 
 // Output
 const string PRINT_NoMorePicklocks					= "No more lock picks!";
+const string PRINT_Ranged_No_Ammo_Crossbow			= "No more bolts!";
+const string PRINT_Ranged_No_Ammo_Bow				= "No more arrows!";
 
 
 // ***************

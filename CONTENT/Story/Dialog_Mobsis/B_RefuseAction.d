@@ -108,11 +108,13 @@ func void PLAYER_RANGED_NO_AMMO()
 			rangedWeapon = Npc_GetEquippedRangedWeapon(self);
 			if(rangedWeapon.flags & ITEM_CROSSBOW)
 			{
-				Print("PRINT_Ranged_No_Ammo_Crossbow");
+				Print(PRINT_Ranged_No_Ammo_Crossbow);
+				B_Say_Overlay (self, self , "$MISSINGITEM");
 			}
 			else if(rangedWeapon.flags & ITEM_BOW)
 			{
-				Print("PRINT_Ranged_No_Ammo_Bow");
+				Print(PRINT_Ranged_No_Ammo_Bow);
+				B_Say_Overlay (self, self , "$MISSINGITEM");
 			};
 		};
 	};
