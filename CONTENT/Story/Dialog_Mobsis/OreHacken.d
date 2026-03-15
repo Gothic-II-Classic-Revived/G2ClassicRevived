@@ -210,17 +210,17 @@ FUNC VOID PC_OreHacken_End_Info()
 //*******************************************************
 //	Goldhacken 
 //*******************************************************
-INSTANCE PC_OreHacken_Addon_Hour (C_Info)
+INSTANCE PC_OreHacken_Hour (C_Info)
 {
 	npc				= PC_Hero;
 	nr				= 2;
-	condition		= PC_OreHacken_Addon_Hour_Condition;
-	information		= PC_OreHacken_Addon_Hour_Info;
+	condition		= PC_OreHacken_Hour_Condition;
+	information		= PC_OreHacken_Hour_Info;
 	permanent		= TRUE;
 	description		= "Just chop a little."; 
 };
 
-FUNC INT PC_OreHacken_Addon_Hour_Condition ()
+FUNC INT PC_OreHacken_Hour_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_OREHACKEN)
 	{	
@@ -228,63 +228,37 @@ FUNC INT PC_OreHacken_Addon_Hour_Condition ()
 	};
 };
 var int OreCounter;
-FUNC VOID PC_OreHacken_Addon_Hour_Info()
+FUNC VOID PC_OreHacken_Hour_Info()
 {
-
-	//---------- Learning by doing  10 PKT---------
-	Learn_by_doing = (Learn_by_doing +1);
-	
-	if (Learn_by_doing == 10)
+	if (B_OreMob_Bestimmung() == TRUE)
 	{
-		B_Upgrade_Hero_HackChance (2);
-	}
-	else if (Learn_by_doing == 15)
-	{
-		B_Upgrade_Hero_HackChance (3);
-	}	
-	else if (Learn_by_doing == 20)
-	{
-		B_Upgrade_Hero_HackChance (5);
-	};
 	
 	//----- EIGENTLICHES HACKEN -------------
 	var int CurrentChance;
 	CurrentChance = Hlp_Random (100);
-	
-	/* var int MultiNugget;
-	MultiNugget = Hlp_Random (10); */
-		
-	if (B_OreMob_Bestimmung() == TRUE)
-	{
+
 		if (CurrentChance <= Hero_HackChance)
 		{
-			/* if (OreCounter >= 20)
-			&& (MultiNugget >= 8)
-			{
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);	
-				PrintScreen ("3 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
+				PrintScreen ("1 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
 				Truemmer_Count = 0;
+				OreCounter = (OreCounter +1);
+
+				//---------- Learning by doing  10 PKT---------
+				Learn_by_doing = (Learn_by_doing +1);
 				
-			}
-			else if (OreCounter >= 7)
-			&& (MultiNugget >= 5)
-			{
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);	
-				PrintScreen ("2 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
-				Truemmer_Count = 0;
-				OreCounter = (OreCounter +1);
-			}
-			else
-			{
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-				PrintScreen ("1 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
-				Truemmer_Count = 0;
-				OreCounter = (OreCounter +1);
-			}; */
-				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-				PrintScreen ("1 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
-				Truemmer_Count = 0;
-				OreCounter = (OreCounter +1);
+				if (Learn_by_doing == 10)
+				{
+					B_Upgrade_Hero_HackChance (2);
+				}
+				else if (Learn_by_doing == 15)
+				{
+					B_Upgrade_Hero_HackChance (3);
+				}	
+				else if (Learn_by_doing == 20)
+				{
+					B_Upgrade_Hero_HackChance (5);
+				};
 		}
 		else
 		{
@@ -301,17 +275,17 @@ FUNC VOID PC_OreHacken_Addon_Hour_Info()
 //*******************************************************
 //	Goldhacken Trümmerschlag
 //*******************************************************
-INSTANCE PC_OreHacken_Addon_TSchlag (C_Info)
+INSTANCE PC_OreHacken_TSchlag (C_Info)
 {
 	npc				= PC_Hero;
 	nr				= 997;
-	condition		= PC_OreHacken_Addon_TSchlag_Condition;
-	information		= PC_OreHacken_Addon_TSchlag_Info;
+	condition		= PC_OreHacken_TSchlag_Condition;
+	information		= PC_OreHacken_TSchlag_Info;
 	permanent		= TRUE;
 	description		= "Give it a really good whack."; 
 };
 
-FUNC INT PC_OreHacken_Addon_TSchlag_Condition ()
+FUNC INT PC_OreHacken_TSchlag_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_OREHACKEN)
 	&& (Truemmer_Count >= 2)
@@ -320,7 +294,7 @@ FUNC INT PC_OreHacken_Addon_TSchlag_Condition ()
 		return TRUE;
 	};
 };
-FUNC VOID PC_OreHacken_Addon_TSchlag_Info()
+FUNC VOID PC_OreHacken_TSchlag_Info()
 {
 	var int TruemmerChance;
 	TruemmerChance = Hlp_Random (100);
@@ -361,58 +335,58 @@ FUNC VOID PC_OreHacken_Addon_TSchlag_Info()
 //*******************************************************
 //	Goldhacken Chance
 //*******************************************************
-INSTANCE PC_OreHacken_Addon_Chance (C_Info)
+INSTANCE PC_OreHacken_Chance (C_Info)
 {
 	npc				= PC_Hero;
 	nr				= 998;
-	condition		= PC_OreHacken_Addon_Chance_Condition;
-	information		= PC_OreHacken_Addon_Chance_Info;
+	condition		= PC_OreHacken_Chance_Condition;
+	information		= PC_OreHacken_Chance_Info;
 	permanent		= TRUE;
 	description		= "(assess own ability)"; 
 };
 
-FUNC INT PC_OreHacken_Addon_Chance_Condition ()
+FUNC INT PC_OreHacken_Chance_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_OREHACKEN)
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_OREHACKEN)
 	{	
 		return TRUE;
 	};
 };
-FUNC VOID PC_OreHacken_Addon_Chance_Info()
+FUNC VOID PC_OreHacken_Chance_Info()
 {
 	var string ConcatText;
 
 	
 	if (Hero_HackChance < 20) 
 	{
-		ConcatText = ConcatStrings ("blutiger Anfänger (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Absolute beginner (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 40) 
 	{
-		ConcatText = ConcatStrings ("ganz passabler Schürfer (" , IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Quite passable scraper (" , IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 55) 
 	{
-		ConcatText = ConcatStrings ("erfahrener Goldschürfer (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("An experienced scraper (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 75) 
 	{
-		ConcatText = ConcatStrings ("waschechter Buddler ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Genuine digger ( ", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 90) 
 	{
-		ConcatText = ConcatStrings ("verdammt guter Buddler ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Damn good digger ( ", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 98) 
 	{
-		ConcatText = ConcatStrings ("Meister Buddler ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Master digger ( ", IntToString (Hero_HackChance));
 	}
 	else
 	{
-		ConcatText = ConcatStrings ("Buddler Guru ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Guru among diggers ( ", IntToString (Hero_HackChance));
 	};
 	
-	ConcatText = ConcatStrings (concatText, " Prozent)");
+	ConcatText = ConcatStrings (concatText, " percent)");
 	
 	PrintScreen (concatText, -1, -1, FONT_ScreenSmall,2);
 };
