@@ -26,7 +26,7 @@ instance SLD_449_Lares (Npc_Default)
 	
 	// ------ Inventory ------
 	CreateInvItems (self, ItMi_Gold, 100);	
-	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit er gefunden wird, wenn er im Kampf stirbt
+	CreateInvItems (self, ITMI_REVIVED_OLDCOIN, 1);	//Joly: damit er gefunden wird, wenn er im Kampf stirbt
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.
 	CreateInvItems (self, ITAR_REVIVED_ORG_H, 1);								
 		

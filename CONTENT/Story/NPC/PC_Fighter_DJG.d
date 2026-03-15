@@ -18,7 +18,7 @@ INSTANCE PC_Fighter_DJG (Npc_Default)
 	EquipItem			(self, ITMW_REVIVED_2H_AXE_GORN);
 	
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
-	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
+	CreateInvItems (self, ITMI_REVIVED_OLDCOIN, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

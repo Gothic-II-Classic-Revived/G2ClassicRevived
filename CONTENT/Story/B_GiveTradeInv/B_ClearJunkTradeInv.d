@@ -68,10 +68,10 @@ func void B_ClearJunkTradeInv (var C_NPC slf)
 		Npc_RemoveInvItems	(slf ,ItMi_Broom 			, Npc_HasItems (slf, ItMi_Broom ));
 		Npc_RemoveInvItems	(slf ,ItMi_Lute 			, Npc_HasItems (slf, ItMi_Lute ));
 		Npc_RemoveInvItems	(slf ,ItMi_Brush 			, Npc_HasItems (slf, ItMi_Brush ));
-		Npc_RemoveInvItems	(slf ,ItMi_Joint 			, Npc_HasItems (slf, ItMi_Joint ));
-		//Npc_RemoveInvItems	(slf ,ItMi_Alarmhorn 		, Npc_HasItems (slf, ItMi_Alarmhorn ));
+		Npc_RemoveInvItems	(slf ,ITMI_REVIVED_JOINT_REGULAR 	, Npc_HasItems (slf, ITMI_REVIVED_JOINT_REGULAR ));
+		Npc_RemoveInvItems	(slf ,ITMI_REVIVED_WARHORN 			, Npc_HasItems (slf, ITMI_REVIVED_WARHORN ));
 		
-		Npc_RemoveInvItems	(slf ,ItMi_OldCoin 			, Npc_HasItems (slf, ItMi_OldCoin ));
+		Npc_RemoveInvItems	(slf ,ITMI_REVIVED_OLDCOIN 			, Npc_HasItems (slf, ITMI_REVIVED_OLDCOIN ));
 		Npc_RemoveInvItems	(slf ,ItMi_GoldCandleHolder	, Npc_HasItems (slf, ItMi_GoldCandleHolder ));
 		Npc_RemoveInvItems	(slf ,ItMi_GoldNecklace 	, Npc_HasItems (slf, ItMi_GoldNecklace ));
 		

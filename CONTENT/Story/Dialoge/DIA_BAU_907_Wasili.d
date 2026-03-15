@@ -126,7 +126,7 @@ func int DIA_Wasili_FirstOldCoin_Condition ()
 {
 	if (MIS_Wasili_BringOldCoin == LOG_RUNNING)
 	&& (WasilisOldCoinOffer == 0)
-	&& (Npc_HasItems (other,ItMi_OldCoin) >= 1)
+	&& (Npc_HasItems (other,ITMI_REVIVED_OLDCOIN) >= 1)
 	&& (Wasili_BringOldCoin_NoMore == FALSE)
 		{
 				return TRUE;
@@ -143,7 +143,7 @@ func void DIA_Wasili_FirstOldCoin_Info ()
 		AI_Output			(self, other, "DIA_Wasili_FirstOldCoin_01_01"); //Mmh. Show me.
 	};
 
-	B_GiveInvItems (other, self, ItMi_OldCoin,1);
+	B_GiveInvItems (other, self, ITMI_REVIVED_OLDCOIN,1);
 
 	if (FirstOldCoin_angebotenXP_OneTime == FALSE)
 	{
@@ -199,7 +199,7 @@ func void DIA_Wasili_FirstOldCoin_mehr ()
 	{
 		AI_Output			(self, other, "DIA_Wasili_FirstOldCoin_mehr_01_01"); //Nothing doing! I'm not a loony! Beat it.
 		DIA_Wasili_FirstOldCoin_mehr_OneTime = TRUE;
-		B_GiveInvItems (self, other, ItMi_OldCoin,1);
+		B_GiveInvItems (self, other, ITMI_REVIVED_OLDCOIN,1);
 		AI_StopProcessInfos (self);
 	}
 	else
@@ -214,7 +214,7 @@ func void DIA_Wasili_FirstOldCoin_nein ()
 {
 	AI_Output			(other, self, "DIA_Wasili_FirstOldCoin_nein_15_00"); //Nah, I think I'll keep it then.
 	AI_Output			(self, other, "DIA_Wasili_FirstOldCoin_nein_01_01"); //They don't have any value for you. You'll be back.
-	B_GiveInvItems (self, other, ItMi_OldCoin,1);
+	B_GiveInvItems (self, other, ITMI_REVIVED_OLDCOIN,1);
 	WasilisOldCoinOffer = 0;
 	Info_ClearChoices	(DIA_Wasili_FirstOldCoin);
 };
@@ -246,7 +246,7 @@ instance DIA_Wasili_BringOldCoin		(C_INFO)
 func int DIA_Wasili_BringOldCoin_Condition ()
 {
 	if (WasilisOldCoinOffer > 0)
-	&& (Npc_HasItems (other,ItMi_OldCoin) >= 1)
+	&& (Npc_HasItems (other,ITMI_REVIVED_OLDCOIN) >= 1)
 	&& (Wasili_BringOldCoin_NoMore == FALSE)
 		{
 				return TRUE;
@@ -264,21 +264,21 @@ func void DIA_Wasili_BringOldCoin_Info ()
 	var int XP_BringOldCoins;
 	var int OldCoinGeld;
 
-	OldCoinCount = Npc_HasItems(other, ItMi_OldCoin);
+	OldCoinCount = Npc_HasItems(other, ITMI_REVIVED_OLDCOIN);
 
 
 		if (OldCoinCount == 1)
 			{
 				AI_Output		(other, self, "DIA_Wasili_BringOldCoin_15_02"); //One.
 				B_GivePlayerXP (XP_BringOldCoin);
-				B_GiveInvItems (other, self, ItMi_OldCoin,1);
+				B_GiveInvItems (other, self, ITMI_REVIVED_OLDCOIN,1);
 				OldCoinCounter = OldCoinCounter + 1;
 			}
 		else
 			{
 				AI_Output		(other, self, "DIA_Wasili_BringOldCoin_15_03"); //A few.
 	
-				B_GiveInvItems (other, self, ItMi_OldCoin,  OldCoinCount);
+				B_GiveInvItems (other, self, ITMI_REVIVED_OLDCOIN,  OldCoinCount);
 	
 				XP_BringOldCoins = (OldCoinCount * XP_BringOldCoin);
 				OldCoinCounter = (OldCoinCounter + OldCoinCount); 

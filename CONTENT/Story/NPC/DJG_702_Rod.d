@@ -21,7 +21,7 @@ instance DJG_702_Rod (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
-	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
+	CreateInvItems (self, ITMI_REVIVED_OLDCOIN, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_ToughBart01, BodyTex_N, ITAR_DJG_L);		

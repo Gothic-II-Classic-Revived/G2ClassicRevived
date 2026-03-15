@@ -732,7 +732,7 @@ func void DIA_Kardif_DEFEATEDATTILA_Info ()
 	B_GivePlayerXP (XP_Kardif_Blame4Attila);
 	
 	B_KillNpc	(Attila);
-	Npc_RemoveInvItem	(Attila, ItMi_OldCoin);
+	Npc_RemoveInvItem	(Attila, ITMI_REVIVED_OLDCOIN);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Diebeszeichen
