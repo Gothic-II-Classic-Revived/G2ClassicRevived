@@ -120,7 +120,7 @@ FUNC INT DIA_Grom_PayTeacher_Condition()
 	if	(Npc_KnowsInfo (other, DIA_Grom_AskTeacher))
 		&& (Npc_HasItems (other,Itfo_Milk))
 		&& (Npc_HasItems (other,Itfo_Bread))
-		&& (Npc_HasItems (other,Itfo_Bacon))
+		&& (Npc_HasItems (other,ITFO_REVIVED_HAM_01_RAW))
 			{
 				return TRUE;
 			};
@@ -129,7 +129,7 @@ FUNC VOID DIA_Grom_PayTeacher_Info()
 {
 	B_GiveInvItems (other, self, Itfo_Milk, 1);
 	B_GiveInvItems (other, self, Itfo_Bread, 1);
-	B_GiveInvItems (other, self, Itfo_Bacon, 1);
+	B_GiveInvItems (other, self, ITFO_REVIVED_HAM_01_RAW, 1);
 	AI_Output(other,self,"DIA_Grom_PayTeacher_15_00"); //Here's the food you wanted.
 	AI_Output(self,other,"DIA_Grom_PayTeacher_08_01"); //Fantastic. And now?
 	Grom_TeachAnimalTrophy = TRUE;

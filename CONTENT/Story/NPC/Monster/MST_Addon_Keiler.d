@@ -75,6 +75,6 @@ INSTANCE Keiler	(Mst_Default_Keiler)
 {
 	B_SetVisuals_Keiler();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 1);
 };
 

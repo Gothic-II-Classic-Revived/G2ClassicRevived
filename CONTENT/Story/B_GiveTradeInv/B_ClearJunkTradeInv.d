@@ -49,6 +49,8 @@ func void B_ClearJunkTradeInv (var C_NPC slf)
 		Npc_RemoveInvItems	(slf ,ItFo_Fish 			, Npc_HasItems (slf, ItFo_Fish ));
 		Npc_RemoveInvItems	(slf ,ItFoMuttonRaw 		, Npc_HasItems (slf, ItFoMuttonRaw ));
 		Npc_RemoveInvItems	(slf ,ItFoMutton 			, Npc_HasItems (slf, ItFoMutton ));
+		Npc_RemoveInvItems	(slf ,ITFO_REVIVED_HAM_01_RAW 		, Npc_HasItems (slf, ITFO_REVIVED_HAM_01_RAW ));
+		Npc_RemoveInvItems	(slf ,ITFO_REVIVED_HAM_01_COOKED 	, Npc_HasItems (slf, ITFO_REVIVED_HAM_01_COOKED ));
 		Npc_RemoveInvItems	(slf ,ItFo_Stew 			, Npc_HasItems (slf, ItFo_Stew ));
 		Npc_RemoveInvItems	(slf ,ItFo_FishSoup 		, Npc_HasItems (slf, ItFo_FishSoup ));
 		Npc_RemoveInvItems	(slf ,ItFo_Sausage 			, Npc_HasItems (slf, ItFo_Sausage ));

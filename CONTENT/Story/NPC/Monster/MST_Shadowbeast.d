@@ -76,7 +76,7 @@ INSTANCE Shadowbeast	(Mst_Default_Shadowbeast)
 {
 	B_SetVisuals_Shadowbeast();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 2);
+	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 2);
 };
 
 //Addon
@@ -85,5 +85,5 @@ INSTANCE BeachShadowbeast1	(Mst_Default_Shadowbeast)
 {
 	B_SetVisuals_Shadowbeast();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 2);
+	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 2);
 };

@@ -84,7 +84,7 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 {
 	B_SetVisuals_Molerat();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 1);
 };
 
 INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
@@ -111,7 +111,7 @@ INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
 	B_SetVisuals_MoleratJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 1);
 };
 
 INSTANCE MoleratDemon	(Mst_Default_Molerat)
@@ -137,5 +137,5 @@ INSTANCE MoleratDemon	(Mst_Default_Molerat)
 
 	B_SetVisuals_MoleratDemon();
 	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
+	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 1);
 };

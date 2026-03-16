@@ -273,6 +273,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& (Orc_Randomizer <= 7)
 	{	
 		CreateInvItems (slf, ItMI_Gold	, 9);	
+		CreateInvItems (slf, ITFO_REVIVED_HAM_01_RAW	, 1);	
 	};
 	//----- OrcShamane -----
 
