@@ -1430,15 +1430,19 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(OrcBiter,"OW_PATH_3_06");
 	Wld_InsertNpc		(OrcBiter,"OW_PATH_3_06");
 
-	Wld_InsertNpc		(Snapper,"OW_PATH_104");
-	Wld_InsertNpc		(Snapper,"OW_PATH_104");
-	Wld_InsertNpc		(Snapper,"OW_PATH_104");
-	Wld_InsertNpc		(Snapper,"OW_PATH_104");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_104");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_104");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_104");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_104");
 
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_BLACKWOLF07_SPAWN01");
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_BLACKWOLF07_SPAWN01");
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_BLACKWOLF07_SPAWN01");
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_BLACKWOLF07_SPAWN01");
+	Wld_InsertNpc		(DragonSnapper,"OW_PATH_013B");
+	Wld_InsertNpc		(DragonSnapper,"OW_PATH_013B");
+
+	Wld_InsertNpc		(OrcElite_Roam,"OW_PATH_BLACKWOLF07_SPAWN01");
+	Wld_InsertNpc		(OrcWarrior_Roam,"OW_PATH_BLACKWOLF07_SPAWN01");
+	Wld_InsertNpc		(OrcWarrior_Roam,"OW_PATH_BLACKWOLF07_SPAWN01");
+	Wld_InsertNpc		(OrcWarrior_Roam,"OW_PATH_BLACKWOLF07_SPAWN01");
+	Wld_InsertNpc		(OrcWarrior_Roam,"OW_PATH_BLACKWOLF07_SPAWN01");
 
 	Wld_InsertItem 		(ItWr_GilbertLetter,"FP_OW_ITEM_14");
 
@@ -1706,10 +1710,15 @@ func void STARTUP_SURFACE ()
 
 	Wld_InsertNpc		(OUT_4148_GESTATH,"PATH_TO_PLATEAU03_001");
 
+	Wld_InsertNpc		(Zombie01,"PLATEAU_ROUND02_CAVE_MOVE");
+	Wld_InsertNpc		(Zombie02,"PLATEAU_ROUND02_CAVE_MOVE");
+	Wld_InsertNpc		(Zombie03,"PLATEAU_ROUND02_CAVE_MOVE");
+	Wld_InsertNpc		(Zombie04,"PLATEAU_ROUND02_CAVE_MOVE");
+
 	Wld_InsertNpc		(Bloodhound,"PATH_TO_PLATEAU04_RIGHT");
 
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND01");
-	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND02_CAVE");
+	Wld_InsertNpc		(Bloodhound,"LOCATION_18_IN");
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND04");
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND05");
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND05");
@@ -2053,6 +2062,10 @@ func void STARTUP_SURFACE ()
 		// Orc Graveyard
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_01");
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_02");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_03");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_04");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_05");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_06");
 	
 	// ------ TRIGGERS ------
 		// Fish Movers

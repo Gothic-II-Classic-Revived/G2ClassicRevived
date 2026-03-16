@@ -151,6 +151,7 @@ const string _STR_MESSAGE_WHEEL_STUCKS		= "The winch is jammed."					;
 CONST STRING MOBNAME_CHESTOLD				= "Old Chest";
 CONST STRING MOBNAME_LEVER					= "Lever";
 CONST STRING MOBNAME_PILLAR					= "Pillar";
+CONST STRING MOBNAME_LADDER					= "Ladder";
 
 CONST STRING MOBNAME_LATI					= "Alchemist's Lab";
 CONST STRING MOBNAME_ORB					= "Magic Orb";
@@ -182,31 +183,33 @@ CONST STRING TESTLEVEL_TELEPORT_DI			= "DRAGONISLAND.ZEN";
 
 
 // Graves
-CONST STRING MOBNAME_GRAVE_REVIVED_01		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_02		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_03		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_04		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_05		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_06		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_07		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_08		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_09		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_10		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_11		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_12		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_13		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_14		= "";
-CONST STRING MOBNAME_GRAVE_REVIVED_15		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_01		= "Crygreg - 'Happy Anniversary!'";
+CONST STRING MOBNAME_GRAVE_REVIVED_02		= "Macintosh - 'You couldn't have fucking told me this earlier?!'";
+CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Angel - 'Hi Damiaeing.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb - 'Sosig'";
+CONST STRING MOBNAME_GRAVE_REVIVED_05		= "Alistair - 'Crygreg yearns for Bjorn.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joker - 'It's not your fault, it's Gothic.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_07		= "bloody - 'The UV mapping here sucks.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_08		= "Thorusus - 'The server release is postponed.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_09		= "Uvi - 'Oh my goodness gracious'";
+CONST STRING MOBNAME_GRAVE_REVIVED_10		= "n00wls - 'unknown111 and his consequences were a disaster for totuka modding scene'";
+CONST STRING MOBNAME_GRAVE_REVIVED_11		= "Udar - 'These days, I'm just a plain old candy-store owner.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_12		= "Dave - 'Can you beat Gothic as a digger?'";
+CONST STRING MOBNAME_GRAVE_REVIVED_13		= "Sinister - 'Gomez can't stop falling asleep during RP'";
+CONST STRING MOBNAME_GRAVE_REVIVED_14		= "Arkhan - 'This is Kingdom of Drakania.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_15		= "Bartired - 'Never again a paladin nor a water mage.'";
 
 // Graves (OW)
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_01		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_02		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_03		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_04		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_05		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_06		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_07		= "";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_08		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_01		= "Melothar";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_02		= "Axel";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_03		= "Lex";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_04		= "Derno";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_05		= "Rafix";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_06		= "Cysiex";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_07		= "Aulaler";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_08		= "Antor";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_09		= "Tandor";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_10		= "Wegan";
 
 
 // Shrines
@@ -216,10 +219,10 @@ const string NAME_PRAYADANOS_GIVELP2				= "I will pray and offer 2 learn points.
 const string NAME_PRAYADANOS_GIVELP3				= "I will pray and offer 3 learn points.";
 const string NAME_PRAYADANOS_GIVEEXP				= "I will pray and offer 1000 experience.";
 
-const string PRINT_PRAYADANOS_Bless1H				= "1H BONUS";
-const string PRINT_PRAYADANOS_Bless2H				= "2H BONUS";
-const string Print_PRAYADANOS_BlessBOW				= "BOW BONUS";
-const string Print_PRAYADANOS_BlessCBOW				= "CBOW BONUS";
+const string PRINT_PRAYADANOS_Bless1H				= "Adanos increases your one-handed weapon skills.";
+const string PRINT_PRAYADANOS_Bless2H				= "Adanos increases your two-handed weapon skills.";
+const string Print_PRAYADANOS_BlessBOW				= "Adanos increases your bow skills.";
+const string Print_PRAYADANOS_BlessCBOW				= "Adanos increases your crossbow skills.";
 const string Print_PRAYADANOS_BlessWisp				= "Adanos blesses you.";
 const string Print_PRAYADANOS_BlessNone				= "Adanos thanks you for your prayer.";
 const string Print_PRAYADANOS_BlessCant				= "Adanos can't take your offering.";
@@ -402,7 +405,7 @@ var int SCUsed_OW_TELEPORTSTATION_MONASTERY;
 var int SCUsed_OW_TELEPORTSTATION_CLIFF;
 var int SCUsed_OW_TELEPORTSTATION_STONEFORTRESS;
 
-var int SCUsed_AllOWTeleporststones;
+var int SCUsed_AllOWTeleportStones;
 
 
 const int OreMob_All_Amount_MAX = 3;
@@ -462,7 +465,7 @@ var int BilgotInKhorinis;
 var int DragonHunt_OriginalPass;
 var int DragonHunt_SecondPass;
 
-var int DJG_KnowsAbout_Puryfing;
+var int DJG_KnowsAbout_Purifying;
 
 var int LesterKeyStolen;
 var int DIA_Peck_BUYARMOR_perm;
@@ -888,7 +891,7 @@ const int BOOZE_LouHammerDouble  			= 2;
 const int BOOZE_FastHerring  				= 3;
 const int BOOZE_TurnipBooze  				= 4;
 const int BOOZE_VinoBooze  					= 5;
-const int BOOZE_MonsterDrink  					= 6;
+const int BOOZE_MonsterDrink  				= 6;
 const int BOOZE_MageWine  					= 7;
 const int BOOZE_RiceSchnaps  				= 8;
 const int BOOZE_Mead		  				= 9;
