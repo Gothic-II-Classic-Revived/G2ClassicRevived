@@ -420,7 +420,7 @@ func void  B_InitNpcGlobals ()
 	SLD_Wolf		= Hlp_GetNpc (SLD_811_Wolf);
 	Buster			= Hlp_GetNpc (SLD_802_Buster);
 	Bartok     		= Hlp_GetNpc (VLK_440_Bartok);
-	CityOrc			= Hlp_GetNpc (OrcWarrior_Harad);
+	CityOrc			= Hlp_GetNpc (OrcScout_Harad);
 	Gritta			= Hlp_GetNpc (VLK_418_Gritta);
 	Richter			= Hlp_GetNpc (Vlk_402_Richter);
 	Constantino     = Hlp_GetNpc (VLK_417_Constantino);
