@@ -166,25 +166,25 @@ const int	REV_Prot_Magic_EBR_H				=	40;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_PAL_L						=	0;
-const int	REV_Prot_Edge_PAL_L					=	80;
-const int	REV_Prot_Blunt_PAL_L				=	80;
-const int	REV_Prot_Point_PAL_L				=	40;
-const int	REV_Prot_Fire_PAL_L					=	30;
-const int	REV_Prot_Magic_PAL_L				=	20;
+const int	REV_Prot_Edge_PAL_L					=	90;
+const int	REV_Prot_Blunt_PAL_L				=	90;
+const int	REV_Prot_Point_PAL_L				=	60;
+const int	REV_Prot_Fire_PAL_L					=	50;
+const int	REV_Prot_Magic_PAL_L				=	50;
 //******************************************************************//
 const int	REV_Value_PAL_M						=	0;
 const int	REV_Prot_Edge_PAL_M					=	100;
 const int	REV_Prot_Blunt_PAL_M				=	100;
 const int	REV_Prot_Point_PAL_M				=	100;
-const int	REV_Prot_Fire_PAL_M					=	50;
-const int	REV_Prot_Magic_PAL_M				=	25;
+const int	REV_Prot_Fire_PAL_M					=	75;
+const int	REV_Prot_Magic_PAL_M				=	75;
 //******************************************************************//
 const int	REV_Value_PAL_H						=	0;
 const int	REV_Prot_Edge_PAL_H					=	150;
 const int	REV_Prot_Blunt_PAL_H				=	150;
 const int	REV_Prot_Point_PAL_H				=	150;
 const int	REV_Prot_Fire_PAL_H					=	100;
-const int	REV_Prot_Magic_PAL_H				=	50;
+const int	REV_Prot_Magic_PAL_H				=	100;
 //******************************************************************//
 const int	REV_Value_PAL_S						=	0;
 const int	REV_Prot_Edge_PAL_S					=	150;
