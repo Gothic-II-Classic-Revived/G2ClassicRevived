@@ -4,24 +4,24 @@
 const int Value_Elixier1		= 600;			const int Mana_Elixier1			= 100;
 const int Value_ElixierEgg		= 800;			const int ManaMax_ElixierEgg	= 10;	// FIXME: was wenn der SC das selbst benutzt??
 
-const int Value_PermHP_01		= 1000;			const int Boost_PermHP_01		= 4;
-const int Value_PermHP_02		= 1200;			const int Boost_PermHP_02		= 7;
-const int Value_PermHP_03		= 1500;			const int Boost_PermHP_03		= 10;
+const int Value_PermHP_01		= 1000;			const int Boost_PermHP_01		= 3;
+const int Value_PermHP_02		= 1200;			const int Boost_PermHP_02		= 6;
+const int Value_PermHP_03		= 1500;			const int Boost_PermHP_03		= 12;
 
-const int Value_PermMana_01		= 1000;			const int Boost_PermMana_01		= 4;
-const int Value_PermMana_02		= 1200;			const int Boost_PermMana_02		= 7;
-const int Value_PermMana_03		= 1500;			const int Boost_PermMana_03		= 10;
+const int Value_PermMana_01		= 1000;			const int Boost_PermMana_01		= 3;
+const int Value_PermMana_02		= 1200;			const int Boost_PermMana_02		= 6;
+const int Value_PermMana_03		= 1500;			const int Boost_PermMana_03		= 12;
 
 const int Value_PermSTR_01		= 600;			const int Boost_PermSTR_01		= 2;
-const int Value_PermSTR_02		= 800;			const int Boost_PermSTR_02		= 3;
-const int Value_PermSTR_03		= 1000;			const int Boost_PermSTR_03		= 5;
+const int Value_PermSTR_02		= 800;			const int Boost_PermSTR_02		= 4;
+const int Value_PermSTR_03		= 1000;			const int Boost_PermSTR_03		= 8;
 
 const int Value_PermDEX_01		= 600;			const int Boost_PermDEX_01		= 2;
-const int Value_PermDEX_02		= 800;			const int Boost_PermDEX_02		= 3;
-const int Value_PermDEX_03		= 1000;			const int Boost_PermDEX_03		= 5;
+const int Value_PermDEX_02		= 800;			const int Boost_PermDEX_02		= 4;
+const int Value_PermDEX_03		= 1000;			const int Boost_PermDEX_03		= 8;
 
-const int Value_PermMaster_01	= 1600;			const int Boost_PermMaster_01	= 4;
-const int Value_PermMaster_02	= 1800;			const int Boost_PermMaster_02	= 8;
+const int Value_PermMaster_01	= 1600;			const int Boost_PermMaster_01	= 2;
+const int Value_PermMaster_02	= 1800;			const int Boost_PermMaster_02	= 5;
 const int Value_PermMaster_03	= 2000;			const int Boost_PermMaster_03	= 10;
 
 const int Value_Haste_01		= 200;			const int Time_Haste_01			= 60000;
