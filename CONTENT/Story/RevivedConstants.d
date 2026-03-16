@@ -88,7 +88,7 @@ const string LOGENTRY_RECIPE_MAGEWINE			= "Ingredients for 'Monastery Wine':\n4 
 const string LOGENTRY_RECIPE_RICESCHNAPS		= "Ingredients for 'Rice Schnapps':\n4 Riceplant\n1 Lurker claws";
 const string LOGENTRY_RECIPE_MEAD				= "Ingredients for 'Mead':\n2 Honey comb\n1 Field Raider mandibles";
 
-const string LOGENTRY_RECIPE_MEATSTEW        	= "Ingredients for 'Meat Stew':\n2 Meat\n2 Clam Meat\n1 Sausage\n1 Bacon";
+const string LOGENTRY_RECIPE_MEATSTEW        	= "Ingredients for 'Full Meat Stew':\n2 Meat\n1 Clam Meat\n1 Sausage\n1 Bacon";
 const string LOGENTRY_RECIPE_FISHSOUP        	= "Ingredients for 'Fish Soup':\n2 Fish\n1 Water";
 const string LOGENTRY_RECIPE_MEATBUGRAGOUT  	= "Ingredients for 'Meatbug Ragout':\n5 Dark Mushroom\n3 Meatbug Meat\n2 Rice plants";
 const string LOGENTRY_RECIPE_ROOTSOUP        	= "Ingredients for 'Root Soup':\n2 Meadow Berry\n2 Forest Berry\n2 Swamp weed";

@@ -26,6 +26,8 @@ const int	REV_Value_MonsterDrink		=	30;		const int	REV_HP_MonsterDrink		=	30;		c
 const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
 const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	8;
 
+const int	REV_Value_MeatStew			=	 30;	const int	REV_HP_MeatStew			=	50;
+const int	REV_Value_FishSoup			=	 10;	const int	REV_HP_FishSoup			=	20;
 const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	10;
 const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	8;
 const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	15;
@@ -658,6 +660,32 @@ INSTANCE ITFO_REVIVED_MEAD (C_Item)
 //			COOKING
 //****************************************************************************
 
+INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
+{	
+	name 				=	"Full Meat Stew";
+	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_MeatStew;
+
+	visual 				=	"ItFo_Stew.3ds"; 
+	material 			=	MAT_LEATHER;
+	scemeName			=	"RICE";
+	on_state[0]			=	UseSuperMeatSoup;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatStew;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseSuperMeatSoup()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatStew);
+	};
+
+/******************************************************************************************/
+
 INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
 {	
 	name 				=	"Edda's Fish Soup";
@@ -665,7 +693,7 @@ INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_FishSoup;
+	value 				=	REV_Value_FishSoup;
 
 	visual 				=	"ItFo_FishSoup.3ds"; 
 	material 			=	MAT_LEATHER;
@@ -673,13 +701,13 @@ INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
 	on_state[0]			=	UseEddaFishSoup;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_FishSoup;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_FishSoup;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseEddaFishSoup()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_FishSoup);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_FishSoup);
 		Snd_Play	("LevelUp");
 		B_RaiseAttribute (self, ATR_DEXTERITY, 1);
 	};

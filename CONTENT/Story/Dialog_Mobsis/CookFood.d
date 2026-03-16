@@ -65,7 +65,7 @@ FUNC INT PC_Cook_MeatStew_Condition()
 FUNC VOID PC_Cook_MeatStew_Info ()
 {
 	if ((Npc_HasItems (hero, ItFoMuttonRaw) 				>= 2) || (Npc_HasItems (hero, ItFoMutton) 				>= 2))
-	&& (Npc_HasItems (hero, ItFo_Addon_Shellflesh) 	  	>= 2) 
+	&& (Npc_HasItems (hero, ItFo_Addon_Shellflesh) 	  	>= 1) 
 	&& (Npc_HasItems (hero, ItFo_Sausage) 				>= 1) 
 	&& (Npc_HasItems (hero, ItFo_Bacon) 				>= 1) 
 	{
@@ -77,11 +77,11 @@ FUNC VOID PC_Cook_MeatStew_Info ()
 		{
 			Npc_RemoveInvItems (hero, ItFoMutton, 2);
 		};
-		Npc_RemoveInvItems (hero,ItFo_Addon_Shellflesh, 	2);
+		Npc_RemoveInvItems (hero,ItFo_Addon_Shellflesh, 	1);
 		Npc_RemoveInvItems (hero,ItFo_Sausage, 				1);
 		Npc_RemoveInvItems (hero,ItFo_Bacon, 				1);
 				
-		CreateInvItems	   (hero,ItFo_Stew,					1);  // replace with updated Meat Stew
+		CreateInvItems	   (hero,ITFO_REVIVED_MEATSTEW,		1);
 		Print (PRINT_CookingSuccess);
 	}
 	else 
