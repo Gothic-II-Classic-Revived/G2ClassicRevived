@@ -107,7 +107,9 @@ func void DIA_Nadja_Danach_Info ()
 {
 	AI_Output (self, other, "DIA_Nadja_Danach_16_00"); //Come back to me the next time.
 	Nadja_Nacht = FALSE;
+		
 	AI_StopProcessInfos (self);
+	Npc_ExchangeRoutine (self,"START");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info STANDARD
@@ -171,14 +173,11 @@ func void DIA_Nadja_Poppen_Info ()
 FUNC VOID DIA_Nadja_Poppen_Start()
 {
 	Bromor_Pay = FALSE;
-	Nadja_Nacht = (Nadja_Nacht +1);
+	Nadja_Nacht = TRUE;
 	
 	PlayVideo ("LOVESCENE.BIK");
 		
-	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"START");
-		
-	if Wld_IsTime (00,00,06,00)
+	/* if Wld_IsTime (00,00,06,00)
 	{
 		Wld_SetTime (09,00);
 	}
@@ -193,7 +192,7 @@ FUNC VOID DIA_Nadja_Poppen_Start()
 	else 
 	{
 		Wld_SetTime (03,00);	
-	};
+	}; */
 	
 };
 
