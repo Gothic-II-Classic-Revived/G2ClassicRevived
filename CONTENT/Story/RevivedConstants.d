@@ -25,6 +25,11 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 // Text
 // ***************
 
+// NPC Names
+const string NAME_DementorNovice		= "Seeker Novice";
+const string NAME_Templar				= "Apocalyptic Templar";
+const string NAME_JudgeGuard			= "Judge's House Guard";
+
 // Death Messages
 const string PRINT_DEATH_MESSAGE_0		=	"Your journey ends here.";
 const string PRINT_DEATH_MESSAGE_1		=	"Maybe you should've spent more learning points.";
@@ -186,30 +191,30 @@ CONST STRING TESTLEVEL_TELEPORT_DI			= "DRAGONISLAND.ZEN";
 CONST STRING MOBNAME_GRAVE_REVIVED_01		= "Crygreg - 'Happy Anniversary!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_02		= "Macintosh - 'You couldn't have fucking told me this earlier?!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Angel - 'Hi Damiaeing.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb - 'Sosig'";
+CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb - 'Can I help you with a sausage in these troubled times?'";
 CONST STRING MOBNAME_GRAVE_REVIVED_05		= "Alistair - 'Crygreg yearns for Bjorn.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joker - 'It's not your fault, it's Gothic.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joka - 'The Cocos are invading!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_07		= "bloody - 'The UV mapping here sucks.'";
 CONST STRING MOBNAME_GRAVE_REVIVED_08		= "Thorusus - 'The server release is postponed.'";
 CONST STRING MOBNAME_GRAVE_REVIVED_09		= "Uvi - 'Oh my goodness gracious'";
 CONST STRING MOBNAME_GRAVE_REVIVED_10		= "n00wls - 'unknown111 and his consequences were a disaster for totuka modding scene'";
-CONST STRING MOBNAME_GRAVE_REVIVED_11		= "Udar - 'These days, I'm just a plain old candy-store owner.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_11		= "Asden - 'I dont see how me being 5 times richer than Gomez collapses the economy of the colony.'";
 CONST STRING MOBNAME_GRAVE_REVIVED_12		= "Dave - 'Can you beat Gothic as a digger?'";
-CONST STRING MOBNAME_GRAVE_REVIVED_13		= "Sinister - 'Gomez can't stop falling asleep during RP'";
+CONST STRING MOBNAME_GRAVE_REVIVED_13		= "Sord - 'My power is MAXIMUM!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_14		= "Arkhan - 'This is Kingdom of Drakania.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_15		= "Bartired - 'Never again a paladin nor a water mage.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_15		= "Konny - 'You are now permabanned.'";
 
 // Graves (OW)
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_01		= "Melothar";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_02		= "Axel";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_03		= "Lex";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_01		= "Wegan";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_02		= "Cysiex";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_03		= "Aulaler";
 CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_04		= "Derno";
 CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_05		= "Rafix";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_06		= "Cysiex";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_07		= "Aulaler";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_06		= "Tandor";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_07		= "Sinister";
 CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_08		= "Antor";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_09		= "Tandor";
-CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_10		= "Wegan";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_09		= "Udar";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_10		= "Bartired";
 
 
 // Shrines

@@ -2,7 +2,7 @@
 instance Mil_306_Tuerwache (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Judge's House Guard"; 	
+	name 		= NAME_JudgeGuard; 	
 	guild 		= GIL_MIL;
 	id 			= 306;
 	voice 		= 7;
@@ -32,7 +32,6 @@ instance Mil_306_Tuerwache (Npc_Default)
 
 FUNC VOID Rtn_Start_306 ()
 {	
-	TA_Stand_Guarding	(08,00,18,45,"NW_CITY_UPTOWN_JUDGE_05");
-	TA_Stand_Guarding	(18,45,22,00,"NW_CITY_RICHTER_COOK");
+	TA_Stand_Guarding	(08,00,18,45,"NW_CITY_RICHTER");
     TA_Stand_Guarding	(22,00,08,00,"NW_CITY_RICHTER");
 };

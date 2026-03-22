@@ -2,7 +2,7 @@
 instance Mil_303_Torwache (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= NAME_Torwache;	
+	name 		= NAME_JudgeGuard;	
 	guild 		= GIL_MIL;
 	id 			= 303;
 	voice 		= 7;
@@ -32,6 +32,6 @@ instance Mil_303_Torwache (Npc_Default)
 
 FUNC VOID Rtn_Start_303 ()
 {	
-	TA_Guard_Passage	(08,00,23,00,"NW_CITY_UPTOWN_JUDGE_02");
-    TA_Guard_Passage	(23,00,08,00,"NW_CITY_UPTOWN_JUDGE_02");
+	TA_Guard_Passage	(08,00,23,00,"NW_CITY_JUDGE_GUARD_02");
+    TA_Guard_Passage	(23,00,08,00,"NW_CITY_JUDGE_GUARD_02");
 };
