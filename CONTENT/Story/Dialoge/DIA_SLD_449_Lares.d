@@ -1,27 +1,4 @@
 // ************************************************************
-// 			Lares Patch 
-// ************************************************************
-instance DIA_Addon_Lares_Patch		(C_INFO)
-{
-	npc			= SLD_449_Lares;
-	nr		 	= 99;
-	condition	= DIA_Addon_Lares_Patch_Condition;
-	information	= DIA_Addon_Lares_Patch_Info;
-	description	= "(Ornament - Stück zurückverlangen)";
-};
-func int DIA_Addon_Lares_Patch_Condition ()
-{
-	if (Npc_HasItems  (self,ItMi_Ornament_Addon_Vatras))
-	&& (Kapitel >= 3)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Addon_Lares_Patch_Info ()
-{
-	B_GiveInvItems (self, other, ItMi_Ornament_Addon_Vatras,1);
-};
-// ************************************************************
 // 			  				   EXIT 
 // ************************************************************
 INSTANCE DIA_Lares_Kap1_EXIT(C_INFO)
@@ -405,7 +382,6 @@ func void DIA_Lares_AboutSld_WayToOnar()
 {
 	AI_Output (other,self, "DIA_Lares_WegZumHof_15_00"); //How do I find the landowner's farm?
 	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_00"); //It's quite simple. You leave the seaport by the east gate, and then follow the path towards the east.
-	//AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_01"); //I can take you there if you want.
 	AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //I can take you there if you want. I've been hanging around here for way too long anyway.
 	AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //There's usually no militia here in the port, but I don't want to risk one of them becoming suspicious...
 	Lares_WayToOnar = TRUE;
@@ -596,7 +572,7 @@ func int DIA_Lares_GoNow_Condition ()
 {	
 	if (Lares_WayToOnar == TRUE)
 	&& ((Kapitel < 3) && (hero.guild != GIL_SLD))
-	&& Hlp_StrCmp 	 (Npc_GetNearestWP(self),"NW_CITY_HABOUR_02_B")
+	&& (Npc_GetDistToWP(self,"NW_CITY_HABOUR_02_B")<500)
 			{
 				return TRUE;
 			};
@@ -637,7 +613,7 @@ instance DIA_Addon_Lares_OnarFarmGuide		(C_INFO)
 func int DIA_Addon_Lares_OnarFarmGuide_Condition ()
 {
 	if (LaresGuide_ZuOnar == TRUE) 
-	&& Hlp_StrCmp  (Npc_GetNearestWP(self),"NW_CITY_TO_FOREST_11")
+	&& (Npc_GetDistToWP(self,"NW_CITY_TO_FOREST_11")<500)
 		{
 			return TRUE;
 		};
@@ -668,7 +644,7 @@ instance DIA_Lares_GUIDE		(C_INFO)
 func int DIA_Lares_GUIDE_Condition ()
 {	
 	if (LaresGuide_ZuOnar == TRUE)
-	&& Hlp_StrCmp 	 (Npc_GetNearestWP(self),"NW_BIGFARM_LAKE_03")
+	&& (Npc_GetDistToWP(self,"NW_BIGFARM_LAKE_03")<500)
 	{
 		return TRUE;
 	};
@@ -696,7 +672,7 @@ func void DIA_Lares_GUIDE_Info ()
 	AI_EquipArmor 	(self, ITAR_Vlk_L);
 	
 	Npc_ExchangeRoutine (self,"START");
-	LaresGuide_ZuOnar = LOG_SUCCESS; //Joly: schluss mit Onar guide
+	LaresGuide_ZuOnar = FALSE; //Joly: schluss mit Onar guide
 };
 
 // ************************************************************
@@ -752,7 +728,6 @@ func int DIA_Lares_TEACH_Condition ()
 };
 func void DIA_Lares_TEACH_Info ()
 {
-	//AI_Output (other, self, "DIA_Lares_TEACH_15_00"); //Ich will geschickter werden!
 	AI_Output (other,self ,"DIA_Addon_Lares_Teach_15_00"); //Teach me something.
 	
 	Lares_MerkeDEX = other.attribute[ATR_DEXTERITY];
