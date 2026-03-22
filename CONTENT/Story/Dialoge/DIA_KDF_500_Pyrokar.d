@@ -1082,16 +1082,6 @@ func void DIA_Pyrokar_GIVEINNOSEYE_wer ()
 		Wld_InsertItem		(ItMi_InnosEye_Broken_Mis , "FP_TROLLAREA_RITUAL_ITEM"); 
 
 
-		if (!Npc_IsDead (Hodges))
-		{
-			B_StartOtherRoutine (Hodges,"BennetWeg");
-		};
-			B_StartOtherRoutine (Bennet,"PRISON");
-
-			B_StartOtherRoutine	(Lothar,"Tot");
-			B_KillNpc (Lothar);
-
-
 		Wld_InsertNpc 		(OUT_4250_JORGEN,"NW_MONASTERY_BRIDGE_01");
 
 		Wld_InsertNpc		(BDT_1050_Wegelagerer, "NW_TROLLAREA_NOVCHASE_01");
@@ -1195,6 +1185,15 @@ func void DIA_Pyrokar_FOUNDINNOSEYE_Info ()
 	MIS_SCKnowsInnosEyeIsBroken  = TRUE;
 	MIS_NovizenChase = LOG_SUCCESS;	
 	B_GivePlayerXP (XP_Ambient);
+
+		if (!Npc_IsDead (Hodges))
+		{
+			B_StartOtherRoutine (Hodges,"BennetWeg");
+		};
+			B_StartOtherRoutine (Bennet,"PRISON");
+
+			B_StartOtherRoutine	(Lothar,"Tot");
+			B_KillNpc (Lothar);
 	
 	Info_ClearChoices	(DIA_Pyrokar_FOUNDINNOSEYE);
 	Info_AddChoice		(DIA_Pyrokar_FOUNDINNOSEYE, "What can we do now?", DIA_Pyrokar_FOUNDINNOSEYE_was );
