@@ -255,6 +255,7 @@ instance DIA_Mika_HILFE		(C_INFO)
 func int DIA_Mika_HILFE_Condition ()
 {
 	if (Mika_Helps == TRUE)
+	&& (Npc_GetDistToWP(self,"NW_CITY_TO_FOREST_01")<500)
 		{
 			return TRUE;
 		};
