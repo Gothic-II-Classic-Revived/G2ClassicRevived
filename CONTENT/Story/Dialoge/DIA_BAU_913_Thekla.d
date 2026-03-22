@@ -398,8 +398,6 @@ func void DIA_Thekla_PERM_Info()
 		
 		MIS_Thekla_Paket = LOG_RUNNING;
 		
-		CreateInvItems (Sagitta,ItMi_TheklasPaket,1);
-		
 		Log_CreateTopic (TOPIC_TheklaEintopf,LOG_MISSION);
 		Log_SetTopicStatus (TOPIC_TheklaEintopf,LOG_RUNNING);
 		B_LogEntry (TOPIC_TheklaEintopf,"If I bring Thekla the herbs from Sagitta the healer, she'll cook another stew for me. Sagitta lives behind Sekob's farm.");
@@ -435,7 +433,7 @@ func void DIA_Thekla_PERM_Info()
 			}
 			else 
 			{
-				if (MIS_RescueBennet != LOG_SUCCESS)
+				if (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 				{
 					AI_Output (self, other, "DIA_Thekla_PERM_17_14"); //These militia bastards threw Bennet in the hole.
 					AI_Output (self, other, "DIA_Thekla_PERM_17_15"); //Do me a favor and get him out of there, will you? In the meantime, I'll cook you some yummy stew.

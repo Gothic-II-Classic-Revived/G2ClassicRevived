@@ -514,7 +514,9 @@ func void DIA_Sagitta_Thekla_Info ()
 	AI_Output			(other, self, "DIA_Sagitta_Thekla_15_00"); //Thekla sent me to pick up a package for her.
 	AI_Output			(self, other, "DIA_Sagitta_Thekla_17_01"); //Ah, yes. I had actually expected her days ago.
 	AI_Output			(self, other, "DIA_Sagitta_Thekla_17_02"); //Here's the package. Take good care of it!
-	B_GivePlayerXP (XP_AmbientKap3);								
+	B_GivePlayerXP (XP_AmbientKap3);	
+		
+	CreateInvItems (self, ItMi_TheklasPaket, 1);							
 	B_GiveInvItems (self, other, ItMi_TheklasPaket, 1);					
 };
 
