@@ -109,27 +109,27 @@ FUNC VOID DIA_Edda_Kochen_Info()
 			AI_Output (self ,other,"DIA_Edda_Suppe_17_01"); //Nothing could be simpler. Here, have a plate.
 			if(Kapitel == 1 && EddaSoup_Chapter1 == FALSE)
 			{
-				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHXPSOUP, 1);
 				EddaSoup_Chapter1 = TRUE;
 			}
 			else if(Kapitel == 2 && EddaSoup_Chapter2 == FALSE)
 			{
-				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHXPSOUP, 1);
 				EddaSoup_Chapter2 = TRUE;
 			}
 			else if(Kapitel == 3 && EddaSoup_Chapter3 == FALSE)
 			{
-				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHXPSOUP, 1);
 				EddaSoup_Chapter3 = TRUE;
 			}
 			else if(Kapitel == 4 && EddaSoup_Chapter4 == FALSE)
 			{
-				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHXPSOUP, 1);
 				EddaSoup_Chapter4 = TRUE;
 			}
 			else if(Kapitel == 5 && EddaSoup_Chapter5 == FALSE)
 			{
-				B_GiveInvItems (self, other, ITFO_REVIVED_FISHSOUP, 1);
+				B_GiveInvItems (self, other, ITFO_REVIVED_FISHXPSOUP, 1);
 				EddaSoup_Chapter5 = TRUE;
 			}
 			else {

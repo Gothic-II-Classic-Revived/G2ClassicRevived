@@ -686,7 +686,7 @@ INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 
 /******************************************************************************************/
 
-INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
+INSTANCE ITFO_REVIVED_FISHXPSOUP (C_Item)
 {	
 	name 				=	"Edda's Fish Soup";
 	

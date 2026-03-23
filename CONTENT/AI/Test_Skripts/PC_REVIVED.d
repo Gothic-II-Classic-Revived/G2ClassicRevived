@@ -314,7 +314,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITFO_REVIVED_MONSTERDRINK, 20);
 	CreateInvItems(self, ITFO_REVIVED_RICEBOOZE, 20);
 	CreateInvItems(self, ITFO_REVIVED_MEAD, 20);
-	CreateInvItems(self, ITFO_REVIVED_FISHSOUP, 20);
+	CreateInvItems(self, ITFO_REVIVED_FISHXPSOUP, 20);
 	CreateInvItems(self, ITFO_REVIVED_BUGSOUP, 20);
 	CreateInvItems(self, ITFO_REVIVED_PLANTSOUP, 20);
 	CreateInvItems(self, ITFO_REVIVED_CRAWLERSOUP, 20);
