@@ -8,34 +8,22 @@ prototype Mst_Addon_Stoneguardian	(C_NPC)
 	name							= "Stone Sentinel";
 	guild							= GIL_STONEGUARDIAN;
 	aivar[AIV_MM_REAL_ID]			= ID_STONEGUARDIAN;
-	level							= 18;
 	
 	bodyStateInterruptableOverride  = TRUE;
 
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 90; 
-	attribute	[ATR_DEXTERITY]		= 90;
-	attribute	[ATR_HITPOINTS_MAX]	= 180;
-	attribute	[ATR_HITPOINTS]		= 180;
-	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 18);
 
-	//----- Protection ----
-	protection	[PROT_BLUNT]		= 40;
-	protection	[PROT_EDGE]			= 90;
-	protection	[PROT_POINT]		= 140; 
-	protection	[PROT_FIRE]			= 90;
-	protection	[PROT_FLY]			= 90;
-	protection	[PROT_MAGIC]		= 90;	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	200;
+	protection	[PROT_FIRE]			=	200;
+	protection	[PROT_FLY]			=	200;
+	protection	[PROT_MAGIC]		=	0;
 		
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_STONEGUARDIAN;	

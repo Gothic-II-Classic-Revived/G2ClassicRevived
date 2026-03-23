@@ -8,32 +8,22 @@ PROTOTYPE Mst_Default_StoneGolem(C_Npc)
 	name							=	"Stone Golem";
 	guild							=	GIL_STONEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
-	level							=	25;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	125;
-	attribute	[ATR_DEXTERITY]		=	125;
-	attribute	[ATR_HITPOINTS_MAX]	=	250;
-	attribute	[ATR_HITPOINTS]		=	250;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
+	B_SetMonsterAttributesForLevel(self, 50);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	50;
-	protection	[PROT_EDGE]			=	200;
-	protection	[PROT_POINT]		=	200;
-	protection	[PROT_FIRE]			=	200;
-	protection	[PROT_FLY]			=	200;	
+	protection	[PROT_EDGE]			=	300;
+	protection	[PROT_POINT]		=	300;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
 	protection	[PROT_MAGIC]		=	100;
 	
-	//---- Damage Types ----
-	damagetype 						=	DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	//----- Damage Types ----
+	damagetype 						=	DAM_MAGIC|DAM_FLY;
+	damage		[DAM_INDEX_FLY]		=	1;
+	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_STONEGOLEM;
@@ -153,7 +143,8 @@ INSTANCE Shattered_Golem (Mst_Default_StoneGolem)
 	name							=	"";
 	guild							=	GIL_STONEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
-	level							=	18;
+
+	B_SetMonsterAttributesForLevel(self, 30);
 	
 	NoFocus	= TRUE;
 	
@@ -178,8 +169,8 @@ INSTANCE Shattered_Golem (Mst_Default_StoneGolem)
 INSTANCE MagicGolem	(Mst_Default_StoneGolem)
 {
 	name							=	"Magic Golem";
-	//Level
-	level							=	10;
+
+	B_SetMonsterAttributesForLevel(self, 10);
 	
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	IMMUNE;

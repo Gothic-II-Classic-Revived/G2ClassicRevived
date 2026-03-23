@@ -9,38 +9,20 @@ PROTOTYPE Mst_Default_OrcShaman(C_Npc)
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCSHAMAN;
 	voice							=	18;
-	level							=	35;
-	
-	//----- Attributes ----	
-	attribute	[ATR_STRENGTH]		=	100; //MIN 100! + ca. 70 Waffe
-	attribute	[ATR_DEXTERITY]		=	170;
-	attribute	[ATR_HITPOINTS_MAX]	=	350;
-	attribute	[ATR_HITPOINTS]		=	350;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	130;
-	protection	[PROT_EDGE]			=	130;
-	protection	[PROT_POINT]		=	130;
-	protection	[PROT_FIRE]			=	130;
-	protection	[PROT_FLY]			=	130;
-	protection	[PROT_MAGIC]		=	65;
-	
-	//----- HitChances -----
-	HitChance	[NPC_TALENT_1H]			= 60;
-	HitChance	[NPC_TALENT_2H]			= 60;
-	HitChance	[NPC_TALENT_BOW]		= 60;
-	HitChance	[NPC_TALENT_CROSSBOW]	= 60;
-	
-	//----- Damage Types ----	
+
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 40);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	100;
+	protection	[PROT_MAGIC]		=	200;
+		
+	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	fight_tactic	=	FAI_ORC;
 

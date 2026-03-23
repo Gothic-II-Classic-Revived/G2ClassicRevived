@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Keiler(C_Npc)
 	name							=	"Boar";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Keiler;
-	level							=	6;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	40;
-	attribute	[ATR_DEXTERITY]		=	40;
-	attribute	[ATR_HITPOINTS_MAX]	=	100;
-	attribute	[ATR_HITPOINTS]		=	100;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 10);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	50;
 	protection	[PROT_EDGE]			=	50;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	50;
-	protection	[PROT_FLY]			=	50;
+	protection	[PROT_POINT]		=	20;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 
 	//---- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf Taktik ----
 	fight_tactic	=	FAI_WOLF;

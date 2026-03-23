@@ -9,38 +9,20 @@ PROTOTYPE Mst_Default_OrcElite(C_Npc)
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCELITE;
 	voice							=	18;
-	level							=	45;
-	
-	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	125; //+100 Waffe //MIN 120!
-	attribute	[ATR_DEXTERITY]		=	225; 
-	attribute	[ATR_HITPOINTS_MAX]	=	450;
-	attribute	[ATR_HITPOINTS]		=	450;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	160;
-	protection	[PROT_EDGE]			=	160;
-	protection	[PROT_POINT]		=	160;
-	protection	[PROT_FIRE]			=	160;
-	protection	[PROT_FLY]			=	160;
+
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 60);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	200;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	150;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
 	protection	[PROT_MAGIC]		=	100;
-	
-	//----- HitChances -----
-	HitChance	[NPC_TALENT_1H]			= 100;
-	HitChance	[NPC_TALENT_2H]			= 100;
-	HitChance	[NPC_TALENT_BOW]		= 100;
-	HitChance	[NPC_TALENT_CROSSBOW]	= 100;
-	
-	//----- Damage Types ----	
+		
+	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	fight_tactic	= 	FAI_ORC;
 

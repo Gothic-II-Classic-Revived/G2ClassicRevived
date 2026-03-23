@@ -8,16 +8,10 @@ PROTOTYPE Mst_Default_Meatbug(C_Npc)
 	name							=	"Meatbug";
 	guild							=	GIL_MEATBUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MEATBUG;
-	level							=	1;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	1;
-	attribute	[ATR_DEXTERITY]		=	1;
-	attribute	[ATR_HITPOINTS_MAX]	=	5;
-	attribute	[ATR_HITPOINTS]		=	5;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 1);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	0;
 	protection	[PROT_EDGE]			=	0;
@@ -28,9 +22,6 @@ PROTOTYPE Mst_Default_Meatbug(C_Npc)
 	
 	//----- Damage Types ----
 	damagetype 						= 	DAM_EDGE;
-	
-	//----- Kampf-Taktik ----
-//	fight_tactic					= ;		// kämpfen nicht!
 
 	//----- Senses & Ranges ----
 	Senses			= 	SENSE_SMELL;

@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Bloodfly(C_Npc)
 	name							=	"Bloodfly";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLOODFLY;
-	level							=	4;
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	20;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	40; 
-	attribute	[ATR_HITPOINTS]		=	40;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Ptotection ----
-	protection	[PROT_BLUNT]		=	20;
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 4);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	10;
 	protection	[PROT_EDGE]			=	20;
 	protection	[PROT_POINT]		=	20;
-	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 	
 	//----- Kampf-Taktik ----
 	fight_tactic	= 	FAI_BLOODFLY;
@@ -88,23 +76,16 @@ INSTANCE Bloodfly	(Mst_Default_Bloodfly)
 INSTANCE BloodflyJuvenile	(Mst_Default_Bloodfly)
 {
 	name							=	"Small Bloodfly";
-	
-	level							=	3;
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	5;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20; 
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	0;
-	protection	[PROT_EDGE]			=	0;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	0;
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 3);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	10;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	20;
+	protection	[PROT_FIRE]			=	10;
+	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 		
 	//B_SetVisuals_BloodflyJuvenile();

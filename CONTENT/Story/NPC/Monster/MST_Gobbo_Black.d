@@ -8,16 +8,10 @@ PROTOTYPE Mst_Default_Gobbo_Black(C_NPC)
 	name							=	"Black Goblin";
 	guild							=	GIL_GOBBO;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_BLACK;
-	level							=	8;
 	
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	40;
-	attribute	[ATR_DEXTERITY]		=	40;
-	attribute	[ATR_HITPOINTS_MAX]	=	40;
-	attribute	[ATR_HITPOINTS]		=	40;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 10);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;
 	protection	[PROT_EDGE]			=	40;
@@ -28,12 +22,6 @@ PROTOTYPE Mst_Default_Gobbo_Black(C_NPC)
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_GOBBO;

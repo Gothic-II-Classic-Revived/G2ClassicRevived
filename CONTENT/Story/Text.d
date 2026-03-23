@@ -665,7 +665,6 @@ const string NAME_Addon_Guard			= "Guard";
 const string NAME_Addon_Esteban_Guard	= "Bodyguard";
 const string NAME_Addon_Sklave			= "Slave";
 const string NAME_Addon_Buddler			= "Digger";
-const string NAME_ADDON_SCAVENGERGL		= "Grassland Scavenger";
 
 const string NAME_Addon_Summoned_Guardian	=	"Summoned Stone Sentinel";
 const string NAME_Addon_Summoned_Zombie		=	"Summoned Zombie";	

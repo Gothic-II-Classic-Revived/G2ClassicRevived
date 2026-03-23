@@ -8,17 +8,11 @@ PROTOTYPE Mst_Default_Swarm(C_Npc)
 	name							=	"Locust Swarm";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLOODFLY;
-	level							=	6;
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	30;
-	attribute	[ATR_HITPOINTS_MAX]	=	60; 
-	attribute	[ATR_HITPOINTS]		=	60;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
-	//----- Ptotection ----
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 5);
+
+	//----- Protections ----
 	protection	[PROT_BLUNT]		=	0;
 	protection	[PROT_EDGE]			=	0;
 	protection	[PROT_POINT]		=	0;
@@ -28,12 +22,6 @@ PROTOTYPE Mst_Default_Swarm(C_Npc)
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 	
 	//----- Kampf-Taktik ----
 	fight_tactic	= 	FAI_BLOODFLY;

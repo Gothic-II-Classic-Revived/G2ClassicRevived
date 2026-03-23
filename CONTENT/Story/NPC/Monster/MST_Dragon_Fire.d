@@ -7,31 +7,23 @@ PROTOTYPE Mst_Default_Dragon_Fire(C_Npc)
 	name							= "Fire Dragon";
 	guild							= GIL_DRAGON;
 	aivar[AIV_MM_REAL_ID]			= ID_DRAGON_FIRE;
-	level							= 500;
 	
 	bodyStateInterruptableOverride = TRUE;
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 100);
+	level = 500;
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	150;
+	protection	[PROT_EDGE]			=	150;
+	protection	[PROT_POINT]		=	150;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	150;
 	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 200;
-	attribute	[ATR_DEXTERITY]		= 200;
-	attribute	[ATR_HITPOINTS_MAX]	= 1000;
-	attribute	[ATR_HITPOINTS]		= 1000;
-	attribute	[ATR_MANA_MAX] 		= 1000;
-	attribute	[ATR_MANA] 			= 1000;
-	
-	//------ Protections ----	
-	protection	[PROT_BLUNT]		= 180;
-	protection	[PROT_EDGE]			= 180;
-	protection	[PROT_POINT]		= 180;	
-	protection	[PROT_FIRE]			= 180;
-	protection	[PROT_FLY]			= 180;	
-	protection	[PROT_MAGIC]		= 180;
-	
-	//----- Damage Types ----	
+	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
 	damage		[DAM_INDEX_FIRE]	=	160;
 	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt für Fire+Fly
 	damage		[DAM_INDEX_MAGIC]	=	100;

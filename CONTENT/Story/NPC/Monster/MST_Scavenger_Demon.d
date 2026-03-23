@@ -5,35 +5,23 @@
 PROTOTYPE Mst_Default_Scavenger_Demon(C_Npc)			
 {
 	//----- Monster ----
-	name							=	NAME_ADDON_SCAVENGERGL;
+	name							=	"Grassland Scavenger";
 	guild							=	GIL_SCAVENGER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCAVENGER_DEMON;
-	level							=	12;
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	60;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections -----
-	protection	[PROT_BLUNT]		=	60;
-	protection	[PROT_EDGE]			=	60;
-	protection	[PROT_POINT]		=	10;
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
+
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 10);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	20;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-	//damage		[DAM_INDEX_BLUNT]	=	0;
-	//damage		[DAM_INDEX_EDGE]	=	30;	//STR wird genommen, wenn Summe aller dam = 0
-	//damage		[DAM_INDEX_POINT]	=	0;
-	//damage		[DAM_INDEX_FIRE]	=	0;
-	//damage		[DAM_INDEX_FLY]		=	0;
-	//damage		[DAM_INDEX_MAGIC]	=	0;
 	
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_SCAVENGER;

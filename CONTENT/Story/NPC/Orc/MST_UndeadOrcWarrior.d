@@ -8,38 +8,21 @@ PROTOTYPE Mst_Default_UndeadOrcWarrior (C_Npc)
 	name							=	"Undead Orc";
 	guild							=	GIL_UNDEADORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_UNDEADORCWARRIOR;
-	level							=	40;
-	
-	//----- Attribute -----	
-	attribute	[ATR_STRENGTH]		=	100; //+100 Waffe //MIN 120!
-	attribute	[ATR_DEXTERITY]		=	200; 
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
-	
-	//----- HitChances -----
-	HitChance	[NPC_TALENT_1H]			= 80;
-	HitChance	[NPC_TALENT_2H]			= 80;
-	HitChance	[NPC_TALENT_BOW]		= 80;
-	HitChance	[NPC_TALENT_CROSSBOW]	= 80;
+	voice							=	18;
 
-	//----- Damage Types -----	
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 40);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	100;
+	protection	[PROT_MAGIC]		=	200;
+		
+	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf Taktik ----
 	fight_tactic	=	FAI_ORC;

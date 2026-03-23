@@ -8,32 +8,22 @@ PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)
 	name							=	"Swamp Golem";
 	guild							=	GIL_SWAMPGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SWAMPGOLEM;
-	level							=	25;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		= 125;
-	attribute	[ATR_DEXTERITY]		= 125;
-	attribute	[ATR_HITPOINTS_MAX]	= 250;
-	attribute	[ATR_HITPOINTS]		= 250;
-	attribute	[ATR_MANA_MAX] 		= 0;
-	attribute	[ATR_MANA] 			= 0;
-	
+	B_SetMonsterAttributesForLevel(self, 50);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= 125;
-	protection	[PROT_EDGE]			= 125;
-	protection	[PROT_POINT]		= 250;
-	protection	[PROT_FIRE]			= 125;
-	protection	[PROT_FLY]			= 125;	
-	protection	[PROT_MAGIC]		= 125;
+	protection	[PROT_BLUNT]		=	50;
+	protection	[PROT_EDGE]			=	300;
+	protection	[PROT_POINT]		=	300;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	100;
 	
-	//---- Damage Types ----
-	damagetype 						=	DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	//----- Damage Types ----
+	damagetype 						=	DAM_MAGIC|DAM_FLY;
+	damage		[DAM_INDEX_FLY]		=	1;
+	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_STONEGOLEM;

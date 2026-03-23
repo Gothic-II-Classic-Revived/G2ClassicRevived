@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Giant_Rat(C_Npc)
 	name							=	"Giant Rat";
 	guild							=	GIL_Giant_Rat;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
-	level							=	3;
 
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 4);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
 	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
+	protection	[PROT_FIRE]			=	10;
+	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage TYpes ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	= 	FAI_GIANT_RAT;
@@ -85,22 +73,16 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 {
 	//----- Monster ----
 	name							=	"Young Giant Rat";
-	level							=	3;
-	
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	5;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	10;
-	attribute	[ATR_HITPOINTS]		=	10;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 2);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	5;
-	protection	[PROT_EDGE]			=	5;
-	protection	[PROT_POINT]		=	5;
-	protection	[PROT_FIRE]			=	5;
-	protection	[PROT_FLY]			=	5;
+	protection	[PROT_BLUNT]		=	15;
+	protection	[PROT_EDGE]			=	15;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 
 	//----- Kampf-Taktik ----
@@ -108,7 +90,7 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 
 	//----- Visuals ----
 	B_SetVisuals_Giant_Rat();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };
@@ -123,18 +105,12 @@ INSTANCE YRat	(Mst_Default_Giant_Rat)
 {
 	//----- Monster ----
 	name							=	"Rat";
-	level							=	1;
 	guild							=	GIL_MEATBUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
-	
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	5;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	5;
-	attribute	[ATR_HITPOINTS]		=	5;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 1);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	0;
 	protection	[PROT_EDGE]			=	0;

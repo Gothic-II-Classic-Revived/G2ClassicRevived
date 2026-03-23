@@ -7,29 +7,20 @@ PROTOTYPE Mst_Default_Hellhound(C_Npc)
 	name							=	"Hellhound";
 	guild							=	GIL_SHADOWBEAST;
 	aivar[AIV_MM_REAL_ID]			= 	ID_HELLHOUND;
-	level							=	22;
-//----------------------------------------------------------------
-	attribute	[ATR_STRENGTH]		=	90;
-	attribute	[ATR_DEXTERITY]		=	90;
-	attribute	[ATR_HITPOINTS_MAX]	=	180;
-	attribute	[ATR_HITPOINTS]		=	180;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-//----------------------------------------------------------------
-	protection	[PROT_BLUNT]		=	90;
-	protection	[PROT_EDGE]			=	90;
-	protection	[PROT_POINT]		=	40;
-	protection	[PROT_FIRE]			=	90;
-	protection	[PROT_FLY]			=	90;
+
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 22);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	80;
+	protection	[PROT_EDGE]			=	80;
+	protection	[PROT_POINT]		=	90;
+	protection	[PROT_FIRE]			=	60;
+	protection	[PROT_FLY]			=	60;
 	protection	[PROT_MAGIC]		=	0;
+
 //----------------------------------------------------------------
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 //-------------------------------------------------------------
 //-------------------------------------------------------------
 	fight_tactic					=	FAI_SHADOWBEAST;

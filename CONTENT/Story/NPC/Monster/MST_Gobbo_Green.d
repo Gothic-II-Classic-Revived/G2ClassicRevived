@@ -8,17 +8,11 @@ prototype Mst_Default_Gobbo_Green (C_NPC)
 	name							=	"Goblin";
 	guild							=	GIL_GOBBO;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_GREEN;
-	level							=	4;
 	
-	// ------ Attribute ------
-	attribute	[ATR_STRENGTH]		=	20;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	// ------ Protection ------
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 5);
+
+	//----- Protections ----
 	protection	[PROT_BLUNT]		=	20;
 	protection	[PROT_EDGE]			=	20;
 	protection	[PROT_POINT]		=	20;
@@ -28,12 +22,6 @@ prototype Mst_Default_Gobbo_Green (C_NPC)
 
 	// ------ Damage Types ------						//entweder EIN damagetype oder mehrere damage[x], die dann addiert werden und getrennten Rüstungsabzug bekommen
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	// ------ Kampf-Taktik ------
 	fight_tactic	=	FAI_GOBBO;
@@ -84,22 +72,17 @@ INSTANCE Gobbo_Green (Mst_Default_Gobbo_Green)
 
 INSTANCE YGobbo_Green (Mst_Default_Gobbo_Green)
 {
-	level							=	3;
-	
-	// ------ Attribute ------
-	attribute	[ATR_STRENGTH]		=	5;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	// ------ Protection ------
-	protection	[PROT_BLUNT]		=	0;
-	protection	[PROT_EDGE]			=	0;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	0;
+	name							=	"Weaker Goblin";
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 3);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	10;
+	protection	[PROT_EDGE]			=	10;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	10;
+	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 
 	fight_tactic	=	FAI_MONSTER_COWARD;
@@ -108,11 +91,3 @@ INSTANCE YGobbo_Green (Mst_Default_Gobbo_Green)
 	
 	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
-
-
-
-
-
-
-
-

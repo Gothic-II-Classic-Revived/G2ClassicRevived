@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Troll(C_Npc)
 	name							=	"Troll";
 	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL;
-	level							=	50; //30
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100;	//FlyDamage
-	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	500;
-	attribute	[ATR_HITPOINTS]		=	500;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	IMMUNE;	
-	protection	[PROT_FIRE]			=	125;
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 35);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	200;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	200;
 	protection	[PROT_FLY]			=	IMMUNE;
-	protection	[PROT_MAGIC]		=	250;
+	protection	[PROT_MAGIC]		=	75;
 	
-	//----- Damage Types ----	
-	damagetype 						=	DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	//------------------------------------------------------	
+	damagetype 						=	DAM_BLUNT|DAM_FLY;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_TROLL;
@@ -107,6 +95,13 @@ INSTANCE Maya_Troll	(Mst_Default_Troll)
 INSTANCE Troll_DI	(Mst_Default_Troll)
 {
 	name		=	"Cave Troll";
+	
+	protection	[PROT_BLUNT]		=	200;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	200;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	50;
 
 	aivar[AIV_MaxDistToWp]			= 300;
 	aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;

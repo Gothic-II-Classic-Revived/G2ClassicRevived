@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Giant_Bug(C_Npc)
 	name							=	"Field Raider";
 	guild							=	GIL_GIANT_BUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GIANT_BUG;
-	level							=	8;
- 
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	40;
-	attribute	[ATR_DEXTERITY]		=	40;
-	attribute	[ATR_HITPOINTS_MAX]	=	80;
-	attribute	[ATR_HITPOINTS]		=	80;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 6);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;
 	protection	[PROT_EDGE]			=	40;
-	protection	[PROT_POINT]		=	40;
-	protection	[PROT_FIRE]			=	40;
-	protection	[PROT_FLY]			=	40;
+	protection	[PROT_POINT]		=	60;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage TYpes ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	= 	FAI_GIANT_BUG;
@@ -83,77 +71,14 @@ INSTANCE YGiant_Bug	(Mst_Default_Giant_Bug)
 {
 	//----- Monster ----
 	name							=	"Young Field Raider";
-	level							=	2;
-	
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	10;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
+	B_SetMonsterAttributesForLevel(self, 3);
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	10;
-	protection	[PROT_EDGE]			=	10;
-	protection	[PROT_POINT]		=	10;
-	protection	[PROT_FIRE]			=	10;
-	protection	[PROT_FLY]			=	10;
-	protection	[PROT_MAGIC]		=	0;
-
-	//----- Kampf-Taktik ----
-	fight_tactic					= FAI_GIANT_BUG;
-
-	//----- Visuals ----
-	B_SetVisuals_Giant_Bug();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
-	Npc_SetToFistMode(self);
-};
-
-
-INSTANCE YGiant_Bug_VinoRitual1	(Mst_Default_Giant_Bug)
-{
-	//----- Monster ----
-	name							=	"Young Field Raider";
-	level							=	4;
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	10;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	20;
-	attribute	[ATR_HITPOINTS]		=	20;
-
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	10;
-	protection	[PROT_EDGE]			=	10;
-	protection	[PROT_POINT]		=	10;
-	protection	[PROT_FIRE]			=	10;
-	protection	[PROT_FLY]			=	10;
-	protection	[PROT_MAGIC]		=	0;
-
-	//----- Kampf-Taktik ----
-	fight_tactic					= FAI_GIANT_BUG;
-
-	//----- Visuals ----
-	B_SetVisuals_Giant_Bug();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE YGiant_Bug_VinoRitual2	(Mst_Default_Giant_Bug)
-{
-	//----- Monster ----
-	name							=	"Young Field Raider";
-	level							=	4;
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	10;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	40;
-	attribute	[ATR_HITPOINTS]		=	40;
-
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	0;
-	protection	[PROT_EDGE]			=	0;
-	protection	[PROT_POINT]		=	0;
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	30;
 	protection	[PROT_FIRE]			=	0;
 	protection	[PROT_FLY]			=	0;
 	protection	[PROT_MAGIC]		=	0;
@@ -163,7 +88,7 @@ INSTANCE YGiant_Bug_VinoRitual2	(Mst_Default_Giant_Bug)
 
 	//----- Visuals ----
 	B_SetVisuals_Giant_Bug();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 };
 

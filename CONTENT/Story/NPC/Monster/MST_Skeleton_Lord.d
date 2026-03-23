@@ -5,33 +5,20 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	name							=	"Shadow Knight";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
-	level							=	40;
 
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	120; //+ 105 Waffe
-	attribute	[ATR_DEXTERITY]		=	120;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	200;
-	attribute	[ATR_MANA] 			=	200;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 40);
 
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	100; //hat RS!
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	100; 
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;
-	protection	[PROT_MAGIC]		=	0;	//so lassen!
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	150;
+	protection	[PROT_EDGE]			=	150;
+	protection	[PROT_POINT]		=	150;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	150;
 		
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_HUMAN_STRONG;	

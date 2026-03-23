@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Molerat(C_Npc)
 	name							=	"Molerat";
 	guild							=	GIL_MOLERAT;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MOLERAT;
-	level							=	5;
 	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	25;
-	attribute	[ATR_DEXTERITY]		=	25;
-	attribute	[ATR_HITPOINTS_MAX]	=	50;
-	attribute	[ATR_HITPOINTS]		=	50;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 5);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	25;
-	protection	[PROT_EDGE]			=	25;
-	protection	[PROT_POINT]		=	25;	
-	protection	[PROT_FIRE]			=	25;
-	protection	[PROT_FLY]			=	25;	
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_MOLERAT;
@@ -90,26 +78,20 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
 {
 	name							=	"Juvenile Molerat";
-	level							=	3;
 	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	10;
-	attribute	[ATR_DEXTERITY]		=	10;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 3);
+
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	15;	
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;	
+	protection	[PROT_EDGE]			=	10;
+	protection	[PROT_POINT]		=	15;
+	protection	[PROT_FIRE]			=	10;
+	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 
 	B_SetVisuals_MoleratJuvenile();
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 1);
 };
@@ -117,22 +99,16 @@ INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
 INSTANCE MoleratDemon	(Mst_Default_Molerat)
 {
 	name							=	"Forest Molerat";
-	level							=	7;
 	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	40;
-	attribute	[ATR_DEXTERITY]		=	40;
-	attribute	[ATR_HITPOINTS_MAX]	=	75;
-	attribute	[ATR_HITPOINTS]		=	75;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 7);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	50;
-	protection	[PROT_EDGE]			=	50;
-	protection	[PROT_POINT]		=	50;	
-	protection	[PROT_FIRE]			=	50;
-	protection	[PROT_FLY]			=	50;	
+	protection	[PROT_BLUNT]		=	30;
+	protection	[PROT_EDGE]			=	30;
+	protection	[PROT_POINT]		=	50;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	30;
 	protection	[PROT_MAGIC]		=	0;
 
 	B_SetVisuals_MoleratDemon();

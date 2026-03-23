@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_IceSnapper(C_Npc)
 	name							=	"Ice Snapper";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SNAPPER;
-	level							=	14;
 
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	80;
-	attribute	[ATR_DEXTERITY]		=	80;
-	attribute	[ATR_HITPOINTS_MAX]	=	140;
-	attribute	[ATR_HITPOINTS]		=	140;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 20);
 
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	60;
-	protection	[PROT_EDGE]			=	60;
-	protection	[PROT_POINT]		=	60;		
-	protection	[PROT_FIRE]			=	60;
-	protection	[PROT_FLY]			=	60;
-	protection	[PROT_MAGIC]		=	0;
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	50;
+	protection	[PROT_FLY]			=	100;
+	protection	[PROT_MAGIC]		=	50;
 
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_SNAPPER;

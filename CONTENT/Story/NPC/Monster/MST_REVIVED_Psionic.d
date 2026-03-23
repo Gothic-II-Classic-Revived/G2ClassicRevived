@@ -5,38 +5,20 @@ PROTOTYPE Mst_Default_Psionic(C_Npc)
 	name							=	"Apocalyptic Psionic";
 	guild							=	GIL_FANATIC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FANATIC;
-	level							=	35;
 
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	140;
-	attribute	[ATR_DEXTERITY]		=	130;
-	attribute	[ATR_HITPOINTS_MAX]	=	500;
-	attribute	[ATR_HITPOINTS]		=	500;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 30);
 
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	180;
-	protection	[PROT_EDGE]			=	180;
-	protection	[PROT_POINT]		=	280; 
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	160;
-	protection	[PROT_MAGIC]		=	150;	
-	
-	//----- HitChances -----
-	HitChance	[NPC_TALENT_1H]			= 90;
-	HitChance	[NPC_TALENT_2H]			= 90;
-	HitChance	[NPC_TALENT_BOW]		= 90;
-	HitChance	[NPC_TALENT_CROSSBOW]	= 90;
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	150;
+	protection	[PROT_EDGE]			=	150;
+	protection	[PROT_POINT]		=	150;
+	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	150;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_HUMAN_STRONG;

@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 	name							=	"Skeleton";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
-	level							=	30;
 
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 20);
 
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	175; 
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	75;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	75;
+	protection	[PROT_FLY]			=	75;
+	protection	[PROT_MAGIC]		=	75;
 		
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_HUMAN_STRONG;

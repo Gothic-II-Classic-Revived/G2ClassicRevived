@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 	name							=	"Zombie";
 	guild							=	GIL_ZOMBIE;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ZOMBIE;
-	level							=	20;
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	100;
-	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
 
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	50;
-	protection	[PROT_EDGE]			=	50;
-	protection	[PROT_POINT]		=	50;	
-	protection	[PROT_FIRE]			=	50;
-	protection	[PROT_FLY]			=	50;
-	protection	[PROT_MAGIC]		=	0;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 25);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	100;
+	protection	[PROT_MAGIC]		=	100;
 	
 	//----- Damage Type ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf Taktik ----
 	fight_tactic	=	FAI_ZOMBIE;

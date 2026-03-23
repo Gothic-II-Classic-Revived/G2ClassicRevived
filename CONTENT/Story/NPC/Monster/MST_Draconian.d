@@ -8,38 +8,20 @@ PROTOTYPE Mst_Default_Draconian(C_Npc)
 	name							=	"Draconian";
 	guild							=	GIL_DRACONIAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRACONIAN;
-	level							=	35;
 
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	130;
-	attribute	[ATR_DEXTERITY]		=	130;
-	attribute	[ATR_HITPOINTS_MAX]	=	260;
-	attribute	[ATR_HITPOINTS]		=	260;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 35);
 
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	130;
-	protection	[PROT_EDGE]			=	130;
-	protection	[PROT_POINT]		=	130; 
-	protection	[PROT_FIRE]			=	130;
-	protection	[PROT_FLY]			=	130;
-	protection	[PROT_MAGIC]		=	65;	
-	
-	//----- HitChances -----
-	HitChance	[NPC_TALENT_1H]			= 80;
-	HitChance	[NPC_TALENT_2H]			= 80;
-	HitChance	[NPC_TALENT_BOW]		= 80;
-	HitChance	[NPC_TALENT_CROSSBOW]	= 80;
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	120;
+	protection	[PROT_EDGE]			=	120;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	60;
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	100;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_ORC;

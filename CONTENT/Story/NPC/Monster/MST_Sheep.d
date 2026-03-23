@@ -8,17 +8,11 @@ PROTOTYPE Mst_Default_Sheep(C_Npc)
 	name							=	"Sheep";
 	guild							=	GIL_SHEEP;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHEEP;
-	level							=	1;
+	
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 1);
 
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	5;
-	attribute	[ATR_DEXTERITY]		=	5;
-	attribute	[ATR_HITPOINTS_MAX]	=	10;
-	attribute	[ATR_HITPOINTS]		=	10;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-
-	//----- Protection ----
+	//----- Protections ----
 	protection	[PROT_BLUNT]		=	0;
 	protection	[PROT_EDGE]			=	0;
 	protection	[PROT_POINT]		=	0;
@@ -28,15 +22,6 @@ PROTOTYPE Mst_Default_Sheep(C_Npc)
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
-
-	//----- Kampf-Taktik ----
-	//fight_tactic					= FAI_Giant_Rat;//Schafe kämpfen nicht!!
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;

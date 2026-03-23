@@ -8,34 +8,26 @@ PROTOTYPE Mst_Default_Dragon_Undead(C_Npc)
 	name							=	"Undead Dragon";
 	guild							=	GIL_DRAGON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRAGON_UNDEAD;
-	level							=	1000;
 	
-	bodyStateInterruptableOverride 	= 	TRUE;
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		= 400;
-	attribute	[ATR_DEXTERITY]		= 400;
-	attribute	[ATR_HITPOINTS_MAX]	= 2000;
-	attribute	[ATR_HITPOINTS]		= 2000;
-	attribute	[ATR_MANA_MAX] 		= 2000;
-	attribute	[ATR_MANA] 			= 2000;
-	
+	bodyStateInterruptableOverride = TRUE;
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 100);
+	level = 1000;
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		= 200;
-	protection	[PROT_EDGE]			= 200;
-	protection	[PROT_POINT]		= 200;
-	protection	[PROT_FIRE]			= 200;
-	protection	[PROT_FLY]			= 200;	
-	protection	[PROT_MAGIC]		= 200;
+	protection	[PROT_BLUNT]		=	200;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	200;
+	protection	[PROT_FIRE]			=	200;
+	protection	[PROT_FLY]			=	200;
+	protection	[PROT_MAGIC]		=	200;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-	damage		[DAM_INDEX_FIRE]	=	249;
-	damage		[DAM_INDEX_FLY]		=	1;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	damage		[DAM_INDEX_FIRE]	=	200;
+	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt für Fire+Fly
+	damage		[DAM_INDEX_MAGIC]	=	200;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_DRAGON;

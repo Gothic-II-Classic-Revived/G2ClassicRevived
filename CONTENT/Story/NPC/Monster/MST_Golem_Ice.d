@@ -8,32 +8,22 @@ PROTOTYPE Mst_Default_IceGolem(C_Npc)
 	name							=	"Ice Golem";
 	guild							=	GIL_ICEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ICEGOLEM;
-	level							=	45;
-	
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	225;
-	attribute	[ATR_DEXTERITY]		=	225;
-	attribute	[ATR_HITPOINTS_MAX]	=	450;
-	attribute	[ATR_HITPOINTS]		=	450;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
+	B_SetMonsterAttributesForLevel(self, 50);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	110;
-	protection	[PROT_EDGE]			=	160;
-	protection	[PROT_POINT]		=	210;
-	protection	[PROT_FIRE]			=	160;
-	protection	[PROT_FLY]			=	160;
-	protection	[PROT_MAGIC]		=	160;
+	protection	[PROT_BLUNT]		=	50;
+	protection	[PROT_EDGE]			=	300;
+	protection	[PROT_POINT]		=	300;
+	protection	[PROT_FIRE]			=	0;
+	protection	[PROT_FLY]			=	150;
+	protection	[PROT_MAGIC]		=	100;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_BLUNT;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	damagetype 						=	DAM_MAGIC|DAM_FLY;
+	damage		[DAM_INDEX_FLY]		=	1;
+	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_STONEGOLEM;

@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Scavenger(C_Npc)
 	name							=	"Scavenger";
 	guild							=	GIL_SCAVENGER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCAVENGER;
-	level							=	7;
 
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	35;
-	attribute	[ATR_DEXTERITY]		=	35;
-	attribute	[ATR_HITPOINTS_MAX]	=	70;
-	attribute	[ATR_HITPOINTS]		=	70;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 7);
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	35;
-	protection	[PROT_EDGE]			=	35;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	35;
-	protection	[PROT_FLY]			=	35;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-	//damage		[DAM_INDEX_BLUNT]	=	0;
-	//damage		[DAM_INDEX_EDGE]	=	30;	
-	//damage		[DAM_INDEX_POINT]	=	0;
-	//damage		[DAM_INDEX_FIRE]	=	0;
-	//damage		[DAM_INDEX_FLY]		=	0;
-	//damage		[DAM_INDEX_MAGIC]	=	0;
 	
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_SCAVENGER;
@@ -89,20 +77,22 @@ INSTANCE Scavenger	(Mst_Default_Scavenger)
 INSTANCE ScavengerJuvenile	(Mst_Default_Scavenger)
 {
 	name							=	"Juvenile Scavenger";
-	level							=	5;
 
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	20;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	60;
-	attribute	[ATR_HITPOINTS]		=	60;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	//----- Attributes ----
+	B_SetMonsterAttributesForLevel(self, 4);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	20;
+	protection	[PROT_EDGE]			=	20;
+	protection	[PROT_POINT]		=	10;
+	protection	[PROT_FIRE]			=	10;
+	protection	[PROT_FLY]			=	10;
+	protection	[PROT_MAGIC]		=	0;
 
 	//B_SetVisuals_ScavengerJuvenile();
 	B_SetVisuals_Scavenger();
 	
-	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };

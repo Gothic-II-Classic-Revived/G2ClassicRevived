@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Harpie(C_Npc)
 	name							=	"Harpy";
 	guild							=	GIL_HARPY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_HARPY;
-	level							=	18;
 	
-	//-----Attribute ----	
-	attribute	[ATR_STRENGTH]		=	90;
-	attribute	[ATR_DEXTERITY]		=	90;
-	attribute	[ATR_HITPOINTS_MAX]	=	180;
-	attribute	[ATR_HITPOINTS]		=	180;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
-	//----- Protections ----	
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 16);
+
+	//----- Protections ----
 	protection	[PROT_BLUNT]		=	90;
 	protection	[PROT_EDGE]			=	90;
 	protection	[PROT_POINT]		=	40;
-	protection	[PROT_FIRE]			=	90;
-	protection	[PROT_FLY]			=	90;
+	protection	[PROT_FIRE]			=	40;
+	protection	[PROT_FLY]			=	100;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----	
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	= 	FAI_HARPY;

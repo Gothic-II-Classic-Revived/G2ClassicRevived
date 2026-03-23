@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_DragonSnapper(C_Npc)
 	name							=	"Dragon Snapper";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRAGONSNAPPER;
-	level							=	40;
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200; 
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
-	//------ Protections ----	
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 40);
+
+	//----- Protections ----
 	protection	[PROT_BLUNT]		=	150;
 	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;		
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_POINT]		=	150;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	100;
+	protection	[PROT_MAGIC]		=	50;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_SNAPPER;
@@ -98,10 +86,8 @@ INSTANCE Gaans_Snapper	(Mst_Default_DragonSnapper)
 {
 	name	=	"Snorting Snapper";
 
-	attribute	[ATR_STRENGTH]		=	100; 
-	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	200;
-	attribute	[ATR_HITPOINTS]		=	200;
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 25);
 	
 	B_SetVisuals_DragonSnapperWeak();
 	Npc_SetToFistMode(self);

@@ -104,8 +104,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_SuckEnergy			)	{	return	Spell_Logic_SuckEnergy		(manaInvested);	};
 	if (activeSpell == SPL_Skull				)	{	return	Spell_Logic_Skull			(manaInvested);	};
 	if (activeSpell == SPL_SummonZombie			)	{	return	Spell_Logic_SummonZombie	(manaInvested);	};
-	if (activeSpell == SPL_SummonMud			)	{	return	Spell_Logic_SummonMud		(manaInvested);	};
-
+	
 	// REVIVED
 	if (activeSpell == SPL_TeleportNC		)		{	return  Spell_Logic_TeleportAlle		(manaInvested); };
 	if (activeSpell == SPL_TeleportPsi		)		{	return  Spell_Logic_TeleportAlle		(manaInvested); };

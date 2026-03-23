@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_FireWaran(C_Npc)
 	name							=	"Fire Lizard";
 	guild							=	GIL_WARAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREWARAN;
-	level							=	30;
-	
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;
-	attribute	[ATR_HITPOINTS]		=	300;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	B_SetMonsterAttributesForLevel(self, 26);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	150;
 	protection	[PROT_EDGE]			=	150;
 	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
+	protection	[PROT_FIRE]			=	IMMUNE;
 	protection	[PROT_FLY]			=	150;
 	protection	[PROT_MAGIC]		=	0;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_FIRE; //Opfer fängt an zu brennen
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	damagetype 						=	DAM_FIRE;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_WARAN;

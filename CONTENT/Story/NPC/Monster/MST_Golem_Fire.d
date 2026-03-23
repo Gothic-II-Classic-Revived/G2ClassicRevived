@@ -8,32 +8,23 @@ PROTOTYPE Mst_Default_FireGolem(C_Npc)
 	name							=	"Fire Golem";
 	guild							=	GIL_FIREGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREGOLEM;
-	level							=	40;
-	
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	100;
-	attribute	[ATR_MANA] 			=	100;
-	
+	B_SetMonsterAttributesForLevel(self, 50);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	200;	
-	protection	[PROT_FIRE]			=	150;	
+	protection	[PROT_BLUNT]		=	50;
+	protection	[PROT_EDGE]			=	300;
+	protection	[PROT_POINT]		=	300;
+	protection	[PROT_FIRE]			=	IMMUNE;
 	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	150;
+	protection	[PROT_MAGIC]		=	100;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
+	damage		[DAM_INDEX_FIRE]	=	100;
+	damage		[DAM_INDEX_FLY]		=	1;
+	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_STONEGOLEM;

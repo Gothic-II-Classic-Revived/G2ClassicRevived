@@ -8,32 +8,20 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	name							=	"Black Troll";
 	guild							=	GIL_TROLL;
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL_BLACK;
-	level							=	100; //40
-	
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	200;
-	attribute	[ATR_DEXTERITY]		=	200;
-	attribute	[ATR_HITPOINTS_MAX]	=	1000;
-	attribute	[ATR_HITPOINTS]		=	1000;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
 
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	IMMUNE;	
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	IMMUNE;	
-	protection	[PROT_MAGIC]		=	300;
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 50);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	300;
+	protection	[PROT_EDGE]			=	300;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	300;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	100;
 	
 	//------------------------------------------------------	
-	damagetype 						=	DAM_FLY;
-//	damage		[DAM_INDEX_BLUNT]	=	0;
-//	damage		[DAM_INDEX_EDGE]	=	0;
-//	damage		[DAM_INDEX_POINT]	=	0;
-//	damage		[DAM_INDEX_FIRE]	=	0;
-//	damage		[DAM_INDEX_FLY]		=	0;
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	damagetype 						=	DAM_BLUNT|DAM_FLY;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_TROLL;
@@ -84,12 +72,12 @@ INSTANCE Troll_Black	(Mst_Default_Troll_Black)
 
 INSTANCE Troll_Black_Sagitta	(Mst_Default_Troll_Black)
 {
-	attribute	[ATR_STRENGTH]		=	300;
-	attribute	[ATR_DEXTERITY]		=	300;
-	attribute	[ATR_HITPOINTS_MAX]	=	2000;
-	attribute	[ATR_HITPOINTS]		=	2000;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
+	protection	[PROT_BLUNT]		=	200;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	200;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	50;
 
 	B_SetVisuals_Troll_Black();
 	Npc_SetToFistMode(self);
