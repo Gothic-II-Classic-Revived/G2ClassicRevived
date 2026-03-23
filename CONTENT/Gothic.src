@@ -21,6 +21,7 @@ STORY\svm.d
 STORY\Text.d
 STORY\RevivedConstants.d
 STORY\RevivedHelpers.d
+STORY\RevivedEvents.d
 
 
 STORY\B_Story\C_NpcIsInQuarter.d
