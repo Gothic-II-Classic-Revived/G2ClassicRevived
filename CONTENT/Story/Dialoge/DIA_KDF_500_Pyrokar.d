@@ -909,6 +909,7 @@ func int DIA_Pyrokar_PERM_Condition ()
 func void DIA_Pyrokar_PERM_Info ()
 {
 	if (hero.guild == GIL_KDF)
+	|| (hero.guild == GIL_PAL)
 			{
 				AI_Output			(other, self, "DIA_Pyrokar_PERM_15_00"); //Bless me, Master.
 			}

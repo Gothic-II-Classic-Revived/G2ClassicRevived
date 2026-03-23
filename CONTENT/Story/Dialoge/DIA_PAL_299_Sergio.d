@@ -83,7 +83,7 @@ FUNC VOID DIA_Sergio_Isgaroth_Spende()
 	AI_Output (other, self, "DIA_Sergio_Isgaroth_Spende_15_00"); //What about a little donation?
 	AI_Output (self, other, "DIA_Sergio_Isgaroth_Spende_04_01"); //May this gold be of use to you.
 	
-	B_GiveInvItems (self,other, ItMi_Gold,100);
+	B_GiveInvItems (self,other, ItMi_Gold,50);
 	Info_ClearChoices (DIA_Sergio_Isgaroth);
 };
 FUNC VOID DIA_Sergio_Isgaroth_XP()
