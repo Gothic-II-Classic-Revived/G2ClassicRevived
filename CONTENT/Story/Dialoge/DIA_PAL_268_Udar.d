@@ -405,7 +405,7 @@ func int DIA_Udar_SENGRATHGEFUNDEN_Condition ()
 {
 	if	(Kapitel >= 4)	
 		&& (Npc_KnowsInfo(other, DIA_Udar_Sengrath))
-		&& (Npc_HasItems (other,ItRw_SengrathsArmbrust_MIS))
+		&& (Npc_HasItems (other,ITRW_REVIVED_CROSSBOW_SENGRATH))
 		{
 				return TRUE;
 		};
@@ -421,6 +421,7 @@ func void DIA_Udar_SENGRATHGEFUNDEN_Info ()
 
 	TOPIC_END_Sengrath_Missing = TRUE;
 	B_GivePlayerXP (XP_SengrathFound);
+	B_GiveInvItems (other, self, ITRW_REVIVED_CROSSBOW_SENGRATH, 1);
 };
 
 ///////////////////////////////////////////////////////////////////////
