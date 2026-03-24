@@ -136,7 +136,7 @@ INSTANCE ItMi_TheklasPaket (C_Item)
 	visual 				=	"ItMi_Packet.3ds";
 	scemename			=	"MAPSEALED";	
 	material 			=	MAT_LEATHER;
-	on_state[0]			=   Use_TheklasPacket;
+	//on_state[0]			=   Use_TheklasPacket;
 	description			= 	name;
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
