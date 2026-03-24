@@ -2,12 +2,13 @@
 // Quest Log
 // ***************
 
+const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
 var int			MiltenORPedro_LostInnosStatue_Daron;
 var int 		TOPIC_Revived_DaronStatuette_END;
 
-const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
-
 const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
+
+const string	TOPIC_Revived_EddaStatue			=	"Robbed in the Harbour";
 
 const string	TOPIC_Tobacco						=	"Mixing tobacco";
 const string	LogText_TobaccoLearned				=	"By mixing Abuyin's apple tobacco at an alchemist's bench I can make:";

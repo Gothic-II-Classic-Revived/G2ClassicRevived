@@ -2552,14 +2552,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("hafen06",		GIL_VLK);
 		Wld_AssignRoomToGuild ("hafen07",		GIL_VLK);
 		
-		if (Edda_Schlafplatz == TRUE)
-		{
-			Wld_AssignRoomToGuild ("hafen08",	GIL_NONE); //EDDA
-		}
-		else
-		{
-			Wld_AssignRoomToGuild ("hafen08",		GIL_VLK); //EDDA
-		};
+		Wld_AssignRoomToGuild ("hafen08",		GIL_PUBLIC); //EDDA
 		Wld_AssignRoomToGuild ("hafen09",		GIL_PUBLIC); //Ignaz
 		Wld_AssignRoomToGuild ("hafen10",		GIL_VLK);
 		Wld_AssignRoomToGuild ("hafen11",		GIL_VLK);

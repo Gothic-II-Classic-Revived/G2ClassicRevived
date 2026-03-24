@@ -747,7 +747,6 @@ var int 	Attila_Key;
 
 
 var int 	Edda_Day;
-var int		Edda_Schlafplatz;
 
 var int     Knows_Ork;					//Spieler hat vom Ork vor der Stadt geh�rt
 var int 	MIS_Matteo_Gold;			//Schulden von Gritta eintreiben (von Matteo)

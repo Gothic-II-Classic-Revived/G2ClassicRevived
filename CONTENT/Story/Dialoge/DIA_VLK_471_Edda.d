@@ -73,12 +73,14 @@ FUNC VOID DIA_Edda_Stadt_Info()
 	AI_Output (self ,other,"DIA_Edda_Stadt_17_04"); //The only valuable thing I ever owned has already been taken.
 	AI_Output (self ,other,"DIA_Edda_Stadt_17_05"); //Someone stole my statue of Innos.
 	
-	Edda_Schlafplatz = TRUE;
-	Wld_AssignRoomToGuild ("hafen08",	GIL_NONE);
+	Log_CreateTopic (TOPIC_Revived_EddaStatue, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Revived_EddaStatue, LOG_RUNNING);
+	B_LogEntry (TOPIC_Revived_EddaStatue,"Poor woman Edda has lost her Innos Statue, apparently it was stolen from her house."); 
 };			
 // ************************************************************
 // 			Kannst du mir eine Suppe kochen?
 // ************************************************************
+var int EddaSoupFirst;
 INSTANCE DIA_Edda_Kochen(C_INFO)
 {
 	npc			= VLK_471_Edda;
@@ -98,9 +100,12 @@ FUNC VOID DIA_Edda_Kochen_Info()
 	AI_Output (other ,self,"DIA_Edda_Kochen_15_00"); //Could you cook me some soup?
 	
 	if (Wld_GetDay() == 0)
+	|| (EddaSoupFirst == FALSE)
 	{
 		AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //I cook for everybody. For you, too, if you want. All you need to do is bring me a fish.
 		AI_Output (self ,other,"DIA_Edda_Suppe_17_02"); //Starting tomorrow, you can come and get some soup every day.
+
+		EddaSoupFirst = TRUE;
 	}
 	else if (Edda_Day != Wld_GetDay())
 	{
@@ -176,6 +181,8 @@ FUNC VOID DIA_Edda_Statue_Info()
 	
 	B_GiveInvItems (other, self,ItMI_EddasStatue, 1); 
 	B_GivePlayerXP (XP_Edda_Statue);
+
+	Log_SetTopicStatus(TOPIC_Revived_EddaStatue, LOG_SUCCESS);
 };				 
 	
 // ************************************************************
