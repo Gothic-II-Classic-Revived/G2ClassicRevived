@@ -19,6 +19,7 @@ STORY\Story_Globals.d
 STORY\NPC_Globals.d
 STORY\svm.d
 STORY\Text.d
+
 STORY\RevivedConstants.d
 STORY\RevivedHelpers.d
 STORY\RevivedEvents.d
@@ -43,7 +44,6 @@ STORY\B_Content\B_LieselMaeh.d
 STORY\B_Content\B_IrrlichtBeep.d
 STORY\B_Content\B_Upgrade_Hero_HackChance.d
 
-
 STORY\B_Content\C_ArtefaktValues.d
 
 STORY\Dialog_Mobsis\B_PlayerMap.d
@@ -56,6 +56,9 @@ STORY\Log_Entries\B_Checklog.d
 
 STORY\B_Story\B_GivePlayerXP.d
 STORY\B_Content\B_SCUsesRake.d
+
+
+STORY\RevivedBookBonus.d
 
 
 STORY\B_Story\B_KillNpc.d

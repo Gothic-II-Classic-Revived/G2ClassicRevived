@@ -1,9 +1,9 @@
-//-------------------------------------------------------------------------------------
-//				Milten_03 //oben
-//-------------------------------------------------------------------------------------
-var int BookstandCorristo_Once;
-var int BookstandMilten_Once;
-var int BookstandEngor_Once;
+//##########################################################################
+//##
+//##	Personal Books - Gothic II
+//##
+//##########################################################################
+
 FUNC VOID Bookstand_Milten_03_S1()		
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
@@ -32,7 +32,6 @@ FUNC VOID Bookstand_Milten_03_S1()
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "Corristo");
 					
-					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Gomez' temper is hotter than ever, and I think I can guess what he's planning. We must warn the Water Mages, before it's too late."					);
@@ -42,16 +41,14 @@ FUNC VOID Bookstand_Milten_03_S1()
 					Doc_PrintLines	( nDocID,  1, "Maybe we can ward off a disaster. It doesn't bear thinking about what would happen if the free mine ..."					);
 					Doc_Show		( nDocID );
 
-		if (BookstandCorristo_Once == FALSE)
+		if (RevivedBookstandRead_Personal1 == FALSE)
 			{
-				B_GivePlayerXP (XP_BookstandPersonal);
-				BookstandCorristo_Once = TRUE;
+				REV_ReadBook(BookType_Personal);
+				RevivedBookstandRead_Personal1 = TRUE;
 			};
 	};
 };
-//-------------------------------------------------------------------------------------
-//				Milten_02 //unten
-//-------------------------------------------------------------------------------------
+
 FUNC VOID Bookstand_Milten_02_S1()		
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
@@ -76,8 +73,6 @@ FUNC VOID Bookstand_Milten_02_S1()
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0, "");
 			
-					
-					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
@@ -89,16 +84,13 @@ FUNC VOID Bookstand_Milten_02_S1()
 					Doc_PrintLine	( nDocID,  1, "Milten"					);
 					Doc_Show		( nDocID );
 
-		if (BookstandMilten_Once == FALSE)
+		if (RevivedBookstandRead_Personal2 == FALSE)
 			{
-				B_GivePlayerXP (XP_BookstandPersonal);
-				BookstandMilten_Once = TRUE;
+				REV_ReadBook(BookType_Personal);
+				RevivedBookstandRead_Personal2 = TRUE;
 			};
 	};
 };
-//-------------------------------------------------------------------------------------
-//				Milten_01 //unten
-//-------------------------------------------------------------------------------------
 FUNC VOID Bookstand_Milten_01_S1()		
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
@@ -120,9 +112,7 @@ FUNC VOID Bookstand_Milten_01_S1()
 
 	};
 };
-//-------------------------------------------------------------------------------------
-//				Engor //unten
-//-------------------------------------------------------------------------------------
+
 FUNC VOID Bookstand_Engor_01_S1()		
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
@@ -154,7 +144,6 @@ FUNC VOID Bookstand_Engor_01_S1()
 					Doc_PrintLines	( nDocID,  0, "5 crates of (stinking) leather and pelts");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
@@ -175,12 +164,111 @@ FUNC VOID Bookstand_Engor_01_S1()
 					Doc_PrintLine	( nDocID,  1, "Engor"					);
 					Doc_Show		( nDocID );
 
-		if (BookstandEngor_Once == FALSE)
+		if (RevivedBookstandRead_Personal3 == FALSE)
 			{
-				B_GivePlayerXP (XP_BookstandPersonal);
-				BookstandEngor_Once = TRUE;
+				REV_ReadBook(BookType_Personal);
+				RevivedBookstandRead_Personal3 = TRUE;
 			};
 	};
 };
 
- 
+//##########################################################################
+//##
+//##	Personal Books - Revived
+//##
+//##########################################################################
+
+var int RevivedBookstandRead_Specific1;
+FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()
+{
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{	
+
+		var int nDocID;
+		
+
+		nDocID = 	Doc_Create		()			  ;							
+					Doc_SetPages	( nDocID,  2 );                         
+					Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga", 	0 		); 
+					Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga",	0		);
+					
+					Doc_SetFont 	( nDocID, -1, FONT_BookHeadline	   			); 	
+					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
+
+					Doc_PrintLine	( nDocID,  0, "Prisoners"					);
+					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(Rengaru_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  0, "Rengaru: Stole from merchant Jora"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(Halvor_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  0, "Halvor: Supports bandits outside the city"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(Nagur_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  0, "Nagur: Murdered Baltram's errand-boy"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(MIS_Andre_REDLIGHT == LOG_SUCCESS)
+				{
+					Doc_PrintLines	( nDocID,  0, "Borka: Swampweed dealer"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(BaltramInJail == LOG_SUCCESS)
+				{
+					Doc_PrintLines	( nDocID,  0, "Baltram: Trade with pirates"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+					
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
+					Doc_PrintLine	( nDocID,  1, ""					);
+					Doc_PrintLine	( nDocID,  1, ""					);
+				if(Fernando_ImKnast == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  1, "Fernando: Sells weapons to bandits"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					);
+				/* if(Rengaru_InKnast == TRUE)
+				&& (!Npc_IsDead(Cassia))
+				&& (!Npc_IsDead(Jesper))
+				&& (!Npc_IsDead(Ramirez))
+				{
+					Doc_PrintLines	( nDocID,  1, "Cassia: Leader of Thieves' Guild"					);
+					Doc_PrintLines	( nDocID,  1, "Jesper: Member of Thieves' Guild"); 
+					Doc_PrintLines	( nDocID,  1, "Ramirez: Member of Thieves' Guild"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					); */
+				if(Sarah_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  1, "Sarah: Sells weapons to Mercenaries"					);
+				}
+				else if(Canthar_Ausgeliefert)
+				{
+					Doc_PrintLines	( nDocID,  1, "Canthar: Wanted to frame up Sarah"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					);
+				if(MIS_RescueBennet == LOG_RUNNING)
+				{
+					Doc_PrintLines	( nDocID,  1, "Bennet: Murdered Lord Lothar"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					);
+				if(MIS_Richter_KillMorgahard == LOG_RUNNING)
+				{
+					Doc_PrintLines	( nDocID,  1, "Morgahard: Stole from governor Larius");
+				};
+					Doc_Show		( nDocID );
+					
+					if (RevivedBookstandRead_Personal4 == FALSE)
+					{
+						REV_ReadBook(BookType_Personal);
+						RevivedBookstandRead_Personal4 = TRUE;
+					};	  
+	
+	};
+};

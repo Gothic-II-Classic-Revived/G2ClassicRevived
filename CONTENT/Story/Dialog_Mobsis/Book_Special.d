@@ -1,38 +1,17 @@
 //##########################################################################
 //##
-//##	Hier stehen alle Buchständermobsiscripte
+//##	Special Books - Gothic II
 //##
 //##########################################################################
 
-
-//*************************************
-//	Buchständer in der Klosterbibliothek
-//*************************************
 var int FireContest_Once;
-
-FUNC VOID Use_Bookstand_01_S1()		//Buchständer in der Magierbibliothek
+FUNC VOID Use_Bookstand_01_S1()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
 	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
-	{	
-	if  (hero.guild == GIL_NOV)
-		{
-			if (FireContest_Once == FALSE)
-			{
-				KNOWS_FIRE_CONTEST = TRUE; //für die Prüfung des Feuers 
-				
-				Log_CreateTopic (TOPIC_FireContest,LOG_MISSION);
-				Log_SetTopicStatus	(TOPIC_FireContest,LOG_RUNNING);
-				B_LogEntry (TOPIC_FireContest,"As a novice, I have a right to demand the Test of Fire. This entails each of the three magicians from the High Council setting me a test. If I pass these trials, I will be accepted into the Circle of Fire.");
-			
-				//B_GivePlayerXP (XP_BookstandFireContest);
-				FireContest_Once = TRUE;
-			};
-		};
-	
+	{		
 		var int nDocID;
-		
 
 		nDocID = 	Doc_Create		()			  ;							
 					Doc_SetPages	( nDocID,  2 );                         
@@ -46,11 +25,8 @@ FUNC VOID Use_Bookstand_01_S1()		//Buchständer in der Magierbibliothek
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 				
-					
 					Doc_PrintLines	( nDocID,  0, "Though a novice may feel ready to submit to the Test of Magic, he may not necessarily be chosen. If, however, he has given his decision ample consideration and if he insists, he is accorded the right to demand the Test and no magician may deny it to him. But not only must he pass the Test of Magic, he must also find enlightenment through the fire. If he insists before the High Council, he shall be submitted to the TEST OF FIRE.");
 			
-					
-					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
@@ -64,18 +40,27 @@ FUNC VOID Use_Bookstand_01_S1()		//Buchständer in der Magierbibliothek
 					Doc_PrintLines	( nDocID,  1, "The High Council"					);
 					Doc_Show		( nDocID );
 
-		
+					
+		if  (hero.guild == GIL_NOV)
+		{
+			if (FireContest_Once == FALSE)
+			{
+				KNOWS_FIRE_CONTEST = TRUE; 
+				
+				Log_CreateTopic (TOPIC_FireContest,LOG_MISSION);
+				Log_SetTopicStatus	(TOPIC_FireContest,LOG_RUNNING);
+				B_LogEntry (TOPIC_FireContest,"As a novice, I have a right to demand the Test of Fire. This entails each of the three magicians from the High Council setting me a test. If I pass these trials, I will be accepted into the Circle of Fire.");
+			
+				//B_GivePlayerXP (XP_BookstandFireContest);
+				FireContest_Once = TRUE;
+			};
+		};
 	};
 };
 
-//*************************************
-//	Buchständer in der Geheimen Bibliothek
-//*************************************
 //--------------------------------------
 var int FinalDragonEquipment_Once;
-//--------------------------------------
-
-FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothek 
+FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -96,25 +81,18 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 						Doc_PrintLines	( nDocID,  0, "... I hope the dome may protect the ore from the menace of Beliar. The King is naive enough to believe that we built the dome as protection against breakouts. Well, as long as such ruses enable us to fulfill our higher goals, let it be so. I can only hope we have enough time left to prepare for the fight. As soon as the dome around the Valley of Mines has been erected, I will use all the power at my disposal to intervene in the impeding fight.");
 						Doc_PrintLine	( nDocID,  0, "");
 			
-					
-	
-			
 		if  (hero.guild == GIL_KDF)
 		{	
 			PlayerGetsAmulettOfDeath = TRUE;
 			PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE; 
 			B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Holy Missile': 1 holy water, no spell scroll");
 			
-			
-						
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
 						Doc_PrintLines	( nDocID,  1, "... I followed the instructions and simply poured Innos' holy water over a blank runestone on a rune table. The runestone was destroyed. I suspect this spell really is accessible only to the One."); 
 						Doc_PrintLines	( nDocID,  1, "I have left the holy aura of Innos in the protection of the monastery. The abbot will take care of it until the One reveals himself."	);
 						Doc_PrintLines	( nDocID,  1, "The Tears of Innos may have a vital part to play in the fight ahead. But it's too dangerous to keep them where all can see. I'd better leave them here in the library."	);
-						Doc_Show		( nDocID );
-						
-						
+						Doc_Show		( nDocID );		
 		}
 		else if (hero.guild == GIL_PAL)
 		{
@@ -126,9 +104,6 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 			B_LogEntry (TOPIC_TalentRunes,"To create a rune I need certain ingredients for each one. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
 			B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Secret teleport': 1 holy water");
 			
-			
-		
-						
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
 						Doc_PrintLines	( nDocID,  1, "You have to create a teleportation rune to reach the secret place. For that you need a blank runestone and a small bottle of holy water. You can use the rune to teleport into the room."); 
@@ -173,3 +148,82 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 	};
 };
 
+//##########################################################################
+//##
+//##	Special Books - Revived
+//##
+//##########################################################################
+
+FUNC VOID UseItWrFokusbuch()
+{  
+	var int			nDocID;	
+	nDocID = 	Doc_Create		()			  ;	 
+	Doc_SetPages	( nDocID,  2 );
+
+			Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
+			Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
+
+  			Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+  			Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
+			Doc_PrintLine	( nDocID,  0,"Chapter 23");
+			Doc_PrintLine	( nDocID,  0, "");
+			Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
+			Doc_PrintLine	( nDocID,  0,"The Focusing of Powers");
+			Doc_PrintLine	( nDocID,  0, "");
+			Doc_PrintLines	( nDocID,  0,"The power inherent in the stone increases continuously and is unleashed by the words of the magician. Be it lasting or a single blow, this is within his judgment alone.");
+			Doc_PrintLine	( nDocID,  0, "");
+			Doc_PrintLines	( nDocID,  0,"But once unleashed, the focus becomes devoid of power, remaining but an empty shell.");
+
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
+			Doc_PrintLine	( nDocID,  1,  "");
+			Doc_PrintLines	( nDocID,  1,"The words that must be spoken to unleash the power of a focus are accessible to many artists of arcane power. Even the knowledge of endowing a new artifact with magic powers has become more of a magical custom than a secret of the knowing.");
+			Doc_PrintLine	( nDocID,  1,  "");
+			Doc_PrintLines	( nDocID,  1,"But only a chosen few have the knowledge needed to recharge a used focus stone. This formula of days long past serves as a sign of the high gift.");
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1,"Now, oh knowing one, open your mind to the words of the ancient power.");
+					
+			Doc_Show		( nDocID );
+					
+				if (RevivedBookstandRead_Special1 == FALSE)
+				{
+					REV_ReadBook(BookType_Special);
+					RevivedBookstandRead_Special1 = TRUE;
+				};	  
+};
+
+FUNC VOID UseItWrCryptbuch()
+{  
+	var int			nDocID;	
+	nDocID = 	Doc_Create		()			  ;	 
+	Doc_SetPages	( nDocID,  2 );
+
+			Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
+			Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
+
+  			Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+  			Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
+			Doc_PrintLine	( nDocID,  0,"Chapter 23");
+			Doc_PrintLine	( nDocID,  0, "");
+			Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
+			Doc_PrintLine	( nDocID,  0,"The Focusing of Powers");
+			Doc_PrintLine	( nDocID,  0, "");
+			Doc_PrintLines	( nDocID,  0,"The power inherent in the stone increases continuously and is unleashed by the words of the magician. Be it lasting or a single blow, this is within his judgment alone.");
+			Doc_PrintLine	( nDocID,  0, "");
+			Doc_PrintLines	( nDocID,  0,"But once unleashed, the focus becomes devoid of power, remaining but an empty shell.");
+
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
+			Doc_PrintLine	( nDocID,  1,  "");
+			Doc_PrintLines	( nDocID,  1,"The words that must be spoken to unleash the power of a focus are accessible to many artists of arcane power. Even the knowledge of endowing a new artifact with magic powers has become more of a magical custom than a secret of the knowing.");
+			Doc_PrintLine	( nDocID,  1,  "");
+			Doc_PrintLines	( nDocID,  1,"But only a chosen few have the knowledge needed to recharge a used focus stone. This formula of days long past serves as a sign of the high gift.");
+			Doc_PrintLine	( nDocID,  1, "");
+			Doc_PrintLines	( nDocID,  1,"Now, oh knowing one, open your mind to the words of the ancient power.");
+					
+			Doc_Show		( nDocID );
+					
+				if (RevivedBookstandRead_Special2 == FALSE)
+				{
+					REV_ReadBook(BookType_Special);
+					RevivedBookstandRead_Special2 = TRUE;
+				};	  
+};

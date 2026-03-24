@@ -692,38 +692,6 @@ INSTANCE ItWr_Astronomy_Mis (C_ITEM)
 	on_state[0]				=	Use_Astronomy;
 };
 
-var int Astronomy_once;
-
-FUNC VOID Use_Astronomy()
-{   
-		if (Astronomy_once == FALSE)
-		{
-			B_RaiseAttribute (self, ATR_MANA_MAX, 2);
-			Print (PRINT_ReadAstronomy);
-			Astronomy_once = TRUE;
-		};
-		var int nDocID;
-		
-		nDocID = 	Doc_Create		()			  ;								// DocManager 
-					Doc_SetPages	( nDocID,  2 );                         //wieviel Pages
-					Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga"  , 0 	); // VARIATIONEN: BOOK_BROWN_L.tga , BOOK_MAGE_L.tga , BOOK_RED_L.tga
-					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga" , 0	); // VARIATIONEN: BOOK_BROWN_R.tga , BOOK_MAGE_R.tga , BOOK_RED_R.tga
-					
-					//1.Seite
-					Doc_SetFont 	( nDocID,  -1, FONT_Book	   			); 	// -1 -> all pages 
- 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels					
-					Doc_PrintLine	( nDocID,  0, ""					);										
-					Doc_PrintLines	( nDocID,  0, "... but when the strength of an ox is combined with the principles of a warrior, then beware of the events that may come to pass.");
-					Doc_PrintLines	( nDocID,  0, "The unbound strength of the ox and the perseverance of the warrior can topple the ancient balance of the powers. The cosmic boundary between the dimensions grows weak - so weak that it becomes easy for the shadow creatures of Beliar to enter our world.");
-					//2.Seite
-					Doc_SetMargins	( nDocID,  -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "What would ensue from this is shown to us by the wars of ancient times, when the link between the worlds was still strong. The henchmen of Evil brought death and destruction to the world, and only the help of Innos and the Chosen One could ward off Evil from mankind."	);
-					Doc_PrintLines	( nDocID,  1, "If such a threat should ever exist again, then may Innos protect us, for there has not been another Chosen of Innos for over a hundred years."					);
-					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1, "");
-					Doc_Show		( nDocID );
-};
 
 ///////////////////////
 //Besessenheit heilen.

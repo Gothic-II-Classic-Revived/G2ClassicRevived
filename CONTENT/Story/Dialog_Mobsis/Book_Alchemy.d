@@ -1,20 +1,10 @@
 //##########################################################################
 //##
-//##	Bookstand Alchemie
+//##	Alchemy Books - Gothic II
 //##
 //##########################################################################
 
-//----------------------
-var int ALchemy_1_permanent;
-//----------------------
-//----------------------
-var int ALchemy_2_permanent;
-//----------------------
-//----------------------
-var int ALchemy_3_permanent;
-//----------------------
-
-FUNC VOID Use_BookstandALCHEMY1_S1()		//Alchemiebücher
+FUNC VOID Use_BookstandALCHEMY1_S1()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -61,16 +51,16 @@ FUNC VOID Use_BookstandALCHEMY1_S1()		//Alchemiebücher
 					Doc_PrintLines	( nDocID,  1, "King's Sorrel"		);
 					Doc_Show		( nDocID );
 					
-					if (ALchemy_1_permanent == FALSE)
+					if (RevivedBookstandRead_Alchemy1 == FALSE)
 					{
-						B_GivePlayerXP (XP_BookstandAlchemy);
-						ALchemy_1_permanent = TRUE;
+						REV_ReadBook(BookType_Alchemy);
+						RevivedBookstandRead_Alchemy1 = TRUE;
 					};	  
 
 	};
 };
 
-FUNC VOID Use_BookstandALCHEMY2_S1()		//Alchemiebücher
+FUNC VOID Use_BookstandALCHEMY2_S1()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -117,16 +107,16 @@ FUNC VOID Use_BookstandALCHEMY2_S1()		//Alchemiebücher
 					Doc_PrintLines	( nDocID,  1, "King's Sorrel"		);
 					Doc_Show		( nDocID );
 					
-					if (ALchemy_2_permanent == FALSE)
+					if (RevivedBookstandRead_Alchemy2 == FALSE)
 					{
-						B_GivePlayerXP (XP_BookstandAlchemy);
-						ALchemy_2_permanent = TRUE;
+						REV_ReadBook(BookType_Alchemy);
+						RevivedBookstandRead_Alchemy2 = TRUE;
 					};	
 
 	};
 };
 
-FUNC VOID Use_BookstandALCHEMY3_S1()		//Alchemiebücher
+FUNC VOID Use_BookstandALCHEMY3_S1()
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -175,11 +165,99 @@ FUNC VOID Use_BookstandALCHEMY3_S1()		//Alchemiebücher
 					
 					Doc_Show		( nDocID );
 					
-					if (ALchemy_3_permanent == FALSE)
+					if (RevivedBookstandRead_Alchemy3 == FALSE)
 					{
-						B_GivePlayerXP (XP_BookstandAlchemy);
-						ALchemy_3_permanent = TRUE;
+						REV_ReadBook(BookType_Alchemy);
+						RevivedBookstandRead_Alchemy3 = TRUE;
 					};	
+
+	};
+};
+
+//##########################################################################
+//##
+//##	Alchemy Books - Revived
+//##
+//##########################################################################
+
+FUNC VOID Use_BookstandRevived_ALCHEMY1_S1()
+{
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{	
+		var int nDocID;
+		
+
+		nDocID = 	Doc_Create		()			  ;							
+					Doc_SetPages	( nDocID,  2 );                         
+					Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 	); 
+					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0	);
+					
+					Doc_SetFont 	( nDocID, -1, FONT_Book	   				); 	
+					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
+
+					Doc_PrintLine	( nDocID,  0,"");										
+					Doc_PrintLines	( nDocID,  0,"The Wine of Oblivion");
+					Doc_PrintLine	( nDocID,  0,"--------------------");
+					Doc_PrintLine	( nDocID,  0,"");			
+					Doc_PrintLines	( nDocID,  0,"The best grapes for this wine are found high up on the slopes of Archolos. The art of allowing this wine to ripen to perfection lies in not disturbing it through any kind of movement. The grapes are blended with the common syos herb in front of the wine cellars.");
+
+
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		); 
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLines	( nDocID,  1,"");
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLines	( nDocID,  1,"Observe and marvel as the master turns the clear water of the well to wine. The people pay tribute to him and feast on his gift. The master punishes his lazy disciples by locking them in bottles. A fire is kindled and black snakes arise.");
+					
+					Doc_Show		( nDocID );
+					
+					if (RevivedBookstandRead_Alchemy4 == FALSE)
+					{
+						REV_ReadBook(BookType_Alchemy);
+						RevivedBookstandRead_Alchemy4 = TRUE;
+					};	  
+
+	};
+};
+
+FUNC VOID Use_BookstandRevived_ALCHEMY2_S1()
+{
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{	
+		var int nDocID;
+		
+
+		nDocID = 	Doc_Create		()			  ;							
+					Doc_SetPages	( nDocID,  2 );                         
+					Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 	); 
+					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0	);
+					
+					Doc_SetFont 	( nDocID, -1, FONT_Book	   				); 	
+					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
+
+					Doc_PrintLine	( nDocID,  0,"");										
+					Doc_PrintLines	( nDocID,  0,"The Balm of Vision:");
+					Doc_PrintLine	( nDocID,  0,"----------------");
+					Doc_PrintLine	( nDocID,  0,"");		
+					Doc_PrintLines	( nDocID,  0,"Cover the patient's eyes with bile. This secretion has a bitter taste. Placing this bitterness on the eye forces the patient to regard it, which makes him wise. He learns to see! Bitterness and wisdom are mutually exclusive opposites. They are each other's counterparts!");
+
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLines	( nDocID,  1,"");
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLines	( nDocID,  1,"Tears, suffering and disappointment are bitter, but wisdom is the consoling influence of every kind of pain. Bitterness and wisdom are alternatives. Where there is bitterness, there is no room for wisdom, and where there is wisdom, there is no bitterness.");
+					
+					Doc_Show		( nDocID );
+					
+					if (RevivedBookstandRead_Alchemy5 == FALSE)
+					{
+						REV_ReadBook(BookType_Alchemy);
+						RevivedBookstandRead_Alchemy5 = TRUE;
+					};	  
 
 	};
 };

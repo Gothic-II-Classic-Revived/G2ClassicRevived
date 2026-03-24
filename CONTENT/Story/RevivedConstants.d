@@ -61,9 +61,11 @@ const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
 const string LOGENTRY_RECIPE_HEALTH_01			= "Ingredients for 'Essence of Healing':\n2 Healing Plant\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_HEALTH_02			= "Ingredients for 'Extract of Healing':\n2 Healing Herb\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_HEALTH_03			= "Ingredients for 'Elixir of Healing':\n2 Healing Root\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_HEALTH_04			= "Ingredients for 'Pure Life Energy':\n3 Essence of Healing\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_MANA_01			= "Ingredients for 'Essence of Magic Energy':\n2 Fire Nettle\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_MANA_02			= "Ingredients for 'Extract of Magic Energy':\n2 Fireweed\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_MANA_03			= "Ingredients for 'Elixir of Magic Energy':\n2 Fire Root\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_MANA_04			= "Ingredients for 'Pure Life Energy':\n3 Essence of Magic Energy\n1 Meadow Knotweed";
 
 const string LOGENTRY_RECIPE_PERM_HEALTH_01		= "Ingredients for 'Essence of Life':\n2 Essence of Healing\n1 King's Sorrel\n1 Healing Root";
 const string LOGENTRY_RECIPE_PERM_HEALTH_02		= "Ingredients for 'Extract of Life':\n2 Extract of Healing\n1 King's Sorrel\n1 Healing Root";
@@ -262,12 +264,15 @@ const string PRINT_TabakSuccessREVIVED				= "Reefer rolled!";
 const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";	
 
 const string Print_LearnFromBookstand				= "You seem to have learned something new.";
-const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";	
+const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";
+const string Print_XPFromBookstand					= "You seem to have gained a bit of knowledge.";	
+	
 
 const string PRINT_LearnBowyer						= "Learn: Bowmaking";
 const string PRINT_LearnCooking						= "Learn: Cooking";
 const string PRINT_LearnTobacco						= "Learn: Blend tobacco";
 const string PRINT_LearnBooze						= "Learn: Distill booze";
+
 
 // Output
 const string PRINT_NoMorePicklocks					= "No more lock picks!";
@@ -464,7 +469,6 @@ var int Pear_Bonus;
 var int OldWine_Bonus;
 var int DiggerMushroom_Bonus;
 
-
 var int BilgotSecondPass;
 var int BilgotInKhorinis;
 
@@ -502,27 +506,128 @@ var int Bounty4;
 var int Bounty5;
 
 
+// ***************
+// Books and Notes
+// ***************
+
+var int 	BookType_Alchemy;
+var int 	Read_BookstandAlchemy;
+var int		RevivedBookstandRead_Alchemy1;
+var int		RevivedBookstandRead_Alchemy2;
+var int		RevivedBookstandRead_Alchemy3;
+var int		RevivedBookstandRead_Alchemy4;
+var int		RevivedBookstandRead_Alchemy5;
+const int	Read_BookstandAlchemy_Max = 5;
+
+var int 	BookType_Runemaking;
+var int 	Read_BookstandRunemaking;
+var int		RevivedBookstandRead_Runemaking1;
+var int		RevivedBookstandRead_Runemaking2;
+var int		RevivedBookstandRead_Runemaking3;
+var int		RevivedBookstandRead_Runemaking4;
+var int		RevivedBookstandRead_Runemaking5;
+var int		RevivedBookstandRead_Runemaking6;
+const int	Read_BookstandRunemaking_Max = 6;
+
+var int 	BookType_Runes;
+var int 	Read_BookstandRunes;
+var int		RevivedBookstandRead_Runes1;
+var int		RevivedBookstandRead_Runes2;
+var int		RevivedBookstandRead_Runes3;
+var int		RevivedBookstandRead_Runes4;
+var int		RevivedBookstandRead_Runes5;
+var int		RevivedBookstandRead_Runes6;
+const int	Read_BookstandRunes_Max = 6;
+
+var int 	BookType_Astronomy;
+var int 	Read_BookstandAstronomy;
+var int		RevivedBookstandRead_Astronomy1;
+var int		RevivedBookstandRead_Astronomy2;
+const int	Read_BookstandAstronomy_Max = 2;
+
+var int 	BookType_Magic;
+var int 	Read_BookstandMagic;
+var int		RevivedBookstandRead_Magic1;
+var int		RevivedBookstandRead_Magic2;
+var int		RevivedBookstandRead_Magic3;
+var int		RevivedBookstandRead_Magic4;
+var int		RevivedBookstandRead_Magic5;
+var int		RevivedBookstandRead_Magic6;
+var int		RevivedBookstandRead_Magic7;
+var int		RevivedBookstandRead_Magic8;
+var int		RevivedBookstandRead_Magic9;
+const int	Read_BookstandMagic_Max = 9;
+
+var int 	BookType_Hunting;
+var int 	Read_BookstandHunting;
+var int		RevivedBookstandRead_Hunting1;
+var int		RevivedBookstandRead_Hunting2;
+var int		RevivedBookstandRead_Hunting3;
+var int		RevivedBookstandRead_Hunting4;
+var int		RevivedBookstandRead_Hunting5;
+const int	Read_BookstandHunting_Max = 5;
+
+var int 	BookType_Combat;
+var int 	Read_BookstandCombat;
+var int		RevivedBookstandRead_Combat1;
+var int		RevivedBookstandRead_Combat2;
+var int		RevivedBookstandRead_Combat3;
+var int		RevivedBookstandRead_Combat4;
+const int	Read_BookstandCombat_Max = 4;
+
+var int 	BookType_History;
+var int 	Read_BookstandHistory;
+var int		RevivedBookstandRead_History1;
+var int		RevivedBookstandRead_History2;
+var int		RevivedBookstandRead_History3;
+var int		RevivedBookstandRead_History4;
+var int		RevivedBookstandRead_History5;
+var int		RevivedBookstandRead_History6;
+const int	Read_BookstandHistory_Max = 6;
+
+var int 	BookType_Teachings;
+var int 	Read_BookstandTeachings;
+var int		RevivedBookstandRead_Teachings1;
+var int		RevivedBookstandRead_Teachings2;
+var int		RevivedBookstandRead_Teachings3;
+const int	Read_BookstandTeachings_Max = 3;
+
+var int 	BookType_Special;
+var int 	Read_BookstandSpecial;
+var int		RevivedBookstandRead_Special1;
+var int		RevivedBookstandRead_Special2;
+const int	Read_BookstandSpecial_Max = 2;
+
+var int 	BookType_Personal;
+var int 	Read_BookstandPersonal;
+var int		RevivedBookstandRead_Personal1;
+var int		RevivedBookstandRead_Personal2;
+var int		RevivedBookstandRead_Personal3;
+var int		RevivedBookstandRead_Personal4;
+const int	Read_BookstandPersonal_Max = 4;
+
 
 // ***************
 // Ambient XP
 // ***************
 
-const int	XP_NostalgiaBonus			= 25;
+const int	XP_NostalgiaBonus				= 25;
+const int 	XP_Addon_AllOWTeleporststones	= 400;
 
-const int 	XP_Addon_AllOWTeleporststones			= 400;
+const int	XP_BookstandAlchemy				= 25;
+const int	XP_BookstandRunemaking			= 25;
+const int	XP_BookstandRunes				= 25;
+const int	XP_BookstandAstronomy			= 25;
+const int	XP_BookstandMagic				= 25;
+const int	XP_BookstandHunting				= 25;
+const int	XP_BookstandCombat				= 25;
+const int	XP_BookstandHistory				= 25;
+const int	XP_BookstandTeachings			= 25;
 
-const int	XP_BookstandAlchemy			= 25;
-const int	XP_BookstandRunes			= 25;
-const int	XP_BookstandAstronomy		= 25;
-const int	XP_BookstandMagic			= 25;
-const int	XP_BookstandHunting			= 25;
-const int	XP_BookstandHistory			= 25;
-const int	XP_BookstandSpecial			= 50;
+const int	XP_BookstandSpecial				= 50;
+const int	XP_BookstandPersonal			= 50;
 
-const int	XP_BookstandSpecific		= 50;
-
-const int	XP_BookstandPersonal		= 50;
-const int	XP_BookstandFireContest		= 50;
+const int	XP_BookstandFireContest			= 50;
 
 
 
