@@ -65,9 +65,17 @@ func void DIA_Engardo_HALLO_Info ()
 	{
 		AI_Output (self, other, "DIA_Engardo_HALLO_13_03"); //Is there anything wrong with your ears, or do you have a death wish? (callously) Well - it's too late now.
 		
+		SLD_840_Alvares.guild = GIL_BDT;
+		SLD_841_Engardo.guild = GIL_BDT;
+
 		AI_StopProcessInfos (self);
-		B_Attack (self, other, AR_SuddenEnemyInferno, 1);
-		
+		B_Attack (self, other, AR_KILL, 1);	
+
+		if (Hlp_IsValidNpc (Alvares))
+		&& (!C_NpcIsDown (Alvares))	
+		{	
+			B_Attack (Alvares, other, AR_KILL, 1);	
+		};	
 	};
 };
 

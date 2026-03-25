@@ -49,6 +49,27 @@ func void DIA_Alvares_HAUAB_Info ()
 	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries."); 
 	AI_StopProcessInfos (self);
 };
+
+
+// ************************************************************
+// 			  				START FIGHT
+// ************************************************************
+
+func void AlvaresStartAttack()
+{
+	SLD_840_Alvares.guild = GIL_BDT;
+	SLD_841_Engardo.guild = GIL_BDT;
+
+	AI_StopProcessInfos (self);
+	B_Attack (self, other, AR_KILL, 1);	
+
+	if (Hlp_IsValidNpc (Engardo))
+	&& (!C_NpcIsDown (Engardo))	
+	{	
+		B_Attack (Engardo, other, AR_KILL, 1);	
+	};	
+};
+
 ///////////////////////////////////////////////////////////////////////
 //	Info Attack
 ///////////////////////////////////////////////////////////////////////
@@ -83,8 +104,6 @@ func void DIA_Alvares_ATTACK_Info ()
 	{
 		Info_AddChoice 	  (DIA_Alvares_ATTACK,"I've only come to fetch something.",DIA_Alvares_ATTACK_Lieferung);
 	};
-	
-	
 };
 FUNC VOID DIA_Alvares_ATTACK_Witz()
 {
@@ -94,9 +113,7 @@ FUNC VOID DIA_Alvares_ATTACK_Witz()
 	AI_Output (other, self, "DIA_Alvares_ATTACK_Witz_15_03"); //Who cares what you think?
 	AI_Output (self, other, "DIA_Alvares_ATTACK_Witz_11_04"); //I think that the only good hero is a dead hero. So do me a favor - hurry up and die!
 	
-	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_SuddenEnemyInferno, 1);
-
+	AlvaresStartAttack();
 };
 FUNC VOID DIA_Alvares_ATTACK_Kerle()
 {
@@ -104,9 +121,7 @@ FUNC VOID DIA_Alvares_ATTACK_Kerle()
 	AI_Output (self, other, "DIA_Alvares_ATTACK_Kerle_11_01"); //You got it. I'm still going to laugh when you're lying face down in the mud.
 	AI_Output (self, other, "DIA_Alvares_ATTACK_Kerle_11_02"); //(calls) Engardo, let's get started! You grab the farmer - I'm going to take care of this clown!
 	
-	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_SuddenEnemyInferno, 1);
-
+	AlvaresStartAttack();
 };
 FUNC VOID DIA_Alvares_ATTACK_Aerger()
 {
@@ -155,11 +170,8 @@ func void DIA_Alvares_Schluss_Info ()
 {
 	AI_Output (self, other, "DIA_Alvares_Schluss_11_00"); //You had your chance. But you don't seem to want to listen to reason.
 	AI_Output (self, other, "DIA_Alvares_Schluss_11_01"); //All right - so I'm going to kill you now. (calls) Engardo, let's do them in!
-	
-	AI_StopProcessInfos (self);
-	B_Attack (self, other, AR_SuddenEnemyInferno, 1);	
 
-	
+	AlvaresStartAttack();
 };
 
 // ************************************************************
