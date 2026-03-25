@@ -1,5 +1,5 @@
 
-instance Mil_303_Torwache (Npc_Default)
+instance MIL_303_RICHTERWACHE (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_JudgeGuard;	

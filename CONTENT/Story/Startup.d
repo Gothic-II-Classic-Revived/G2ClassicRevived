@@ -2474,9 +2474,9 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc		(VLK_4004_Arbeiter		, "NW_CITY_ENTRANCE_01");//
 	Wld_InsertNpc		(VLK_4005_Arbeiter		, "NW_CITY_ENTRANCE_01");//
 	
-	Wld_InsertNpc		(MIL_302_Torwache		, "NW_CITY_ENTRANCE_01");//
-	Wld_InsertNpc		(MIL_303_Torwache		, "NW_CITY_ENTRANCE_01");//
-	Wld_InsertNpc		(MIL_306_Tuerwache		, "NW_CITY_ENTRANCE_01");//
+	Wld_InsertNpc		(MIL_302_RICHTERWACHE		, "NW_CITY_ENTRANCE_01");//
+	Wld_InsertNpc		(MIL_303_RICHTERWACHE		, "NW_CITY_ENTRANCE_01");//
+	Wld_InsertNpc		(MIL_306_RICHTERWACHE		, "NW_CITY_ENTRANCE_01");//
 	Wld_InsertNpc		(MIL_307_Tuerwache		, "NW_CITY_ENTRANCE_01");//
 	Wld_InsertNpc		(MIL_316_Wambo			, "NW_CITY_ENTRANCE_01");//
 	Wld_InsertNpc		(MIL_321_Rangar			, "NW_CITY_ENTRANCE_01");//
@@ -2721,7 +2721,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Bloodfly,	"NW_FARM1_CITYWALL_FOREST_06");
 	Wld_InsertNpc		(Bloodfly,	"NW_FARM1_CITYWALL_FOREST_06");
 
-	Wld_InsertNpc		(OrcWarrior_Harad, "NW_FARM1_CITYWALL_FOREST_08_B");
+	Wld_InsertNpc		(OrcScout_Harad, "NW_FARM1_CITYWALL_FOREST_08_B");
 
 	Wld_InsertNpc		(Gobbo_Black, 	"NW_FARM1_CITYWALL_FOREST_14");
 	Wld_InsertNpc		(Gobbo_Black, 	"NW_FARM1_CITYWALL_FOREST_14");
