@@ -275,8 +275,24 @@ INSTANCE ABM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "AbandonedMine.mp3";	};
 INSTANCE ABM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "AbandonedMine.mp3";	};
 
 // Free Mine
-INSTANCE FRM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "AbandonedMine.mp3";	};
-INSTANCE FRM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "AbandonedMine.mp3";	};
+INSTANCE FRM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldMine.mp3";	};
+INSTANCE FRM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "OldMine.mp3";	};
+
+// Old Mine
+INSTANCE OLM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldMine.mp3";	};
+INSTANCE OLM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "OldMine.mp3";	};
+
+// Orc Graveyard
+INSTANCE OGY_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";	};
+INSTANCE OGY_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Temple.mp3";	};
+
+// Orc City
+INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";	};
+INSTANCE ORC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Temple.mp3";	};
+
+// Orc Temple
+INSTANCE TPL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";	};
+INSTANCE TPL_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Temple.mp3";	};
 
 
 
