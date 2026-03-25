@@ -409,7 +409,7 @@ INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_LEATHER_L;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_LEATHER_L;
 
-	visual 					=	"Itar_Leather_L.3ds";
+	visual 					=	"REV_LEATHER_L.3ds";
 	visual_change 			=	"REV_ARMOR_LEATHER_L.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
@@ -474,7 +474,7 @@ INSTANCE ITAR_REVIVED_LEATHER_H (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_LEATHER_H;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_LEATHER_H;
 
-	visual 					=	"Itar_Leather_L.3ds";
+	visual 					=	"REV_LEATHER_H.3ds";
 	visual_change 			=	"REV_ARMOR_LEATHER_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
@@ -621,7 +621,7 @@ INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
 
 INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 {
-	name 					=	"Old Knight's Armor (without helmet)";
+	name 					=	"Old Knight's Armor"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -681,7 +681,7 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 
 INSTANCE ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 {
-	name 					=	"Demonhunter Armor (without helmet)";
+	name 					=	"Demonhunter Armor"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1325,7 +1325,7 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
 {
-	name 					=	"Heavy Paladin Armor (without helmet)";
+	name 					=	"Heavy Paladin Armor"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;

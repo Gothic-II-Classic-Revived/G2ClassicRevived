@@ -18,5 +18,29 @@ func event GameLoop()
 			Npc_PlayAni(hero, "R_SCRATCHHEAD");
 			Npc_EquipItem(hero, ITHE_REVIVED_PAL);
 		};
+
+		if (Hlp_IsItem(itm, ITAR_REVIVED_DJG_L))
+		|| (Hlp_IsItem(itm, ITAR_REVIVED_DJG_M))
+		{
+			if (!Npc_HasItems (hero,ITHE_REVIVED_DJG_M))
+			{
+				CreateInvItems (hero, ITHE_REVIVED_DJG_M, 1);	
+			};
+
+			Npc_PlayAni(hero, "R_SCRATCHHEAD");
+			Npc_EquipItem(hero, ITHE_REVIVED_DJG_M);
+		};
+
+		if (Hlp_IsItem(itm, ITAR_REVIVED_DJG_H))
+		|| (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_02))
+		{
+			if (!Npc_HasItems (hero,ITHE_REVIVED_DJG_H))
+			{
+				CreateInvItems (hero, ITHE_REVIVED_DJG_H, 1);	
+			};
+
+			Npc_PlayAni(hero, "R_SCRATCHHEAD");
+			Npc_EquipItem(hero, ITHE_REVIVED_DJG_H);
+		};
 	};
 };

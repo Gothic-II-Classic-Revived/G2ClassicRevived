@@ -21,7 +21,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_01(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -47,7 +47,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_02(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -73,7 +73,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_03(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -99,7 +99,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_04(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -128,7 +128,7 @@ INSTANCE ITHE_REVIVED_KNIGHT(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -154,7 +154,7 @@ INSTANCE ITHE_REVIVED_DJG_M(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -180,7 +180,7 @@ INSTANCE ITHE_REVIVED_DJG_H(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -206,7 +206,7 @@ INSTANCE ITHE_REVIVED_PIR(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -235,7 +235,7 @@ INSTANCE ITHE_REVIVED_PAL(C_Item)
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
-	value					=	5;
+	value					=	0;
 
 	wear					=	WEAR_Head;
 
@@ -255,9 +255,9 @@ INSTANCE ITHE_REVIVED_01 (C_Item)
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
 	
-	protection [PROT_EDGE]	=	0;
-	protection [PROT_BLUNT] = 	0;
-	protection [PROT_POINT] = 	0;
+	protection [PROT_EDGE]	=	2;
+	protection [PROT_BLUNT] = 	2;
+	protection [PROT_POINT] = 	2;
 	protection [PROT_FIRE] 	= 	0;
 	protection [PROT_MAGIC] = 	0;
 
