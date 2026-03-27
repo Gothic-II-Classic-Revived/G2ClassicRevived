@@ -54,21 +54,21 @@ FUNC INT DIA_Garond_PMSchulden_Condition()
 
 FUNC VOID DIA_Garond_PMSchulden_Info()
 {
-	AI_Output (self, other, "DIA_Garond_PMSchulden_10_00"); //We're not going to discuss anything before you have paid your penalty.
+	AI_Output (self, other, "DIA_Garond_PMSchulden_10_00"); //Bevor wir irgendwas besprechen, zahlst du erstmal deine Strafe.
 
 	if (B_GetTotalPetzCounter(self) > Garond_LastPetzCounter)
 	{
 		B_SetAttitude (self, ATT_ANGRY);
-		AI_Output (self, other, "DIA_Garond_PMSchulden_10_01"); //And that has gone up following the most recent accusations.
-		AI_Output (self, other, "DIA_Garond_PMSchulden_10_02"); //You seem to have gotten into even more trouble.
+		AI_Output (self, other, "DIA_Garond_PMSchulden_10_01"); //Und die ist seit den letzten Anschuldigungen gestiegen.
+		AI_Output (self, other, "DIA_Garond_PMSchulden_10_02"); //Anscheinend hast du dir noch mehr Ärger aufgehalst.
 		
 		if (Garond_Schulden < 1000)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_03"); //But I hope you're going to pay for everything now! All in all, this comes to...
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_03"); //Aber ich hoffe, dass du jetzt für alles bezahlen wirst! Insgesamt sind das ...
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_04"); //I am very disappointed in you. Your penalty amounts to...
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_04"); //Ich bin schwer enttäuscht von dir. Deine Strafe beläuft sich auf ...
 		};
 				
 		var int diff; diff = (B_GetTotalPetzCounter(self) - Garond_LastPetzCounter);
@@ -84,37 +84,37 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 	}
 	else if (B_GetGreatestPetzCrime(self) < Garond_LastPetzCrime)
 	{
-		AI_Output (self, other, "DIA_Garond_PMSchulden_10_05"); //A few new things have come up.
+		AI_Output (self, other, "DIA_Garond_PMSchulden_10_05"); //Es haben sich ein paar neue Dinge ergeben.
 		
 		if (Garond_LastPetzCrime == CRIME_MURDER)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_06"); //Suddenly, you are no longer accused of murder.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_06"); //Plötzlich bezichtigt dich niemand mehr des Mordes.
 		};
 		
 		if (Garond_LastPetzCrime == CRIME_THEFT)
 		|| ( (Garond_LastPetzCrime > CRIME_THEFT) && (B_GetGreatestPetzCrime(self) < CRIME_THEFT) )
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_07"); //No one remembers watching you commit a theft.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_07"); //Niemand erinnert sich dran, dich beim Diebstahl gesehen zu haben.
 		};
 		
 		if (Garond_LastPetzCrime == CRIME_ATTACK)
 		|| ( (Garond_LastPetzCrime > CRIME_ATTACK) && (B_GetGreatestPetzCrime(self) < CRIME_ATTACK) )
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_08"); //There are no longer any witnesses claiming you have been involved in a brawl or two.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_08"); //Es gibt keine Zeugen mehr dafür, dass du jemals in eine Schlägerei verwickelt warst.
 		};
 		
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_09"); //It looks like all charges against you have been dropped.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_09"); //Anscheinend sind alle Anschuldigungen gegen dich fallen gelassen worden.
 		};
 		
-		AI_Output (self, other, "DIA_Garond_PMSchulden_10_10"); //I have no idea what went on there, but I'm warning you: don't go too far!
+		AI_Output (self, other, "DIA_Garond_PMSchulden_10_10"); //Ich weiß nicht, was da gelaufen ist, aber ich warne dich: Treib es nicht zu weit!
 				
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_11"); //I have decided to waive your debts.
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_12"); //And don't get into trouble in the castle ever again!
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_11"); //Ich habe mich entschieden, dir deine Schulden zu erlassen.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_12"); //Und mach bloß keinen Ärger mehr in der Burg!
 	
 			Garond_Schulden			= 0;
 			Garond_LastPetzCounter 	= 0;
@@ -122,9 +122,9 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_13"); //I want one thing to be clear: you're going to have to pay the full amount of your penalty anyway.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_13"); //Damit eins klar ist: Deine Strafe musst du trotzdem in voller Höhe zahlen.
 			B_Say_Gold (self, other, Garond_Schulden);
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_14"); //So, what about it?
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_14"); //Also, was ist?
 		};
 	};
 	
@@ -133,27 +133,27 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 	{
 		Info_ClearChoices  	(DIA_Garond_PMSchulden);
 		Info_ClearChoices  	(DIA_Garond_PETZMASTER);
-		Info_AddChoice		(DIA_Garond_PMSchulden,"I haven't got enough gold!",DIA_Garond_PETZMASTER_PayLater);
-		Info_AddChoice		(DIA_Garond_PMSchulden,"How much was that again?",DIA_Garond_PMSchulden_HowMuchAgain);
+		Info_AddChoice		(DIA_Garond_PMSchulden,"Ich habe nicht genug Gold!",DIA_Garond_PETZMASTER_PayLater);
+		Info_AddChoice		(DIA_Garond_PMSchulden,"Wieviel war es nochmal?",DIA_Garond_PMSchulden_HowMuchAgain);
 		if (Npc_HasItems(other, itmi_gold) >= Garond_Schulden)
 		{
-			Info_AddChoice 	(DIA_Garond_PMSchulden,"I want to pay the penalty!",DIA_Garond_PETZMASTER_PayNow);
+			Info_AddChoice 	(DIA_Garond_PMSchulden,"Ich will die Strafe zahlen.",DIA_Garond_PETZMASTER_PayNow);
 		};
 	};
 };
 
 func void DIA_Garond_PMSchulden_HowMuchAgain()
 {
-	AI_Output (other, self, "DIA_Garond_PMSchulden_HowMuchAgain_15_00"); //How much was that again?
+	AI_Output (other, self, "DIA_Garond_PMSchulden_HowMuchAgain_15_00"); //Wieviel war es nochmal?
 	B_Say_Gold (self, other, Garond_Schulden);
 
 	Info_ClearChoices  	(DIA_Garond_PMSchulden);
 	Info_ClearChoices  	(DIA_Garond_PETZMASTER);
-	Info_AddChoice		(DIA_Garond_PMSchulden,"I haven't got enough gold!",DIA_Garond_PETZMASTER_PayLater);
-	Info_AddChoice		(DIA_Garond_PMSchulden,"How much was that again?",DIA_Garond_PMSchulden_HowMuchAgain);
+	Info_AddChoice		(DIA_Garond_PMSchulden,"Ich habe nicht genug Gold!",DIA_Garond_PETZMASTER_PayLater);
+	Info_AddChoice		(DIA_Garond_PMSchulden,"Wieviel war es nochmal?",DIA_Garond_PMSchulden_HowMuchAgain);
 	if (Npc_HasItems(other, itmi_gold) >= Garond_Schulden)
 	{
-		Info_AddChoice 	(DIA_Garond_PMSchulden,"I want to pay the penalty!",DIA_Garond_PETZMASTER_PayNow);
+		Info_AddChoice 	(DIA_Garond_PMSchulden,"Ich will die Strafe zahlen.",DIA_Garond_PETZMASTER_PayNow);
 	};
 };
 
@@ -182,70 +182,70 @@ FUNC INT DIA_Garond_PETZMASTER_Condition()
 };
 FUNC VOID DIA_Garond_PETZMASTER_Info()
 {
-	Garond_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime h�her ist...
+	Garond_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime hher ist...
 	
 	// ------ SC hat mit Garond noch nicht gesprochen ------
 	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_00"); //So you're the one who made trouble here in the castle.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_00"); //Du bist also der Kerl, der hier in der Burg Ärger gemacht hat.
 	};
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
 	{
 		B_SetAttitude (self, ATT_ANGRY);
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_01"); //I've been asking myself how long it would take until you came to me.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Murder is just about the last thing I need here.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //I need every single one of my people - and now I'm left with one less again!
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_01"); //Ich habe mich schon gefragt, wie lange es dauert, bis du zu mir kommst.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Mord ist so ziemlich das Letzte, das ich hier gebrauchen kann!
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //Ich bin auf jeden meiner Leute angewiesen - und jetzt habe ich wieder einen weniger!
 		Garond_Schulden = (B_GetTotalPetzCounter(self) * 50); 		//Anzahl der Zeugen * 50
-		Garond_Schulden = Garond_Schulden + 500;						//PLUS M�rder-Malus
+		Garond_Schulden = Garond_Schulden + 500;						//PLUS Mrder-Malus
 		if ((PETZCOUNTER_City_Theft + PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
 		{
-			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_04"); //To say nothing of the other messes you've gotten yourself into.
+			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_04"); //Ganz zu schweigen von den anderen Sachen, die du angerichtet hast.
 		};
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Let me explain something to you. We're all together in the same trap here.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_06"); //And I desperately need every single one of my men. Including you.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_07"); //If you feel like killing somebody, all you need to do is leave the castle. There's plenty of orcs out there.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_08"); //I'm going to impose a penalty on you - although I really resent having to deal with crap like this.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Ich erkläre dir jetzt mal was. Wir sitzen hier alle gemeinsam in der Falle.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_06"); //Und ich bin auf jeden einzelnen meiner Männer angewiesen. Auch auf dich.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_07"); //Wenn du jemanden umbringen willst, dann brauchst du nur die Burg zu verlassen. Da gibt's genug Orks.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_08"); //Ich werde dir eine Strafe aufdrücken - obwohl ich mich eigentlich gar nicht mit so einer Scheiße beschäftigen will.
 	};		
 	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT) 
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_09"); //Rumor has it that you've been filching stuff around here.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_09"); //Ich hab gehört, das du hier Sachen mitgehen lässt.
 		if ((PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
 		{
-			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_10"); //Not to mention all those other things I was told.
+			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_10"); //Ganz zu schweigen von den anderen Sachen, die mir berichtet wurden.
 		};
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_11"); //You're not going to get away with that. You don't seem to grasp the seriousness of the situation.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_12"); //You shall be made to pay a penalty to compensate for your crimes!
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_11"); //Das werde ich dir nicht durchgehen lassen. Ich glaube du unterschätzt den Ernst der Lage.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_12"); //Du wirst eine Strafe zahlen, um dein Verbrechen wieder gut zu machen!
 		
 		Garond_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_13"); //I don't like to see brawls among my men.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_13"); //Ich sehe es nicht gerne, wenn es Schlägereien zwischen meinen Männern gibt.
 	
 		if (PETZCOUNTER_City_Sheepkiller > 0)
 		{
-			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_14"); //And that sheep thing wasn't really necessary either.
+			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_14"); //Und die Sache mit den Schafen musste wohl auch nicht sein.
 		};
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_15"); //So you are going to pay your penalty for that!
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_15"); //Also wirst du deine Strafe dafür zahlen!
 		
 		
 		Garond_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
 
-	// ------ Schaf get�tet (es gibt drei Schafe in der Burg) ------
+	// ------ Schaf gettet (es gibt drei Schafe in der Burg) ------
 	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_16"); //You're running around killing our sheep? They belong to us all.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_17"); //You shall pay me for the meat.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_16"); //Du gehst rum und tötest unsere Schafe? Die gehören uns allen.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_17"); //Du wirst mir das Fleisch bezahlen.
 	
 		
 		Garond_Schulden = 100;
 	
 	};
 	
-	AI_Output (other, self, "DIA_Garond_PETZMASTER_15_18"); //How much?
+	AI_Output (other, self, "DIA_Garond_PETZMASTER_15_18"); //Wie viel?
 	
 	if (Garond_Schulden > 1000)	{	Garond_Schulden = 1000;	};
 		
@@ -253,21 +253,21 @@ FUNC VOID DIA_Garond_PETZMASTER_Info()
 	
 	Info_ClearChoices  	(DIA_Garond_PMSchulden);
 	Info_ClearChoices  	(DIA_Garond_PETZMASTER);
-	Info_AddChoice		(DIA_Garond_PETZMASTER,"I haven't got enough gold!",DIA_Garond_PETZMASTER_PayLater);
+	Info_AddChoice		(DIA_Garond_PETZMASTER,"Ich habe nicht genug Gold!",DIA_Garond_PETZMASTER_PayLater);
 	if (Npc_HasItems(other, itmi_gold) >= Garond_Schulden)
 	{
-		Info_AddChoice 	(DIA_Garond_PETZMASTER,"I want to pay the penalty!",DIA_Garond_PETZMASTER_PayNow);
+		Info_AddChoice 	(DIA_Garond_PETZMASTER,"Ich will die Strafe zahlen.",DIA_Garond_PETZMASTER_PayNow);
 	};
 };
 
 func void DIA_Garond_PETZMASTER_PayNow()
 {
-	AI_Output (other, self, "DIA_Garond_PETZMASTER_PayNow_15_00"); //I want to pay the penalty!
+	AI_Output (other, self, "DIA_Garond_PETZMASTER_PayNow_15_00"); //Ich will die Strafe zahlen.
 	B_GiveInvItems (other, self, itmi_gold, Garond_Schulden);
 	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
 		B_SetAttitude (self, ATT_NEUTRAL);
 	};
-	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayNow_10_01"); //All right, I'll tell the lads to calm down then. But don't let me catch you at this sort of crap ever again!
+	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayNow_10_01"); //Gut, dann werde ich die Jungs wieder beruhigen. Aber mach so einen Scheiß nie wieder!
 
 	B_GrantAbsolution (LOC_OLDCAMP);
 	
@@ -281,9 +281,9 @@ func void DIA_Garond_PETZMASTER_PayNow()
 
 func void DIA_Garond_PETZMASTER_PayLater()
 {
-	AI_Output (other, self, "DIA_Garond_PETZMASTER_PayLater_15_00"); //I don't have enough gold!
-	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_01"); //Then you should come up with the gold as soon as you can.
-	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_02"); //And I'm warning you: cause any more trouble in the future, and the price will go up!
+	AI_Output (other, self, "DIA_Garond_PETZMASTER_PayLater_15_00"); //Ich habe nicht genug Gold!
+	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_01"); //Dann solltest du das Gold so schnell wie möglich beschaffen.
+	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_02"); //Und ich warne dich: Mach noch mehr Ärger und es wird teurer für dich!
 	
 	Garond_LastPetzCounter 	= B_GetTotalPetzCounter(self);
 	Garond_LastPetzCrime		= B_GetGreatestPetzCrime(self);
@@ -313,21 +313,21 @@ FUNC INT DIA_Garond_Hello_Condition()
 };
 FUNC VOID DIA_Garond_Hello_Info()
 {	
-		AI_Output (self ,other,"DIA_Garond_Hello_10_00"); //Where do you come from? You aren't one of the scrapers, and you aren't one of my people. Well?
-		AI_Output (other ,self,"DIA_Garond_Hello_15_01"); //I've come across the pass.
-		AI_Output (self ,other,"DIA_Garond_Hello_10_02"); //Over the pass...? You actually got through - by Innos!
+		AI_Output (self ,other,"DIA_Garond_Hello_10_00"); //Woher kommst du? Du gehörst weder zu den Schürftruppen, noch zu meinen Leuten. Also?
+		AI_Output (other ,self,"DIA_Garond_Hello_15_01"); //Ich bin über den Pass gekommen.
+		AI_Output (self ,other,"DIA_Garond_Hello_10_02"); //Über den Pass ...? Du hast es tatsächlich geschafft - bei Innos!
 		
 		if (hero.guild == GIL_KDF)
 		{
-			AI_Output (self ,other,"DIA_Garond_Hello_10_03"); //Why have you taken this path upon yourself, magician?
+			AI_Output (self ,other,"DIA_Garond_Hello_10_03"); //Warum hast du diesen Weg auf dich genommen, Magier?
 		}
 		else if (hero.guild == GIL_MIL)
 		{
-			AI_Output (self ,other,"DIA_Garond_Hello_10_04"); //What are your orders, soldier?
+			AI_Output (self ,other,"DIA_Garond_Hello_10_04"); //Wie lautet dein Befehl, Soldat?
 		}
 		else
 		{
-			AI_Output (self ,other,"DIA_Garond_Hello_10_05"); //I have to ask myself why a mercenary would take all that on himself. What are you doing here?
+			AI_Output (self ,other,"DIA_Garond_Hello_10_05"); //Ich frage mich, warum ein Söldner das alles auf sich nimmt. Was willst du hier?
 		};
 };
 
@@ -341,7 +341,7 @@ INSTANCE DIA_Garond_NeedProof (C_INFO)
 	nr			= 1;
 	condition	= DIA_Garond_NeedProof_Condition;
 	information	= DIA_Garond_NeedProof_Info;
-	description = "I come from Lord Hagen.";
+	description = "Ich komme von Lord Hagen.";
 };                       
 
 FUNC INT DIA_Garond_NeedProof_Condition()
@@ -369,15 +369,15 @@ FUNC VOID DIA_Garond_NeedProof_Info()
 	
 	MIS_ScoutMine = LOG_RUNNING;
 	B_StartOtherRoutine (Jergan,"Silvestro");
-	Npc_ExchangeRoutine (self,"START");
+	Npc_ExchangeRoutine (self,"Start");
 	
-	B_LogEntry (TOPIC_MISOLDWORLD,"Before Commander Garond sends me back, he wants me to seek out the three scraper troops and tell him how much ore they have stacked away.");
+	B_LogEntry (TOPIC_MISOLDWORLD,"Bevor Komandant Garond mich zurückschickt, will er das ich die drei Schürftruppen aufsuche und ihm davon berichte, wieviel Erz sie dort gelagert haben.");
 	
 	Log_CreateTopic (TOPIC_ScoutMine,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_ScoutMine,LOG_RUNNING);
 	
-	B_LogEntry (TOPIC_ScoutMine,"Commander Garond has given me an assignment. He's sent three troops of scrapers out to look for magic ore. They haven't brought any back so far.");
-	B_LogEntry (TOPIC_ScoutMine,"I've got to find the three scraper troops and find out how much ore they've got stacked away.");
+	B_LogEntry (TOPIC_ScoutMine,"Kommandant Garond hat mir eine Aufgabe zugewiesen. Er hat drei Schürftrupps auf die Suche nach dem magischen Erz geschickt. Bisher haben sie nichts geliefert.");
+	B_LogEntry (TOPIC_ScoutMine,"Ich soll die drei Schürftrupps aufsuchen und herausfinden, wieviel Erz sie gelagert haben.");
 
 };
 // ************************************************************
@@ -391,7 +391,7 @@ INSTANCE DIA_Garond_Why (C_INFO)
 	condition	= DIA_Garond_Why_Condition;
 	information	= DIA_Garond_Why_Info;
 	permanent	= FALSE;
-	description = "But why me, of all people?";
+	description = "Aber warum ausgerechnet ich?";
 };                       
 
 FUNC INT DIA_Garond_Why_Condition()
@@ -409,7 +409,7 @@ FUNC VOID DIA_Garond_Why_Info()
 	AI_Output (self ,other,"DIA_Garond_Why_10_02"); //You, on the other hand, have managed to get through once already - that makes you the best man for this job.
 };
 // ************************************************************
-// 			Ausr�stung
+// 			Ausrstung
 // ************************************************************
 
 INSTANCE DIA_Garond_Equipment (C_INFO)
@@ -419,7 +419,7 @@ INSTANCE DIA_Garond_Equipment (C_INFO)
 	condition	= DIA_Garond_Equipment_Condition;
 	information	= DIA_Garond_Equipment_Info;
 	permanent	= FALSE;
-	description = "I need some equipment.";
+	description = "Ich brauche Ausrüstung.";
 };                       
 
 FUNC INT DIA_Garond_Equipment_Condition()
@@ -445,7 +445,7 @@ FUNC VOID DIA_Garond_Equipment_Info()
 		AI_Output (self ,other,"DIA_Garond_Equipment_10_02"); //Talk to Tandor about that. He'll get you everything you need.
 		
 		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
-		B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+		B_LogEntry (TOPIC_Trader_OC,"Tandor handelt mit Waffen in der Burg.");
 	};
 };
 // ************************************************************
@@ -459,7 +459,7 @@ INSTANCE DIA_Garond_zahlen (C_INFO)
 	condition	= DIA_Garond_zahlen_Condition;
 	information	= DIA_Garond_zahlen_Info;
 	permanent	= FALSE;
-	description = "How much will you pay me for the job?";
+	description = "Wieviel zahlst du mir für den Job?";
 };                       
 
 FUNC INT DIA_Garond_zahlen_Condition()
@@ -478,7 +478,7 @@ FUNC VOID DIA_Garond_zahlen_Info()
 	AI_Output (self ,other,"DIA_Garond_zahlen_10_02"); //Oh well, I guess I have no choice. I'll pay you 500 gold pieces if you take care of this mission for me.
 };
 // ************************************************************
-// 	Wo finde ich die Sch�rfstellen?
+// 	Wo finde ich die Schrfstellen?
 // ************************************************************
 
 INSTANCE DIA_Garond_Wo (C_INFO)
@@ -488,7 +488,7 @@ INSTANCE DIA_Garond_Wo (C_INFO)
 	condition	= DIA_Garond_Wo_Condition;
 	information	= DIA_Garond_Wo_Info;
 	permanent	= FALSE;
-	description = "Where can I find the mining sites?";
+	description = "Wo finde ich die Schürfstellen?";
 };                       
 
 FUNC INT DIA_Garond_Wo_Condition()
@@ -510,7 +510,7 @@ FUNC VOID DIA_Garond_Wo_Info()
 
 	AI_Output (self ,other,"DIA_Garond_Wo_10_02"); //If you have any more questions, ask Parcival. He can tell you all you need to know about the scrapers.
 	
-	B_LogEntry (TOPIC_ScoutMine,"The paladin Parcival can give me information about the scrapers.");
+	B_LogEntry (TOPIC_ScoutMine,"Der Paladin Parcival kann mich mit Informationen über die Schürfer versorgen.");
 };
 
 FUNC VOID B_Garond_OreCounter3 ()
@@ -530,7 +530,7 @@ INSTANCE DIA_Garond_Fajeth (C_INFO)
 	condition	= DIA_Garond_Fajeth_Condition;
 	information	= DIA_Garond_Fajeth_Info;
 	permanent	= FALSE;
-	description = "I talked to Fajeth.";
+	description = "Ich habe mit Fajeth gesprochen.";
 };                       
 
 FUNC INT DIA_Garond_Fajeth_Condition()
@@ -570,7 +570,7 @@ INSTANCE DIA_Garond_Silvestro (C_INFO)
 	condition	= DIA_Garond_Silvestro_Condition;
 	information	= DIA_Garond_Silvestro_Info;
 	permanent	= FALSE;
-	description = "About Silvestro's mining site...";
+	description = "Wegen Silvestros Schürfstelle...";
 };                       
 
 FUNC INT DIA_Garond_Silvestro_Condition()
@@ -610,7 +610,7 @@ INSTANCE DIA_Garond_Marcos (C_INFO)
 	condition	= DIA_Garond_Marcos_Condition;
 	information	= DIA_Garond_Marcos_Info;
 	permanent	= FALSE;
-	description = "I have met Marcos.";
+	description = "Ich habe Marcos getroffen.";
 };                       
 
 FUNC INT DIA_Garond_Marcos_Condition()
@@ -635,15 +635,15 @@ FUNC VOID DIA_Garond_Marcos_Info()
 	Marcos_Guard1.flags = 0;
 	Marcos_Guard2.flags = 0;
 	
-	B_StartOtherRoutine (Marcos_Guard1,"MARCOS");
-	B_StartOtherRoutine (Marcos_Guard2,"MARCOS");
+	B_StartOtherRoutine (Marcos_Guard1,"Marcos");
+	B_StartOtherRoutine (Marcos_Guard2,"Marcos");
 	
 	AI_Teleport (Marcos_Guard1,"OW_STAND_GUARDS");
 	AI_Teleport (Marcos_Guard1,"OW_STAND_GUARDS");
 
 		var C_NPC Marcos_GuardFriend; 
 		Marcos_GuardFriend = Hlp_GetNpc(PAL_254_Wache);
-	B_StartOtherRoutine (Marcos_GuardFriend,"MARCOS");
+	B_StartOtherRoutine (Marcos_GuardFriend,"Marcos");
 	
 	Ore_Counter = (Ore_Counter +1);
 	MIS_Marcos_Jungs = LOG_SUCCESS;
@@ -666,7 +666,7 @@ INSTANCE DIA_Garond_Success (C_INFO)
 	condition	= DIA_Garond_Success_Condition;
 	information	= DIA_Garond_Success_Info;
 	permanent	= FALSE;
-	description = "What about the letter for Lord Hagen?";
+	description = "Was ist mit dem Schreiben für Lord Hagen?";
 };                       
 
 FUNC INT DIA_Garond_Success_Condition()
@@ -689,7 +689,7 @@ FUNC VOID DIA_Garond_Success_Info()
 	
 	KnowsPaladins_Ore = TRUE;
 	
-	B_LogEntry (TOPIC_MISOLDWORLD,"Commander Garond has given me a letter. That should be evidence enough. I can take it back to Lord Hagen.");
+	B_LogEntry (TOPIC_MISOLDWORLD,"Kommandant Garond hat mir einen Brief ausgehändigt. Das wird als Beweis reichen. Damit kann ich zu Lord Hagen zurückkehren.");
 	
 	MIS_ScoutMine = LOG_SUCCESS;
 	B_GivePlayerXP (XP_ScoutMine);
@@ -707,7 +707,7 @@ INSTANCE DIA_Garond_SLD (C_INFO)
 	condition	= DIA_Garond_SLD_Condition;
 	information	= DIA_Garond_SLD_Info;
 	permanent	= FALSE;
-	description = "What about my pay?";
+	description = "Was ist mit meinem Lohn?";
 };                       
 
 FUNC INT DIA_Garond_SLD_Condition()
@@ -734,7 +734,7 @@ INSTANCE DIA_Garond_Running (C_INFO)
 	condition	= DIA_Garond_Running_Condition;
 	information	= DIA_Garond_Running_Info;
 	permanent	= TRUE;
-	description = "How's the situation?";
+	description = "Wie ist die Lage?";
 };                       
 
 FUNC INT DIA_Garond_Running_Condition()
@@ -776,7 +776,7 @@ INSTANCE DIA_Garond_Gorn (C_INFO)
 	condition	= DIA_Garond_Gorn_Condition;
 	information	= DIA_Garond_Gorn_Info;
 	permanent	= FALSE;
-	description = "I want you to let Gorn go.";
+	description = "Ich will, daß du Gorn freilässt.";
 };                       
 
 FUNC INT DIA_Garond_Gorn_Condition()
@@ -798,7 +798,7 @@ FUNC VOID DIA_Garond_Gorn_Info()
 	AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn also has much to answer for. Bring me the gold and I'll set Gorn free.
 	
 	MIS_RescueGorn = LOG_RUNNING; 
-	B_LogEntry (TOPIC_RescueGorn,"Garond demands a thousand pieces of gold to set Gorn free.");
+	B_LogEntry (TOPIC_RescueGorn,"Garond verlangt eintausend Goldstücke für die Freilassung von Gorn.");
 };
 // ************************************************************
 // Gorn freikaufen
@@ -811,7 +811,7 @@ INSTANCE DIA_Garond_Pay (C_INFO)
 	condition	= DIA_Garond_Pay_Condition;
 	information	= DIA_Garond_Pay_Info;
 	permanent	= TRUE;
-	description = "I want to buy Gorn's freedom. (Pay 1000 gold)";
+	description = "Ich will Gorn freikaufen. (1000 Gold zahlen)";
 };                       
 FUNC INT DIA_Garond_Pay_Condition()
 {
@@ -831,7 +831,7 @@ FUNC VOID DIA_Garond_Pay_Info()
 		AI_Output (self ,other,"DIA_Garond_Pay_10_01"); //Agreed. You can go to Gerold and tell him to release Gorn on my orders.
 		
 		Garond_Kerkerauf = TRUE;
-		B_LogEntry (TOPIC_RescueGorn,"I've paid Garond. Now I can get Gorn out of the slammer. The guard Gerold will let him go.");
+		B_LogEntry (TOPIC_RescueGorn,"Ich habe Garond bezahlt. Jetzt kann ich Gorn aus dem Knast holen. Der Wächter Gerold wird ihn freilassen.");
 	}
 	else
 	{
@@ -848,7 +848,7 @@ INSTANCE DIA_Garond_Perm2 (C_INFO)
 	condition	= DIA_Garond_Perm2_Condition;
 	information	= DIA_Garond_Perm2_Info;
 	permanent	= TRUE;
-	description = "What are you planning to do now?";
+	description = "Was hast du jetzt vor?";
 };                       
 
 FUNC INT DIA_Garond_Perm2_Condition()
@@ -908,7 +908,7 @@ instance DIA_Garond_WASGIBTSNEUES		(C_INFO)
 	condition	 = 	DIA_Garond_WASGIBTSNEUES_Condition;
 	information	 = 	DIA_Garond_WASGIBTSNEUES_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"What's new?";
+	description	 = 	"Was gibt's Neues?";
 };
 
 func int DIA_Garond_WASGIBTSNEUES_Condition ()
@@ -969,7 +969,7 @@ instance DIA_Garond_BACKINKAP4		(C_INFO)
 	condition	 = 	DIA_Garond_BACKINKAP4_Condition;
 	information	 = 	DIA_Garond_BACKINKAP4_Info;
 	Permanent	 =	FALSE;
-	description	 = 	"I'm back.";
+	description	 = 	"Ich bin zurück.";
 };
 
 func int DIA_Garond_BACKINKAP4_Condition ()
@@ -1008,20 +1008,20 @@ func void DIA_Garond_BACKINKAP4_Info ()
 	DJG_Angar_SentToStones = TRUE;
 
 
-	// Die Drachenj�ger vom Spielstart verziehen sich in ihr Lager.
+	// Die Drachenjger vom Spielstart verziehen sich in ihr Lager.
 	//-----------------------------------------
 		Ext_RemoveVobTree("OW_BANDITS_ERPRESSER");
 		Ext_InsertVobTree("VOBTREE/OW_DRAGONHUNTERS_CAMP.ZEN");
 
-	B_StartOtherRoutine 	(Kjorn,	"START");
-	B_StartOtherRoutine 	(Godar,	"START");
-	B_StartOtherRoutine 	(Hokurn,"START");
-	B_StartOtherRoutine 	(PC_Fighter_DJG,"START");
-	B_StartOtherRoutine  (Kurgan,"START");
+	B_StartOtherRoutine 	(Kjorn,	"Start");
+	B_StartOtherRoutine 	(Godar,	"Start");
+	B_StartOtherRoutine 	(Hokurn,"Start");
+	B_StartOtherRoutine 	(PC_Fighter_DJG,"Start");
+	B_StartOtherRoutine  (Kurgan,"Start");
 
 	if 	(DJG_BiffParty == FALSE)
 	{
-	B_StartOtherRoutine 	(Biff,"START");
+	B_StartOtherRoutine 	(Biff,"Start");
 	};
 };
 
@@ -1035,7 +1035,7 @@ instance DIA_Garond_DragonPlettBericht		(C_INFO)
 	condition	 = 	DIA_Garond_DragonPlettBericht_Condition;
 	information	 = 	DIA_Garond_DragonPlettBericht_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"About the dragons...";
+	description	 = 	"Wegen der Drachen...";
 };
 
 var int DIA_Garond_DragonPlettBericht_NoPerm;
@@ -1057,7 +1057,7 @@ var int Garond_IcedragonKilled_OneTime;
 var int Garond_OricExperte_OneTime;
 func void DIA_Garond_DragonPlettBericht_Info ()
 {
-	B_LogEntry (TOPIC_DRACHENJAGD,"Garond is bound to be interested how matters stand with the dragons, though he creates the impression he doesn't care two hoots."); 
+	B_LogEntry (TOPIC_DRACHENJAGD,"Garond ist sicherlich daran interessiert, wie es um die Drachen steht, obwohl er auf mich eher den EIndruck macht, als wäre es ihm völlig egal."); 
 
 	if (Garond_DragonCounter < MIS_KilledDragons)
 	{
@@ -1126,7 +1126,7 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 	{
 		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_07"); //Can you give me more information about the dragons?
 		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_08"); //I have other things to worry about. My strategic officer Oric can tell you more about that.
-		B_LogEntry (TOPIC_DRACHENJAGD,"Garond's strategic officer Oric may have some useful information for me."); 
+		B_LogEntry (TOPIC_DRACHENJAGD,"Garonds statigischer Offizier Oric hat veilleicht einige nützliche Informationen für mich."); 
 		Garond_OricExperte_OneTime = TRUE;
 	}
 	else if (MIS_AllDragonsDead == FALSE)
@@ -1137,7 +1137,7 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 };
 
 //*********************************************************************
-//	Ich habe alle drachen get�tet
+//	Ich habe alle drachen gettet
 //*********************************************************************
 
 ///////////////////////////////////////////////////////////////////////
@@ -1150,7 +1150,7 @@ instance DIA_Garond_AllDragonDead		(C_INFO)
 	condition	 = 	DIA_Garond_AllDragonDead_Condition;
 	information	 = 	DIA_Garond_AllDragonDead_Info;
 	Permanent	 =	FALSE;
-	description	 = 	"All the dragons are dead.";
+	description	 = 	"Alle Drachen sind tot.";
 };
 
 func int DIA_Garond_AllDragonDead_Condition ()
@@ -1185,7 +1185,7 @@ instance DIA_Garond_JanBecomeSmith		(C_INFO)
 	condition	= 	DIA_Garond_JanBecomeSmith_Condition;
 	information	= 	DIA_Garond_JanBecomeSmith_Info;
 	Permanent	=	TRUE;
-	description	= 	"There is a problem with the smith.";
+	description	= 	"Es gibt ein Problem mit dem Schmied.";
 };
 
 func int DIA_Garond_JanBecomeSmith_Condition ()
@@ -1221,8 +1221,8 @@ func void DIA_Garond_JanBecomeSmith_Info ()
 	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_11"); //If he causes any trouble, you'll answer for it. Agreed?
 	
 	Info_ClearChoices 	(DIA_Garond_JanBecomeSmith);
-	Info_AddChoice 		(DIA_Garond_JanBecomeSmith,"I'll think about it.",DIA_Garond_JanBecomeSmith_No);
-	Info_AddChoice		(DIA_Garond_JanBecomeSmith,"I'll vouch for Jan.",DIA_Garond_JanBecomeSmith_Yes); 		
+	Info_AddChoice 		(DIA_Garond_JanBecomeSmith,"Ich denke drüber nach.",DIA_Garond_JanBecomeSmith_No);
+	Info_AddChoice		(DIA_Garond_JanBecomeSmith,"Ich bürge für Jan.",DIA_Garond_JanBecomeSmith_Yes); 		
 };
 
 FUNC VOID DIA_Garond_JanBecomeSmith_No ()
@@ -1289,7 +1289,7 @@ instance DIA_Garond_PERM5		(C_INFO)
 	information	 = 	DIA_Garond_PERM5_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How are things?";
+	description	 = 	"Wie sieht's aus?";
 };
 
 func int DIA_Garond_PERM5_Condition ()

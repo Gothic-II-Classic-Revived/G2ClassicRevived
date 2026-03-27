@@ -20,7 +20,7 @@ func VOID DIA_DiegoOw_EXIT_Info()
 };
 
 //******************************************************************
-//				Begr�ssung
+//				Begrssung
 //******************************************************************
 INSTANCE DIA_DiegoOw_Hallo(C_INFO)
 {
@@ -68,7 +68,7 @@ INSTANCE DIA_DiegoOw_Beweise(C_INFO)
 	condition	= DIA_DiegoOw_Beweise_Condition;
 	information	= DIA_DiegoOw_Beweise_Info;
 
-	description	= "Listen, I need this proof.";
+	description	= "Hör zu, ich brauche diese Beweise.";
 };                       
 FUNC INT DIA_DiegoOw_Beweise_Condition()
 {	
@@ -76,7 +76,7 @@ FUNC INT DIA_DiegoOw_Beweise_Condition()
 };
 FUNC VOID DIA_DiegoOw_Beweise_Info()
 {	
-		//AI_Output (other ,self,"DIA_DiegoOw_Silvestro_15_00");//Was wei�t du von Silvestros Erz?
+		//AI_Output (other ,self,"DIA_DiegoOw_Silvestro_15_00");//Was weit du von Silvestros Erz?
 	
 	AI_Output (other ,self,"DIA_DiegoOw_Hallo_15_11"); //Listen, I need this proof.
 		
@@ -114,7 +114,7 @@ FUNC VOID DIA_DiegoOw_Beweise_Info()
 	
 	Silvestro_Ore = TRUE;
 	
-	B_LogEntry (TOPIC_ScoutMine,"Diego has brought FOUR crates of ore mined by Silvestro's scrapers to safety.");
+	B_LogEntry (TOPIC_ScoutMine,"Diego hat VIER Kisten Erz von Silvestro's Schürfern in Sicherheit gebracht.");
 };
 //******************************************************************
 //			Mine
@@ -126,7 +126,7 @@ INSTANCE DIA_DiegoOw_Mine(C_INFO)
 	condition	= DIA_DiegoOw_Mine_Condition;
 	information	= DIA_DiegoOw_Mine_Info;
 	permanent	= FALSE;
-	description = "How did you come by the ore?";
+	description = "Wie bist du an das Erz gekommen?";
 };                       
 
 FUNC INT DIA_DiegoOw_Mine_Condition()
@@ -154,7 +154,7 @@ INSTANCE DIA_DiegoOw_Perm(C_INFO)
 	condition	= DIA_DiegoOw_Perm_Condition;
 	information	= DIA_DiegoOw_Perm_Info;
 	permanent	= FALSE;
-	description = "What do I need to know about the valley?";
+	description = "Was muss ich über das Tal wissen?";
 };                       
 FUNC INT DIA_DiegoOw_Perm_Condition()
 {	
@@ -178,7 +178,7 @@ INSTANCE DIA_DiegoOw_Gorn(C_INFO)
 	condition	= DIA_DiegoOw_Gorn_Condition;
 	information	= DIA_DiegoOw_Gorn_Info;
 	permanent	= FALSE;
-	description = "I want to buy Gorn his freedom...";
+	description = "Ich will Gorn freikaufen...";
 };                       
 
 FUNC INT DIA_DiegoOw_Gorn_Condition()
@@ -195,7 +195,7 @@ FUNC VOID DIA_DiegoOw_Gorn_Info()
 	
 	B_GiveInvItems (self, other, ItmI_Gold, 300);
 	
-	B_LogEntry (TOPIC_RescueGorn,"Diego has paid 300 pieces of gold to help free Gorn.");
+	B_LogEntry (TOPIC_RescueGorn,"Diego hat 300 Goldstücke zur Befreiung von Gorn beigetragen.");
 };
 
 //******************************************************************
@@ -211,7 +211,7 @@ instance DIA_DiegoOw_Teach(C_INFO)
 	condition	= DIA_DiegoOw_Teach_Condition;
 	information	= DIA_DiegoOw_Teach_Info;
 	permanent	= TRUE;
-	description = "Can you teach me something?";
+	description = "Kannst du mir was beibringen?";
 };                       
 func INT DIA_DiegoOw_Teach_Condition()
 {	
@@ -344,7 +344,7 @@ instance DIA_Addon_ThiefOW_Together(C_INFO)
 	condition	= 	DIA_Addon_ThiefOW_Together_Condition;
 	information	= 	DIA_Addon_ThiefOW_Together_Info;
 
-	description	= 	"Let's go together.";
+	description	= 	"Lass uns zusammen gehen.";
 };
 func int DIA_Addon_ThiefOW_Together_Condition ()
 {
@@ -372,7 +372,7 @@ instance DIA_Addon_ThiefOW_ComeOn(C_INFO)
 	condition	= 	DIA_Addon_ThiefOW_ComeOn_Condition;
 	information	= 	DIA_Addon_ThiefOW_ComeOn_Info;
 	permanent	= 	TRUE;
-	description	= 	"Come with me.";
+	description	= 	"Komm mit.";
 };
 func int DIA_Addon_ThiefOW_ComeOn_Condition ()
 {
@@ -413,7 +413,7 @@ INSTANCE DIA_Addon_ThiefOW_GoHome(C_INFO)
 	condition	= DIA_Addon_ThiefOW_GoHome_Condition;
 	information	= DIA_Addon_ThiefOW_GoHome_Info;
 	permanent	= TRUE;
-	description = "Wait here.";
+	description = "Warte hier.";
 };                       
 FUNC INT DIA_Addon_ThiefOW_GoHome_Condition()
 {
@@ -432,7 +432,7 @@ FUNC VOID DIA_Addon_ThiefOW_GoHome_Info()
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_01"); //Okay. 
 		AI_StopProcessInfos (self); 
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
-		Npc_ExchangeRoutine	(self,"START");
+		Npc_ExchangeRoutine	(self,"Start");
 	}
 	else if (Npc_GetDistToWP (self, "LOCATION_03_IN") < (1500+1000)) //XARDAS
 	{
@@ -446,21 +446,21 @@ FUNC VOID DIA_Addon_ThiefOW_GoHome_Info()
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_03"); //I'll wait near the mine.
 		AI_StopProcessInfos (self); 
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
-		Npc_ExchangeRoutine	(self,"FAJETH");
+		Npc_ExchangeRoutine	(self,"Fajeth");
 	}
 	else if (Npc_GetDistToWP (self, "OW_SILVESTROMINE_ENTRANCE") < (1200+1000)) //SILVESTROMINE
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_04"); //I'll wait in front of the mine.
 		AI_StopProcessInfos (self); 
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
-		Npc_ExchangeRoutine	(self,"SILVESTRO");
+		Npc_ExchangeRoutine	(self,"Silvestro");
 	}
 	else if (Npc_GetDistToWP (self, "OW_OM_ENTRANCE02") < (3000+1000)) //GRIMESMINE
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_05"); //I'll wait close by.
 		AI_StopProcessInfos (self);
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
-		Npc_ExchangeRoutine	(self,"GRIMES");
+		Npc_ExchangeRoutine	(self,"Grimes");
 	}
 	else if (Npc_GetDistToWP (self, "LOCATION_02_05") < 15000) //Orcbarrier FIRE ANGAR LAKE
 	{
@@ -469,7 +469,7 @@ FUNC VOID DIA_Addon_ThiefOW_GoHome_Info()
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_08"); //But don't wait too long, or I'm going back by myself.
 		AI_StopProcessInfos (self);
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
-		Npc_ExchangeRoutine	(self,"START");
+		Npc_ExchangeRoutine	(self,"Start");
 	}
 	else //zu weit weg
 	{
@@ -579,7 +579,7 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 			B_Addon_Diego_WillWaitOutside();
 			AI_StopProcessInfos (self);
 			self.aivar[AIV_PARTYMEMBER] = FALSE;
-			Npc_ExchangeRoutine	(self,"XARDAS");
+			Npc_ExchangeRoutine	(self,"Xardas");
 		};
 	}
 	else if (C_DiegoTooFar(1000) == LOC_FAJETHMINE)
@@ -611,7 +611,7 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 			B_Addon_Diego_WillWaitOutside();
 			AI_StopProcessInfos (self);
 			self.aivar[AIV_PARTYMEMBER] = FALSE;
-			Npc_ExchangeRoutine	(self,"SILVESTRO");
+			Npc_ExchangeRoutine	(self,"Silvestro");
 		};
 	}
 	else if (C_DiegoTooFar(1000) == LOC_GRIMESMINE)
@@ -628,7 +628,7 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 			B_Addon_Diego_WillWaitOutside();
 			AI_StopProcessInfos (self);
 			self.aivar[AIV_PARTYMEMBER] = FALSE;
-			Npc_ExchangeRoutine	(self,"GRIMES");
+			Npc_ExchangeRoutine	(self,"Grimes");
 		};
 	}
 	else if (C_DiegoTooFar(1000) == LOC_BURG)
@@ -678,7 +678,7 @@ func void B_Diego_WirSindDa()
 	if (Npc_GetDistToWP (self, "OW_PATH_1_17") < 1000)
 	|| (Npc_GetDistToWP (self, "WP_INTRO_SHORE") < 800)
 	{
-		Npc_ExchangeRoutine	(self,"PASS");
+		Npc_ExchangeRoutine	(self,"Passierschein");
 	}
 	else if (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 1200)
 	{
@@ -756,7 +756,7 @@ instance DIA_Addon_ThiefOW_PERM (C_INFO)
 	condition	= DIA_Addon_ThiefOW_PERM_Condition;
 	information	= DIA_Addon_ThiefOW_PERM_Info;
 	permanent	= TRUE;
-	description = "Everything all right?";
+	description = "Alles Klar?";
 };                       
 FUNC INT DIA_Addon_ThiefOW_PERM_Condition()
 {

@@ -40,8 +40,8 @@ func int DIA_STRF_1107_FINGER_Condition ()
 };
 func void DIA_STRF_1107_FINGER_Info ()
 {
-	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_00"); //Hands off my pots! Nobody touches my pots, understand?!
-	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_01"); //I'm responsible for the food, and that means nobody else has any business here! I hope I made myself clear!
+	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_00"); //Finger weg von meinen Töpfen! Niemand geht an meine Töpfe, verstanden?!
+	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_01"); //Ich bin hier für das Essen verantwortlich und das bedeutet, dass niemand hier irgendwas zu suchen hat! Ich hoffe, das war deutlich!
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info COOK
@@ -51,7 +51,7 @@ instance DIA_STRF_1107_COOK		(C_INFO)
 	npc			 = 	STRF_1107_Chef;
 	condition	 = 	DIA_STRF_1107_COOK_Condition;
 	information	 = 	DIA_STRF_1107_COOK_Info;
-	description	 =  "Who made you a cook, of all people?";
+	description	 =  "Wer hat ausgerechnet dich zum Koch gemacht?";
 };
 
 func int DIA_STRF_1107_COOK_Condition ()
@@ -63,10 +63,10 @@ func int DIA_STRF_1107_COOK_Condition ()
 };
 func void DIA_STRF_1107_COOK_Info ()
 {
-	AI_Output (other, self, "DIA_STRF_1107_COOK_15_00"); //Who made you a cook, of all people?
-	AI_Output (self, other, "DIA_STRF_1107_COOK_01_01"); //That was Commander Garond. Before I became a prisoner, I used to be the cook in the Raging Boar.
-	AI_Output (other, self, "DIA_STRF_1107_COOK_15_02"); //And what did they lock you up for?
-	AI_Output (self, other, "DIA_STRF_1107_COOK_01_03"); //There was a misunderstanding between a guest, a meat cleaver, and me.
+	AI_Output (other, self, "DIA_STRF_1107_COOK_15_00"); //Wer hat ausgerechnet dich zum Koch gemacht?
+	AI_Output (self, other, "DIA_STRF_1107_COOK_01_01"); //Das war Kommandant Garond, denn vor meiner Zeit als Gefangener war ich Koch im Wütenden Eber.
+	AI_Output (other, self, "DIA_STRF_1107_COOK_15_02"); //Und warum haben sie dich eingebuchtet?
+	AI_Output (self, other, "DIA_STRF_1107_COOK_01_03"); //Es gab da ein Missverständnis zwischen einem Gast, einem Hackebeil und mir.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info PERM
@@ -78,7 +78,7 @@ instance DIA_STRF_1107_PERM		(C_INFO)
 	condition	 = 	DIA_STRF_1107_PERM_Condition;
 	information	 = 	DIA_STRF_1107_PERM_Info;
 	permanent	 =  TRUE;
-	description	 =  "Anything new?";
+	description	 =  "Gibt's was Neues?";
 };
 
 func int DIA_STRF_1107_PERM_Condition ()
@@ -90,8 +90,8 @@ func int DIA_STRF_1107_PERM_Condition ()
 };
 func void DIA_STRF_1107_PERM_Info ()
 {
-	AI_Output (other, self, "DIA_STRF_1107_PERM_15_00"); //Anything new?
-	AI_Output (self, other, "DIA_STRF_1107_PERM_01_01"); //If you want to learn the news, then ask the knights. I'm just an imprisoned cook.
+	AI_Output (other, self, "DIA_STRF_1107_PERM_15_00"); //Gibt's was Neues?
+	AI_Output (self, other, "DIA_STRF_1107_PERM_01_01"); //Wenn du Neuigkeiten erfahren willst, dann frag die Ritter. Ich bin nur ein gefangener Koch.
 };
  
 

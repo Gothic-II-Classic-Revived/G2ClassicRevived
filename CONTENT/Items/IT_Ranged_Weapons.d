@@ -2,7 +2,7 @@
 // unbenutzte Item - Visuals
 // *************************
 
-//ItRw_Bow_War_04	// Dämonenbogen, Todbringer
+//ItRw_Bow_War_04	// Dmonenbogen, Todbringer
 //ItRw_Bow_War_03	// Sturmbogen
 //ItRw_Bow_War_02	// Orkhetzer
 //ItRw_Bow_War_01	// Kriegsbogen
@@ -26,7 +26,7 @@
 
 INSTANCE ItRw_Arrow(C_Item)
 {
-	name 				=	"Arrow";
+	name 				=	"Pfeil";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_BOW|ITEM_MULTI;
@@ -47,7 +47,7 @@ INSTANCE ItRw_Arrow(C_Item)
 
 INSTANCE ItRw_Bolt(C_Item)
 {
-	name 				=	"Bolt";
+	name 				=	"Bolzen";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_CROSSBOW|ITEM_MULTI;
@@ -70,7 +70,7 @@ INSTANCE ItRw_Bolt(C_Item)
 
 INSTANCE ItRw_Mil_Crossbow(C_Item)
 {
-	name 				=	"Crossbow";
+	name 				=	"Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -93,7 +93,7 @@ INSTANCE ItRw_Mil_Crossbow(C_Item)
 
 INSTANCE ItRw_Sld_Bow(C_Item)
 {
-	name 				=	"Bow";
+	name 				=	"Bogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -116,11 +116,11 @@ INSTANCE ItRw_Sld_Bow(C_Item)
 };
 
 
-//Bögen
+//Bgen
 //Kapitel 1
 instance ItRw_Bow_L_01(C_Item)
 {
-	name 				=	"Shortbow";
+	name 				=	"Kurzbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -144,7 +144,7 @@ instance ItRw_Bow_L_01(C_Item)
 
 INSTANCE ItRw_Bow_L_02 (C_Item)
 {
-	name 				=	"Willow Bow";
+	name 				=	"Weidenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -169,7 +169,7 @@ INSTANCE ItRw_Bow_L_02 (C_Item)
 //Kapitel 2
 instance ItRw_Bow_L_03 (C_Item)
 {
-	name 				=	"Hunting Bow";
+	name 				=	"Jagdbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -193,7 +193,7 @@ instance ItRw_Bow_L_03 (C_Item)
 
 instance ItRw_Bow_L_04 (C_Item)
 {
-	name 				=	"Elm Bow";
+	name 				=	"Ulmenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -219,7 +219,7 @@ instance ItRw_Bow_L_04 (C_Item)
 
 INSTANCE ItRw_Bow_M_01 (C_Item)
 {
-	name 				=	"Composite Bow";
+	name 				=	"Kompositbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -243,7 +243,7 @@ INSTANCE ItRw_Bow_M_01 (C_Item)
 
 INSTANCE ItRw_Bow_M_02 (C_Item)
 {
-	name 				=	"Ash Bow";
+	name 				=	"Eschenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -293,7 +293,7 @@ INSTANCE ItRw_Bow_M_03 (C_Item)
 
 INSTANCE ItRw_Bow_M_04 (C_Item)
 {
-	name 				=	"Beech Bow";
+	name 				=	"Buchenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -319,7 +319,7 @@ INSTANCE ItRw_Bow_M_04 (C_Item)
 
 INSTANCE ItRw_Bow_H_01 (C_Item)
 {
-	name 				=	"Bone Bow";
+	name 				=	"Knochenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -343,7 +343,7 @@ INSTANCE ItRw_Bow_H_01 (C_Item)
 
 INSTANCE ItRw_Bow_H_02 (C_Item)
 {
-	name 				=	"Oak Bow";
+	name 				=	"Eichenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -369,7 +369,7 @@ INSTANCE ItRw_Bow_H_02 (C_Item)
 
 INSTANCE ItRw_Bow_H_03 (C_Item)
 {
-	name 				=	"War Bow";
+	name 				=	"Kriegsbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -393,7 +393,7 @@ INSTANCE ItRw_Bow_H_03 (C_Item)
 
 INSTANCE ItRw_Bow_H_04 (C_Item)
 {
-	name 				=	"Dragon Bow";
+	name 				=	"Drachenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -415,13 +415,13 @@ INSTANCE ItRw_Bow_H_04 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-//Armbrüste
+//Armbrste
 
 //Kapitel 1
 
 INSTANCE ItRw_Crossbow_L_01(C_Item)
 {
-	name 				=	"Hunting Crossbow";
+	name 				=	"Jagdarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -446,7 +446,7 @@ INSTANCE ItRw_Crossbow_L_01(C_Item)
 
 INSTANCE ItRw_Crossbow_L_02(C_Item)
 {
-	name 				=	"Light Crossbow";
+	name 				=	"Leichte Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -471,7 +471,7 @@ INSTANCE ItRw_Crossbow_L_02(C_Item)
 
 INSTANCE ItRw_Crossbow_M_01(C_Item)
 {
-	name 				=	"Crossbow";
+	name 				=	"Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -496,7 +496,7 @@ INSTANCE ItRw_Crossbow_M_01(C_Item)
 
 INSTANCE ItRw_Crossbow_M_02(C_Item)
 {
-	name 				=	"War Crossbow";
+	name 				=	"Kriegsarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -521,7 +521,7 @@ INSTANCE ItRw_Crossbow_M_02(C_Item)
 
 INSTANCE ItRw_Crossbow_H_01(C_Item)
 {
-	name 				=	"Heavy Crossbow";
+	name 				=	"Schwere Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -546,7 +546,7 @@ INSTANCE ItRw_Crossbow_H_01(C_Item)
 
 INSTANCE ItRw_Crossbow_H_02(C_Item)
 {
-	name 				=	"Dragon Hunter's Crossbow";
+	name 				=	"DrachenjÃ¤gerarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;

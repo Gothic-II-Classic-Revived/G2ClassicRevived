@@ -31,7 +31,7 @@ INSTANCE DIA_Torlof_DI_Hallo   (C_INFO)
 	information = DIA_Torlof_DI_Hallo_Info;
 	permanent	 = 	TRUE;
 
-	description = "All quiet?";
+	description = "Alles ruhig?";
 
 };
 
@@ -70,7 +70,7 @@ INSTANCE DIA_Torlof_DI_Teach (C_INFO)
 	condition	= DIA_Torlof_DI_Teach_Condition;
 	information	= DIA_Torlof_DI_Teach_Info;
 	permanent	= TRUE;
-	description = "I want to improve my abilities!";
+	description = "Ich will meine Fähigkeiten verbessern!";
 };                       
 
 FUNC INT DIA_Torlof_DI_Teach_Condition()
@@ -155,7 +155,7 @@ instance DIA_Torlof_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Torlof_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 	
-	description = 	"I've eliminated the enemy.";
+	description = 	"Ich habe den Feind eliminiert.";
 
 };
 
@@ -172,8 +172,8 @@ func void DIA_Torlof_DI_UndeadDragonDead_Info ()
 	AI_Output			(self ,other, "DIA_Torlof_DI_UndeadDragonDead_01_01"); //I didn't expect anything else. How's it look? Can we finally leave now?
 
 	Info_ClearChoices	(DIA_Torlof_DI_UndeadDragonDead);
-	Info_AddChoice	(DIA_Torlof_DI_UndeadDragonDead, "I'll need another minute or two.", DIA_Torlof_DI_UndeadDragonDead_moment );
-	Info_AddChoice	(DIA_Torlof_DI_UndeadDragonDead, "Yes. It's over. Let's go.", DIA_Torlof_DI_UndeadDragonDead_over );
+	Info_AddChoice	(DIA_Torlof_DI_UndeadDragonDead, "Ich brauche noch einen Moment.", DIA_Torlof_DI_UndeadDragonDead_moment );
+	Info_AddChoice	(DIA_Torlof_DI_UndeadDragonDead, "Ja. Es ist vorbei. Lass uns verschwinden.", DIA_Torlof_DI_UndeadDragonDead_over );
 	
 };
 func void DIA_Torlof_DI_UndeadDragonDead_moment ()

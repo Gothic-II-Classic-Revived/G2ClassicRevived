@@ -126,7 +126,7 @@ INSTANCE DIA_MiltenNW_Monastery(C_INFO)
 	condition	= DIA_MiltenNW_Monastery_Condition;
 	information	= DIA_MiltenNW_Monastery_Info;
 	permanent	= FALSE;
-	description = "How did you get to the monastery so fast?";
+	description = "Wie bist du so schnell zum Kloster gekommen?";
 };                       
 FUNC INT DIA_MiltenNW_Monastery_Condition()
 {
@@ -153,7 +153,7 @@ INSTANCE DIA_MiltenNW_FourFriends(C_INFO)
 	condition	= DIA_MiltenNW_FourFriends_Condition;
 	information	= DIA_MiltenNW_FourFriends_Info;
 	permanent	= FALSE;
-	description = "Do you know where the others are?";
+	description = "Weißt du, wo die anderen sind?";
 };                       
 FUNC INT DIA_MiltenNW_FourFriends_Condition()
 {
@@ -204,7 +204,7 @@ INSTANCE DIA_MiltenNW_KAP3_Entry(C_INFO)
 	condition	= DIA_MiltenNW_KAP3_Entry_Condition;
 	information	= DIA_MiltenNW_KAP3_Entry_Info;
 	permanent	= TRUE;
-	description = "I need to get into the monastery. It's urgent!";
+	description = "Ich muss dringend ins Kloster!";
 };                       
 FUNC INT DIA_MiltenNW_KAP3_Entry_Condition()
 {
@@ -234,11 +234,11 @@ FUNC VOID DIA_MiltenNW_KAP3_Entry_Info()
 	
 		Info_ClearChoices (DIA_MiltenNW_KAP3_Entry);
 		Info_AddChoice (DIA_MiltenNW_KAP3_Entry,DIALOG_Back,DIA_MiltenNW_KAP3_Entry_BACK);
-		Info_AddChoice (DIA_MiltenNW_KAP3_Entry,"It's important!",DIA_MiltenNW_KAP3_Entry_Important);
+		Info_AddChoice (DIA_MiltenNW_KAP3_Entry,"Es ist wichtig!",DIA_MiltenNW_KAP3_Entry_Important);
 	
 		if (Npc_HasItems (other,ItWr_PermissionToWearInnosEye_MIS) >=1)
 		{	
-			Info_AddChoice (DIA_MiltenNW_KAP3_Entry,"I've got a letter from Lord Hagen.",DIA_MiltenNW_KAP3_Entry_Permit); 
+			Info_AddChoice (DIA_MiltenNW_KAP3_Entry,"Ich habe einen Brief von Lord Hagen.",DIA_MiltenNW_KAP3_Entry_Permit); 
 		};
 	};	
 };	
@@ -286,7 +286,7 @@ instance DIA_MiltenNW_Statuette (C_INFO)
 	condition	 = 	DIA_MiltenNW_Statuette_Condition;
 	information	 = 	DIA_MiltenNW_Statuette_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"I've got this statuette...";
+	description	 = 	"Ich habe hier diese Statuette...";
 };
 func int DIA_MiltenNW_Statuette_Condition ()
 {	
@@ -319,7 +319,7 @@ func void DIA_MiltenNW_Statuette_Info ()
 	MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
 	MiltenORPedro_LostInnosStatue_Daron = TRUE;
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
-	B_LogEntry (TOPIC_Revived_DaronStatuette, "I gave the statuette back to Milten. I should return to Daron to report the good news."); 
+	B_LogEntry (TOPIC_Revived_DaronStatuette, "Ich habe Milten die Statue zurückgegeben. Ich sollte nach Daron zurückkehren, um die gute Nachricht zu überbringen."); 
 	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
 };
 
@@ -334,7 +334,7 @@ INSTANCE DIA_MiltenNW_KAP3_NovizenChase(C_INFO)
 	condition	= DIA_MiltenNW_KAP3_NovizenChase_Condition;
 	information	= DIA_MiltenNW_KAP3_NovizenChase_Info;
 	permanent	= FALSE;
-	description = "Do you know where Pedro is?";
+	description = "Weißt du, wo Pedro ist?";
 };                       
 FUNC INT DIA_MiltenNW_KAP3_NovizenChase_Condition()
 {
@@ -356,7 +356,7 @@ FUNC VOID DIA_MiltenNW_KAP3_NovizenChase_Info()
 };	
 
 //***************************************************************
-//	Wei�t du etwas �ber die vermummten Gestalten?
+//	Weit du etwas ber die vermummten Gestalten?
 //***************************************************************
 
 INSTANCE DIA_MiltenNW_KAP3_Perm(C_INFO)
@@ -366,7 +366,7 @@ INSTANCE DIA_MiltenNW_KAP3_Perm(C_INFO)
 	condition	= DIA_MiltenNW_KAP3_Perm_Condition;
 	information	= DIA_MiltenNW_KAP3_Perm_Info;
 	permanent	= FALSE;
-	description = "Do you know anything about the hooded figures?";
+	description = "Weißt du etwas über die vermummten Gestalten?";
 };                       
 FUNC INT DIA_MiltenNW_KAP3_Perm_Condition()
 {
@@ -426,7 +426,7 @@ INSTANCE DIA_MiltenNW_KAP4_PERM(C_INFO)
 	condition	= DIA_MiltenNW_KAP4_PERM_Condition;
 	information	= DIA_MiltenNW_KAP4_PERM_Info;
 	permanent	= TRUE;
-	description = "Any news?";
+	description = "Irgendwas Neues passiert?";
 };                       
 FUNC INT DIA_MiltenNW_KAP4_PERM_Condition()
 {
@@ -494,7 +494,7 @@ FUNC VOID DIA_MiltenNW_KAP5_EXIT_Info()
 };
 
 // ************************************************************
-// 	  				   Ich habe alle Drachen get�tet. (Perm Kap 5)
+// 	  				   Ich habe alle Drachen gettet. (Perm Kap 5)
 // ************************************************************
 
 INSTANCE DIA_MiltenNW_AllDragonsDead(C_INFO)
@@ -504,7 +504,7 @@ INSTANCE DIA_MiltenNW_AllDragonsDead(C_INFO)
 	condition	= DIA_MiltenNW_AllDragonsDead_Condition;
 	information	= DIA_MiltenNW_AllDragonsDead_Info;
 	permanent	= FALSE;
-	description = "I killed all the dragons.";
+	description = "Ich habe alle Drachen getötet.";
 };                       
 FUNC INT DIA_MiltenNW_AllDragonsDead_Condition()
 {
@@ -561,7 +561,7 @@ instance DIA_MiltenNW_KnowWhereEnemy		(C_INFO)
 	condition	 = 	DIA_MiltenNW_KnowWhereEnemy_Condition;
 	information	 = 	DIA_MiltenNW_KnowWhereEnemy_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"I know now where the enemy is hiding.";
+	description	 = 	"Ich weiß jetzt, wo sich der Feind versteckt hält.";
 };
 
 func int DIA_MiltenNW_KnowWhereEnemy_Condition ()
@@ -584,24 +584,24 @@ func void DIA_MiltenNW_KnowWhereEnemy_Info ()
   	if ((Npc_IsDead(DiegoNW))== FALSE)
   	{
  		AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_02"); //Have you talked to Diego about it? I think he would want to accompany you.
- 		B_LogEntry (TOPIC_Crew,"Diego could be a great help. He's never stayed in one place long.");
+ 		B_LogEntry (TOPIC_Crew,"Diego könnte eine grosse Hilfe sein. Ihn hat es nie lange an einem Ort gehalten.");
  	};
 
   	if ((Npc_IsDead(GornNW_nach_DJG))== FALSE)
   	{
  		AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_03"); //What about Gorn? Talk to him. I heard that he has returned from the Valley of Mines.
- 		B_LogEntry (TOPIC_Crew,"Gorn would certainly be a great help. It can't hurt to have a good fighter at one's side. Maybe he can train me.");
+ 		B_LogEntry (TOPIC_Crew,"Gorn wär sicherlich eine gute Verstärkung. Ein guter Kämpfer kann nicht falsch sein. Vielleicht kann er mich ja unterrichten.");
  	};
 	
 	if ((Npc_IsDead(Lester))== FALSE)
   	{
  		AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_04"); //And don't forget Lester. If you don't drag him out of his valley, he'll rot there.
- 		B_LogEntry (TOPIC_Crew,"If I don't take Lester along, he'll probably never get out of his valley.");
+ 		B_LogEntry (TOPIC_Crew,"Wenn ich Lester nicht mitnehme, wird er wohl nie aus seinem Tal kommen.");
  	};
 	
 	AI_Output			(self, other, "DIA_MiltenNW_KnowWhereEnemy_03_05"); //I also know my role in all this. I can increase your mana and be helpful in constructing runes once we face the enemy. When do we start?
 	
-	B_LogEntry (TOPIC_Crew,"If Milten comes with me, he can teach me to create runes and increase my mana.");
+	B_LogEntry (TOPIC_Crew,"Falls Milten mich begleitet, kann er mir beibringen Runen zu erschaffen und mein Mana zu steigern.");
 	
 	if (crewmember_count >= Max_Crew)
 	{
@@ -612,8 +612,8 @@ func void DIA_MiltenNW_KnowWhereEnemy_Info ()
 	else 
 	{
 		Info_ClearChoices (DIA_MiltenNW_KnowWhereEnemy);
-		Info_AddChoice (DIA_MiltenNW_KnowWhereEnemy,"I cannot use you at the moment.",DIA_MiltenNW_KnowWhereEnemy_No);
-		Info_AddChoice (DIA_MiltenNW_KnowWhereEnemy,"Welcome aboard!",DIA_MiltenNW_KnowWhereEnemy_Yes);
+		Info_AddChoice (DIA_MiltenNW_KnowWhereEnemy,"Ich kann dich im Moment nicht gebrauchen.",DIA_MiltenNW_KnowWhereEnemy_No);
+		Info_AddChoice (DIA_MiltenNW_KnowWhereEnemy,"Willkommen an Bord",DIA_MiltenNW_KnowWhereEnemy_Yes);
 	};
 };
 
@@ -661,7 +661,7 @@ instance DIA_MiltenNW_WhereCaptain		(C_INFO)
 	condition	 = 	DIA_MiltenNW_WhereCaptain_Condition;
 	information	 = 	DIA_MiltenNW_WhereCaptain_Info;
 	
-	description	 = 	"Where shall I look for a captain?";
+	description	 = 	"Wo soll ich nach einem Kapitän suchen?";
 
 };
 func int DIA_MiltenNW_WhereCaptain_Condition ()
@@ -682,7 +682,7 @@ func void DIA_MiltenNW_WhereCaptain_Info ()
  
 	Log_CreateTopic (TOPIC_Captain, LOG_MISSION);                                                                                                                                                            
 	Log_SetTopicStatus(TOPIC_Captain, LOG_RUNNING);                                                                                                                                                          
-	B_LogEntry (TOPIC_Captain,"I might be able to take Jorgen on as captain. He should still be in the monastery. Other than that, there must be other candidates on the farms or in the city. Maybe I should talk to Lee or ask around at the harbor.");
+	B_LogEntry (TOPIC_Captain,"Jorgen könnte vieleicht als Kapitän bei mir anheuern. Er sollte sich eigentlich noch im Kloster aufhalten. Anosnsten sollte es noch Kanidaten auf den Höfen oder in der Stadt geben. Vielleicht sollte ich mit Lee sprechen oder mich mal im Hafen umhören.");
 	
 };
 
@@ -696,7 +696,7 @@ instance DIA_MiltenNW_LeaveMyShip		(C_INFO)
 	condition	 = 	DIA_MiltenNW_LeaveMyShip_Condition;
 	information	 = 	DIA_MiltenNW_LeaveMyShip_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"I can't take you along after all.";
+	description	 = 	"Ich kann dich doch nicht mitnehmen.";
 };
 func int DIA_MiltenNW_LeaveMyShip_Condition ()
 {	
@@ -718,7 +718,7 @@ func void DIA_MiltenNW_LeaveMyShip_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Ich habs mir �berlegt!
+//	Ich habs mir berlegt!
 ///////////////////////////////////////////////////////////////////////
 instance DIA_MiltenNW_StillNeedYou		(C_INFO)
 {
@@ -727,11 +727,11 @@ instance DIA_MiltenNW_StillNeedYou		(C_INFO)
 	condition	 = 	DIA_MiltenNW_StillNeedYou_Condition;
 	information	 = 	DIA_MiltenNW_StillNeedYou_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"I need you.";
+	description	 = 	"Ich brauche dich.";
 };
 func int DIA_MiltenNW_StillNeedYou_Condition ()
 {	
-	if ((MiltenNW_IsOnBOard == LOG_OBSOLETE)		//Hier brauch man nat�rlich nur eine variable abfragen
+	if ((MiltenNW_IsOnBOard == LOG_OBSOLETE)		//Hier brauch man natrlich nur eine variable abfragen
 	|| (MiltenNW_IsOnBOard == LOG_FAILED))
 	&& (crewmember_count < Max_Crew)
 	{
@@ -773,7 +773,7 @@ INSTANCE DIA_MiltenNW_Teach(C_INFO)
 	condition	= DIA_MiltenNW_Teach_Condition;
 	information	= DIA_MiltenNW_Teach_Info;
 	permanent	= TRUE;
-	description = "I want to learn some new spells.";
+	description = "Ich will neue Zauber lernen.";
 };                       
 
 FUNC INT DIA_MiltenNW_Teach_Condition()
@@ -836,7 +836,7 @@ instance DIA_MiltenNW_Mana		(C_INFO)
 	condition	 = 	DIA_MiltenNW_Mana_Condition;
 	information	 = 	DIA_MiltenNW_Mana_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to increase my magic powers.";
+	description	 = 	"Ich will meine magische Kraft steigern.";
 };
 func int DIA_MiltenNW_Mana_Condition ()
 {	

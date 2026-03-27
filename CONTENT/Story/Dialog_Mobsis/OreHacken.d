@@ -217,7 +217,7 @@ INSTANCE PC_OreHacken_Hour (C_Info)
 	condition		= PC_OreHacken_Hour_Condition;
 	information		= PC_OreHacken_Hour_Info;
 	permanent		= TRUE;
-	description		= "Just chop a little."; 
+	description		= "Einfach mal hacken."; 
 };
 
 FUNC INT PC_OreHacken_Hour_Condition ()
@@ -240,7 +240,7 @@ FUNC VOID PC_OreHacken_Hour_Info()
 		if (CurrentChance <= Hero_HackChance)
 		{
 				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-				PrintScreen ("1 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+				PrintScreen ("1 Erzklumpen abgebaut!", -1, -1, FONT_ScreenSmall, 2);	
 				Truemmer_Count = 0;
 				OreCounter = (OreCounter +1);
 
@@ -262,18 +262,18 @@ FUNC VOID PC_OreHacken_Hour_Info()
 		}
 		else
 		{
-			PrintScreen ("Ore splinters fly everywhere...", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("Erzsplitter fliegen überall herum...", -1, -1, FONT_ScreenSmall, 2);	
 			Truemmer_Count = (Truemmer_Count +1);
 		};
 	}
 	else
 	{
-		PrintScreen ("There's nothing else to be had here.", -1, -1, FONT_ScreenSmall, 2);	
+		PrintScreen ("Hier gibt's Nichts mehr zu holen.", -1, -1, FONT_ScreenSmall, 2);	
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 //*******************************************************
-//	Goldhacken Tr�mmerschlag
+//	Goldhacken Trmmerschlag
 //*******************************************************
 INSTANCE PC_OreHacken_TSchlag (C_Info)
 {
@@ -282,7 +282,7 @@ INSTANCE PC_OreHacken_TSchlag (C_Info)
 	condition		= PC_OreHacken_TSchlag_Condition;
 	information		= PC_OreHacken_TSchlag_Info;
 	permanent		= TRUE;
-	description		= "Give it a really good whack."; 
+	description		= "Trümmerschlag ansetzen."; 
 };
 
 FUNC INT PC_OreHacken_TSchlag_Condition ()
@@ -301,7 +301,7 @@ FUNC VOID PC_OreHacken_TSchlag_Info()
 		
 	if (TruemmerChance <= 5)
 	{
-			PrintScreen ("Nothing...", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("Nichts ...", -1, -1, FONT_ScreenSmall, 2);	
 	}
 	else
 	{
@@ -313,19 +313,19 @@ FUNC VOID PC_OreHacken_TSchlag_Info()
 		{
 			//----Gold verteilen-----------------------
 			CreateInvItems (hero, ItMi_Nugget, 4);	
-			PrintScreen ("4 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("4 Erzklumpen abgebaut!", -1, -1, FONT_ScreenSmall, 2);	
 			
 		}
 		else if (TruemmerChance >= 50)
 		{
 			CreateInvItems (hero, ItMi_Nugget, 3);	
-			PrintScreen ("3 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("3 Erzklumpen abgebaut!", -1, -1, FONT_ScreenSmall, 2);	
 		
 		}
 		else 
 		{
 			CreateInvItems (hero, ItMi_Nugget, 2);	
-			PrintScreen ("2 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("2 Erzklumpen abgebaut!", -1, -1, FONT_ScreenSmall, 2);	
 		};
 	};
 	Truemmer_Count = 0;
@@ -342,7 +342,7 @@ INSTANCE PC_OreHacken_Chance (C_Info)
 	condition		= PC_OreHacken_Chance_Condition;
 	information		= PC_OreHacken_Chance_Info;
 	permanent		= TRUE;
-	description		= "(assess own ability)"; 
+	description		= "(Eigene Fähigkeit prüfen)"; 
 };
 
 FUNC INT PC_OreHacken_Chance_Condition ()
@@ -359,34 +359,34 @@ FUNC VOID PC_OreHacken_Chance_Info()
 	
 	if (Hero_HackChance < 20) 
 	{
-		ConcatText = ConcatStrings ("Absolute beginner (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Absoluter Anfänger (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 40) 
 	{
-		ConcatText = ConcatStrings ("Quite passable scraper (" , IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Ziemlich passabler Schürfer (" , IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 55) 
 	{
-		ConcatText = ConcatStrings ("An experienced scraper (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Ein erfahrener Schürfer (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 75) 
 	{
-		ConcatText = ConcatStrings ("Genuine digger ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Echter Buddler (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 90) 
 	{
-		ConcatText = ConcatStrings ("Damn good digger ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Verdammt guter Buddler (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 98) 
 	{
-		ConcatText = ConcatStrings ("Master digger ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Meisterbuddler (", IntToString (Hero_HackChance));
 	}
 	else
 	{
-		ConcatText = ConcatStrings ("Guru among diggers ( ", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Guru unter den Buddlern (", IntToString (Hero_HackChance));
 	};
 	
-	ConcatText = ConcatStrings (concatText, " percent)");
+	ConcatText = ConcatStrings (concatText, "Prozent)");
 	
 	PrintScreen (concatText, -1, -1, FONT_ScreenSmall,2);
 };

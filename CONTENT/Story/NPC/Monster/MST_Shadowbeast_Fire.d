@@ -7,7 +7,7 @@
 PROTOTYPE Mst_Default_Shadowbeast_Addon_Fire (C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Fire Devil";
+	name							=	"Feuerteufel";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	

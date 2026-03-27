@@ -10,7 +10,7 @@ instance DIA_Addon_GivePotion(C_INFO)
 	condition	= DIA_Addon_GivePotion_Condition;
 	information	= DIA_Addon_GivePotion_Info;
 	permanent	= TRUE;
-	description = "(give healing potion)";
+	description = "(Heiltrank geben)";
 };                       
 FUNC INT DIA_Addon_GivePotion_Condition()
 {
@@ -31,23 +31,23 @@ func VOID DIA_Addon_GivePotion_Info()
 	Info_AddChoice (DIA_Addon_GivePotion,DIALOG_BACK,DIA_Addon_GivePotion_BACK);
 	if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_03) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give elixir of healing)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_03);
+		Info_AddChoice (DIA_Addon_GivePotion,"(Elixier der Heilung geben)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_03);
 	};
 	if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_02) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give extract of healing)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_02);
+		Info_AddChoice (DIA_Addon_GivePotion,"(Extrakt der Heilung geben)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_02);
 	};
 	if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_01) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give essence of healing)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_01);
+		Info_AddChoice (DIA_Addon_GivePotion,"(Essenz der Heilung geben)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_01);
 	};
 };
 // ------------------------------------------------------------
 func void B_Addon_DrinkPotion ()
 {
-	AI_Output (other,self ,"DIA_Addon_Brandon_GivePotion_15_00"); //Here, take the healing potion.
+	AI_Output (other,self ,"DIA_Addon_Brandon_GivePotion_15_00"); //Hier, nimm den Heiltrank.
 
-	if ((self.attribute[ATR_HITPOINTS]) < (self.attribute[ATR_HITPOINTS_MAX])) //geändert m.F. 
+	if ((self.attribute[ATR_HITPOINTS]) < (self.attribute[ATR_HITPOINTS_MAX])) //gendert m.F. 
 	{
 		if (Npc_HasItems(self,ITPO_REVIVED_HEALTH_03) > 0)			
 		{

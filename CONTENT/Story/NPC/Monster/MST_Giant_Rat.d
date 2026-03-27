@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Giant_Rat(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Giant Rat";
+	name							=	"Riesenratte";
 	guild							=	GIL_Giant_Rat;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
 
@@ -66,13 +66,13 @@ INSTANCE Giant_Rat	(Mst_Default_Giant_Rat)
 
 
 //**************************************
-//	junge Giant_Rat   (für Spielstart) 	
+//	junge Giant_Rat   (fr Spielstart) 	
 //**************************************
 
 INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 {
 	//----- Monster ----
-	name							=	"Young Giant Rat";
+	name							=	"junge Riesenratte";
 
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 2);
@@ -98,13 +98,13 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 
 
 //**************************************
-//	small Giant_Rat   (für ambient) 	
+//	small Giant_Rat   (fr ambient) 	
 //**************************************
 
 INSTANCE YRat	(Mst_Default_Giant_Rat)
 {
 	//----- Monster ----
-	name							=	"Rat";
+	name							=	"Ratte";
 	guild							=	GIL_MEATBUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
 

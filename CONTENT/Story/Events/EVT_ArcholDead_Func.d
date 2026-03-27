@@ -16,7 +16,7 @@ func void EVT_ARCHOLDEAD_FUNC ()
 	
 		if (EVT_ARCHOLDEAD_FUNC_OneTime == FALSE)
 		{
-			B_LogEntry (TOPIC_HallenVonIrdorath,"I've found something like a temple here. It is inhabited by a lot of undead beings. This all reminds me a lot of the damned orc temple of the Sleeper. This time I will not fail. Not this time!"); 
+			B_LogEntry (TOPIC_HallenVonIrdorath,"Ich habe so etwas wie einen Tempel gefunden. Er wird von einer Unmenge von untoten Wesen bewohnt. Erinnert mich alles verdammt an diesen elenden Orctempel des Schläfers. Diesmal werde ich nicht versagen. Diesmal nicht!"); 
 			EVT_ARCHOLDEAD_FUNC_OneTime = TRUE;
 		};
 };

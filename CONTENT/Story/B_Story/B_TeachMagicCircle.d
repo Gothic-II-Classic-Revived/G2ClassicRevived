@@ -36,13 +36,13 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	// ------ Kreis setzen ------
 	Npc_SetTalentSkill (oth, NPC_TALENT_MAGE, circle);
 	Log_CreateTopic (TOPIC_TalentMagicCircle,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentMagicCircle,"The magic runes I have access to are divided into Circles. I can't use a spell that requires a higher Circle than the ones I've mastered."); 
+	B_LogEntry (TOPIC_TalentMagicCircle,"Die mir zugängliche magischen Runen sind in Kreise eingeteilt. Einen Spruch mit einem höheren Kreis als ich gemeistert habe, kann ich nicht verwenden."); 
 	
 	// ------ 1. Kreis ------
 	if (circle == 1)
 	{
 		PrintScreen	(PRINT_LearnCircle_1, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 1st Circle are: Light, Fire Arrow, Small Lightning, Heal Light Wounds and Summon Goblin Skeleton.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 1. Kreises sind: Licht, Feuerpfeil, Kleiner Blitz, leichte Wunden heilen und Goblin Skelett beschwören.");
 		return TRUE;
 	};
 	
@@ -50,7 +50,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 2)
 	{
 		PrintScreen	(PRINT_LearnCircle_2, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 2nd Circle are: Fireball, Ice Arrow, Summon Wolf, Wind Fist and Sleep.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 2. Kreises sind: Feuerball, Eispfeil, Wolf rufen, Windfaust und Schlaf");
 		return TRUE;
 	};
 	
@@ -58,7 +58,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 3)
 	{
 		PrintScreen	(PRINT_LearnCircle_3, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 3rd Circle are: Heal Medium Wounds, Ball Lightning, Small Fire Storm, Create Skeleton, Fear and Ice Block.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 3. Kreises sind: mittlere Wunden heilen, Kugelblitz ,Kleiner Feuersturm, Skelett erschaffen, Angst und Eisblock");
 		return TRUE;
 	};
 	
@@ -66,7 +66,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 4)
 	{
 		PrintScreen	(PRINT_LearnCircle_4, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 4th Circle are: Lightning, Create Stone Golem, Destroy Undead and Large Fireball.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 4. Kreises sind: Blitzschlag, Steingolem erschaffen, Untote vernichten und Grosser Feuerball.");
 		return TRUE;
 	};
 	
@@ -74,7 +74,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 5)
 	{
 		PrintScreen	(PRINT_LearnCircle_5, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 5th Circle are: Large Fire Storm, Ice Wave, Summon Demon and Heal Heavy Wounds.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 5. Kreises sind: Grosser Feuersturm, Eiswelle ,Dämon beschwören und schwere Wunden heilen.");
 		return TRUE;
 	};
 	
@@ -82,7 +82,7 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 	if (circle == 6)
 	{
 		PrintScreen	(PRINT_LearnCircle_6, -1, -1, FONT_Screen, 2);
-		B_LogEntry (TOPIC_TalentMagicCircle,"The spells of the 6th Circle are: Rain of Fire, Breath of Death, Wave of Death, Army of Darkness and Shrink Monster.");
+		B_LogEntry (TOPIC_TalentMagicCircle,"Die Sprüche des 6. Kreises sind: Feuerregen, Todeshauch, Todeswelle, Armee der Finsternis und Monster schrumpfen.");
 		return TRUE;
 	};
 };

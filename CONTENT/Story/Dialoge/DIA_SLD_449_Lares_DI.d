@@ -34,7 +34,7 @@ INSTANCE DIA_Lares_DI_Hallo (C_INFO)
 	information	= DIA_Lares_DI_Hallo_Info;
 	permanent	 = 	TRUE;
 
-	description = "What's up?";
+	description = "Wie steht's?";
 };                       
 FUNC INT DIA_Lares_DI_Hallo_Condition()
 {
@@ -45,15 +45,15 @@ FUNC INT DIA_Lares_DI_Hallo_Condition()
 };
 FUNC VOID DIA_Lares_DI_Hallo_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_DI_Hallo_15_00"); //How's it going?
+	AI_Output (other,self ,"DIA_Lares_DI_Hallo_15_00"); //Wie läuft's denn so?
 
 	if (ORkSturmDI == TRUE)
 	{
-		AI_Output (self ,other,"DIA_Lares_DI_Hallo_09_01"); //Hurry up. The orcs will certainly come back.
+		AI_Output (self ,other,"DIA_Lares_DI_Hallo_09_01"); //Beeil dich ein bisschen. Die Orks kommen bestimmt noch mal wieder.
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Lares_DI_Hallo_09_02"); //Well. This grotto sure is spooky.
+		AI_Output (self ,other,"DIA_Lares_DI_Hallo_09_02"); //Na ja. Recht gespenstisch, die Grotte hier.
 	};
 };
 
@@ -69,7 +69,7 @@ INSTANCE DIA_Lares_DI_Training (C_INFO)
 	information	= DIA_Lares_DI_Training_Info;
 	permanent	 = 	TRUE;
 
-	description = "Teach me your abilities.";
+	description = "Lehre mich deine Fähigkeiten.";
 };                       
 FUNC INT DIA_Lares_DI_Training_Condition()
 {
@@ -81,14 +81,14 @@ FUNC INT DIA_Lares_DI_Training_Condition()
 
 FUNC VOID DIA_Lares_DI_Training_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_DI_Training_15_00"); //Teach me your abilities.
-	AI_Output (self ,other,"DIA_Lares_DI_Training_09_01"); //No problem.
+	AI_Output (other,self ,"DIA_Lares_DI_Training_15_00"); //Lehre mich deine Fähigkeiten.
+	AI_Output (self ,other,"DIA_Lares_DI_Training_09_01"); //Kein Problem.
 	
 	Info_ClearChoices (DIA_Lares_DI_Training);
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, "Schleichen lernen"	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -101,13 +101,13 @@ FUNC VOID DIA_Lares_DI_Training_1H_1 ()
 {
 	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 100))
 	{
-			AI_Output (self ,other,"DIA_Lares_DI_Training_1H_1_09_00"); //You have to bend your front leg a bit and keep the back one straight - then you have a firmer stance.
+			AI_Output (self ,other,"DIA_Lares_DI_Training_1H_1_09_00"); //Du musst das vordere Bein etwas gebeugt und das hintere gesteckt halten, dann hast du einen festeren Stand.
 	};
 	Info_ClearChoices (DIA_Lares_DI_Training);
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, "Schleichen lernen"	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -120,13 +120,13 @@ FUNC VOID DIA_Lares_DI_Training_1H_5 ()
 {
 	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 100))
 	{
-			AI_Output (self ,other,"DIA_Lares_DI_Training_1H_5_09_00"); //Keep your hips flexible, that'll help you dodge a counterattack.
+			AI_Output (self ,other,"DIA_Lares_DI_Training_1H_5_09_00"); //Bleibe in deiner Hüfte flexibel, dann kannst du dich bei einem Gegenangriff besser wegdrehen.
 	};
 	Info_ClearChoices (DIA_Lares_DI_Training);
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, "Schleichen lernen"	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -151,7 +151,7 @@ func void DIA_Lares_DI_Training_DEX_1 ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, "Schleichen lernen"	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -175,7 +175,7 @@ func void DIA_Lares_DI_Training_DEX_5 ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, "Schleichen lernen"	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -196,7 +196,7 @@ func void DIA_Lares_DI_Training_SNEAK ()
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
 	if (Npc_GetTalentSkill (hero, NPC_TALENT_SNEAK) == FALSE)
 	{
-		Info_AddChoice		(DIA_Lares_DI_Training, "Learn to sneak"	,DIA_Lares_DI_Training_SNEAK);
+		Info_AddChoice		(DIA_Lares_DI_Training, "Schleichen lernen"	,DIA_Lares_DI_Training_SNEAK);
 	};
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX1			, B_GetLearnCostAttribute(other, ATR_DEXTERITY))		,DIA_Lares_DI_Training_DEX_1);
 	Info_AddChoice		(DIA_Lares_DI_Training, B_BuildLearnString(PRINT_LearnDEX5			, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)		,DIA_Lares_DI_Training_DEX_5);
@@ -223,7 +223,7 @@ INSTANCE DIA_Lares_DI_UndeadDragonDead (C_INFO)
 	information	= DIA_Lares_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 
-	description = "You don't really seem to care about all this.";
+	description = "Dich kümmert das Ganze scheinbar überhaupt nicht.";
 };                       
 FUNC INT DIA_Lares_DI_UndeadDragonDead_Condition()
 {

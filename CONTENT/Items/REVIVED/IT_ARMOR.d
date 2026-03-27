@@ -365,7 +365,7 @@ const int	REV_Prot_Magic_GORDONRAMSAY			=	999;
 //****************************************************************************
 INSTANCE ITAR_REVIVED_BEGGAR (C_Item)
 {
-	name 					=	"Beggar's Clothing";
+	name 					=	"Bettler-Lumpen";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -395,7 +395,7 @@ INSTANCE ITAR_REVIVED_BEGGAR (C_Item)
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 {
-	name 					=	"Light Leather Armor";
+	name 					=	"Leichte Lederrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -428,7 +428,7 @@ INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 
 INSTANCE ITAR_REVIVED_LEATHER_M (C_Item)
 {
-	name 					=	"Leather Armor";
+	name 					=	"Lederrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -460,7 +460,7 @@ INSTANCE ITAR_REVIVED_LEATHER_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_LEATHER_H (C_Item)
 {
-	name 					=	"Heavy Leather Armor";
+	name 					=	"Schwere Lederrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -497,7 +497,7 @@ FUNC VOID Equip_LEATHER_ARMOR()
 	{
 		LeatherArmor_Equipped = TRUE;	
 	
-		if (Leather01_Equipped == TRUE) //Lederg�rtel
+		if (Leather01_Equipped == TRUE) //Ledergrtel
 		{
 			self.protection[PROT_EDGE] 	+= BA_Bonus01;
 			self.protection[PROT_BLUNT] += BA_Bonus01;
@@ -513,7 +513,7 @@ FUNC VOID UnEquip_LEATHER_ARMOR()
 	{
 		LeatherArmor_Equipped = FALSE;	
 	
-		if (Leather01_Equipped == TRUE) //Lederg�rtel
+		if (Leather01_Equipped == TRUE) //Ledergrtel
 		{
 			self.protection[PROT_EDGE] 	-= BA_Bonus01;
 			self.protection[PROT_BLUNT] -= BA_Bonus01;
@@ -526,7 +526,7 @@ FUNC VOID UnEquip_LEATHER_ARMOR()
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_ARCHER (C_Item)
 {
-	name 					=	"Archer's Suit";
+	name 					=	"Bogenschützenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -591,7 +591,7 @@ FUNC VOID UnEquip_ARCHER_ARMOR()
 //******************************************************************//
 INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
 {
-	name 					=	"Old Knight's Armor";
+	name 					=	"Alte Ritterrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -621,7 +621,7 @@ INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
 
 INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 {
-	name 					=	"Old Knight's Armor"; //(without helmet)
+	name 					=	"Alte Ritterrüstung"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -651,7 +651,7 @@ INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 {
-	name 					=	"Demonhunter Armor";
+	name 					=	"Dämonenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -681,7 +681,7 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 
 INSTANCE ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 {
-	name 					=	"Demonhunter Armor"; //(without helmet)
+	name 					=	"Dämonenjägerrüstung"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -716,7 +716,7 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_SFB_L (C_Item)
 {
-	name 					=	"Light Digger's Trousers";
+	name 					=	"Leichte Buddlerhose";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -745,7 +745,7 @@ INSTANCE ITAR_REVIVED_SFB_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_SFB_M (C_Item)
 {
-	name 					=	"Digger's Trousers";
+	name 					=	"Buddlerhose";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -774,7 +774,7 @@ INSTANCE ITAR_REVIVED_SFB_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_SFB_H (C_Item)
 {
-	name 					=	"Digger's Dress";
+	name 					=	"Schürferklamotten";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -809,7 +809,7 @@ INSTANCE ITAR_REVIVED_SFB_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_STT_M (C_Item)
 {
-	name 					=	"Shadow's Dress";
+	name 					=	"Schattenkluft";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -839,7 +839,7 @@ INSTANCE ITAR_REVIVED_STT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_STT_H (C_Item)
 {
-	name 					=	"Shadow's Armor";
+	name 					=	"Schattenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -874,7 +874,7 @@ INSTANCE ITAR_REVIVED_STT_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_ORG_L (C_Item)
 {
-	name 					=	"Light Rogue's Dress";
+	name 					=	"Leichte Banditenkleidung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -904,7 +904,7 @@ INSTANCE ITAR_REVIVED_ORG_L (C_Item)
 
 INSTANCE ITAR_REVIVED_ORG_M (C_Item)
 {
-	name 					=	"Rogue's Dress";
+	name 					=	"Mittlere Banditenkleidung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -934,7 +934,7 @@ INSTANCE ITAR_REVIVED_ORG_M (C_Item)
 
 INSTANCE ITAR_REVIVED_ORG_H (C_Item)
 {
-	name 					=	"Heavy Rogue's Dress";
+	name 					=	"Schwere Banditenkleidung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -969,7 +969,7 @@ INSTANCE ITAR_REVIVED_ORG_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_GRD_L (C_Item)
 {
-	name 					=	"Light Guard's Armor";
+	name 					=	"Leichte Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1001,7 +1001,7 @@ INSTANCE ITAR_REVIVED_GRD_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_GRD_M (C_Item)
 {
-	name 					=	"Guard's Armor";
+	name 					=	"Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1033,7 +1033,7 @@ INSTANCE ITAR_REVIVED_GRD_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_GRD_H (C_Item)
 {
-	name 					=	"Heavy Guard's Armor";
+	name 					=	"Schwere Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1065,7 +1065,7 @@ INSTANCE ITAR_REVIVED_GRD_H (C_Item)
 };
 INSTANCE ITAR_REVIVED_GRD_S (C_Item)
 {
-	name 					=	"Guardsman Armor";
+	name 					=	"Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1136,7 +1136,7 @@ FUNC VOID UnEquip_GRD_ARMOR()
 //****************************************************************************
 INSTANCE ITAR_REVIVED_EBR_L (C_Item)
 {
-	name 					=	"Robe of State";
+	name 					=	"Prunkgewand";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1165,7 +1165,7 @@ INSTANCE ITAR_REVIVED_EBR_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_EBR_M (C_Item)
 {
-	name 					=	"Ore Baron's Armor";
+	name 					=	"Erzbaronrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1194,7 +1194,7 @@ INSTANCE ITAR_REVIVED_EBR_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_EBR_H (C_Item)
 {
-	name 					=	"Gomez' Armor";
+	name 					=	"Gomez'Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1229,7 +1229,7 @@ INSTANCE ITAR_REVIVED_EBR_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 {
-	name 					=	"Royal Guard Armor";
+	name 					=	"Königliche Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1261,7 +1261,7 @@ INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 {
-	name 					=	"Paladin's Armor";
+	name 					=	"Paladinrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1293,7 +1293,7 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 {
-	name 					=	"Heavy Paladin Armor";
+	name 					=	"Schwere Paladinrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1325,7 +1325,7 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
 {
-	name 					=	"Heavy Paladin Armor"; //(without helmet)
+	name 					=	"Schwere Paladinrüstung"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1363,7 +1363,7 @@ INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_SLD_L (C_Item)
 {
-	name 					=	"Light Mercenary's Armor";
+	name 					=	"leichte Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1396,7 +1396,7 @@ INSTANCE ITAR_REVIVED_SLD_L (C_Item)
 
 INSTANCE ITAR_REVIVED_SLD_L_02 (C_Item)
 {
-	name 					=	"Light Mercenary's Armor";
+	name 					=	"leichte Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1428,7 +1428,7 @@ INSTANCE ITAR_REVIVED_SLD_L_02 (C_Item)
 };
 INSTANCE ITAR_REVIVED_SLD_M (C_Item)
 {
-	name 					=	"Mercenary's Armor";
+	name 					=	"Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1460,7 +1460,7 @@ INSTANCE ITAR_REVIVED_SLD_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_SLD_H (C_Item)
 {
-	name 					=	"Heavy Mercenary's Armor";
+	name 					=	"Schwere Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1531,7 +1531,7 @@ FUNC VOID UnEquip_SLD_ARMOR()
 //****************************************************************************
 INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 {
-	name 					=	"Light Dragon Hunter's Armor";
+	name 					=	"Leichte Drachenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1560,7 +1560,7 @@ INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_DJG_M (C_Item)
 {
-	name 					=	"Medium Dragon Hunter's Armor";
+	name 					=	"Mittlere Drachenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1589,7 +1589,7 @@ INSTANCE ITAR_REVIVED_DJG_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_DJG_H (C_Item)
 {
-	name 					=	"Heavy Dragon Hunter's Armor";
+	name 					=	"Schwere Drachenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1624,7 +1624,7 @@ INSTANCE ITAR_REVIVED_DJG_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_KDF_L (C_Item)
 {
-	name 					=	"Fire Mage's Robe";
+	name 					=	"Feuermagierrobe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1657,7 +1657,7 @@ INSTANCE ITAR_REVIVED_KDF_L (C_Item)
 
 INSTANCE ITAR_REVIVED_KDF_M (C_Item)
 {
-	name 					=	"Robe of Fire";
+	name 					=	"Robe des Feuers";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1690,7 +1690,7 @@ INSTANCE ITAR_REVIVED_KDF_M (C_Item)
 
 INSTANCE ITAR_REVIVED_KDF_H (C_Item)
 {
-	name 					=	"High Robe of Fire";
+	name 					=	"Große Feuerrobe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1761,7 +1761,7 @@ FUNC VOID UnEquip_KDF_ARMOR()
 //****************************************************************************
 INSTANCE ITAR_REVIVED_KDW_L (C_Item)
 {
-	name 					=	"Water Mage's Robe";
+	name 					=	"Wassermagierrobe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1794,7 +1794,7 @@ INSTANCE ITAR_REVIVED_KDW_L (C_Item)
 
 INSTANCE ITAR_REVIVED_KDW_M (C_Item)
 {
-	name 					=	"Robe of Water";
+	name 					=	"Robe des Wassers";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1827,7 +1827,7 @@ INSTANCE ITAR_REVIVED_KDW_M (C_Item)
 
 INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 {
-	name 					=	"High Robe of Water";
+	name 					=	"Große Wasserrobe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1865,7 +1865,7 @@ INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_PSI_NOV (C_Item)
 {
-	name 					=	"Novice's Armor";
+	name 					=	"Novizenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1895,7 +1895,7 @@ INSTANCE ITAR_REVIVED_PSI_NOV (C_Item)
 
 INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
 {
-	name 					=	"Heavy Templar's Armor";
+	name 					=	"Schwere Templerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1925,7 +1925,7 @@ INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
 
 INSTANCE ITAR_REVIVED_PSI_TPL_02 (C_Item)
 {
-	name 					=	"Heavy Templar's Armor (skeleton)";
+	name 					=	"Schwere Templer-Rüstung (Skelett)";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1960,7 +1960,7 @@ INSTANCE ITAR_REVIVED_PSI_TPL_02 (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_DMT_L (C_Item)
 {
-	name 					=	"Dark Novice's Robe";
+	name 					=	"Robe des dunklen Novizen";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1990,7 +1990,7 @@ INSTANCE ITAR_REVIVED_DMT_L (C_Item)
 
 INSTANCE ITAR_REVIVED_DMT_M (C_Item)
 {
-	name 					=	"Robe of the Dark Arts";
+	name 					=	"Robe der Dunklen Künste";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2020,7 +2020,7 @@ INSTANCE ITAR_REVIVED_DMT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_DMT_H (C_Item)
 {
-	name 					=	"High Robe of the Dark Arts";
+	name 					=	"Hohe Robe der dunklen Künste";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2050,7 +2050,7 @@ INSTANCE ITAR_REVIVED_DMT_H (C_Item)
 
 INSTANCE ITAR_REVIVED_DMT_S (C_Item)
 {
-	name 					=	"Seeker's Robe";
+	name 					=	"Robe des Suchenden";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2085,7 +2085,7 @@ INSTANCE ITAR_REVIVED_DMT_S (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_BDT_L (C_Item)
 {
-	name 					=	"Light Bandit Armor";
+	name 					=	"Leichte Banditenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2115,7 +2115,7 @@ INSTANCE ITAR_REVIVED_BDT_L (C_Item)
 
 INSTANCE ITAR_REVIVED_BDT_M (C_Item)
 {
-	name 					=	"Bandit Armor";
+	name 					=	"Eine Rüstung der Banditen";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2145,7 +2145,7 @@ INSTANCE ITAR_REVIVED_BDT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_BDT_H (C_Item)
 {
-	name 					=	"Heavy Bandit Armor";
+	name 					=	"Schwere Banditenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2183,7 +2183,7 @@ INSTANCE ITAR_REVIVED_BDT_H (C_Item)
 
 INSTANCE ITAR_REVIVED_GORDONRAMSAY (C_Item)
 {
-	name 					=	"Kitchen Chef's robe";
+	name 					=	"Kochkittel";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;

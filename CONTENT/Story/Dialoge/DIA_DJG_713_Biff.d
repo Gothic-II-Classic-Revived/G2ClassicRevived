@@ -1,13 +1,13 @@
 func void B_KommMit ()
 {
-	AI_Output (other, self,"DIA_AkilsSchaf_KommMit_15_00");	//Come with me!
+	AI_Output (other, self,"DIA_AkilsSchaf_KommMit_15_00");	//Los komm mit!
 };
 func void B_BIFF_VERARSCHEN ()
 {
-	AI_Output			(self, other, "DIA_Biff_ARBEITEN_lebenlassen_07_01"); //I don't need you to make a fool out of myself.
+	AI_Output			(self, other, "DIA_Biff_ARBEITEN_lebenlassen_07_01"); //Verarschen kann ich mich alleine.
 };
 
-func void B_BiffsAnteil_Berechnung() //Joly: Wieviel Kohle mu� der SC Biff nun geben:
+func void B_BiffsAnteil_Berechnung() //Joly: Wieviel Kohle mu der SC Biff nun geben:
 {	
 	var int momentanKohle;
 	var int UeberschussKohle;
@@ -26,7 +26,7 @@ func void B_BiffsAnteil_PrintScreen ()
 	BiffsAnteilText	= ConcatStrings(BiffsAnteilText_Teil, PRINT_BiffGold);	
 	AI_PrintScreen	(BiffsAnteilText, -1, 45, FONT_ScreenSmall, 4);
 };
-func void B_Biff_SetRefuseTalk ()	//Joly: Biffs Geld eintreiberei kommt beim HalbeHalbe Deal nicht so h�ufig.
+func void B_Biff_SetRefuseTalk ()	//Joly: Biffs Geld eintreiberei kommt beim HalbeHalbe Deal nicht so hufig.
 {
 	if (DJG_Biff_HalbeHalbe == TRUE)
 	{
@@ -70,7 +70,7 @@ instance DIA_Biff_HALLO		(C_INFO)
 	condition	 = 	DIA_Biff_HALLO_Condition;
 	information	 = 	DIA_Biff_HALLO_Info;
 
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 
 func int DIA_Biff_HALLO_Condition ()
@@ -83,9 +83,9 @@ func void DIA_Biff_HALLO_Info ()
 	AI_Output			(other, self, "DIA_Biff_HALLO_15_00"); //What are you doing here?
 	AI_Output			(self, other, "DIA_Biff_HALLO_07_01"); //That is truly the stupidest question I have heard in a long time. What does it look like?
 
-	Info_AddChoice	(DIA_Biff_HALLO, "I can't tell anything from that idiotic face you're making.", DIA_Biff_HALLO_spott );
-	Info_AddChoice	(DIA_Biff_HALLO, "I haven't a clue.", DIA_Biff_HALLO_keineAhnung );
-	Info_AddChoice	(DIA_Biff_HALLO, "Never mind.", DIA_Biff_HALLO_doof );
+	Info_AddChoice	(DIA_Biff_HALLO, "Ich kann deinen bescheuerten Gesichtsausdruck nicht einordnen.", DIA_Biff_HALLO_spott );
+	Info_AddChoice	(DIA_Biff_HALLO, "Ich habe keine Ahnung.", DIA_Biff_HALLO_keineAhnung );
+	Info_AddChoice	(DIA_Biff_HALLO, "Schon gut.", DIA_Biff_HALLO_doof );
 };
 
 func void DIA_Biff_HALLO_doof ()
@@ -109,14 +109,14 @@ func void DIA_Biff_HALLO_keineAhnung ()
 	AI_Output			(other, self, "DIA_Biff_HALLO_keineAhnung_15_00"); //I haven't a clue.
 	AI_Output			(self, other, "DIA_Biff_HALLO_keineAhnung_07_01"); //I'm waiting for something to finally happen here.
 
-	Info_AddChoice	(DIA_Biff_HALLO, "What do you expect to happen?", DIA_Biff_HALLO_keineAhnung_was );
+	Info_AddChoice	(DIA_Biff_HALLO, "Was soll denn passieren?", DIA_Biff_HALLO_keineAhnung_was );
 };
 func void DIA_Biff_HALLO_keineAhnung_was ()
 {
 	AI_Output			(other, self, "DIA_Biff_HALLO_keineAhnung_was_15_00"); //What do you expect to happen?
 	AI_Output			(self, other, "DIA_Biff_HALLO_keineAhnung_was_07_01"); //Oh, man, you are really not the sharpest knife in the drawer. If I knew that, I wouldn't have to wait.
 
-	Info_AddChoice	(DIA_Biff_HALLO, "What could happen, then?", DIA_Biff_HALLO_keineAhnung_was_was2 );
+	Info_AddChoice	(DIA_Biff_HALLO, "Was könnte denn passieren?", DIA_Biff_HALLO_keineAhnung_was_was2 );
 
 };
 func void DIA_Biff_HALLO_keineAhnung_was_was2 ()
@@ -124,7 +124,7 @@ func void DIA_Biff_HALLO_keineAhnung_was_was2 ()
 	AI_Output			(other, self, "DIA_Biff_HALLO_keineAhnung_was_was2_15_00"); //What could happen, then?
 	AI_Output			(self, other, "DIA_Biff_HALLO_keineAhnung_was_was2_07_01"); //You're getting on my nerves. Look, I don't care what happens. Just as long as something does happen.
 
-	Info_AddChoice	(DIA_Biff_HALLO, "Why don't you do something, then?", DIA_Biff_HALLO_keineAhnung_was_was2_was3 );
+	Info_AddChoice	(DIA_Biff_HALLO, "Wieso machst du dann nicht irgendwas?", DIA_Biff_HALLO_keineAhnung_was_was2_was3 );
 
 };
 func void DIA_Biff_HALLO_keineAhnung_was_was2_was3 ()
@@ -133,7 +133,7 @@ func void DIA_Biff_HALLO_keineAhnung_was_was2_was3 ()
 	AI_Output			(self, other, "DIA_Biff_HALLO_keineAhnung_was_was2_was3_07_01"); //If you don't stop asking stupid questions right now, I'm going to shut your dirty mouth.
 
 
-	Info_AddChoice	(DIA_Biff_HALLO, "If you just wait around here, nothing will ever happen!", DIA_Biff_HALLO_keineAhnung_was_was2_was3_was4 );
+	Info_AddChoice	(DIA_Biff_HALLO, "Wenn du nur wartest, wird hier nie etwas passieren!", DIA_Biff_HALLO_keineAhnung_was_was2_was3_was4 );
 
 };
 func void DIA_Biff_HALLO_keineAhnung_was_was2_was3_was4 ()
@@ -157,7 +157,7 @@ instance DIA_Biff_WASHIERIMTAL		(C_INFO)
 	condition	 = 	DIA_Biff_WASHIERIMTAL_Condition;
 	information	 = 	DIA_Biff_WASHIERIMTAL_Info;
 
-	description	 = 	"What are you hoping to find here in the Valley of Mines?";
+	description	 = 	"Was glaubst du, hier im Minental zu finden?";
 };
 
 func int DIA_Biff_WASHIERIMTAL_Condition ()
@@ -174,8 +174,8 @@ func void DIA_Biff_WASHIERIMTAL_Info ()
 	AI_Output			(self, other, "DIA_Biff_WASHIERIMTAL_07_01"); //Gold and honor. What else? When I'm finished with the dragon, I'll be swimming in gold.
 	AI_Output			(self, other, "DIA_Biff_WASHIERIMTAL_07_02"); //Enough to spend the rest of my life frequenting every tavern and cathouse in the country.
 
-	Info_AddChoice	(DIA_Biff_WASHIERIMTAL, "Well, then, I wish you luck.", DIA_Biff_WASHIERIMTAL_vielglueck );
-	Info_AddChoice	(DIA_Biff_WASHIERIMTAL, "Either that, or you'll be dead!", DIA_Biff_WASHIERIMTAL_ihrtot );
+	Info_AddChoice	(DIA_Biff_WASHIERIMTAL, "Na dann, viel Glück.", DIA_Biff_WASHIERIMTAL_vielglueck );
+	Info_AddChoice	(DIA_Biff_WASHIERIMTAL, "Oder du wirst tot sein!", DIA_Biff_WASHIERIMTAL_ihrtot );
 
 };
 func void DIA_Biff_WASHIERIMTAL_ihrtot ()
@@ -205,7 +205,7 @@ instance DIA_Biff_ARBEITEN		(C_INFO)
 	information	 = 	DIA_Biff_ARBEITEN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How would you like to work for me from now on?";
+	description	 = 	"Wie wär's, wenn du ab jetzt für mich arbeitest?";
 };
 
 func int DIA_Biff_ARBEITEN_Condition ()
@@ -221,7 +221,7 @@ func void DIA_Biff_ARBEITEN_Info ()
 {
 	AI_Output			(other, self, "DIA_Biff_ARBEITEN_15_00"); //How would you like to work for me from now on?
 	
-	B_LogEntry (TOPIC_Dragonhunter,"The Dragon Hunter Biff is a typical mercenary. If I pay him, he'll fight for me."); 
+	B_LogEntry (TOPIC_Dragonhunter,"Der Drachenjäger Biff ist ein Söldner wie er im Buche steht. Wenn ich ihn bezahle, wird er auch für mich kämpfen."); 
 
 	if (DJG_BiffParty_nomore >= 6) //Joly: Biff hat bei 3 die Schnauze voll vom SC
 	{
@@ -234,9 +234,9 @@ func void DIA_Biff_ARBEITEN_Info ()
 	};
 	Info_ClearChoices	(DIA_Biff_ARBEITEN);
 	
-	Info_AddChoice	(DIA_Biff_ARBEITEN, "Count yourself lucky if I spare your life.", DIA_Biff_ARBEITEN_lebenlassen );
-	Info_AddChoice	(DIA_Biff_ARBEITEN, "You'll get half of the booty.", DIA_Biff_ARBEITEN_HalbeHalbe );
-	Info_AddChoice	(DIA_Biff_ARBEITEN, "I'll pay you 100 gold coins for now.", DIA_Biff_ARBEITEN_100 );
+	Info_AddChoice	(DIA_Biff_ARBEITEN, "Du kannst froh sein, wenn ich dich leben lasse.", DIA_Biff_ARBEITEN_lebenlassen );
+	Info_AddChoice	(DIA_Biff_ARBEITEN, "Du kriegst die Hälfte der Beute.", DIA_Biff_ARBEITEN_HalbeHalbe );
+	Info_AddChoice	(DIA_Biff_ARBEITEN, "Ich zahl dir erst mal 100 Goldmünzen", DIA_Biff_ARBEITEN_100 );
 };
 
 func void DIA_Biff_ARBEITEN_100 ()
@@ -312,7 +312,7 @@ func int DIA_Biff_GELDEINTREIBEN_Condition ()
 	if (DJG_Biff_SCGold < Npc_HasItems(hero,ItMi_Gold)-1)
 		&& ((Npc_GetBodyState(hero))!= BS_INVENTORY)				//Joly: wegen Truhen		 
 		&& ((Npc_GetBodyState(hero))!= BS_MOBINTERACT_INTERRUPT)
-		&& (((Npc_GetBodyState(hero))!= BS_STAND)||(BIFF_LABERT_GELDEINTREIBEN == TRUE))//Joly: wegen Pl�ndern von NSC-Invs	
+		&& (((Npc_GetBodyState(hero))!= BS_STAND)||(BIFF_LABERT_GELDEINTREIBEN == TRUE))//Joly: wegen Plndern von NSC-Invs	
 		&& (((Npc_GetBodyState(hero))!= BS_ITEMINTERACT)||(BIFF_LABERT_GELDEINTREIBEN == TRUE))//Joly: wegen Geldbeutel	
 		&& (DJG_Biff_HalbeHalbe == TRUE)
 		&& (DJG_BiffParty == TRUE)	
@@ -332,8 +332,8 @@ func void DIA_Biff_GELDEINTREIBEN_Info ()
 
 	Info_ClearChoices	(DIA_Biff_GELDEINTREIBEN);
 
-	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "I can't afford you.", DIA_Biff_GELDEINTREIBEN_zuTeuer );
-	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "Here's your share.", DIA_Biff_GELDEINTREIBEN_geben );
+	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "Du bist mir zu teuer.", DIA_Biff_GELDEINTREIBEN_zuTeuer );
+	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "Hier ist dein Anteil.", DIA_Biff_GELDEINTREIBEN_geben );
 };
 func void DIA_Biff_GELDEINTREIBEN_geben ()
 {
@@ -352,8 +352,8 @@ func void DIA_Biff_GELDEINTREIBEN_zuTeuer ()
 	AI_Output			(self, other, "DIA_Biff_GELDEINTREIBEN_zuTeuer_07_01"); //Stop whining at me. We agreed on half.
 
 	Info_ClearChoices	(DIA_Biff_GELDEINTREIBEN);
-	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "We must part ways now, I'm afraid.", DIA_Biff_GELDEINTREIBEN_zuTeuer_trennen );
-	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "Here's your share.", DIA_Biff_GELDEINTREIBEN_geben );
+	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "Ich fürchte, ich muß mich von dir trennen.", DIA_Biff_GELDEINTREIBEN_zuTeuer_trennen );
+	Info_AddChoice	(DIA_Biff_GELDEINTREIBEN, "Hier ist dein Anteil.", DIA_Biff_GELDEINTREIBEN_geben );
 
 };
 func void DIA_Biff_GELDEINTREIBEN_zuTeuer_trennen ()
@@ -394,7 +394,7 @@ func int DIA_Biff_ICHBLEIBHIER_Condition ()
 				&& 	(
 						(
 							(
-								//Joly: Biff st�rt nicht das Drachengespr�ch!
+								//Joly: Biff strt nicht das Drachengesprch!
 								((Npc_GetDistToWP(self,"OW_SWAMPDRAGON_01")<4000)	&& (Npc_IsDead(SwampDragon)== FALSE)&& (SwampDragon.flags != 0))
 								||((Npc_GetDistToWP(self,"LOCATION_19_03_PATH_RUIN8")<2000)	&& (Npc_IsDead(RockDragon)== FALSE) && (RockDragon.flags != 0))
 								||((Npc_GetDistToWP(self,"CASTLE_36")<4000)			&& (Npc_IsDead(FireDragon)== FALSE) && (FireDragon.flags != 0))
@@ -456,7 +456,7 @@ instance DIA_Biff_Stay_AwayFromOC		(C_INFO)
 	nr		 	 = 3;
 	permanent	 = 	TRUE;
 
-	description	 = 	"(Take Biff along again)";
+	description	 = 	"(Biff wieder mitnehmen)";
 
 };
 
@@ -527,7 +527,7 @@ instance DIA_Biff_BIFFLOSWERDEN		(C_INFO)
 	information	 = 	DIA_Biff_BIFFLOSWERDEN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"This is where our collaboration should end, I think.";
+	description	 = 	"Ich denke, ab hier beenden wir unsere Zusammenarbeit.";
 };
 
 func int DIA_Biff_BIFFLOSWERDEN_Condition ()
@@ -595,8 +595,8 @@ func void DIA_Biff_MEHRGELD_Info ()
 	
 	Info_ClearChoices	(DIA_Biff_MEHRGELD);
 	
-	Info_AddChoice	(DIA_Biff_MEHRGELD, "I can't afford you.", DIA_Biff_MEHRGELD_zuTeuer );
-	Info_AddChoice	(DIA_Biff_MEHRGELD, "All right. You're worth it.", DIA_Biff_MEHRGELD_ok );
+	Info_AddChoice	(DIA_Biff_MEHRGELD, "Du bist mir zu teuer.", DIA_Biff_MEHRGELD_zuTeuer );
+	Info_AddChoice	(DIA_Biff_MEHRGELD, "In Ordnung. Du bist es wert.", DIA_Biff_MEHRGELD_ok );
 
 };
 
@@ -653,7 +653,7 @@ instance DIA_Biff_HEILUNG		(C_INFO)
 	information	 = 	DIA_Biff_HEILUNG_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Do you need a healing potion?";
+	description	 = 	"Brauchst du Heilung?";
 };
 
 func int DIA_Biff_HEILUNG_Condition ()
@@ -670,9 +670,9 @@ func void DIA_Biff_HEILUNG_Info ()
 	AI_Output			(self, other, "DIA_Biff_HEILUNG_07_01"); //Sure. It can't hurt.
 
 	Info_ClearChoices	(DIA_Biff_HEILUNG);
-	Info_AddChoice	(DIA_Biff_HEILUNG, "I'll give you something later.", DIA_Biff_HEILUNG_spaeter );
-	Info_AddChoice	(DIA_Biff_HEILUNG, "(the smallest healing potion)", DIA_Biff_HEILUNG_heiltrankLow );
-	Info_AddChoice	(DIA_Biff_HEILUNG, "(the best healing potion)", DIA_Biff_HEILUNG_heiltrank );
+	Info_AddChoice	(DIA_Biff_HEILUNG, "Ich werde dir später etwas geben.", DIA_Biff_HEILUNG_spaeter );
+	Info_AddChoice	(DIA_Biff_HEILUNG, "(den kleinsten Heiltrank.)", DIA_Biff_HEILUNG_heiltrankLow );
+	Info_AddChoice	(DIA_Biff_HEILUNG, "(den besten Heiltrank.)", DIA_Biff_HEILUNG_heiltrank );
 
 };
 func void DIA_Biff_HEILUNG_heiltrank ()
@@ -736,7 +736,7 @@ instance DIA_Biff_DRACHENTOT		(C_INFO)
 	condition	 = 	DIA_Biff_DRACHENTOT_Condition;
 	information	 = 	DIA_Biff_DRACHENTOT_Info;
 
-	description	 = 	"That's it. All the dragons are dead.";
+	description	 = 	"Das wäre geschafft. Alle Drachen sind tot.";
 };
 
 func int DIA_Biff_DRACHENTOT_Condition ()
@@ -775,7 +775,7 @@ instance DIA_Biff_KnowWhereEnemy		(C_INFO)
 	condition	 = 	DIA_Biff_KnowWhereEnemy_Condition;
 	information	 = 	DIA_Biff_KnowWhereEnemy_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Would you fancy a little trip around the world?";
+	description	 = 	"Lust auf eine kleine Weltreise?";
 };
 func int DIA_Biff_KnowWhereEnemy_Condition ()
 {	
@@ -800,8 +800,8 @@ func void DIA_Biff_KnowWhereEnemy_Info ()
 		AI_Output			(other,self , "DIA_Biff_KnowWhereEnemy_15_04"); //I'm going to leave Khorinis and go to an island to look for new opponents.
 
 		Info_ClearChoices (DIA_Biff_KnowWhereEnemy);
-		Info_AddChoice (DIA_Biff_KnowWhereEnemy,"I just thought I'd mention it.",DIA_Biff_KnowWhereEnemy_No);
-		Info_AddChoice (DIA_Biff_KnowWhereEnemy,"Won't you come along?",DIA_Biff_KnowWhereEnemy_Yes);
+		Info_AddChoice (DIA_Biff_KnowWhereEnemy,"Aber das nur so am Rande.",DIA_Biff_KnowWhereEnemy_No);
+		Info_AddChoice (DIA_Biff_KnowWhereEnemy,"Komm doch mit.",DIA_Biff_KnowWhereEnemy_Yes);
 	};
 };
 
@@ -816,7 +816,7 @@ FUNC VOID DIA_Biff_KnowWhereEnemy_Yes ()
 
 	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);                                                                                        	                       
     Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	                                                                                  	                       
-    B_LogEntry (TOPIC_Crew,"The prospect of rich pickings has persuaded Biff to accompany me. As long as he gets enough gold, I can count on him."); 
+    B_LogEntry (TOPIC_Crew,"Die Aussicht auf reiche Beute hat Biff überzeugen können mich auf meiner Reise zu begleiten. So lange er genug Gold bekommt, kann ich auf ihn zählen."); 
     
     B_GivePlayerXP (XP_Crewmember_Success);   
 
@@ -840,7 +840,7 @@ FUNC VOID DIA_Biff_KnowWhereEnemy_No ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Gleich geht�s los
+//	Gleich gehts los
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Biff_Pass		(C_INFO)
 {
@@ -850,11 +850,11 @@ instance DIA_Biff_Pass		(C_INFO)
 	information	 = 	DIA_Biff_Pass_Info;
 	PERMANENT 	 =  TRUE;
 
-	description	 = 	"Will you make it across the pass?";
+	description	 = 	"Schaffst du's über den Pass?";
 };
 func int DIA_Biff_Pass_Condition ()
 {	
-	if (Npc_GetDistToWP(self,"START")<1000)
+	if (Npc_GetDistToWP(self,"Start")<1000)
 	&& (Biff_IsOnBoard == LOG_SUCCESS) 
 		{
 				return TRUE;

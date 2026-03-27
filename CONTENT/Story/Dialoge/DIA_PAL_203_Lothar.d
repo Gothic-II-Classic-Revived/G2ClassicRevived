@@ -38,7 +38,7 @@ INSTANCE DIA_Lothar_FirstEXIT   (C_INFO)
 	condition   = DIA_Lothar_FirstEXIT_Condition;
 	information = DIA_Lothar_FirstEXIT_Info;
 	permanent   = TRUE;
-	description = "I've got to go! (END)";
+	description = "Ich muss weiter!";
 };
 FUNC INT DIA_Lothar_FirstEXIT_Condition()
 {	
@@ -49,37 +49,37 @@ FUNC INT DIA_Lothar_FirstEXIT_Condition()
 };
 FUNC VOID DIA_Lothar_FirstEXIT_Info() 
 {
-	AI_Output (other, self, "DIA_Lothar_FirstEXIT_15_00"); //I've got to go!
+	AI_Output (other, self, "DIA_Lothar_FirstEXIT_15_00"); //Ich muss weiter!
 	if (Lothar_Regeln == FALSE)
 	{
-		AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_01"); //Wait! You don't know the new laws of the city yet!
-		AI_Output (other, self, "DIA_Lothar_FirstEXIT_15_02"); //Later.
+		AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_01"); //Warte! Du kennst die neuen Gesetze der Stadt noch nicht!
+		AI_Output (other, self, "DIA_Lothar_FirstEXIT_15_02"); //Später.
 	}
 	else
 	{
 		if (Player_TalkedAboutDragons == TRUE)
 		&& ((hero.guild != GIL_PAL)	&&	(hero.guild != GIL_KDF))
 		{
-			AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_03"); //If I hear ONE more time that you are telling people here about dragons, you will be in big trouble, do I make myself clear?
+			AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_03"); //Wenn mir noch einmal zu Ohren kommt, dass du den Leuten hier was von Drachen erzählst, bekommst du mächtigen Ärger mit mir, klar?
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_04"); //As long as you are in Khorinis, you can feel safe.
+			AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_04"); //Solange du in Khorinis bist, kannst du dich sicher fühlen.
 
 			if (hero.guild != GIL_PAL)
 			{
-				AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_05"); //The king's paladins watch over this city now!
+				AI_Output (self, other, "DIA_Lothar_FirstEXIT_01_05"); //Die Paladine des Königs wachen jetzt über diese Stadt!
 			};
 		};
 
 		Lothar_ImOV = TRUE;
-		Npc_ExchangeRoutine (self, "START");
+		Npc_ExchangeRoutine (self, "Start");
 	};
 
 	// ------- Canthars TA auswechseln -------
 	if (Canthar_InStadt == FALSE)
 	{
-		Npc_ExchangeRoutine (Canthar, "START");
+		Npc_ExchangeRoutine (Canthar, "Start");
 		Canthar_InStadt = TRUE;
 	};
 
@@ -110,26 +110,26 @@ func int DIA_Lothar_Hallo_Condition ()
 
 func void DIA_Lothar_Hallo_Info ()
 {
-	AI_Output (self, other, "DIA_Lothar_Hallo_01_00"); //Halt, stranger!
+	AI_Output (self, other, "DIA_Lothar_Hallo_01_00"); //Halt, Fremder!
 
 	if (Mil_310_schonmalreingelassen == FALSE)
 	&& (Mil_333_schonmalreingelassen == FALSE)
 	&& ((hero.guild != GIL_PAL)	&&	(hero.guild != GIL_KDF))
 	{
-		AI_Output (self, other, "DIA_Lothar_Hallo_01_01"); //I haven't seen you come through this gate.
-		AI_Output (other, self, "DIA_Lothar_Hallo_15_02"); //And?
-		AI_Output (self, other, "DIA_Lothar_Hallo_01_03"); //And the guards on the other gate have orders not to let any unknown persons into the city.
-		AI_Output (other, self, "DIA_Lothar_Hallo_15_04"); //Weeell...
-		AI_Output (self, other, "DIA_Lothar_Hallo_01_05"); //I shall have to have a word with those two!
-		AI_Output (self, other, "DIA_Lothar_Hallo_01_06"); //But now for us two:
+		AI_Output (self, other, "DIA_Lothar_Hallo_01_01"); //Ich habe dich nicht durch dieses Stadttor kommen sehen.
+		AI_Output (other, self, "DIA_Lothar_Hallo_15_02"); //Und?
+		AI_Output (self, other, "DIA_Lothar_Hallo_01_03"); //Und die Wachen am anderen Stadttor haben Befehl, keine Unbekannten in die Stadt zu lassen.
+		AI_Output (other, self, "DIA_Lothar_Hallo_15_04"); //Tjaaa ...
+		AI_Output (self, other, "DIA_Lothar_Hallo_01_05"); //Ich werde ein ernstes Wort mit den beiden reden müssen!
+		AI_Output (self, other, "DIA_Lothar_Hallo_01_06"); //Aber nun zu uns:
 	};
 
-	AI_Output (self, other, "DIA_Lothar_Hallo_01_07"); //I am Lothar. Paladin of the King and humble servant of Innos, your Lord.
-	AI_Output (self, other, "DIA_Lothar_Hallo_01_08"); //Our commander, Lord Hagen, has entrusted me with the task of explaining to all newcomers the new laws which apply to all inhabitants of the city.
+	AI_Output (self, other, "DIA_Lothar_Hallo_01_07"); //Ich bin Lothar. Paladin des Königs und demütiger Diener Innos', deines Herrn.
+	AI_Output (self, other, "DIA_Lothar_Hallo_01_08"); //Unser Kommandant, Lord Hagen, hat mich mit der Aufgabe betraut, allen Neuankömmlingen die neuen Gesetze zu erklären, die für alle Bewohner der Stadt gelten.
 
 	if Npc_KnowsInfo (other, DIA_Lester_SEND_XARDAS)
 	{
-		B_StartOtherRoutine (Lester, "XARDAS");
+		B_StartOtherRoutine (Lester, "Xardas");
 	};
 };
 
@@ -143,7 +143,7 @@ instance DIA_Lothar_MESSAGE		(C_INFO)
 	condition	 = 	DIA_Lothar_MESSAGE_Condition;
 	information	 = 	DIA_Lothar_MESSAGE_Info;
 	permanent    =  FALSE;
-	description	 = 	"I have an important message for the leader of the paladins!";
+	description	 = 	"Ich habe eine wichtige Nachricht für den Anführer der Paladine!";
 };
 func int DIA_Lothar_MESSAGE_Condition ()
 {	
@@ -155,9 +155,9 @@ func int DIA_Lothar_MESSAGE_Condition ()
 };
 func void DIA_Lothar_MESSAGE_Info ()
 {
- 	AI_Output (other, self, "DIA_Lothar_MESSAGE_15_00"); //I have an important message for the leader of the paladins!
-	AI_Output (self, other, "DIA_Lothar_MESSAGE_01_01"); //The honorable Lord Hagen is not receiving anyone.
-	AI_Output (self, other, "DIA_Lothar_MESSAGE_01_02"); //Lord Andre, the commander of the city guard, is responsible for all issues pertaining to the common folk.
+ 	AI_Output (other, self, "DIA_Lothar_MESSAGE_15_00"); //Ich habe eine wichtige Nachricht für den Anführer der Paladine!
+	AI_Output (self, other, "DIA_Lothar_MESSAGE_01_01"); //Der ehrenwerte Lord Hagen ist für niemanden zu sprechen.
+	AI_Output (self, other, "DIA_Lothar_MESSAGE_01_02"); //Für alle Fragen des gemeinen Volkes ist Lord Andre, der Kommandant der Stadtwache, zuständig.
 };	
 
 // ***************************************************************
@@ -170,7 +170,7 @@ instance DIA_Lothar_EyeInnos (C_INFO)
 	condition	 = 	DIA_Lothar_EyeInnos_Condition;
 	information	 = 	DIA_Lothar_EyeInnos_Info;
 	permanent    =  FALSE;
-	description	 = 	"I have come to get the Eye of Innos!";
+	description	 = 	"Ich bin gekommen um das Auge Innos zu holen!";
 };
 func int DIA_Lothar_EyeInnos_Condition ()
 {	
@@ -182,23 +182,23 @@ func int DIA_Lothar_EyeInnos_Condition ()
 };
 func void DIA_Lothar_EyeInnos_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_EyeInnos_15_00"); //I have come to get the Eye of Innos!
+	AI_Output (other, self, "DIA_Lothar_EyeInnos_15_00"); //Ich bin gekommen um das Auge Innos zu holen!
 
 	if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 	{
-		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_01"); //The Eye is a matter for Lord Hagen. Speak to him about it.
+		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_01"); //Das Auge ist Angelegenheit von Lord Hagen. Sprich mit ihm darüber.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_02"); //The sacred Eye of Innos! How do you know about that?! You are not a member of the order!
-		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_03"); //A magician told me about it.
-		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_04"); //I don't know what his motives were when he entrusted one of the secrets of our order to you.
-		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_05"); //But he certainly didn't mean for YOU to get your fingers on it.
-		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_06"); //But...
-		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_07"); //I don't want to hear any more about it!
+		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_02"); //Das heilige Auge Innos'! Woher weißt du davon?! Du bist kein Angehöriger des Ordens!
+		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_03"); //Ein Magier hat mir davon erzählt.
+		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_04"); //Ich weiß nicht, was seine Beweggründe waren, dir eines der Geheimnisse unseres Ordens anzuvertrauen.
+		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_05"); //Aber er hatte sicherlich nicht im Sinn, dass DU es in die Finger bekommst.
+		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_06"); //Aber...
+		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_07"); //Ich will nichts mehr davon hören!
 		if (Player_TalkedAboutDragons == TRUE)
 		{
-			AI_Output (self, other, "DIA_Lothar_EyeInnos_01_08"); //First you start with fairy tales about dragons and then this - incredible!
+			AI_Output (self, other, "DIA_Lothar_EyeInnos_01_08"); //Erst fängst du mit Märchen über Drachen an und dann das - unfassbar!
 		};
 	};
 };	
@@ -213,7 +213,7 @@ instance DIA_Lothar_Dragons (C_INFO)
 	condition	 = 	DIA_Lothar_Dragons_Condition;
 	information	 = 	DIA_Lothar_Dragons_Info;
 	permanent    =  FALSE;
-	description	 = 	"Listen - the city is threatened by dragons!";
+	description	 = 	"Hör zu - die Stadt wird von Drachen bedroht!";
 };
 func int DIA_Lothar_Dragons_Condition ()
 {	
@@ -225,19 +225,19 @@ func int DIA_Lothar_Dragons_Condition ()
 };
 func void DIA_Lothar_Dragons_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Dragons_15_00"); //Listen - the city is threatened by dragons!
+	AI_Output (other, self, "DIA_Lothar_Dragons_15_00"); //Hör zu - die Stadt wird von Drachen bedroht!
 	if ((hero.guild != GIL_PAL)&&(hero.guild != GIL_KDF))
 	{
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_01"); //That can't be true!
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_02"); //Another lunatic!
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_03"); //We have enough unrest in the city as it is. And without some dimwit scaring people with fairy tales about dragons!
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_04"); //I immediately locked up the last person who was here telling dragon tales and sent him to the Valley of Mines with the prison transport. So mind your tongue!
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_05"); //We can't use anyone here who spreads panic among the people!
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_01"); //Das darf doch nicht wahr sein!
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_02"); //Schon wieder so ein Spinner!
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_03"); //Wir haben schon genug Unruhe in der Stadt. Auch ohne dass hier irgendwelche Schwachköpfe den Leuten mit Märchen über Drachen Angst machen!
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_04"); //Den letzten, der hier was von Drachen erzählt hat, hab ich direkt eingebuchtet und mit dem Gefangenentransport ins Minental geschickt. Also hüte deine Zunge!
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_05"); //Wir können hier niemanden gebrauchen, der Panik unter den Leuten verbreitet!
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_06"); //I have often heard that. But it is difficult to believe.
-		AI_Output (self, other, "DIA_Lothar_Dragons_01_07"); //It would be better if you kept that to yourself. We must avoid fear and panic among the people.
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_06"); //Das habe ich schon oft gehört. Ist aber schwer zu glauben.
+		AI_Output (self, other, "DIA_Lothar_Dragons_01_07"); //Es wäre besser, wenn du das für dich behältst. Wir müssen Angst und Panik unter den Leuten vermeiden.
 	};
 	Player_TalkedAboutDragons = TRUE;
 };	
@@ -252,7 +252,7 @@ instance DIA_Lothar_WhoDragons (C_INFO)
 	condition	 = 	DIA_Lothar_WhoDragons_Condition;
 	information	 = 	DIA_Lothar_WhoDragons_Info;
 	permanent    =  FALSE;
-	description	 = 	"Somebody already reported the dragons here?";
+	description	 = 	"Hier hat schon jemand von den Drachen berichtet?";
 };
 func int DIA_Lothar_WhoDragons_Condition ()
 {	
@@ -264,12 +264,12 @@ func int DIA_Lothar_WhoDragons_Condition ()
 };
 func void DIA_Lothar_WhoDragons_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_WhoDragons_15_00"); //Somebody already reported the dragons here?
-	AI_Output (self, other, "DIA_Lothar_WhoDragons_01_01"); //Yes. The fellow's name was Diego. I think so, in any case.
+	AI_Output (other, self, "DIA_Lothar_WhoDragons_15_00"); //Hier hat schon jemand von den Drachen berichtet?
+	AI_Output (self, other, "DIA_Lothar_WhoDragons_01_01"); //Ja. Der Kerl hieß Diego. Glaube ich jedenfalls.
 
 	if ((hero.guild != GIL_PAL)	&&	(hero.guild != GIL_KDF))
 	{
-		AI_Output (self, other, "DIA_Lothar_WhoDragons_01_02"); //(threatens) I warned him - just like you! But the lunatic just wouldn't stop getting on my nerves!
+		AI_Output (self, other, "DIA_Lothar_WhoDragons_01_02"); //(droht) Ich hatte ihn gewarnt - genau wie dich! Aber der Spinner wollte einfach nicht aufhören, mir auf den Geist zu gehen!
 	};
 };	
 
@@ -283,7 +283,7 @@ instance DIA_Lothar_Regeln (C_INFO)
 	condition	 = 	DIA_Lothar_Regeln_Condition;
 	information	 = 	DIA_Lothar_Regeln_Info;
 	permanent    =  FALSE;
-	description	 = 	"All right - explain the rules of the city to me!";
+	description	 = 	"Gut - erkläre mir die Regeln der Stadt!";
 };
 func int DIA_Lothar_Regeln_Condition ()
 {	
@@ -291,12 +291,12 @@ func int DIA_Lothar_Regeln_Condition ()
 };
 func void DIA_Lothar_Regeln_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Regeln_15_00"); //(little sigh) All right - explain the rules of the city to me!
-	AI_Output (self, other, "DIA_Lothar_Regeln_01_01"); //First: The honorable paladin Lord Hagen resides in the upper quarter, along with his troops.
-	AI_Output (self, other, "DIA_Lothar_Regeln_01_02"); //That is why access to the upper quarter is allowed only to honorable citizens.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_04"); //Second: The town hall in the upper quarter is now the command post of the paladins. Only the paladins themselves and members of the militia have access to it.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_05"); //And third: Whoever is accused of a crime must exonerate himself with the commander of the militia.
-	AI_Output (self, other, "DIA_Lothar_Regeln_01_05"); //Any questions?
+	AI_Output (other, self, "DIA_Lothar_Regeln_15_00"); //(seufzt leicht) Gut - erkläre mir die Regeln der Stadt!
+	AI_Output (self, other, "DIA_Lothar_Regeln_01_01"); //Erstens: Der ehrenwerte Paladin Lord Hagen residiert zusammen mit seiner Truppe im oberen Viertel.
+	AI_Output (self, other, "DIA_Lothar_Regeln_01_02"); //Deswegen ist der Zutritt zum oberen Viertel nur ehrenwerten Bürgern gestattet.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_04"); //Zweitens: Das Rathaus im oberen Viertel dient als Kommandoposten der Paladine. Dort haben nur die Paladine selbst und Angehörige der Miliz Zugang.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_05"); //Und drittens: Wer eines Verbrechens abgeklagt ist, muß sich beim Kommandanten der Miliz dafür rechtfertigen.
+	AI_Output (self, other, "DIA_Lothar_Regeln_01_05"); //Noch Fragen?
 	
 	Lothar_Regeln = TRUE;
 };	
@@ -311,7 +311,7 @@ instance DIA_Lothar_HowCitizen (C_INFO)
 	condition	 = 	DIA_Lothar_HowCitizen_Condition;
 	information	 = 	DIA_Lothar_HowCitizen_Info;
 	permanent    =  FALSE;
-	description	 = 	"How do I BECOME a citizen of the town?";
+	description	 = 	"Wie WERDE ich Bürger der Stadt?";
 };
 func int DIA_Lothar_HowCitizen_Condition ()
 {	
@@ -324,11 +324,11 @@ func int DIA_Lothar_HowCitizen_Condition ()
 };
 func void DIA_Lothar_HowCitizen_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_06"); //How do I BECOME a citizen of the town?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_07"); //Only those with regular jobs will be considered citizens of the town!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_09"); //But don't think that you will be admitted to Lord Hagen just because you are a citizen of the town!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_10"); //As a citizen you have access to the upper quarter - nothing more!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_11"); //Only as a member of the militia will you have access to the town hall!
+	AI_Output (other, self, "DIA_Lothar_Add_15_06"); //Wie WERDE ich Bürger der Stadt?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_07"); //Nur wer hier einer ordentlichen Arbeit nachgeht, wird als Bürger der Stadt angesehen!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_09"); //Aber denk nur nicht, daß du bei Lord Hagen vorgelassen wirst, nur weil du Bürger der Stadt bist!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_10"); //Als Bürger hast du Zugang zum oberen Viertel - mehr nicht!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_11"); //Nur als angehöriger der Miliz hast du Zugang zum Rathaus!
 };
 
 // ***************************************************************
@@ -341,7 +341,7 @@ instance DIA_Lothar_WoArbeit (C_INFO)
 	condition	 = 	DIA_Lothar_WoArbeit_Condition;
 	information	 = 	DIA_Lothar_WoArbeit_Info;
 	permanent    =  FALSE;
-	description	 = 	"Where can I find work?";
+	description	 = 	"Wo finde ich Arbeit?";
 };
 func int DIA_Lothar_WoArbeit_Condition ()
 {	
@@ -354,12 +354,12 @@ func int DIA_Lothar_WoArbeit_Condition ()
 };
 func void DIA_Lothar_WoArbeit_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_14"); //Where can I find work?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_15"); //You will have to apply as an apprentice to one of the masters here in the lower part of the city.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_16"); //As soon as a master accepts you, you are a citizen of the town.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_17"); //However, the other masters must agree to it, that is the custom here in Khorinis.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_18"); //If you were thinking about looking for work in the harbor district - forget it!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_19"); //The scum of the city live there. Don't even go there, you would regret it!
+	AI_Output (other, self, "DIA_Lothar_Add_15_14"); //Wo finde ich Arbeit?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_15"); //Du wirst dich bei einem der Handwerksmeister hier in der Unterstadt als Lehrling bewerben müssen.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_16"); //Sobald einer der Meister dich aufnimmt, bist du Bürger der Stadt.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_17"); //Allerdings müssen dafür auch die anderen Meister zustimmen, so will es der Brauch hier in Khorinis.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_18"); //Wenn du auf die Idee kommen solltest, im Hafenviertel nach Arbeit zu suchen - vergiß es!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_19"); //Da wohnt nur der Abschaum der Stadt. Geh bloß nich dorthin, du würdest es bereuen!
 };
 
 // ***************************************************************
@@ -372,7 +372,7 @@ instance DIA_Lothar_ToOV (C_INFO)
 	condition	 = 	DIA_Lothar_ToOV_Condition;
 	information	 = 	DIA_Lothar_ToOV_Info;
 	permanent    =  FALSE;
-	description	 = 	"How do I get to the upper quarter?";
+	description	 = 	"Wie komme ich zum oberen Viertel?";
 };
 func int DIA_Lothar_ToOV_Condition ()
 {	
@@ -386,10 +386,10 @@ func int DIA_Lothar_ToOV_Condition ()
 };
 func void DIA_Lothar_ToOV_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_ToOV_15_00"); //How do I get to the upper quarter?
-	AI_Output (self, other, "DIA_Lothar_ToOV_01_01"); //Say, are you listening to me at all?!
-	AI_Output (self, other, "DIA_Lothar_ToOV_01_02"); //You are not a citizen of this town. You can save yourself the trip - the guards won't let you in.
-	AI_Output (self, other, "DIA_Lothar_ToOV_01_03"); //The entire area behind the inner gate is off limits to you!
+	AI_Output (other, self, "DIA_Lothar_ToOV_15_00"); //Wie komme ich zum oberen Viertel?
+	AI_Output (self, other, "DIA_Lothar_ToOV_01_01"); //Sag mal, hörst du mir überhaupt zu?!
+	AI_Output (self, other, "DIA_Lothar_ToOV_01_02"); //Du bist kein Bürger dieser Stadt. Du kannst dir den Weg sparen - die Wachen werden dich nicht einlassen.
+	AI_Output (self, other, "DIA_Lothar_ToOV_01_03"); //Der gesamte Bereich hinter dem inneren Stadttor ist tabu für dich!
 };	
 
 // ***************************************************************
@@ -402,7 +402,7 @@ instance DIA_Lothar_ToMiliz (C_INFO)
 	condition	 = 	DIA_Lothar_ToMiliz_Condition;
 	information	 = 	DIA_Lothar_ToMiliz_Info;
 	permanent    =  FALSE;
-	description	 = 	"How do I get accepted into the militia?";
+	description	 = 	"Wie werde ich bei der Miliz aufgenommen.";
 };
 func int DIA_Lothar_ToMiliz_Condition ()
 {	
@@ -414,13 +414,13 @@ func int DIA_Lothar_ToMiliz_Condition ()
 };
 func void DIA_Lothar_ToMiliz_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_26"); //How do I get accepted into the militia?
+	AI_Output (other, self, "DIA_Lothar_Add_15_26"); //Wie werde ich bei der Miliz aufgenommen.
 	if (Player_IsApprentice == APP_NONE)
 	{
-		AI_Output (self ,other, "DIA_Lothar_Add_01_27"); //By express command of Lord Hagen, only citizens of the town will be admitted into the militia.
-		AI_Output (other, self, "DIA_Lothar_Add_15_28"); //I see.
+		AI_Output (self ,other, "DIA_Lothar_Add_01_27"); //Auf ausdrücklichen Befehl von Lord Hagen werden nur Bürger der Stadt bei der Miliz aufgenommen.
+		AI_Output (other, self, "DIA_Lothar_Add_15_28"); //Verstehe.
 	};
-	AI_Output (self ,other, "DIA_Lothar_Add_01_29"); //If you want to know more, speak to Lord Andre in the barracks.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_29"); //Wenn du mehr wissen willst, melde dich bei Lord Andre in der Kaserne.
 };	
 
 // ***************************************************************
@@ -433,7 +433,7 @@ instance DIA_Lothar_ToPaladins (C_INFO)
 	condition	 = 	DIA_Lothar_ToPaladins_Condition;
 	information	 = 	DIA_Lothar_ToPaladins_Info;
 	permanent    =  FALSE;
-	description	 = 	"What do I have to do to get armor like yours?";
+	description	 = 	"Was muss ich tun, um eine Rüstung wie deine zu bekommen?";
 };
 func int DIA_Lothar_ToPaladins_Condition ()
 {	
@@ -446,18 +446,18 @@ func int DIA_Lothar_ToPaladins_Condition ()
 };
 func void DIA_Lothar_ToPaladins_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_30"); //What do I have to do to get armor like yours?
+	AI_Output (other, self, "DIA_Lothar_Add_15_30"); //Was muss ich tun, um eine Rüstung wie deine zu bekommen?
 	if (other.guild != GIL_MIL)
 	{
-		AI_Output (self ,other, "DIA_Lothar_Add_01_31"); //(ranting) What? You aren't even a member of the militia!
+		AI_Output (self ,other, "DIA_Lothar_Add_01_31"); //(poltert) Was? Du bist ja noch nicht einmal bei der Miliz!
 	};
 	if (Player_IsApprentice == APP_NONE)
 	{
-		AI_Output (self ,other, "DIA_Lothar_Add_01_32"); //You're not even a CITIZEN!
+		AI_Output (self ,other, "DIA_Lothar_Add_01_32"); //Du bist noch nicht mal BÜRGER!
 	};
-	AI_Output (self ,other, "DIA_Lothar_Add_01_33"); //How can you even think of being allowed to wear the armor of a PALADIN?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_34"); //Only a few militia soldiers, those who have performed extraordinary deeds, have been granted that honor so far.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_35"); //(strictly) If you want to be a paladin, you have a long road ahead of you, my boy!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_33"); //Wie kanst du daran denken, die Rüstung eines PALADINS tragen zu dürfen?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_34"); //Nur wenige Soldaten der Miliz, die außergewöhnliches geleistet haben, haben bisher diese Ehre erhalten.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_35"); //(streng) Wenn du ein Paladin werden willst, hast du noch einen weiten Weg vor dir, mein Junge!
 };	
 
 // ***************************************************************
@@ -470,7 +470,7 @@ instance DIA_Lothar_WoAndre (C_INFO)
 	condition	 = 	DIA_Lothar_WoAndre_Condition;
 	information	 = 	DIA_Lothar_WoAndre_Info;
 	permanent    =  FALSE;
-	description	 = 	"Where can I find the commander of the city guard?";
+	description	 = 	"Wo finde ich den Kommandanten der Stadtwache?";
 };
 func int DIA_Lothar_WoAndre_Condition ()
 {	
@@ -482,8 +482,8 @@ func int DIA_Lothar_WoAndre_Condition ()
 };
 func void DIA_Lothar_WoAndre_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_WoAndre_15_00"); //Where can I find the commander of the city guard?
-	AI_Output (self, other, "DIA_Lothar_WoAndre_01_01"); //Lord Andre can be found in the barracks at the other end of the city.
+	AI_Output (other, self, "DIA_Lothar_WoAndre_15_00"); //Wo finde ich den Kommandanten der Stadtwache?
+	AI_Output (self, other, "DIA_Lothar_WoAndre_01_01"); //Lord Andre hält sich in der Kaserne am anderen Ende der Stadt auf.
 };	
 
 // ***************************************************************
@@ -496,7 +496,7 @@ instance DIA_Lothar_Schlafen (C_INFO)
 	condition	 = 	DIA_Lothar_Schlafen_Condition;
 	information	 = 	DIA_Lothar_Schlafen_Info;
 	permanent    =  FALSE;
-	description	 = 	"Where can I spend the night here?";
+	description	 = 	"Wo kann ich hier übernachten?";
 };
 func int DIA_Lothar_Schlafen_Condition ()
 {	
@@ -507,10 +507,10 @@ func int DIA_Lothar_Schlafen_Condition ()
 };
 func void DIA_Lothar_Schlafen_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_22"); //Where can I spend the night here?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_23"); //If you are looking for a place to sleep, go to the hotel directly across from the barracks.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_24"); //The paladins pay for the lodging of all travelers who come to the city.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_25"); //The traveling traders from the marketplace are also lodged there.
+	AI_Output (other, self, "DIA_Lothar_Add_15_22"); //Wo kann ich hier übernachten?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_23"); //Wenn du einen Platz zum schlafen suchst, geh zum Hotel direkt gegenüber der Kaserne.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_24"); //Die Paladine kommen für die ordentliche Unterbringung aller Reisenden auf, die in die Stadt kommen.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_25"); //Die fahrenden Händler vom Marktplatz sind auch dort untergebracht.
 };	
 
 // ***************************************************************
@@ -536,7 +536,7 @@ func int DIA_Lothar_PermB4OV_Condition ()
 };
 func void DIA_Lothar_PermB4OV_Info ()
 {
-	AI_Output (self, other, "DIA_Lothar_PermB4OV_01_00"); //You can talk to Lord Andre about everything else!
+	AI_Output (self, other, "DIA_Lothar_PermB4OV_01_00"); //Über alles Weitere kannst du mit Lord Andre reden!
 	AI_StopProcessInfos(self);
 };	
 	
@@ -545,42 +545,42 @@ func void DIA_Lothar_PermB4OV_Info ()
 // 		Blubb
 // ***************
 
-func void B_Lothar_Blubb() //�berfl�sige Outputs
+func void B_Lothar_Blubb() //berflsige Outputs
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_00"); //But I MUST see Lord Hagen!
+	AI_Output (other, self, "DIA_Lothar_Add_15_00"); //Aber ich MUSS zu Lord Hagen!
 
-	AI_Output (self ,other, "DIA_Lothar_Add_01_45"); //And as I see, he accepted you into the militia.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_46"); //Hm - he must know what he's doing.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_45"); //Und wie ich sehe, hat er dich bei der Miliz aufgenommen.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_46"); //Hm - er wird schon wissen, was er tut.
 	
-	AI_Output (other, self, "DIA_Lothar_Add_15_20"); //How many masters are there?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_21"); //I believe there are five altogether.
+	AI_Output (other, self, "DIA_Lothar_Add_15_20"); //Wieviele Meister gibt es?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_21"); //Ich glaube, es sind insgesamt fünf.
 		
-	AI_Output (self ,other, "DIA_Lothar_Add_01_62"); //Tell me, didn't I make myself clear? No more tales about dragons!
-	AI_Output (other, self, "DIA_Lothar_Add_15_63"); //How do you know...?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //That is NONE of your business!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //That was the last time, understood?!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_62"); //Sag mal, hab ich mich nicht klar ausgedrückt? Keine Geschichten über Drachen mehr!
+	AI_Output (other, self, "DIA_Lothar_Add_15_63"); //Woher weißt du...?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //Das geht dich GAR nichts an!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //Das war das letzte Mal, klar?!
 	
-	AI_Output (other, self, "DIA_Lothar_Add_15_66"); //Where do I find the commander of the militia?
-	AI_Output (other, self, "DIA_Lothar_Add_15_08"); //I am now an apprentice with one of the masters!
+	AI_Output (other, self, "DIA_Lothar_Add_15_66"); //Wo finde ich den Kommandanten der Miliz?
+	AI_Output (other, self, "DIA_Lothar_Add_15_08"); //Ich bin jetzt Lehrling bei einem der Meister!
 	
-	// ------ NEWS_Modul f�r Unterstadt ------
-	AI_Output (self ,other, "DIA_Lothar_Add_01_47"); //You again.
+	// ------ NEWS_Modul fr Unterstadt ------
+	AI_Output (self ,other, "DIA_Lothar_Add_01_47"); //Du schon wieder.
 
-	AI_Output (self ,other, "DIA_Lothar_Add_01_43"); //I have heard that you saw Lord Andre?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_44"); //I told you that you could only join the militia if you were a citizen of the town.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_43"); //Ich habe gehört, du warst bei Lord Andre?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_44"); //Ich habe dir ja gesagt, daß du nur zur Miliz gehen kannst, wenn du Bürger der Stadt bist.
 
-	AI_Output (self ,other, "DIA_Lothar_Add_01_48"); //I have reported to Lord Hagen that you wish to speak to him...
-	AI_Output (other, self, "DIA_Lothar_Add_15_49"); //And? What did he say?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_50"); //He has never heard of you.
-	AI_Output (other, self, "DIA_Lothar_Add_15_51"); //Of course not. Did you tell him about the dragons?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_52"); //Didn't I tell you to STOP these stories?!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_48"); //Ich habe Lord Hagen berichtet, daß du ihn sprechen willst...
+	AI_Output (other, self, "DIA_Lothar_Add_15_49"); //Und? Was sagt er?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_50"); //Er hat noch nie von dir gehört.
+	AI_Output (other, self, "DIA_Lothar_Add_15_51"); //Natürlich nicht. Hast du ihm von den Drachen erzählt?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_52"); //Hatte ich dir nicht gesagt, du sollt mit diesen Geschichten AUFHÖREN?!
 
-	AI_Output (self ,other, "DIA_Lothar_Add_01_12"); //I have heard that you already have the approval of some of the masters.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_13"); //You're quite serious about this, aren't you?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_12"); //Ich habe gehört, du hast schon die Zustimmung einiger Meister bekommen.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_13"); //Du meinst es wirklich ernst, was?
 
-	AI_Output (self ,other, "DIA_Lothar_Add_01_01"); //You must obey the rules, just like everybody else!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_02"); //Lord Hagen is not available.
-	AI_Output (self ,other, "DIA_Lothar_Add_01_03"); //If you have something IMPORTANT to say, go to Lord Andre. He will help you!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_01"); //Du wirst dich an die Regeln halten müssen, so wie jeder andere auch!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_02"); //Lord Hagen ist nicht zu sprechen.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_03"); //Wenn du etwas WICHTIGES vorzubringen hast, geh zu Lord Andre. Er wird dir weiterhelfen!
 };
 
 
@@ -614,40 +614,40 @@ func int DIA_Lothar_HelloAgain_Condition ()
 };
 func void DIA_Lothar_HelloAgain_Info ()
 {
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_00"); //Ah! You again!
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_01"); //So you actually managed to get into the upper quarter!
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_00"); //Ah! Du schon wieder!
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_01"); //Du hast es also tatsächlich geschafft, ins obere Viertel zu kommen!
 	
 	if (other.guild == GIL_KDF)
 	{
-		AI_Output (self ,other, "DIA_Lothar_Add_01_36"); //Where did you get that robe?
-		AI_Output (other, self, "DIA_Lothar_Add_15_37"); //I have passed the Test of Fire.
-		AI_Output (self ,other, "DIA_Lothar_Add_01_38"); //Incredible. Then what is happening here must be the will of Innos...
+		AI_Output (self ,other, "DIA_Lothar_Add_01_36"); //Wo hast du diese Robe her?
+		AI_Output (other, self, "DIA_Lothar_Add_15_37"); //Ich habe die Prüfung des Feuers abgelegt.
+		AI_Output (self ,other, "DIA_Lothar_Add_01_38"); //Unfassbar. Dann ist es wohl Innos Wille, was hier geschieht...
 	};
 
 	if (other.guild == GIL_SLD)
 	{
-		AI_Output (self ,other, "DIA_Lothar_Add_01_39"); //You haven't joined Onar's mercenaries, have you?
-		AI_Output (self ,other, "DIA_Lothar_Add_01_40"); //How did you get in here?
-		AI_Output (other, self, "DIA_Lothar_Add_15_41"); //I bring a peace offering from Lee...
-		AI_Output (self ,other, "DIA_Lothar_Add_01_42"); //Bah! Lord Hagen will never agree to it.
+		AI_Output (self ,other, "DIA_Lothar_Add_01_39"); //Du hast dich doch nicht etwa Onars Söldnern angeschlossen?
+		AI_Output (self ,other, "DIA_Lothar_Add_01_40"); //Wie bist du denn hier rein gekommen?
+		AI_Output (other, self, "DIA_Lothar_Add_15_41"); //Ich habe ein Friedensangebot von Lee bei mir...
+		AI_Output (self ,other, "DIA_Lothar_Add_01_42"); //Bah! Lord Hagen wird dem niemals zustimmen.
 	};
 		
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_02"); //There are some things you must heed here, otherwise you will wind up outside as fast as you got in here.
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_03"); //You are only allowed to enter the merchants' buildings. You can recognize them by the signs over the door - just so there are no misunderstandings.
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_04"); //The other buildings belong to important citizens - there is nothing there for you!
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_02"); //Es gibt einige Dinge, die du hier beachten musst, sonst bist du so schnell wieder draußen, wie du hier reingekommen bist.
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_03"); //Es ist dir nur erlaubt, die Häuser der Händler zu betreten. Du erkennst sie an den Schildern über der Tür - nur damit keine Missverständnisse entstehen.
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_04"); //Die anderen Häuser gehören angesehenen Bürgern - dort hast du nichts zu suchen!
 	if (other.guild == GIL_KDF) 
 	|| (other.guild == GIL_NOV) 
 	{
-		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_05"); //Even if you are now a member of the order of Innos.
+		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_05"); //Auch wenn du jetzt ein Angehöriger des Ordens Innos' bist.
 	};
 	if (other.guild == GIL_MIL)
 	{	
-		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_06"); //As a member of the militia, you also have access to the rooms of the paladins.
-		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_07"); //But your quarters are still in the barracks.
+		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_06"); //Als Angehöriger der Miliz hast du im Übrigen Zugang zu den Räumen der Paladine.
+		AI_Output (self, other, "DIA_Lothar_HelloAgain_01_07"); //Aber dein Quartier ist nach wie vor in der Kaserne.
 	};
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_08"); //The important citizens of this town live in this quarter. So treat them with respect.
-	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_09"); //Do we understand each other?
-	AI_Output (other, self, "DIA_Lothar_HelloAgain_15_10"); //Sure.
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_08"); //In diesem Viertel leben die angesehensten Bürger dieser Stadt. Also behandele sie mit Respekt.
+	AI_Output (self, other, "DIA_Lothar_HelloAgain_01_09"); //Haben wir uns verstanden?
+	AI_Output (other, self, "DIA_Lothar_HelloAgain_15_10"); //Ja.
 };	
 
 // ***************************************************************
@@ -660,7 +660,7 @@ instance DIA_Lothar_Hagen (C_INFO)
 	condition	 = 	DIA_Lothar_Hagen_Condition;
 	information	 = 	DIA_Lothar_Hagen_Info;
 	permanent    =  TRUE;
-	description  = 	"Where can I find Lord Hagen?";
+	description  = 	"Wo finde ich Lord Hagen?";
 };
 func int DIA_Lothar_Hagen_Condition ()
 {	
@@ -672,9 +672,9 @@ func int DIA_Lothar_Hagen_Condition ()
 };
 func void DIA_Lothar_Hagen_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Hagen_15_00"); //Where can I find Lord Hagen?
-	AI_Output (self, other, "DIA_Lothar_Hagen_01_01"); //He is in the town hall, at the end of the upper quarter.
-	AI_Output (self, other, "DIA_Lothar_Hagen_01_02"); //But you will not be admitted there without a good reason.
+	AI_Output (other, self, "DIA_Lothar_Hagen_15_00"); //Wo finde ich Lord Hagen?
+	AI_Output (self, other, "DIA_Lothar_Hagen_01_01"); //Er ist im Rathaus, am Ende des oberen Viertels.
+	AI_Output (self, other, "DIA_Lothar_Hagen_01_02"); //Aber ohne triftigen Grund wirst du nicht vorgelassen werden.
 };
 
 // ***************************************************************
@@ -687,7 +687,7 @@ instance DIA_Lothar_OWRunning (C_INFO)
 	condition	 = 	DIA_Lothar_OWRunning_Condition;
 	information	 = 	DIA_Lothar_OWRunning_Info;
 	permanent    =  FALSE;
-	description  = 	"I went to see Lord Hagen...";
+	description  = 	"Ich war bei Lord Hagen...";
 };
 func int DIA_Lothar_OWRunning_Condition ()
 {	
@@ -699,12 +699,12 @@ func int DIA_Lothar_OWRunning_Condition ()
 };
 func void DIA_Lothar_OWRunning_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_53"); //I went to see Lord Hagen...
-	AI_Output (self ,other, "DIA_Lothar_Add_01_54"); //And? You didn't bother him with your dragon tales, did you?
-	AI_Output (other, self, "DIA_Lothar_Add_15_55"); //Yes, I did...
-	AI_Output (self ,other, "DIA_Lothar_Add_01_56"); //Tell me this isn't true...
-	AI_Output (other, self, "DIA_Lothar_Add_15_57"); //He sent me to get him some proof...
-	AI_Output (self ,other, "DIA_Lothar_Add_01_58"); //Well then, good luck. (to himself) What a lunatic...
+	AI_Output (other, self, "DIA_Lothar_Add_15_53"); //Ich war bei Lord Hagen...
+	AI_Output (self ,other, "DIA_Lothar_Add_01_54"); //Und? Du hast ihn doch nicht etwa mit deinen Drachengeschichten belästigt?
+	AI_Output (other, self, "DIA_Lothar_Add_15_55"); //Doch...
+	AI_Output (self ,other, "DIA_Lothar_Add_01_56"); //Das darf doch nicht wahr sein...
+	AI_Output (other, self, "DIA_Lothar_Add_15_57"); //Er hat mich losgeschickt, ihm Beweise zu bringen...
+	AI_Output (self ,other, "DIA_Lothar_Add_01_58"); //Na dann, viel Glück. (zu sich selbst) So ein Spinner...
 	
 	AI_StopProcessInfos (self);
 };
@@ -715,8 +715,8 @@ func void DIA_Lothar_OWRunning_Info ()
 // ***************************************************************
 func void DIA_Lothar_DragonsProof()
 {
-	AI_Output (self ,other, "DIA_Lothar_Add_01_60"); //So there really are dragons?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_61"); //I have done you an injustice. I shall pray to Innos for forgiveness for my behavior.
+	AI_Output (self ,other, "DIA_Lothar_Add_01_60"); //Es gibt also tatsächlich Drachen?!
+	AI_Output (self ,other, "DIA_Lothar_Add_01_61"); //Ich habe dir Unrecht getan. Ich werde Innos um Vergebung für mein Handeln bitten.
 	
 	AI_StopProcessInfos (self);
 };
@@ -732,7 +732,7 @@ instance DIA_Lothar_OWRunningBrief (C_INFO)
 	condition	 = 	DIA_Lothar_OWRunningBrief_Condition;
 	information	 = 	DIA_Lothar_OWRunningBrief_Info;
 	permanent    =  FALSE;
-	description  = 	"I have the proof! Here is the letter from Commander Garond!";
+	description  = 	"Ich habe die Beweise! Hier ist der Brief von Kommandant Garond!";
 };
 func int DIA_Lothar_OWRunningBrief_Condition ()
 {	
@@ -744,7 +744,7 @@ func int DIA_Lothar_OWRunningBrief_Condition ()
 };
 func void DIA_Lothar_OWRunningBrief_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_59"); //I have the proof! Here is the letter from Commander Garond!
+	AI_Output (other, self, "DIA_Lothar_Add_15_59"); //Ich habe die Beweise! Hier ist der Brief von Kommandant Garond!
 
 	DIA_Lothar_DragonsProof();
 };
@@ -783,7 +783,7 @@ instance DIA_Lothar_PERM (C_INFO)
 	condition	 = 	DIA_Lothar_PERM_Condition;
 	information	 = 	DIA_Lothar_PERM_Info;
 	permanent    =  TRUE;
-	description  = 	"Has anything exciting happened lately?";
+	description  = 	"Ist irgendwas aufregendes passiert in letzter Zeit?";
 };
 func int DIA_Lothar_PERM_Condition ()
 {	
@@ -795,19 +795,19 @@ func int DIA_Lothar_PERM_Condition ()
 };
 func void DIA_Lothar_PERM_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_PERM_15_00"); //Has anything exciting happened lately?
+	AI_Output (other, self, "DIA_Lothar_PERM_15_00"); //Ist irgendwas aufregendes passiert in letzter Zeit?
 	if (other.guild == GIL_NONE)
 	|| (other.guild == GIL_SLD)
 	{
-		AI_Output (self, other, "DIA_Lothar_PERM_01_01"); //Yes, that they let someone like you in here. Such a thing hasn't happened in ages.
+		AI_Output (self, other, "DIA_Lothar_PERM_01_01"); //Ja, dass sie einen wie dich hier reingelassen haben, ist schon ewig nicht mehr vorgekommen
 	}
 	else if (other.guild == GIL_MIL)
 	{
-		AI_Output (self, other, "DIA_Lothar_PERM_01_02"); //You should know that best. As a member of the city guard, it is your task to see to law and order!
+		AI_Output (self, other, "DIA_Lothar_PERM_01_02"); //Das solltest du am besten wissen. Als Angehöriger der Stadtwache ist es deine Aufgabe, hier für Ruhe und Ordnung zu sorgen!
 	}
 	else //KdF oder NOV
 	{
-		AI_Output (self, other, "DIA_Lothar_PERM_01_03"); //No.
+		AI_Output (self, other, "DIA_Lothar_PERM_01_03"); //Nein.
 	};
 };
 

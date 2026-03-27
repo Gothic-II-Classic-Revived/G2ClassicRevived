@@ -31,7 +31,7 @@ INSTANCE DIA_1052_Wegelagerer_Hello   (C_INFO)
 	condition   = DIA_1052_Wegelagerer_Hello_Condition;
 	information = DIA_1052_Wegelagerer_Hello_Info;
 	permanent   = FALSE;
-	description = "Who are you?";
+	description = "Wer bist du?";
 };
 
 FUNC INT DIA_1052_Wegelagerer_Hello_Condition()

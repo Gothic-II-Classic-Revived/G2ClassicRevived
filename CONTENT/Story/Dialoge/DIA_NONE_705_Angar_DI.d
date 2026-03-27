@@ -33,7 +33,7 @@ instance DIA_Angar_DI_HALLO		(C_INFO)
 	information	 = 	DIA_Angar_DI_HALLO_Info;
 	permanent	 = 	TRUE;
 
-	description 	 =  "How are you?";
+	description 	 =  "Wie steht's?";
 };
 
 func int DIA_Angar_DI_HALLO_Condition ()
@@ -89,8 +89,8 @@ func void DIA_Angar_DI_ORKS_Info ()
 	AI_Output			(self, other, "DIA_Angar_DI_ORKS_04_02"); //That's not enough.
 
 	Info_ClearChoices	(DIA_Angar_DI_ORKS);
-	Info_AddChoice	(DIA_Angar_DI_ORKS, "Relax.", DIA_Angar_DI_ORKS_no );
-	Info_AddChoice	(DIA_Angar_DI_ORKS, "So help me and stop complaining.", DIA_Angar_DI_ORKS_follow );
+	Info_AddChoice	(DIA_Angar_DI_ORKS, "Reg´ dich ab.", DIA_Angar_DI_ORKS_no );
+	Info_AddChoice	(DIA_Angar_DI_ORKS, "Dann hilf mir..", DIA_Angar_DI_ORKS_follow );
 };
 func void DIA_Angar_DI_ORKS_follow ()
 {
@@ -120,7 +120,7 @@ instance DIA_Angar_DI_FOLLOW		(C_INFO)
 	information	 = 	DIA_Angar_DI_FOLLOW_Info;
 	permanent	 = 	TRUE;
 
-	description  =  "Stay back now.";
+	description  =  "Bleib zurück.";
 
 };
 
@@ -191,7 +191,7 @@ instance DIA_Angar_DI_FOLLOWAGAIN		(C_INFO)
 	information	 = 	DIA_Angar_DI_FOLLOWAGAIN_Info;
 	permanent	 = 	TRUE;
 
-	description  =  "Follow me.";
+	description  =  "Folge mir.";
 
 };
 
@@ -252,7 +252,7 @@ instance DIA_Angar_DI_UNDEADDRGDEAD		(C_INFO)
 	condition	 = 	DIA_Angar_DI_UNDEADDRGDEAD_Condition;
 	information	 = 	DIA_Angar_DI_UNDEADDRGDEAD_Info;
 	
-	description	 = 	"You pulled through.";
+	description	 = 	"Du hast es überstanden.";
 
 };
 
@@ -330,7 +330,7 @@ instance DIA_Angar_DI_FOUNDAMULETT		(C_INFO)
 	condition	 = 	DIA_Angar_DI_FOUNDAMULETT_Condition;
 	information	 = 	DIA_Angar_DI_FOUNDAMULETT_Info;
 
-	description	 = 	"I found your amulet.";
+	description	 = 	"Ich habe dein Amulett gefunden.";
 };
 
 func int DIA_Angar_DI_FOUNDAMULETT_Condition ()

@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Draconian(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Draconian";
+	name							=	"Drakonier";
 	guild							=	GIL_DRACONIAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRACONIAN;
 
@@ -81,7 +81,7 @@ INSTANCE Draconian			(Mst_Default_Draconian)
 INSTANCE DraconianGreen			(Mst_Default_Draconian)
 {
 	//----- Monster ----
-	name							=	"Green Draconian";
+	name							=	"Grüner Drakonier";
 
 	// ------ visuals ------
 	B_SetVisuals_DraconianGreen();
@@ -99,7 +99,7 @@ INSTANCE DraconianGreen			(Mst_Default_Draconian)
 INSTANCE DraconianGold			(Mst_Default_Draconian)
 {
 	//----- Monster ----
-	name							=	"Gold Draconian";
+	name							=	"Goldener Drakonier";
 	
 	// ------ visuals ------
 	B_SetVisuals_DraconianGold();

@@ -34,7 +34,7 @@ instance DIA_Malak_HALLO		(C_INFO)
 	condition	 = 	DIA_Malak_HALLO_Condition;
 	information	 = 	DIA_Malak_HALLO_Info;
 
-	description	 = 	"Everything all right?";
+	description	 = 	"Alles Klar?";
 };
 
 func int DIA_Malak_HALLO_Condition ()
@@ -47,15 +47,15 @@ func int DIA_Malak_HALLO_Condition ()
 
 func void DIA_Malak_HALLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_HALLO_15_00"); //Everything all right?
+	AI_Output			(other, self, "DIA_Malak_HALLO_15_00"); //Alles Klar?
 
 	if (hero.guild == GIL_NONE)
 		{
-			AI_Output			(self, other, "DIA_Malak_HALLO_08_01"); //Yet another day laborer who doesn't know where to go? No problem. Talk with our farmer Bengar.
+			AI_Output			(self, other, "DIA_Malak_HALLO_08_01"); //Noch ein Tagelöhner, der nicht weiß, wohin? Kein Problem. Rede mal mit unserem Bauern Bengar.
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Malak_HALLO_08_02"); //Sure.
+			AI_Output			(self, other, "DIA_Malak_HALLO_08_02"); //Ja.
 		};
 
 };
@@ -71,7 +71,7 @@ instance DIA_Malak_WASMACHSTDU		(C_INFO)
 	condition	 = 	DIA_Malak_WASMACHSTDU_Condition;
 	information	 = 	DIA_Malak_WASMACHSTDU_Info;
 
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 
 func int DIA_Malak_WASMACHSTDU_Condition ()
@@ -85,9 +85,9 @@ func int DIA_Malak_WASMACHSTDU_Condition ()
 
 func void DIA_Malak_WASMACHSTDU_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_WASMACHSTDU_15_00"); //What are you doing here?
-	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_01"); //I'm the shepherd here. It's not exactly a demanding job.
-	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_02"); //But now and then, you really have to watch out. Especially if you get too close to the pass.
+	AI_Output			(other, self, "DIA_Malak_WASMACHSTDU_15_00"); //Was machst du hier?
+	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_01"); //Ich bin unser Schafhirte. Es ist nicht gerade eine Arbeit, bei der ich mich kaputt mache.
+	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_02"); //Aber zuweilen muss man ganz schön aufpassen. Erst recht, wenn man dem Pass zu nahe kommt.
 
 };
 
@@ -102,7 +102,7 @@ instance DIA_Malak_PASS		(C_INFO)
 	condition	 = 	DIA_Malak_PASS_Condition;
 	information	 = 	DIA_Malak_PASS_Info;
 
-	description	 = 	"What do you know about the pass?";
+	description	 = 	"Was weißt du über den Pass?";
 };
 
 func int DIA_Malak_PASS_Condition ()
@@ -116,10 +116,10 @@ func int DIA_Malak_PASS_Condition ()
 
 func void DIA_Malak_PASS_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PASS_15_00"); //What do you know about the pass?
-	AI_Output			(self, other, "DIA_Malak_PASS_08_01"); //Not much. Just that it leads to the old Valley of Mines that was surrounded by the Barrier until a few weeks ago.
-	AI_Output			(self, other, "DIA_Malak_PASS_08_02"); //Back then, the only thing we farmers had to be afraid of was the monthly caravan that took all kinds of goods to the Valley of Mines.
-	AI_Output			(self, other, "DIA_Malak_PASS_08_03"); //Those cut-throats often made life difficult for us out here.
+	AI_Output			(other, self, "DIA_Malak_PASS_15_00"); //Was weißt du über den Pass?
+	AI_Output			(self, other, "DIA_Malak_PASS_08_01"); //Nicht viel. Nur, dass er zum alten Minental führt, das bis vor ein paar Wochen noch von der Barriere umschlossen war.
+	AI_Output			(self, other, "DIA_Malak_PASS_08_02"); //Damals war die monatliche Karawane, die alle möglichen Güter ins Minental brachte, das Einzige, was wir Bauern zu fürchten hatten.
+	AI_Output			(self, other, "DIA_Malak_PASS_08_03"); //Diese Halsabschneider haben uns hier draußen oftmals ganz schön zugesetzt.
 
 };
 
@@ -133,7 +133,7 @@ instance DIA_Malak_WOPASS		(C_INFO)
 	condition	 = 	DIA_Malak_WOPASS_Condition;
 	information	 = 	DIA_Malak_WOPASS_Info;
 
-	description	 = 	"Where can I find the pass to the old Valley of Mines?";
+	description	 = 	"Wo finde ich den Pass ins alte Minental?";
 };
 
 func int DIA_Malak_WOPASS_Condition ()
@@ -147,8 +147,8 @@ func int DIA_Malak_WOPASS_Condition ()
 
 func void DIA_Malak_WOPASS_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_WOPASS_15_00"); //Where can I find the pass to the old Valley of Mines?
-	AI_Output			(self, other, "DIA_Malak_WOPASS_08_01"); //Near the two waterfalls on the other side of the high pastures.
+	AI_Output			(other, self, "DIA_Malak_WOPASS_15_00"); //Wo finde ich den Pass ins alte Minental?
+	AI_Output			(self, other, "DIA_Malak_WOPASS_08_01"); //In der Nähe der beiden Wasserfälle auf der anderen Seite des Weidenplateaus.
 
 };
 
@@ -164,7 +164,7 @@ instance DIA_Malak_MINENTAL		(C_INFO)
 	condition	 = 	DIA_Malak_MINENTAL_Condition;
 	information	 = 	DIA_Malak_MINENTAL_Info;
 
-	description	 = 	"What is it they say about the Valley of Mines?";
+	description	 = 	"Was erzählt man sich über das Minental?";
 };
 
 func int DIA_Malak_MINENTAL_Condition ()
@@ -179,9 +179,9 @@ func int DIA_Malak_MINENTAL_Condition ()
 func void DIA_Malak_MINENTAL_Info ()
 {
 
-	AI_Output			(other, self, "DIA_Malak_MINENTAL_15_00"); //What is it they say about the Valley of Mines?
-	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_01"); //All sorts of things. Some of the boys say they've heard screams at night, some have seen strange lights over the mountains.
-	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_02"); //But if you ask me, it's all just old wives' tales.
+	AI_Output			(other, self, "DIA_Malak_MINENTAL_15_00"); //Was erzählt man sich über das Minental?
+	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_01"); //Alles Mögliche. Nachts wollen einige der Jungs Schreie von dort gehört haben, manche haben seltsame Lichter über den Bergen gesehen.
+	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_02"); //Aber wenn du mich fragst, sind das alles Ammenmärchen.
 
 };
 
@@ -196,7 +196,7 @@ instance DIA_Malak_WARSTDUSCHONDA		(C_INFO)
 	condition	 = 	DIA_Malak_WARSTDUSCHONDA_Condition;
 	information	 = 	DIA_Malak_WARSTDUSCHONDA_Info;
 
-	description	 = 	"Have you ever been to the Valley of Mines?";
+	description	 = 	"Warst du schon mal im Minental?";
 };
 
 func int DIA_Malak_WARSTDUSCHONDA_Condition ()
@@ -210,10 +210,10 @@ func int DIA_Malak_WARSTDUSCHONDA_Condition ()
 
 func void DIA_Malak_WARSTDUSCHONDA_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_WARSTDUSCHONDA_15_00"); //Have you ever been to the Valley of Mines?
-	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_01"); //No. But I go near the pass once in a while. Then I always see those two paladins who stand around and keep watch.
-	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_02"); //It looks like they're making sure that nothing comes out of the valley.
-	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_03"); //Back then the Valley of Mines was a natural prison. If you went in, you never came out again.
+	AI_Output			(other, self, "DIA_Malak_WARSTDUSCHONDA_15_00"); //Warst du schon mal im Minental?
+	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_01"); //Nein. Ich bin nur ab und zu in der Nähe des Passes. Ich sehe dann immer diese beiden Paladine da herumstehen und Wache halten.
+	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_02"); //Es sieht so aus, als ob sie darauf aufpassen, dass nichts aus dem Tal mehr heraus kommt.
+	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_03"); //Damals war das Minental ein natürliches Gefängnis. Bist du einmal reingegangen, kamst du nicht wieder raus.
 
 };
 
@@ -228,7 +228,7 @@ instance DIA_Malak_PALADINE		(C_INFO)
 	condition	 = 	DIA_Malak_PALADINE_Condition;
 	information	 = 	DIA_Malak_PALADINE_Info;
 
-	description	 = 	"Tell me more about the paladins. How long have they been posted there?";
+	description	 = 	"Erzähl mir mehr über die Paladine.";
 };
 
 func int DIA_Malak_PALADINE_Condition ()
@@ -245,9 +245,9 @@ func int DIA_Malak_PALADINE_Condition ()
 
 func void DIA_Malak_PALADINE_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PALADINE_15_00"); //Tell me more about the paladins. How long have they been posted there?
-	AI_Output			(self, other, "DIA_Malak_PALADINE_08_01"); //A week or two, I suppose. I don't know exactly.
-	AI_Output			(self, other, "DIA_Malak_PALADINE_08_02"); //Some time ago there was even a whole troop of them that disappeared into the pass. Since then, I haven't seen them again.
+	AI_Output			(other, self, "DIA_Malak_PALADINE_15_00"); //Erzähl mir mehr über die Paladine.
+	AI_Output			(self, other, "DIA_Malak_PALADINE_08_01"); //Ich schätze mal ein bis zwei Wochen. Ganz genau weiß ich das nicht.
+	AI_Output			(self, other, "DIA_Malak_PALADINE_08_02"); //Vor einiger Zeit ist sogar ein ganzer Trupp von ihnen im Pass verschwunden. Seither habe ich sie nicht wieder gesehen.
 
 };
 
@@ -261,7 +261,7 @@ instance DIA_Malak_KEINEFRAUEN		(C_INFO)
 	condition	 = 	DIA_Malak_KEINEFRAUEN_Condition;
 	information	 = 	DIA_Malak_KEINEFRAUEN_Info;
 
-	description	 = 	"I don't see any women here at all.";
+	description	 = 	"Ich sehe hier gar keine Frauen.";
 };
 
 func int DIA_Malak_KEINEFRAUEN_Condition ()
@@ -275,8 +275,8 @@ func int DIA_Malak_KEINEFRAUEN_Condition ()
 
 func void DIA_Malak_KEINEFRAUEN_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_KEINEFRAUEN_15_00"); //I don't see any women here at all.
-	AI_Output			(self, other, "DIA_Malak_KEINEFRAUEN_08_01"); //You got that right. This is a men's farm, so to speak. Works pretty well, I think.
+	AI_Output			(other, self, "DIA_Malak_KEINEFRAUEN_15_00"); //Ich sehe hier gar keine Frauen.
+	AI_Output			(self, other, "DIA_Malak_KEINEFRAUEN_08_01"); //Das hast du richtig beobachtet. Das ist sozusagen ein Männerhof. Funktioniert ganz gut, denke ich.
 
 };
 
@@ -292,7 +292,7 @@ instance DIA_Malak_PERMKAP1		(C_INFO)
 	information	 = 	DIA_Malak_PERMKAP1_Info;
 	permanent	 =  TRUE;	
 
-	description	 = 	"Don't work too hard.";
+	description	 = 	"Überarbeite dich nicht.";
 };
 
 func int DIA_Malak_PERMKAP1_Condition ()
@@ -314,8 +314,8 @@ func int DIA_Malak_PERMKAP1_Condition ()
 
 func void DIA_Malak_PERMKAP1_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PERMKAP1_15_00"); //Don't work too hard.
-	AI_Output			(self, other, "DIA_Malak_PERMKAP1_08_01"); //I'll try.
+	AI_Output			(other, self, "DIA_Malak_PERMKAP1_15_00"); //Überarbeite dich nicht.
+	AI_Output			(self, other, "DIA_Malak_PERMKAP1_08_01"); //Ich werd's versuchen.
 
 	AI_StopProcessInfos (self);
 };
@@ -363,7 +363,7 @@ instance DIA_Malak_FLEEFROMPASS		(C_INFO)
 	condition	 = 	DIA_Malak_FLEEFROMPASS_Condition;
 	information	 = 	DIA_Malak_FLEEFROMPASS_Info;
 
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 
 func int DIA_Malak_FLEEFROMPASS_Condition ()
@@ -383,11 +383,11 @@ func void DIA_Malak_FLEEFROMPASS_Info ()
 	}
 	else
 	{
-	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_00"); //What are you doing here?
-	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_01"); //I fled here from Bengar's farm. I didn't want to be butchered by all the creatures coming out of the pass.
-	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_02"); //You can't imagine what sort of things came out of the pass the last few days.
-	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_03"); //I can.
-	B_LogEntry (TOPIC_BengarALLEIN,"Malak's entrenched himself in the south because he's scared of the creatures that were coming up to the high pastures from the pass."); 
+	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_00"); //Was machst du hier?
+	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_01"); //Ich bin von Bengars Hof hierher geflüchtet. Ich hatte keine Lust, mich von dem ganz Viehzeugs, das aus dem Pass kam, niedermachen zu lassen.
+	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_02"); //Du kannst dir gar nicht vorstellen, was da für Kreaturen in den letzten Tagen aus dem Pass herausgekommen sind.
+	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_03"); //Ich kann.
+	B_LogEntry (TOPIC_BengarALLEIN,"Malak hat sich im Süden verschanzt, weil er Angst vor den Kreaturen hatte, die aus dem Pass aufs Weidenplateau kamen."); 
 	B_GivePlayerXP (XP_FoundMalakFLEEFROMPASS);
 	};
 };
@@ -403,7 +403,7 @@ instance DIA_Malak_Heilung		(C_INFO)
 	information	 = 	DIA_Malak_Heilung_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"You need help.";
+	description	 = 	"Du brauchst Hilfe.";
 };
 
 func int DIA_Malak_Heilung_Condition ()
@@ -418,11 +418,11 @@ func int DIA_Malak_Heilung_Condition ()
 var int DIA_Malak_Heilung_oneTime;
 func void DIA_Malak_Heilung_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_Heilung_15_00"); //You need help.
+	AI_Output			(other, self, "DIA_Malak_Heilung_15_00"); //Du brauchst Hilfe.
 
 	if (DIA_Malak_Heilung_oneTime == FALSE)
 	{
-	AI_Output			(self, other, "DIA_Malak_Heilung_08_01"); //(weepy) I just want to go home. I'll go back to Bengar. I hope he's still alive.
+	AI_Output			(self, other, "DIA_Malak_Heilung_08_01"); //(weinerlich) Ich will einfach nur nach Hause. Ich geh zurück zu Bengar. Ich hoffe, dass er noch lebt.
 
 		B_NpcClearObsessionByDMT (self);
 		Npc_ExchangeRoutine	(self,"Start");
@@ -438,7 +438,7 @@ func void DIA_Malak_Heilung_Info ()
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Malak_Heilung_08_02"); //Leave me alone, magician. I can manage.
+		AI_Output			(self, other, "DIA_Malak_Heilung_08_02"); //Lass mich in Ruhe, Magier. Ich komm schon klar.
 		B_NpcClearObsessionByDMT (self);
 	};
 };
@@ -454,7 +454,7 @@ instance DIA_Malak_PERMCASTLE		(C_INFO)
 	information	 = 	DIA_Malak_PERMCASTLE_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"What's it like here?";
+	description	 = 	"Wie ist es hier?";
 };
 
 func int DIA_Malak_PERMCASTLE_Condition ()
@@ -472,8 +472,8 @@ func int DIA_Malak_PERMCASTLE_Condition ()
 
 func void DIA_Malak_PERMCASTLE_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PERMCASTLE_15_00"); //What's it like here?
-	AI_Output			(self, other, "DIA_Malak_PERMCASTLE_08_01"); //Here I only have to put up with bandits. It's the lesser evil.
+	AI_Output			(other, self, "DIA_Malak_PERMCASTLE_15_00"); //Wie ist es hier?
+	AI_Output			(self, other, "DIA_Malak_PERMCASTLE_08_01"); //Ich muss mich hier nur mit Banditen herumärgern. Das ist das kleinere Übel.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -487,7 +487,7 @@ instance DIA_Malak_BACKTOBENGAR		(C_INFO)
 	information	 = 	DIA_Malak_BACKTOBENGAR_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Bengar needs you. He wants you to come back to his farm.";
+	description	 = 	"Bengar braucht dich.";
 };
 
 func int DIA_Malak_BACKTOBENGAR_Condition ()
@@ -505,26 +505,26 @@ func int DIA_Malak_BACKTOBENGAR_Condition ()
 
 func void DIA_Malak_BACKTOBENGAR_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_00"); //Bengar needs you. He wants you to come back to his farm.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_01"); //I'm not crazy. As long as we have to live defenseless on the farm, I'm not budging an inch from here!
+	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_00"); //Bengar braucht dich.
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_01"); //Ich bin doch nicht wahnsinnig. Solange wir auf dem Hof schutzlos leben müssen, bewege ich mich hier keinen Meter weg!
 	
-	B_LogEntry (TOPIC_BengarALLEIN,"Malak won't return to Bengar's farm while it's unprotected."); 
+	B_LogEntry (TOPIC_BengarALLEIN,"Malak wird nicht zu Bengar zurückkehren, solange Bengars Hof schutzlos ist."); 
 
 	if (MIS_BengarsHelpingSLD == LOG_SUCCESS)
 	{
-	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_02"); //I've hired a mercenary. He will keep an eye on the farm.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_03"); //That's different, of course. But wait a minute. Who's paying the guy, then?
-	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_04"); //That's my problem.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_05"); //(inquisitive) Mmh. No chance to say no, eh?
+	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_02"); //Ich habe einen Söldner angeheuert. Er wird auf den Hof Acht geben.
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_03"); //Das ist natürlich etwas anderes. Aber Moment mal. Wer bezahlt den Kerl denn?
+	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_04"); //Das ist mein Problem.
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_05"); //(prüfend) Mmh. Keine Chance, nein zu sagen, was?
 	
-	Info_AddChoice	(DIA_Malak_BACKTOBENGAR, "No.", DIA_Malak_BACKTOBENGAR_los );
+	Info_AddChoice	(DIA_Malak_BACKTOBENGAR, "Nein.", DIA_Malak_BACKTOBENGAR_los );
 	};
 };
 
 func void DIA_Malak_BACKTOBENGAR_los ()
 {
-	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_los_15_00"); //No.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_los_08_01"); //Good. Then I'll go back. I hope the lad's good for something.
+	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_los_15_00"); //Nein.
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_los_08_01"); //Gut. Dann gehe ich zurück. Hoffentlich taugt der Junge was.
 	MIS_GetMalakBack = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Malak_BACKTOBENGAR);
 	B_NpcClearObsessionByDMT (self);
@@ -549,7 +549,7 @@ instance DIA_Malak_BACK		(C_INFO)
 	information	 = 	DIA_Malak_BACK_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Will you stay on Bengar's farm now?";
+	description	 = 	"Wirst du jetzt auf Bengars Hof bleiben?";
 };
 
 func int DIA_Malak_BACK_Condition ()
@@ -565,8 +565,8 @@ func int DIA_Malak_BACK_Condition ()
 
 func void DIA_Malak_BACK_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_BACK_15_00"); //Will you stay on Bengar's farm now?
-	AI_Output			(self, other, "DIA_Malak_BACK_08_01"); //Sure. I'll have to see this through now. We'll manage somehow.
+	AI_Output			(other, self, "DIA_Malak_BACK_15_00"); //Wirst du jetzt auf Bengars Hof bleiben?
+	AI_Output			(self, other, "DIA_Malak_BACK_08_01"); //Sicher. Da muss ich jetzt durch. Wird schon schief gehen.
 	B_NpcClearObsessionByDMT (self);
 };
 

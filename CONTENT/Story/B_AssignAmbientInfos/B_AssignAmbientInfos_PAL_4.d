@@ -29,7 +29,7 @@ INSTANCE DIA_PAL_4_JOIN(C_INFO)
 	condition	= DIA_PAL_4_JOIN_Condition;
 	information	= DIA_PAL_4_JOIN_Info;
 	permanent	= TRUE;
-	description = "How do I become a paladin?";
+	description = "Wie werde ich Paladin?";
 };                       
 
 FUNC INT DIA_PAL_4_JOIN_Condition()
@@ -42,10 +42,10 @@ FUNC INT DIA_PAL_4_JOIN_Condition()
 
 FUNC VOID DIA_PAL_4_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_4_JOIN_15_00"); //How do I become a paladin?
-	AI_Output (self, other, "DIA_PAL_4_JOIN_04_01"); //If you are truly serious about it, then you should place yourself in the service of the paladins.
-	AI_Output (self, other, "DIA_PAL_4_JOIN_04_02"); //Go to the barracks and talk to Lord Andre. Get yourself admitted to the militia.
-	AI_Output (self, other, "DIA_PAL_4_JOIN_04_03"); //Perhaps you will get a chance then to prove yourself worthy.
+	AI_Output (other, self, "DIA_PAL_4_JOIN_15_00"); //Wie werde ich Paladin?
+	AI_Output (self, other, "DIA_PAL_4_JOIN_04_01"); //Wenn es dir wirklich ernst ist, solltest du dich in den Dienst der Paladine stellen.
+	AI_Output (self, other, "DIA_PAL_4_JOIN_04_02"); //Geh zur Kaserne und rede mit Lord Andre. Lass dich in die Miliz aufnehmen.
+	AI_Output (self, other, "DIA_PAL_4_JOIN_04_03"); //Vielleicht bekommst du dann eine Chance, dich als würdig zu erweisen.
 };
 
 // *************************************************************************
@@ -57,7 +57,7 @@ INSTANCE DIA_PAL_4_PEOPLE(C_INFO)
 	condition	= DIA_PAL_4_PEOPLE_Condition;
 	information	= DIA_PAL_4_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who's in command here?";
+	description = "Wer hat hier das Kommando?";
 };                       
 
 FUNC INT DIA_PAL_4_PEOPLE_Condition()
@@ -70,9 +70,9 @@ FUNC INT DIA_PAL_4_PEOPLE_Condition()
 
 FUNC VOID DIA_PAL_4_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_4_PEOPLE_15_00"); //Who's in command here?
-	AI_Output (self, other, "DIA_PAL_4_PEOPLE_04_01"); //Lord Hagen is the commander-in-chief of all troops on the island. He also holds the office of governor for as long as we are here.
-	AI_Output (self, other, "DIA_PAL_4_PEOPLE_04_02"); //But he is very busy. If there's anything you need to take care of, go to the barracks and talk to Lord Andre.
+	AI_Output (other, self, "DIA_PAL_4_PEOPLE_15_00"); //Wer hat hier das Kommando?
+	AI_Output (self, other, "DIA_PAL_4_PEOPLE_04_01"); //Lord Hagen ist der Oberbefehlshaber über alle Truppen auf der Insel. Er hat auch - solange wir hier sind - das Amt des Statthalters inne.
+	AI_Output (self, other, "DIA_PAL_4_PEOPLE_04_02"); //Aber er ist sehr beschäftigt. Wenn du etwas zu klären hast, geh zur Kaserne und rede mit Lord Andre.
 };
 
 // *************************************************************************
@@ -84,7 +84,7 @@ INSTANCE DIA_PAL_4_LOCATION(C_INFO)
 	condition	= DIA_PAL_4_LOCATION_Condition;
 	information	= DIA_PAL_4_LOCATION_Info;
 	permanent	= TRUE;
-	description = "What are you paladins doing here in Khorinis?";
+	description = "Was macht ihr Paladine hier in Khorinis?";
 };                       
 
 FUNC INT DIA_PAL_4_LOCATION_Condition()
@@ -97,8 +97,8 @@ FUNC INT DIA_PAL_4_LOCATION_Condition()
 
 FUNC VOID DIA_PAL_4_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_4_LOCATION_15_00"); //What are you paladins doing here in Khorinis?
-	AI_Output (self, other, "DIA_PAL_4_LOCATION_04_01"); //I am not authorized to tell you that.
+	AI_Output (other, self, "DIA_PAL_4_LOCATION_15_00"); //Was macht ihr Paladine hier in Khorinis?
+	AI_Output (self, other, "DIA_PAL_4_LOCATION_04_01"); //Ich bin nicht befugt, dir das zu sagen.
 };
 
 // *************************************************************************
@@ -110,7 +110,7 @@ INSTANCE DIA_PAL_4_STANDARD(C_INFO)
 	condition	= DIA_PAL_4_STANDARD_Condition;
 	information	= DIA_PAL_4_STANDARD_Info;
 	permanent	= TRUE;
-	description = "What's new?";
+	description = "Was gibt's Neues?";
 };
                        
 func INT DIA_PAL_4_STANDARD_Condition()
@@ -120,7 +120,7 @@ func INT DIA_PAL_4_STANDARD_Condition()
 
 FUNC VOID DIA_PAL_4_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_4_STANDARD_15_00"); //What's new?
+	AI_Output (other, self, "DIA_PAL_4_STANDARD_15_00"); //Was gibt's Neues?
 
 	if (other.guild == GIL_PAL)
 	|| (other.guild == GIL_KDF)
@@ -129,22 +129,22 @@ FUNC VOID DIA_PAL_4_STANDARD_Info()
 		{
 			if (MIS_OLDWORLD == LOG_SUCCESS)
 			{
-				AI_Output (self, other, "DIA_PAL_4_STANDARD_04_01"); //Now that we know we're dealing with dragons, our commander will surely do something soon.
+				AI_Output (self, other, "DIA_PAL_4_STANDARD_04_01"); //Jetzt, da wir wissen, dass wir es mit Drachen zu tun haben, wird unser Kommandant sicherlich bald etwas unternehmen.
 			}
 			else
 			{
-				AI_Output (self, other, "DIA_PAL_4_STANDARD_04_02"); //We still don't have any news from our detachment in the Valley of Mines. That is very disturbing.
+				AI_Output (self, other, "DIA_PAL_4_STANDARD_04_02"); //Wir haben noch immer keine Nachricht von unserem Trupp im Minental. Das ist sehr beunruhigend.
 			};
 		};
 
 		if (Kapitel >= 5)
 		{
-			AI_Output (self, other, "DIA_PAL_4_STANDARD_04_03"); //Thanks be to Innos! The threat of the dragons has been averted. Now we only have to deal with the orcs to get to the ore.
+			AI_Output (self, other, "DIA_PAL_4_STANDARD_04_03"); //Innos sei Dank! Die Bedrohung der Drachen ist abgewendet. Jetzt müssen wir uns nur noch um die Orks kümmern, um an das Erz zu kommen.
 		};
 	}
 	else //KEIN Paladin
 	{
-		AI_Output (self, other, "DIA_PAL_4_STANDARD_04_04"); //I have no time to bother myself with the rumors being told here in the city.
+		AI_Output (self, other, "DIA_PAL_4_STANDARD_04_04"); //Ich habe keine Zeit, mich mit den Gerüchten, die hier in der Stadt erzählt werden, zu befassen.
 	};
 };
 

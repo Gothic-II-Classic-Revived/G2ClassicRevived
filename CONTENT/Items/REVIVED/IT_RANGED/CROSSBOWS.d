@@ -61,7 +61,7 @@ const int	REV_Value_Crossbow_Sengrath			=	900;
 //****************************************************************************
 INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_01 (C_Item)
 {
-	name 				=	"Light Crossbow";
+	name 				=	"Leichte Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -86,7 +86,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_02 (C_Item)
 {
-	name 				=	"Hunting Crossbow";
+	name 				=	"Jagdarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -111,7 +111,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_02 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_CROSSBOW_01 (C_Item)
 {
-	name 				=	"War Crossbow";
+	name 				=	"Kriegsarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -136,7 +136,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_02 (C_Item)
 {
-	name 				=	"Crossbow";
+	name 				=	"Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -161,7 +161,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_03 (C_Item)
 {
-	name 				=	"Heavy Crossbow";
+	name 				=	"Schwere Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -186,7 +186,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_04 (C_Item)
 {
-	name 				=	"Golden Crossbow";
+	name 				=	"Goldene Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -211,7 +211,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_04 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_01 (C_Item)
 {
-	name 				=	"Crossbow of Death";
+	name 				=	"Armbrust des Todes";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -236,7 +236,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 {
-	name 				=	"Troll Killer Crossbow";
+	name 				=	"Trolltöter-Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -261,7 +261,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_03 (C_Item)
 {
-	name 				=	"Dragon Hunter's Crossbow";
+	name 				=	"Drachenjägerarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -290,7 +290,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_03 (C_Item)
 //****************************************************************************
 instance ITRW_REVIVED_MAGICBOLT (C_Item)
 {
-	name 				=	"Magic bolt";
+	name 				=	"Magischer Bolzen";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
@@ -308,7 +308,7 @@ instance ITRW_REVIVED_MAGICBOLT (C_Item)
 };
 instance ITRW_REVIVED_FIREBOLT (C_Item)
 {
-	name 				=	"Fire bolt";
+	name 				=	"Feuerpfeil";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;
@@ -327,7 +327,7 @@ instance ITRW_REVIVED_FIREBOLT (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_CROSSBOW_MAGIC_01 (C_Item)
 {
-	name 				=	"Magic Crossbow";
+	name 				=	"Magische Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -355,7 +355,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_MAGIC_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_FIRE_01 (C_Item)
 {
-	name 				=	"Fire Crossbow";
+	name 				=	"Feuerarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -387,7 +387,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_FIRE_01 (C_Item)
 //****************************************************************************
 INSTANCE ITRW_REVIVED_CROSSBOW_DRAGOMIR (C_Item)
 {
-	name 				=	"Dragomir's Crossbow";
+	name 				=	"Dragomir´s Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -414,7 +414,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_DRAGOMIR (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_SENGRATH (C_Item)
 {
-	name 				=	"Sengrath's Crossbow";
+	name 				=	"Sengraths Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;

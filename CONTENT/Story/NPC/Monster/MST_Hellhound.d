@@ -4,7 +4,7 @@
 
 PROTOTYPE Mst_Default_Hellhound(C_Npc)			
 {
-	name							=	"Hellhound";
+	name							=	"Höllenhund";
 	guild							=	GIL_SHADOWBEAST;
 	aivar[AIV_MM_REAL_ID]			= 	ID_HELLHOUND;
 

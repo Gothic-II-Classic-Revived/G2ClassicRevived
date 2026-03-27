@@ -97,7 +97,7 @@ const int	REV_Change_ITRI_Boost_Melee_01			=	10;
 
 INSTANCE ITRI_REVIVED_PROT_ARROW_01(C_Item)
 {
-	name 				=	"Ring of Wooden Skin";
+	name 				=	"Ring der Holzhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -129,7 +129,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_ARROW_01()
 
 INSTANCE ITRI_REVIVED_PROT_ARROW_02(C_Item)
 {
-	name 				=	"Ring of Stone Skin";
+	name 				=	"Ring der Steinhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -163,7 +163,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_ARROW_02()
 
 INSTANCE ITRI_REVIVED_PROT_MELEE_01(C_Item)
 {
-	name 				=	"Ring of Iron Skin";
+	name 				=	"Ring der Eisenhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -198,7 +198,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MELEE_01()
 
 INSTANCE ITRI_REVIVED_PROT_MELEE_02(C_Item)
 {
-	name 				=	"Ring of Ore Skin";
+	name 				=	"Ring der Erzhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -235,7 +235,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MELEE_02()
 
 INSTANCE ITRI_REVIVED_PROT_WEAPON_01(C_ITEM)
 {
-	name 				=	"Ring of Steadfastness";
+	name 				=	"Ring der Standhaftigkeit";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -273,7 +273,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_WEAPON_01()
 
 INSTANCE ITRI_REVIVED_PROT_WEAPON_02(C_ITEM)
 {
-	name 				=	"Ring of Impeachability";
+	name 				=	"Ring der Unantastbarkeit";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -313,7 +313,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_WEAPON_02()
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_01(C_ITEM)
 {
-	name 				=	"Ring of Spiritual Protection";
+	name 				=	"Ring des spirituellen Schutzes";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -345,7 +345,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGIC_01()
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_02(C_ITEM)
 {
-	name 				=	"Protection of Magic";
+	name 				=	"Schutz vor Magie";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -379,7 +379,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGIC_02()
 
 INSTANCE ITRI_REVIVED_PROT_FIRE_01(C_Item)
 {
-	name 				=	"Ring of Flame Protection";
+	name 				=	"Flammenschutzring";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -411,7 +411,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_FIRE_01()
 
 INSTANCE ITRI_REVIVED_PROT_FIRE_02(C_Item)
 {
-	name 				=	"Protection of Fire";
+	name 				=	"Schutz vor Feuer";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -445,7 +445,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_FIRE_02()
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_01(C_ITEM)
 {
-	name 				=	"Ring of Lesser Purification";
+	name 				=	"Ring der geringeren Reinigung";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -480,7 +480,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGICFIRE_01()
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_02(C_ITEM)
 {
-	name 				=	"Ring of Purification";
+	name 				=	"Ring der Läuterung";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -517,7 +517,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGICFIRE_02()
 
 INSTANCE ITRI_REVIVED_PROT_TOTAL_01(C_ITEM)
 {
-	name 				=	"Ring of Lesser Invincibility";
+	name 				=	"Ring der Unbezwingbarkeit";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -561,7 +561,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_TOTAL_01()
 
 INSTANCE ITRI_REVIVED_PROT_TOTAL_02(C_ITEM)
 {
-	name 				=	"Ring of Greater Invincibility";
+	name 				=	"Ring der Unbesiegbarkeit";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -609,7 +609,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_TOTAL_02()
 
 INSTANCE ITRI_REVIVED_HP_01(C_Item)
 {
-	name 				=	"Ring of Life";
+	name 				=	"Ring der Lebenskraft";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -651,7 +651,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_01()
 
 INSTANCE ITRI_REVIVED_HP_02(C_Item)
 {
-	name 				=	"Greater Ring of Life";
+	name 				=	"Großer Ring des Lebens";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -695,7 +695,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_02()
 
 INSTANCE ITRI_REVIVED_MP_01(C_Item)
 {
-	name 				=	"Ring of Magic";
+	name 				=	"Ring der Magie";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -737,7 +737,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_01()
 
 INSTANCE ITRI_REVIVED_MP_02(C_Item)
 {
-	name 				=	"Greater Ring of Magic";
+	name 				=	"Großer Ring der Magie";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -781,7 +781,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_02()
 
 INSTANCE ITRI_REVIVED_HP_MP_01(C_Item)
 {
-	name 				=	"Ring of Enlightenment";
+	name 				=	"Ring der Erleuchtung";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -838,7 +838,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HPMP_01()
 
 INSTANCE ITRI_REVIVED_DEX_01(C_Item)
 {
-	name 					=	"Ring of Lesser Dexterity";
+	name 					=	"Ring der Gewandtheit";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -873,7 +873,7 @@ FUNC VOID UnEquip_REV_ITRI_Ring_des_Geschicks()
 
 INSTANCE ITRI_REVIVED_DEX_02(C_Item)
 {
-	name 					=	"Ring of Greater Dexterity";
+	name 					=	"Ring der Geschicklichkeit";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -910,7 +910,7 @@ FUNC VOID UnEquip_REV_ITRI_Ring_des_Geschicks2()
 
 INSTANCE ITRI_REVIVED_STR_01(C_Item)
 {
-	name 					=	"Ring of Power";
+	name 					=	"Ring der Kraft";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -945,7 +945,7 @@ FUNC VOID UnEquip_REV_ITRI_Staerkering()
 
 INSTANCE ITRI_REVIVED_STR_02(C_Item)
 {
-	name 					=	"Ring of Strength";
+	name 					=	"Ring der Stärke";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -983,7 +983,7 @@ FUNC VOID UnEquip_REV_ITRI_Staerkering2()
 
 INSTANCE ITRI_REVIVED_STR_DEX_01(C_Item)
 {
-	name 					=	"Warrior's Ring of Power";
+	name 					=	"Ring der Macht";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -1024,7 +1024,7 @@ FUNC VOID UnEquip_REV_ITRI_Machtring()
 
 INSTANCE ITAM_REVIVED_MELEE_01 (C_Item)
 {	
-	name 				=	"Morgan's ring";
+	name 				=	"Morgans Ring";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;
@@ -1043,7 +1043,7 @@ INSTANCE ITAM_REVIVED_MELEE_01 (C_Item)
 	description		= name;
 	
 	
-	TEXT[1]			= "The ring is decorated with many fine runes.";
+	TEXT[1]			= "Der Ring ist mit lauter feinen Runen verziert.";
 	TEXT[2]			= NAME_RaiseWeaponSkill;
 	COUNT[2]		= 10;
 	TEXT[5]			= NAME_Value;

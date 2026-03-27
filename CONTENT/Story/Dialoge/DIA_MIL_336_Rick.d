@@ -31,7 +31,7 @@ instance DIA_Rick_HALLO		(C_INFO)
 	condition	= DIA_Rick_HALLO_Condition;
 	information	= DIA_Rick_HALLO_Info;
 	permanent	= TRUE;
-	description	= "What's up?";
+	description	= "Wie steht's?";
 };
 
 func int DIA_Rick_HALLO_Condition ()
@@ -41,8 +41,8 @@ func int DIA_Rick_HALLO_Condition ()
 
 func void DIA_Rick_HALLO_Info ()
 {
-	AI_Output (other, self, "DIA_Rick_HALLO_15_00"); //How's it going?
-	AI_Output (self, other, "DIA_Rick_HALLO_10_01"); //If you want to talk, talk to Rumbold. I'm just here in case anyone makes trouble.
+	AI_Output (other, self, "DIA_Rick_HALLO_15_00"); //Wie läuft's denn so?
+	AI_Output (self, other, "DIA_Rick_HALLO_10_01"); //Wenn du reden willst, rede mit Rumbold. Ich bin nur hier, falls jemand Ärger macht.
 
 	AI_StopProcessInfos (self);		
 };

@@ -31,7 +31,7 @@ INSTANCE DIA_Fernando_PICKPOCKET (C_INFO)
 	condition	= DIA_Fernando_PICKPOCKET_Condition;
 	information	= DIA_Fernando_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be risky to steal his purse.)";
+	description = "(Es wäre gewagt seinen Geldbeutel zu stehlen)";
 };                       
 
 FUNC INT DIA_Fernando_PICKPOCKET_Condition()
@@ -86,7 +86,7 @@ INSTANCE DIA_Fernando_Hello   (C_INFO)
 	condition   = DIA_Fernando_Hello_Condition;
 	information = DIA_Fernando_Hello_Info;
 	permanent   = FALSE;
-	description = "How's business?";
+	description = "Wie läuft das Geschäft?";
 };
 
 FUNC INT DIA_Fernando_Hello_Condition()
@@ -116,7 +116,7 @@ INSTANCE DIA_Fernando_Perm   (C_INFO)
 	condition   = DIA_Fernando_Perm_Condition;
 	information = DIA_Fernando_Perm_Info;
 	permanent   = TRUE;
-	description = "How do you make a living now?";
+	description = "Womit verdienst du jetzt dein Gold?";
 };
 
 FUNC INT DIA_Fernando_Perm_Condition()
@@ -193,11 +193,11 @@ FUNC VOID DIA_Fernando_Minental_Info()
 	AI_Output (other ,self,"DIA_Fernando_Minental_15_05"); //I'll see what I can do.
 	
 	B_NpcClearObsessionByDMT (self);
-	Npc_ExchangeRoutine (self, "START");
+	Npc_ExchangeRoutine (self, "Start");
 	
 	Log_CreateTopic (TOPIC_Fernando,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Fernando,LOG_RUNNING);
-	B_LogEntry (TOPIC_Fernando,"The merchant Fernando wants to know what's with the ore in the Valley of Mines.");
+	B_LogEntry (TOPIC_Fernando,"Der Händler Fernando will wissen, wie es um das Erz im Minental steht.");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -210,7 +210,7 @@ instance DIA_Addon_Fernando_BanditTrader		(C_INFO)
 	condition	 = 	DIA_Addon_Fernando_BanditTrader_Condition;
 	information	 = 	DIA_Addon_Fernando_BanditTrader_Info;
 
-	description	 = 	"You've been selling weapons to the bandits.";
+	description	 = 	"Du hast Waffen an die Banditen gekauft.";
 };
 
 func int DIA_Addon_Fernando_BanditTrader_Condition ()
@@ -232,7 +232,7 @@ func void DIA_Addon_Fernando_BanditTrader_Info ()
 	AI_Output	(other, self, "DIA_Addon_Fernando_BanditTrader_15_00"); //You've been selling weapons to the bandits.
 	AI_Output	(self, other, "DIA_Addon_Fernando_BanditTrader_14_01"); //(baffled) But - what makes you think THAT?
 
-	B_LogEntry (TOPIC_Addon_BanditTrader,"Fernando the overseas trader admitted himself that he supplied weapons to the bandits."); 
+	B_LogEntry (TOPIC_Addon_BanditTrader,"Fernando, der Überseehändler, hat selbst zugegeben, Waffen an die Banditen geliefert zu haben."); 
 
 	B_GivePlayerXP (XP_Addon_Fernando_HatsZugegeben);
 	Fernando_HatsZugegeben = TRUE;
@@ -275,9 +275,9 @@ func void DIA_Addon_Fernando_BanditTrader_Info ()
 		if (Fernando_ImKnast == FALSE)//Joly:zur Sicherheit
 		{
 			Info_ClearChoices	(DIA_Addon_Fernando_BanditTrader);
-			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "What will you pay me if I let you go?", DIA_Addon_Fernando_BanditTrader_preis );
-			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "The militia is going to deal with you.", DIA_Addon_Fernando_BanditTrader_mil );
-			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "I'm shaking, I'm shaking.", DIA_Addon_Fernando_BanditTrader_Uptown );
+			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Was zahlst du, wenn ich dich laufen lasse.", DIA_Addon_Fernando_BanditTrader_preis );
+			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Die Miliz wird sich mit dir befassen.", DIA_Addon_Fernando_BanditTrader_mil );
+			Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Mir kommen die Tränen.", DIA_Addon_Fernando_BanditTrader_Uptown );
 		};
 	};
 };
@@ -303,8 +303,8 @@ func void DIA_Addon_Fernando_BanditTrader_preis ()
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_preis_14_03"); //That will have to do. Will you give me the incriminating material now?
 
 	Info_ClearChoices	(DIA_Addon_Fernando_BanditTrader);
-	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Forget it. I'm not going to give that away.", DIA_Addon_Fernando_BanditTrader_nein );
-	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Well, all right. Agreed.", DIA_Addon_Fernando_BanditTrader_ja );
+	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Vergiss es. Das geb' ich nicht aus der Hand", DIA_Addon_Fernando_BanditTrader_nein );
+	Info_AddChoice	(DIA_Addon_Fernando_BanditTrader, "Von mir aus. Abgemacht.", DIA_Addon_Fernando_BanditTrader_ja );
 };
 func void DIA_Addon_Fernando_BanditTrader_ja ()
 { 
@@ -339,7 +339,7 @@ INSTANCE DIA_Fernando_Success   (C_INFO)
 	condition   = DIA_Fernando_Success_Condition;
 	information = DIA_Fernando_Success_Info;
 	permanent   = FALSE;
-	description	= "I've been to the Valley of Mines.";
+	description	= "Ich war im Minental.";
 };
 FUNC INT DIA_Fernando_Success_Condition()
 {
@@ -384,7 +384,7 @@ FUNC VOID DIA_Fernando_Success_Info()
 	{
 		B_Say (self, other, "$NOTNOW");
 		Log_SetTopicStatus (TOPIC_Fernando, LOG_OBSOLETE);
-		B_LogEntry (TOPIC_Fernando,"Fernando no longer wants the information. And I'm not going to get paid, either.");
+		B_LogEntry (TOPIC_Fernando,"Fernando will die Infos nicht mehr. Und ich werde auch den Lohn nicht mehr kriegen.");
 	};
 };
 
@@ -398,7 +398,7 @@ instance DIA_Fernando_Obsession		(C_INFO)
 	condition	 = 	DIA_Fernando_Obsession_Condition;
 	information	 = 	DIA_Fernando_Obsession_Info;
 
-	description	 = 	"Are you all right?";
+	description	 = 	"Bist du in Ordnung?";
 };
 
 func int DIA_Fernando_Obsession_Condition ()
@@ -427,7 +427,7 @@ instance DIA_Fernando_Heilung		(C_INFO)
 	information	 = 	DIA_Fernando_Heilung_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"You're possessed!";
+	description	 = 	"Du bist besessen.";
 };
 
 func int DIA_Fernando_Heilung_Condition ()

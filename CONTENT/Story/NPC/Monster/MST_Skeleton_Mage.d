@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Skeleton_Mage(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Skeleton Mage";
+	name							=	"Skelett Magier";
 	guild							=	GIL_SKELETON_MAGE;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON_MAGE;
 

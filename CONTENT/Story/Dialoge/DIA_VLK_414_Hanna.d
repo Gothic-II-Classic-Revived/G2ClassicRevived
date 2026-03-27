@@ -46,7 +46,7 @@ FUNC INT DIA_Hanna_Hello_Condition()
  
 FUNC VOID DIA_Hanna_Hello_Info()
 {	
-	AI_Output (self ,other,"DIA_Hanna_Hello_17_00"); //Ah, a customer - what can I do for you?
+	AI_Output (self ,other,"DIA_Hanna_Hello_17_00"); //Ah, Kundschaft, was kann ich für Dich tun?
 };	
 
 //*****************************************
@@ -59,7 +59,7 @@ INSTANCE DIA_Hanna_Room(C_INFO)
 	condition	= DIA_Hanna_Room_Condition;
 	information	= DIA_Hanna_Room_Info;
 	permanent	= FALSE;
-	description	= "I'm looking for a room.";
+	description	= "Ich suche ein Zimmer.";
 };                       
 
 FUNC INT DIA_Hanna_Room_Condition()
@@ -99,7 +99,7 @@ INSTANCE DIA_Hanna_WhyPay(C_INFO)
 	condition	= DIA_Hanna_WhyPay_Condition;
 	information	= DIA_Hanna_WhyPay_Info;
 	permanent	= FALSE;
-	description	= "Why do the paladins pay for everything?";
+	description	= "Warum bezahlen die Paladine das alles?";
 };                       
 
 FUNC INT DIA_Hanna_WhyPay_Condition()
@@ -131,7 +131,7 @@ INSTANCE DIA_Hanna_WerHier(C_INFO)
 	condition	= DIA_Hanna_WerHier_Condition;
 	information	= DIA_Hanna_WerHier_Info;
 	permanent	= TRUE;
-	description	= "Who's staying here at the moment?";
+	description	= "Wer übernachtet hier zur Zeit?";
 };                       
 
 FUNC INT DIA_Hanna_WerHier_Condition()
@@ -161,7 +161,7 @@ INSTANCE DIA_Hanna_City(C_INFO)
 	condition	= DIA_Hanna_City_Condition;
 	information	= DIA_Hanna_City_Info;
 	permanent	= TRUE;
-	description	= "I have a few questions about the city...";
+	description	= "Ich hab ein paar Fragen zur Stadt ...";
 };                       
 
 FUNC INT DIA_Hanna_City_Condition()
@@ -175,8 +175,8 @@ FUNC VOID DIA_Hanna_City_Info()
 	
 	Info_ClearChoices (DIA_Hanna_City);
 	Info_AddChoice (DIA_Hanna_City,DIALOG_BACK,DIA_Hanna_City_Back);
-	Info_AddChoice (DIA_Hanna_City,"Where can I buy something around here?",DIA_Hanna_City_Buy);
-	Info_AddChoice (DIA_Hanna_City,"Tell me about the town.",DIA_Hanna_City_City);
+	Info_AddChoice (DIA_Hanna_City,"Wo kann ich hier was kaufen",DIA_Hanna_City_Buy);
+	Info_AddChoice (DIA_Hanna_City,"Erzähl mir was über die Stadt",DIA_Hanna_City_City);
 };
 
 FUNC VOID DIA_Hanna_City_Back ()
@@ -236,7 +236,7 @@ FUNC VOID DIA_Hanna_Kap3_EXIT_Info()
 var int Hanna_PriceForLetter;
 
 // ************************************************************
-// 		Wie sieht�s aus?
+// 		Wie siehts aus?
 // ************************************************************
 INSTANCE DIA_Hanna_AnyNews(C_INFO)
 {
@@ -245,7 +245,7 @@ INSTANCE DIA_Hanna_AnyNews(C_INFO)
 	condition	= DIA_Hanna_AnyNews_Condition;
 	information	= DIA_Hanna_AnyNews_Info;
 	permanent	= FALSE;
-	description = "What's up?";
+	description = "Wie steht's?";
 };                       
 FUNC INT DIA_Hanna_AnyNews_Condition()
 {
@@ -260,9 +260,9 @@ FUNC VOID DIA_Hanna_AnyNews_Info()
 	AI_Output (self ,other,"DIA_Hanna_AnyNews_17_01"); //You don't look like you care about other people's worries in the least.
 	
 	Info_ClearChoices (DIA_Hanna_AnyNews);
-	Info_AddChoice (DIA_Hanna_AnyNews,"Yeah, sure, I do.",DIA_Hanna_AnyNews_Yes);
-	Info_AddChoice (DIA_Hanna_AnyNews,"That depends.",DIA_Hanna_AnyNews_Depends);
-	Info_AddChoice (DIA_Hanna_AnyNews,"Not really.",DIA_Hanna_AnyNews_No);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Doch natürlich.",DIA_Hanna_AnyNews_Yes);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Kommt drauf an.",DIA_Hanna_AnyNews_Depends);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Nicht wirklich.",DIA_Hanna_AnyNews_No);
 };
 
 FUNC VOID DIA_Hanna_AnyNews_No ()
@@ -299,13 +299,13 @@ FUNC VOID DIA_Hanna_AnyNews_Yes ()
 
 	Log_CreateTopic (TOPIC_HannaRetrieveLetter, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_HannaRetrieveLetter, LOG_RUNNING);
-	B_LogEntry (TOPIC_HannaRetrieveLetter,"Hanna's missing a document. Seems it disappeared at the harbor, where the cartographer Brahim is."); 
+	B_LogEntry (TOPIC_HannaRetrieveLetter,"Hanna vermisst ein Schriftstück. Es soll am Hafen beim Kartenzeichner Brahim abhanden gekommen sein."); 
 
 
 	Info_ClearChoices (DIA_Hanna_AnyNews);
-	Info_AddChoice (DIA_Hanna_AnyNews,"I'm not an errand boy.",DIA_Hanna_AnyNews_Yes_Footboy);
-	Info_AddChoice (DIA_Hanna_AnyNews,"What's in it for me?",DIA_Hanna_AnyNews_Yes_Reward);
-	Info_AddChoice (DIA_Hanna_AnyNews,"I'll see what I can do.",DIA_Hanna_AnyNews_Yes_WillSee);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Ich bin doch kein Laufbursche.",DIA_Hanna_AnyNews_Yes_Footboy);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Was springt für mich dabei	raus?",DIA_Hanna_AnyNews_Yes_Reward);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Werd' sehen was ich rausfinden kann.",DIA_Hanna_AnyNews_Yes_WillSee);
 };
 
 FUNC VOID DIA_Hanna_AnyNews_Yes_Footboy ()
@@ -323,8 +323,8 @@ FUNC VOID DIA_Hanna_AnyNews_Yes_Reward ()
 	AI_Output (self ,other,"DIA_Hanna_AnyNews_Yes_Reward_17_02"); //So what is it you're asking of a poor woman?
 	
 	Info_ClearChoices (DIA_Hanna_AnyNews);
-	Info_AddChoice (DIA_Hanna_AnyNews,"Never mind.",DIA_Hanna_AnyNews_Yes_Reward_OK);
-	Info_AddChoice (DIA_Hanna_AnyNews,"You could be a little nice to me.",DIA_Hanna_AnyNews_Yes_Reward_BeNice);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Schon gut.",DIA_Hanna_AnyNews_Yes_Reward_OK);
+	Info_AddChoice (DIA_Hanna_AnyNews,"Du könntest ein bisschen Nett zu mir sein.",DIA_Hanna_AnyNews_Yes_Reward_BeNice);
 	Info_AddChoice (DIA_Hanna_AnyNews,"Gold.",DIA_Hanna_AnyNews_Yes_Reward_Gold);
 };
 
@@ -372,7 +372,7 @@ FUNC VOID DIA_Hanna_AnyNews_Yes_WillSee ()
 
 
 // ************************************************************
-//		Meinst du dieses Schriftst�ck?
+//		Meinst du dieses Schriftstck?
 // ************************************************************
 INSTANCE DIA_Hanna_ThisLetter(C_INFO)
 {
@@ -381,7 +381,7 @@ INSTANCE DIA_Hanna_ThisLetter(C_INFO)
 	condition	= DIA_Hanna_ThisLetter_Condition;
 	information	= DIA_Hanna_ThisLetter_Info;
 	permanent	= FALSE;
-	description = "Did you mean this document?";
+	description = "Meinst du dieses Schriftstück?";
 };                       
 FUNC INT DIA_Hanna_ThisLetter_Condition()
 {
@@ -503,7 +503,7 @@ INSTANCE DIA_Hanna_Schuldenbuch(C_INFO)
 	condition	= DIA_Hanna_Schuldenbuch_Condition;
 	information	= DIA_Hanna_Schuldenbuch_Info;
 	permanent	= FALSE;
-	description	= "Look what book I have here!";
+	description	= "Schau mal, was ich hier für ein Buch habe!";
 };                       
 FUNC INT DIA_Hanna_Schuldenbuch_Condition()
 {
@@ -530,7 +530,7 @@ instance DIA_Hanna_GiveSchuldenbuch(C_INFO)
 	condition	= DIA_Hanna_GiveSchuldenbuch_Condition;
 	information	= DIA_Hanna_GiveSchuldenbuch_Info;
 	permanent	= FALSE;
-	description = "Here - take the book.";
+	description = "Hier - nimm das Buch.";
 };                       
 FUNC INT DIA_Hanna_GiveSchuldenbuch_Condition()
 {

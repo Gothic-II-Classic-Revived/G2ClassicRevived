@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Swarm(C_Npc)
 {
 	//----- Monster -----
-	name							=	"Locust Swarm";
+	name							=	"Flugschreckenschwarm";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLOODFLY;
 

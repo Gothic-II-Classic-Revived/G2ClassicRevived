@@ -31,7 +31,7 @@ INSTANCE DIA_GornNW_Hallo (C_INFO)
 	condition	= DIA_GornNW_Hallo_Condition;
 	information	= DIA_GornNW_Hallo_Info;
 	permanent	= FALSE;
-	description = "Everything all right with you?";
+	description = "Alles klar bei dir?";
 };                       
 FUNC INT DIA_GornNW_Hallo_Condition()
 {
@@ -39,17 +39,17 @@ FUNC INT DIA_GornNW_Hallo_Condition()
 };
 FUNC VOID DIA_GornNW_Hallo_Info()
 {	
-	AI_Output (other,self ,"DIA_GornNW_Add_15_00"); //Everything all right with you?
+	AI_Output (other,self ,"DIA_GornNW_Add_15_00"); //Alles klar bei dir?
 	if (MIS_RescueGorn == LOG_SUCCESS)
 	{
-		AI_Output (self ,other,"DIA_GornNW_Add_12_01"); //You saved my ass, man.
-		AI_Output (self ,other,"DIA_GornNW_Add_12_02"); //I'll never forget that.
+		AI_Output (self ,other,"DIA_GornNW_Add_12_01"); //Du hast meinen Arsch gerettet, Mann.
+		AI_Output (self ,other,"DIA_GornNW_Add_12_02"); //Das vergess ich dir nie.
 		B_GivePlayerXP (XP_Ambient);
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_GornNW_Add_12_03"); //Milten got me out.
-		AI_Output (self ,other,"DIA_GornNW_Add_12_04"); //I'll never forget that.
+		AI_Output (self ,other,"DIA_GornNW_Add_12_03"); //Milten hat mich rausgehauen.
+		AI_Output (self ,other,"DIA_GornNW_Add_12_04"); //Das vergess ich dir nie.
 	};
 };
 
@@ -64,7 +64,7 @@ INSTANCE DIA_GornNW_WhatNext (C_INFO)
 	condition	= DIA_GornNW_WhatNext_Condition;
 	information	= DIA_GornNW_WhatNext_Info;
 	permanent	= TRUE;
-	description = "What are your plans now?";
+	description = "Was hast du jetzt vor?";
 };                       
 FUNC INT DIA_GornNW_WhatNext_Condition()
 {
@@ -72,9 +72,9 @@ FUNC INT DIA_GornNW_WhatNext_Condition()
 };
 FUNC VOID DIA_GornNW_WhatNext_Info()
 {	
-	AI_Output (other,self ,"DIA_GornNW_Add_15_05"); //What do you want to do now?
-	AI_Output (self ,other,"DIA_GornNW_Add_12_06"); //I think I'll load up on grub first.
-	AI_Output (other,self ,"DIA_GornNW_Add_15_07"); //And then?
-	AI_Output (self ,other,"DIA_GornNW_Add_12_08"); //Who knows... Maybe I'll go back to the mining colony.
-	AI_Output (self ,other,"DIA_GornNW_Add_12_09"); //Someone should keep an eye on the orcs - otherwise they'll all show up on the doorstep without warning.
+	AI_Output (other,self ,"DIA_GornNW_Add_15_05"); //Was willst du jetzt machen?
+	AI_Output (self ,other,"DIA_GornNW_Add_12_06"); //Ich denke, ich werde mir erst mal den Bauch vollschlagen.
+	AI_Output (other,self ,"DIA_GornNW_Add_15_07"); //Und weiter?
+	AI_Output (self ,other,"DIA_GornNW_Add_12_08"); //Mal sehen... Vielleicht geh ich in die Minenkolonie zurück.
+	AI_Output (self ,other,"DIA_GornNW_Add_12_09"); //Jemand sollte ein Auge auf die Orks werfen - sonst stehen sie plötzlich ohne Warnung alle hier vor der Tür.
 };

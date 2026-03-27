@@ -90,11 +90,11 @@ INSTANCE Maya_Troll	(Mst_Default_Troll)
 };
 
 //*********************************
-//	Höhlentroll bei Orks auf der DI    
+//	Hhlentroll bei Orks auf der DI    
 //*********************************
 INSTANCE Troll_DI	(Mst_Default_Troll)
 {
-	name		=	"Cave Troll";
+	name		=	"HÃ¶hlentroll";
 	
 	protection	[PROT_BLUNT]		=	200;
 	protection	[PROT_EDGE]			=	200;

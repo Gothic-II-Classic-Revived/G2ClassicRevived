@@ -80,17 +80,17 @@ func void DIA_Sonja_STANDARD_Info ()
 {
 	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
-		AI_Output (self, other, "DIA_Sonja_STANDARD_16_00"); //Talk to Bromor if you want to have some fun.
+		AI_Output (self, other, "DIA_Sonja_STANDARD_16_00"); //Sprich mit Bromor, wenn du Spaß haben willst.
 	}
 	else if (other.guild == GIL_DJG)
 	&& (Sonja_Says == FALSE)
 	{
-		AI_Output (self, other, "DIA_Sonja_STANDARD_16_01"); //The problem with you guys is that you'd rather slaughter orcs than screw.
+		AI_Output (self, other, "DIA_Sonja_STANDARD_16_01"); //Das Problem mit euch Typen ist, dass ihr lieber Orks abschlachtet als zu vögeln.
 		Sonja_Says = TRUE;
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Sonja_STANDARD_16_02"); //If it's talk you're after, go find yourself a woman and marry her.
+		AI_Output (self, other, "DIA_Sonja_STANDARD_16_02"); //Wenn du quatschen willst, such dir 'ne Frau und heirate sie.
 	};
 	AI_StopProcessInfos (self);
 };

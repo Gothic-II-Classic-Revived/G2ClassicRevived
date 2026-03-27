@@ -59,7 +59,7 @@ FUNC VOID DIA_Lutero_Hallo_Info()
 	AI_Output (self ,other,"DIA_Lutero_Hallo_13_02"); //Well, especially rare and unusual things. So far I have always managed to fulfill my customers' wishes.
 	
 	Log_CreateTopic (TOPIC_CityTrader, LOG_NOTE);
-	B_LogEntry (TOPIC_CityTrader, "Lutero deals in unusual and rare objects in the upper quarter."); 
+	B_LogEntry (TOPIC_CityTrader, "Lutero handelt mit ausgefallenen und seltenen Gegenständen im oberen Viertel."); 
 };
 //************************************************************
 //	GetLost
@@ -105,7 +105,7 @@ INSTANCE DIA_Lutero_Snapper(C_INFO)
 	condition	= DIA_Lutero_Snapper_Condition;
 	information	= DIA_Lutero_Snapper_Info;
 	permanent	= FALSE;
-	description = "Are you looking for anything in particular?";
+	description = "Suchst du bestimmte Gegenstände?";
 };                       
 
 FUNC INT DIA_Lutero_Snapper_Condition()
@@ -137,7 +137,7 @@ FUNC VOID DIA_Lutero_Snapper_Info()
 	
 	Log_CreateTopic (Topic_Lutero,LOG_MISSION);
 	Log_SetTopicStatus (Topic_Lutero,LOG_RUNNING);
-	B_LogEntry (Topic_Lutero,"The merchant Lutero is looking for the claws of a particularly powerful snapper.");
+	B_LogEntry (Topic_Lutero,"Der Händler Lutero sucht nach Krallen eines besonders mächtigen Snappers.");
 	
 	Lutero_Krallen = LOG_RUNNING;
 };
@@ -151,7 +151,7 @@ INSTANCE DIA_Lutero_Kralle(C_INFO)
 	condition	= DIA_Lutero_Kralle_Condition;
 	information	= DIA_Lutero_Kralle_Info;
 	permanent	= FALSE;
-	description = "I've got some special snapper claws for you.";
+	description = "Ich habe besondere Snapperkrallen für dich.";
 };                       
 
 FUNC INT DIA_Lutero_Kralle_Condition()
@@ -193,7 +193,7 @@ INSTANCE DIA_Lutero_Trade(C_INFO)
 	condition	= DIA_Lutero_Trade_Condition;
 	information	= DIA_Lutero_Trade_Info;
 	permanent	= TRUE;
-	description = "Show me your wares.";
+	description = "Zeig mir deine Ware.";
 	trade		= TRUE;
 };                       
 FUNC INT DIA_Lutero_Trade_Condition()

@@ -2,7 +2,7 @@
 PROTOTYPE Mst_Default_Psionic(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Apocalyptic Psionic";
+	name							=	"Apokalyptischer Psioniker";
 	guild							=	GIL_FANATIC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FANATIC;
 
@@ -42,7 +42,7 @@ PROTOTYPE Mst_Default_Psionic(C_Npc)
 //**************************************************************
 INSTANCE Zombie_Novice01	(Mst_Default_Psionic)
 {
-	name						=	"Undead Novice";
+	name						=	"Untoter Novize";
 	
 	Mdl_SetVisual			(self,	"Zombie.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
@@ -51,7 +51,7 @@ INSTANCE Zombie_Novice01	(Mst_Default_Psionic)
 //-------------------------------------------------------------
 INSTANCE Zombie_Novice02	(Mst_Default_Psionic)
 {
-	name						=	"Undead Novice";
+	name						=	"Untoter Novize";
 	
 	Mdl_SetVisual			(self,	"Zombie.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
@@ -60,7 +60,7 @@ INSTANCE Zombie_Novice02	(Mst_Default_Psionic)
 //-------------------------------------------------------------
 INSTANCE Zombie_Novice03	(Mst_Default_Psionic)
 {
-	name						=	"Undead Novice";
+	name						=	"Untoter Novize";
 
 	Mdl_SetVisual			(self,	"Zombie.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
@@ -73,7 +73,7 @@ INSTANCE Zombie_Novice03	(Mst_Default_Psionic)
 //**************************************************************
 INSTANCE Skeleton_Templar	(Mst_Default_Psionic)
 {
-	name						=	"Undead Templar";
+	name						=	"Untoter Templer";
 
 	Mdl_SetVisual		(self,	"HumanS.mds");
 	//Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds"); //FIXME s.Skeleton.

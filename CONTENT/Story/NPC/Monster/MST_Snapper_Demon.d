@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_DragonSnapper(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Dragon Snapper";
+	name							=	"Drachen-Snapper";
 	guild							=	GIL_SNAPPER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRAGONSNAPPER;
 
@@ -84,7 +84,7 @@ INSTANCE DragonSnapper	(Mst_Default_DragonSnapper)
 
 INSTANCE Gaans_Snapper	(Mst_Default_DragonSnapper)
 {
-	name	=	"Snorting Snapper";
+	name	=	"Schnaubender Snapper";
 
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 25);

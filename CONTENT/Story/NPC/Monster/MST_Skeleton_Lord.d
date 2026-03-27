@@ -2,7 +2,7 @@
 PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 {
 	//----- Monster ----
-	name							=	"Shadow Knight";
+	name							=	"Schattenritter";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
 
@@ -71,7 +71,7 @@ INSTANCE Skeleton_Lord	(Mst_Skeleton_Lord)
 
 INSTANCE Crypt_Skeleton_Lord	(Mst_Skeleton_Lord)
 {
-	name		=	"Shadow Lord Inubis";
+	name		=	"Schattenlord Inubis";
 
 	B_SetVisuals_Skeleton_Lord ();
 	
@@ -89,7 +89,7 @@ INSTANCE Crypt_Skeleton_Lord	(Mst_Skeleton_Lord)
 
 INSTANCE Skeleton_Lord_Archol	(Mst_Skeleton_Lord)
 {
-	name			=	"Shadow Lord Archol";
+	name			=	"Schattenlord Archol";
 	level			=	60;
 
 	//----- Attribute ----	

@@ -2,7 +2,7 @@
 instance VLK_4201_Wirt (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Host";
+	name 		= "Wirt";
 	guild 		= GIL_VLK;
 	id 			= 4201;
 	voice 		= 14;

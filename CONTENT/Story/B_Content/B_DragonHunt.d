@@ -6,7 +6,7 @@ func void B_DragonHunt()
 	{
 		Log_CreateTopic (TOPIC_Dragonhunter, LOG_MISSION);
 		Log_SetTopicStatus (TOPIC_Dragonhunter, LOG_RUNNING);
-		B_LogEntry (TOPIC_Dragonhunter,"The great dragon hunt has begun and will have lured many would-be adventurers to the Valley of Mines. I can only hope they won't stand in my way."); 
+		B_LogEntry (TOPIC_Dragonhunter,"Die grosse Drachenjagd ist eröffnet und hat vermutlich viele Möchtegernabenteurer ins Minental gelockt. Ich kann nur hoffen, dass sie mir nicht im Wege stehen."); 
 
 
 		if(DragonHunt_OriginalPass == TRUE)

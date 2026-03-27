@@ -31,7 +31,7 @@ instance DIA_Lee_DI_Hallo		(C_INFO)
 	condition	 = 	DIA_Lee_DI_Hallo_Condition;
 	information	 = 	DIA_Lee_DI_Hallo_Info;
 
-	description	 = 	"What job will you take over?";
+	description	 = 	"Welche Aufgabe willst du übernehmen?";
 };
 func int DIA_Lee_DI_Hallo_Condition ()
 {	
@@ -43,8 +43,8 @@ func int DIA_Lee_DI_Hallo_Condition ()
 
 func void DIA_Lee_DI_Hallo_Info ()
 {
-	AI_Output			(other, self, "DIA_Lee_DI_Hallo_15_00"); //What job will you take over?
-	AI_Output			(self, other, "DIA_Lee_DI_Hallo_04_01"); //Someone has to watch the ship. I'll stay here and make sure that it's still around when you come back.
+	AI_Output			(other, self, "DIA_Lee_DI_Hallo_15_00"); //Welche Aufgabe willst du übernehmen?
+	AI_Output			(self, other, "DIA_Lee_DI_Hallo_04_01"); //Jemand muss auf das Schiff achten. Ich werde hier bleiben und dafür sorgen, dass es bei deiner Rückkehr auch noch da ist.
 	
 };
 
@@ -60,7 +60,7 @@ instance DIA_Lee_DI_PERM6		(C_INFO)
 	information	 = 	DIA_Lee_DI_PERM6_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How's my ship?";
+	description	 = 	"Wie geht's meinem Schiff?";
 };
 
 func int DIA_Lee_DI_PERM6_Condition ()
@@ -74,15 +74,15 @@ func int DIA_Lee_DI_PERM6_Condition ()
 
 func void DIA_Lee_DI_PERM6_Info ()
 {
-	AI_Output			(other, self, "DIA_Lee_DI_PERM6_15_00"); //How's my ship?
+	AI_Output			(other, self, "DIA_Lee_DI_PERM6_15_00"); //Wie geht's meinem Schiff?
 
 	if (ORkSturmDI == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Lee_DI_PERM6_04_01"); //Don't worry. I've got everything under control.
+		AI_Output			(self, other, "DIA_Lee_DI_PERM6_04_01"); //Mach dir keine Sorgen. Ich hab hier alles im Griff.
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Lee_DI_PERM6_04_02"); //Everything's fine. Those miserable orcs are welcome to come back any time. Then they'll get their next hiding.
+		AI_Output			(self, other, "DIA_Lee_DI_PERM6_04_02"); //Alles in Ordnung! Die elenden Orks sollen ruhig wieder kommen. Dann kriegen sie ihre nächste Abreibung.
 	};
 	
 	AI_StopProcessInfos (self);
@@ -100,7 +100,7 @@ INSTANCE DIA_Lee_DI_Teach(C_INFO)
 	information	= DIA_Lee_DI_Teach_Info;
 	permanent	= TRUE;
 	
-	description = "I need training.";
+	description = "Ich brauche Training.";
 };                       
 
 FUNC INT DIA_Lee_DI_Teach_Condition()
@@ -200,7 +200,7 @@ instance DIA_Lee_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Lee_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 	
-	description = 	"We can be on our way now.";
+	description = 	"Wir können jetzt wieder aufbrechen.";
 };
 
 func int DIA_Lee_DI_UndeadDragonDead_Condition ()
@@ -222,7 +222,7 @@ func void DIA_Lee_DI_UndeadDragonDead_Info ()
 		{
 			AI_Output			(self ,other, "DIA_Lee_DI_UndeadDragonDead_04_02"); //You'll take me to the mainland, won't you?
 			AI_Output			(other ,self, "DIA_Lee_DI_UndeadDragonDead_15_03"); //Yes. Khorinis will survive without you.
-			//AI_Output			(self ,other, "DIA_Lee_DI_UndeadDragonDead_04_04"); //Dann kann ich dem K�nig endlich meine lang ersehnte Aufwartung machen. Er ist schon zu lange vor mir davon gelaufen.
+			//AI_Output			(self ,other, "DIA_Lee_DI_UndeadDragonDead_04_04"); //Dann kann ich dem Knig endlich meine lang ersehnte Aufwartung machen. Er ist schon zu lange vor mir davon gelaufen.
 			AI_Output (self ,other, "DIA_Lee_Add_04_26"); //Then I can finally pay my long delayed visit to the King.
 			AI_Output (self ,other, "DIA_Lee_Add_04_27"); //I've waited a long time for this...
 			AI_Output			(self ,other, "DIA_Lee_DI_UndeadDragonDead_04_05"); //What do you think? Shouldn't patience finally be rewarded?

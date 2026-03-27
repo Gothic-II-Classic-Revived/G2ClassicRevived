@@ -1,98 +1,98 @@
 // ***************************
-// LOG_Constants f�r Missionen
+// LOG_Constants fr Missionen
 // ---------------------------
 // (LOG_MISSION)
 // ***************************
 //ADDON
-const string	TOPIC_Addon_PickForConstantino	=	"Herbs for Constantino";			
-const string	TOPIC_Addon_Greg_NW				=	"The man with the eyepatch";			
-const string	TOPIC_Addon_Ornament			=	"The portal";			
+const string	TOPIC_Addon_PickForConstantino	=	"Pflanzen für Constantino.";			
+const string	TOPIC_Addon_Greg_NW				=	"Der Mann mit der Augenklappe";			
+const string	TOPIC_Addon_Ornament			=	"Das Portal";			
 const string	TOPIC_Addon_HolRiordian			=	"Riordian";			
-const string	TOPIC_Addon_RingOfWater			=	"The 'Ring of Water'";
-const string	TOPIC_Addon_KDW					=	"The Water Mages";
-const string	TOPIC_Addon_CavalornTheHut		=	"Cavalorn's old hut";
+const string	TOPIC_Addon_RingOfWater			=	"Der'Ring des Wassers'";
+const string	TOPIC_Addon_KDW					=	"Die Wassermagier";
+const string	TOPIC_Addon_CavalornTheHut		=	"Cavalorns alte Hütte";
 var int			TOPIC_End_CavalornTheHut;
-const string	TOPIC_Addon_KillBrago			=	"Cavalorn's bandits";
-const string	TOPIC_Addon_Bandittrader		=	"The bandits' weapons dealer";
-const string	TOPIC_Addon_MissingPeople		=	"The missing people";
-const string	TOPIC_Addon_WhoStolePeople		=	"Where are the missing people?";
-const string	TOPIC_Addon_BringRangerToLares	=	"Relief for Lares";
-const string	TOPIC_Addon_TeleportsNW			=	"The teleporter stones";
-const string	TOPIC_Addon_Stoneplates			=	"Stone tablets";
-const string	TOPIC_Addon_RangerHelpKDF		=	"The simple way to the monastery";
+const string	TOPIC_Addon_KillBrago			=	"Cavalorns Banditen";
+const string	TOPIC_Addon_Bandittrader		=	"Der Waffenhändler der Banditen";
+const string	TOPIC_Addon_MissingPeople		=	"Die Vermissten";
+const string	TOPIC_Addon_WhoStolePeople		=	"Wo sind die vermissten Leute?";
+const string	TOPIC_Addon_BringRangerToLares	=	"Ablösung für Lares";
+const string	TOPIC_Addon_TeleportsNW			=	"Die Teleportsteine";
+const string	TOPIC_Addon_Stoneplates			=	"Steintafeln";
+const string	TOPIC_Addon_RangerHelpKDF		=	"Der einfache Weg ins Kloster";
 var int			TOPIC_End_RangerHelpKDF;
-const string	TOPIC_Addon_RangerHelpSLD		=	"The simple way to the mercenaries";
+const string	TOPIC_Addon_RangerHelpSLD		=	"Der einfache Weg zu den Söldnern";
 var int			TOPIC_End_RangerHelpSLD;
-const string	TOPIC_Addon_RangerHelpMIL		=	"The simple way to the militia";
+const string	TOPIC_Addon_RangerHelpMIL		=	"Der einfache Weg zur Miliz";
 const string	TOPIC_Addon_Joe					=	"Joe";
 var int			TOPIC_END_Joe;
-const string	TOPIC_Addon_BromorsGold			=	"Bromor's golden dish";
+const string	TOPIC_Addon_BromorsGold			=	"Bromors goldene Schale";
 
-const string	TOPIC_Addon_TeleportsADW		=	"The power of the focus stones";
-const string	TOPIC_Addon_Sklaven				=	"Raven's slaves";
-const string	TOPIC_Addon_Relicts				=	"Relics"; 
+const string	TOPIC_Addon_TeleportsADW		=	"Die Kraft der Fokussteine";
+const string	TOPIC_Addon_Sklaven				=	"Ravens Sklaven";
+const string	TOPIC_Addon_Relicts				=	"Reliquien"; 
 const string	TOPIC_Addon_RavenKDW			=	"Raven"; 
-const string	TOPIC_Addon_Lance				=	"The vanguard of the Water Mages"; 
+const string	TOPIC_Addon_Lance				=	"Die Vorhut der Wassermagier"; 
 var int			TOPIC_End_Lance;
-const string	TOPIC_Addon_HousesOfRulers		=	"The mansions of the builders"; 
-const string	TOPIC_Addon_CanyonOrcs			=	"The orcs in the canyon"; 
+const string	TOPIC_Addon_HousesOfRulers		=	"Die Herrenhäuser der Erbauer"; 
+const string	TOPIC_Addon_CanyonOrcs			=	"Die Orks im Canyon"; 
 var int			TOPIC_END_CanyonOrcs;
-const string	TOPIC_Addon_BDTRuestung			=	"Bandit armor"; 
-const string	TOPIC_Addon_Quarhodron			=	"The power of the guardians of the dead"; 
-const string	TOPIC_Addon_Klaue				=	"The Claw of Beliar"; 
+const string	TOPIC_Addon_BDTRuestung			=	"Eine Rüstung der Banditen"; 
+const string	TOPIC_Addon_Quarhodron			=	"Die Macht der Totenwächter"; 
+const string	TOPIC_Addon_Klaue				=	"Die Klaue Beliars"; 
 var int			TOPIC_END_Klaue;
-const string	TOPIC_Addon_Kammern				=	"The chambers of the temple"; 
-const string	TOPIC_Addon_Flut				=	"The sunken city"; 
+const string	TOPIC_Addon_Kammern				=	"Die Kammern des Tempels"; 
+const string	TOPIC_Addon_Flut				=	"Die versunkene Stadt"; 
 var int			TOPIC_END_Flut;
-const string	TOPIC_Addon_BaltramSkipTrade	=	"Pirate trade";  
+const string	TOPIC_Addon_BaltramSkipTrade	=	"Piratenhandel";  
 var int			TOPIC_END_BaltramSkipTrade; 							
-const string	TOPIC_Addon_FarimsFish			=	"Trouble with the militia"; 
+const string	TOPIC_Addon_FarimsFish			=	"Ärger mit der Miliz"; 
 const string	TOPIC_Addon_Lucia				=	"Lucia"; 
 var int			TOPIC_END_Lucia;
-const string	TOPIC_Addon_Erol				=	"Merchant raid"; 
+const string	TOPIC_Addon_Erol				=	"Händlerüberfall"; 
 
 
-const string	TOPIC_Addon_VatrasAbloesung		=	"Relief for Vatras";
+const string	TOPIC_Addon_VatrasAbloesung		=	"Ablösung für Vatras";
 
-// ******** Texte, die in alte Topics gepackt werden m�ssen *************
+// ******** Texte, die in alte Topics gepackt werden mssen *************
 
-const string	LogText_Addon_SCKnowsMisspeapl 		=	"Many citizens of Khorinis are missing. Nobody seems to know what became of them.";
-const string	LogText_Addon_WilliamLeiche	 		=	"The body of a fisherman lies in the ruins east of the Water Mages' camp.";
-const string	LogText_Addon_RavensGoldmine	 	=	"Raven has a mine and is making the slaves dig for gold there.";
-const string	LogText_Addon_KDWRight			 	=	"Only a Water Mage has the right to admit somebody to the 'Ring of Water'.";
-const string	LogText_Addon_WilliamMissing	 	=	"Wiliiam, one of the fishermen of the Khorinis harbor, is among those missing.";
-const string	LogText_Addon_Relicts	 			=	"In the temple of Adanos, the rulers of Jharkendar have erected 3 chambers full of deadly mysteries, designed to stop all intruders. The colored relics of the builders are the keys.";
-const string	LogText_Addon_SkipsRumToBaltram		=	"Skip gave me rum to take to Baltram.";
+const string	LogText_Addon_SCKnowsMisspeapl 		=	"Viele Bürger von Khorinis werden vermisst. Niemand scheint zu wissen, was mit ihnen passiert ist.";
+const string	LogText_Addon_WilliamLeiche	 		=	"Die Leiche eines Fischer liegt in den Ruinen östlich des Lagers der Wassermagier.";
+const string	LogText_Addon_RavensGoldmine	 	=	"Raven hat eine Mine und lässt die Sklaven dort nach Gold schürfen.";
+const string	LogText_Addon_KDWRight			 	=	"Nur ein Wassermagier hat das Recht jemanden in den 'Ring des Wassers' aufzunehmen.";
+const string	LogText_Addon_WilliamMissing	 	=	"William, einer der Fischer des Hafens von Khorinis, gehört zu den Vermissten.";
+const string	LogText_Addon_Relicts	 			=	"Im Tempel Adanos haben die Herrscher von Jharkendar 3 Kammern voller tötlicher Rätsel errichtet, die alle Eindringlinge aufhalten soll. Die farbigen Reliquien der Erbauer sind der Schlüssel dazu.";
+const string	LogText_Addon_SkipsRumToBaltram		=	"Skip gab mir Rum. Ich soll ihn zu Baltram bringen.";
 
 // Teach
-const string	LogText_Addon_Cavalorn_Teach		=	"Cavalorn can show me how to use a bow and how to sneak.";
-const string	LogText_Addon_SaturasTeach	 		=	"Saturas can teach me the Circles of Magic.";
-const string	LogText_Addon_MyxirTeach	 		=	"Myxir can teach me to read the language of the builders.";
-const string	LogText_Addon_RiordianTeach	 		=	"Riordian can teach my will-o'-the-wisp to search for things.";
-const string	LogText_Addon_RiordianTeachAlchemy 	=	"Riordian can teach me the art of brewing potions.";
-const string	LogText_Addon_NefariusTeach			=	"Nefarius will teach me how to make runes.";
-const string	LogText_Addon_Erol_Teach	 		=	"Erol the merchant can show me how to become stronger.";
+const string	LogText_Addon_Cavalorn_Teach		=	"Cavalorn kann mir den Umgang mit dem Bogen zeigen und mir das Schleichen beibringen.";
+const string	LogText_Addon_SaturasTeach	 		=	"Saturas kann mir die magischen Kreis beibringen.";
+const string	LogText_Addon_MyxirTeach	 		=	"Myxir kann mir das lesen der fremden Sprache der Erbauer beibringen.";
+const string	LogText_Addon_RiordianTeach	 		=	"Riordian kann meinem Irrlicht beibringen, nach Dingen zu suchen.";
+const string	LogText_Addon_RiordianTeachAlchemy 	=	"Riordian kann mir die Kunst des Tränkebrauens beibringen.";
+const string	LogText_Addon_NefariusTeach			=	"Bei Nefarius lerne ich, wie man Runen herstellt.";
+const string	LogText_Addon_Erol_Teach	 		=	"Der Händler Erol kann mir zeigen, wie ich stärker werde.";
 
 // Trade
-const string	LogText_Addon_CronosTrade	 		=	"Cronos the Water Mage has some interesting things to trade.";
-const string	LogText_Addon_VatrasTrade	 		=	"Vatras is interested in those strange stone tablets that can be found around here. He promised to pay a good price for them.";
-const string	LogText_Addon_MartinTrade	 		=	"Martin the provisions master can sell me things from the paladins' stock.";
-const string	LogText_Addon_ErolTrade	 			=	"Erol the trader can sell me all kinds of goods. His hut lies between Onar's farm and the 'Dead Harpy' tavern.";
+const string	LogText_Addon_CronosTrade	 		=	"Der Wassermagier Cronos hat einige interessante Dinge, die er mit mir handelt.";
+const string	LogText_Addon_VatrasTrade	 		=	"Vatras nimmt mir die seltsamen Steintafeln ab, die in dieser Gegend zu finden sind. Er versprach mir, mich angemessen dafür zu entlohnen.";
+const string	LogText_Addon_MartinTrade	 		=	"Martin der Proviantmeister kann mir Dinge aus den Beständen der Paladine verkaufen.";
+const string	LogText_Addon_ErolTrade	 			=	"Der Händler Erol kann mir Waren aller Art verkaufen. Er hat seine Hütte zwischen der Taverne 'Zur Toten Harpie' und Onars Hof.";
 
 //WispDetector
-const string	LogText_Addon_WispLearned 			=	"My will-o'-the-wisp can find the following things for me:";
-const string	LogText_Addon_WispLearned_NF 		=	"Close combat weapons";
-const string	LogText_Addon_WispLearned_FF	 	=	"Long-range weapons and ammunition";
-const string	LogText_Addon_WispLearned_NONE 		=	"Gold, keys and utensils";
-const string	LogText_Addon_WispLearned_RUNE 		=	"Runes and scrolls";
-const string	LogText_Addon_WispLearned_MAGIC   	=	"Rings and amulets";
-const string	LogText_Addon_WispLearned_FOOD 		=	"Food and plants";
-const string	LogText_Addon_WispLearned_POTIONS 	=	"Potions, magic and regular";
+const string	LogText_Addon_WispLearned 			=	"Mein Irrlicht kann folgende Dinge für mich finden:";
+const string	LogText_Addon_WispLearned_NF 		=	"Nahkampfwaffen";
+const string	LogText_Addon_WispLearned_FF	 	=	"Fernkampfwaffen und Munition";
+const string	LogText_Addon_WispLearned_NONE 		=	"Gold, Schlüssel und Gebrauchsgegenstände";
+const string	LogText_Addon_WispLearned_RUNE 		=	"Runen und Schriftrollen";
+const string	LogText_Addon_WispLearned_MAGIC   	=	"Ringe und Amulette";
+const string	LogText_Addon_WispLearned_FOOD 		=	"Nahrung und Planzen";
+const string	LogText_Addon_WispLearned_POTIONS 	=	"Magische und andere Tränke";
 
 //Language
-const string	LogText_Addon_Language_1 			=	"I know the language of the peasants. It is the common language of the builders.";
-const string	LogText_Addon_Language_2 			=	"I know the language of the warriors.";
-const string	LogText_Addon_Language_3 			=	"I know the language of the priests.";
+const string	LogText_Addon_Language_1 			=	"Ich beherrsche die Sprache der Bauern. Es ist die gemeine Sprache der Erbauer.";
+const string	LogText_Addon_Language_2 			=	"Ich beherrsche die Sprache der Krieger.";
+const string	LogText_Addon_Language_3 			=	"Ich beherrsche die Sprache der Priester.";
 
 
 
@@ -118,76 +118,76 @@ const string	LogText_Addon_Language_3 			=	"I know the language of the priests."
 
 //Gothic 2
 // ------ Kapitel 1 ------
-const string	TOPIC_Bronkoeingeschuechtert	=	"The Lazy Farmer";			
-const string	TOPIC_BalthasarsSchafe			=	"The Forbidden Pasture";			
-const string	TOPIC_AkilsSLDStillthere		=	"A Farmer in Need";			
+const string	TOPIC_Bronkoeingeschuechtert	=	"Der faule Bauer";			
+const string	TOPIC_BalthasarsSchafe			=	"Die verbotene Weide";			
+const string	TOPIC_AkilsSLDStillthere		=	"Bauer in Not";			
 var int 		TOPIC_END_AkilsSLDStillthere;
-const string	TOPIC_Wettsaufen				=	"Bottoms Up";			
-const string	TOPIC_GaanSchnaubi				=	"The Snorting Creature";			
-const string	TOPIC_GromAskTeacher			=	"The Hungry Hunter";			
-const string	TOPIC_DragomirsArmbrust			=	"Dragomir's Crossbow";			
-const string	TOPIC_KillLighthouseBandits		=	"Bandits in Jack's Lighthouse";			
-const string	TOPIC_HannaRetrieveLetter		=	"Something lost?";			
+const string	TOPIC_Wettsaufen				=	"Leere den Krug in einem Zug";			
+const string	TOPIC_GaanSchnaubi				=	"Die Schnaubende Kreatur";			
+const string	TOPIC_GromAskTeacher			=	"Der hungrige Jäger";			
+const string	TOPIC_DragomirsArmbrust			=	"Dragomir´s Armbrust";			
+const string	TOPIC_KillLighthouseBandits		=	"Banditen in Jacks Leuchturm";			
+const string	TOPIC_HannaRetrieveLetter		=	"Abhanden gekommen?";			
 
 // ------ Kapitel 2 ------
 // ------ Kapitel 3 ------
 
-const string	TOPIC_INNOSEYE					=	"The Eye of Innos";
+const string	TOPIC_INNOSEYE					=	"Das Auge Innos";
 var int 		TOPIC_END_INNOSEYE;
-const string	TOPIC_DEMENTOREN				=	"The Seekers";
+const string	TOPIC_DEMENTOREN				=	"Die Suchenden";
 var int 		TOPIC_END_DEMENTOREN;
-const string	TOPIC_Buster_KillShadowbeasts	=	"Shadowbeast Horns for Buster";
-const string	TOPIC_Ulthar_HeileSchreine_PAL	=	"The Desecrated Shrines";
-const string	TOPIC_TraitorPedro				=	"Pedro the Traitor";
-const string	TOPIC_SekobDMT					=	"The Banished Farmer";
+const string	TOPIC_Buster_KillShadowbeasts	=	"Schattenläuferhörner für Buster";
+const string	TOPIC_Ulthar_HeileSchreine_PAL	=	"Die geschändteten Schreine";
+const string	TOPIC_TraitorPedro				=	"Pedro der Verräter";
+const string	TOPIC_SekobDMT					=	"Der vertriebene Bauer";
 var int 		TOPIC_END_SekobDMT;
-const string	TOPIC_AkilSchafDiebe			=	"Sheep Thieves";
-const string	TOPIC_HealHilda					=	"Healing for Hilda";
-const string	TOPIC_MalethsGehstock			=	"Maleth's Walking Stick";
+const string	TOPIC_AkilSchafDiebe			=	"Schafdiebe";
+const string	TOPIC_HealHilda					=	"Heilmittel für Hilda";
+const string	TOPIC_MalethsGehstock			=	"Maleths Gehstock";
 var int 		TOPIC_END_MalethsGehstock;
-const string	TOPIC_BengarALLEIN				=	"Alone and Helpless";
-const string	TOPIC_MinenAnteile				=	"Forged Mine Shares";
+const string	TOPIC_BengarALLEIN				=	"Allein und Schutzlos";
+const string	TOPIC_MinenAnteile				=	"gefälschte Minenanteile";
 var int 		TOPIC_END_MinenAnteile;
-const string	TOPIC_RichterLakai				=	"The Judge's Lackey";
-const string	TOPIC_KillTrollBlack			=	"Black Hide";
-const string	TOPIC_Torlof_Dmt				=	"Torlof's Fear of the Dark Man";
+const string	TOPIC_RichterLakai				=	"Des Richters Lakai";
+const string	TOPIC_KillTrollBlack			=	"Schwarzes Fell";
+const string	TOPIC_Torlof_Dmt				=	"Torlofs Angst vor´m schwarzen Mann.";
 const string	TOPIC_KillHoshPak				=	"Hosh-Pak";
 const string	TOPIC_Urshak					=	"Ur-Shak";
 
 // ------ Kapitel 4 ------
-const string	TOPIC_DRACHENJAGD				=	"The Dragon Hunt";
-const string	TOPIC_Dragonhunter				=	"The Dragon Hunters";	 
-const string	TOPIC_LobartsOrKProblem			=	"Lobart's Orc Problems";			
+const string	TOPIC_DRACHENJAGD				=	"Drachenjagd";
+const string	TOPIC_Dragonhunter				=	"Die Drachenjäger";	 
+const string	TOPIC_LobartsOrKProblem			=	"Lobarts Orkprobleme";			
 var int 		TOPIC_END_LobartsOrKProblem;
-const string	TOPIC_SylvioKillIceGolem		=	"Two Ice Giants for Sylvio";			
+const string	TOPIC_SylvioKillIceGolem		=	"Zwei Eiskolosse für Sylvio";			
 var int 		TOPIC_END_SylvioKillIceGolem;
-const string	TOPIC_AngarsAmulett				=	"Angar's Amulet";			
-const string	TOPIC_JanBecomesSmith			=	"Jan and the Smithy";			
-const string	TOPIC_FerrosSword				=	"Feros' Sword";			
-const string	TOPIC_DRACHENEIERNeoras			=	"Neoras' Dragon Egg Brew";			
-const string	TOPIC_DRACHENEIER				=	"Dragon Eggs";			
+const string	TOPIC_AngarsAmulett				=	"Angars Amulett";			
+const string	TOPIC_JanBecomesSmith			=	"Jan und die Schmiede";			
+const string	TOPIC_FerrosSword				=	"Feros´ Schwert";			
+const string	TOPIC_DRACHENEIERNeoras			=	"Neoras Dracheneigebräu";			
+const string	TOPIC_DRACHENEIER				=	"Dracheneier";			
 var int 		TOPIC_END_DRACHENEIER;
-const string	TOPIC_OrcElite					=	"Hordes of Orc Elite Warriors";			
+const string	TOPIC_OrcElite					=	"Die Horden der orkischen Elitekrieger";			
 var int  		TOPIC_END_OrcElite;	
-const string	TOPIC_Dar_BringOrcEliteRing		=	"The Show-Off";			
-const string	TOPIC_FoundVinosKellerei		=	"Moonshine";			
-const string	TOPIC_BrutusMeatbugs			=	"The Filthy Sty";			
+const string	TOPIC_Dar_BringOrcEliteRing		=	"Der Aufschneider";			
+const string	TOPIC_FoundVinosKellerei		=	"Schwarzbrennerei";			
+const string	TOPIC_BrutusMeatbugs			=	"Dreckstall";			
 var int  		TOPIC_END_BrutusMeatbugs;	
-const string	TOPIC_Sengrath_Missing			=	"Lost in Darkness";			
+const string	TOPIC_Sengrath_Missing			=	"Verschwunden in der Dunkelheit";			
 var int  		TOPIC_END_Sengrath_Missing;	
-const string	TOPIC_Talbin_Runs				=	"I gotta get out of here!";			
+const string	TOPIC_Talbin_Runs				=	"Ich muß hier raus";			
 var int  		TOPIC_END_Talbin_Runs;	
-const string	TOPIC_KerolothsGeldbeutel		=	"Theft";			
+const string	TOPIC_KerolothsGeldbeutel		=	"Diebstahl";			
 var int   		TOPIC_END_KerolothsGeldbeutel;
 
 // ------ Kapitel 5 ------
-const string	TOPIC_BuchHallenVonIrdorath		=	"The Master of Dragons";			
-const string	TOPIC_RosisFlucht				=	"Rosi's Flight";			
-const string	TOPIC_bringRosiBackToSekob		=	"Sekob Misses his Wife";			
-const string	TOPIC_HealRandolph				=	"Deprivation";
+const string	TOPIC_BuchHallenVonIrdorath		=	"Der Meister der Drachen";			
+const string	TOPIC_RosisFlucht				=	"Rosis Flucht";			
+const string	TOPIC_bringRosiBackToSekob		=	"Sekob vermisst seine Frau";			
+const string	TOPIC_HealRandolph				=	"Auf Entzug";
 const string	TOPIC_GeroldGiveFood			=	"Hunger";
 
 // ------ Kapitel 6 ------
-const string	TOPIC_HallenVonIrdorath			=	"The Halls of Irdorath";			
-const string	TOPIC_BackToShip				=	"Back to the Ship";			
-const string	TOPIC_MyCrew					=	"My Crew";			
+const string	TOPIC_HallenVonIrdorath			=	"Die Hallen von Irdorath";			
+const string	TOPIC_BackToShip				=	"Zurück zum Schiff";			
+const string	TOPIC_MyCrew					=	"Meine Mannschaft";			

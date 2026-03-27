@@ -215,7 +215,7 @@ const int	REV_Value_2H_Sword_Ore_05			=	440;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_SWORD_OLD_01 (C_Item)
 {	
-	name 				=	"Rusty Two-hander";
+	name 				=	"Rostiger Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -240,7 +240,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_OLD_01 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_01 (C_Item)
 {	
-	name 				=	"Light Two-hander";
+	name 				=	"Leichter Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -265,7 +265,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_02 (C_Item)
 {	
-	name 				=	"Custodian's Blade";
+	name 				=	"Hüterklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -290,7 +290,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_03 (C_Item)
 {	
-	name 				=	"Mercenary's Blade";
+	name 				=	"Söldnerklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -315,7 +315,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_04 (C_Item)
 {	
-	name 				=	"King's Blade";
+	name 				=	"Königsklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -340,7 +340,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_05 (C_Item)
 {	
-	name 				=	"Demonic Blade";
+	name 				=	"Dämonenklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -365,7 +365,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_05 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_01 (C_Item)
 {	
-	name 				=	"Two-hander";
+	name 				=	"Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -390,7 +390,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_02 (C_Item)
 {	
-	name 				=	"Hero's Blade";
+	name 				=	"Heldenschneide";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -415,7 +415,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_03 (C_Item)
 {	
-	name 				=	"Blood Blade";
+	name 				=	"Blutschneide";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -440,7 +440,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_04 (C_Item)
 {	
-	name 				=	"Masterpiece";
+	name 				=	"Meisterwerk";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -490,7 +490,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_05 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_01 (C_Item)
 {	
-	name 				=	"Heavy Two-hander";
+	name 				=	"Schwerer Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -515,7 +515,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_02 (C_Item)
 {	
-	name 				=	"Rage Steel";
+	name 				=	"Zornstahl";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -540,7 +540,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_03 (C_Item)
 {	
-	name 				=	"Wrath Steel";
+	name 				=	"Grimmstahl";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -565,7 +565,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_04 (C_Item)
 {	
-	name 				=	"Revenge Steel";
+	name 				=	"Rachestahl";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -621,7 +621,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_05 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_SWORD_THORUS (C_Item)
 {
-	name 				=	"Thorus' Sword";
+	name 				=	"Thorus Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -648,7 +648,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_THORUS (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_ANGAR (C_Item)
 {
-	name 				=	"Red Wind";
+	name 				=	"Roter Wind";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -675,7 +675,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ANGAR (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_ROD (C_Item)
 {
-	name 				=	"Rod's Two-hander";
+	name 				=	"Rod's Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -706,7 +706,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ROD (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_01 (C_Item) 
 {	
-	name 				=	"Heavy Paladin's Sword";
+	name 				=	"Schweres Paladinenschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -730,7 +730,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_01 (C_Item)
 };
 INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_02 (C_Item) 
 {	
-	name 				=	"Heavy Paladin's Sword";
+	name 				=	"Schweres Paladinenschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -754,7 +754,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_02 (C_Item)
 };
 INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_03 (C_Item) 
 {	
-	name 				=	"Heavy Paladin's Sword";
+	name 				=	"Schweres Paladinenschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -779,7 +779,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_01 (C_Item)
 {
-	name 				=	"Innos' Rage";
+	name 				=	"Innos Zorn";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -805,7 +805,7 @@ INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_02 (C_Item)
 {
-	name 				=	"Innos' Rage";
+	name 				=	"Innos Zorn";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -831,7 +831,7 @@ INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_DEMONSLAYER (C_Item) 
 {	
-	name 				=	"Heavy Demonslayer";
+	name 				=	"Schwerer Dämonentöter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -855,7 +855,7 @@ INSTANCE ITMW_REVIVED_2H_DEMONSLAYER (C_Item)
 };
 INSTANCE ITMW_REVIVED_2H_DEMONSLAYER_02 (C_Item) 
 {	
-	name 				=	"Heavy Demonslayer";
+	name 				=	"Schwerer Dämonentöter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	

@@ -30,7 +30,7 @@ instance DIA_Bromor_GIRLS		(C_INFO)
 	condition	 = 	DIA_Bromor_GIRLS_Condition;
 	information	 = 	DIA_Bromor_GIRLS_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Are you the one who runs this place?";
+	description	 = 	"Gehört dir der Laden hier?";
 };
 
 func int DIA_Bromor_GIRLS_Condition ()
@@ -43,15 +43,15 @@ func int DIA_Bromor_GIRLS_Condition ()
 func void DIA_Bromor_GIRLS_Info ()
 {
 	//ADDON>
-	AI_Output (other, self, "DIA_Addon_Bromor_GIRLS_15_00"); //Are you the one who runs this place?
+	AI_Output (other, self, "DIA_Addon_Bromor_GIRLS_15_00"); //Gehört dir der Laden hier?
 	//ADDON<
 
 	//AI_Output (other, self, "DIA_Bromor_GIRLS_15_00"); //I want to have some fun.
 	//AI_Output (self, other, "DIA_Bromor_GIRLS_07_01"); //Deshalb bist du ja hergekommen.
 
-	AI_Output (self, other, "DIA_Bromor_GIRLS_07_02"); //I am Bromor. This is my house, and these are my girls. I like my girls.
-	AI_Output (self, other, "DIA_Bromor_GIRLS_07_03"); //And if you like my girls, too, then you'll pay for it - 50 gold pieces.
-	AI_Output (self, other, "DIA_Bromor_GIRLS_07_04"); //And don't get the idea of making trouble here.
+	AI_Output (self, other, "DIA_Bromor_GIRLS_07_02"); //Ich bin Bromor. Das hier ist mein Haus und das sind meine Mädels. Ich mag meine Mädels.
+	AI_Output (self, other, "DIA_Bromor_GIRLS_07_03"); //Und wenn du meine Mädels auch magst, dann bezahlst du dafür - 50 Goldstücke.
+	AI_Output (self, other, "DIA_Bromor_GIRLS_07_04"); //Und komm nicht auf die Idee, hier Ärger zu machen.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -64,7 +64,7 @@ instance DIA_Bromor_Pay		(C_INFO)
 	condition	 = 	DIA_Bromor_Pay_Condition;
 	information	 = 	DIA_Bromor_Pay_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to have some fun (pay 50 pieces of gold).";
+	description	 = 	"Ich will mich amüsieren (50 Goldstücke zahlen)";
 };
 
 func int DIA_Bromor_Pay_Condition ()
@@ -82,12 +82,12 @@ func int DIA_Bromor_Pay_Condition ()
 var int DIA_Bromor_Pay_OneTime;
 func void DIA_Bromor_Pay_Info ()
 {
-	AI_Output (other, self, "DIA_Bromor_Pay_15_00"); //I want to have some fun.
+	AI_Output (other, self, "DIA_Bromor_Pay_15_00"); //Ich will mich amüsieren
 	
 	if B_GiveInvItems (other, self, ItMi_Gold, 50)
 	{
-		AI_Output (self, other, "DIA_Bromor_Pay_07_01"); //Fine. (grins) You're not likely to forget the next few hours of your life any time soon.
-		AI_Output (self, other, "DIA_Bromor_Pay_07_02"); //Go upstairs with Nadja, then. Have fun.
+		AI_Output (self, other, "DIA_Bromor_Pay_07_01"); //Gut. (grinst) Die nächsten Stunden deines Lebens wirst du so schnell nicht vergessen.
+		AI_Output (self, other, "DIA_Bromor_Pay_07_02"); //Geh mit Nadja nach oben. Viel Spaß.
 	
 		if (DIA_Bromor_Pay_OneTime == FALSE)
 		{
@@ -98,7 +98,7 @@ func void DIA_Bromor_Pay_Info ()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Bromor_Pay_07_03"); //I can't stand it when people try to pull my leg. Get out of here if you can't pay.
+		AI_Output (self, other, "DIA_Bromor_Pay_07_03"); //Ich kann's nicht leiden wenn man mich verarschen will. Verschwinde, wenn du nicht zahlen kannst.
 	};
 	B_NpcClearObsessionByDMT (self);
 };
@@ -112,7 +112,7 @@ instance DIA_Bromor_DOPE		(C_INFO)
 	condition	 = 	DIA_Bromor_DOPE_Condition;
 	information	 = 	DIA_Bromor_DOPE_Info;
 	permanent	 =  FALSE;
-	description	 = 	"Can I get 'special' goods here, too?";
+	description	 = 	"Kann ich hier auch 'besondere' Ware bekommen?";
 };
 
 func int DIA_Bromor_DOPE_Condition ()
@@ -126,9 +126,9 @@ func int DIA_Bromor_DOPE_Condition ()
 };
 func void DIA_Bromor_DOPE_Info ()
 {
-	AI_Output (other, self, "DIA_Bromor_DOPE_15_00"); //Can I get 'special' goods here, too?
-	AI_Output (self, other, "DIA_Bromor_DOPE_07_01"); //Sure, all my girls are very special. (grins)
-	AI_Output (self, other, "DIA_Bromor_DOPE_07_02"); //If you have enough gold, you can go upstairs with Nadja.
+	AI_Output (other, self, "DIA_Bromor_DOPE_15_00"); //Kann ich hier auch 'besondere' Ware bekommen?
+	AI_Output (self, other, "DIA_Bromor_DOPE_07_01"); //Klar, alle meine Mädels sind was ganz Besonderes. (grinst)
+	AI_Output (self, other, "DIA_Bromor_DOPE_07_02"); //Wenn du genug Gold hast, dann kannst du mit Nadja hochgehen.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -141,7 +141,7 @@ instance DIA_Bromor_Obsession		(C_INFO)
 	condition	 = 	DIA_Bromor_Obsession_Condition;
 	information	 = 	DIA_Bromor_Obsession_Info;
 
-	description	 = 	"Are you all right?";
+	description	 = 	"Bist du in Ordnung?";
 };
 
 func int DIA_Bromor_Obsession_Condition ()
@@ -172,7 +172,7 @@ instance DIA_Bromor_Heilung		(C_INFO)
 	information	 = 	DIA_Bromor_Heilung_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"You're possessed!";
+	description	 = 	"Du bist besessen.";
 };
 
 func int DIA_Bromor_Heilung_Condition ()
@@ -186,8 +186,8 @@ func int DIA_Bromor_Heilung_Condition ()
 
 func void DIA_Bromor_Heilung_Info ()
 {
-	AI_Output			(other, self, "DIA_Bromor_Heilung_15_00"); //You are possessed.
-	AI_Output			(self, other, "DIA_Bromor_Heilung_07_01"); //What? What are you talking about? Get out of here.
+	AI_Output			(other, self, "DIA_Bromor_Heilung_15_00"); //Du bist besessen.
+	AI_Output			(self, other, "DIA_Bromor_Heilung_07_01"); //Was? Wovon redest du da? Verschwinde.
 	B_NpcClearObsessionByDMT (self);
 };
 
@@ -202,7 +202,7 @@ INSTANCE DIA_Bromor_PICKPOCKET (C_INFO)
 	condition	= DIA_Bromor_PICKPOCKET_Condition;
 	information	= DIA_Bromor_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be risky to steal his key)";
+	description = "(Es wäre gewagt seinen Schlüssel zu stehlen)";
 };                       
 
 FUNC INT DIA_Bromor_PICKPOCKET_Condition()

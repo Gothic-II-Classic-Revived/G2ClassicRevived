@@ -33,7 +33,7 @@ instance DIA_Oric_HALLO		(C_INFO)
 	condition	 = 	DIA_Oric_HALLO_Condition;
 	information	 = 	DIA_Oric_HALLO_Info;
 	permanent	 =  FALSE;
-	description	 = 	"What's your job?";
+	description	 = 	"Was ist deine Aufgabe hier?";
 };
 
 func int DIA_Oric_HALLO_Condition ()
@@ -42,10 +42,10 @@ func int DIA_Oric_HALLO_Condition ()
 };
 func void DIA_Oric_HALLO_Info ()
 {
-	AI_Output (other, self, "DIA_Oric_HALLO_15_00"); //What is your task?
-	AI_Output (self, other, "DIA_Oric_HALLO_11_01"); //I am a strategic officer of the king, and I currently answer to the honorable commander Garond.
-	AI_Output (self, other, "DIA_Oric_HALLO_11_02"); //We are the last of the paladins here in the castle. All the others have left or fallen.
-	AI_Output (self, other, "DIA_Oric_HALLO_11_03"); //It is now our responsibility to bring a good end to this expedition. And that we shall do. By Innos - that we shall do.
+	AI_Output (other, self, "DIA_Oric_HALLO_15_00"); //Was ist deine Aufgabe?
+	AI_Output (self, other, "DIA_Oric_HALLO_11_01"); //Ich bin strategischer Offizier des Königs und zurzeit dem ehrenwerten Kommandanten Garond unterstellt.
+	AI_Output (self, other, "DIA_Oric_HALLO_11_02"); //Wir sind die letzten Paladine hier in der Burg. Alle anderen sind unterwegs oder gefallen.
+	AI_Output (self, other, "DIA_Oric_HALLO_11_03"); //Es liegt nun an uns, diese Expedition zu einem guten Ende zu bringen. Und das werden wir. Bei Innos - das werden wir.
 
 };
 
@@ -59,7 +59,7 @@ instance DIA_Oric_Bruder		(C_INFO)
 	condition	 = 	DIA_Oric_Bruder_Condition;
 	information	 = 	DIA_Oric_Bruder_Info;
 	permanent	 =  FALSE;
-	description	 = 	"I have a message for you.";
+	description	 = 	"Ich habe eine Nachricht für dich.";
 };
 
 func int DIA_Oric_Bruder_Condition ()
@@ -72,12 +72,12 @@ func int DIA_Oric_Bruder_Condition ()
 };
 func void DIA_Oric_Bruder_Info ()
 {
-	AI_Output (other, self, "DIA_Oric_Bruder_15_00"); //I have a message for you.
-	AI_Output (self, other, "DIA_Oric_Bruder_11_01"); //What is it?
-	AI_Output (other, self, "DIA_Oric_Bruder_15_02"); //Your brother is dead. He got as far as the pass.
-	AI_Output (self, other, "DIA_Oric_Bruder_11_03"); //(murmurs)... my brother...
-	AI_Output (self, other, "DIA_Oric_Bruder_11_04"); //Innos puts me to a severe test. But he died as his servant...
-	AI_Output (self, other, "DIA_Oric_Bruder_11_05"); //This news is like an arrow which pierces my heart. I shall seek new strength in prayer.
+	AI_Output (other, self, "DIA_Oric_Bruder_15_00"); //Ich habe eine Nachricht für dich.
+	AI_Output (self, other, "DIA_Oric_Bruder_11_01"); //Was?
+	AI_Output (other, self, "DIA_Oric_Bruder_15_02"); //Dein Bruder ist tot. Er ist bis zum Pass gekommen.
+	AI_Output (self, other, "DIA_Oric_Bruder_11_03"); //(murmelt) ... mein Bruder ...
+	AI_Output (self, other, "DIA_Oric_Bruder_11_04"); //Innos stellt mich auf eine harte Probe. Doch er starb, als sein Diener ...
+	AI_Output (self, other, "DIA_Oric_Bruder_11_05"); //Diese Nachricht ist wie ein Pfeil, der sich in mein Herz bohrt. Ich werde neue Kraft im Gebet suchen.
 	OricBruder = TRUE;
 	
 	B_GivePlayerXP (XP_Ambient);
@@ -95,7 +95,7 @@ INSTANCE DIA_Oric_ScoutMine   (C_INFO)
 	condition   = DIA_Oric_ScoutMine_Condition;
 	information = DIA_Oric_ScoutMine_Info;
 	permanent   = FALSE;
-	description = "I am to go to the mining sites.";
+	description = "Ich soll die Schürfstellen aufsuchen.";
 };
 
 FUNC INT DIA_Oric_ScoutMine_Condition()
@@ -127,7 +127,7 @@ instance DIA_Oric_Perm		(C_INFO)
 	condition	 = 	DIA_Oric_Perm_Condition;
 	information	 = 	DIA_Oric_Perm_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How are things?";
+	description	 = 	"Wie sieht's aus?";
 };
 
 func int DIA_Oric_Perm_Condition ()
@@ -238,7 +238,7 @@ INSTANCE DIA_Oric_IAmBack   (C_INFO)
 	condition   = DIA_Oric_IAmBack_Condition;
 	information = DIA_Oric_IAmBack_Info;
 
-	description = "I'm back already.";
+	description = "Ich bin schon wieder zurück.";
 };
 
 FUNC INT DIA_Oric_IAmBack_Condition()
@@ -278,7 +278,7 @@ INSTANCE DIA_Oric_CanHelp   (C_INFO)
 	condition   = DIA_Oric_CanHelp_Condition;
 	information = DIA_Oric_CanHelp_Info;
 
-	description = "Can I help?";
+	description = "Kann ich helfen?";
 };
 
 FUNC INT DIA_Oric_CanHelp_Condition()
@@ -299,8 +299,8 @@ FUNC VOID DIA_Oric_CanHelp_Info()
 	AI_Output (self ,other,"DIA_Oric_CanHelp_11_03"); //We are planning to cut off the serpent's head.
 	
 	Info_ClearChoices (DIA_Oric_CanHelp);
-	Info_AddChoice (DIA_Oric_CanHelp,"I think you should find somebody else. ",DIA_Oric_CanHelp_NotYourMan); 
-	Info_AddChoice (DIA_Oric_CanHelp,"What do you mean by that?",DIA_Oric_CanHelp_WhatYouMean);
+	Info_AddChoice (DIA_Oric_CanHelp,"Ich glaube, du solltest dir einen anderen suchen.",DIA_Oric_CanHelp_NotYourMan); 
+	Info_AddChoice (DIA_Oric_CanHelp,"Was soll das heißen?",DIA_Oric_CanHelp_WhatYouMean);
 
 };
 
@@ -341,7 +341,7 @@ FUNC VOID DIA_Oric_CanHelp_WhatYouMean ()
 };
 
 //***********************************************
-//	Ich brauche noch Ausr�stung.
+//	Ich brauche noch Ausrstung.
 //***********************************************
 
 INSTANCE DIA_Oric_NeedStuff   (C_INFO)
@@ -351,7 +351,7 @@ INSTANCE DIA_Oric_NeedStuff   (C_INFO)
 	condition   = DIA_Oric_NeedStuff_Condition;
 	information = DIA_Oric_NeedStuff_Info;
 
-	description = "I still need some equipment.";
+	description = "Ich brauche noch Ausrüstung.";
 };
 
 FUNC INT DIA_Oric_NeedStuff_Condition()
@@ -370,10 +370,10 @@ FUNC VOID DIA_Oric_NeedStuff_Info()
 	AI_Output (self ,other,"DIA_Oric_NeedStuff_11_02"); //Well, I can offer you this.
 	
 	Info_ClearChoices (DIA_Oric_NeedStuff);
-	Info_AddChoice (DIA_Oric_NeedStuff,"or 1 elixir of dexterity",DIA_Oric_NeedStuff_Dexterity);
-	Info_AddChoice (DIA_Oric_NeedStuff,"or 1 elixir of strength",DIA_Oric_NeedStuff_Strength);
-	Info_AddChoice (DIA_Oric_NeedStuff,"or 3 mana elixirs",DIA_Oric_NeedStuff_Mana);	
-	Info_AddChoice (DIA_Oric_NeedStuff,"3 elixirs of Healing",DIA_Oric_NeedStuff_Health); 
+	Info_AddChoice (DIA_Oric_NeedStuff,"oder 1 Elixier der Geschicklichkeit",DIA_Oric_NeedStuff_Dexterity);
+	Info_AddChoice (DIA_Oric_NeedStuff,"oder 1 Elixier der Stärke",DIA_Oric_NeedStuff_Strength);
+	Info_AddChoice (DIA_Oric_NeedStuff,"oder 3 Mana Elixiere",DIA_Oric_NeedStuff_Mana);	
+	Info_AddChoice (DIA_Oric_NeedStuff,"3 Elixiere der Heilung",DIA_Oric_NeedStuff_Health); 
 };
 
 FUNC VOID DIA_Oric_NeedStuff_Health ()
@@ -431,7 +431,7 @@ INSTANCE DIA_Oric_NoMurder   (C_INFO)
 	condition   = DIA_Oric_NoMurder_Condition;
 	information = DIA_Oric_NoMurder_Info;
 
-	description = "I shall not murder Hosh-Pak in such a cowardly fashion.";
+	description = "Ich werde keinen feigen Mord an Hosh-Pak begehen.";
 };
 
 FUNC INT DIA_Oric_NoMurder_Condition()
@@ -463,7 +463,7 @@ INSTANCE DIA_Oric_WillHelp   (C_INFO)
 	condition   = DIA_Oric_WillHelp_Condition;
 	information = DIA_Oric_WillHelp_Info;
 	permanent   = FALSE;
-	description = "All right. I shall kill Hosh-Pak.";
+	description = "Gut. Ich werde Hosh-Pak töten.";
 };
 
 FUNC INT DIA_Oric_WillHelp_Condition()
@@ -484,7 +484,7 @@ FUNC VOID DIA_Oric_WillHelp_Info()
 	
 	Log_CreateTopic (TOPIC_KillHoshPak, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KillHoshPak, LOG_RUNNING);
-	B_LogEntry (TOPIC_KillHoshPak,"Oric wants me to eliminate the orc shaman Hosh-Pak. His tent is on a small clif not far from the back of the castle."); 
+	B_LogEntry (TOPIC_KillHoshPak,"Oric will, dass ich dem hohen Orkshamanen HOSH-PAK das Handwerk lege. Sein Zelt steht auf einer kleinen Klippe nicht weit entfernt von der Rückseite der Burg."); 
 
 	MIS_KillHoshPak = LOG_RUNNING;
 };
@@ -500,7 +500,7 @@ INSTANCE DIA_Oric_HoshDead   (C_INFO)
 	condition   = DIA_Oric_HoshDead_Condition;
 	information = DIA_Oric_HoshDead_Info;
 	permanent   = FALSE;
-	description = "Hosh-Pak is dead!";
+	description = "Hosh-Pak ist tot!";
 };
 
 FUNC INT DIA_Oric_HoshDead_Condition()
@@ -536,7 +536,7 @@ INSTANCE DIA_Oric_AnyNews   (C_INFO)
 	information = DIA_Oric_AnyNews_Info;
 	permanent	 = 	TRUE;
 
-	description = "Any news?";
+	description = "Irgendwas Neues passiert?";
 };
 
 FUNC INT DIA_Oric_AnyNews_Condition()
@@ -581,7 +581,7 @@ instance DIA_Oric_DragonPlettBericht		(C_INFO)
 	condition	 = 	DIA_Oric_DragonPlettBericht_Condition;
 	information	 = 	DIA_Oric_DragonPlettBericht_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I need more information about the dragons.";
+	description	 = 	"Ich brauche mehr Informationen über die Drachen.";
 };
 
 func int DIA_Oric_DragonPlettBericht_Condition ()
@@ -608,7 +608,7 @@ func void DIA_Oric_DragonPlettBericht_Info ()
 		CreateInvItem (self,ITWR_REVIVED_MAP_VALLEY_DRAGONS);	
 		B_GiveInvItems (self, other,ITWR_REVIVED_MAP_VALLEY_DRAGONS,1);	
 	AI_Output (self, other, "DIA_Oric_DragonPlettBericht_11_08"); //At the moment, alas, I've got nothing for you.	
-	B_LogEntry(TOPIC_DRACHENJAGD, "Oric gave me a map of estimated dragon locations. The markings are in oddly similar locations...");
+	B_LogEntry(TOPIC_DRACHENJAGD, "Oric hat mir eine Karte mit den vermuteten Standorten der Drachen gegeben. Die Markierungen befinden sich an seltsam ähnlichen Orten...");
 
 	/* if (MIS_KilledDragons == 1)
 	{
@@ -741,7 +741,7 @@ INSTANCE DIA_Oric_PICKPOCKET (C_INFO)
 	condition	= DIA_Oric_PICKPOCKET_Condition;
 	information	= DIA_Oric_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be damned difficult to steal his spell scroll)";
+	description = "(Es wäre verdammt schwierig seine Spruchrolle zu stehlen)";
 };                       
 
 FUNC INT DIA_Oric_PICKPOCKET_Condition()

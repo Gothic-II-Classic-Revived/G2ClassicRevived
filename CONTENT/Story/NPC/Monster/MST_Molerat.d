@@ -77,7 +77,7 @@ INSTANCE Molerat	(Mst_Default_Molerat)
 
 INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
 {
-	name							=	"Juvenile Molerat";
+	name							=	"junge Molerat";
 	
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 3);
@@ -98,7 +98,7 @@ INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
 
 INSTANCE MoleratDemon	(Mst_Default_Molerat)
 {
-	name							=	"Forest Molerat";
+	name							=	"Waldmolerat";
 	
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 7);

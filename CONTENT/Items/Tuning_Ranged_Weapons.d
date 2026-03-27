@@ -11,7 +11,7 @@ const int Damage_SldBogen			= 30;
 const int Condition_SldBogen		= 25;
 const int Value_SldBogen			= 200;
 
-//Bögen
+//Bgen
 //Kapitel 1
 const int Damage_Kurzbogen			= 15; 	
 const int Condition_Kurzbogen		= 10;
@@ -67,7 +67,7 @@ const int Condition_Drachenbogen	= 160;
 const int Value_Drachenbogen		= 1600;	
 
 
-//Armbrüste                                                                         	     	
+//Armbrste                                                                         	     	
 //Kapitel 1                                                                         	     	
 const int Damage_Jagdarmbrust		= 30;
 const int Condition_Jagdarmbrust	= 20; 
@@ -100,14 +100,14 @@ const int Value_Drachenjaegerarmbrust  		= 2500;
 
 
 //MAGISCHE WAFFEN
-const int Damage_FireBow			= 50;	//MAGIC
+const int Damage_FireBow			= 50;	//Magie
 const int Condition_FireBow			= 25;
 const int Value_FireBow				= 2000;
 
-const int Damage_MagicBow			= 100;	//MAGIC
+const int Damage_MagicBow			= 100;	//Magie
 const int Condition_MagicBow		= 50;
 const int Value_MagicBow			= 2000;
 
-const int Damage_MagicCrossbow		= 200;	//MAGIC
+const int Damage_MagicCrossbow		= 200;	//Magie
 const int Condition_MagicCrossbow	= 75;
 const int Value_MagicCrossbow		= 2000;

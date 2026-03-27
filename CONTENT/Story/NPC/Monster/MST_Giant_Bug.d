@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Giant_Bug(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Field Raider";
+	name							=	"FeldrÃ¤uber";
 	guild							=	GIL_GIANT_BUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GIANT_BUG;
 
@@ -64,13 +64,13 @@ INSTANCE Giant_Bug	(Mst_Default_Giant_Bug)
 
 
 //**************************************
-//	junge Giant_Bug   (für Spielstart) 	
+//	junge Giant_Bug   (fr Spielstart) 	
 //**************************************
 
 INSTANCE YGiant_Bug	(Mst_Default_Giant_Bug)
 {
 	//----- Monster ----
-	name							=	"Young Field Raider";
+	name							=	"Junger FeldrÃ¤uber";
 
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 3);
@@ -93,7 +93,7 @@ INSTANCE YGiant_Bug	(Mst_Default_Giant_Bug)
 };
 
 //**************************************
-//	Lobarts_Giant_Bug s   (für Miliz Aufnahmemission) 	
+//	Lobarts_Giant_Bug s   (fr Miliz Aufnahmemission) 	
 //**************************************
 
 INSTANCE Lobarts_Giant_Bug1	(Mst_Default_Giant_Bug)	

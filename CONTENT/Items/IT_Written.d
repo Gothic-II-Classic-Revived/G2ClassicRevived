@@ -4,7 +4,7 @@
 
 INSTANCE StandardBrief		(C_Item)
 {
-	name 				=	"Letter";
+	name 				=	"Brief";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
@@ -14,8 +14,8 @@ INSTANCE StandardBrief		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	//VARIATIONEN: ItWr_Scroll_01.3DS, ItWr_Scroll_02.3DS
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseStandardBrief;
-	scemeName			=	"MAP";
-	description			= 	"StandardLetter";
+	scemeName			=	"Karte";
+	description			= 	"StandardBrief";
 };
 func void UseStandardBrief ()
 {
@@ -26,7 +26,7 @@ func void UseStandardBrief ()
 					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "StandardLetter"					);
+					Doc_PrintLine	( nDocID,  0, "StandardBrief"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla"					);
@@ -41,7 +41,7 @@ func void UseStandardBrief ()
 
 INSTANCE StandardBuch (C_ITEM)
 {
-	name 					=	"StandardBook";
+	name 					=	"StandardBuch";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -51,8 +51,8 @@ INSTANCE StandardBuch (C_ITEM)
 	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"MAP";
-	description				= 	"StandardBook";
+	scemeName				=	"Karte";
+	description				= 	"StandardBuch";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	UseStandardBuch;
@@ -73,7 +73,7 @@ INSTANCE StandardBuch (C_ITEM)
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages
  					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "StandardBook Page 1"	);
+					Doc_PrintLines	( nDocID,  0, "StandardBuch Seite 1"	);
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla"					);
@@ -82,10 +82,10 @@ INSTANCE StandardBuch (C_ITEM)
 					Doc_PrintLines	( nDocID,  0, "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bBla blaBla blaBla blaBlaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla");
 
 					//2.Seite
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den R�nder des TGAs aus, links,oben,rechts,unten)
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Rnder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "StandardBook Page 2"	);
+					Doc_PrintLines	( nDocID,  1, "StandardBuch Seite 2"	);
 					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla"	);
@@ -105,7 +105,7 @@ INSTANCE StandardBuch (C_ITEM)
 
 instance ItWr_Map_NewWorld (C_Item)
 {
-	name 		= "Land Map of Khorinis";  // 
+	name 		= "Landkarte Khorinis";  // 
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -115,7 +115,7 @@ instance ItWr_Map_NewWorld (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "MAP";
+	scemeName	= "Karte";
 	on_state[0]	= Use_Map_NewWorld;
 
 	description	= name;
@@ -143,7 +143,7 @@ instance ItWr_Map_NewWorld (C_Item)
 
 instance ItWr_Map_NewWorld_City (C_Item)
 {
-	name 		= "City Map of Khorinis";  // 
+	name 		= "Stadtkarte Khorinis";  // 
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -153,7 +153,7 @@ instance ItWr_Map_NewWorld_City (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "MAP";
+	scemeName	= "Karte";
 	on_state[0]	= Use_Map_NewWorld_City;
 
 	description	= name;
@@ -181,7 +181,7 @@ instance ItWr_Map_NewWorld_City (C_Item)
 
 instance ItWr_Map_OldWorld (C_Item)
 {
-	name 		= "Map of the Valley of Mines";
+	name 		= "Landkarte Minental";
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -191,7 +191,7 @@ instance ItWr_Map_OldWorld (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "MAP";
+	scemeName	= "Karte";
 	on_state[0]	= Use_Map_OldWorld;
 
 	description	= name;
@@ -222,7 +222,7 @@ instance ItWr_Map_OldWorld (C_Item)
 //---------------------------------------------------------------------------------------------------------------------------
 INSTANCE ItWr_EinhandBuch (C_ITEM)
 {
-	name 					=	"Art of Fighting";
+	name 					=	"Kampfkunst";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -232,11 +232,11 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"MAP";
-	description				= 	"Southern Defense Art";
+	scemeName				=	"Karte";
+	description				= 	"Die südländische Verteidigung";
 	
-	TEXT[2] 				=  "A book on the art of";
-	TEXT[3] 				=  "one-handed fighting.";
+	TEXT[2] 				=  "Ein Lehrbuch zum Kampf";
+	TEXT[3] 				=  "mit Einhandwaffen";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	UseEinhandBuch;
@@ -247,7 +247,7 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 //---------------------------------------------------------------------------------------------------------------------------
 INSTANCE ItWr_ZweihandBuch (C_ITEM)
 {
-	name 					=	"Fighting Tactics";
+	name 					=	"Kampftaktik";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -257,11 +257,11 @@ INSTANCE ItWr_ZweihandBuch (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"MAP";
-	description				= 	"Double Blocks";
+	scemeName				=	"Karte";
+	description				= 	"Der Doppelblock";
 	
-	TEXT[2] 				=  "A book on the art of";
-	TEXT[3] 				=  "two-handed fighting.";
+	TEXT[2] 				=  "Ein Lehrbuch zum Kampf";
+	TEXT[3] 				=  "mit Zweihandwaffen";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
 	on_state[0]				=	UseZweihandBuch;

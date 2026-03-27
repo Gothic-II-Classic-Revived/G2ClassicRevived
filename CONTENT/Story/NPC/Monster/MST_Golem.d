@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_StoneGolem(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Stone Golem";
+	name							=	"Steingolem";
 	guild							=	GIL_STONEGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_STONEGOLEM;
 
@@ -67,7 +67,7 @@ INSTANCE StoneGolem	(Mst_Default_StoneGolem)
 
 INSTANCE Summoned_Golem (Mst_Default_StoneGolem)
 {
-	name							=	"Summoned Golem";
+	name							=	"Beschworener Golem";
 	guild							=	GIL_SUMMONED_GOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_GOLEM;
 	level							=	0;
@@ -135,7 +135,7 @@ func void B_GolemRise ()
 };
 
 //************************************************************************************
-//	Shattered_Golem ->liegt am Boden und setzt sich bei Annäherung des Hero zusammen
+//	Shattered_Golem ->liegt am Boden und setzt sich bei Annherung des Hero zusammen
 //************************************************************************************
 
 INSTANCE Shattered_Golem (Mst_Default_StoneGolem)
@@ -162,13 +162,13 @@ INSTANCE Shattered_Golem (Mst_Default_StoneGolem)
 
 //##################################################
 //##
-//##	Magischer Golem   	für Prüfung des Feuers
+//##	Magischer Golem   	fr Prfung des Feuers
 //##
 //##################################################
 
 INSTANCE MagicGolem	(Mst_Default_StoneGolem)
 {
-	name							=	"Magic Golem";
+	name							=	"Magischer Golem";
 
 	B_SetMonsterAttributesForLevel(self, 10);
 	

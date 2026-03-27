@@ -10,7 +10,7 @@ const int	REV_Value_2H_Pickaxe				=	200;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_PICKAXE (C_Item)
 {	
-	name 				=	"Pickaxe";
+	name 				=	"Spitzhacke";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	

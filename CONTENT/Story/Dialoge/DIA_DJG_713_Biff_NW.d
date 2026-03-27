@@ -33,7 +33,7 @@ instance DIA_Biff_NW_HAfen		(C_INFO)
 	information	 = 	DIA_Biff_NW_HAfen_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"OK. Not much longer now.";
+	description	 = 	"So. Bald geht's los.";
 };
 
 func int DIA_Biff_NW_HAfen_Condition ()

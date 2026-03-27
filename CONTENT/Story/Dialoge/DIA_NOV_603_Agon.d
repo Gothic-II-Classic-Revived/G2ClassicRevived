@@ -62,7 +62,7 @@ INSTANCE DIA_Agon_Wurst(C_INFO)
 	condition	= DIA_Agon_Wurst_Condition;
 	information	= DIA_Agon_Wurst_Info;
 	permanent	= FALSE;
-	description = "Here, I've got a mutton sausage for you.";
+	description = "Ich hab hier 'ne Schafswurst fÃ¼r dich.";
 };                       
 
 FUNC INT DIA_Agon_Wurst_Condition()
@@ -106,7 +106,7 @@ INSTANCE DIA_Agon_New   (C_INFO)
 	condition   = DIA_Agon_New_Condition;
 	information = DIA_Agon_New_Info;
 	permanent   = FALSE;
-	description = "I'm new here.";
+	description = "Ich bin neu hier.";
 };
 
 FUNC INT DIA_Agon_New_Condition()
@@ -135,7 +135,7 @@ INSTANCE DIA_Agon_YouAndBabo   (C_INFO)
 	condition   = DIA_Agon_YouAndBabo_Condition;
 	information = DIA_Agon_YouAndBabo_Info;
 	permanent   = FALSE;
-	description = "What happened between you and Babo?";
+	description = "Was ist zwischen dir und Babo passiert?";
 };
 
 FUNC INT DIA_Agon_YouAndBabo_Condition()
@@ -156,9 +156,9 @@ FUNC VOID DIA_Agon_YouAndBabo_Info()
 	AI_Output	(self ,other,"DIA_Agon_YouAndBabo_07_03"); //I won't allow anyone to stand in my way, and certainly not that simpleton Babo.
 
 	Info_ClearChoices 	(DIA_Agon_YouAndBabo);
-	Info_AddChoice	(DIA_Agon_YouAndBabo,"Shouldn't we novices stick together?",DIA_Agon_YouAndBabo_AllTogether);
-	Info_AddChoice	(DIA_Agon_YouAndBabo,"Innos alone knows which path we shall take.",DIA_Agon_YouAndBabo_InnosWay);
-	Info_AddChoice	(DIA_Agon_YouAndBabo,"We'll get along just fine.",DIA_Agon_YouAndBabo_Understand);
+	Info_AddChoice	(DIA_Agon_YouAndBabo,"Sollten wir Novizen nicht zusammenhalten?",DIA_Agon_YouAndBabo_AllTogether);
+	Info_AddChoice	(DIA_Agon_YouAndBabo,"Nur Innos weiÃŸ, welchen Weg wir gehen werden.",DIA_Agon_YouAndBabo_InnosWay);
+	Info_AddChoice	(DIA_Agon_YouAndBabo,"Wir werden uns gut verstehen.",DIA_Agon_YouAndBabo_Understand);
 };
 
 FUNC VOID DIA_Agon_YouAndBabo_AllTogether ()
@@ -185,7 +185,7 @@ FUNC VOID DIA_Agon_YouAndBabo_Understand ()
 	Info_ClearChoices 	(DIA_Agon_YouAndBabo);
 };
 //************************************************************************
-//	Kann ich bei dir Kräuter bekommen?
+//	Kann ich bei dir Kruter bekommen?
 //************************************************************************
 
 INSTANCE DIA_Agon_GetHerb   (C_INFO)
@@ -195,7 +195,7 @@ INSTANCE DIA_Agon_GetHerb   (C_INFO)
 	condition   = DIA_Agon_GetHerb_Condition;
 	information = DIA_Agon_GetHerb_Info;
 	permanent   = TRUE;
-	description = "What are you planting here?";
+	description = "Was wird hier gepflanzt?";
 };
 
 FUNC INT DIA_Agon_GetHerb_Condition()
@@ -211,7 +211,7 @@ FUNC VOID DIA_Agon_GetHerb_Info()
 	AI_Output (self ,other,"DIA_Agon_GetHerb_07_01"); //We're trying to grow healing plants that Master Neoras can use to brew potions.
 };
 //************************************************************************
-//	Agon ist in der Höhle
+//	Agon ist in der Hhle
 //************************************************************************
 
 INSTANCE DIA_Agon_GolemDead   (C_INFO)
@@ -239,9 +239,9 @@ FUNC VOID DIA_Agon_GolemDead_Info()
 	AI_Output (self ,other,"DIA_Agon_GolemDead_07_01"); //I was here first! I have won!
 	 
 	Info_ClearChoices (DIA_Agon_GolemDead);
-	Info_AddChoice (DIA_Agon_GolemDead,"(menacing) Only if you get out of here alive.",DIA_Agon_GolemDead_NoWay);
-	Info_AddChoice (DIA_Agon_GolemDead,"Shut up!",DIA_Agon_GolemDead_ShutUp);
-	Info_AddChoice (DIA_Agon_GolemDead,"Congratulations, you have really deserved it.",DIA_Agon_GolemDead_Congrat);
+	Info_AddChoice (DIA_Agon_GolemDead,"(drohend)Nur wenn Du hier lebend rauskommst!",DIA_Agon_GolemDead_NoWay);
+	Info_AddChoice (DIA_Agon_GolemDead,"Halt die Klappe!",DIA_Agon_GolemDead_ShutUp);
+	Info_AddChoice (DIA_Agon_GolemDead,"Gratuliere, du hast es wirklich verdient.",DIA_Agon_GolemDead_Congrat);
 };
 
 FUNC VOID DIA_Agon_GolemDead_NoWay ()
@@ -260,8 +260,8 @@ FUNC VOID DIA_Agon_GolemDead_ShutUp ()
 	AI_Output (self ,other,"DIA_Agon_GolemDead_ShutUp_07_02"); //Only I am destined to become a magician.
 	
 	Info_ClearChoices (DIA_Agon_GolemDead);
-	Info_AddChoice (DIA_Agon_GolemDead,"Destined my ass. The chest is mine.",DIA_Agon_GolemDead_ShutUp_MyChest);
-	Info_AddChoice (DIA_Agon_GolemDead,"You win.",DIA_Agon_GolemDead_ShutUp_YouWin);
+	Info_AddChoice (DIA_Agon_GolemDead,"Dir ist gar nichts bestimmt. Die Truhe gehÃ¶rt mir.",DIA_Agon_GolemDead_ShutUp_MyChest);
+	Info_AddChoice (DIA_Agon_GolemDead,"Du hast gewonnen.",DIA_Agon_GolemDead_ShutUp_YouWin);
 
 };
 
@@ -297,7 +297,7 @@ FUNC VOID DIA_Agon_GolemDead_Congrat ()
 };
 
 //****************************************
-//	Der Sc war vor Agon in der Höhle
+//	Der Sc war vor Agon in der Hhle
 //****************************************
 
 INSTANCE DIA_Agon_GolemLives   (C_INFO)
@@ -355,8 +355,8 @@ FUNC INT DIA_Agon_StillAlive_Condition()
 FUNC VOID DIA_Agon_StillAlive_Info()
 {
 	AI_Output (other,self ,"DIA_Agon_StillAlive_15_00"); //Was machst Du hier? 
-	AI_Output (self ,other,"DIA_Agon_StillAlive_07_01"); //Hättest Du mich nicht töten können? Dann müsste ich das ganze hier wenigstens nicht mehr ertragen. 
-	AI_Output (self ,other,"DIA_Agon_StillAlive_07_02"); //Jetzt lass mich in Ruhe! Geh zurück ins Kloster!
+	AI_Output (self ,other,"DIA_Agon_StillAlive_07_01"); //Httest Du mich nicht tten knnen? Dann msste ich das ganze hier wenigstens nicht mehr ertragen. 
+	AI_Output (self ,other,"DIA_Agon_StillAlive_07_02"); //Jetzt lass mich in Ruhe! Geh zurck ins Kloster!
 	
 	AI_StopProcessInfos (self);
 };
@@ -372,7 +372,7 @@ INSTANCE DIA_Agon_Perm   (C_INFO)
 	condition   = DIA_Agon_Perm_Condition;
 	information = DIA_Agon_Perm_Info;
 	permanent   = TRUE;
-	description = "So how are things?";
+	description = "Wie geht's denn so?";
 };
 
 FUNC INT DIA_Agon_Perm_Condition()

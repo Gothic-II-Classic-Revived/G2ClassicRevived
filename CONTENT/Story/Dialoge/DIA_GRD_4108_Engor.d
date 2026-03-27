@@ -41,14 +41,14 @@ func int DIA_Engor_HALLO_Condition ()
 func void DIA_Engor_HALLO_Info ()
 {
 	
- 	AI_Output (self, other, "DIA_Engor_HALLO_13_00"); //Ah, so you're the guy who made it across the pass.
-	AI_Output (other, self, "DIA_Engor_HALLO_15_01"); //Yes.
-	AI_Output (self, other, "DIA_Engor_HALLO_13_02"); //Great. I'm Engor - I manage this expedition.
-	AI_Output (self, other, "DIA_Engor_HALLO_13_03"); //Just don't get the idea that I give anything away for free!
-	AI_Output (self, other, "DIA_Engor_HALLO_13_04"); //But if there's gold in your pockets, I'm always willing to cut a little deal.
+ 	AI_Output (self, other, "DIA_Engor_HALLO_13_00"); //So, du bist also der Typ, der es über den Pass geschafft hat.
+	AI_Output (other, self, "DIA_Engor_HALLO_15_01"); //Ja.
+	AI_Output (self, other, "DIA_Engor_HALLO_13_02"); //Schön. Ich bin Engor - der Verwalter dieser Expedition.
+	AI_Output (self, other, "DIA_Engor_HALLO_13_03"); //Glaub mal ja nicht, dass du von mir irgendwas umsonst kriegst!
+	AI_Output (self, other, "DIA_Engor_HALLO_13_04"); //Aber wenn du Gold in der Tasche hast - bin ich für einen kleinen Handel immer zu haben.
 	
 	Log_CreateTopic (TOPIC_Trader_OC, LOG_NOTE);
-	B_LogEntry(TOPIC_Trader_OC, "Engor manages the supplies at the castle and does a bit of business on the side.");  
+	B_LogEntry(TOPIC_Trader_OC, "Engor verwaltet die Vorräte der Burg und macht nebenher Geschäfte.");  
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Handeln
@@ -61,7 +61,7 @@ instance DIA_Engor_HANDELN		(C_INFO)
 	information	 = 	DIA_Engor_HANDELN_Info;
 	permanent	 = 	TRUE;
 	trade		 = 	TRUE;
-	description	 = 	"Show me your wares.";
+	description	 = 	"Zeig mir deine Ware.";
 };
 
 func int DIA_Engor_HANDELN_Condition ()
@@ -88,7 +88,7 @@ func void DIA_Engor_HANDELN_Info ()
 	CreateInvItems 	(self, ItRw_Arrow, McArrowAmount );
 	//////////////////////////////////////////////////////////////////////////////////////
 
-	AI_Output			(other, self, "DIA_Engor_HANDELN_15_00"); //Show me your wares.
+	AI_Output			(other, self, "DIA_Engor_HANDELN_15_00"); //Zeig mir deine Ware.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info ABOUTPARLAF
@@ -99,7 +99,7 @@ instance DIA_Engor_ABOUTPARLAF		(C_INFO)
 	nr		 	 = 	2;
 	condition	 = 	DIA_Engor_ABOUTPARLAF_Condition;
 	information	 = 	DIA_Engor_ABOUTPARLAF_Info;
-	description	 = 	"You're the one who deals out the rations, or so I've heard.";
+	description	 = 	"Ich hab gehört, du teilst die Rationen ein.";
 };
 
 func int DIA_Engor_ABOUTPARLAF_Condition ()
@@ -111,9 +111,9 @@ func int DIA_Engor_ABOUTPARLAF_Condition ()
 };
 func void DIA_Engor_ABOUTPARLAF_Info ()
 {
-	AI_Output (other, self, "DIA_Engor_ABOUTPARLAF_15_00"); //You're the one who deals out the rations, or so I've heard.
-	AI_Output (self, other, "DIA_Engor_ABOUTPARLAF_13_01"); //That's right. Why? Should I feed you now, too?
-	AI_Output (self, other, "DIA_Engor_ABOUTPARLAF_13_02"); //If there's anything you want, you'll pay for it - just like everyone else.
+	AI_Output (other, self, "DIA_Engor_ABOUTPARLAF_15_00"); //Ich hab gehört, du teilst die Rationen ein.
+	AI_Output (self, other, "DIA_Engor_ABOUTPARLAF_13_01"); //Das ist richtig. Wieso? Soll ich dich jetzt auch noch durchfüttern?
+	AI_Output (self, other, "DIA_Engor_ABOUTPARLAF_13_02"); //Wenn du irgendwas haben willst, dann zahlst du dafür - genau wie alle anderen auch.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Ruestung
@@ -125,7 +125,7 @@ instance DIA_Engor_Ruestung		(C_INFO)
 	condition	 = 	DIA_Engor_Ruestung_Condition;
 	information	 = 	DIA_Engor_Ruestung_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"Have you got anything interesting for me?";
+	description	 = 	"Hast du was interessantes für mich?";
 };
 
 func int DIA_Engor_Ruestung_Condition ()
@@ -137,9 +137,9 @@ func int DIA_Engor_Ruestung_Condition ()
 };
 func void DIA_Engor_Ruestung_Info ()
 {
-	AI_Output (other, self, "DIA_Engor_Ruestung_15_00"); //Have you got anything interesting for me?
-	AI_Output (self, other, "DIA_Engor_Ruestung_13_01"); //I can get you better armor - heavy militia armor, if you're interested.
-	AI_Output (self, other, "DIA_Engor_Ruestung_13_02"); //It's not cheap, of course. So go get the gold, and I'll give you the armor.
+	AI_Output (other, self, "DIA_Engor_Ruestung_15_00"); //Hast du was interessantes für mich?
+	AI_Output (self, other, "DIA_Engor_Ruestung_13_01"); //Ich kann dir eine bessere Rüstung besorgen, eine schwere Milizrüstung - wenn das für dich interessant ist.
+	AI_Output (self, other, "DIA_Engor_Ruestung_13_02"); //Kostet natürlich 'ne Menge. Also besorg dir das Gold, dann kriegst du die Rüstung.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info RSkaufen
@@ -152,7 +152,7 @@ instance DIA_Engor_RSkaufen		(C_INFO)
 	information	 = 	DIA_Engor_RSkaufen_Info;
 	permanent 	 =  TRUE;
 	//description	 = 	"Buy Royal Guard Armor (Protection: Weapons 80, Arrows 40. Price: 2400 gold)"; 
-	description	 = 	"Buy Heavy Guard's Armor (Protection: Weapons 80, Arrows 80. Price: 2400 gold)"; 
+	description	 = 	"Kaufe die schweren Garderüstung (Schutz: Waffen 80, Pfeile 80. Preis: 2400 Gold)"; 
 };
 //--------------------------------------
 var int DIA_Engor_RSkaufen_perm;
@@ -170,8 +170,8 @@ func void DIA_Engor_RSkaufen_Info ()
 {
 	if (B_GiveInvItems (other, self, Itmi_Gold,2500))
 	{
-		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
-		AI_Output (self, other, "DIA_Engor_RSkaufen_13_01"); //Here you are, it'll protect you well - it's a damn good piece of work.
+		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Gib mir die Rüstung.
+		AI_Output (self, other, "DIA_Engor_RSkaufen_13_01"); //Hier bitte, sie wird dich gut schützen, ist verflucht gute Arbeit.
 		//CreateInvItems 	(self, ITAR_REVIVED_PAL_L, 1);
 		//B_GiveInvItems (self,other, ITAR_REVIVED_PAL_L,1);
 		CreateInvItems 	(self, ITAR_REVIVED_GRD_H, 1);
@@ -180,7 +180,7 @@ func void DIA_Engor_RSkaufen_Info ()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Engor_RSkaufen_13_02"); //Go get the gold first.
+		AI_Output (self, other, "DIA_Engor_RSkaufen_13_02"); //Besorg dir erst das Gold.
 	};
 };
 
@@ -193,7 +193,7 @@ instance DIA_Engor_HELP		(C_INFO)
 	nr			 = 	3;
 	condition	 = 	DIA_Engor_HELP_Condition;
 	information	 = 	DIA_Engor_HELP_Info;
-	description	 = 	"Maybe I can help you with your work.";
+	description	 = 	"Vielleicht kann ich dir bei deiner Arbeit helfen.";
 };
 
 func int DIA_Engor_HELP_Condition ()
@@ -205,36 +205,36 @@ func int DIA_Engor_HELP_Condition ()
 };
 func void DIA_Engor_HELP_Info ()
 {
-	AI_Output (other, self, "DIA_Engor_HELP_15_00"); //Maybe I can help you with your work.
-	AI_Output (self, other, "DIA_Engor_HELP_13_01"); //Hmm... Sure, why not? I could use some help.
-	AI_Output (other, self, "DIA_Engor_HELP_15_02"); //So, what needs to be done?
-	AI_Output (self, other, "DIA_Engor_HELP_13_03"); //Our food supplies are low. Above all, we're almost out of meat.
-	AI_Output (self, other, "DIA_Engor_HELP_13_04"); //So if you could get us some meat, raw or cooked, ham or sausages, that would be much appreciated. How about it, will you help us?
+	AI_Output (other, self, "DIA_Engor_HELP_15_00"); //Vielleicht kann ich dir bei deiner Arbeit helfen.
+	AI_Output (self, other, "DIA_Engor_HELP_13_01"); //Hm ... Ja, warum nicht. Hilfe könnte ich wohl gebrauchen.
+	AI_Output (other, self, "DIA_Engor_HELP_15_02"); //Also, was ist zu tun?
+	AI_Output (self, other, "DIA_Engor_HELP_13_03"); //Unsere Nahrungsvorräte sind knapp. Vor allem unsere Fleischvorräte gehen zur Neige.
+	AI_Output (self, other, "DIA_Engor_HELP_13_04"); //Wenn du also Fleisch besorgen kannst, roh oder gebraten, Schinken oder Würste, dann wäre uns geholfen. Wie sieht's aus, hilfst du uns?
 
 	
 	Info_ClearChoices (DIA_Engor_HELP);
-	Info_AddChoice (DIA_Engor_HELP,"I've got no time for that.",DIA_Engor_HELP_NO);
-	Info_AddChoice (DIA_Engor_HELP,"Don't worry, I'll get you some meat.",DIA_Engor_HELP_YES);
+	Info_AddChoice (DIA_Engor_HELP,"Dafür habe ich keine Zeit",DIA_Engor_HELP_NO);
+	Info_AddChoice (DIA_Engor_HELP,"Kein Problem, ich besorge euch Fleisch",DIA_Engor_HELP_YES);
 	
 	
 };
 FUNC VOID DIA_Engor_HELP_NO()
 {
-	AI_Output (other, self, "DIA_Engor_HELP_NO_15_00"); //I don't have time for that.
-	AI_Output (self, other, "DIA_Engor_HELP_NO_13_01"); //So what are you wasting mine for?
+	AI_Output (other, self, "DIA_Engor_HELP_NO_15_00"); //Dafür habe ich keine Zeit.
+	AI_Output (self, other, "DIA_Engor_HELP_NO_13_01"); //Warum stiehlst du mir dann meine?
 	
 	MIS_Engor_BringMeat = LOG_OBSOLETE; 
 	AI_StopProcessInfos (self);
 };
 FUNC VOID DIA_Engor_HELP_YES()
 {
-	AI_Output (other, self, "DIA_Engor_HELP_YES_15_00"); //Don't worry, I'll get you some meat.
-	AI_Output (self, other, "DIA_Engor_HELP_YES_13_01"); //About two dozen chunks of meat would help me feed quite a few hungry mouths. Come back when you have the meat. I need to get back to my work now.
+	AI_Output (other, self, "DIA_Engor_HELP_YES_15_00"); //Kein Problem, ich besorge euch Fleisch
+	AI_Output (self, other, "DIA_Engor_HELP_YES_13_01"); //Mit zwei Dutzend Fleisch könnte ich schon einige hungrige Mäuler stopfen. Komm wieder, wenn du das Fleisch hast. Ich muss nun weiterarbeiten.
 
 	Log_CreateTopic (TOPIC_BringMeat, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BringMeat, LOG_RUNNING);
-	B_LogEntry  (TOPIC_BringMeat,"Engor needs two dozen chunks of meat to supply the men with.");
-	B_LogEntry  (TOPIC_BringMeat,"It doesn't matter whether it's sausages, ham, fried meat or raw meat. Just as long as the boys get something decent to bite.");  
+	B_LogEntry  (TOPIC_BringMeat,"Engor braucht zwei Dutzend Fleisch für die Versorgung der Männer.");
+	B_LogEntry  (TOPIC_BringMeat,"Dabei spielt es keine Rolle, ob Würste, Schinken, gebratenes oder rohes Fleisch. Hauptsache, die Jungs kriegen wieder was Anständiges zwischen die Zähne");  
 
 	
 	MIS_Engor_BringMeat = LOG_RUNNING;  
@@ -250,7 +250,7 @@ instance DIA_Engor_BRINGMEAT		(C_INFO)
 	condition	 = 	DIA_Engor_BRINGMEAT_Condition;
 	information	 = 	DIA_Engor_BRINGMEAT_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Here, I bought you something (give meat).";
+	description	 = 	"Ich habe hier was für dich (Fleisch geben)";
 };
 
 func int DIA_Engor_BRINGMEAT_Condition ()
@@ -272,7 +272,7 @@ func void DIA_Engor_BRINGMEAT_Info ()
 	var string ConcatBacon;
 	var string ConcatSausage;
 	
-	AI_Output (other, self, "DIA_Engor_BRINGMEAT_15_00"); //Here, I bought you something.
+	AI_Output (other, self, "DIA_Engor_BRINGMEAT_15_00"); //Ich habe hier was für dich.
 	
 // ***** Rohes Fleisch *****
 	if (Npc_HasItems (hero,ItFoMuttonRaw) >= 1) 
@@ -284,7 +284,7 @@ func void DIA_Engor_BRINGMEAT_Info ()
 		
 			Meat_Counter = (Meat_Counter + (Meat_Amount - Meat_Counter));
 		}
-		else if (Npc_HasItems (hero, ItFoMuttonRaw) < Meat_Amount) // muss hier stehen, wegen n�chster Zeile
+		else if (Npc_HasItems (hero, ItFoMuttonRaw) < Meat_Amount) // muss hier stehen, wegen nchster Zeile
 		&& (Meat_Counter < Meat_Amount) 
 		{
 			Meat_Counter = Meat_Counter + (Npc_HasItems (hero,ItFoMuttonRaw));
@@ -345,7 +345,7 @@ func void DIA_Engor_BRINGMEAT_Info ()
 			Npc_RemoveInvItems (other, ItFo_Bacon,(Npc_HasItems (other,ItFo_Bacon)));
 		};
 	};
-	// ***** W�rste *****	
+	// ***** Wrste *****	
 	if (Npc_HasItems (hero,ItFo_Sausage) >= 1) 
 	{
 		if (Npc_HasItems (hero, ItFo_Sausage) >= Meat_Amount) 
@@ -374,7 +374,7 @@ func void DIA_Engor_BRINGMEAT_Info ()
 	{	
 		var string GesamtFleisch;
 		
-		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_01"); //That's not bad for starters, but I need more.
+		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_01"); //Das ist schon nicht schlecht, aber ich brauche noch mehr.
 		
 		GesamtFleisch = IntToString (Meat_Counter);
 		GesamtFleisch = ConcatStrings ("Insgesamt Fleisch gegeben: ",GesamtFleisch);
@@ -383,15 +383,15 @@ func void DIA_Engor_BRINGMEAT_Info ()
 	};
 	if (Meat_counter >= Meat_Amount)
 	{
-		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_02"); //Great, you brought enough meat. That'll do for a while.
-		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_03"); //But don't get the idea that I'll give you anything for free now!
+		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_02"); //Gut, du hast genug Fleisch gebracht. Das wird für eine Weile reichen.
+		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_03"); //Glaub aber ja nicht, dass du von mir jetzt irgendwas umsonst kriegst!
 		/*
 		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_04"); //Hm...
-		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_05"); //Na sch�n. Du hast mir geholfen, du kriegst was umsonst. Ich gebe dir eine Information. 	
+		AI_Output (self, other, "DIA_Engor_BRINGMEAT_13_05"); //Na schn. Du hast mir geholfen, du kriegst was umsonst. Ich gebe dir eine Information. 	
 		*/
 		MIS_Engor_BringMeat = LOG_SUCCESS;
 		B_GivePlayerXP (XP_BringMeat);
-		Log_AddEntry (TOPIC_BringMeat,"Engor's got the meat. He'll make sure it's shared out among the men."); 
+		Log_AddEntry (TOPIC_BringMeat,"Engor hat das Fleisch bekommen. Er wird dafür sorgen, das es unter den Männern verteilt wird."); 
 	};
 };
 
@@ -404,7 +404,7 @@ func void DIA_Engor_BRINGMEAT_Info ()
 //*************************************
 
 ///////////////////////////////////////////////////////////////////////
-//	Wie laufen die Gesch�fte?
+//	Wie laufen die Geschfte?
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Engor_Business		(C_INFO)
 {
@@ -413,7 +413,7 @@ instance DIA_Engor_Business		(C_INFO)
 	condition	 = 	DIA_Engor_Business_Condition;
 	information	 = 	DIA_Engor_Business_Info;
 	permanent	 =	FALSE;	
-	description	 = 	"How's business?";
+	description	 = 	"Wie läuft das Geschäft?";
 	
 };
 
@@ -456,7 +456,7 @@ INSTANCE DIA_Engor_PICKPOCKET (C_INFO)
 	condition	= DIA_Engor_PICKPOCKET_Condition;
 	information	= DIA_Engor_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be risky to steal his map)";
+	description = "(Es wäre gewagt seine Karte zu stehlen)";
 };                       
 
 FUNC INT DIA_Engor_PICKPOCKET_Condition()

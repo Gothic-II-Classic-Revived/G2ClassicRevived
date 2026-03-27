@@ -28,7 +28,7 @@ FUNC VOID DIA_Dragon_Fire_Exit_Info()
 	Wld_PlayEffect("spellFX_FireRain",  self, self, 0, 0, 0, FALSE );
 	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE ); 
 
-	AI_Output			(self, other, "DIA_Dragon_Fire_Exit_20_00"); //The Eye has lost its power, and you will not survive the next day.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Exit_20_00"); //Das Auge hat seine Kraft verloren und du wirst den nächsten Tag nicht mehr erleben.
 
 	AI_StopProcessInfos	(self);
 	DragonTalk_Exit_Free  = FALSE;
@@ -65,16 +65,16 @@ FUNC INT DIA_Dragon_Fire_Hello_Condition()
 
 FUNC VOID DIA_Dragon_Fire_Hello_Info()
 {	
-	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_00"); //I simply cannot believe that there truly are still people who will forfeit their lives merely to see a dragon in the flesh.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_00"); //Ich kann es einfach nicht glauben, dass es wirklich noch Menschen gibt, die ihr Leben verwirken, nur um einen leibhaftigen Drachen zu sehen.
 	if (Mis_KilledDragons == 0)
 	{	
-		AI_Output			(other, self, "DIA_Dragon_Fire_Hello_15_01"); //You're quite articulate for such a bulky monster.
+		AI_Output			(other, self, "DIA_Dragon_Fire_Hello_15_01"); //Für so ein klobiges Ungetüm sprichst du aber noch recht deutlich.
 	};
-	AI_Output			(other, self, "DIA_Dragon_Fire_Hello_15_02"); //I haven't just come to see you. I rather had something more radical in mind, I'm afraid.
-	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_03"); //You do not mean to say that you wish to challenge me?
-	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_04"); //Ha ha ha. I shall break your scrawny neck.
-	AI_Output			(other, self, "DIA_Dragon_Fire_Hello_15_05"); //Not so fast, my friend. I carry the Eye of Innos with me. You cannot resist my will. Answer my questions, or the agony will be unbearable for you.
-	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_06"); //(bellows) Arrh. Then pose your ridiculous questions while you still can. Your power will not last long.
+	AI_Output			(other, self, "DIA_Dragon_Fire_Hello_15_02"); //Ich bin nicht nur gekommen, um dich zu sehen. Ich fürchte, ich hatte etwas Radikaleres im Sinn.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_03"); //Sag jetzt bloß nicht, dass du mich herausfordern willst?
+	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_04"); //Ha Ha Ha. Ich werde dir deinen schmalen Hals brechen.
+	AI_Output			(other, self, "DIA_Dragon_Fire_Hello_15_05"); //Nicht so schnell, mein Freund. Ich trage das Auge Innos' bei mir. Du kannst dich meinem Willen nicht entziehen. Beantworte meine Fragen, oder die Qualen werden für dich unerträglich sein.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Hello_20_06"); //(Brüllt) Arrh. Dann stell deine lächerlichen Fragen, solange du noch kannst. Deine Macht wird nicht von Dauer sein.
 
 };
 
@@ -88,7 +88,7 @@ instance DIA_Dragon_Fire_WerBistDu		(C_INFO)
 	condition	 = 	DIA_Dragon_Fire_WerBistDu_Condition;
 	information	 = 	DIA_Dragon_Fire_WerBistDu_Info;
 
-	description	 = 	"Who are you?";
+	description	 = 	"Wer bist du?";
 };
 
 func int DIA_Dragon_Fire_WerBistDu_Condition ()
@@ -101,9 +101,9 @@ func int DIA_Dragon_Fire_WerBistDu_Condition ()
 
 func void DIA_Dragon_Fire_WerBistDu_Info ()
 {
-	AI_Output			(other, self, "DIA_Dragon_Fire_WerBistDu_15_00"); //Who are you?
-	AI_Output			(self, other, "DIA_Dragon_Fire_WerBistDu_20_01"); //My name is Feomathar, and that is all that you will learn about me.
-	AI_Output			(self, other, "DIA_Dragon_Fire_WerBistDu_20_02"); //Once I can escape the spell of the Eye, you will go up in flames.
+	AI_Output			(other, self, "DIA_Dragon_Fire_WerBistDu_15_00"); //Wer bist du?
+	AI_Output			(self, other, "DIA_Dragon_Fire_WerBistDu_20_01"); //Mein Name ist Feomathar und das ist auch schon alles, was du über mich erfahren wirst.
+	AI_Output			(self, other, "DIA_Dragon_Fire_WerBistDu_20_02"); //Wenn ich aus dem Bann des Auges entfliehen kann, wirst du in Flammen aufgehen.
 
 };
 
@@ -116,7 +116,7 @@ instance DIA_Dragon_Fire_HORT		(C_INFO)
 	condition	 = 	DIA_Dragon_Fire_HORT_Condition;
 	information	 = 	DIA_Dragon_Fire_HORT_Info;
 
-	description	 = 	"So where's your hoard?";
+	description	 = 	"Wo ist dein Hort?";
 };
 
 func int DIA_Dragon_Fire_HORT_Condition ()
@@ -129,9 +129,9 @@ func int DIA_Dragon_Fire_HORT_Condition ()
 
 func void DIA_Dragon_Fire_HORT_Info ()
 {
-	AI_Output			(other, self, "DIA_Dragon_Fire_HORT_15_00"); //Every dragon has a hoard where he stores his collected treasures. So where's your hoard?
-	AI_Output			(self, other, "DIA_Dragon_Fire_HORT_20_01"); //In a place that will be inaccessible to you, once I am finally free of the chains of the Eye.
-	AI_Output			(self, other, "DIA_Dragon_Fire_HORT_20_02"); //I keep my treasure high up on the hot cliffs, which should be all but impossible to reach for a wingless human such as you.
+	AI_Output			(other, self, "DIA_Dragon_Fire_HORT_15_00"); //Jeder Drache hat doch einen Hort, wo er seinen gesammelten Reichtum lagert. Wo ist dein Hort?
+	AI_Output			(self, other, "DIA_Dragon_Fire_HORT_20_01"); //An einem Ort, der unerreichbar sein wird für dich, wenn ich die Fesseln des Auges erst einmal los bin.
+	AI_Output			(self, other, "DIA_Dragon_Fire_HORT_20_02"); //Meinen Besitz habe ich hoch oben auf dem heißen Felsen, den ein Mensch ohne Flügel wie du nur schwer erreichen sollte.
 
 };
 

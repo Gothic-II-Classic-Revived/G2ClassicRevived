@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Meatbug(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Meatbug";
+	name							=	"Fleischwanze";
 	guild							=	GIL_MEATBUG;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MEATBUG;
 	

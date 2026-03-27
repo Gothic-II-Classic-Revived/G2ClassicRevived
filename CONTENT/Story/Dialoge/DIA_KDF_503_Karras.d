@@ -45,20 +45,20 @@ func void DIA_Karras_Hello_Info ()
 {
 	if (hero.guild == GIL_NOV)
 	{
-		AI_Output			(self, other, "DIA_Karras_Hello_10_00"); //What can I do for you, novice?
+		AI_Output			(self, other, "DIA_Karras_Hello_10_00"); //Was kann ich für dich tun, Novize?
 	}
 	else if (hero.guild == GIL_KDF)
 	{
-		AI_Output			(self, other, "DIA_Karras_Hello_10_01"); //What can I do for you, Brother?
+		AI_Output			(self, other, "DIA_Karras_Hello_10_01"); //Was kann ich für dich tun, Bruder?
 	}
 	else if (hero.guild == GIL_PAL)
 	{
-		AI_Output			(self, other, "DIA_Karras_Hello_10_02"); //The honorable warriors of Innos rarely stray into these rooms.
-		AI_Output			(self, other, "DIA_Karras_Hello_10_03"); //What can I do for you?
+		AI_Output			(self, other, "DIA_Karras_Hello_10_02"); //Die ehrenvollen Streiter Innos verirren sich selten in diese Räume.
+		AI_Output			(self, other, "DIA_Karras_Hello_10_03"); //Was kann ich für dich tun?
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Karras_Hello_10_04"); //(mistrustful) What are you doing here?
+		AI_Output			(self, other, "DIA_Karras_Hello_10_04"); //(misstrauisch) Was suchst du hier?
 	};
 	
 };
@@ -72,7 +72,7 @@ instance DIA_Karras_Mission		(C_INFO)
 	condition	 = 	DIA_Karras_Mission_Condition;
 	information	 = 	DIA_Karras_Mission_Info;
 	permanent    =  FALSE;
-	description	 = 	"I have come to read the scriptures.";
+	description	 = 	"Ich bin hier, um die Schriften zu lesen.";
 };
 func int DIA_Karras_Mission_Condition ()
 {	
@@ -83,9 +83,9 @@ func int DIA_Karras_Mission_Condition ()
 };
 func void DIA_Karras_Mission_Info ()
 {
-	AI_Output (other, self, "DIA_Karras_Mission_15_00"); //I have come to read the scriptures.
-	AI_Output (self, other, "DIA_Karras_Mission_10_01"); //I understand. If you can ever make some time between your tedious studies, come to me.
-	AI_Output (self, other, "DIA_Karras_Mission_10_02"); //There is yet another matter for which I could use a discreet novice.
+	AI_Output (other, self, "DIA_Karras_Mission_15_00"); //Ich bin hier, um die Schriften zu lesen.
+	AI_Output (self, other, "DIA_Karras_Mission_10_01"); //Verstehe. Wenn du zwischen deinen langwierigen Studien mal Zeit haben solltest, komm zu mir.
+	AI_Output (self, other, "DIA_Karras_Mission_10_02"); //Ich hätte da noch eine Sache, für die ich einen verschwiegenen Novizen gebrauchen könnte.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Aufgabe
@@ -97,7 +97,7 @@ instance DIA_Karras_Aufgabe		(C_INFO)
 	condition	 = 	DIA_Karras_Aufgabe_Condition;
 	information	 = 	DIA_Karras_Aufgabe_Info;
 	permanent    =  FALSE;
-	description	 = 	"You have an assignment for me?";
+	description	 = 	"Du hast eine Aufgabe für mich?";
 };
 func int DIA_Karras_Aufgabe_Condition ()
 {	
@@ -108,20 +108,20 @@ func int DIA_Karras_Aufgabe_Condition ()
 };
 func void DIA_Karras_Aufgabe_Info ()
 {
-	AI_Output (other, self, "DIA_Karras_Aufgabe_15_00"); //You have an assignment for me?
-	AI_Output (self, other, "DIA_Karras_Aufgabe_10_01"); //Yes. It's about this crazy Ignaz. He lives in Khorinis and experiments with various potions and healing draughts. But also magic spells.
-	AI_Output (self, other, "DIA_Karras_Aufgabe_10_02"); //And that's exactly what worries me. I ask myself if his magic is pleasing to Innos.
-	AI_Output (self, other, "DIA_Karras_Aufgabe_10_03"); //In order to test this, I need some of his spell scrolls.
-	AI_Output (self, other, "DIA_Karras_Aufgabe_10_04"); //I want you to go into the city and obtain three of his spell scrolls for me.
-	AI_Output (self, other, "DIA_Karras_Aufgabe_10_05"); //But not a word to anyone - is that clear?
-	AI_Output (other, self, "DIA_Karras_Aufgabe_15_06"); //Sure.
-	AI_Output (self, other, "DIA_Karras_Aufgabe_10_07"); //Here are 150 gold pieces. That should cover your expenses.
+	AI_Output (other, self, "DIA_Karras_Aufgabe_15_00"); //Du hast eine Aufgabe für mich?
+	AI_Output (self, other, "DIA_Karras_Aufgabe_10_01"); //Ja. Es geht um diesen verrückten Ignaz. Er lebt in Khorinis und forscht an verschiedenen Tränken und Heilmitteln. Aber auch an Zaubersprüchen.
+	AI_Output (self, other, "DIA_Karras_Aufgabe_10_02"); //Und gerade das bereitet mir Sorgen. Ich frage mich, ob seine Magie Innos gefällig ist.
+	AI_Output (self, other, "DIA_Karras_Aufgabe_10_03"); //Um das zu prüfen, brauche ich einige seiner Spruchrollen.
+	AI_Output (self, other, "DIA_Karras_Aufgabe_10_04"); //Ich will, dass du in die Stadt gehst und mir drei Spruchrollen von ihm besorgst.
+	AI_Output (self, other, "DIA_Karras_Aufgabe_10_05"); //Aber zu niemanden ein Wort - klar?
+	AI_Output (other, self, "DIA_Karras_Aufgabe_15_06"); //Ja.
+	AI_Output (self, other, "DIA_Karras_Aufgabe_10_07"); //Hier sind 150 Goldstücke. Das wird deine Auslagen wohl decken.
 	
 	MIS_KarrasVergessen = LOG_RUNNING;
 	
 	Log_CreateTopic (Topic_KarrasCharm,LOG_MISSION);
 	Log_SetTopicStatus  (Topic_KarrasCharm,LOG_RUNNING);
-	B_LogEntry (Topic_KarrasCharm,"Master Karras has sent me to the city. He wants me to get him three of the spell scrolls Ignaz makes and sells.");
+	B_LogEntry (Topic_KarrasCharm,"Meister Karras schickt mich in die Stadt. Ich soll ihm drei der Spruchrollen besorgen, die Ignaz herstellt und verkauft.");
 
 	B_GiveInvItems (self, other, ItMi_Gold,150);
 };
@@ -135,7 +135,7 @@ instance DIA_Karras_Success		(C_INFO)
 	condition	 = 	DIA_Karras_Success_Condition;
 	information	 = 	DIA_Karras_Success_Info;
 	permanent    =  FALSE;
-	description	 = 	"Here are the spell scrolls you wanted.";
+	description	 = 	"Ich habe hier die Spruchrollen, die du wolltest.";
 };
 func int DIA_Karras_Success_Condition ()
 {	
@@ -147,10 +147,10 @@ func int DIA_Karras_Success_Condition ()
 };
 func void DIA_Karras_Success_Info ()
 {
-	AI_Output (other, self, "DIA_Karras_Success_15_00"); //Here are the spell scrolls you wanted.
-	AI_Output (self, other, "DIA_Karras_Success_10_01"); //Well done, my young friend.
-	AI_Output (self, other, "DIA_Karras_Success_10_02"); //But now it is time that you devote yourself to your studies.
-	AI_Output (self, other, "DIA_Karras_Success_10_03"); //And take this spell scroll as a reward.
+	AI_Output (other, self, "DIA_Karras_Success_15_00"); //Ich habe hier die Spruchrollen, die du wolltest.
+	AI_Output (self, other, "DIA_Karras_Success_10_01"); //Gut gemacht, junger Freund.
+	AI_Output (self, other, "DIA_Karras_Success_10_02"); //Jetzt wird es aber Zeit, dass du dich deinen Studien widmest.
+	AI_Output (self, other, "DIA_Karras_Success_10_03"); //Und nimm diese Spruchrolle als Belohnung.
 	
 	MIS_KarrasVergessen = LOG_SUCCESS;
 	B_GivePlayerXP (XP_KarrasCharm);
@@ -167,7 +167,7 @@ instance DIA_Karras_Trade		(C_INFO)
 	condition	 = 	DIA_Karras_Trade_Condition;
 	information	 = 	DIA_Karras_Trade_Info;
 	permanent    =  TRUE;
-	description	 = 	"Show me your wares.";
+	description	 = 	"Zeig mir deine Ware.";
 	trade		 =  TRUE; 
 };
 func int DIA_Karras_Trade_Condition ()
@@ -180,7 +180,7 @@ func int DIA_Karras_Trade_Condition ()
 func void DIA_Karras_Trade_Info ()
 {
 	B_GiveTradeInv (self);
-	AI_Output (other, self, "DIA_Karras_Trade_15_00"); //Show me your wares.
+	AI_Output (other, self, "DIA_Karras_Trade_15_00"); //Zeig mir deine Ware.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info JOB
@@ -192,7 +192,7 @@ instance DIA_Karras_JOB		(C_INFO)
 	condition	 = 	DIA_Karras_JOB_Condition;
 	information	 = 	DIA_Karras_JOB_Info;
 	permanent    =  FALSE;
-	description	 = 	"What exactly is your job?";
+	description	 = 	"Was genau ist deine Aufgabe?";
 };
 func int DIA_Karras_JOB_Condition ()
 {	
@@ -200,19 +200,19 @@ func int DIA_Karras_JOB_Condition ()
 };
 func void DIA_Karras_JOB_Info ()
 {
-	AI_Output (other, self, "DIA_Karras_JOB_15_00"); //What exactly is your job?
-	AI_Output (self, other, "DIA_Karras_JOB_10_01"); //It is my responsibility to train mages in the art of spherical manifestation.
-	AI_Output (other, self, "DIA_Karras_JOB_15_02"); //What does that mean?
-	AI_Output (self, other, "DIA_Karras_JOB_10_03"); //Well, I teach them how to summon creatures or beings from other states or spheres.
-	AI_Output (self, other, "DIA_Karras_JOB_10_04"); //This is usually called summoning, although this expression alone is insufficient for the art of calling a servant.
-	AI_Output (self, other, "DIA_Karras_JOB_10_05"); //Furthermore, I own some interesting spell scrolls which Gorax does not have.
+	AI_Output (other, self, "DIA_Karras_JOB_15_00"); //Was genau ist deine Aufgabe?
+	AI_Output (self, other, "DIA_Karras_JOB_10_01"); //Mir obliegt die Ausbildung der Magier in der Kunst der sphärischen Manifestation.
+	AI_Output (other, self, "DIA_Karras_JOB_15_02"); //Was bedeutet das?
+	AI_Output (self, other, "DIA_Karras_JOB_10_03"); //Nun, ich lehre sie Kreaturen oder Wesenheiten anderer Zustände oder Sphären herbeizurufen.
+	AI_Output (self, other, "DIA_Karras_JOB_10_04"); //Für gewöhnlich spricht man von Beschwörungen, obwohl dieser Ausdruck allein unzureichend ist für die Kunst, einen Diener zu rufen.
+	AI_Output (self, other, "DIA_Karras_JOB_10_05"); //Zudem besitze ich einige interessante Spruchrollen, die Gorax nicht hat.
 	
 	if (other.guild == GIL_NOV)
 	{
-		AI_Output (self, other, "DIA_Karras_JOB_10_06"); //But I only make them available to members of the Order.
+		AI_Output (self, other, "DIA_Karras_JOB_10_06"); //Aber die stelle ich nur Angehörigen des Ordens zur Verfügung.
 	};
 	Log_CreateTopic (Topic_KlosterTrader,LOG_NOTE);
-	B_LogEntry (Topic_KlosterTrader,"Master Karras can supply me with spell scrolls at the monastery. But for that I need to be a Magician of Fire.");
+	B_LogEntry (Topic_KlosterTrader,"Meister Karras kann mich im Kloster mit Spruchrollen versorgen. Allerdings muss ich Magier des Feuers sein.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TEACH
@@ -224,7 +224,7 @@ instance DIA_Karras_TEACH		(C_INFO)
 	condition	 = 	DIA_Karras_TEACH_Condition;
 	information	 = 	DIA_Karras_TEACH_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Teach me (create runes).";
+	description	 = 	"Unterrichte mich (Runen erschaffen)";
 };
 
 func int DIA_Karras_TEACH_Condition ()
@@ -238,7 +238,7 @@ func void DIA_Karras_TEACH_Info ()
 {
 	var int abletolearn;
 	abletolearn = 0;
-	AI_Output (other, self, "DIA_Karras_TEACH_15_00"); //Teach me.
+	AI_Output (other, self, "DIA_Karras_TEACH_15_00"); //Unterrichte mich.
 	
 		Info_ClearChoices   (DIA_Karras_TEACH);
 		
@@ -280,7 +280,7 @@ func void DIA_Karras_TEACH_Info ()
 		};
 		if 	(abletolearn < 1)
 		{
-			AI_Output (self, other, "DIA_Karras_TEACH_10_01"); //For the moment, there is nothing you can learn from me.
+			AI_Output (self, other, "DIA_Karras_TEACH_10_01"); //Du kannst momentan nichts von mir lernen.
 		}
 		else
 		{
@@ -326,7 +326,7 @@ instance DIA_Karras_CIRCLE4		(C_INFO)
 	condition	 = 	DIA_Karras_CIRCLE4_Condition;
 	information	 = 	DIA_Karras_CIRCLE4_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to learn the fourth Circle of Magic.";
+	description	 = 	"Ich will den vierten Kreis der Magie lernen.";
 };
 func int DIA_Karras_CIRCLE4_Condition ()
 {	
@@ -337,19 +337,19 @@ func int DIA_Karras_CIRCLE4_Condition ()
 };
 func void DIA_Karras_CIRCLE4_Info ()
 {
-	AI_Output (other, self, "DIA_Karras_CIRCLE4_15_00"); //I want to learn the fourth Circle of Magic.
+	AI_Output (other, self, "DIA_Karras_CIRCLE4_15_00"); //Ich will den vierten Kreis der Magie lernen.
 	
 	if (MIS_ReadyforChapter4 == TRUE)
 	{
 		if B_TeachMagicCircle (self,other, 4)
 		{
-			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_01"); //Good. All the signs are fulfilled. Enter now the fourth circle, so that the power of the new magic will be within you.
-			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_02"); //You have come a long way, and Innos will continue to light your path.
+			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_01"); //Gut. Alle Zeichen sind erfüllt. Tritt nun ein in den vierten Kreis, auf dass dir die Macht der neuen Zauber inne ist.
+			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_02"); //Du bist einen weiten Weg gegangen und Innos wird ihn auch weiterhin erleuchten.
 		};
 	}
 	else
 	{
-			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_03"); //It is still not finished.
+			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_03"); //Noch ist es nicht soweit.
 	};
 };
 /////////////////////////////////////////////////////////////////////////
@@ -362,7 +362,7 @@ instance DIA_Karras_CIRCLE5		(C_INFO)
 	condition	 = 	DIA_Karras_CIRCLE5_Condition;
 	information	 = 	DIA_Karras_CIRCLE5_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to learn the fifth Circle of Magic.";
+	description	 = 	"Ich will den fünften Kreis der Magie lernen.";
 };
 func int DIA_Karras_CIRCLE5_Condition ()
 {	
@@ -373,22 +373,22 @@ func int DIA_Karras_CIRCLE5_Condition ()
 };
 func void DIA_Karras_CIRCLE5_Info ()
 {
-	AI_Output (other, self, "DIA_Karras_CIRCLE5_15_00"); //I want to learn the fifth Circle of Magic.
+	AI_Output (other, self, "DIA_Karras_CIRCLE5_15_00"); //Ich will den fünften Kreis der Magie lernen.
 	
 	if (Kapitel >= 5)
 	{
 		if B_TeachMagicCircle (self,other, 5)
 		{
-			AI_Output (self, other, "DIA_Karras_CIRCLE5_10_01"); //Then enter now into the fifth circle of magic. You will command mightier magic than ever before.
-			AI_Output (self, other, "DIA_Karras_CIRCLE5_10_02"); //Use its power wisely, Brother - for the darkness is still strong and so are your enemies.
-			AI_Output (self, other, "DIA_Karras_CIRCLE5_10_03"); //I cannot accompany you into the sixth and highest Circle of magic. Pyrokar himself will ordain you when the time comes.
+			AI_Output (self, other, "DIA_Karras_CIRCLE5_10_01"); //Dann tritt nun ein, in den fünften Kreis der Magie. Du wirst nun mächtigere Zauber als je zuvor beherrschen.
+			AI_Output (self, other, "DIA_Karras_CIRCLE5_10_02"); //Nutze ihre Macht weise, Bruder - denn die Dunkelheit ist noch immer stark und so sind deine Feinde.
+			AI_Output (self, other, "DIA_Karras_CIRCLE5_10_03"); //In den sechsten und höchsten Kreis der Magie kann ich dich nicht mehr begleiten. Pyrokar selbst wird dich weihen, wenn die Zeit gekommen ist.
 			
-			B_LogEntry (Topic_KlosterTeacher,"Master Pyrokar will ordain me to the 6th Circle of Magic.");
+			B_LogEntry (Topic_KlosterTeacher,"In den sechsten Kreis der Magie wird Meister Pyrokar mich einweihen.");
 		};
 	}
 	else
 	{
-			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_04"); //The time is not yet ripe.
+			AI_Output (self, other, "DIA_Karras_CIRCLE4_10_04"); //Die Zeit ist noch nicht reif dafür.
 	};
 };
 //#####################################################################
@@ -478,37 +478,37 @@ func void DIA_Karras_ChasePedro_Info ()
 {
 	if (hero.guild == GIL_KDF)
 	{
-		AI_Output (self ,other,"DIA_Karras_ChasePedro_10_00"); //Brother, you cannot lose any time. You must hunt down Pedro and return the Eye of Innos to the monastery.
-		AI_Output (self ,other,"DIA_Karras_ChasePedro_10_01"); //If the Eye is not retrieved, we shall all be lost.
+		AI_Output (self ,other,"DIA_Karras_ChasePedro_10_00"); //Bruder, du darfst keine Zeit verlieren. Du musst Pedro zur Strecke bringen und das Auge Innos zurück ins Kloster bringen.
+		AI_Output (self ,other,"DIA_Karras_ChasePedro_10_01"); //Wenn wir das Auge nicht wiederbekommen, sind wir alle verloren.
 	}
 	else
 	{
-		AI_Output	(self ,other, "DIA_Karras_ChasePedro_10_02"); //What are you doing here? Shouldn't you be on your way and looking for the underhanded traitor Pedro?
+		AI_Output	(self ,other, "DIA_Karras_ChasePedro_10_02"); //Was machst du hier? Solltest du nicht unterwegs sein und den hinterhältigen Verräter Pedro suchen?
 	
 		Info_ClearChoices (DIA_Karras_ChasePedro);
-		Info_AddChoice (DIA_Karras_ChasePedro,"Later. There's something I have to take care of first.",DIA_Karras_ChasePedro_Later);
-		Info_AddChoice (DIA_Karras_ChasePedro,"He's not going to get very far.",DIA_Karras_ChasePedro_WontEscape);
+		Info_AddChoice (DIA_Karras_ChasePedro,"Später. Erst muss ich noch was erledigen.",DIA_Karras_ChasePedro_Later);
+		Info_AddChoice (DIA_Karras_ChasePedro,"Er wird nicht weit kommen.",DIA_Karras_ChasePedro_WontEscape);
 	};
 
 };	
 
 func void DIA_Karras_ChasePedro_Later ()
 {
-	AI_Output (other,self ,"DIA_Karras_ChasePedro_Later_15_00"); //Later. There's something I have to take care of first.
-	AI_Output (self ,other,"DIA_Karras_ChasePedro_Later_10_01"); //Do you have any idea what this loss means for the monastery? The Eye of Innos is a powerful weapon.
-	AI_Output (self ,other,"DIA_Karras_ChasePedro_Later_10_02"); //No one can foresee what the enemy intends to do with the amulet, but he is planning something and we must prevent it.
-	AI_Output (self ,other,"DIA_Karras_ChasePedro_Later_10_03"); //So get moving immediately and track down the thief!
+	AI_Output (other,self ,"DIA_Karras_ChasePedro_Later_15_00"); //Später. Erst muss ich noch was erledigen.
+	AI_Output (self ,other,"DIA_Karras_ChasePedro_Later_10_01"); //Weißt du überhaupt, was der Verlust für das Kloster bedeutet? Das Auge Innos ist eine mächtige Waffe.
+	AI_Output (self ,other,"DIA_Karras_ChasePedro_Later_10_02"); //Niemand kann vorhersagen, was der Feind mit dem Amulett vorhat, aber er hat etwas vor, und das müssen wir vereiteln.
+	AI_Output (self ,other,"DIA_Karras_ChasePedro_Later_10_03"); //Also setz dich unverzüglich in Bewegung und spür den Dieb auf!
 
 	AI_StopProcessInfos (self);
 };
 
 FUNC VOID DIA_Karras_ChasePedro_WontEscape ()
 {
-	AI_Output (other,self ,"DIA_Karras_ChasePedro_WontEscape_15_00"); //He's not going to get very far.
-	AI_Output (self ,other,"DIA_Karras_ChasePedro_WontEscape_10_01"); //I hope so for your sake. If he should escape because you've been lollygagging here, I will personally drag you before the tribunal.
-	AI_Output (other,self ,"DIA_Karras_ChasePedro_WontEscape_15_02"); //What would you accuse me of?
-	AI_Output (self ,other,"DIA_Karras_ChasePedro_WontEscape_10_03"); //Conspiracy with the enemy. It takes little imagination to picture the punishment for such an offense.
-	AI_Output (self ,other,"DIA_Karras_ChasePedro_WontEscape_10_04"); //And now see to it that you lose no more time, otherwise the next time we meet, it will be at the stake.
+	AI_Output (other,self ,"DIA_Karras_ChasePedro_WontEscape_15_00"); //Er wird nicht weit kommen.
+	AI_Output (self ,other,"DIA_Karras_ChasePedro_WontEscape_10_01"); //Das will ich für dich hoffen. Wenn er entkommt, weil du hier rumstehst, werde ich dich persönlich vors Tribunal schleifen.
+	AI_Output (other,self ,"DIA_Karras_ChasePedro_WontEscape_15_02"); //Was willst du mir vorwerfen?
+	AI_Output (self ,other,"DIA_Karras_ChasePedro_WontEscape_10_03"); //Verschwörung mit dem Feind. Die Strafe für so ein Vergehen kannst du dir ja wohl ohne viel Phantasie selbst ausmalen.
+	AI_Output (self ,other,"DIA_Karras_ChasePedro_WontEscape_10_04"); //Und jetzt solltest du zusehen, dass du keine weitere Zeit verschwendest, sonst sehen wir uns das nächste Mal auf dem Scheiterhaufen wieder.
 
 	AI_StopProcessInfos (self);
 };
@@ -540,7 +540,7 @@ func int DIA_Karras_NeedInfo_Condition ()
 func void DIA_Karras_NeedInfo_Info ()
 {
 	
-	AI_Output (self ,other,"DIA_Karras_NeedInfo_10_00"); //You know everything you need to know. Now be on your way!
+	AI_Output (self ,other,"DIA_Karras_NeedInfo_10_00"); //Du weißt alles, was du wissen musst. Jetzt mach dich auf den Weg!
 	
 	AI_StopProcessInfos (self);
 };
@@ -559,7 +559,7 @@ instance DIA_Karras_InnosEyeRetrieved		(C_INFO)
 	condition	 = 	DIA_Karras_InnosEyeRetrieved_Condition;
 	information	 = 	DIA_Karras_InnosEyeRetrieved_Info;
 	permanent	 = 	FALSE;
-	description	 =	"I have brought back the Eye of Innos.";
+	description	 =	"Ich habe das Auge Innos' zurückgebracht.";
 };
 
 func int DIA_Karras_InnosEyeRetrieved_Condition ()
@@ -593,7 +593,7 @@ INSTANCE DIA_Karras_KAP3_Perm   (C_INFO)
 	condition   = DIA_Karras_KAP3_Perm_Condition;
 	information = DIA_Karras_KAP3_Perm_Info;
 	permanent   = TRUE;
-	description = "How are your studies coming along?";
+	description = "Was macht das Studium?";
 };
 FUNC INT DIA_Karras_KAP3_Perm_Condition()
 {
@@ -621,13 +621,13 @@ FUNC VOID DIA_Karras_KAP3_Perm_Info()
 		AI_Output (self ,other,"DIA_Karras_KAP3_Perm_10_07"); //But if you could manage to bring me something of theirs to examine...
 		
 		MIS_KarrasResearchDMT = LOG_RUNNING;
-		B_LogEntry (TOPIC_DEMENTOREN,"Karras needs something that has been in direct contact with the Seekers in order to continue his investigations."); 
+		B_LogEntry (TOPIC_DEMENTOREN,"Karras braucht etwas, das in direkten Kontakt mit den Suchenden stand, damit er seine Nachforschungen über sie weiter führen kann."); 
 
 		Info_ClearChoices (DIA_Karras_KAP3_Perm);
 		Info_AddChoice (DIA_Karras_KAP3_Perm,DIALOG_BACK,DIA_Karras_KAP3_Perm_Back);
-		Info_AddChoice (DIA_Karras_KAP3_Perm,"I shall see what I can do.",DIA_Karras_KAP3_Perm_WillSee);
-		Info_AddChoice (DIA_Karras_KAP3_Perm,"Could the Sleeper be involved in this?",DIA_Karras_KAP3_Perm_Sleeper);
-		Info_AddChoice (DIA_Karras_KAP3_Perm,"What kind of material do you need?",DIA_Karras_KAP3_Perm_Material);
+		Info_AddChoice (DIA_Karras_KAP3_Perm,"Ich werde sehen, was ich machen kann.",DIA_Karras_KAP3_Perm_WillSee);
+		Info_AddChoice (DIA_Karras_KAP3_Perm,"Könnte der Schläfer seine Finger im Spiel haben?",DIA_Karras_KAP3_Perm_Sleeper);
+		Info_AddChoice (DIA_Karras_KAP3_Perm,"Welches Material benötigst du?",DIA_Karras_KAP3_Perm_Material);
 	}
 	else if MIS_KarrasResearchDMT == LOG_RUNNING 
 	{
@@ -666,7 +666,7 @@ FUNC VOID DIA_Karras_KAP3_Perm_Material()
 	AI_Output (other,self ,"DIA_Karras_KAP3_Perm_Material_15_00"); //What kind of material do you need?
 	AI_Output (self ,other,"DIA_Karras_KAP3_Perm_Material_10_01"); //What do I know - any objects which specially belong to these beings.
 	
-	Info_AddChoice (DIA_Karras_KAP3_Perm,"Do you want me to bring you a corpse?",DIA_Karras_KAP3_Perm_Corpse);
+	Info_AddChoice (DIA_Karras_KAP3_Perm,"Soll ich dir eine Leiche bringen?",DIA_Karras_KAP3_Perm_Corpse);
 };
 
 FUNC VOID DIA_Karras_KAP3_Perm_WillSee()
@@ -687,7 +687,7 @@ INSTANCE DIA_Karras_HaveBook   (C_INFO)
 	condition   = DIA_Karras_HaveBook_Condition;
 	information = DIA_Karras_HaveBook_Info;
 	permanent   = FALSE;
-	description = "I've got an almanac of the Possessed here.";
+	description = "Ich habe hier einen Almanach der Besessenen.";
 };
 FUNC INT DIA_Karras_HaveBook_Condition()
 {
@@ -714,7 +714,7 @@ FUNC VOID DIA_Karras_HaveBook_Info()
 	AI_Output (self ,other,"DIA_Karras_HaveBook_10_06"); //However, I am still unable to tell at this point whether we are looking at a type of spiritual possession, or a purely physical mutation.
 	AI_Output (self ,other,"DIA_Karras_HaveBook_10_07"); //Come back later. Then I will certainly know more.
 	MIS_KarrasResearchDMT = LOG_SUCCESS;
-	B_LogEntry (TOPIC_DEMENTOREN,"Karras has been able to use an Almanac of the Possessed for further research. I'm to return to him later."); 
+	B_LogEntry (TOPIC_DEMENTOREN,"Karras konnte mit einem Almanach der Besessenen weiter forschen. Ich soll später nochmal zu ihm kommen."); 
 	KarrasGotResearchDMTBook_Day = Wld_GetDay(); 
 	B_GivePlayerXP (XP_KarrasResearchDMT);
 };
@@ -731,7 +731,7 @@ INSTANCE DIA_Karras_ResearchDMTEnd   (C_INFO)
 	information = DIA_Karras_ResearchDMTEnd_Info;
 	permanent   = TRUE;
 
-	description = "Found out anything new about the Seekers yet?";
+	description = "Schon was neues über die Suchenden herausgefunden?";
 };
 FUNC INT DIA_Karras_ResearchDMTEnd_Condition()
 {
@@ -766,7 +766,7 @@ FUNC VOID DIA_Karras_ResearchDMTEnd_Info()
 		AI_PrintScreen	(PRINT_ItemErhalten, -1, YPOS_ItemTaken, FONT_ScreenSmall, 2);	// "1 Gegenstand erhalten"
 
 		SC_KnowsMadPsi = TRUE;
-		B_LogEntry (TOPIC_DEMENTOREN,"Karras' studies have been successful. There seems to be some sort of link between the Seekers and the Brotherhood of the Sleeper."); 
+		B_LogEntry (TOPIC_DEMENTOREN,"Karras Studium war sehr aufschlussreich. Zwischen den Suchenden und der Bruderschaft des Schläfers scheint es einen Zusammenhang zu geben."); 
 		B_GivePlayerXP (XP_SC_KnowsMadPsi);
 	}
 	else
@@ -787,7 +787,7 @@ INSTANCE DIA_Karras_Prot_BlackEye   (C_INFO)
 	information = DIA_Karras_Prot_BlackEye_Info;
 	permanent   = TRUE;
 
-	description = "Is there a way to protect oneself against the mental attacks of the Seekers?";
+	description = "Gibt es einen Schutz gegen die mentalen Angriffe der Suchenden?";
 };
 FUNC INT DIA_Karras_Prot_BlackEye_Condition()
 {
@@ -810,7 +810,7 @@ FUNC VOID DIA_Karras_Prot_BlackEye_Info()
 		AI_Output (self ,other,"DIA_Karras_Prot_BlackEye_10_03"); //Some of our prayer shrines which we have erected are composed of them.
 		AI_Output (other,self ,"DIA_Karras_Prot_BlackEye_15_04"); //All right. I shall scare up some of that.
 		AI_Output (self ,other,"DIA_Karras_Prot_BlackEye_10_05"); //Yes, do that. But don't even think of damaging the shrines, do you hear me?
-		B_LogEntry (TOPIC_DEMENTOREN,"Karras can get me some protection against the mental attacks of the Seekers. He needs stone from blessed soil. Some shrines are made of such stones."); 
+		B_LogEntry (TOPIC_DEMENTOREN,"Karras kann mir einen Schutz gegen die mentalen Angriffe der Suchenden beschaffen. Dazu benötigt er Gestein aus gesegneter Erde. Einige Schreine sind aus diesem Gestein gefertigt."); 
 		MIS_Karras_FindBlessedStone = LOG_RUNNING;
 	}
 	else
@@ -830,7 +830,7 @@ INSTANCE DIA_Karras_KarrasBlessedStone   (C_INFO)
 	condition   = DIA_Karras_KarrasBlessedStone_Condition;
 	information = DIA_Karras_KarrasBlessedStone_Info;
 
-	description = "I've got some stone here from blessed soil.";
+	description = "Ich habe hier Gestein aus gesegneter Erde.";
 };
 FUNC INT DIA_Karras_KarrasBlessedStone_Condition()
 {
@@ -851,7 +851,7 @@ FUNC VOID DIA_Karras_KarrasBlessedStone_Info()
 	AI_Output (self ,other,"DIA_Karras_KarrasBlessedStone_10_03"); //Give me some time. I shall get right to work.
 	KarrasMakesBlessedStone_Day = Wld_GetDay(); 
 	MIS_Karras_FindBlessedStone	= LOG_SUCCESS;
-	B_LogEntry (TOPIC_DEMENTOREN,"Karras will give me a protective amulet against the mental attacks of the Seekers. That will simplify matters."); 
+	B_LogEntry (TOPIC_DEMENTOREN,"Karras will mir ein Schutzamulett gegen die Mentalen Angriffe der Suchenden geben. Das wird die Sache erleichtern."); 
 	B_GivePlayerXP (XP_Karras_FoundBlessedStone);
 	AI_StopProcessInfos (self);
 };
@@ -868,7 +868,7 @@ INSTANCE DIA_Karras_ItAm_Prot_BlackEye_Mis   (C_INFO)
 	information = DIA_Karras_ItAm_Prot_BlackEye_Mis_Info;
 	permanent	 = 	TRUE;
 
-	description = "So what about the protective amulet you promised me?";
+	description = "Wie steht's mit dem versprochenen Schutzamulett?";
 };
 var int DIA_Karras_ItAm_Prot_BlackEye_Mis_NoPerm;
 FUNC INT DIA_Karras_ItAm_Prot_BlackEye_Mis_Condition()
@@ -892,7 +892,7 @@ FUNC VOID DIA_Karras_ItAm_Prot_BlackEye_Mis_Info()
 		B_GiveInvItems (self, other, ItAm_Prot_BlackEye_Mis, 1);					
 		AI_Output (self ,other,"DIA_Karras_ItAm_Prot_BlackEye_Mis_10_02"); //Carry it with you always and the Seekers will not be able to drag you down into their mental abyss.
 		AI_Output (other,self ,"DIA_Karras_ItAm_Prot_BlackEye_Mis_15_03"); //Thank you.
-		B_LogEntry (TOPIC_DEMENTOREN,"Karras gave me an amulet for protection against the black look of the Seekers."); 
+		B_LogEntry (TOPIC_DEMENTOREN,"Ich erhielt von Karras ein Schutzamulett gegen den schwarzen Blick der Suchenden."); 
 		DIA_Karras_ItAm_Prot_BlackEye_Mis_NoPerm = TRUE;
 		B_GivePlayerXP (XP_Ambient);
 	}

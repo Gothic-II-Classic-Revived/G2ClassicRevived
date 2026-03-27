@@ -1,5 +1,5 @@
 // **************************************
-// NSC pflückt etwas vom Boden an Pick-FP
+// NSC pflckt etwas vom Boden an Pick-FP
 // **************************************
 
 func void ZS_Pick_FP ()
@@ -21,15 +21,15 @@ func int ZS_Pick_FP_Loop ()
 	if ((Npc_GetStateTime(self) >= 7)
 	&& (Hlp_Random (2)))  
 	{
-		if ((Npc_IsOnFP(self,"PICK")) 
-		&& (Wld_IsFPAvailable (self, "PICK")))  //FP gefunden!
+		if ((Npc_IsOnFP(self,"Hacke")) 
+		&& (Wld_IsFPAvailable (self, "Hacke")))  //FP gefunden!
 		{
-			AI_GotoNextFP (self, "PICK");
+			AI_GotoNextFP (self, "Hacke");
 			AI_PlayAni		(self, "T_PLUNDER");
 			Npc_SetStateTime (self,0);
 			
 		}
-		else if (Npc_IsOnFP(self,"PICK"))
+		else if (Npc_IsOnFP(self,"Hacke"))
 		{
 			AI_PlayAni		(self, "T_PLUNDER");
 			Npc_SetStateTime (self,0);
@@ -38,17 +38,17 @@ func int ZS_Pick_FP_Loop ()
 	}
 	else if (Npc_GetStateTime(self) >= 7)
 	{
-		if (Npc_IsOnFP (self, "PICK"))
+		if (Npc_IsOnFP (self, "Hacke"))
 		{		
 			AI_PlayAni		(self, "T_PLUNDER");	
 		};
 		AI_SetWalkmode (self,NPC_WALK);		
 	};
 	
-	if ((!Npc_IsOnFP(self,"PICK")) 
-	&& (Wld_IsFPAvailable (self, "PICK")))  //FP gefunden!
+	if ((!Npc_IsOnFP(self,"Hacke")) 
+	&& (Wld_IsFPAvailable (self, "Hacke")))  //FP gefunden!
 	{
-		AI_GotoFP 		(self, "PICK");
+		AI_GotoFP 		(self, "Hacke");
 	};
 	
 	return LOOP_CONTINUE;

@@ -43,9 +43,9 @@ func int DIA_Draal_DRAGON_Condition ()
 };
 func void DIA_Draal_DRAGON_Info ()
 {
-	AI_Output			(self, other, "DIA_Draal_DRAGON_03_00"); //I was outside when the dragon attacked.
-	AI_Output			(self, other, "DIA_Draal_DRAGON_03_01"); //I saw it, big as 10 men - its fiery breath destroyed the huts in the blink of an eye!
-	AI_Output			(self, other, "DIA_Draal_DRAGON_03_02"); //A dragon! I'm staying here. Nothing is going to budge me. I'm not crazy!
+	AI_Output			(self, other, "DIA_Draal_DRAGON_03_00"); //Ich war draußen, als der Drache angegriffen hat.
+	AI_Output			(self, other, "DIA_Draal_DRAGON_03_01"); //Ich habe ihn gesehen, groß wie 10 Männer, binnen von Augenblicken verbrannte sein Feueratem die Hütten!
+	AI_Output			(self, other, "DIA_Draal_DRAGON_03_02"); //Ein Drache! Ich bleibe hier sitzen. Hier kriegt mich keiner weg. Ich bin doch nicht wahnsinnig!
 };
 
 

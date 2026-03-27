@@ -70,7 +70,7 @@ instance DIA_Biff_DI_perm		(C_INFO)
 	information	 = 	DIA_Biff_DI_perm_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"All ship-shape aboard?";
+	description	 = 	"Auf dem Schiff alles klar?";
 };
 
 func int DIA_Biff_DI_perm_Condition ()

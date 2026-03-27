@@ -1,6 +1,6 @@
 INSTANCE REVIVED_POCKET_WHITE(C_Item)
 {
-	name = "White Pocket";
+	name = "Weiße Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -20,7 +20,7 @@ func void use_REVIVED_POCKET_WHITE()
 
 INSTANCE REVIVED_POCKET_BLACK(C_Item)
 {
-	name = "Black Pocket";
+	name = "Schwarze Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -45,7 +45,7 @@ func void use_REVIVED_POCKET_BLACK()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_BLUE(C_Item)
 {
-	name = "Blue Pocket";
+	name = "Blaue Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -64,7 +64,7 @@ func void use_REVIVED_POCKET_BLUE()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_CYAN(C_Item)
 {
-	name = "Cyan Pocket";
+	name = "Cyanfarbene Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -83,7 +83,7 @@ func void use_REVIVED_POCKET_CYAN()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_PURPLE(C_Item)
 {
-	name = "Purple Pocket";
+	name = "Violette Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -102,7 +102,7 @@ func void use_REVIVED_POCKET_PURPLE()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_RED(C_Item)
 {
-	name = "Red Pocket";
+	name = "Rote Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -121,7 +121,7 @@ func void use_REVIVED_POCKET_RED()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_YELLOW(C_Item)
 {
-	name = "Yellow Pocket";
+	name = "Gelbe Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;

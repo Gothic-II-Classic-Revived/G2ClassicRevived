@@ -54,38 +54,38 @@ func void DIA_Geppert_HALLO_Info ()
 		Kervo_GotStuff = TRUE;
 	};	
 	
-	AI_Output			(self, other, "DIA_Geppert_HALLO_10_00"); //Halt! Who goes there?
-	AI_Output			(self, other, "DIA_Geppert_HALLO_10_01"); //You haven't come to send me back into the ore mines, have you?
-	AI_Output			(self, other, "DIA_Geppert_HALLO_10_02"); //I'll have to disappoint you, then. There's no way I'm going back.
+	AI_Output			(self, other, "DIA_Geppert_HALLO_10_00"); //Halt! Wer da?
+	AI_Output			(self, other, "DIA_Geppert_HALLO_10_01"); //Du bist doch nicht gekommen, um mich wieder in die Erzminen zurück zu schicken.
+	AI_Output			(self, other, "DIA_Geppert_HALLO_10_02"); //Da muss ich dich leider enttäuschen. Ich geh nicht mehr zurück.
 	
 
 	Info_ClearChoices	(DIA_Geppert_HALLO);
-	Info_AddChoice	(DIA_Geppert_HALLO, "What are you doing out here?", DIA_Geppert_HALLO_Wasmachtihr );
-	Info_AddChoice	(DIA_Geppert_HALLO, "You're a convict on the lam, right?", DIA_Geppert_HALLO_Flucht );
+	Info_AddChoice	(DIA_Geppert_HALLO, "Was machst du hier draußen?", DIA_Geppert_HALLO_Wasmachtihr );
+	Info_AddChoice	(DIA_Geppert_HALLO, "Du bist ein entlaufender Sträfling, stimmt´s?", DIA_Geppert_HALLO_Flucht );
 };
 
 func void DIA_Geppert_HALLO_Flucht ()
 {
-	AI_Output			(other, self, "DIA_Geppert_HALLO_Flucht_15_00"); //You're a convict on the lam, right?
-	AI_Output			(self, other, "DIA_Geppert_HALLO_Flucht_10_01"); //How perceptive of you. Why else would I have crawled into this filthy hole?
+	AI_Output			(other, self, "DIA_Geppert_HALLO_Flucht_15_00"); //Du bist ein entlaufender Sträfling, stimmt´s?
+	AI_Output			(self, other, "DIA_Geppert_HALLO_Flucht_10_01"); //Du merkst aber auch alles. Glaubst du denn, ich würde mich sonst in diesem Dreckloch verkriechen?
 	Info_ClearChoices	(DIA_Geppert_HALLO);
 };
 
 func void DIA_Geppert_HALLO_Wasmachtihr ()
 {
-	AI_Output			(other, self, "DIA_Geppert_HALLO_Wasmachtihr_15_00"); //What are you doing out here?
+	AI_Output			(other, self, "DIA_Geppert_HALLO_Wasmachtihr_15_00"); //Was machst du hier draußen?
 	
 	if 	((other.guild == GIL_MIL) || (other.guild == GIL_PAL))
 			{
-				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_01"); //What's with the idiotic questions? I'm hiding out here from you soldiers.
-				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_02"); //Stop beating about the bush. Either kill me now, or get lost.
+				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_01"); //Was soll die blöde Fragerei? Ich versteck mich hier vor euch Soldaten.
+				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_02"); //Rede nicht lange um den heißen Brei herum. Entweder du bringst mich jetzt um oder du verschwindest wieder.
 			}
 			else
 			{
-				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_03"); //Stupid question. Hiding, what else? Those militia swine have their spies everywhere.
+				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_03"); //Blöde Frage. Verstecken natürlich. Die Schweine der Miliz haben ihre Späher überall.
 			};
 
-	AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_04"); //I'm not going back into the mine, and that's final.
+	AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_04"); //In die Mine geh ich jedenfalls nicht wieder.
 	Info_ClearChoices	(DIA_Geppert_HALLO);
 };
 
@@ -100,7 +100,7 @@ instance DIA_Geppert_BRATEN		(C_INFO)
 	information	 = 	DIA_Geppert_BRATEN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"That roast smells good.";
+	description	 = 	"Der Braten riecht gut.";
 };
 
 func int DIA_Geppert_BRATEN_Condition ()
@@ -113,8 +113,8 @@ func int DIA_Geppert_BRATEN_Condition ()
 
 func void DIA_Geppert_BRATEN_Info ()
 {
-	AI_Output			(other, self, "DIA_Geppert_BRATEN_15_00"); //That roast smells good.
-	AI_Output			(self, other, "DIA_Geppert_BRATEN_10_01"); //Don't touch!
+	AI_Output			(other, self, "DIA_Geppert_BRATEN_15_00"); //Der Braten riecht gut.
+	AI_Output			(self, other, "DIA_Geppert_BRATEN_10_01"); //Finger weg!
 	AI_StopProcessInfos (self);
 };
 

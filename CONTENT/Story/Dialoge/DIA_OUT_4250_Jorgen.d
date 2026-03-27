@@ -118,7 +118,7 @@ INSTANCE DIA_Jorgen_Novice   (C_INFO)
 	condition   = DIA_Jorgen_Novice_Condition;
 	information = DIA_Jorgen_Novice_Info;
 	permanent   = FALSE;
-	description	= "Have you seen a novice walk past?";
+	description	= "Hast du einen Novizen vorbeikommen sehen?";
 };
 
 FUNC INT DIA_Jorgen_Novice_Condition()
@@ -150,7 +150,7 @@ INSTANCE DIA_Jorgen_Milten   (C_INFO)
 	condition   = DIA_Jorgen_Milten_Condition;
 	information = DIA_Jorgen_Milten_Info;
 	permanent   = FALSE;
-	description	= "If you're headed for the monastery, you should talk to Milten...";
+	description	= "Wenn du ins Kloster willst, solltest du mit Milten reden ...";
 };
 
 FUNC INT DIA_Jorgen_Milten_Condition()
@@ -183,7 +183,7 @@ INSTANCE DIA_Jorgen_Home   (C_INFO)
 	condition   = DIA_Jorgen_Home_Condition;
 	information = DIA_Jorgen_Home_Info;
 
-	description	= "Where do you come from?";
+	description	= "Wo kommt ihr her?";
 };
 
 FUNC INT DIA_Jorgen_Home_Condition()
@@ -215,7 +215,7 @@ INSTANCE DIA_Jorgen_BeCarefull   (C_INFO)
 	condition   = DIA_Jorgen_BeCarefull_Condition;
 	information = DIA_Jorgen_BeCarefull_Info;
 	permanent   = TRUE;
-	description	= "You had better get off the road.";
+	description	= "Besser, du verschwindest von der Straße.";
 };
 
 FUNC INT DIA_Jorgen_BeCarefull_Condition()
@@ -277,7 +277,7 @@ instance DIA_Jorgen_NEUHIER		(C_INFO)
 	condition	= 	DIA_Jorgen_NEUHIER_Condition;
 	information	= 	DIA_Jorgen_NEUHIER_Info;
 
-	description	= 	"How's life in the monastery?";
+	description	= 	"Wie lebt sich's im Kloster?";
 };
 
 func int DIA_Jorgen_NEUHIER_Condition ()
@@ -319,7 +319,7 @@ instance DIA_Jorgen_PERM4		(C_INFO)
 	information	 = 	DIA_Jorgen_PERM4_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"You'll be all right, I think.";
+	description	 = 	"Du kommst schon zurecht, denke ich.";
 };
 
 func int DIA_Jorgen_PERM4_Condition ()
@@ -390,7 +390,7 @@ instance DIA_Jorgen_BEMYCAPTAIN		(C_INFO)
 	information	 = 	DIA_Jorgen_BEMYCAPTAIN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Maybe I could offer you a job as a captain.";
+	description	 = 	"Ich könnte dir vielleicht einen Job als Kapitän anbieten.";
 };
 
 func int DIA_Jorgen_BEMYCAPTAIN_Condition ()
@@ -419,7 +419,7 @@ func void DIA_Jorgen_BEMYCAPTAIN_Info ()
 	
 	Log_CreateTopic (TOPIC_Captain, LOG_MISSION);                                                                                                                                                                                                                                            
 	Log_SetTopicStatus(TOPIC_Captain, LOG_RUNNING);                                                                                                                                                                                                                                          
-    B_LogEntry (TOPIC_Captain,"Jorgen is willing to be my captain, but I'd have to pay his debts at the monastery first.");
+    B_LogEntry (TOPIC_Captain,"Jorgen wäre bereit als Kapitän für die Überfahrst zu fungieren, allerdings muss ich ihn erst freikaufen. Er hat Schulden beim Kloster.");
 
 };
 
@@ -433,7 +433,7 @@ instance DIA_Jorgen_BEMYCAPTAIN2		(C_INFO)
 	condition	 = 	DIA_Jorgen_BEMYCAPTAIN2_Condition;
 	information	 = 	DIA_Jorgen_BEMYCAPTAIN2_Info;
 
-	description	 = 	"I took care of your bill.";
+	description	 = 	"Die Sache mit deiner Zeche habe ich geregelt.";
 };
 
 func int DIA_Jorgen_BEMYCAPTAIN2_Condition ()
@@ -473,7 +473,7 @@ instance DIA_Jorgen_BEMYCAPTAIN3		(C_INFO)
 	condition	 = 	DIA_Jorgen_BEMYCAPTAIN3_Condition;
 	information	 = 	DIA_Jorgen_BEMYCAPTAIN3_Info;
 
-	description	 = 	"Be my captain.";
+	description	 = 	"Sei mein Kapitän.";
 };
 
 func int DIA_Jorgen_BEMYCAPTAIN3_Condition ()
@@ -511,7 +511,7 @@ instance DIA_Jorgen_LOSFAHREN		(C_INFO)
 	information	 = 	DIA_Jorgen_LOSFAHREN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Are you ready to take me over to the island?";
+	description	 = 	"Bist du bereit, mich zur Insel überzusetzen?";
 };
 
 func int DIA_Jorgen_LOSFAHREN_Condition ()
@@ -555,7 +555,7 @@ instance DIA_Jorgen_PERM5_NOTCAPTAIN		(C_INFO)
 	information	 = 	DIA_Jorgen_PERM5_NOTCAPTAIN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How are you?";
+	description	 = 	"Wie steht's?";
 };
 
 func int DIA_Jorgen_PERM5_NOTCAPTAIN_Condition ()

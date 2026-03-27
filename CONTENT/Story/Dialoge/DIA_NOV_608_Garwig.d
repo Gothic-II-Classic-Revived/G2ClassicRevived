@@ -28,7 +28,7 @@ INSTANCE DIA_Garwig_Wurst(C_INFO)
 	condition	= DIA_Garwig_Wurst_Condition;
 	information	= DIA_Garwig_Wurst_Info;
 	permanent	= FALSE;
-	description = "Would you like a sausage?";
+	description = "Willst du 'ne Wurst?";
 };                       
 
 FUNC INT DIA_Garwig_Wurst_Condition()
@@ -94,7 +94,7 @@ INSTANCE DIA_Garwig_Room   (C_INFO)
 	condition   = DIA_Garwig_Room_Condition;
 	information = DIA_Garwig_Room_Info;
 	permanent   = FALSE;
-	description	= "What room is this?";
+	description	= "Was ist das hier für ein Raum?";
 };
 FUNC INT DIA_Garwig_Room_Condition()
 {	
@@ -117,7 +117,7 @@ INSTANCE DIA_Garwig_Hammer  (C_INFO)
 	condition   = DIA_Garwig_Hammer_Condition;
 	information = DIA_Garwig_Hammer_Info;
 	permanent   = TRUE;
-	description	= "Tell me about the hammer.";
+	description	= "Erzähl mir was über den Hammer";
 };
 FUNC INT DIA_Garwig_Hammer_Condition()
 {
@@ -143,7 +143,7 @@ INSTANCE DIA_Garwig_Shield  (C_INFO)
 	condition   = DIA_Garwig_Shield_Condition;
 	information = DIA_Garwig_Shield_Info;
 	permanent   = FALSE;
-	description	= "Tell me about the shield.";
+	description	= "Erzähl mir was über den Schild.";
 };
 FUNC INT DIA_Garwig_Shield_Condition()
 {
@@ -168,7 +168,7 @@ INSTANCE DIA_Garwig_Auge  (C_INFO)
 	condition   = DIA_Garwig_Auge_Condition;
 	information = DIA_Garwig_Auge_Info;
 	permanent   = FALSE;
-	description	= "Is the Eye of Innos kept here, too?";
+	description	= "Wird hier auch das Auge Innos' aufbewahrt?";
 };
 FUNC INT DIA_Garwig_Auge_Condition()
 {
@@ -193,7 +193,7 @@ instance DIA_Garwig_SLEEP		(C_INFO)
 	condition	 = 	DIA_Garwig_SLEEP_Condition;
 	information	 = 	DIA_Garwig_SLEEP_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 func int DIA_Garwig_SLEEP_Condition ()
 {
@@ -209,9 +209,9 @@ func void DIA_Garwig_SLEEP_Info ()
 	
 	Info_ClearChoices 	(DIA_Garwig_SLEEP);
 	Info_AddChoice 		(DIA_Garwig_SLEEP,DIALOG_BACK,DIA_Garwig_SLEEP_BACK);
-	Info_AddChoice 		(DIA_Garwig_SLEEP,"Shall I take over from you for a while?",DIA_Garwig_SLEEP_EXCHANGE);
-	Info_AddChoice 		(DIA_Garwig_SLEEP,"Why are the artifacts being guarded?",DIA_Garwig_SLEEP_THIEF);
-	Info_AddChoice 		(DIA_Garwig_SLEEP,"Don't you ever sleep?",DIA_Garwig_SLEEP_NEVER);
+	Info_AddChoice 		(DIA_Garwig_SLEEP,"Soll ich dich mal ablösen?",DIA_Garwig_SLEEP_EXCHANGE);
+	Info_AddChoice 		(DIA_Garwig_SLEEP,"Warum werden die Artefakte bewacht?",DIA_Garwig_SLEEP_THIEF);
+	Info_AddChoice 		(DIA_Garwig_SLEEP,"Schläfst du nie?",DIA_Garwig_SLEEP_NEVER);
 };
 FUNC VOID DIA_Garwig_SLEEP_BACK()
 {
@@ -236,7 +236,7 @@ FUNC VOID DIA_Garwig_SLEEP_NEVER()
 	AI_Output			(self, other, "DIA_Garwig_SLEEP_NEVER_06_02"); //For how else could I fulfill the sacred duties of guardianship?
 	
 	Info_ClearChoices 	(DIA_Garwig_SLEEP);
-	Info_AddChoice (DIA_Garwig_SLEEP,"Do you really NEVER sleep?",DIA_Garwig_SLEEP_AGAIN);
+	Info_AddChoice (DIA_Garwig_SLEEP,"Du schläfst wirklich NIE?",DIA_Garwig_SLEEP_AGAIN);
 };
 FUNC VOID DIA_Garwig_SLEEP_AGAIN()
 {
@@ -282,7 +282,7 @@ func void DIA_Garwig_THIEF_Info ()
 	};	
 };
 ///////////////////////////////////////////////////////////////////////
-//	Info Hammer zur�ckbringen (immer wenn Spieler den Hammer hat)
+//	Info Hammer zurckbringen (immer wenn Spieler den Hammer hat)
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Garwig_Abgeben		(C_INFO)
 {
@@ -291,7 +291,7 @@ instance DIA_Garwig_Abgeben		(C_INFO)
 	condition	 = 	DIA_Garwig_Abgeben_Condition;
 	information	 = 	DIA_Garwig_Abgeben_Info;
 	permanent	 = 	TRUE;
-	description	 =  "I'm bringing back the hammer.";
+	description	 =  "Ich bringe den Hammer zurück.";
 };
 func int DIA_Garwig_Abgeben_Condition ()
 {	

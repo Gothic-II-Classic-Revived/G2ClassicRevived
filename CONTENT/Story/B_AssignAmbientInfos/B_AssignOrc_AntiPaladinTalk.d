@@ -7,22 +7,22 @@ func void B_AssignORC_AntiPaladinTalk (var C_NPC Antipaladin)
 {	
 	 	if (AntiPaladinTalkcount == 0)
 		{
-			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_01"); //KHROKGNAR! Master say you paladin now! Master right. Master always right.
-			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_02"); //Us leaders of proud orc army now come ourselves for killing great paladin.
-			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_03"); //Hagen and his men be wiped out. Even you no can help them.
+			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_01"); //KHROKGNAR! Meister sagen, du jetzt Paladin. Meister hatte Recht. Meister hatte immer Recht.
+			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_02"); //Wir Anführer der stolzen Orkarmee nun selbst kommen, um großen Paladin zu töten.
+			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_03"); //Hagen werden untergehen mit seinen Mannen. Auch du nicht ihnen helfen können.
 			B_GivePlayerXP (XP_Ambient);
 		}
 		else if (AntiPaladinTalkcount == 1)
 		{
-			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_04"); //Master say orc leaders, bring head of great paladin. You now die by my hand. KHROKGNAR!
+			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_04"); //Meister sagen Orkanführer, bringen Kopf von großen Paladin. Du jetzt sterben durch meine Hand. KHROKGNAR!
 		}
 		else if (AntiPaladinTalkcount == 2)
 		{
-			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_05"); //Us orc leaders now come ourselves to kill you, paladin.
+			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_05"); //Wir Ork-Anführer jetzt selbst gekommen, dich zu töten, Paladin.
 		}
 		else 
 		{
-			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_06"); //KHROKGNAR! Us kill you, paladin.
+			AI_Output			(self ,other, "DIA_ORC_AntiPaladin_18_06"); //KHROKGNAR! Wir dich töten, Paladin.
 		};
 		AntiPaladinTalkcount = AntiPaladinTalkcount + 1;
 		TalkedTo_AntiPaladin = TRUE;

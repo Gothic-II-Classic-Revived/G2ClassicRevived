@@ -75,7 +75,7 @@ const int	REV_Value_1H_Sword_07				=	150;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_SICKLE_01 (C_Item)
 {	
-	name 				=	"Sickle";
+	name 				=	"Sichel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -100,7 +100,7 @@ INSTANCE ITMW_REVIVED_1H_SICKLE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_POKER_01 (C_Item)
 {	
-	name 				=	"Poker";
+	name 				=	"Schürhaken";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -125,7 +125,7 @@ INSTANCE ITMW_REVIVED_1H_POKER_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SCYTHE_01 (C_Item)
 {	
-	name 				=	"Scythe";
+	name 				=	"Sense";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -150,7 +150,7 @@ INSTANCE ITMW_REVIVED_1H_SCYTHE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_HATCHET_01 (C_Item)
 {	
-	name 				=	"Hand Axe";
+	name 				=	"Handaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -175,7 +175,7 @@ INSTANCE ITMW_REVIVED_1H_HATCHET_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SLEDGEHAMMER_01 (C_Item)
 {	
-	name 				=	"Smith's Hammer";
+	name 				=	"Schmiedehammer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -200,7 +200,7 @@ INSTANCE ITMW_REVIVED_1H_SLEDGEHAMMER_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_CLUB_01 (C_Item)
 {	
-	name 				=	"Club";
+	name 				=	"Knüppel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -225,7 +225,7 @@ INSTANCE ITMW_REVIVED_1H_CLUB_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_CLUB_02 (C_Item)
 {	
-	name 				=	"Cudgel";
+	name 				=	"Belegnagel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -250,7 +250,7 @@ INSTANCE ITMW_REVIVED_1H_CLUB_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_NAILMACE_01 (C_Item)
 {	
-	name 				=	"Nail Club";
+	name 				=	"Nagelkeule";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -275,7 +275,7 @@ INSTANCE ITMW_REVIVED_1H_NAILMACE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_WALKINGSTICK_01 (C_Item)
 {	
-	name 				=	"Walking Stick";
+	name 				=	"Gehstock";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -300,7 +300,7 @@ INSTANCE ITMW_REVIVED_1H_WALKINGSTICK_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_BRANCH_01 (C_Item)
 {	
-	name 				=	"Heavy branch";
+	name 				=	"Schwerer Ast";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -325,7 +325,7 @@ INSTANCE ITMW_REVIVED_1H_BRANCH_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_KNIFE_01 (C_Item)
 {	
-	name 				=	"Wolf Knife";
+	name 				=	"Wolfsmesser";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -350,7 +350,7 @@ INSTANCE ITMW_REVIVED_1H_KNIFE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_DAGGER_01 (C_Item)
 {	
-	name 				=	"Dagger";
+	name 				=	"Dolch";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -375,7 +375,7 @@ INSTANCE ITMW_REVIVED_1H_DAGGER_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_DAGGER_02 (C_Item)
 {	
-	name 				=	"Gold Dagger";
+	name 				=	"Golddolch";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -400,7 +400,7 @@ INSTANCE ITMW_REVIVED_1H_DAGGER_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_07 (C_Item)
 {	
-	name 				=	"Sword";
+	name 				=	"sword";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	

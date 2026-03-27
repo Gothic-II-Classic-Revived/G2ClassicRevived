@@ -31,7 +31,7 @@ INSTANCE DIA_Ruga_PICKPOCKET (C_INFO)
 	condition	= DIA_Ruga_PICKPOCKET_Condition;
 	information	= DIA_Ruga_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be easy to steal his key)";
+	description = "(Es wäre einfach seinen Schlüssel zu stehlen)";
 };                       
 
 FUNC INT DIA_Ruga_PICKPOCKET_Condition()
@@ -95,11 +95,11 @@ func int DIA_Ruga_Hallo_Condition ()
 };
 func void DIA_Ruga_Hallo_Info ()
 {
-	AI_Output (other, self, "DIA_Ruga_Hallo_15_00"); //What are you doing here?
-	AI_Output (self, other, "DIA_Ruga_Hallo_11_01"); //I'm training the boys to use a crossbow and help them become a little more dexterous.
+	AI_Output (other, self, "DIA_Ruga_Hallo_15_00"); //Was machst du hier?
+	AI_Output (self, other, "DIA_Ruga_Hallo_11_01"); //Ich trainiere die Jungs im Umgang mit der Armbrust und sorge dafür, dass sie ein bisschen beweglicher werden.
 	
 	Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher, "Ruga, the city guardsman, can help me improve my dexterity and teach me to use a crossbow. But for that I have to serve the King.");
+	B_LogEntry (Topic_CityTeacher, "Ruga, von der Stadtwache, kann mir helfen geschickter zu werden und mich im Umgang mit der Armbrust unterweisen. Allerdings muss ich dazu im Dienst des Königs stehen.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Train
@@ -111,7 +111,7 @@ instance DIA_Ruga_Train		(C_INFO)
 	condition	 = 	DIA_Ruga_Train_Condition;
 	information	 = 	DIA_Ruga_Train_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Could you train me?";
+	description	 = 	"Kannst du mich trainieren?";
 };
 
 func int DIA_Ruga_Train_Condition ()
@@ -123,15 +123,15 @@ func int DIA_Ruga_Train_Condition ()
 };
 func void DIA_Ruga_Train_Info ()
 {
-	AI_Output (other, self, "DIA_Ruga_Train_15_00"); //Could you train me?
+	AI_Output (other, self, "DIA_Ruga_Train_15_00"); //Kannst du mich trainieren?
 	
 	if (hero.guild == GIL_MIL)
 	|| (hero.guild == GIL_PAL)
 	|| (hero.guild == GIL_KDF)
 	{
-		AI_Output (self, other, "DIA_Ruga_Train_11_01"); //Sure thing. If you have enough experience, I can help you.
-		AI_Output (self, other, "DIA_Ruga_Train_11_02"); //Always remember, dexterity and long-range combat belong together like crossbow and bolt. The one...
-		AI_Output (other, self, "DIA_Ruga_Train_15_03"); //... isn't worth a thing without the other. I understand.
+		AI_Output (self, other, "DIA_Ruga_Train_11_01"); //Natürlich. Wenn du genügend Erfahrung mitbringst, kann ich dir helfen.
+		AI_Output (self, other, "DIA_Ruga_Train_11_02"); //Und vergiss nicht, Geschicklichkeit und Fernkampf gehören zusammen wie Armbrust und Bolzen. Das eine ...
+		AI_Output (other, self, "DIA_Ruga_Train_15_03"); //... ist ohne das andere nicht viel wert. Verstehe.
 	
 		Ruga_TeachCrossbow = TRUE;
 		Ruga_TeachDEX 	   = TRUE;
@@ -139,13 +139,13 @@ func void DIA_Ruga_Train_Info ()
 	else if ((hero.guild == GIL_SLD)
 	|| 		 (hero.guild == GIL_DJG))
 	{
-		AI_Output (self, other, "DIA_Ruga_Train_11_04"); //Get out of my sight, (contemptuously) mercenary.
+		AI_Output (self, other, "DIA_Ruga_Train_11_04"); //Mach, dass du wegkommst, (verächtlich) Söldner.
 		AI_StopProcessInfos (self);
 	}
 	else 
 	{	 
-		AI_Output (self, other, "DIA_Ruga_Train_11_05"); //No, I only train the men in the service of the King. Nobody else.
-		AI_Output (self, other, "DIA_Ruga_Train_11_06"); //But we can always use good people. So, if you want to joint the militia, go talk to Lord Andre.
+		AI_Output (self, other, "DIA_Ruga_Train_11_05"); //Nein, ich trainiere nur die Männer, die im Dienste des Königs stehen. Niemand sonst.
+		AI_Output (self, other, "DIA_Ruga_Train_11_06"); //Aber gute Leute können wir immer gebrauchen. Also, wenn du der Miliz beitreten willst, sprich mit Lord Andre.
 	};     
 };
 //**************************************
@@ -158,7 +158,7 @@ INSTANCE DIA_Ruga_Teach(C_INFO)
 	condition	= DIA_Ruga_Teach_Condition;
 	information	= DIA_Ruga_Teach_Info;
 	permanent	= TRUE;
-	description = "Show me how to use a crossbow.";
+	description = "Zeig mir den Umgang mit der Armbrust.";
 };                       
 //-------------------------------------
 var int DIA_Ruga_Teach_permanent;
@@ -224,7 +224,7 @@ instance DIA_Ruga_TEACHDEX		(C_INFO)
 	condition	 = 	DIA_Ruga_TEACHDEX_Condition;
 	information	 = 	DIA_Ruga_TEACHDEX_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to become more dexterous.";
+	description	 = 	"Ich will geschickter werden";
 };
 //------------------------------------
 var int DIA_Ruga_TEACHDEX_permanent;

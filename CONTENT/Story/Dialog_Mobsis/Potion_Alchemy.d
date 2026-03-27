@@ -3,7 +3,7 @@
 // POTIONALCHEMY_S1
 // --------------
 // Funktion wird durch Labortisch-Mobsi-Benutzung aufgerufen!
-// ben�tigtes Item daf�r: ItMi_Flask
+// bentigtes Item dafr: ItMi_Flask
 // *****************************************************
 FUNC VOID POTIONALCHEMY_S1 ()
 {
@@ -104,10 +104,10 @@ func void AlchemyMixMultiple_Input(var int dialogue, var int item_instance)
 	PotionMixMultiple = TRUE;
 
 	Info_AddChoice	(PotionDialogue, DIALOG_BACK, 		PC_PotionAlchemy_Stop_Info);
-	Info_AddChoice	(PotionDialogue,"Make 10",			AlchemyMixMultiple_Make10);
-	Info_AddChoice	(PotionDialogue,"Make 5",			AlchemyMixMultiple_Make5);
-	Info_AddChoice	(PotionDialogue,"Make 2",			AlchemyMixMultiple_Make2);
-	Info_AddChoice	(PotionDialogue,"Make 1",			AlchemyMixMultiple_Make1);
+	Info_AddChoice	(PotionDialogue,"10 herstellen",			AlchemyMixMultiple_Make10);
+	Info_AddChoice	(PotionDialogue,"5 herstellen",			AlchemyMixMultiple_Make5);
+	Info_AddChoice	(PotionDialogue,"2 herstellen",			AlchemyMixMultiple_Make2);
+	Info_AddChoice	(PotionDialogue,"1 herstellen",			AlchemyMixMultiple_Make1);
 };
 
 func void AlchemyMixMultiple_Logic(var int amount)
@@ -229,10 +229,10 @@ func void AlchemyCraftMultiple_Input(var int dialogue, var int item_instance)
 	PotionMakeMultiple = TRUE;
 
 	Info_AddChoice	(PotionDialogue, DIALOG_BACK, 		PC_PotionAlchemy_Stop_Info);
-	Info_AddChoice	(PotionDialogue,"Make 10",			AlchemyCraftMultiple_Make10);
-	Info_AddChoice	(PotionDialogue,"Make 5",			AlchemyCraftMultiple_Make5);
-	Info_AddChoice	(PotionDialogue,"Make 2",			AlchemyCraftMultiple_Make2);
-	Info_AddChoice	(PotionDialogue,"Make 1",			AlchemyCraftMultiple_Make1);
+	Info_AddChoice	(PotionDialogue,"10 herstellen",			AlchemyCraftMultiple_Make10);
+	Info_AddChoice	(PotionDialogue,"5 herstellen",			AlchemyCraftMultiple_Make5);
+	Info_AddChoice	(PotionDialogue,"2 herstellen",			AlchemyCraftMultiple_Make2);
+	Info_AddChoice	(PotionDialogue,"1 herstellen",			AlchemyCraftMultiple_Make1);
 };
 
 func void AlchemyCraftMultiple_Logic(var int amount)
@@ -1159,7 +1159,7 @@ INSTANCE PC_Charge_InnosEye (C_INFO)
 	condition		= PC_Charge_InnosEye_Condition;
 	information		= PC_Charge_InnosEye_Info;
 	permanent		= TRUE;
-	description		= "Recharge the Eye of Innos"; 
+	description		= "Das Auge Innos wieder aufladen."; 
 };
 FUNC INT PC_Charge_InnosEye_Condition()
 {	
@@ -1231,7 +1231,7 @@ INSTANCE PC_Health_Start (C_Info)
 	condition		= PC_Health_Start_Condition;
 	information		= PC_Health_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew healing potions"; 
+	description		= "Heiltränke brauen"; 
 };
 
 FUNC INT PC_Health_Start_Condition ()
@@ -1288,7 +1288,7 @@ INSTANCE PC_ITPO_REVIVED_HEALTH_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_HEALTH_01_Condition;
 	information		= PC_ITPO_REVIVED_HEALTH_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of healing (2 healing plants, 1 meadow knotweed)"; 
+	description		= "Essenz der Heilung (2 Heilplanzen, 1 Feldknöterich)"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_HEALTH_01_Condition()
@@ -1314,7 +1314,7 @@ INSTANCE PC_ITPO_REVIVED_HEALTH_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_HEALTH_02_Condition;
 	information		= PC_ITPO_REVIVED_HEALTH_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of healing (2 healing herbs, 1 meadow knotweed)"; 
+	description		= "Extrakt der Heilung (2 Heilkräuter, 1 Feldknöterich)"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_HEALTH_02_Condition()
@@ -1339,7 +1339,7 @@ INSTANCE PC_ITPO_REVIVED_HEALTH_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_HEALTH_03_Condition;
 	information		= PC_ITPO_REVIVED_HEALTH_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of healing (2 healing roots, 1 meadow knotweed)"; 
+	description		= "Elixier der Heilung (2 Heilwurzeln, 1 Feldknöterich)"; 
 };
 FUNC INT PC_ITPO_REVIVED_HEALTH_03_Condition()
 {	
@@ -1363,7 +1363,7 @@ INSTANCE PC_ItPo_Health_04 (C_INFO)
 	condition		= PC_ItPo_Health_04_Condition;
 	information		= PC_ItPo_Health_04_Info;
 	permanent		= TRUE;
-	description		= "Pure life energy (3 essences of healing, 1 meadow knotweed)"; 
+	description		= "Reine Lebensenergie (3 Heilessenzen, 1 Feldknöterich)"; 
 };
 FUNC INT PC_ItPo_Health_04_Condition()
 {	
@@ -1413,7 +1413,7 @@ INSTANCE PC_Mana_Start (C_Info)
 	condition		= PC_Mana_Start_Condition;
 	information		= PC_Mana_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew mana potions"; 
+	description		= "Manatränke brauen"; 
 };
 
 FUNC INT PC_Mana_Start_Condition ()
@@ -1470,7 +1470,7 @@ INSTANCE PC_ITPO_REVIVED_MANA_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_MANA_01_Condition;
 	information		= PC_ITPO_REVIVED_MANA_01_Info;
 	permanent		= TRUE;
-	description		= "Mana essence (2 fire nettles, 1 meadow knotweed)"; 
+	description		= "Mana Essenz (2 Feuernesseln, 1 Feldknöterich)"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_MANA_01_Condition()
@@ -1496,7 +1496,7 @@ INSTANCE PC_ITPO_REVIVED_MANA_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_MANA_02_Condition;
 	information		= PC_ITPO_REVIVED_MANA_02_Info;
 	permanent		= TRUE;
-	description		= "Mana extract (2 fireweeds, 1 meadow knotweed) "; 
+	description		= "Mana Extrakt (2 Feuerkraut, 1 Feldknöterich)"; 
 };
 FUNC INT PC_ITPO_REVIVED_MANA_02_Condition()
 {	
@@ -1520,7 +1520,7 @@ INSTANCE PC_ITPO_REVIVED_MANA_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_MANA_03_Condition;
 	information		= PC_ITPO_REVIVED_MANA_03_Info;
 	permanent		= TRUE;
-	description		= "Mana elixir (2 fire roots, 1 meadow knotweed)"; 
+	description		= "Mana Elixier (2 Feuerwurzeln, 1 Feldknöterich)"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_MANA_03_Condition()
@@ -1545,7 +1545,7 @@ INSTANCE PC_ItPo_Mana_04 (C_INFO)
 	condition		= PC_ItPo_Mana_04_Condition;
 	information		= PC_ItPo_Mana_04_Info;
 	permanent		= TRUE;
-	description		= "Pure mana (3 Mana essences, 1 meadow knotweed)"; 
+	description		= "Reines Mana (3 Manaessenzen, 1 Feldknöterich)"; 
 };
 
 FUNC INT PC_ItPo_Mana_04_Condition()
@@ -1596,7 +1596,7 @@ INSTANCE PC_Special_Start (C_Info)
 	condition		= PC_Special_Start_Condition;
 	information		= PC_Special_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew special potions"; 
+	description		= "Spezielle Tränke brauen"; 
 };
 
 FUNC INT PC_Special_Start_Condition ()
@@ -1657,7 +1657,7 @@ INSTANCE PC_ItPo_Addon_Geist (C_INFO)
 	condition		= PC_ItPo_Addon_Geist_Condition;
 	information		= PC_ItPo_Addon_Geist_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Mental Alteration (2 stings, 1 Potion of Power, 1 pack of red peppers)"; 
+	description		= "Elixier der mentalen Veränderung (2 Stacheln, 1 Trank der Macht, 1 Packen rote Paprika)"; 
 };
 
 FUNC INT PC_ItPo_Addon_Geist_Condition()
@@ -1684,7 +1684,7 @@ INSTANCE PC_ItPo_MegaDrink (C_INFO)
 	condition		= PC_ItPo_MegaDrink_Condition;
 	information		= PC_ItPo_MegaDrink_Info;
 	permanent		= TRUE;
-	description		= "Embarla Firgasto (10 dragon eggs, 1 black pearl, 1 sulfur)"; 
+	description		= "Embarla Firgasto (10 Dracheneier, 1 schwarze Perle, 1 Schwefel)"; 
 };
 
 FUNC INT PC_ItPo_MegaDrink_Condition()
@@ -1714,7 +1714,7 @@ INSTANCE PC_ITPO_DRAGONDRINK (C_INFO)
 	condition		= PC_ITPO_DRAGONDRINK_Condition;
 	information		= PC_ITPO_DRAGONDRINK_Info;
 	permanent		= TRUE;
-	description		= "Dragon egg potion (1 dragon egg, 1 black pearl, 1 sulfur)"; 
+	description		= "Drachenei-Trank (1 Drachenei, 1 schwarze Perle, 1 Schwefel)"; 
 };
 
 FUNC INT PC_ITPO_DRAGONDRINK_Condition()
@@ -1741,7 +1741,7 @@ INSTANCE PC_ITPO_PERM_MASTER_01 (C_INFO)
 	condition		= PC_ITPO_PERM_MASTER_01_Condition;
 	information		= PC_ITPO_PERM_MASTER_01_Info;
 	permanent		= TRUE;
-	description		= "Potion of Power"; 
+	description		= "Trank der Macht"; 
 };
 
 FUNC INT PC_ITPO_PERM_MASTER_01_Condition()
@@ -1766,7 +1766,7 @@ INSTANCE PC_ITPO_PERM_MASTER_02 (C_INFO)
 	condition		= PC_ITPO_PERM_MASTER_02_Condition;
 	information		= PC_ITPO_PERM_MASTER_02_Info;
 	permanent		= TRUE;
-	description		= "Potion of Supremacy"; 
+	description		= "Trank der Herrschaft"; 
 };
 
 FUNC INT PC_ITPO_PERM_MASTER_02_Condition()
@@ -1791,7 +1791,7 @@ INSTANCE PC_ITPO_PERM_MASTER_03 (C_INFO)
 	condition		= PC_ITPO_PERM_MASTER_03_Condition;
 	information		= PC_ITPO_PERM_MASTER_03_Info;
 	permanent		= TRUE;
-	description		= "Potion of Godhood"; 
+	description		= "Trank der Göttlichkeit"; 
 };
 
 FUNC INT PC_ITPO_PERM_MASTER_03_Condition()
@@ -1826,7 +1826,7 @@ INSTANCE PC_SPECIAL_HEALTH_Start (C_Info)
 	condition		= PC_SPECIAL_HEALTH_Start_Condition;
 	information		= PC_SPECIAL_HEALTH_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew permanent health potions"; 
+	description		= "Permanente Lebenstränke brauen"; 
 };
 
 FUNC INT PC_SPECIAL_HEALTH_Start_Condition ()
@@ -1883,7 +1883,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_HEALTH_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_HEALTH_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_HEALTH_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of Life"; 
+	description		= "Essenz des Lebens"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_HEALTH_01_Condition()
@@ -1908,7 +1908,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_HEALTH_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_HEALTH_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_HEALTH_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of Life"; 
+	description		= "Extrakt des Lebens"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_HEALTH_02_Condition()
@@ -1933,7 +1933,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_HEALTH_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_HEALTH_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_HEALTH_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Life"; 
+	description		= "Elixier des Lebens"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_HEALTH_03_Condition()
@@ -1963,7 +1963,7 @@ INSTANCE PC_SPECIAL_MANA_Start (C_Info)
 	condition		= PC_SPECIAL_MANA_Start_Condition;
 	information		= PC_SPECIAL_MANA_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew permanent mana potions"; 
+	description		= "Permanente Manatränke brauen"; 
 };
 
 FUNC INT PC_SPECIAL_MANA_Start_Condition ()
@@ -2020,7 +2020,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_MANA_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_MANA_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_MANA_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of the Spirit"; 
+	description		= "Essenz des Geistes"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_MANA_01_Condition()
@@ -2045,7 +2045,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_MANA_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_MANA_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_MANA_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of the Spirit"; 
+	description		= "Extrakt des Geistes"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_MANA_02_Condition()
@@ -2070,7 +2070,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_MANA_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_MANA_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_MANA_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of the Spirit"; 
+	description		= "Elixier des Geistes"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_MANA_03_Condition()
@@ -2100,7 +2100,7 @@ INSTANCE PC_SPECIAL_STR_Start (C_Info)
 	condition		= PC_SPECIAL_STR_Start_Condition;
 	information		= PC_SPECIAL_STR_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew permanent strength potions"; 
+	description		= "Permanente Stärketränke brauen"; 
 };
 
 FUNC INT PC_SPECIAL_STR_Start_Condition ()
@@ -2157,7 +2157,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_STR_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_STR_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_STR_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of Strength"; 
+	description		= "Essenz der Stärke"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_STR_01_Condition()
@@ -2182,7 +2182,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_STR_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_STR_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_STR_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of Strength"; 
+	description		= "Extrakt der Stärke"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_STR_02_Condition()
@@ -2207,7 +2207,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_STR_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_STR_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_STR_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Strength"; 
+	description		= "Elixier der Stärke"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_STR_03_Condition()
@@ -2237,7 +2237,7 @@ INSTANCE PC_SPECIAL_DEX_Start (C_Info)
 	condition		= PC_SPECIAL_DEX_Start_Condition;
 	information		= PC_SPECIAL_DEX_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew permanent dexterity potions"; 
+	description		= "Permanente Geschicklichkeitstränke brauen"; 
 };
 
 FUNC INT PC_SPECIAL_DEX_Start_Condition ()
@@ -2294,7 +2294,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_DEX_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_DEX_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_DEX_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of Dexterity"; 
+	description		= "Essenz der Geschicklichkeit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_DEX_01_Condition()
@@ -2319,7 +2319,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_DEX_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_DEX_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_DEX_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of Dexterity"; 
+	description		= "Extrakt der Geschicklichkeit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_DEX_02_Condition()
@@ -2344,7 +2344,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_DEX_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_DEX_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_DEX_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Dexterity"; 
+	description		= "Elixier der Geschicklichkeit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_DEX_03_Condition()
@@ -2374,7 +2374,7 @@ INSTANCE PC_SPECIAL_SPEED_Start (C_Info)
 	condition		= PC_SPECIAL_SPEED_Start_Condition;
 	information		= PC_SPECIAL_SPEED_Start_Info;
 	permanent		= TRUE;
-	description		= "Brew speed potions"; 
+	description		= "Geschwindigkeitstränke brauen"; 
 };
 
 FUNC INT PC_SPECIAL_SPEED_Start_Condition ()
@@ -2431,7 +2431,7 @@ INSTANCE PC_ITPO_REVIVED_SPEED_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_SPEED_01_Condition;
 	information		= PC_ITPO_REVIVED_SPEED_01_Info;
 	permanent		= TRUE;
-	description		= "Potion of Swiftness"; 
+	description		= "Trank der Geschwindigkeit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_SPEED_01_Condition()
@@ -2456,7 +2456,7 @@ INSTANCE PC_ITPO_REVIVED_SPEED_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_SPEED_02_Condition;
 	information		= PC_ITPO_REVIVED_SPEED_02_Info;
 	permanent		= TRUE;
-	description		= "Potion of Velocity"; 
+	description		= "Trank der Schnelligkeit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_SPEED_02_Condition()
@@ -2481,7 +2481,7 @@ INSTANCE PC_ITPO_REVIVED_SPEED_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_SPEED_03_Condition;
 	information		= PC_ITPO_REVIVED_SPEED_03_Info;
 	permanent		= TRUE;
-	description		= "Potion of Haste"; 
+	description		= "Trank der Eile"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_SPEED_03_Condition()
@@ -2518,7 +2518,7 @@ INSTANCE PC_Booze_Start (C_Info)
 	condition		= PC_Booze_Start_Condition;
 	information		= PC_Booze_Start_Info;
 	permanent		= TRUE;
-	description		= "Distill booze"; 
+	description		= "Schnaps brennen"; 
 };
 
 FUNC INT PC_Booze_Start_Condition ()
@@ -2601,7 +2601,7 @@ INSTANCE PC_Booze_Schlaf (C_Info)
 	condition		= PC_Booze_Schlaf_Condition;
 	information		= PC_Booze_Schlaf_Info;
 	permanent		= TRUE;
-	description		= "Lou's Double Hammer"; 
+	description		= "Lou's Doppelhammer"; 
 };
 
 FUNC INT PC_Booze_Schlaf_Condition ()
@@ -2627,7 +2627,7 @@ INSTANCE PC_Booze_SchnellerHering (C_Info)
 	condition		= PC_Booze_SchnellerHering_Condition;
 	information		= PC_Booze_SchnellerHering_Info;
 	permanent		= TRUE;
-	description		= "Hasty Herring"; 
+	description		= "Schneller Hering"; 
 };
 
 FUNC INT PC_Booze_SchnellerHering_Condition ()
@@ -2653,7 +2653,7 @@ INSTANCE PC_Booze_TurnipBooze (C_Info)
 	condition		= PC_Booze_TurnipBooze_Condition;
 	information		= PC_Booze_TurnipBooze_Info;
 	permanent		= TRUE;
-	description		= "Turnip Booze"; 
+	description		= "Rübenlikör"; 
 };
 
 FUNC INT PC_Booze_TurnipBooze_Condition ()
@@ -2679,7 +2679,7 @@ INSTANCE PC_Booze_VinoBooze (C_Info)
 	condition		= PC_Booze_VinoBooze_Condition;
 	information		= PC_Booze_VinoBooze_Info;
 	permanent		= TRUE;
-	description		= "Vino's Special"; 
+	description		= "Vinos Spezialität"; 
 };
 
 FUNC INT PC_Booze_VinoBooze_Condition ()
@@ -2705,7 +2705,7 @@ INSTANCE PC_BOOZE_MonsterDrink (C_Info)
 	condition		= PC_BOOZE_MonsterDrink_Condition;
 	information		= PC_BOOZE_MonsterDrink_Info;
 	permanent		= TRUE;
-	description		= "Monster Drink"; 
+	description		= "Bestiengetränk"; 
 };
 
 FUNC INT PC_BOOZE_MonsterDrink_Condition ()
@@ -2731,7 +2731,7 @@ INSTANCE PC_Booze_MageWine (C_Info)
 	condition		= PC_Booze_MageWine_Condition;
 	information		= PC_Booze_MageWine_Info;
 	permanent		= TRUE;
-	description		= "Monastery Wine"; 
+	description		= "Klosterwein"; 
 };
 
 FUNC INT PC_Booze_MageWine_Condition ()
@@ -2757,7 +2757,7 @@ INSTANCE PC_Booze_RiceSchnaps (C_Info)
 	condition		= PC_Booze_RiceSchnaps_Condition;
 	information		= PC_Booze_RiceSchnaps_Info;
 	permanent		= TRUE;
-	description		= "Rice Schnapps"; 
+	description		= "Reisschnaps"; 
 };
 
 FUNC INT PC_Booze_RiceSchnaps_Condition ()
@@ -2783,7 +2783,7 @@ INSTANCE PC_Booze_Mead (C_Info)
 	condition		= PC_Booze_Mead_Condition;
 	information		= PC_Booze_Mead_Info;
 	permanent		= TRUE;
-	description		= "Mead"; 
+	description		= "Met"; 
 };
 
 FUNC INT PC_Booze_Mead_Condition ()
@@ -2818,7 +2818,7 @@ INSTANCE PC_Tabak_Start (C_Info)
 	condition		= PC_Tabak_Start_Condition;
 	information		= PC_Tabak_Start_Info;
 	permanent		= TRUE;
-	description		= "Blend tobacco and roll reefers"; 
+	description		= "Tabak mischen und Stengel drehen"; 
 };
 
 FUNC INT PC_Tabak_Start_Condition ()
@@ -2878,7 +2878,7 @@ INSTANCE PC_ITMI_REVIVED_JOINT_REGULAR (C_INFO)
 	condition		= PC_ITMI_REVIVED_JOINT_REGULAR_Condition;
 	information		= PC_ITMI_REVIVED_JOINT_REGULAR_Info;
 	permanent		= TRUE;
-	description		= "Joint"; 
+	description		= "Stängel"; 
 };
 
 FUNC INT PC_ITMI_REVIVED_JOINT_REGULAR_Condition()
@@ -2905,7 +2905,7 @@ INSTANCE PC_ItMi_Addon_Joint_01 (C_INFO)
 	condition		= PC_ItMi_Addon_Joint_01_Condition;
 	information		= PC_ItMi_Addon_Joint_01_Info;
 	permanent		= TRUE;
-	description		= "Green Novice"; 
+	description		= "Grüner Novize"; 
 };
 
 FUNC INT PC_ItMi_Addon_Joint_01_Condition()
@@ -2931,7 +2931,7 @@ INSTANCE PC_Weed_NorthernDark (C_INFO)
 	condition		= PC_Weed_NorthernDark_Condition;
 	information		= PC_Weed_NorthernDark_Info;
 	permanent		= TRUE;
-	description		= "Northern Dark"; 
+	description		= "Schwarzer Weiser"; 
 };
 
 FUNC INT PC_Weed_NorthernDark_Condition()
@@ -2957,7 +2957,7 @@ INSTANCE PC_Weed_Dreamcall (C_INFO)
 	condition		= PC_Weed_Dreamcall_Condition;
 	information		= PC_Weed_Dreamcall_Info;
 	permanent		= TRUE;
-	description		= "Dreamcall"; 
+	description		= "Traumruf"; 
 };
 
 FUNC INT PC_Weed_Dreamcall_Condition()
@@ -2983,7 +2983,7 @@ INSTANCE PC_Weed_DreamcallStrong (C_INFO)
 	condition		= PC_Weed_DreamcallStrong_Condition;
 	information		= PC_Weed_DreamcallStrong_Info;
 	permanent		= TRUE;
-	description		= "Stronger Dreamcall"; 
+	description		= "Stärkerer Traumruf"; 
 };
 
 FUNC INT PC_Weed_DreamcallStrong_Condition()
@@ -3012,7 +3012,7 @@ INSTANCE PC_ItMi_Tabak (C_INFO)
 	condition		= PC_ItMi_Tabak_Condition;
 	information		= PC_ItMi_Tabak_Info;
 	permanent		= TRUE;
-	description		= "Blend tobacco..."; 
+	description		= "Tabak mischen..."; 
 };
 
 FUNC INT PC_ItMi_Tabak_Condition()
@@ -3035,19 +3035,19 @@ FUNC VOID PC_ItMi_Tabak_Info ()
 	
 	if (Npc_HasItems (hero, ItPl_Mushroom_01) >=1)
 	{
-		Info_AddChoice 	(PC_ItMi_Tabak,"...with dark mushroom",PC_ItMi_Tabak_Mushroom_01);
+		Info_AddChoice 	(PC_ItMi_Tabak,"...mit Dunkelpilz",PC_ItMi_Tabak_Mushroom_01);
 	};
 	if (Npc_HasItems (hero, ItFo_Honey) >=1)
 	{
-		Info_AddChoice 	(PC_ItMi_Tabak,"...with honey",PC_ItMi_Tabak_Honey);
+		Info_AddChoice 	(PC_ItMi_Tabak,"...mit Honig",PC_ItMi_Tabak_Honey);
 	};
 	if (Npc_HasItems (hero, ItPl_SwampHerb) >=1)
 	{
-		Info_AddChoice 	(PC_ItMi_Tabak,"...with swampweed",PC_ItMi_Tabak_Swampherb);
+		Info_AddChoice 	(PC_ItMi_Tabak,"...mit Sumpfkraut",PC_ItMi_Tabak_Swampherb);
 	};
 	if (Npc_HasItems (hero, ITFO_REVIVED_APPLE_01) >=1)
 	{
-		Info_AddChoice 	(PC_ItMi_Tabak,"...with sour apple",PC_ItMi_Tabak_AppleDouble);
+		Info_AddChoice 	(PC_ItMi_Tabak,"...mit saurem Apfel",PC_ItMi_Tabak_AppleDouble);
 	};	
 
 	TabakBlend = TRUE;
@@ -3066,7 +3066,7 @@ FUNC VOID PC_ItMi_Tabak_AppleDouble()
 		PLAYER_TALENT_TOBACCO[TOBACCO_AppleDouble] = TRUE;
 		
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_AppleDouble] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Double apple tobacco, which can be used to roll stronger apple-taste reefers.\nRecipes:\n\n'Stronger apple Joint': 1 Swampweed and 1 Double apple tobacco.");
+		Log_AddEntry(TOPIC_Tobacco,"Doppelapfel-Tabak, der zum Drehen von Stängeln mit stärkerem Apfelgeschmack verwendet werden kann. Rezepte: 'Stärkerer Apfelstängel': 1 Sumpfkraut und 1 Doppelapfel-Tabak.");
 	};
 	
 	//B_ENDPRODUCTIONDIALOG ();		
@@ -3080,7 +3080,7 @@ FUNC VOID PC_ItMi_Tabak_Honey()
 		PLAYER_TALENT_TOBACCO[TOBACCO_Honey] = TRUE;
 
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Honey] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Honey tobacco, which can be used to roll honey-taste reefers.\nRecipes:\n\n'Honey Joint': 1 Swampweed and 1 Honey tobacco.");
+		Log_AddEntry(TOPIC_Tobacco,"Honigtabak, der zum Drehen von Stängeln mit Honiggeschmack verwendet werden kann. Rezepte: 'Honigstängel': 1 Sumpfkraut und 1 Honigtabak.");
 	};
 	
 	//B_ENDPRODUCTIONDIALOG ();		
@@ -3098,7 +3098,7 @@ FUNC VOID PC_ItMi_Tabak_Swampherb()
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_NorthernDark] = TRUE;
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Dreamcall] = TRUE;
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_DreamcallStrong] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Swampweed tobacco, which can be used to roll swampweed reefers.\nRecipes:\n\n'Joint': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Green Novice': 2 Swampweed, 1 Meadow Knotweed and 1 Swampweed tobacco.\n\n'Northern Dark': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Prepared Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.");
+		Log_AddEntry(TOPIC_Tobacco,"Sumpfkrauttabak, der zum Drehen von Sumpfkrautstängel verwendet werden kann. Rezepte: 'Stängel': 1 Sumpfkraut, 1 Sumpfkrauttabak und 1 Dunkelpilz. n\n'Grüner Novize': 2 Sumpfkräuter, 1 Feldknöterich und 1 Sumpfkrauttabak.\n\n'Schwarzer Weiser': 1 Sumpfkraut, 1 Sumpfkrauttabak und 1 Dunkelpilz.\n\n'Traumruf': 1 Sumpfkraut, 1 Sumpfkrauttabak und 1 Dunkelpilz.\ n\n'Präperierter Traumruf': 1 Sumpfkraut, 1 Sumpfkrauttabak und 1 Dunkelpilz.");
 	};
 	
 	//B_ENDPRODUCTIONDIALOG ();		
@@ -3112,7 +3112,7 @@ FUNC VOID PC_ItMi_Tabak_Mushroom_01()
 		PLAYER_TALENT_TOBACCO[TOBACCO_Mushroom] = TRUE;
 		
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Mushroom] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Mushroom tobacco, which can be used to roll mushroom-taste reefers.\nRecipes:\n\n'Mushroom Joint': 1 Swampweed and 1 Mushroom tobacco."); 
+		Log_AddEntry(TOPIC_Tobacco,"Pilztabak, der zum Drehen von Stängeln mit Pilzgeschmack verwendet werden kann.\nRezepte:\n\n'Pilzstängel': 1 Sumpfkraut und 1 Pilztabak."); 
 	};
 	
 	//B_ENDPRODUCTIONDIALOG ();		
@@ -3136,7 +3136,7 @@ INSTANCE PC_Mixing_Start (C_Info)
 	condition		= PC_Mixing_Start_Condition;
 	information		= PC_Mixing_Start_Info;
 	permanent		= TRUE;
-	description		= "Mix weaker potions into higher stages"; 
+	description		= "Mische schwächere Tränke zu höheren Stufen."; 
 };
 
 FUNC INT PC_Mixing_Start_Condition ()
@@ -3197,7 +3197,7 @@ INSTANCE PC_Mixing_Health_02 (C_Info)
 	condition		= PC_Mixing_Health_02_Condition;
 	information		= PC_Mixing_Health_02_Info;
 	permanent		= TRUE;
-	description		= "Mix Essence of Life (x2) into Extract of Life (x1)"; 
+	description		= "Mische Essenz des Lebens (x2) zu Extrakt des Lebens (x1)."; 
 };
 
 FUNC INT PC_Mixing_Health_02_Condition ()
@@ -3221,7 +3221,7 @@ INSTANCE PC_Mixing_Health_03 (C_Info)
 	condition		= PC_Mixing_Health_03_Condition;
 	information		= PC_Mixing_Health_03_Info;
 	permanent		= TRUE;
-	description		= "Mix Extract of Life (x2) into Elixir of Life (x1)"; 
+	description		= "Mische Extrakt des Lebens (x2) zu Elixier des Lebens (x1)."; 
 };
 
 FUNC INT PC_Mixing_Health_03_Condition ()
@@ -3247,7 +3247,7 @@ INSTANCE PC_Mixing_Mana_02 (C_Info)
 	condition		= PC_Mixing_Mana_02_Condition;
 	information		= PC_Mixing_Mana_02_Info;
 	permanent		= TRUE;
-	description		= "Mix Essence of Magic Energy (x2) into Extract of Magic Energy (x1)"; 
+	description		= "Mische Essenz der magischen Kraft (x2) zu Extrakt der magischen Kraft (x1)."; 
 };
 
 FUNC INT PC_Mixing_Mana_02_Condition ()
@@ -3271,7 +3271,7 @@ INSTANCE PC_Mixing_Mana_03 (C_Info)
 	condition		= PC_Mixing_Mana_03_Condition;
 	information		= PC_Mixing_Mana_03_Info;
 	permanent		= TRUE;
-	description		= "Mix Extract of Magic Energy (x2) into Elixir of Magic Energy (x1)"; 
+	description		= "Mische Extrakt der magischen Kraft (x2) mit Elixier der magischen Kraft (x1)"; 
 };
 
 FUNC INT PC_Mixing_Mana_03_Condition ()
@@ -3297,7 +3297,7 @@ INSTANCE PC_Mixing_Speed_02 (C_Info)
 	condition		= PC_Mixing_Speed_02_Condition;
 	information		= PC_Mixing_Speed_02_Info;
 	permanent		= TRUE;
-	description		= "Mix Potion of Swiftness (x2) into Potion of Velocity (x1)"; 
+	description		= "Mische Trank der Schnelligkeit (x2) mit Trank der Geschwindigkeit (x1)"; 
 };
 
 FUNC INT PC_Mixing_Speed_02_Condition ()
@@ -3321,7 +3321,7 @@ INSTANCE PC_Mixing_Speed_03 (C_Info)
 	condition		= PC_Mixing_Speed_03_Condition;
 	information		= PC_Mixing_Speed_03_Info;
 	permanent		= TRUE;
-	description		= "Mix Potion of Velocity (x2) into Potion of Haste (x1)"; 
+	description		= "Mische Trank der Geschwindigkeit (x2) mit Trank der Eile (x1)"; 
 };
 
 FUNC INT PC_Mixing_Speed_03_Condition ()

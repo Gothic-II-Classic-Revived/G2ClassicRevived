@@ -68,7 +68,7 @@ instance DIA_Kardif_Hi		(C_INFO)
 	condition	 = 	DIA_Kardif_Hi_Condition;
 	information	 = 	DIA_Kardif_Hi_Info;
 	permanent    =  FALSE;
-	description	 = 	"What's up?";
+	description	 = 	"Wie steht's?";
 };
 func int DIA_Kardif_Hi_Condition ()
 {
@@ -79,11 +79,11 @@ func int DIA_Kardif_Hi_Condition ()
 };
 func void DIA_Kardif_Hi_Info ()
 {
-	AI_Output (other, self, "DIA_Kardif_Hi_15_00"); //How are things?
-	AI_Output (self, other, "DIA_Kardif_Hi_14_01"); //If you want something to drink, you'll have to order it.
+	AI_Output (other, self, "DIA_Kardif_Hi_15_00"); //Wie sieht's aus?
+	AI_Output (self, other, "DIA_Kardif_Hi_14_01"); //Wenn du was trinken willst, dann bestell dir was.
 	
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-	B_LogEntry (Topic_CityTrader,"Kardif sells drinks in the dockside pub.");
+	B_LogEntry (Topic_CityTrader,"Bei Kardif in der Hafenkneipe gibt's was zu trinken.");
 };	
 	
 ///////////////////////////////////////////////////////////////////////
@@ -96,7 +96,7 @@ instance DIA_Kardif_Hallo		(C_INFO)
 	condition	 = 	DIA_Kardif_Hallo_Condition;
 	information	 = 	DIA_Kardif_Hallo_Info;
 	permanent    =  FALSE;
-	description	 = 	"I bet you overhear a lot of things...";
+	description	 = 	"Du kriegst doch bestimmt 'ne Menge mit ...";
 };
 func int DIA_Kardif_Hallo_Condition ()
 {	
@@ -108,74 +108,74 @@ func int DIA_Kardif_Hallo_Condition ()
 };
 func void DIA_Kardif_Hallo_Info ()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_15_00"); //I bet you overhear a lot of things...
-	AI_Output (self, other, "DIA_Kardif_Hallo_14_01"); //So, what's that to you?
-	AI_Output (other, self, "DIA_Kardif_Hallo_15_02"); //I've always got an open ear for news.
-	AI_Output (self, other, "DIA_Kardif_Hallo_14_03"); //Have you got your purse open, then?
-	AI_Output (self, other, "DIA_Kardif_Hallo_14_04"); //Every piece of information I give you will cost 10 gold pieces.
+	AI_Output (other, self, "DIA_Kardif_Hallo_15_00"); //Du kriegst doch bestimmt 'ne Menge mit ...
+	AI_Output (self, other, "DIA_Kardif_Hallo_14_01"); //Und, was geht dich das an?
+	AI_Output (other, self, "DIA_Kardif_Hallo_15_02"); //Ich habe immer ein offenes Ohr für Neuigkeiten.
+	AI_Output (self, other, "DIA_Kardif_Hallo_14_03"); //Hast du auch einen offenen Geldbeutel?
+	AI_Output (self, other, "DIA_Kardif_Hallo_14_04"); //Jede Information, die ich dir gebe, kostet dich 10 Goldstücke.
 	
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-	B_LogEntry (Topic_CityTrader,"Kardif, the landlord of the harbor pub, trades information.");
+	B_LogEntry (Topic_CityTrader,"Kardif, der Wirt der Hafenkneipe handelt mit Informationen.");
 	
 	Info_ClearChoices (DIA_Kardif_Hallo);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"I'll give you no more than 5 for your info.",DIA_Kardif_Hallo_Angebot);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"Forget it - I'll get my info elsewhere.",DIA_Kardif_Hallo_Hart);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"All right, agreed.",DIA_Kardif_Hallo_Zehn);	
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Ich gebe dir höchstens 5 für deine Infos.",DIA_Kardif_Hallo_Angebot);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Vergiss es - ich hole mir meine Infos woanders.",DIA_Kardif_Hallo_Hart);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Okay, einverstanden.",DIA_Kardif_Hallo_Zehn);	
 };
 FUNC VOID DIA_Kardif_Hallo_Zehn()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_Zehn_15_00"); //All right, agreed.
-	AI_Output (self, other, "DIA_Kardif_Hallo_Zehn_14_01"); //You struck a good bargain (grins). I'm always at your service.
+	AI_Output (other, self, "DIA_Kardif_Hallo_Zehn_15_00"); //Okay, einverstanden.
+	AI_Output (self, other, "DIA_Kardif_Hallo_Zehn_14_01"); //Du hast ein gutes Geschäft gemacht (grinst). Ich stehe dir jederzeit zur Verfügung.
 	
 	Kardif_Deal = 10;
 	Info_ClearChoices (DIA_Kardif_Hallo);
 };
 FUNC VOID DIA_Kardif_Hallo_Angebot()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_Angebot_15_00"); //I'll give you no more than 5 for your information.
-	AI_Output (self, other, "DIA_Kardif_Hallo_Angebot_14_01"); //What, 5 gold pieces? Are you trying to ruin me? (thinks briefly) - Let's make it 7.
+	AI_Output (other, self, "DIA_Kardif_Hallo_Angebot_15_00"); //Ich gebe dir höchstens 5 für deine Informationen.
+	AI_Output (self, other, "DIA_Kardif_Hallo_Angebot_14_01"); //Was, 5 Goldstücke? Willst du mich ruinieren? (überlegt kurz) - sagen wir 7.
 	
 	Info_ClearChoices (DIA_Kardif_Hallo);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"No, it doesn't work that way. Let's say 6!",DIA_Kardif_Hallo_KeinDeal);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"OK, 7 gold pieces sounds fair.",DIA_Kardif_Hallo_Sieben);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Nein, so läuft das nicht. Sagen wir 6!",DIA_Kardif_Hallo_KeinDeal);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Okay, 7 Goldstücke klingt gut.",DIA_Kardif_Hallo_Sieben);
 };
 FUNC VOID DIA_Kardif_Hallo_Hart()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_Hart_15_00"); //Forget it - I'll get my information elsewhere.
-	AI_Output (self, other, "DIA_Kardif_Hallo_Hart_14_01"); //All right, all right... I'll go down to 7.
+	AI_Output (other, self, "DIA_Kardif_Hallo_Hart_15_00"); //Vergiss es - ich hole mir meine Informationen woanders.
+	AI_Output (self, other, "DIA_Kardif_Hallo_Hart_14_01"); //Okay, okay ... ich gehe runter auf 7.
 	
 	Info_ClearChoices (DIA_Kardif_Hallo);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"OK, 7 gold pieces sounds fair.",DIA_Kardif_Hallo_Sieben);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"No, I don't need your information that bad.",DIA_Kardif_Hallo_Ablehnen);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Okay, 7 Goldstücke klingt gut.",DIA_Kardif_Hallo_Sieben);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Nein, ich bin nicht auf deine Informationen angewiesen.",DIA_Kardif_Hallo_Ablehnen);
 };
 FUNC VOID DIA_Kardif_Hallo_Sieben()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_Sieben_15_00"); //OK, 7 gold pieces sounds fair.
-	AI_Output (self, other, "DIA_Kardif_Hallo_Sieben_14_01"); //(grins) A wise decision. Well, so if there's anything you want to know, ask me.
+	AI_Output (other, self, "DIA_Kardif_Hallo_Sieben_15_00"); //Okay, 7 Goldstücke klingt gut.
+	AI_Output (self, other, "DIA_Kardif_Hallo_Sieben_14_01"); //(grinst) Eine gute Entscheidung. Also, wenn du was wissen willst, frage mich.
 	
 	Kardif_Deal = 7;
 	Info_ClearChoices (DIA_Kardif_Hallo);
 };
 FUNC VOID DIA_Kardif_Hallo_Ablehnen()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_Ablehnen_15_00"); //No, I don't need your information that bad.
-	AI_Output (self, other, "DIA_Kardif_Hallo_Ablehnen_14_01"); //Hey, wait... (sigh) - all right, 5 gold pieces. But that's my final offer!
+	AI_Output (other, self, "DIA_Kardif_Hallo_Ablehnen_15_00"); //Nein, ich bin nicht auf deine Informationen angewiesen.
+	AI_Output (self, other, "DIA_Kardif_Hallo_Ablehnen_14_01"); //Hey, warte ... Seufz - okay, 5 Goldstücke. Aber das ist mein letztes Angebot!
 	
 	Info_ClearChoices (DIA_Kardif_Hallo);
-	Info_AddChoice 	  (DIA_Kardif_Hallo,"Why couldn't you say that right away?",DIA_Kardif_Hallo_Fuenf);
+	Info_AddChoice 	  (DIA_Kardif_Hallo,"Warum nicht gleich so?",DIA_Kardif_Hallo_Fuenf);
 
 };
 FUNC VOID DIA_Kardif_Hallo_Fuenf()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_Fuenf_15_00"); //Why couldn't you say that right away?
-	AI_Output (self, other, "DIA_Kardif_Hallo_Fuenf_14_01"); //Oh, I'm simply out of shape. But whatever - it's a deal.
+	AI_Output (other, self, "DIA_Kardif_Hallo_Fuenf_15_00"); //Warum nicht gleich so?
+	AI_Output (self, other, "DIA_Kardif_Hallo_Fuenf_14_01"); //Ach, ich bin einfach nicht mehr in Form. Aber was soll's ... der Handel gilt.
 	Kardif_Deal = 5;
 	Info_ClearChoices (DIA_Kardif_Hallo);
 };
 FUNC VOID DIA_Kardif_Hallo_KeinDeal()
 {
-	AI_Output (other, self, "DIA_Kardif_Hallo_KeinDeal_15_00"); //No, it doesn't work that way. Let's say 6!
-	AI_Output (self, other, "DIA_Kardif_Hallo_KeinDeal_14_01"); //You're a scoundrel, you know that? Well, if you insist, let's say 6 gold pieces for each piece of information.
+	AI_Output (other, self, "DIA_Kardif_Hallo_KeinDeal_15_00"); //Nein, so läuft das nicht. Sagen wir 6!
+	AI_Output (self, other, "DIA_Kardif_Hallo_KeinDeal_14_01"); //Du bist ein Schlitzohr, weißt du das? Na, meinethalben, sagen wir 6 Goldstücke für jede Information.
 	Kardif_Deal = 6;
 	Info_ClearChoices (DIA_Kardif_Hallo);
 };
@@ -190,7 +190,7 @@ instance DIA_Kardif_TRADE		(C_INFO)
 	information	 = 	DIA_Kardif_TRADE_Info;
 	permanent	 = 	TRUE;
 	trade		 = 	TRUE;
-	description	 = 	"Give me something to drink.";
+	description	 = 	"Gib mir was zu trinken.";
 };
 
 func int DIA_Kardif_TRADE_Condition ()
@@ -204,7 +204,7 @@ func int DIA_Kardif_TRADE_Condition ()
 func void DIA_Kardif_TRADE_Info ()
 {
 	B_GiveTradeInv (self);
-	AI_Output (other, self, "DIA_Kardif_TRADE_15_00"); //Give me something to drink.
+	AI_Output (other, self, "DIA_Kardif_TRADE_15_00"); //Gib mir was zu trinken.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info 
@@ -216,7 +216,7 @@ instance DIA_Kardif_TradeInfo		(C_INFO)
 	condition	 = 	DIA_Kardif_TradeInfo_Condition;
 	information	 = 	DIA_Kardif_TradeInfo_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I need some information.";
+	description	 = 	"Ich brauche Informationen.";
 };
 
 func int DIA_Kardif_TradeInfo_Condition ()
@@ -229,7 +229,7 @@ func int DIA_Kardif_TradeInfo_Condition ()
 };
 func void DIA_Kardif_TradeInfo_Info ()
 {
-	AI_Output (other, self, "DIA_Kardif_TradeInfo_15_00"); //I need information.
+	AI_Output (other, self, "DIA_Kardif_TradeInfo_15_00"); //Ich brauche Informationen.
 
 	Kardif_OneQuestion = TRUE;
 };
@@ -238,7 +238,7 @@ func void DIA_Kardif_TradeInfo_Info ()
 ///////////////////////////////////////////////////////////////////////
 FUNC VOID B_SayKardifZuwenigGold()
 {
-	AI_Output (self,other, "B_SayKardifZuwenigGold_14_00");//Come back when you have enough gold.
+	AI_Output (self,other, "B_SayKardifZuwenigGold_14_00");//Komm wieder, wenn du genug Gold hast.
 };
 instance DIA_Kardif_Buerger		(C_INFO)
 {
@@ -247,7 +247,7 @@ instance DIA_Kardif_Buerger		(C_INFO)
 	condition	 = 	DIA_Kardif_Buerger_Condition;
 	information	 = 	DIA_Kardif_Buerger_Info;
 	permanent    =  TRUE;
-	description	 = 	"Who counts among the influential citizens in this town?";
+	description	 = 	"Wer zählt zu den einflussreichen Bürgern der Stadt?";
 };
 //-------------------------------------------
 var int DIA_Kardif_Buerger_permanent;
@@ -265,10 +265,10 @@ func void DIA_Kardif_Buerger_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Buerger_15_00"); //Who counts among the influential citizens in this town?
-		AI_Output (self, other, "DIA_Kardif_Buerger_14_01"); //You won't find anyone down here at the harbor. The only powerful man here is Lehmar.
-		AI_Output (self, other, "DIA_Kardif_Buerger_14_02"); //The moneylender is not very popular, but he has gold, and other influential citizens owe him money.
-		AI_Output (self, other, "DIA_Kardif_Buerger_14_03"); //The merchants and craftsmen also have a lot of influence - too much if you ask me.
+		AI_Output (other, self, "DIA_Kardif_Buerger_15_00"); //Wer zählt zu den einflussreichen Bürgern der Stadt?
+		AI_Output (self, other, "DIA_Kardif_Buerger_14_01"); //Hier unten am Hafen wirst du niemanden finden. Der einzige mächtige Mann hier, ist Lehmar.
+		AI_Output (self, other, "DIA_Kardif_Buerger_14_02"); //Der Geldverleiher wird zwar nicht gerne gesehen, aber er hat Gold und andere einflussreiche Bürger haben Schulden bei ihm.
+		AI_Output (self, other, "DIA_Kardif_Buerger_14_03"); //Die Händler und Handwerker haben auch viel Einfluss - zuviel für meinen Geschmack.
 		
 		
 		DIA_Kardif_Buerger_permanent = TRUE;
@@ -290,7 +290,7 @@ instance DIA_Kardif_Lehmar	(C_INFO)
 	condition	 = 	DIA_Kardif_Lehmar_Condition;
 	information	 = 	DIA_Kardif_Lehmar_Info;
 	permanent    =  TRUE;
-	description	 = 	"Who's in debt to Lehmar?";
+	description	 = 	"Wer hat alles Schulden bei Lehmar?";
 };
 //-------------------------------------------
 var int DIA_Kardif_Lehmar_permanent;
@@ -309,10 +309,10 @@ func void DIA_Kardif_Lehmar_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Add_15_00"); //Who's in debt to Lehmar?
-		AI_Output (self, other, "DIA_Kardif_Add_14_01"); //(laughs) If you want to know that, you should take a look in his ledger.
-		AI_Output (self, other, "DIA_Kardif_Add_14_02"); //Only it might be pretty difficult to do that without him noticing.
-		AI_Output (self, other, "DIA_Kardif_Add_14_03"); //As far as I know, he always carries it with him...
+		AI_Output (other, self, "DIA_Kardif_Add_15_00"); //Wer hat alles Schulden bei Lehmar?
+		AI_Output (self, other, "DIA_Kardif_Add_14_01"); //(lacht) Wenn du das wissen willst, wirfst du am besten mal ein Blick in sein Schuldenbuch.
+		AI_Output (self, other, "DIA_Kardif_Add_14_02"); //Dürfte nur ziemlich schwierig sein, da ranzukommen ohne das er's merkt.
+		AI_Output (self, other, "DIA_Kardif_Add_14_03"); //Soviel ich weiß, trägt er's nämlich immer bei sich...
 		
 		DIA_Kardif_Lehmar_permanent = TRUE;
 	}
@@ -334,7 +334,7 @@ instance DIA_Kardif_Arbeit		(C_INFO)
 	condition	 = 	DIA_Kardif_Arbeit_Condition;
 	information	 = 	DIA_Kardif_Arbeit_Info;
 	permanent    =  TRUE;
-	description	 = 	"Where can I find work?";
+	description	 = 	"Wo finde ich Arbeit?";
 };
 //-------------------------------------------
 var int DIA_Kardif_Arbeit_permanent;
@@ -352,9 +352,9 @@ func void DIA_Kardif_Arbeit_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Arbeit_15_00"); //Where can I find work?
-		AI_Output (self, other, "DIA_Kardif_Arbeit_14_01"); //You're not likely to find work down here at the harbor. You need to go to the craftsmen in the lower part of town for that.
-		AI_Output (self, other, "DIA_Kardif_Arbeit_14_02"); //But if you wield a decent blade, you could go challenge Alrik. He fights for gold, behind the warehouse.
+		AI_Output (other, self, "DIA_Kardif_Arbeit_15_00"); //Wo finde ich Arbeit?
+		AI_Output (self, other, "DIA_Kardif_Arbeit_14_01"); //Hier im Hafenviertel wird dir kaum jemand Arbeit geben. Da musst du schon in die Unterstadt zu den Handwerkern gehen.
+		AI_Output (self, other, "DIA_Kardif_Arbeit_14_02"); //Aber wenn du 'ne gute Waffe schwingst, dann kannst du ja Alrik herausfordern. Er kämpft für Gold, hinter dem Lagerhaus.
 			
 	DIA_Kardif_Arbeit_permanent = TRUE;
 	}
@@ -374,7 +374,7 @@ instance DIA_Kardif_Lernen		(C_INFO)
 	condition	 = 	DIA_Kardif_Lernen_Condition;
 	information	 = 	DIA_Kardif_Lernen_Info;
 	permanent    =  TRUE;
-	description	 = 	"Who can teach me something here?";
+	description	 = 	"Wer kann mir hier was beibringen?";
 };
 //-------------------------------------------
 var int DIA_Kardif_Lernen_permanent;
@@ -392,26 +392,26 @@ func void DIA_Kardif_Lernen_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Lernen_15_00"); //Who can teach me something here?
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_01"); //There are a few competent people here in the harbor district.
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_02"); //Carl the blacksmith is a sturdy fellow. I bet he can show you how to get stronger.
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_03"); //Alrik knows a lot about fighting. And Lares is a cunning rogue. He's down here at the harbor sometimes as well.
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_04"); //And if you're crazy enough to go see old Ignaz - he knows all about aleche... almich... potions.
-		AI_Output (other, self, "DIA_Kardif_Lernen_15_05"); //Where can I find all these people?
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_06"); //(groans) Boy, the King will have won his war against the orcs before I'm done explaining that to you.
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_07"); //Just look around the harbor district, and you're bound to find them. And if you don't know your way about, go to Brahim and buy yourself a map.
-		AI_Output (self, other, "DIA_Kardif_Lernen_14_08"); //HE is easy to find. His hut is right next to my pub. (murmurs) I should have charged double for that one.
+		AI_Output (other, self, "DIA_Kardif_Lernen_15_00"); //Wer kann mir hier was beibringen?
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_01"); //Hier im Hafenviertel gibt's ein paar fähige Leute.
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_02"); //Carl der Schmied, ist ein kräftiger Bursche. Er kann dir bestimmt zeigen, wie du stärker wirst.
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_03"); //Alrik versteht sich aufs Kämpfen. Und Lares ist ein geschickter Gauner. Er ist auch gelegentlich hier im Hafenviertel.
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_04"); //Und wenn du verrückt genug bist, den alten Ignaz aufzusuchen, der kennt sich mit Aleche ... Almich ... tränken aus.
+		AI_Output (other, self, "DIA_Kardif_Lernen_15_05"); //Wo finde ich all diese Leute?
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_06"); //(stöhnt) Junge, bis ich dir das erklärt habe, hat der König den Krieg gegen die Orks gewonnen!
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_07"); //Schau dich einfach im Hafenviertel um, dann wirst du sie schon finden. Und wenn du keine Ahnung hast, dann kauf dir doch 'ne Karte bei Brahim.
+		AI_Output (self, other, "DIA_Kardif_Lernen_14_08"); //DEN findest du leicht. Er hat seine Hütte direkt neben meiner Kneipe. (murmelt) Dafür hätte ich eigentlich das Doppelte nehmen sollen.
 		
 		Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
 		
 		
-		B_LogEntry (Topic_CityTeacher,"Carl, the smith in the harbor district, can help me become stronger.");
-		B_LogEntry (Topic_CityTeacher,"Lares can help me improve my dexterity.");
-		B_LogEntry (Topic_CityTeacher,"Alrik can train me to fight with one-handed weapons. He hangs round behind the storehouse in the harbor district.");
-		B_LogEntry (Topic_CityTeacher,"Ignaz can show me some recipes for brewing potions. He lives in the harbor district.");
+		B_LogEntry (Topic_CityTeacher,"Carl der Schmied im Hafenviertel, kann mir dabei helfen, stärker zu werden.");
+		B_LogEntry (Topic_CityTeacher,"Lares kann mir dabei helfen, geschickter zu werden.");
+		B_LogEntry (Topic_CityTeacher,"Alrik kann mich im Kampf mit einhändigen Waffen trainieren. Er hält sich hinter dem Lagerhaus im Hafenviertel auf.");
+		B_LogEntry (Topic_CityTeacher,"Ignaz kann mir einige Rezepte zur Herstellung von Tränken zeigen. Er wohnt im Hafenviertel.");
 	
 		Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-		B_LogEntry (Topic_CityTrader,"Brahim draws and sells maps near the harbor.");
+		B_LogEntry (Topic_CityTrader,"Brahim zeichnet und verkauft Karten am Hafen.");
 		
 		
 	DIA_Kardif_Lernen_permanent = TRUE;
@@ -431,7 +431,7 @@ instance DIA_Kardif_Diebeswerk		(C_INFO)
 	condition	 = 	DIA_Kardif_Diebeswerk_Condition;
 	information	 = 	DIA_Kardif_Diebeswerk_Info;
 	permanent    =  TRUE;
-	description	 = 	"Is there any 'special' work to be had...?";
+	description	 = 	"Gibt es hier auch 'spezielle' Arbeit,... ?";
 };
 //-------------------------------------------
 var int DIA_Kardif_Diebeswerk_permanent;
@@ -450,10 +450,10 @@ func void DIA_Kardif_Diebeswerk_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Diebeswerk_15_00"); //Is there any 'special' work to be had around here where I could make some quick money?
-		AI_Output (self, other, "DIA_Kardif_Diebeswerk_14_01"); //Something special, you say? Hmmm...
+		AI_Output (other, self, "DIA_Kardif_Diebeswerk_15_00"); //Gibt es hier auch 'spezielle' Arbeit, bei der ich schnell was verdienen kann?
+		AI_Output (self, other, "DIA_Kardif_Diebeswerk_14_01"); //Was 'spezielles' also. Hmmm ...
 		AI_PlayAni(self, "T_SEARCH");
-		AI_Output (self, other, "DIA_Kardif_Diebeswerk_14_02"); //... go talk to Nagur then. Maybe he can help you.
+		AI_Output (self, other, "DIA_Kardif_Diebeswerk_14_02"); //... sprich mal mit Nagur. Vielleicht kann er dir weiterhelfen.
 	
 		DIA_Kardif_Diebeswerk_permanent = TRUE;
 		
@@ -473,7 +473,7 @@ instance DIA_Kardif_Diebeswerk2		(C_INFO)
 	condition	 = 	DIA_Kardif_Diebeswerk2_Condition;
 	information	 = 	DIA_Kardif_Diebeswerk2_Info;
 	permanent    =  TRUE;
-	description	 = 	"Got anything 'special' for me to do?";
+	description	 = 	"Hast du noch was spezielles für mich?";
 };
 //-------------------------------------------
 var int DIA_Kardif_Diebeswerk2_permanent;
@@ -496,13 +496,13 @@ func void DIA_Kardif_Diebeswerk2_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Diebeswerk2_15_00"); //Got anything 'special' for me to do?
-		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_01"); //I've got something for you - but that should only interest you if you're a man of versatile talents.
-		AI_Output (other, self, "DIA_Kardif_Diebeswerk2_15_02"); //What have you got?
-		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_03"); //Well, Zuris, the potion vendor in the marketplace, currently has a guest - Daron the Fire Magician.
-		AI_Output (other, self, "DIA_Kardif_Diebeswerk2_15_04"); //And?
-		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_05"); //He had a new chest made specially for him by Thorben the carpenter.
-		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_06"); //They say that this Daron has brought a bunch of valuable stuff with him. But you didn't hear that from me, understand?
+		AI_Output (other, self, "DIA_Kardif_Diebeswerk2_15_00"); //Hast du noch was spezielles für mich?
+		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_01"); //Ich hätte da schon was - ist allerdings nur interessant, wenn du ein Mann mit vielseitigen Talenten bist.
+		AI_Output (other, self, "DIA_Kardif_Diebeswerk2_15_02"); //Was hast du?
+		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_03"); //Nun Zuris, der Trankhändler am Marktplatz, beherbergt zurzeit den Feuermagier Daron als Gast.
+		AI_Output (other, self, "DIA_Kardif_Diebeswerk2_15_04"); //Und?
+		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_05"); //Er hat extra für ihn eine neue Truhe bei Thorben, dem Tischler, anfertigen lassen.
+		AI_Output (self, other, "DIA_Kardif_Diebeswerk2_14_06"); //Angeblich hat dieser Daron eine ganze Menge wertvollen Kram mitgebracht. Aber von mir hast du das nicht gehört, klar?
 		
 		DIA_Kardif_Diebeswerk2_permanent = TRUE;
 		
@@ -546,7 +546,7 @@ instance DIA_Kardif_DOPE		(C_INFO)
 	condition	 = 	DIA_Kardif_DOPE_Condition;
 	information	 = 	DIA_Kardif_DOPE_Info;
 	permanent    =  TRUE;
-	description	 = 	"Where can I buy weed here?";
+	description	 = 	"Wo kann ich hier Kraut kaufen?";
 };
 var int DIA_Kardif_DOPE_perm;
 func int DIA_Kardif_DOPE_Condition ()
@@ -562,18 +562,18 @@ func void DIA_Kardif_DOPE_Info ()
 {
 	var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
 	
-	AI_Output (other, self, "DIA_Kardif_DOPE_15_01"); //Where can I buy weed here?
+	AI_Output (other, self, "DIA_Kardif_DOPE_15_01"); //Wo kann ich hier Kraut kaufen?
 	
 	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
 	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
 	{
-		AI_Output (self, other, "DIA_Kardif_DOPE_14_00"); //Certainly not here - I've nothing to do with stuff like that.
+		AI_Output (self, other, "DIA_Kardif_DOPE_14_00"); //Bei mir nicht - ich habe mit so was nichts zu tun!
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Kardif_DOPE_14_02"); //Certainly not here.
-		AI_Output (other, self, "DIA_Kardif_DOPE_15_03"); //All right, where then?
-		AI_Output (self, other, "DIA_Kardif_DOPE_14_04"); //I'd talk to Meldor if I were you - after all, he smokes all day.
+		AI_Output (self, other, "DIA_Kardif_DOPE_14_02"); //Bei mir nicht.
+		AI_Output (other, self, "DIA_Kardif_DOPE_15_03"); //Okay, bei wem dann?
+		AI_Output (self, other, "DIA_Kardif_DOPE_14_04"); //An deiner Stelle würde ich mal mit Meldor sprechen, der raucht schließlich den ganzen Tag.
 		
 		DIA_Kardif_DOPE_perm = TRUE;
 	};
@@ -589,7 +589,7 @@ instance DIA_Kardif_Paket		(C_INFO)
 	condition	 = 	DIA_Kardif_Paket_Condition;
 	information	 = 	DIA_Kardif_Paket_Info;
 	permanent	 =  TRUE;
-	description	 = 	"What do you know about a package of swampweed?";
+	description	 = 	"Was weißt du über ein Paket voller Sumpfkraut?";
 };
 var int DIA_Kardif_Paket_perm;
 func int DIA_Kardif_Paket_Condition ()
@@ -605,15 +605,15 @@ func void DIA_Kardif_Paket_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Paket_15_00"); //What do you know about a package of swampweed?
-		AI_Output (self, other, "DIA_Kardif_Paket_14_01"); //Whoever owns such a package is a rich man. And probably a very relaxed man as well!
-		AI_Output (other, self, "DIA_Kardif_Paket_15_02"); //Don't try to fool me. You know something. So spit it out!
-		AI_Output (self, other, "DIA_Kardif_Paket_14_03"); //All right, all right - this fellow came to my pub the other day. One of the mercenaries.
-		AI_Output (self, other, "DIA_Kardif_Paket_14_04"); //He said that he'd sold a package of swampweed at the harbor, but of course he was completely stoned. That's all I know.
+		AI_Output (other, self, "DIA_Kardif_Paket_15_00"); //Was weißt du über ein Paket voller Sumpfkraut?
+		AI_Output (self, other, "DIA_Kardif_Paket_14_01"); //Wer ein solches Paket besitzt, ist ein reicher Mann. Und wahrscheinlich ziemlich entspannt!
+		AI_Output (other, self, "DIA_Kardif_Paket_15_02"); //Verarsch mich nicht. Du weißt doch was darüber. Also spuck's aus!
+		AI_Output (self, other, "DIA_Kardif_Paket_14_03"); //Okay, okay ... letztens war ein Kerl in meiner Kneipe. Das war einer von den Söldnern.
+		AI_Output (self, other, "DIA_Kardif_Paket_14_04"); //Er meinte, er hätte ein Paket Sumpfkraut am Hafen verkauft, aber er war ja völlig zugedröhnt. Mehr weiß ich nicht.
 		
 		DIA_Kardif_Paket_perm = TRUE;
 		
-		B_LogEntry (TOPIC_WAREHOUSE,"Kardif's been talking to a mercenary. The guy had a package of swampweed he was looking to sell.");
+		B_LogEntry (TOPIC_WAREHOUSE,"Kardif hat sich mit einem Söldner unterhalten. Dieser hatte ein Sumpfkaut - Paket, das er verkaufen wollte.");
 	}
 	else
 	{
@@ -643,17 +643,17 @@ func int DIA_Kardif_SENDATTILA_Condition ()
 };
 func void DIA_Kardif_SENDATTILA_Info ()
 {
-	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_00"); //Hey you, come over here. I've got something for you.
-	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_01"); //There was a fellow here who insisted on talking to you.
-	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_02"); //Since you weren't here, he told me to give you a message.
-	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_03"); //He wants to meet you. Behind Halvor's fish shop.
-	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_04"); //This piece of information is free - but that's an exception, kid! Anything beyond that will cost you.
-	AI_Output (other, self, "DIA_Kardif_SENDATTILA_15_05"); //What did the guy look like?
-	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_06"); //I could tell you that - but you need to pay for it, my friend. (grins)
+	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_00"); //Hey du, komm mal rüber. Ich hab da was für dich.
+	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_01"); //Hier war so ein Kerl, der unbedingt mit dir quatschen wollte.
+	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_02"); //Aber da du nicht da warst, hat er mir gesagt, ich soll dir was ausrichten.
+	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_03"); //Er will sich mit dir treffen. Hinter Halvors Fischladen.
+	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_04"); //Diese Information ist umsonst - aber das ist nur 'ne Ausnahme, klar? Für alles weitere musst du zahlen!
+	AI_Output (other, self, "DIA_Kardif_SENDATTILA_15_05"); //Wie sah der Kerl aus?
+	AI_Output (self, other, "DIA_Kardif_SENDATTILA_14_06"); //Das könnte ich dir schon sagen - aber dafür musst du zahlen, mein Freund. (grinst)
 	
 	if (Kardif_Deal == 0)
 	{
-		AI_Output (self, other, "DIA_Kardif_Hallo_14_04"); //Every piece of information I give you will cost 10 gold pieces.
+		AI_Output (self, other, "DIA_Kardif_Hallo_14_04"); //Jede Information, die ich dir gebe, kostet dich 10 Goldstücke.
 		Kardif_Deal = 10;
 	};
 	Wld_InsertNpc (BDT_494_ATTILA, "NW_CITY_ENTRANCE_01");
@@ -668,7 +668,7 @@ instance DIA_Kardif_Kerl		(C_INFO)
 	condition	 = 	DIA_Kardif_Kerl_Condition;
 	information	 = 	DIA_Kardif_Kerl_Info;
 	permanent    =  TRUE;
-	description	 = 	"What did the guy look like?";
+	description	 = 	"Wie sah der Kerl aus?";
 };
 //----------------------------------
 var int DIA_Kardif_Kerl_permanent;
@@ -688,12 +688,12 @@ func void DIA_Kardif_Kerl_Info ()
 {
 	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
 	{
-		AI_Output (other, self, "DIA_Kardif_Kerl_15_00"); //What did the guy look like?
-		AI_Output (self, other, "DIA_Kardif_Kerl_14_01"); //Well, rather tall, dark-skinned and strong - but no uniform. Somehow... menacing.
-		AI_Output (other, self, "DIA_Kardif_Kerl_15_02"); //And his face?
-		AI_Output (self, other, "DIA_Kardif_Kerl_14_03"); //His face? When he looked at me I was glad that it wasn't me he had come for.
-		AI_Output (self, other, "DIA_Kardif_Kerl_14_04"); //There was something scary in his eyes - anyway, I think you should go see him. This is bound to be interesting.
-		AI_Output (other, self, "DIA_Kardif_Kerl_15_05"); //Yeah... the question is, for whom...
+		AI_Output (other, self, "DIA_Kardif_Kerl_15_00"); //Wie sah der Kerl aus?
+		AI_Output (self, other, "DIA_Kardif_Kerl_14_01"); //Nun, ziemlich groß, dunkelhäutig und kräftig - aber keine Uniform. Irgendwie ... bedrohlich.
+		AI_Output (other, self, "DIA_Kardif_Kerl_15_02"); //Und sein Gesicht?
+		AI_Output (self, other, "DIA_Kardif_Kerl_14_03"); //Sein Gesicht? Als er mich angesehen hat, war ich froh, dass er nicht wegen mir gekommen ist.
+		AI_Output (self, other, "DIA_Kardif_Kerl_14_04"); //Es lag etwas Unheimliches in seinen Augen - na ja, ich denke, du solltest ihn aufsuchen. Wird bestimmt interessant.
+		AI_Output (other, self, "DIA_Kardif_Kerl_15_05"); //Ja ... fragt sich nur, für wen ...
 		
 		DIA_Kardif_Kerl_permanent = TRUE;
 	}
@@ -712,7 +712,7 @@ instance DIA_Kardif_DEFEATEDATTILA		(C_INFO)
 	condition	 = 	DIA_Kardif_DEFEATEDATTILA_Condition;
 	information	 = 	DIA_Kardif_DEFEATEDATTILA_Info;
 	permanent    =  FALSE;
-	description	 = 	"That bastard tried to kill me!";
+	description	 = 	"Der Kerl wollte mich umbringen!";
 };
 
 func int DIA_Kardif_DEFEATEDATTILA_Condition ()
@@ -725,9 +725,9 @@ func int DIA_Kardif_DEFEATEDATTILA_Condition ()
 
 func void DIA_Kardif_DEFEATEDATTILA_Info ()
 {
-	AI_Output (other, self, "DIA_Kardif_DEFEATEDATTILA_15_00"); //That bastard tried to kill me!
-	AI_Output (self, other, "DIA_Kardif_DEFEATEDATTILA_14_01"); //Hey, how would that be my fault? All I did was pass on some information.
-	AI_Output (self, other, "DIA_Kardif_DEFEATEDATTILA_14_02"); //If anyone is determined to step on your toes, I guess he'll have his reasons.
+	AI_Output (other, self, "DIA_Kardif_DEFEATEDATTILA_15_00"); //Der Kerl wollte mich umbringen!
+	AI_Output (self, other, "DIA_Kardif_DEFEATEDATTILA_14_01"); //Hey, was hab ich jetzt damit zu tun? Ich hab nur Informationen weitergegeben.
+	AI_Output (self, other, "DIA_Kardif_DEFEATEDATTILA_14_02"); //Wenn dir irgendwer auf die Füße treten will, dann wird er wohl seinen Grund haben.
 
 	B_GivePlayerXP (XP_Kardif_Blame4Attila);
 	
@@ -744,7 +744,7 @@ INSTANCE DIA_Kardif_Zeichen   (C_INFO)
 	condition   = DIA_Kardif_Zeichen_Condition;
 	information = DIA_Kardif_Zeichen_Info;
 	permanent   = FALSE;
-	description = "(Show thieves' signal)";
+	description = "(Diebeszeichen zeigen)";
 };
 
 FUNC INT DIA_Kardif_Zeichen_Condition()
@@ -757,8 +757,8 @@ FUNC INT DIA_Kardif_Zeichen_Condition()
 FUNC VOID DIA_Kardif_Zeichen_Info()
 {
 	AI_PlayAni (other, "T_YES");
-	AI_Output (self, other, "DIA_Kardif_Zeichen_14_00");//Ah, you're involved with the gang. All right. In that case, I've got something for you.
-	AI_Output (self, other, "DIA_Kardif_Zeichen_14_01");//(quietly) If you ever need some lock picks, come to me. I still have a few around. Just ask me for something to drink.
+	AI_Output (self, other, "DIA_Kardif_Zeichen_14_00");//Hm, du mischst bei der Bande mit. Na gut. Dann habe ich etwas für dich.
+	AI_Output (self, other, "DIA_Kardif_Zeichen_14_01");//(leise) Wenn du mal Dietriche brauchst, dann komm zu mir. Ich habe noch ein paar auf Lager. Frag mich einfach nach was zu trinken.
 	
 	CreateInvItems (self, ItKe_Lockpick, 20);
 };
@@ -779,7 +779,7 @@ INSTANCE DIA_Kardif_Crew   (C_INFO)
 	condition   = DIA_Kardif_Crew_Condition;
 	information = DIA_Kardif_Crew_Info;
 	permanent   = FALSE;
-	description = "I still need a few sailors.";
+	description = "Ich brauche noch ein paar Seeleute.";
 };
 
 FUNC INT DIA_Kardif_Crew_Condition()
@@ -791,20 +791,20 @@ FUNC INT DIA_Kardif_Crew_Condition()
 };
 FUNC VOID DIA_Kardif_Crew_Info()
 {
-	AI_Output (other,self , "DIA_Kardif_Crew_15_00");//I still need a few sailors.
-	AI_Output (self, other, "DIA_Kardif_Crew_14_01");//Bad times, my friend. You won't find enough sailors in all of Khorinis. Most of them have left the city.
-	AI_Output (self, other, "DIA_Kardif_Crew_14_02");//But with a good captain, it shouldn't be too hard to find yourself a few bright lads and make them into a decent crew before too long.
-	AI_Output (other,self , "DIA_Kardif_Crew_15_03");//Where can I find a captain?
-	AI_Output (self, other, "DIA_Kardif_Crew_14_04");//You're asking the wrong guy. I just run this pub.
+	AI_Output (other,self , "DIA_Kardif_Crew_15_00");//Ich brauche noch ein paar Seeleute.
+	AI_Output (self, other, "DIA_Kardif_Crew_14_01");//Schlechte Zeiten, mein Freund. Du wirst auf ganz Khorinis nicht genug Seeleute finden, die meisten haben die Stadt verlassen.
+	AI_Output (self, other, "DIA_Kardif_Crew_14_02");//Aber mit einem guten Kapitän sollte es nicht allzu schwierig sein, aus ein paar intelligenten Kerlen in kurzer Zeit eine brauchbare Mannschaft zusammenzustellen.
+	AI_Output (other,self , "DIA_Kardif_Crew_15_03");//Wo finde ich einen Kapitän?
+	AI_Output (self, other, "DIA_Kardif_Crew_14_04");//Du fragst den Falschen. Ich bin hier nur der Wirt.
 	if (Npc_IsDead (Jack) == FALSE)
 	{
 		if (SCGoTCaptain == FALSE)
 		{
 			Log_CreateTopic (TOPIC_Captain, LOG_MISSION);                                                                                                                           
 			Log_SetTopicStatus(TOPIC_Captain, LOG_RUNNING);                                                                                                                         
-			B_LogEntry (TOPIC_Captain,"Kardif sent me to old Jack. Apparently, he should be able to help me.");
+			B_LogEntry (TOPIC_Captain,"Kardif hat mich an den alten Jack verwiesen. Er soll mir weiterhelfen können.");
 	    };
-		AI_Output (self, other, "DIA_Kardif_Crew_14_05");//Go talk to Old Jack. He's been hanging around this harbor for as long as I can think. When it comes to seafaring, he's your man.
+		AI_Output (self, other, "DIA_Kardif_Crew_14_05");//Rede mal mit dem Alten Jack. Er ist hier im Hafen, schon so lange ich denken kann. Er weiß Bescheid, wenn es um die Seefahrt geht.
 	};
 };
 

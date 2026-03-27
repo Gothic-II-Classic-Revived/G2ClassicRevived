@@ -43,7 +43,7 @@ const int	REV_Value_OldStew			=	 1;		const int	REV_HP_OldStew			=	5;
 
 INSTANCE ITFO_REVIVED_MEATBUG (C_Item)
 {	
-	name 				=	"Bugmeat";
+	name 				=	"Wanzenfleisch";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -52,7 +52,7 @@ INSTANCE ITFO_REVIVED_MEATBUG (C_Item)
 	
 	visual 				=	"REV_ITFO_MEATBUG.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	UseBugmeat;
 
 	description			= name;
@@ -69,7 +69,7 @@ INSTANCE ITFO_REVIVED_MEATBUG (C_Item)
 
 INSTANCE ITFO_REVIVED_HAM_01_RAW (C_Item)
 {
-	name 				=	"Ham";
+	name 				=	"Schinken";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -92,7 +92,7 @@ INSTANCE ITFO_REVIVED_HAM_01_RAW (C_Item)
 
 INSTANCE ITFO_REVIVED_HAM_01_COOKED (C_Item)
 {
-	name 				=	"Cooked Ham";
+	name 				=	"Gekochter Schinken";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -115,7 +115,7 @@ INSTANCE ITFO_REVIVED_HAM_01_COOKED (C_Item)
 
 INSTANCE ITFO_REVIVED_HAM_02 (C_Item)
 {
-	name 				=	"Rotten Ham";
+	name 				=	"Verdorbener Schinken";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -139,7 +139,7 @@ INSTANCE ITFO_REVIVED_HAM_02 (C_Item)
 
 INSTANCE ITFO_REVIVED_APPLE_01 (C_Item)
 {	
-	name 				=	"Sour apple";
+	name 				=	"Saurer Apfel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -148,7 +148,7 @@ INSTANCE ITFO_REVIVED_APPLE_01 (C_Item)
 
 	visual 				=	"ItFo_Apple_01.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	UseApple;
 
 	description			= name;
@@ -184,7 +184,7 @@ INSTANCE ITFO_REVIVED_APPLE_01 (C_Item)
 
 INSTANCE ITFO_REVIVED_APPLE_02 (C_Item)
 {	
-	name 				=	"Old apple";
+	name 				=	"Alter Apfel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -193,7 +193,7 @@ INSTANCE ITFO_REVIVED_APPLE_02 (C_Item)
 
 	visual 				=	"REV_ITFO_APPLE_02.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	UseAppleOld;
 
 	description			= name;
@@ -209,7 +209,7 @@ INSTANCE ITFO_REVIVED_APPLE_02 (C_Item)
 
 INSTANCE ITFO_REVIVED_PEAR (C_Item)
 {	
-	name 				=	"Pear";
+	name 				=	"Birne";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -218,7 +218,7 @@ INSTANCE ITFO_REVIVED_PEAR (C_Item)
 
 	visual 				=	"REV_ITFO_PEAR.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	UsePear;
 
 	description			= name;
@@ -246,7 +246,7 @@ INSTANCE ITFO_REVIVED_PEAR (C_Item)
 			{
 				Print (PRINT_Eat_Pear3);
 				hero.lp = hero.lp + 1;
-				PrintScreen	("Learning Points +1", -1, -1, FONT_SCREEN, 2);
+				PrintScreen	("Lernpunkte +1", -1, -1, FONT_SCREEN, 2);
 				Snd_Play	("LevelUp");
 				Pear_Bonus = 0;
 			};
@@ -257,7 +257,7 @@ INSTANCE ITFO_REVIVED_PEAR (C_Item)
 
 INSTANCE ITFO_REVIVED_HONEY (C_Item)
 {	
-	name 				=	"Honeycomb";
+	name 				=	"Honigwaben";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -283,7 +283,7 @@ INSTANCE ITFO_REVIVED_HONEY (C_Item)
 
 INSTANCE ITFO_REVIVED_BREAD_01 (C_Item)
 {	
-	name 				=	"Hard bread";
+	name 				=	"Hartes Brot";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -306,7 +306,7 @@ INSTANCE ITFO_REVIVED_BREAD_01 (C_Item)
 
 INSTANCE ITFO_REVIVED_BREAD_02 (C_Item)
 {	
-	name 				=	"Bad bread";
+	name 				=	"Schlechtes Brot";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -330,7 +330,7 @@ INSTANCE ITFO_REVIVED_BREAD_02 (C_Item)
 
 INSTANCE ITFO_REVIVED_CHEESE_01 (C_Item)
 {	
-	name 				=	"Stinky cheese";
+	name 				=	"Stinkender Käse";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -353,7 +353,7 @@ INSTANCE ITFO_REVIVED_CHEESE_01 (C_Item)
 
 INSTANCE ITFO_REVIVED_CHEESE_02 (C_Item)
 {	
-	name 				=	"Old cheese";
+	name 				=	"Alter Käse";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -380,7 +380,7 @@ INSTANCE ITFO_REVIVED_CHEESE_02 (C_Item)
 
 INSTANCE ITFO_REVIVED_WATER (C_Item)
 {
-	name 			=	"Stale water";
+	name 			=	"Abgestandenes Wasser";
 
 	mainflag 		=	ITEM_KAT_FOOD;
 	flags 			=	ITEM_MULTI;
@@ -390,7 +390,7 @@ INSTANCE ITFO_REVIVED_WATER (C_Item)
 	visual 			=	"ItFo_Potion_Water_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseWaterPotion;
-	scemeName		=	"POTION";
+	scemeName		=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_StaleWater;
@@ -406,7 +406,7 @@ INSTANCE ITFO_REVIVED_WATER (C_Item)
 
 INSTANCE ITFO_REVIVED_BEER (C_Item)
 {
-	name 				=	"Old beer";
+	name 				=	"Altes Bier";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -416,7 +416,7 @@ INSTANCE ITFO_REVIVED_BEER (C_Item)
 	visual 				=	"ItFo_Beer_01.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseBeer;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_OldBeer;
@@ -432,7 +432,7 @@ INSTANCE ITFO_REVIVED_BEER (C_Item)
 
 INSTANCE ITFO_REVIVED_WINE (C_Item)
 {	
-	name 				=	"Old wine";
+	name 				=	"Alter Wein";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -442,7 +442,7 @@ INSTANCE ITFO_REVIVED_WINE (C_Item)
 	visual	 			=	"ItFo_Wine_01.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	UseOldWine;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	//TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_OldWine;
@@ -496,7 +496,7 @@ INSTANCE ITFO_REVIVED_WINE (C_Item)
 
 INSTANCE ITFO_REVIVED_TURNIPBOOZE (C_Item)
 {	
-	name 				=	"Turnip Booze";
+	name 				=	"Rübenlikör";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -506,7 +506,7 @@ INSTANCE ITFO_REVIVED_TURNIPBOOZE (C_Item)
 	visual 				=	"REV_ITFO_TURNIPBOOZE.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseTurnipBooze;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_TurnipBooze;
@@ -522,7 +522,7 @@ INSTANCE ITFO_REVIVED_TURNIPBOOZE (C_Item)
 
 INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
 {	
-	name 				=	"Vino's Special";
+	name 				=	"Vinos Spezialität";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -532,7 +532,7 @@ INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
 	visual 				=	"REV_ITFO_VINOBOOZE.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseVinoBooze;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_VinoBooze;
@@ -548,7 +548,7 @@ INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
 
 INSTANCE ITFO_REVIVED_MAGEWINE (C_Item)
 {	
-	name 				=	"Monastery Wine";
+	name 				=	"Klosterwein";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -558,7 +558,7 @@ INSTANCE ITFO_REVIVED_MAGEWINE (C_Item)
 	visual 				=	"REV_ITFO_MAGEWINE.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseMageWine;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_BonusHPMP;				COUNT[1]	= REV_HP_MageWine;
@@ -575,7 +575,7 @@ INSTANCE ITFO_REVIVED_MAGEWINE (C_Item)
 
 INSTANCE ITFO_REVIVED_MONSTERDRINK (C_Item)
 {	
-	name 				=	"Monster Drink";
+	name 				=	"Bestiengetränk";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -603,7 +603,7 @@ INSTANCE ITFO_REVIVED_MONSTERDRINK (C_Item)
 
 INSTANCE ITFO_REVIVED_RICEBOOZE (C_Item)
 {	
-	name 				=	"Rice Schnapps";
+	name 				=	"Reisschnaps";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -613,7 +613,7 @@ INSTANCE ITFO_REVIVED_RICEBOOZE (C_Item)
 	visual 				=	"ItFo_Booze_01.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseRiceBooze;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
@@ -629,7 +629,7 @@ INSTANCE ITFO_REVIVED_RICEBOOZE (C_Item)
 
 INSTANCE ITFO_REVIVED_MEAD (C_Item)
 {	
-	name 				=	"Mead";
+	name 				=	"Met";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -639,7 +639,7 @@ INSTANCE ITFO_REVIVED_MEAD (C_Item)
 	visual 				=	"REV_ITFO_MEAD.3ds";
 	material 			=	MAT_GLAS;
 	on_state[0]			=	UseMead;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Mead;
@@ -662,7 +662,7 @@ INSTANCE ITFO_REVIVED_MEAD (C_Item)
 
 INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 {	
-	name 				=	"Full Meat Stew";
+	name 				=	"Herzhafter Fleischeintopf";
 	
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -671,7 +671,7 @@ INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 
 	visual 				=	"ItFo_Stew.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseSuperMeatSoup;
 
 	description			= name;
@@ -688,7 +688,7 @@ INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 
 INSTANCE ITFO_REVIVED_FISHXPSOUP (C_Item)
 {	
-	name 				=	"Edda's Fish Soup";
+	name 				=	"Eddas Fischsuppe";
 	
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -697,7 +697,7 @@ INSTANCE ITFO_REVIVED_FISHXPSOUP (C_Item)
 
 	visual 				=	"ItFo_FishSoup.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseEddaFishSoup;
 
 	description			= name;
@@ -716,7 +716,7 @@ INSTANCE ITFO_REVIVED_FISHXPSOUP (C_Item)
 
 INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
 {	
-	name 				=	"Meatbug Ragout";
+	name 				=	"Fleischwanzenragout";
 	
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -725,7 +725,7 @@ INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
 
 	visual 				=	"ItFo_Meatbugragout_01.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseMeatbugragout;
 
 	description			= name;
@@ -742,7 +742,7 @@ INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
 
 INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
 {	
-	name 				=	"Root Soup";
+	name 				=	"Wurzelsuppe";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -751,7 +751,7 @@ INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
 
 	visual 				=	"ItFo_Soup_01.3ds";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseSoup;
 
 	description			= name;
@@ -768,7 +768,7 @@ INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
 
 INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)                                          
 {	                                                                
-	name 				=	"Minecrawler Soup";
+	name 				=	"Minecrawlersuppe";
 	                                                            
 	mainflag 			=	ITEM_KAT_FOOD;  
 	flags 				=	ITEM_MULTI;
@@ -778,7 +778,7 @@ INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)
 	visual 				=	"ItFo_Crawlersoup_01.3ds";  
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	UseCrawlersoup;   
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= REV_HP_CrawlerSoup;
@@ -795,7 +795,7 @@ INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)
 
 INSTANCE ITFO_REVIVED_RICE (C_Item)
 {	
-	name 				=	"Rice bowl";
+	name 				=	"Reisschüssel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -804,7 +804,7 @@ INSTANCE ITFO_REVIVED_RICE (C_Item)
 
 	visual 				=	"ItFo_Rice_01.3ds";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseRice;
 
 	description			= name;
@@ -823,7 +823,7 @@ INSTANCE ITFO_REVIVED_RICE (C_Item)
 
 INSTANCE ITFO_REVIVED_MARMALADE (C_Item)
 {	
-	name 				=	"Berry marmalade";
+	name 				=	"Beerenmarmelade";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -850,7 +850,7 @@ INSTANCE ITFO_REVIVED_MARMALADE (C_Item)
 
 INSTANCE ITFO_REVIVED_FRUITSALAD (C_Item)
 {	
-	name 				=	"Fruit salad";
+	name 				=	"Obstsalat";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -859,7 +859,7 @@ INSTANCE ITFO_REVIVED_FRUITSALAD (C_Item)
 	
 	visual 				=	"REV_ITFO_FRUITSALAD.3DS";
 	material 			=	MAT_STONE;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseFruitSalad;
 
 	description			= 	name;
@@ -877,7 +877,7 @@ INSTANCE ITFO_REVIVED_FRUITSALAD (C_Item)
 
 INSTANCE ITFO_REVIVED_OLDSTEW (C_Item)
 {	
-	name 				=	"Convict's Stew";
+	name 				=	"Sträflings-Eintopf";
 	
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -886,7 +886,7 @@ INSTANCE ITFO_REVIVED_OLDSTEW (C_Item)
 
 	visual 				=	"REV_ITFO_OLDSTEW.3ds"; 
 	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	UseOldstew;
 
 	description			= name;

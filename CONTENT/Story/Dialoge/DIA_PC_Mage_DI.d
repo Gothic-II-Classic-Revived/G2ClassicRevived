@@ -33,7 +33,7 @@ INSTANCE DIA_Milten_DI_Hello(C_INFO)
 	condition	= DIA_Milten_DI_Hello_Condition;
 	information	= DIA_Milten_DI_Hello_Info;
 
-	description = "Just like in the old days.";
+	description = "Wie in alten Zeiten.";
 
 };                       
 
@@ -66,7 +66,7 @@ instance DIA_Milten_DI_TRADE		(C_INFO)
 	permanent	 = 	TRUE;
 	trade		 = 	TRUE;
 
-	description	 = 	"Got a few potions to spare?";
+	description	 = 	"Hast du ein paar Tränke übrig?";
 };
 
 func int DIA_Milten_DI_TRADE_Condition ()
@@ -106,7 +106,7 @@ INSTANCE DIA_Milten_DI_Rat(C_INFO)
 	condition	= DIA_Milten_DI_Rat_Condition;
 	information	= DIA_Milten_DI_Rat_Info;
 
-	description = "What advice can you give me?";
+	description = "Welchen Rat kannst du mir geben?";
 
 };                       
 FUNC INT DIA_Milten_DI_Rat_Condition()
@@ -128,11 +128,11 @@ FUNC VOID DIA_Milten_DI_Rat_Info()
 
 	if (SC_InnosEyeVergessen_DI == TRUE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_Rat, "No.", DIA_Milten_DI_Rat_nein );
+		Info_AddChoice	(DIA_Milten_DI_Rat, "Nein.", DIA_Milten_DI_Rat_nein );
 	}
 	else
 	{
-		Info_AddChoice	(DIA_Milten_DI_Rat, "Of course.", DIA_Milten_DI_Rat_ja );
+		Info_AddChoice	(DIA_Milten_DI_Rat, "Selbstverständlich.", DIA_Milten_DI_Rat_ja );
 	};
 };	
 
@@ -164,7 +164,7 @@ instance DIA_Milten_DI_PEDROTOT		(C_INFO)
 	condition	 = 	DIA_Milten_DI_PEDROTOT_Condition;
 	information	 = 	DIA_Milten_DI_PEDROTOT_Info;
 
-	description	 = 	"I found Pedro.";
+	description	 = 	"Ich habe Pedro gefunden.";
 };
 
 func int DIA_Milten_DI_PEDROTOT_Condition ()
@@ -205,7 +205,7 @@ INSTANCE DIA_Milten_DI_TeachMagic(C_INFO)
 	information	= DIA_Milten_DI_TeachMagic_Info;
 	permanent	 = 	TRUE;
 
-	description = "I want to improve my magic abilities.";
+	description = "Ich will meine magischen Fähigkeiten verbessern.";
 
 };                       
 FUNC INT DIA_Milten_DI_TeachMagic_Condition()
@@ -247,7 +247,7 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Info()
 
 	if (hero.guild == GIL_KDF)
 	{
-	Info_AddChoice	  	(DIA_Milten_DI_TeachMagic, 	"Create Runes", DIA_Milten_DI_TeachMagic_RUNES);
+	Info_AddChoice	  	(DIA_Milten_DI_TeachMagic, 	"Runen erschaffen", DIA_Milten_DI_TeachMagic_RUNES);
 	};	
 };
 
@@ -267,7 +267,7 @@ func void DIA_Milten_DI_TeachMagic_MANA_1()
 
 	if (hero.guild == GIL_KDF)
 	{
-	Info_AddChoice	  	(DIA_Milten_DI_TeachMagic, 	"Create Runes", DIA_Milten_DI_TeachMagic_RUNES);
+	Info_AddChoice	  	(DIA_Milten_DI_TeachMagic, 	"Runen erschaffen", DIA_Milten_DI_TeachMagic_RUNES);
 	};	
 };
 
@@ -287,7 +287,7 @@ func void DIA_Milten_DI_TeachMagic_MANA_5()
 	
 	if (hero.guild == GIL_KDF)
 	{
-	Info_AddChoice	  	(DIA_Milten_DI_TeachMagic, 	"Create Runes", DIA_Milten_DI_TeachMagic_RUNES);
+	Info_AddChoice	  	(DIA_Milten_DI_TeachMagic, 	"Runen erschaffen", DIA_Milten_DI_TeachMagic_RUNES);
 	};	
 };
 
@@ -300,19 +300,19 @@ FUNC VOID DIA_Milten_DI_TeachMagic_RUNES ()
 
 	if (hero.guild == GIL_PAL)
 	{
-		Info_AddChoice	  (DIA_Milten_DI_TeachMagic,"Paladin Runes", DIA_Milten_DI_TeachMagic_Runen_Paladin);
+		Info_AddChoice	  (DIA_Milten_DI_TeachMagic,"Paladin-Runen", DIA_Milten_DI_TeachMagic_Runen_Paladin);
 	}
 	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 4)
 	{
-		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Fourth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_4);
+		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic,"Vierter Kreis", DIA_Milten_DI_TeachMagic_Runen_Circle_4);
 	}
 	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 5)
 	{
-		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Fifth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_5);
+		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic,"Fünfter Kreis", DIA_Milten_DI_TeachMagic_Runen_Circle_5);
 	}
 	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 6) 
 	{
-		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Sixth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_6);
+		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic,"Sechster Kreis", DIA_Milten_DI_TeachMagic_Runen_Circle_6);
 	}
 	else
 	{
@@ -334,31 +334,31 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Paladin ()
 	
 	if (PLAYER_TALENT_RUNES [SPL_PalLight] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Light", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLight)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLight);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Licht", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLight)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLight);
 	};
 	if	(PLAYER_TALENT_RUNES [SPL_PalLightHeal] == FALSE)
 	{ 
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Healing", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLightHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLightHeal);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Heilung", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLightHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLightHeal);
 	};
 	if	(PLAYER_TALENT_RUNES [SPL_PalHolyBolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Holy Arrow", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalHolyBolt)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalHolyBolt);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Heiliger Pfeil", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalHolyBolt)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalHolyBolt);
 	};
 	if 	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Large Healing", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalMediumHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalMediumHeal);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Große Heilung", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalMediumHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalMediumHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Damage Evil", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalRepelEvil)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalRepelEvil);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Bösem Schaden", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalRepelEvil)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalRepelEvil);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_PalFullHeal] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Total Healing", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalFullHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalFullHeal);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Vollheilung", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalFullHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalFullHeal);
 	};
 	if (PLAYER_TALENT_RUNES [SPL_PalDestroyEvil] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Destroy Evil", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalDestroyEvil)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalDestroyEvil);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Böses Vernichten", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalDestroyEvil)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalDestroyEvil);
 	};
 };
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLight()
@@ -442,7 +442,7 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_LightningFlash()
 	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);		
 };
 //**********************************************************
-// F�nfter Kreis 
+// Fnfter Kreis 
 //--------------------------
 //**********************************************************
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5()
@@ -552,7 +552,7 @@ instance DIA_Milten_DI_DementorObsessionBook		(C_INFO)
 	condition	 = 	DIA_Milten_DI_DementorObsessionBook_Condition;
 	information	 = 	DIA_Milten_DI_DementorObsessionBook_Info;
 
-	description	 = 	"Does this book, Almanac of the Possessed, ring a bell?";
+	description	 = 	"Sagt dir dieses Buch, Almanach der Besessenen, irgendetwas?";
 };
 
 func int DIA_Milten_DI_DementorObsessionBook_Condition ()
@@ -581,7 +581,7 @@ instance DIA_Milten_DI_DragonEgg		(C_INFO)
 	condition	 = 	DIA_Milten_DI_DragonEgg_Condition;
 	information	 = 	DIA_Milten_DI_DragonEgg_Info;
 
-	description	 = 	"Do you have experience with dragon eggs?";
+	description	 = 	"Hast du Erfahrung mit Dracheneiern?";
 };
 
 func int DIA_Milten_DI_DragonEgg_Condition ()
@@ -612,7 +612,7 @@ INSTANCE DIA_Milten_DI_UndeadDragonDead (C_INFO)
 	information	= DIA_Milten_DI_UndeadDragonDead_Info;
 	permanent	= TRUE;
 
-	description = "All right. That's it!";
+	description = "So. Jetzt ist Schluss!";
 
 };
                        

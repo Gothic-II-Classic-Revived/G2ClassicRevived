@@ -1,6 +1,6 @@
 
 //*************************************
-//	Buchst�nder im Banditenlager
+//	Buchstnder im Banditenlager
 //*************************************
 
 FUNC VOID Use_Bookstand_Addon_BL_S1()		
@@ -23,13 +23,13 @@ FUNC VOID Use_Bookstand_Addon_BL_S1()
 
 					Doc_PrintLine	( nDocID,  0, "Mine"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Crimson: 79 gold nuggets received and melted down"					);
+					Doc_PrintLines	( nDocID,  0, "Crimson: 79 Goldbrocken erhalten und eingeschmolzen"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Scatty: Goods received for 250 gold"					);
+					Doc_PrintLines	( nDocID,  0, "Scatty: Waren für 250 Gold erhalten"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Garaz: 6 gold nuggets received"					);
+					Doc_PrintLines	( nDocID,  0, "Garaz: 6 Goldbrocken erhalten"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "All guards: 9 gold nuggets received"					);
+					Doc_PrintLines	( nDocID,  0, "Alle Wachen: 9 Goldbrocken erhalten"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
@@ -39,19 +39,19 @@ FUNC VOID Use_Bookstand_Addon_BL_S1()
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, "Camp:"					);
+					Doc_PrintLine	( nDocID,  1, "Lager:"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Raven's guards: 25 gold pieces"					);
+					Doc_PrintLines	( nDocID,  1, "Raven's Garde: 25 Goldstücke"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Finn: 60 gold pieces"					);
-					Doc_PrintLines	( nDocID,  1, "Lennar: 40 gold pieces"); 
-					Doc_PrintLines	( nDocID,  1, "Emilio: 50 gold pieces"					);
+					Doc_PrintLines	( nDocID,  1, "Finn: 60 Goldstücke"					);
+					Doc_PrintLines	( nDocID,  1, "Lennar: 40 Goldstücke"); 
+					Doc_PrintLines	( nDocID,  1, "Emilio: 50 Goldstücke"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Others: 20 gold pieces"					);
+					Doc_PrintLines	( nDocID,  1, "Andere: 20 Goldstücke"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Huno, Fisk, Snaf: each according to goods"					);
+					Doc_PrintLines	( nDocID,  1, "Huno, Fisk, Snaf: je nach Waren"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Hunters: Let the leader handle this! Franco received 7 gold pieces");
+					Doc_PrintLines	( nDocID,  1, "Jäger: Soll sich der Anführer drum kümmern! Franco 7 Goldbrocken erhalten");
 					Doc_Show		( nDocID );
 	
 	};
@@ -83,52 +83,52 @@ func int C_CanReadBookStand ()
 
 func void Use_BookstandMaya () 
 {
-	if (BookstandMayaArt == 1)		//Joly:  �berall objektieren!
+	if (BookstandMayaArt == 1)		//Joly:  berall objektieren!
 	{
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "...because only the GUARDIANS OF THE DEAD could call the ancestors.");                                             
+			Doc_PrintLines	( StPl_nDocID,  0, "...denn nur den TOTENWÄCHTERN war es möglich die Ahnen zu rufen.");                                             
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "Their abscence hurts deeply. Without the counsel of the ancestors, we are at the mercy of our people.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Ihre Abwesenheit schmerzt tief. Ohne den Rat der Ahnen sind wir der Willkür unseres Volkes ausgeliefert.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "The HEALERS were sent to seal the portal and destroy the key. Only Adanos knows what happened to them or if they even achieved their goal.");         
+			Doc_PrintLines	( StPl_nDocID,  0, "Die HEILER wurden entsandt, das Portal zu versiegeln und den Schlüssel zu vernichten. Nur Adanos weiß, was mit ihnen geschah und ob sie ihr Ziel jemals erreichten.");         
 			                                                                                          
 			Doc_SetMargins	( StPl_nDocID, -1, 30, 20, 275, 20, 1   		);                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  1, "");                                
-			Doc_PrintLines	( StPl_nDocID,  1, "The WARRIOR CASTE has been destroyed by the wrath of Adanos. The heart of the old warrior prince is broken."		);  
+			Doc_PrintLines	( StPl_nDocID,  1, "Die KRIEGERKASTE ist vernichtet durch den Zorn Adanos. Das Herz des alten Kriegerfürsten ist gebrochen."		);  
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  1, "");                                
-			Doc_PrintLines	( StPl_nDocID,  1, "Only the remaining PRIESTS raise hopes and preach constantly of the rebirth of our once magnificent city.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Nur die verbliebenen PRIESTER schüren noch die Hoffnung und predigen unablässig von der Wiederauferstehung unserer einst so prächtigen Stadt.");
 			Doc_PrintLine	( StPl_nDocID,  1, "");                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "However, we SCHOLARS know the bitter truth. JHARKENDAR has fallen and will fade in the river of time.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Doch wir, die GELEHRTEN, kennen die bittere Wahrheit. JHARKENDAR ist gefallen und wird im Strom der Zeit vergehen.");
 			Doc_PrintLines	( StPl_nDocID,  1, "");        
 	}
 	else if (BookstandMayaArt == 2)     //Joly: objektieren egal wo, nur nicht Entrance.                     
 	{
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "RHADEMES was imprisoned forever in the temple of ADANOS, but the power of the sword was not broken.");
+			Doc_PrintLines	( StPl_nDocID,  0, "RHADEMES war auf immer eingeschlossen im Tempel ADANOS, doch die Macht des Schwertes war nicht gebrochen.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
-			Doc_PrintLines	( StPl_nDocID,  0, "Its influence had become too great. The killings in the streets would not stop.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Sein Einfluss war schon zu groß geworden. Das Morden in den Strassen wollte nicht enden.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
-			Doc_PrintLines	( StPl_nDocID,  0, "The wrath of ADANOS ended everything. The sea raised itself over JHARKENDAR and flooded the whole city.");
+			Doc_PrintLines	( StPl_nDocID,  0, "ADANOS Zorn war es, der alles beendete. Das Meer erhob sich über JHARKENDAR und überflutete die ganze Stadt.");
 			                                                                                          
 			Doc_SetMargins	( StPl_nDocID, -1, 30, 20, 275, 20, 1   		);                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "Only the temples and structures in higher places were left almost untouched.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Nur noch die höher gelegenen Tempel und Bauwerke waren nahezu unangetastet geblieben.");
 			Doc_PrintLine	( StPl_nDocID,  1, ""		);                                    
 			Doc_PrintLine	( StPl_nDocID,  1, ""		);                                    
-			Doc_PrintLines	( StPl_nDocID,  1, "The few who survived this catastrophe no longer had the strength to rebuild the city.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Die wenigen, die diese Katastrophe überlebten, hatten nunmehr nicht mehr die Kraft, die Stadt wieder aufzubauen.");
 			Doc_PrintLine	( StPl_nDocID,  1, ""		);                                    
 			Doc_PrintLine	( StPl_nDocID,  1, ""		);                                    
-			Doc_PrintLines	( StPl_nDocID,  1, "And thus the fate of JHARKENDAR was sealed.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Und so war das Schicksal von JHARKENDAR besiegelt.");
 
 			if ( SC_Knows_WeaponInAdanosTempel == FALSE)
 			{				
@@ -139,64 +139,64 @@ func void Use_BookstandMaya ()
 	else if (BookstandMayaArt == 3)                  
 	{
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "QUARHODRON's age made it impossible for him to lead our army. And so the priests insisted on their right of command over him.");
+			Doc_PrintLines	( StPl_nDocID,  0, "QUARHODRONs Alter machte es ihm unmöglich, unser Heer zu führen. Und so bestanden die Priester auf ihrem Recht der Befehlsgewalt über ihn.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "They instructed him to resign his office and pass on the sword.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Sie wiesen ihn an, sein Amt niederzulegen und das Schwert weiterzugeben.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  0, "The Council of Five was to determine his successor. However, the warrior caste denied the council a choice.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Der Rat der Fünf sollte seine Nachfolge bestimmen. Doch die Kaste der Krieger verweigerte dem Rat die Wahl.");
 	                
 			                                                                                          
 			Doc_SetMargins	( StPl_nDocID, -1, 30, 20, 275, 20, 1   		);                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "The warriors would no longer submit to the Council of Five and selected his son RHADEMES as their new leader.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Die Krieger wollten sich nicht länger dem Rat der Fünf fügen und erwählten seinen Sohn RHADEMES zu ihrem neuen Anführer.");
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "Out of pride and confidence in his own flesh and blood, QUARHODRON decided to give in to them.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Aus Stolz und Vertrauen in sein eigen Fleisch und Blut erschied QUARHODRON sich dazu, ihnen nachzugeben.");
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "He delivered the sword to his son in the hope that he would wield it with the same strong hand that he had himself.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Er überreichte das Schwert seinem Sohn in der Hoffnung, dass er es mit der gleichen starken Hand führen möge, wie er selbst es einst tat.");
 	} 
 	else if (BookstandMayaArt == 4)  
 	{
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
-			Doc_PrintLines	( StPl_nDocID,  0, "RHADEMES was weak. The will of the sword overcame him and made him its tool.");
+			Doc_PrintLines	( StPl_nDocID,  0, "RHADEMES war schwach. Der Wille des Schwertes übermannte ihn und machte ihn zu seinem Werkzeug.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
-			Doc_PrintLines	( StPl_nDocID,  0, "Not even the healers could alleviate the suffering and the atrocities he brought upon our people in his blindness.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Das Leid und die Grausamkeiten, die er in seiner Verblendung über unser Volk brachte, vermochten nicht einmal mehr die Heiler zu lindern.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
-			Doc_PrintLines	( StPl_nDocID,  0, "The sword quickly recognized that the people were too weak to thwart its plans.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Das Schwert erkannte schnell, das das Volk zu schwach war um seine Pläne zu durchkreuzen.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
-			Doc_PrintLines	( StPl_nDocID,  0, "Only the power of our ancestors could still withstand it.");
+			Doc_PrintLines	( StPl_nDocID,  0, "Allein die Macht unserer Ahnen konnte ihm noch gefährlich werden.");
 			Doc_PrintLine	( StPl_nDocID,  0, ""						);                    
 			                                                                                          
 			Doc_SetMargins	( StPl_nDocID, -1, 30, 20, 275, 20, 1   		);                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "And so it had RHADEMES banish or execute all of the guardians of the dead, thus shattering all hope of release from this Evil.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Und so ließ es RHADEMES alle Totenwächter verbannen oder hinrichten, und machte so jede Hoffnung auf Erlösung von diesem Übel zunichte.");
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "Thus, not a single guardian of the dead was left when the remaining four disempowered leaders of our people made the bitter decision to surrender JHARKENDAR.");
+			Doc_PrintLines	( StPl_nDocID,  1, "So war kein einziger der Totenwächter mehr zugegen, als die verbliebenen vier entmachteten Anführer unseres Volkes den bitteren Entschluss fassten, JHARKENDAR aufzugeben.");
 			Doc_PrintLine	( StPl_nDocID,  1, ""						);                                
-			Doc_PrintLines	( StPl_nDocID,  1, "War raged in the streets as the healers set out to seal the only entrance to our valley forever.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Der Krieg tobte in den Strassen, als die Heiler aufbrachen, um den einzigen Zugang zu unserem Tal für immer zu verschliessen.");
 	}
 	else if (BookstandMayaArt == 5)
 	{
 			Doc_PrintLines	( StPl_nDocID,  0, "");  
-			Doc_PrintLines	( StPl_nDocID,  0, "In these halls QUARHODRON, the high priest KHARDIMON and I myself discussed a way to defeat RHADEMES and the sword.");
+			Doc_PrintLines	( StPl_nDocID,  0, "QUARHODRON, der Hohepriester KHARDIMON und ich selbst berieten in diesen Hallen über einen Weg, RHADEMES und das Schwert zu bezwingen.");
 			Doc_PrintLines	( StPl_nDocID,  0, "");  
-			Doc_PrintLines	( StPl_nDocID,  0, "QUARHODRON and KHARDIMON were of the opinion that RHADEMES could be defeated in battle with united strength. But I knew the power of the sword too well to believe that possible.");
+			Doc_PrintLines	( StPl_nDocID,  0, "QUARHODRON und KHARDIMON waren der Meinung, RHADEMES mit vereinten Kräften im Kampf besiegen zu können. Doch ich kannte die Macht des Schwertes zu gut, um daran glauben zu können.");
 			Doc_PrintLines	( StPl_nDocID,  0, "");	
-			Doc_PrintLines	( StPl_nDocID,  0, "So I made use of my right to veto the decision of the others. I decided instead to overcome RHADAMES with a ruse.");			
+			Doc_PrintLines	( StPl_nDocID,  0, "So machte ich von meinem Recht Gebrauch, die Entscheidung der beiden anderen zu überstimmen. Ich beschloß stattdessen, RHADEMES mit einer List zu überwinden.");			
 
 			Doc_SetMargins	( StPl_nDocID, -1, 30, 20, 275, 20, 1   		);                                
 			Doc_PrintLines	( StPl_nDocID,  1, ""		);  
 
-			Doc_PrintLines	( StPl_nDocID,  1, "QUARHODRON obeyed the decison of the Council. He proceeded to the temple of Adanos and sent for his son.");                   
+			Doc_PrintLines	( StPl_nDocID,  1, "QUARHODRON folgte der Entscheidung des Rates. Er begab sich in den Tempel Adanos und schickte nach seinem Sohn.");                   
 			Doc_PrintLines	( StPl_nDocID,  1, "");  
-			Doc_PrintLines	( StPl_nDocID,  1, "His son's hatred had taken such form that RHADEMES stormed the temple in a wild frenzy to execute his father.");                
+			Doc_PrintLines	( StPl_nDocID,  1, "Der Hass seines Sohnes hatte schon solche Gestalt angenommen, daß RHADEMES in wilder Raserei in den Tempel stürmte, um seinen Vater zu richten.");                
 			Doc_PrintLines	( StPl_nDocID,  1, "");  
-			Doc_PrintLines	( StPl_nDocID,  1, "He only recognized our plans when it was too late for him.");
+			Doc_PrintLines	( StPl_nDocID,  1, "Er erkannte unsere Pläne erst, als es für ihn zu spät war.");
 			Doc_PrintLines	( StPl_nDocID,  1, ""); 
-			Doc_PrintLines	( StPl_nDocID,  1, "QUARHODRON closed the holy chambers of the temple behind him and RHADEMES was trapped in the temple for all time."); 
+			Doc_PrintLines	( StPl_nDocID,  1, "QUARHODRON verschloss die heiligen Kammern des Tempels hinter sich, und RHADEMES war für alle Zeiten im Tempel gefangen."); 
 			
 			Doc_PrintLines	( StPl_nDocID,  1, "");  
 			Doc_PrintLines	( StPl_nDocID,  1, "");
@@ -236,7 +236,7 @@ func void InitUse_BookstandMaya ()
 				Doc_PrintLines	( StPl_nDocID,  0, "Ihdah Zanshen");	
 				Doc_PrintLines	( StPl_nDocID,  0, "");	
 				Doc_PrintLines	( StPl_nDocID,  0, "");	
-				Doc_PrintLines	( StPl_nDocID,  0, "Fjewheege Egadegsmkd Ygec slaje ");	
+				Doc_PrintLines	( StPl_nDocID,  0, "Fjewheege Egadegsmkd Ygec slaje");	
 				Doc_PrintLines	( StPl_nDocID,  0, "");
 				Doc_PrintLines	( StPl_nDocID,  0, "Esfj ewzbfujbwe Iuhdfb");				                                                                                          
 					                                                                                          
@@ -252,7 +252,7 @@ func void InitUse_BookstandMaya ()
 				Doc_PrintLines	( StPl_nDocID,  1, "Wokan fadudeksJuh" );
 				Doc_PrintLines	( StPl_nDocID,  1, "");	
 				Doc_PrintLines	( StPl_nDocID,  1, "");	
-				Doc_PrintLines	( StPl_nDocID,  1, "Jhdy funikha ");
+				Doc_PrintLines	( StPl_nDocID,  1, "Jhdy funikha");
 				Doc_PrintLines	( StPl_nDocID,  1, "");	
 				Doc_PrintLines	( StPl_nDocID,  1, "Ehnep Fhika Oiritan");	
 				Doc_PrintLines	( StPl_nDocID,  1, "Oiritan Gkoropjia Onham");	
@@ -261,7 +261,7 @@ func void InitUse_BookstandMaya ()
 				Doc_PrintLines	( StPl_nDocID,  1, "Filiothak Juhama Penn");	
 				Doc_PrintLines	( StPl_nDocID,  1, "Vorsiehal Kiman Sik");	
 				Doc_PrintLines	( StPl_nDocID,  1, "");	
-				Doc_PrintLines	( StPl_nDocID,  1, "Fjewheege Egdgsmkd Ygc slje ");	
+				Doc_PrintLines	( StPl_nDocID,  1, "Fjewheege Egdgsmkd Ygc slje");	
 				Doc_PrintLines	( StPl_nDocID,  1, "");	
 				Doc_PrintLines	( StPl_nDocID,  1, "");
 				Doc_PrintLines	( StPl_nDocID,  1, "Oznishdz gdo sek ie");

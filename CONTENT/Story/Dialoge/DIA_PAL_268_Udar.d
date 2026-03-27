@@ -48,9 +48,9 @@ FUNC INT DIA_Udar_Hello_Condition()
 };
 FUNC VOID DIA_Udar_Hello_Info()
 {	
-	AI_Output	(self ,other,"DIA_Udar_Hello_09_00");//You had damned luck when you came in. I very nearly shot you.
-	AI_Output	(other,self ,"DIA_Udar_Hello_15_01");//Then I guess I should be glad that you have such keen eyesight.
-	AI_Output	(self ,other,"DIA_Udar_Hello_09_02");//Save your breath. Talk to Sengrath if you want something.
+	AI_Output	(self ,other,"DIA_Udar_Hello_09_00");//Du hattest verdammtes Glück, als du reingekommen bist. Um ein Haar hätte ich dich erschossen.
+	AI_Output	(other,self ,"DIA_Udar_Hello_15_01");//Dann sollte ich wohl froh sein, dass du so gute Augen hast.
+	AI_Output	(self ,other,"DIA_Udar_Hello_09_02");//Spar dir deine Sprüche. Rede mit Sengrath, wenn du was willst.
 	
 	AI_StopProcessInfos (self);
 };
@@ -65,7 +65,7 @@ INSTANCE DIA_Udar_YouAreBest (C_INFO)
 	condition	= DIA_Udar_YouAreBest_Condition;
 	information	= DIA_Udar_YouAreBest_Info;
 	permanent	= FALSE;
-	Description = "I heard that you are the BEST crossbowman...";
+	Description = "Ich habe gehört, du seist der BESTE Armbrustschütze...";
 };                       
 
 FUNC INT DIA_Udar_YouAreBest_Condition()
@@ -93,7 +93,7 @@ INSTANCE DIA_Udar_TeachMe (C_INFO)
 	condition	= DIA_Udar_TeachMe_Condition;
 	information	= DIA_Udar_TeachME_Info;
 	permanent	= FALSE;
-	Description = "Teach me how to shoot a crossbow..";
+	Description = "Bring mir Armbrustschießen bei.";
 };                       
 
 FUNC INT DIA_Udar_TeachMe_Condition()
@@ -123,7 +123,7 @@ INSTANCE DIA_Udar_ImGood (C_INFO)
 	condition	= DIA_Udar_ImGood_Condition;
 	information	= DIA_Udar_ImGood_Info;
 	permanent	= FALSE;
-	Description = "I am the greatest.";
+	Description = "Ich bin der Größte.";
 };                       
 
 FUNC INT DIA_Udar_ImGood_Condition()
@@ -141,7 +141,7 @@ FUNC VOID DIA_Udar_ImGood_Info()
 	AI_Output	(self ,other,"DIA_Udar_ImGood_09_02");	//Well, if you want to learn, then I'll help you.
 	
 	Udar_TeachPlayer = TRUE;
-	B_LogEntry		(TOPIC_Teacher_OC, "Udar can teach me to use a crossbow."); 
+	B_LogEntry		(TOPIC_Teacher_OC, "Udar ist kann mich im Umgang mit der Armbrust unterweisen"); 
 };
 
 //***********************************
@@ -155,7 +155,7 @@ INSTANCE DIA_Udar_Teach (C_INFO)
 	condition	= DIA_Udar_Teach_Condition;
 	information	= DIA_Udar_Teach_Info;
 	permanent	= TRUE;
-	Description = "I want to learn from you.";
+	Description = "Ich will von Dir lernen.";
 };                       
 
 FUNC INT DIA_Udar_Teach_Condition()
@@ -235,7 +235,7 @@ INSTANCE DIA_Udar_Perm (C_INFO)
 	condition	= DIA_Udar_Perm_Condition;
 	information	= DIA_Udar_Perm_Info;
 	permanent	= FALSE;
-	Description = "How are things in the castle?";
+	Description = "Wie sieht's in der Burg aus?";
 };                       
 FUNC INT DIA_Udar_Perm_Condition()
 {
@@ -261,7 +261,7 @@ INSTANCE DIA_Udar_Ring (C_INFO)
 	condition	= DIA_Udar_Ring_Condition;
 	information	= DIA_Udar_Ring_Info;
 	permanent	= FALSE;
-	Description = "Here, I bring you Tengron's ring...";
+	Description = "Ich bringe dir Tengrons Ring...";
 };                       
 FUNC INT DIA_Udar_Ring_Condition()
 {
@@ -360,7 +360,7 @@ instance DIA_Udar_Sengrath		(C_INFO)
 	condition	 = 	DIA_Udar_Sengrath_Condition;
 	information	 = 	DIA_Udar_Sengrath_Info;
 
-	description	 = 	"Weren't there two of you sentinels up here?";
+	description	 = 	"Wart ihr hier oben nicht zwei Wachposten?";
 };
 
 func int DIA_Udar_Sengrath_Condition ()
@@ -384,7 +384,7 @@ func void DIA_Udar_Sengrath_Info ()
 
 	Log_CreateTopic (TOPIC_Sengrath_Missing, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Sengrath_Missing, LOG_RUNNING);
-	B_LogEntry (TOPIC_Sengrath_Missing,"Udar, the guardsman at the castle, misses his pal Sengrath. The last time he saw him was late one night, and he was heading for the orc fence to get back his crossbow."); 
+	B_LogEntry (TOPIC_Sengrath_Missing,"Udar, der Wachposten in der Burg vermisst seinen Freund Sengrath. Das letzte, was er von sah, ist, dass er in die Nacht verschwand in Richtung Orkzaun um seine verlorene Armbrust wieder zu holen."); 
 };
 
 
@@ -398,7 +398,7 @@ instance DIA_Udar_SENGRATHGEFUNDEN		(C_INFO)
 	condition	 = 	DIA_Udar_SENGRATHGEFUNDEN_Condition;
 	information	 = 	DIA_Udar_SENGRATHGEFUNDEN_Info;
 
-	description	 = 	"I've found Sengrath.";
+	description	 = 	"Ich habe Sengrath gefunden.";
 };
 
 func int DIA_Udar_SENGRATHGEFUNDEN_Condition ()

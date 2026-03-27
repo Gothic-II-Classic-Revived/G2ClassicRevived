@@ -11,7 +11,7 @@ const int	REV_Value_2H_Hammer_Holy				=	3000;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_HAMMER_HOLY (C_Item)
 {	
-	name 				=	"Sacred Hammer";  
+	name 				=	"Heiliger Hammer";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_MISSION|ITEM_2HD_AXE;	

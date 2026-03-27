@@ -1,34 +1,34 @@
 // *******************
 // LOG_Topic Constants 
 // -------------------
-// (f�r LOG_NOTE)
+// (fr LOG_NOTE)
 // *******************
-// ------ H�ndler ------
-const string	TOPIC_Trader_OC				=   "Trade in the castle.";
-const string	TOPIC_CityTrader			=	"Trade in Khorinis.";
-const string	Topic_OutTrader				=	"Trade in the outer world.";
-const string	Topic_SoldierTrader			=	"Trade on Onar's farm.";
+// ------ Hndler ------
+const string	TOPIC_Trader_OC				=   "Händler in der Burg.";
+const string	TOPIC_CityTrader			=	"Händler in Khorinis.";
+const string	Topic_OutTrader				=	"Händler der Außenwelt";
+const string	Topic_SoldierTrader			=	"Händler auf Onar's Hof.";
 
 
 // ------ Lehrer ------
-const string	TOPIC_Teacher				=	"Learning.";
-const string	TOPIC_Teacher_OC			=   "Learning in the castle.";
-const string	Topic_SoldierTeacher		=	"Learning on Onar's farm.";
-const string	Topic_OutTeacher			=	"Learning in the outer world.";
-const string	TOPIC_CityTeacher			=	"Learning in Khorinis.";
+const string	TOPIC_Teacher				=	"Lehrer";
+const string	TOPIC_Teacher_OC			=   "Lehrer in der Burg";
+const string	Topic_SoldierTeacher		=	"Lehrer auf Onar's Hof.";
+const string	Topic_OutTeacher			=	"Lehrer der Außenwelt";
+const string	TOPIC_CityTeacher			=	"Lehrer in Khorinis.";
 //ADDON
-const string	TOPIC_Addon_KDWTeacher		=	"Learning from the Water Mages";
+const string	TOPIC_Addon_KDWTeacher		=	"Lehrer bei den Wassermagiern";
 
 // ------ Micro - Talente ------
-const string	TOPIC_TalentSmith			=	"Forging";
-const string	TOPIC_TalentRunes			=	"Runes";
-const string	TOPIC_TalentAlchemy			=	"Potions";
-const string	TOPIC_TalentAnimalTrophy	=	"Animal Processing";
-const string	TOPIC_TalentMagicCircle		= 	"The Circles of Magic";
-const string	TOPIC_WispDetector			= 	"The searching will-o'-the-wisp";
-const string	TOPIC_Language				= 	"The language of the builders";
+const string	TOPIC_TalentSmith			=	"Das Schmieden";
+const string	TOPIC_TalentRunes			=	"Die Runen";
+const string	TOPIC_TalentAlchemy			=	"Tränke";
+const string	TOPIC_TalentAnimalTrophy	=	"Die Tierverwertung";
+const string	TOPIC_TalentMagicCircle		= 	"Die Kreise der Magie";
+const string	TOPIC_WispDetector			= 	"Das suchende Irrlicht";
+const string	TOPIC_Language				= 	"Die Sprache der Erbauer";
 
 // ------ Sonstiges ------
-const string	Topic_Bonus					=	"Specials"; //z.B. t�glich essen abholen...
-const string	Topic_Diebesgilde			=	"Thieves' Guild"; 
+const string	Topic_Bonus					=	"Besonderes"; //z.B. tglich essen abholen...
+const string	Topic_Diebesgilde			=	"Diebesgilde"; 
 

@@ -49,7 +49,7 @@ FUNC VOID DIA_Godar_Hello_Info()
 };
 
 //*********************************************************************
-//	Wo kommt ihr �berhaupt her? 
+//	Wo kommt ihr berhaupt her? 
 //*********************************************************************
 INSTANCE DIA_Godar_ComeFrom   (C_INFO)
 {
@@ -58,7 +58,7 @@ INSTANCE DIA_Godar_ComeFrom   (C_INFO)
 	condition   = DIA_Godar_ComeFrom_Condition;
 	information = DIA_Godar_ComeFrom_Info;
 	permanent   = FALSE;
-	description	= "Where do you come from?";
+	description	= "Wo kommt ihr her?";
 };
 
 FUNC INT DIA_Godar_ComeFrom_Condition()
@@ -72,9 +72,9 @@ FUNC VOID DIA_Godar_ComeFrom_Info()
 	AI_Output (self ,other,"DIA_Godar_ComeFrom_13_01"); //We come from... eh, from the city.
 	
 	Info_ClearChoices (DIA_Godar_ComeFrom);
-	Info_AddChoice (DIA_Godar_ComeFrom,"You're bandits!",DIA_Godar_ComeFrom_Bandits);
-	Info_AddChoice (DIA_Godar_ComeFrom,"Why have I never seen you in town before?",DIA_Godar_ComeFrom_NotCity);
-	Info_AddChoice (DIA_Godar_ComeFrom,"I see. From the city, then.",DIA_Godar_ComeFrom_Understand);
+	Info_AddChoice (DIA_Godar_ComeFrom,"Ihr seid Banditen!",DIA_Godar_ComeFrom_Bandits);
+	Info_AddChoice (DIA_Godar_ComeFrom,"Wieso habe ich euch noch nie in der Stadt gesehen?",DIA_Godar_ComeFrom_NotCity);
+	Info_AddChoice (DIA_Godar_ComeFrom,"So so. Aus der Stadt also.",DIA_Godar_ComeFrom_Understand);
 };
 
 FUNC VOID DIA_Godar_ComeFrom_Bandits ()
@@ -83,8 +83,8 @@ FUNC VOID DIA_Godar_ComeFrom_Bandits ()
 	AI_Output (self ,other,"DIA_Godar_ComeFrom_Bandits_13_01"); //Careful! You're biting off more than you can chew!
 	
 	Info_ClearChoices (DIA_Godar_ComeFrom);
-	Info_AddChoice (DIA_Godar_ComeFrom,"Relax. I won't rat you out.",DIA_Godar_ComeFrom_Bandits_KeepCalm);
-	Info_AddChoice (DIA_Godar_ComeFrom,"You can't scare me.",DIA_Godar_ComeFrom_Bandits_NoFear);
+	Info_AddChoice (DIA_Godar_ComeFrom,"Entspann dich. Ich verpfeiff dich nicht.",DIA_Godar_ComeFrom_Bandits_KeepCalm);
+	Info_AddChoice (DIA_Godar_ComeFrom,"Du kannst mir keine Angst machen.",DIA_Godar_ComeFrom_Bandits_NoFear);
 };
 
 FUNC VOID DIA_Godar_ComeFrom_Bandits_KeepCalm ()
@@ -110,8 +110,8 @@ FUNC VOID DIA_Godar_ComeFrom_NotCity ()
 	AI_Output (self ,other,"DIA_Godar_ComeFrom_NotCity_13_01"); //I can't stand people who stick their noses into things that don't concern them, understand?
 	
 	Info_ClearChoices (DIA_Godar_ComeFrom);
-	Info_AddChoice (DIA_Godar_ComeFrom,"Nope.",DIA_Godar_ComeFrom_NotCity_CutThroat);
-	Info_AddChoice (DIA_Godar_ComeFrom,"I see, you come from the city.",DIA_Godar_ComeFrom_NotCity_Forget);
+	Info_AddChoice (DIA_Godar_ComeFrom,"Nein.",DIA_Godar_ComeFrom_NotCity_CutThroat);
+	Info_AddChoice (DIA_Godar_ComeFrom,"Verstanden, ihr kommt aus der Stadt.",DIA_Godar_ComeFrom_NotCity_Forget);
 };
 
 FUNC VOID DIA_Godar_ComeFrom_NotCity_Forget ()
@@ -153,7 +153,7 @@ INSTANCE DIA_Godar_Plan   (C_INFO)
 	condition   = DIA_Godar_Plan_Condition;
 	information = DIA_Godar_Plan_Info;
 	permanent   = FALSE;
-	description	= "What are you doing here?";
+	description	= "Was machst du hier?";
 };
 
 FUNC INT DIA_Godar_Plan_Condition()
@@ -171,7 +171,7 @@ FUNC VOID DIA_Godar_Plan_Info()
 };
 
 //*********************************************************************
-//	Wisst ihr was �ber die Drachen? 
+//	Wisst ihr was ber die Drachen? 
 //*********************************************************************
 INSTANCE DIA_Godar_DragonLore   (C_INFO)
 {
@@ -180,7 +180,7 @@ INSTANCE DIA_Godar_DragonLore   (C_INFO)
 	condition   = DIA_Godar_DragonLore_Condition;
 	information = DIA_Godar_DragonLore_Info;
 	permanent   = FALSE;
-	description	= "What do you know about the dragons?";
+	description	= "Was weißt du über die Drachen?";
 };
 
 FUNC INT DIA_Godar_DragonLore_Condition()
@@ -208,7 +208,7 @@ INSTANCE DIA_Godar_Destination   (C_INFO)
 	condition   = DIA_Godar_Destination_Condition;
 	information = DIA_Godar_Destination_Info;
 	permanent   = FALSE;
-	description	= "Where are you planning to go from here?";
+	description	= "Wo wollt ihr von hier aus hin?";
 };
 
 FUNC INT DIA_Godar_Destination_Condition()
@@ -242,7 +242,7 @@ INSTANCE DIA_Godar_Orks   (C_INFO)
 	condition   = DIA_Godar_Orks_Condition;
 	information = DIA_Godar_Orks_Info;
 	permanent   = FALSE;
-	description	= "What about the orcs?";
+	description	= "Was ist mit den Orks?";
 };
 
 FUNC INT DIA_Godar_Orks_Condition()
@@ -272,7 +272,7 @@ INSTANCE DIA_Godar_Prison   (C_INFO)
 	condition   = DIA_Godar_Prison_Condition;
 	information = DIA_Godar_Prison_Info;
 	permanent   = FALSE;
-	description	= "What were you in the slammer for?";
+	description	= "Weswegen warst du im Knast?";
 };
 
 FUNC INT DIA_Godar_Prison_Condition()
@@ -303,8 +303,8 @@ FUNC VOID DIA_Godar_Prison_Info()
 			AI_Output (self ,other,"DIA_Godar_Prison_13_08"); //I couldn't do anything about it, the guy tripped and broke his neck. Honest!
 			
 			Info_ClearChoices (DIA_Godar_Prison);
-			Info_AddChoice (DIA_Godar_Prison,"Sounds familiar.",DIA_Godar_Prison_Court);
-			Info_AddChoice (DIA_Godar_Prison,"You shouldn't have let yourself get caught.",DIA_Godar_Prison_Pissoff);
+			Info_AddChoice (DIA_Godar_Prison,"Kommt mir bekannt vor.",DIA_Godar_Prison_Court);
+			Info_AddChoice (DIA_Godar_Prison,"Was lässt du dich auch erwischen?",DIA_Godar_Prison_Pissoff);
 		};
 };
 
@@ -338,7 +338,7 @@ INSTANCE DIA_Godar_Hunting   (C_INFO)
 	condition   = DIA_Godar_Hunting_Condition;
 	information = DIA_Godar_Hunting_Info;
 	permanent   = FALSE;
-	description	= "Can you teach me how to hunt?";
+	description	= "Kannst du mir das Jagen beibringen?";
 };
 
 FUNC INT DIA_Godar_Hunting_Condition()
@@ -377,7 +377,7 @@ INSTANCE DIA_Godar_Dragonstuff   (C_INFO)
 	condition   = DIA_Godar_Dragonstuff_Condition;
 	information = DIA_Godar_Dragonstuff_Info;
 	permanent   = TRUE;
-	description	= "Show me how to gut a dragon.";
+	description	= "Zeig mir das Ausnehmen von Drachen.";
 };
 var int Godar_TeachDragonStuff;
 FUNC INT DIA_Godar_Dragonstuff_Condition()
@@ -400,8 +400,8 @@ FUNC VOID DIA_Godar_Dragonstuff_Info()
 	AI_Output (self,other ,"DIA_Godar_Dragonstuff_13_02"); //Well, all right, but that'll cost you 1000 gold coins.
 
 	Info_ClearChoices	(DIA_Godar_Dragonstuff);	
-	Info_AddChoice	(DIA_Godar_Dragonstuff, "It's not worth that much to me.", DIA_Godar_Dragonstuff_nein );
-	Info_AddChoice	(DIA_Godar_Dragonstuff, "That's fair.", DIA_Godar_Dragonstuff_fair );
+	Info_AddChoice	(DIA_Godar_Dragonstuff, "Das ist mir die Sache nicht wert.", DIA_Godar_Dragonstuff_nein );
+	Info_AddChoice	(DIA_Godar_Dragonstuff, "Das ist fair.", DIA_Godar_Dragonstuff_fair );
 
 };
 func void DIA_Godar_Dragonstuff_fair ()
@@ -437,7 +437,7 @@ INSTANCE DIA_Godar_Teach   (C_INFO)
 	condition   = DIA_Godar_Teach_Condition;
 	information = DIA_Godar_Teach_Info;
 	permanent   = TRUE;
-	description	= "Show me how to hunt.";
+	description	= "Zeig mir, wie man jagt.";
 };
 
 FUNC INT DIA_Godar_Teach_Condition()
@@ -465,29 +465,29 @@ FUNC VOID DIA_Godar_Teach_Info()
 		
 			if (Npc_GetTalentSkill (other,NPC_TALENT_SNEAK) == FALSE) 
 			{
-				Info_AddChoice		(DIA_Godar_Teach, B_BuildLearnString("Sneak"	, B_GetLearnCostTalent(other, NPC_TALENT_SNEAK, 1))		,DIA_Godar_Teach_Thief_Sneak);
+				Info_AddChoice		(DIA_Godar_Teach, B_BuildLearnString("Schleichen"	, B_GetLearnCostTalent(other, NPC_TALENT_SNEAK, 1))		,DIA_Godar_Teach_Thief_Sneak);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Godar_Teach_TROPHYS_Teeth);
+				Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Zähne reissen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Godar_Teach_TROPHYS_Teeth);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Bloodfly's stinger",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFSting)),  DIA_Godar_Teach_TROPHYS_BFSting);
+				Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Blutfliegenstachel",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFSting)),  DIA_Godar_Teach_TROPHYS_BFSting);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Bloodfly's wings",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Godar_Teach_TROPHYS_BFWing);
+				Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Blutfliegenflügel",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Godar_Teach_TROPHYS_BFWing);
 			};
 			if (Godar_TeachDragonStuff == TRUE)
 			{
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonScale] == FALSE)
 				{ 
-					Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Remove dragon scales",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DragonScale)),  DIA_Godar_Teach_TROPHYS_DragonScale);
+					Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Drachenschuppen ziehen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DragonScale)),  DIA_Godar_Teach_TROPHYS_DragonScale);
 				};
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonBlood] == FALSE)
 				{ 
-					Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Collect dragon blood",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DragonBlood)), DIA_Godar_Teach_TROPHYS_DragonBlood);
+					Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Drachenblut zapfen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DragonBlood)), DIA_Godar_Teach_TROPHYS_DragonBlood);
 				};
 			};
 		}
@@ -568,7 +568,7 @@ INSTANCE DIA_Godar_AllDragonsDead   (C_INFO)
 	condition   = DIA_Godar_AllDragonsDead_Condition;
 	information = DIA_Godar_AllDragonsDead_Info;
 	permanent   = FALSE;
-	description	= "I've killed all the dragons.";
+	description	= "Ich hab alle Drachen getötet.";
 				
 };
 

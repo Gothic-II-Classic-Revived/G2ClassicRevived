@@ -112,7 +112,7 @@ const int	REV_Value_2H_MageStaff_Great_01			=	2000;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_STAFF_01 (C_Item)
 {	
-	name 				=	"Battle Staff";
+	name 				=	"Kampfstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -137,7 +137,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_STAFF_02 (C_Item)
 {	
-	name 				=	"Judgment Staff";
+	name 				=	"Richtstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -162,7 +162,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_STAFF_03 (C_Item)
 {	
-	name 				=	"Priest's Staff";
+	name 				=	"Priesterstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -188,7 +188,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_01 (C_Item)
 {	
-	name 				=	"Fire Novice's Quarterstaff";
+	name 				=	"Feuernovizenkampfstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -213,7 +213,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_02 (C_Item)
 {	
-	name 				=	"Ring of Water' Quarterstaff";
+	name 				=	"Kampfstab des 'Rings des Wassers'";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -243,7 +243,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_02 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_STAFF_YBERION (C_Item)
 {
-	name 				=	"Staff of Light";
+	name 				=	"Stab des Lichts";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -270,7 +270,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_YBERION (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_STAFF_JUDGE (C_Item)
 {
-	name 				=	"Scepter";
+	name 				=	"Herrscherstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -303,7 +303,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_JUDGE (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 {
-	name 				=	"Arcane Quarterstaff";
+	name 				=	"Arkankampfstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -330,7 +330,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_02 (C_Item)
 {
-	name 				=	"Water Quarterstaff";
+	name 				=	"Wasserkampfstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -357,7 +357,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03 (C_Item)
 {
-	name 				=	"Fire Quarterstaff";
+	name 				=	"Feuerkampfstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -385,7 +385,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 {
-	name 				=	"Scholar's Staff";
+	name 				=	"Gelehrtenstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -412,7 +412,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_02 (C_Item)
 {
-	name 				=	"Water Mage's Staff";
+	name 				=	"Wassermagierstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -439,7 +439,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_03 (C_Item)
 {
-	name 				=	"Fire Mage's Staff";
+	name 				=	"Feuermagierstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -467,7 +467,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 {
-	name 				=	"Staff of Enchantment";
+	name 				=	"Zauberstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -494,7 +494,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_02 (C_Item)
 {
-	name 				=	"Staff of Water";
+	name 				=	"Wasserstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -521,7 +521,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_03 (C_Item)
 {
-	name 				=	"Staff of Fire";
+	name 				=	"Feuerstab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -549,7 +549,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 {
-	name 				=	"Eclipse";
+	name 				=	"Eklipse";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -576,7 +576,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_02 (C_Item)
 {
-	name 				=	"Typhoon";
+	name 				=	"Taifun";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -635,7 +635,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GREAT_01 (C_Item)
 {
-	name 				=	"Magic Staff";
+	name 				=	"Magischer Stab";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;

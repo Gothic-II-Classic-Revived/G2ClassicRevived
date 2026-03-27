@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_SwampZombie(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Swamp Corpse";
+	name							=	"Sumpfleiche";
 	guild							=	GIL_ZOMBIE;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ZOMBIE;
 

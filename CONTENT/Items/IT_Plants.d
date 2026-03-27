@@ -33,7 +33,7 @@ const int	Value_Planeberry		=	10;		const int	HP_Planeberry		=	5;
 
 INSTANCE ItPl_Weed(C_Item)
 {	
-	name 				=	"Weeds";
+	name 				=	"Unkraut";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -44,7 +44,7 @@ INSTANCE ItPl_Weed(C_Item)
 	material 			=	MAT_LEATHER;
 
 	on_state[0]			=	Use_Beet;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -56,7 +56,7 @@ INSTANCE ItPl_Weed(C_Item)
 
 INSTANCE ItPl_Beet (C_Item)
 {	
-	name 				=	"Turnip";
+	name 				=	"Feldr√ºbe";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -66,7 +66,7 @@ INSTANCE ItPl_Beet (C_Item)
 	visual 				=	"ItPl_Beet.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Beet;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -84,7 +84,7 @@ func void Use_Beet ()
 /******************************************************************************************/	
 INSTANCE ItPl_SwampHerb(C_Item)
 {	
-	name 				=	"Swampweed";
+	name 				=	"Sumpfkraut";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -94,7 +94,7 @@ INSTANCE ItPl_SwampHerb(C_Item)
 	visual 				=	"ItPl_SwampHerb.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_SwampHerb;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -113,7 +113,7 @@ INSTANCE ItPl_SwampHerb(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Mana_Herb_01(C_Item)
 {	
-	name 				=	"Fire Nettle";
+	name 				=	"Feuernessel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -123,7 +123,7 @@ INSTANCE ItPl_Mana_Herb_01(C_Item)
 	visual 				=	"REV_ITPL_MANAPLANT_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mana_Herb_01;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -141,7 +141,7 @@ INSTANCE ItPl_Mana_Herb_01(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Mana_Herb_02(C_Item)
 {	
-	name 				=	"Fireweed";
+	name 				=	"Feuerkraut";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -151,7 +151,7 @@ INSTANCE ItPl_Mana_Herb_02(C_Item)
 	visual 				=	"REV_ITPL_MANAPLANT_02.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mana_Herb_02;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -169,7 +169,7 @@ INSTANCE ItPl_Mana_Herb_02(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Mana_Herb_03(C_Item)
 {	
-	name 				=	"Fire Root";
+	name 				=	"Feuerwurzel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -179,7 +179,7 @@ INSTANCE ItPl_Mana_Herb_03(C_Item)
 	visual 				=	"REV_ITPL_MANAPLANT_03.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mana_Herb_03;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -197,7 +197,7 @@ INSTANCE ItPl_Mana_Herb_03(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Health_Herb_01(C_Item)
 {	
-	name 				=	"Healing Plant";
+	name 				=	"Heilpflanze";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -208,7 +208,7 @@ INSTANCE ItPl_Health_Herb_01(C_Item)
 
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Health_Herb_01;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -226,7 +226,7 @@ INSTANCE ItPl_Health_Herb_01(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Health_Herb_02(C_Item)
 {	
-	name 				=	"Healing Herb";
+	name 				=	"Heilkraut";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -237,7 +237,7 @@ INSTANCE ItPl_Health_Herb_02(C_Item)
 
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Health_Herb_02;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
@@ -254,7 +254,7 @@ INSTANCE ItPl_Health_Herb_02(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Health_Herb_03(C_Item)
 {	
-	name 				=	"Healing Root";
+	name 				=	"Heilwurzel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -265,7 +265,7 @@ INSTANCE ItPl_Health_Herb_03(C_Item)
 
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Health_Herb_03;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Health_Herb_03;
@@ -280,7 +280,7 @@ INSTANCE ItPl_Health_Herb_03(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Dex_Herb_01(C_Item)
 {	
-	name 				=	"Goblin Berries";
+	name 				=	"Goblin Beeren";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -290,7 +290,7 @@ INSTANCE ItPl_Dex_Herb_01(C_Item)
 	visual 				=	"ItPl_Dex_Herb_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Dex_Herb_01;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -308,7 +308,7 @@ INSTANCE ItPl_Dex_Herb_01(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Strength_Herb_01(C_Item)
 {	
-	name 				=	"Dragonroot";
+	name 				=	"Drachenwurzel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -318,7 +318,7 @@ INSTANCE ItPl_Strength_Herb_01(C_Item)
 	visual 				=	"ItPl_Strength_Herb_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Strength_Herb_01;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 
@@ -338,7 +338,7 @@ INSTANCE ItPl_Strength_Herb_01(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Speed_Herb_01(C_Item)
 {	
-	name 				=	"Snapperweed";
+	name 				=	"Snapperkraut";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -348,7 +348,7 @@ INSTANCE ItPl_Speed_Herb_01(C_Item)
 	visual 				=	"REV_ITPL_SPEEDPLANT.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Speed_Herb_01;      
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	TEXT[3]				= 	NAME_Sec_Duration;		
     COUNT[3]			= 	Speed_Boost /1000;   
@@ -370,7 +370,7 @@ INSTANCE ItPl_Speed_Herb_01(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Mushroom_01(C_Item)
 {	
-	name 				=	"Dark Mushroom";
+	name 				=	"Dunkelpilz";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -380,7 +380,7 @@ INSTANCE ItPl_Mushroom_01(C_Item)
 	visual 				=	"ItPl_Mushroom_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mushroom_01;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	
@@ -420,7 +420,7 @@ INSTANCE ItPl_Mushroom_01(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Mushroom_02(C_Item)
 {	
-	name 				=	"Digger Meat";
+	name 				=	"Buddlerfleisch";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -430,7 +430,7 @@ INSTANCE ItPl_Mushroom_02(C_Item)
 	visual 				=	"ItPl_Mushroom_02.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mushroom_02;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
@@ -469,7 +469,7 @@ INSTANCE ItPl_Mushroom_02(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Blueplant(C_Item)
 {	
-	name 				=	"Blue Elder";
+	name 				=	"Blauflieder";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -479,7 +479,7 @@ INSTANCE ItPl_Blueplant(C_Item)
 	visual 				=	"ItPl_Blueplant.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Blueplant;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
@@ -499,7 +499,7 @@ INSTANCE ItPl_Blueplant(C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Forestberry (C_Item)
 {	
-	name 				=	"Woodland Berry";
+	name 				=	"Waldbeere";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -508,7 +508,7 @@ INSTANCE ItPl_Forestberry (C_Item)
 	
 	visual 				=	"ItPl_Forestberry.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	Use_Forestberry;
 
 	description			= 	name;
@@ -528,7 +528,7 @@ INSTANCE ItPl_Forestberry (C_Item)
 /******************************************************************************************/
 INSTANCE ItPl_Planeberry (C_Item)
 {	
-	name 				=	"Meadow Berry";
+	name 				=	"Weidenbeere";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -537,7 +537,7 @@ INSTANCE ItPl_Planeberry (C_Item)
 	
 	visual 				=	"ItPl_Planeberry.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	Use_Planeberry;
 
 	description			= 	name;
@@ -558,13 +558,13 @@ INSTANCE ItPl_Planeberry (C_Item)
 
 
 //******************************************************************************************
-//		Pflanze zum brauen von tempor‰ren und permanten Tr‰nken
+//		Pflanze zum brauen von temporren und permanten Trnken
 //******************************************************************************************
 
 
 INSTANCE ItPl_Temp_Herb(C_Item)
 {	
-	name 				=	"Meadow Knotweed";
+	name 				=	"Feldkn√∂terich";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;	
@@ -573,7 +573,7 @@ INSTANCE ItPl_Temp_Herb(C_Item)
 
 	visual 				=	"REV_ITPL_TEMPPLANT.3ds";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	Use_Temp_Herb;
 
 	description			= 	name;
@@ -592,7 +592,7 @@ INSTANCE ItPl_Temp_Herb(C_Item)
 
 INSTANCE ItPl_Perm_Herb(C_Item)
 {	
-	name 				=	"King's Sorrel";
+	name 				=	"Kronst√∂ckl";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;	
@@ -601,7 +601,7 @@ INSTANCE ItPl_Perm_Herb(C_Item)
 
 	visual 				=	"REV_ITPL_PERMPLANT.3ds";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	Use_Perm_Herb;
 
 	description			= 	name;

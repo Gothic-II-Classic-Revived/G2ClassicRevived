@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Dragon_Ice(C_Npc)			
 {
 	//----- Monster ----
-	name							= "Ice Dragon";
+	name							= "Eisdrache";
 	guild							= GIL_DRAGON;
 	aivar[AIV_MM_REAL_ID]			= ID_DRAGON_ICE;
 	
@@ -26,7 +26,7 @@ PROTOTYPE Mst_Default_Dragon_Ice(C_Npc)
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
 	damage		[DAM_INDEX_FIRE]	=	160;
-	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt für Fire+Fly
+	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt fr Fire+Fly
 	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//----- Kampf-Taktik ----	

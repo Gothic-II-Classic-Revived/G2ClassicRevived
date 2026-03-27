@@ -1,7 +1,7 @@
 instance NONE_1000_Gordon (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Gordon Ramsay";
+	name 		= "Gorden";
 	guild 		= GIL_NONE;
 	id 			= 1000;
 	voice 		= 7;

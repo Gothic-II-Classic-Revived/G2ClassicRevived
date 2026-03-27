@@ -2,7 +2,7 @@
 PROTOTYPE Mst_Shadow_Warrior	(C_NPC)
 {
 	//----- Monster ----
-	name							=	"Shadow Warrior";
+	name							=	"Schattenkrieger";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
 
@@ -67,7 +67,7 @@ INSTANCE Shadow_Warrior	(Mst_Shadow_Warrior)
 
 INSTANCE Shadow_WarriorGeneral	(Mst_Shadow_Warrior)
 {
-	name							=	"Shadow General";
+	name							=	"Schattengeneral";
 	level							=	80;
 
 	//----- Attribute ----	

@@ -46,7 +46,7 @@ func void DIA_Kurgan_HELLO_Info ()
 	AI_Output			(other,self , "DIA_Kurgan_HELLO_15_01"); //What are you trying to tell me?
 	AI_Output			(self ,other, "DIA_Kurgan_HELLO_01_02"); //I mean that the air out here isn't good for your health. The place is just swarming with orcs and monsters.
 	AI_Output			(self ,other, "DIA_Kurgan_HELLO_01_03"); //Not to mention the dragons. It's just a well-intentioned warning.
-	B_LogEntry (TOPIC_Dragonhunter,"A group of Dragon Hunters received me at the entrance to the Valley of Mines. The guys are heavily armed, but I'm afraid they won't make much of an impression on the dragons.");
+	B_LogEntry (TOPIC_Dragonhunter,"Eine Gruppe von Drachenjägern empfing mich am Eingang des Minentals. Die Jungs sind schwer bewaffnet, aber ich fürchte, dass sie keinen grossen Eindruck auf die Drachen machen werden.");
 };
 
 //**************************************************************************
@@ -58,7 +58,7 @@ instance DIA_Kurgan_ELSE		(C_INFO)
 	npc		 	= 	DJG_708_Kurgan;
 	condition	= 	DIA_Kurgan_ELSE_Condition;
 	information	= 	DIA_Kurgan_ELSE_Info;
-	description	= 	"Can you tell me anything I don't know already?";
+	description	= 	"Kannst du mir auch was erzählen, was ich noch nicht weiß?";
 
 };
 
@@ -77,7 +77,7 @@ func void DIA_Kurgan_ELSE_Info ()
 };
 
 //**************************************************************************
-//	Bist du hier der Anf�hrer?
+//	Bist du hier der Anfhrer?
 //**************************************************************************
 
 instance DIA_Kurgan_Leader		(C_INFO)
@@ -85,7 +85,7 @@ instance DIA_Kurgan_Leader		(C_INFO)
 	npc		 	= 	DJG_708_Kurgan;
 	condition	= 	DIA_Kurgan_Leader_Condition;
 	information	= 	DIA_Kurgan_Leader_Info;
-	description	= 	"Are you the boss here?";
+	description	= 	"Bist du hier der Anführer?";
 
 };
 
@@ -104,7 +104,7 @@ func void DIA_Kurgan_Leader_Info ()
 };
 
 //**************************************************************************
-//	Wolltet ihr nicht ein paar Drachen t�ten?
+//	Wolltet ihr nicht ein paar Drachen tten?
 //**************************************************************************
 
 instance DIA_Kurgan_KillDragon		(C_INFO)
@@ -112,7 +112,7 @@ instance DIA_Kurgan_KillDragon		(C_INFO)
 	npc		 	= 	DJG_708_Kurgan;
 	condition	= 	DIA_Kurgan_KillDragon_Condition;
 	information	= 	DIA_Kurgan_KillDragon_Info;
-	description	= 	"So you want to kill dragons?";
+	description	= 	"Ihr wollt also Drachen töten?";
 
 };
 
@@ -137,9 +137,9 @@ func void DIA_Kurgan_KillDragon_Info ()
 	
 	Kurgan_KillDragon_Day = Wld_GetDay(); 
 
-	Info_AddChoice	(DIA_Kurgan_KillDragon, "I'd love to watch you do that, but I've got to be on my way.", DIA_Kurgan_KillDragon_weg );
-	Info_AddChoice	(DIA_Kurgan_KillDragon, "How are you going to get past the orcs?"					, DIA_Kurgan_KillDragon_orks );
-	Info_AddChoice	(DIA_Kurgan_KillDragon, "I think you won't even find a blind sheep.", DIA_Kurgan_KillDragon_spott );
+	Info_AddChoice	(DIA_Kurgan_KillDragon, "Wäre interessant dabei zuzusehen, aber ich muß weiter.", DIA_Kurgan_KillDragon_weg );
+	Info_AddChoice	(DIA_Kurgan_KillDragon, "Wie wollt ihr an den Orks vorbei?"					, DIA_Kurgan_KillDragon_orks );
+	Info_AddChoice	(DIA_Kurgan_KillDragon, "Ich glaube, ihr findet nicht mal ein blindes Schaf.", DIA_Kurgan_KillDragon_spott );
 
 
 };
@@ -177,7 +177,7 @@ instance DIA_Kurgan_SEENDRAGON		(C_INFO)
 	information	 = 	DIA_Kurgan_SEENDRAGON_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Have you seen a dragon yet?";
+	description	 = 	"Hast du schon einen Drachen gesehen?";
 };
 
 func int DIA_Kurgan_SEENDRAGON_Condition ()
@@ -204,7 +204,7 @@ INSTANCE DIA_Kurgan_AllDragonsDead   (C_INFO)
 	condition   = DIA_Kurgan_AllDragonsDead_Condition;
 	information = DIA_Kurgan_AllDragonsDead_Info;
 	permanent   = FALSE;
-	description	= "The dragons are dead.";
+	description	= "Die Drachen sind tot.";
 				
 };
 

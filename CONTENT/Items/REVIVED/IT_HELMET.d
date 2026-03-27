@@ -10,7 +10,7 @@ CONST INT WEAR_CLOAK = 1024;
 
 INSTANCE ITHE_REVIVED_SPECTACLES_01(C_Item)
 {
-	name					=	"Spectacles";
+	name					=	"Brille";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -36,7 +36,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_01(C_Item)
 
 INSTANCE ITHE_REVIVED_SPECTACLES_02(C_Item)
 {
-	name					=	"Spectacles";
+	name					=	"Brille";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -62,7 +62,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_02(C_Item)
 
 INSTANCE ITHE_REVIVED_SPECTACLES_03(C_Item)
 {
-	name					=	"Spectacles";
+	name					=	"Brille";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -88,7 +88,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_03(C_Item)
 
 INSTANCE ITHE_REVIVED_SPECTACLES_04(C_Item)
 {
-	name					=	"Spectacles";
+	name					=	"Brille";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -117,7 +117,7 @@ INSTANCE ITHE_REVIVED_SPECTACLES_04(C_Item)
 //****************************************************************************
 INSTANCE ITHE_REVIVED_KNIGHT(C_Item)
 {
-	name					=	"Old Knight's Helmet";
+	name					=	"Alter Ritterhelm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -143,7 +143,7 @@ INSTANCE ITHE_REVIVED_KNIGHT(C_Item)
 // ******************************************************
 INSTANCE ITHE_REVIVED_DJG_M(C_Item)
 {
-	name					=	"Dragonhunter's Helmet";
+	name					=	"Drachenjägerhelm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -169,7 +169,7 @@ INSTANCE ITHE_REVIVED_DJG_M(C_Item)
 
 INSTANCE ITHE_REVIVED_DJG_H(C_Item)
 {
-	name					=	"Dragonhunter's Helmet";
+	name					=	"Drachenjägerhelm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -195,7 +195,7 @@ INSTANCE ITHE_REVIVED_DJG_H(C_Item)
 // ******************************************************
 INSTANCE ITHE_REVIVED_PIR(C_Item)
 {
-	name					=	"Captain's hat";
+	name					=	"Kapitänsmütze";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -224,7 +224,7 @@ INSTANCE ITHE_REVIVED_PIR(C_Item)
 //****************************************************************************
 INSTANCE ITHE_REVIVED_PAL(C_Item)
 {
-	name					=	"Paladin's Helmet";
+	name					=	"Paladinhelm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -250,7 +250,7 @@ INSTANCE ITHE_REVIVED_PAL(C_Item)
 
 INSTANCE ITHE_REVIVED_01 (C_Item)
 {
-	name					=	"Helmet";
+	name					=	"Helm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;

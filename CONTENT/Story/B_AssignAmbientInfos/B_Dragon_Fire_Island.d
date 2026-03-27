@@ -51,32 +51,32 @@ FUNC INT DIA_Dragon_Fire_Island_Hello_Condition()
 
 FUNC VOID DIA_Dragon_Fire_Island_Hello_Info()
 {	
-	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_00"); //Stay, human. All of my senses tell me that the murderer of my own flesh and blood stands before me.
-	AI_Output			(other, self, "DIA_Dragon_Fire_Island_Hello_15_01"); //Really? Who are you calling a murderer, you hellspawn?
+	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_00"); //Bleib stehen, Mensch. Alle meine Sinne sagen mir, dass der Mörder meines eigenen Fleisch und Blutes vor mir steht.
+	AI_Output			(other, self, "DIA_Dragon_Fire_Island_Hello_15_01"); //So? Wen nennst du hier Mörder, du Ausgeburt der Hölle?
 	
 	if (hero.guild == GIL_DJG)
 	&& (DragonEggCounter >= 7)
 	{
-	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_02"); //Was it not enough for you that you destroyed almost all of our offspring?
+	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_02"); //Dass du fast unsere gesamte Nachkommenschaft vernichtet hast, war dir wohl nicht genug.
 	};
 	
-	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_03"); //You have my brother Feomathar on your conscience, and you will pay for that.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_03"); //Du hast meinen Bruder Feomathar auf dem Gewissen und dafür wirst du bezahlen.
 
 	if (hero.guild == GIL_DJG)
 	&& (DragonEggCounter >= 7)
 	{
-	AI_Output			(other, self, "DIA_Dragon_Fire_Island_Hello_15_04"); //I'll get to the rest of your disgusting brood as well.
-	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_05"); //Arrh. It will be a pleasure for me to burn you alive.
+	AI_Output			(other, self, "DIA_Dragon_Fire_Island_Hello_15_04"); //Den Rest eurer widerlichen Brut werde ich mir auch noch vornehmen.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_05"); //Arrh. Es wird mir ein Vergnügen sein, dich bei lebendigem Leibe zu verbrennen.
 	};
 
-	AI_Output			(other, self, "DIA_Dragon_Fire_Island_Hello_15_06"); //Stop making so much noise. Let's get down to business.
-	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_07"); //You have come far, little human, but you will never leave these halls alive.
+	AI_Output			(other, self, "DIA_Dragon_Fire_Island_Hello_15_06"); //Mach nicht so einen Wind. Lass uns zur Sache kommen.
+	AI_Output			(self, other, "DIA_Dragon_Fire_Island_Hello_20_07"); //Du hast es weit gebracht, kleiner Mensch, aber diese Hallen wirst du nicht mehr lebend verlassen.
 
 	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
 	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);	 
 	AI_StopProcessInfos	(self);
 	
-	B_LogEntry (TOPIC_HallenVonIrdorath,"Another fire dragon. I'm getting fed to the teeth with those beasts. All I want is to get across the chasm that's opening behind the fire dragon."); 
+	B_LogEntry (TOPIC_HallenVonIrdorath,"Noch ein Feuerdrache. So langsam habe ich die Biester satt. Das einzige, was ich will, ist, über den Abgrund zu kommen, der sich hinter dem Feuerdrachen auftut."); 
 
 	DragonTalk_Exit_Free  = FALSE;
 	self.flags =  0;

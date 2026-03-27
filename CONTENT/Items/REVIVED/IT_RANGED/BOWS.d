@@ -109,7 +109,7 @@ const int	REV_Value_Bow_Bosper				=	200;
 //****************************************************************************
 INSTANCE ITRW_REVIVED_BOW_SMALL_01 (C_Item)
 {
-	name 				=	"Short Bow";
+	name 				=	"Kurzbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -134,7 +134,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_SMALL_02 (C_Item)
 {
-	name 				=	"Rider's Bow";
+	name 				=	"Reiterbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -159,7 +159,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_SMALL_03 (C_Item)
 {
-	name 				=	"Field bow";
+	name 				=	"Feldbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -184,7 +184,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_SMALL_04 (C_Item)
 {
-	name 				=	"Hunting Bow";
+	name 				=	"Jagdbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -209,7 +209,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_04 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_SMALL_05 (C_Item)
 {
-	name 				=	"Bone Bow";
+	name 				=	"Knochenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -259,7 +259,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_02 (C_Item)
 {
-	name 				=	"Hedge Bow";
+	name 				=	"Heckenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -284,7 +284,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_03 (C_Item)
 {
-	name 				=	"Willow Bow";
+	name 				=	"Weidenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -309,7 +309,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_04 (C_Item)
 {
-	name 				=	"Oak Bow";
+	name 				=	"Eichenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -334,7 +334,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_04 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_05 (C_Item)
 {
-	name 				=	"Wolfshredder";
+	name 				=	"Wolfsfetzer";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -359,7 +359,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_05 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_06 (C_Item)
 {
-	name 				=	"Wind Breaker";
+	name 				=	"Windbrecher";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -383,7 +383,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_06 (C_Item)
 };
 INSTANCE ITRW_REVIVED_BOW_LONG_07 (C_Item)
 {
-	name 				=	"Army Bow";
+	name 				=	"Armeebogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -408,7 +408,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_07 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_08 (C_Item)
 {
-	name 				=	"Horn Bow";
+	name 				=	"Hornbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -433,7 +433,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_08 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_LONG_09 (C_Item)
 {
-	name 				=	"Nimrod Bow";
+	name 				=	"Nimroder";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -458,7 +458,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_09 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_BOW_WAR_01 (C_Item)
 {
-	name 				=	"War Bow";
+	name 				=	"Kriegsbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -483,7 +483,7 @@ INSTANCE ITRW_REVIVED_BOW_WAR_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_WAR_02 (C_Item)
 {
-	name 				=	"Orc Chaser";
+	name 				=	"Orkhetzer";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -508,7 +508,7 @@ INSTANCE ITRW_REVIVED_BOW_WAR_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_WAR_03 (C_Item)
 {
-	name 				=	"Storm Bow";
+	name 				=	"Sturmbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -533,7 +533,7 @@ INSTANCE ITRW_REVIVED_BOW_WAR_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_WAR_04 (C_Item)
 {
-	name 				=	"Demon Bow";
+	name 				=	"Dämonenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -558,7 +558,7 @@ INSTANCE ITRW_REVIVED_BOW_WAR_04 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_WAR_05 (C_Item)
 {
-	name 				=	"Bow of Death";
+	name 				=	"Todbringer";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -587,7 +587,7 @@ INSTANCE ITRW_REVIVED_BOW_WAR_05 (C_Item)
 //****************************************************************************
 instance ITRW_REVIVED_MAGICARROW (C_Item)
 {
-	name 				=	"Magic arrow";
+	name 				=	"Magischer Pfeil";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_BOW | ITEM_MULTI;
@@ -605,7 +605,7 @@ instance ITRW_REVIVED_MAGICARROW (C_Item)
 };
 instance ITRW_REVIVED_FIREARROW (C_Item)
 {
-	name 				=	"Fire arrow";
+	name 				=	"Feuerpfeil";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_BOW | ITEM_MULTI;
@@ -624,7 +624,7 @@ instance ITRW_REVIVED_FIREARROW (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_BOW_MAGIC_01 (C_Item)
 {
-	name 				=	"Magic Bow";
+	name 				=	"Magischer Bogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -652,7 +652,7 @@ INSTANCE ITRW_REVIVED_BOW_MAGIC_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_FIRE_01 (C_Item)
 {
-	name 				=	"Fire Bow";
+	name 				=	"Feuerbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -686,7 +686,7 @@ INSTANCE ITRW_REVIVED_BOW_FIRE_01 (C_Item)
 //****************************************************************************
 INSTANCE ITRW_REVIVED_BOW_DIEGO (C_Item)
 {
-	name 				= "Diego's Bow";
+	name 				= "Diegos Bogen";
 
 	mainflag 			= ITEM_KAT_FF;
 	flags 				= ITEM_BOW;
@@ -713,7 +713,7 @@ INSTANCE ITRW_REVIVED_BOW_DIEGO (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_WOLF (C_Item)
 {
-	name 				=	"Wolf's Bow";
+	name 				=	"Wolfs Bogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -740,7 +740,7 @@ INSTANCE ITRW_REVIVED_BOW_WOLF (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_CAVALORN (C_Item)
 {
-	name 				=	"Cavalorn's Bow";
+	name 				=	"Cavalorns Bogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -767,7 +767,7 @@ INSTANCE ITRW_REVIVED_BOW_CAVALORN (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_BOSPER (C_Item)
 {
-	name 				=	"Bosper's Bow";
+	name 				=	"Bosper's Bogen.";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;

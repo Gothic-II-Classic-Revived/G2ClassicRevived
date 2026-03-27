@@ -68,7 +68,7 @@ INSTANCE DIA_Igaraz_Wurst(C_INFO)
 	condition	= DIA_Igaraz_Wurst_Condition;
 	information	= DIA_Igaraz_Wurst_Info;
 	permanent	= FALSE;
-	description = "I'm busy distributing sausages.";
+	description = "Ich verteile gerade WÃ¼rste.";
 };                       
 
 FUNC INT DIA_Igaraz_Wurst_Condition()
@@ -109,7 +109,7 @@ INSTANCE DIA_Igaranz_NotWork   (C_INFO)
 	condition   = DIA_Igaraz_NotWork_Condition;
 	information = DIA_Igaraz_NotWork_Info;
 	permanent   = FALSE;
-	description	= "Why aren't you working?";
+	description	= "Warum arbeitest du nicht?";
 };
 FUNC INT DIA_Igaraz_NotWork_Condition()
 {	
@@ -127,7 +127,7 @@ FUNC VOID DIA_Igaraz_NotWork_Info()
 	AI_Output (self ,other,"DIA_Igaranz_NotWork_13_02"); //One day he will choose me - and then I shall take the test of magic and enter the Circle of Fire.
 };
 ///////////////////////////////////////////////////////////////////////
-//Wer sind die Erwählten?
+//Wer sind die Erwhlten?
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Igaranz_Choosen   (C_INFO)
 {
@@ -136,7 +136,7 @@ INSTANCE DIA_Igaranz_Choosen   (C_INFO)
 	condition   = DIA_Igaraz_Choosen_Condition;
 	information = DIA_Igaraz_Choosen_Info;
 	permanent   = TRUE;
-	description	= "Who are the Chosen?";
+	description	= "Wer sind die ErwÃ¤hlten?";
 };
 
 FUNC INT DIA_Igaraz_Choosen_Condition()
@@ -157,8 +157,8 @@ FUNC VOID DIA_Igaraz_Choosen_Info()
 	
 	Info_ClearChoices (DIA_Igaranz_Choosen);
 	Info_AddChoice 	(DIA_Igaranz_Choosen,Dialog_Back,DIA_Igaranz_Choosen_back);
-	Info_AddChoice	(DIA_Igaranz_Choosen,"What is the Test of Magic?",DIA_Igaranz_Choosen_TestOfMagic);
-	Info_AddChoice	(DIA_Igaranz_Choosen,"How can I be chosen?",DIA_Igaranz_Choosen_HowChoosen);
+	Info_AddChoice	(DIA_Igaranz_Choosen,"Was ist die PrÃ¼fung der Magie?",DIA_Igaranz_Choosen_TestOfMagic);
+	Info_AddChoice	(DIA_Igaranz_Choosen,"Wie werde ich erwÃ¤hlt?",DIA_Igaranz_Choosen_HowChoosen);
 };	
 
 FUNC VOID DIA_Igaranz_Choosen_back ()
@@ -180,7 +180,7 @@ FUNC VOID DIA_Igaranz_Choosen_HowChoosen ()
 	AI_Output (self ,other,"DIA_Igaranz_Choosen_HowChoosen_13_01"); //You have no influence on that. Innos alone chooses his novices, and the High Council announces his will.
 };
 ///////////////////////////////////////////////////////////////////////
-//	Erzähl mir was über Innos Lehren
+//	Erzhl mir was ber Innos Lehren
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Igaranz_StudyInnos   (C_INFO)
 {
@@ -189,7 +189,7 @@ INSTANCE DIA_Igaranz_StudyInnos   (C_INFO)
 	condition   = DIA_Igaraz_StudyInnos_Condition;
 	information = DIA_Igaraz_StudyInnos_Info;
 	permanent   = FALSE;
-	description	= "How can I study the scriptures?";
+	description	= "Wie kann ich die Schriften studieren?";
 };
 
 FUNC INT DIA_Igaraz_StudyInnos_Condition()
@@ -209,7 +209,7 @@ FUNC VOID DIA_Igaraz_StudyInnos_Info()
 	AI_Output (self ,other,"DIA_Igaranz_StudyInnos_13_02"); //However, Master Parlan will only give you the key if you have first finished your duties.
 };
 //**************************************************************************
-//	ABSCHNITT 2  DIE PRÜFUNG DER MAGIE 
+//	ABSCHNITT 2  DIE PRFUNG DER MAGIE 
 //**************************************************************************
 ///////////////////////////////////////////////////////////////////////
 //	Info CHOOSEN
@@ -245,7 +245,7 @@ instance DIA_Igaraz_METOO		(C_INFO)
 	condition	 = 	DIA_Igaraz_METOO_Condition;
 	information	 = 	DIA_Igaraz_METOO_Info;
 	permanent	 =  FALSE;
-	description	 = 	"I'm in it, too...";
+	description	 = 	"Ich bin mit von der Partie...";
 };
 var int DIA_Igaraz_METOO_NOPERM ;
 
@@ -268,9 +268,9 @@ func void DIA_Igaraz_METOO_Info ()
 
 	Info_ClearChoices	 (DIA_Igaraz_METOO);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,DIALOG_BACK,DIA_Igaraz_METOO_BACK);
-	Info_AddChoice 		 (DIA_Igaraz_METOO,"Maybe we could work together...",DIA_Igaraz_METOO_HELP);
-	Info_AddChoice 		 (DIA_Igaraz_METOO,"So, found anything out yet?",DIA_Igaraz_METOO_TELL);
-	Info_AddChoice 		 (DIA_Igaraz_METOO,"Have you seen Agon or Ulf?",DIA_Igaraz_METOO_AGON);
+	Info_AddChoice 		 (DIA_Igaraz_METOO,"Vielleicht kÃ¶nnen wir zusammenarbeiten...",DIA_Igaraz_METOO_HELP);
+	Info_AddChoice 		 (DIA_Igaraz_METOO,"Und, schon was rausgefunden?",DIA_Igaraz_METOO_TELL);
+	Info_AddChoice 		 (DIA_Igaraz_METOO,"Hast du Agon oder Ulf gesehen?",DIA_Igaraz_METOO_AGON);
 };
 FUNC VOID DIA_Igaraz_METOO_BACK()
 {
@@ -302,7 +302,7 @@ instance DIA_Igaraz_ADD		(C_INFO)
 	condition	 = 	DIA_Igaraz_ADD_Condition;
 	information	 = 	DIA_Igaraz_ADD_Info;
 	permanent	 =  FALSE;
-	description	 = 	"Do you know anything about a 'living rock'?";
+	description	 = 	"WeiÃŸt du etwas von einem 'lebenden Fels'?";
 };
 func int DIA_Igaraz_ADD_Condition ()
 {	
@@ -330,7 +330,7 @@ func void DIA_Igaraz_ADD_Info ()
 	AI_Output (self, other, "DIA_Igaraz_Add_13_10"); //That's all I'm going to tell you... (sarcastic) It's supposed to be your TEST after all!
 };
 ///////////////////////////////////////////////////////////////////////
-//	Info Perm Prüfung 
+//	Info Perm Prfung 
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Igaraz_Pruefung		(C_INFO)
 {
@@ -338,7 +338,7 @@ instance DIA_Igaraz_Pruefung		(C_INFO)
 	nr			 = 	22;
 	condition	 = 	DIA_Igaraz_Pruefung_Condition;
 	information	 = 	DIA_Igaraz_Pruefung_Info;
-	description	 =  "Have you found out anything new?";
+	description	 =  "Hast du was Neues rausgefunden?";
 };
 func int DIA_Igaraz_Pruefung_Condition ()
 {	
@@ -476,7 +476,7 @@ INSTANCE DIA_Igaranz_TalkAboutBabo   (C_INFO)
 	condition   = DIA_Igaraz_TalkAboutBabo_Condition;
 	information = DIA_Igaraz_TalkAboutBabo_Info;
 	permanent   = FALSE;
-	description = "We need to talk about Babo.";
+	description = "Wir mÃ¼ssen uns mal Ã¼ber Babo unterhalten.";
 };
 FUNC INT DIA_Igaraz_TalkAboutBabo_Condition()
 {
@@ -492,7 +492,7 @@ FUNC VOID DIA_Igaraz_TalkAboutBabo_Info()
 };
 
 //**************************************************************************
-//	Du hast etwas was Babo gehört
+//	Du hast etwas was Babo gehrt
 //**************************************************************************
 INSTANCE DIA_Igaranz_BabosBelongings   (C_INFO)
 {
@@ -501,7 +501,7 @@ INSTANCE DIA_Igaranz_BabosBelongings   (C_INFO)
 	condition   = DIA_Igaraz_BabosBelongings_Condition;
 	information = DIA_Igaraz_BabosBelongings_Info;
 	permanent   = FALSE;
-	description = "You've got something which belongs to Babo.";
+	description = "Du hast etwas, was Babo gehÃ¶rt.";
 };
 FUNC INT DIA_Igaraz_BabosBelongings_Condition()
 {
@@ -528,7 +528,7 @@ INSTANCE DIA_Igaranz_WhereDocs   (C_INFO)
 	condition   = DIA_Igaraz_WhereDocs_Condition;
 	information = DIA_Igaraz_WhereDocs_Info;
 	permanent   = FALSE;
-	description = "Where have you got the papers?";
+	description = "Wo hast du die Papiere?";
 };
 FUNC INT DIA_Igaraz_WhereDocs_Condition()
 {
@@ -546,7 +546,7 @@ FUNC VOID DIA_Igaraz_WhereDocs_Info()
 };
 
 //**************************************************************************
-//	Was soll Babo für dich tun?
+//	Was soll Babo fr dich tun?
 //**************************************************************************
 INSTANCE DIA_Igaranz_BabosJob   (C_INFO)
 {
@@ -555,7 +555,7 @@ INSTANCE DIA_Igaranz_BabosJob   (C_INFO)
 	condition   = DIA_Igaraz_BabosJob_Condition;
 	information = DIA_Igaraz_BabosJob_Info;
 	permanent   = FALSE;
-	description = "What was Babo supposed to do for you?";
+	description = "Was sollte Babo fÃ¼r dich tun?";
 };
 FUNC INT DIA_Igaraz_BabosJob_Condition()
 {
@@ -574,7 +574,7 @@ FUNC VOID DIA_Igaraz_BabosJob_Info()
 };
 
 //**************************************************************************
-//	Wieviel willst du für die Papiere haben?
+//	Wieviel willst du fr die Papiere haben?
 //**************************************************************************
 INSTANCE DIA_Igaranz_Price   (C_INFO)
 {
@@ -583,7 +583,7 @@ INSTANCE DIA_Igaranz_Price   (C_INFO)
 	condition   = DIA_Igaraz_Price_Condition;
 	information = DIA_Igaraz_Price_Info;
 	permanent   = FALSE;
-	description = "How much do you want for the papers?";
+	description = "Wieviel willst du fÃ¼r Babos Papiere haben?";
 };
 FUNC INT DIA_Igaraz_Price_Condition()
 {
@@ -610,7 +610,7 @@ INSTANCE DIA_Igaranz_BuyIt   (C_INFO)
 	condition   = DIA_Igaraz_BuyIt_Condition;
 	information = DIA_Igaraz_BuyIt_Info;
 	permanent   = FALSE;
-	description = "I want to buy those papers.";
+	description = "Ich will die Papiere kaufen.";
 };
 FUNC INT DIA_Igaraz_BuyIt_Condition()
 {
@@ -640,7 +640,7 @@ INSTANCE DIA_Igaraz_PICKPOCKET (C_INFO)
 	condition	= DIA_Igaraz_PICKPOCKET_Condition;
 	information	= DIA_Igaraz_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be easy to steal his key)";
+	description = "(Es wÃ¤re einfach seinen SchlÃ¼ssel zu stehlen)";
 };                       
 
 FUNC INT DIA_Igaraz_PICKPOCKET_Condition()
@@ -675,7 +675,7 @@ func void DIA_Igaraz_PICKPOCKET_DoIt()
 	{
 		B_ResetThiefLevel();
 		AI_StopProcessInfos	(self);
-		B_Attack (self, other, AR_Theft, 1); //AR_Theft führt zu NEWS!
+		B_Attack (self, other, AR_Theft, 1); //AR_Theft fhrt zu NEWS!
 	};
 };
 	
@@ -753,7 +753,7 @@ INSTANCE DIA_Igaranz_Perm   (C_INFO)
 	condition   = DIA_Igaraz_Perm_Condition;
 	information = DIA_Igaraz_Perm_Info;
 	permanent   = FALSE;
-	description	= "Have you got anything interesting for me?";
+	description	= "Hast du was interessantes fÃ¼r mich?";
 };
 FUNC INT DIA_Igaraz_Perm_Condition()
 {

@@ -28,7 +28,7 @@ instance DIA_PAL_298_Pass		(C_INFO)
 	condition	 = 	DIA_PAL_298_Pass_Condition;
 	information	 = 	DIA_PAL_298_Pass_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Where does this path lead?";
+	description	 = 	"Wo führt dieser Weg hin?";
 };
 func int DIA_PAL_298_Pass_Condition ()
 {	
@@ -39,10 +39,10 @@ func int DIA_PAL_298_Pass_Condition ()
 };
 func void DIA_PAL_298_Pass_Info ()
 {
-	AI_Output (other, self, "DIA_PAL_298_Pass_15_00");//Where does this path lead?
-	AI_Output (self, other, "DIA_PAL_298_Pass_09_01");//Behind the gate lies the pass to the Valley of Mines.
-	AI_Output (self, other, "DIA_PAL_298_Pass_09_02");//We're on this side - on the other, a few orcs have dug themselves in.
-	AI_Output (self, other, "DIA_PAL_298_Pass_09_03");//It's better if you go back - you cannot get through here.
+	AI_Output (other, self, "DIA_PAL_298_Pass_15_00");//Wo führt dieser Weg hin?
+	AI_Output (self, other, "DIA_PAL_298_Pass_09_01");//Hinter dem Tor liegt der Pass, der zum Minental führt.
+	AI_Output (self, other, "DIA_PAL_298_Pass_09_02");//Auf dieser Seite stehen wir - auf der anderen Seite haben sich ein paar Orks festgebissen.
+	AI_Output (self, other, "DIA_PAL_298_Pass_09_03");//Geh lieber wieder zurück - du kannst hier eh nicht durch.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TRESPASS
@@ -65,9 +65,9 @@ func int DIA_PAL_298_TRESPASS_Condition ()
 };
 func void DIA_PAL_298_TRESPASS_Info ()
 {
-	AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_00");//Are you sure you want to go in there? I'm afraid you won't get very far - the orcs are on the other side.
-	AI_Output (other, self, "DIA_PAL_298_TRESPASS_15_01");//If there's a way into the Valley of Mines, I shall find it.
-	AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_02");//Good, then go. Go with Innos.
+	AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_00");//Bist du sicher, dass du da rein willst? Ich befürchte, du wirst nicht sehr weit kommen - die Orks stehen auf der anderen Seite.
+	AI_Output (other, self, "DIA_PAL_298_TRESPASS_15_01");//Wenn es einen Weg ins Minental gibt, werde ich ihn finden.
+	AI_Output (self, other, "DIA_PAL_298_TRESPASS_09_02");//Gut, dann geh. Geh mit Innos.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm 
@@ -79,7 +79,7 @@ instance DIA_PAL_298_Perm1		(C_INFO)
 	condition	 = 	DIA_PAL_298_Perm1_Condition;
 	information	 = 	DIA_PAL_298_Perm1_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"And what if I go at my own risk?";
+	description	 = 	"Und wenn ich auf eigenes Risiko gehe?";
 };
 func int DIA_PAL_298_Perm1_Condition ()
 {	
@@ -91,8 +91,8 @@ func int DIA_PAL_298_Perm1_Condition ()
 };
 func void DIA_PAL_298_Perm1_Info ()
 {
-	AI_Output (other, self, "DIA_PAL_298_Perm1_15_00");//And what if I go at my own risk?
-	AI_Output (self, other, "DIA_PAL_298_Perm1_09_01");//Then you will die. That's why we're here. So that you don't get such stupid ideas.
+	AI_Output (other, self, "DIA_PAL_298_Perm1_15_00");//Und wenn ich auf eigenes Risiko gehe?
+	AI_Output (self, other, "DIA_PAL_298_Perm1_09_01");//Dann würdest du sterben. Deshalb stehen wir ja hier. Damit du nicht auf solche dummen Gedanken kommst.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm 
@@ -104,7 +104,7 @@ instance DIA_PAL_298_Perm2		(C_INFO)
 	condition	 = 	DIA_PAL_298_Perm2_Condition;
 	information	 = 	DIA_PAL_298_Perm2_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How are things?";
+	description	 = 	"Wie sieht's aus?";
 };
 func int DIA_PAL_298_Perm2_Condition ()
 {	
@@ -115,8 +115,8 @@ func int DIA_PAL_298_Perm2_Condition ()
 };
 func void DIA_PAL_298_Perm2_Info ()
 {
-	AI_Output (other, self, "DIA_PAL_298_Perm2_15_00");//How's the situation?
-	AI_Output (self, other, "DIA_PAL_298_Perm2_09_01");//Everything's quiet. We have the situation under control.
+	AI_Output (other, self, "DIA_PAL_298_Perm2_15_00");//Wie ist die Lage?
+	AI_Output (self, other, "DIA_PAL_298_Perm2_09_01");//Alles ruhig. Wir haben die Situation im Griff.
 };
 
 

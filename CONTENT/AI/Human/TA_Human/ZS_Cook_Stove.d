@@ -24,9 +24,9 @@ FUNC int ZS_Cook_Stove_Loop ()
 {
 	// ------ Braten ------
 	if (!C_BodyStateContains(self, BS_MOBINTERACT_INTERRUPT))
-	&& (Wld_IsMobAvailable(self,"STOVE"))
+	&& (Wld_IsMobAvailable(self,"Herd"))
 	{
-		AI_UseMob (self, "STOVE", 1);
+		AI_UseMob (self, "Herd", 1);
 	};
 		
 	return LOOP_CONTINUE;
@@ -34,7 +34,7 @@ FUNC int ZS_Cook_Stove_Loop ()
 
 FUNC VOID ZS_Cook_Stove_End ()
 {
-	AI_UseMob (self, "STOVE", -1);
+	AI_UseMob (self, "Herd", -1);
 	if (Npc_HasItems (self,ItFoMutton)>=1)
 	{
 		Npc_RemoveInvItems	(self,ItFoMutton ,1 );

@@ -62,7 +62,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Flame Protection Ring";
+	description				= "Flammenschutzring";
 	
 	TEXT[2]					= NAME_Prot_Fire;
 	COUNT[2]				= Ri_ProtFire;
@@ -106,7 +106,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Fire Ring";
+	description				= "FeuerRing";
 	
 	TEXT[2]					= NAME_Prot_Fire;
 	COUNT[2]				= Ri_ProtFire02;
@@ -150,7 +150,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Wooden Skin";
+	description				= "Ring der Holzhaut";
 	
 	TEXT[2]					= NAME_Prot_Point;
 	COUNT[2]				= Ri_ProtPoint;
@@ -194,7 +194,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Stone Skin";
+	description				= "Ring der Steinhaut";
 	
 	TEXT[2]					= NAME_Prot_Point;
 	COUNT[2]				= Ri_ProtPoint02;
@@ -219,7 +219,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Edge_01(C_Item) //bei Cassia als Belohnung //Höhle OW//PassNW bei den Orks
+	INSTANCE ItRi_Prot_Edge_01(C_Item) //bei Cassia als Belohnung //Hhle OW//PassNW bei den Orks
 {
 	name 					=	NAME_Ring;
 
@@ -238,7 +238,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Iron Skin";
+	description				= "Ring der Eisenhaut";
 
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= Ri_ProtEdge;
@@ -284,7 +284,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Ore Skin";
+	description				= "Ring der Erzhaut";
 	
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= Ri_ProtEdge02;
@@ -330,7 +330,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Spirit";
+	description				= "Ring der Geisteskraft";
 	
 	TEXT[2]					= NAME_Prot_Magic;
 	COUNT[2]				= Ri_ProtMage;
@@ -356,7 +356,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Prot_Mage_02(C_ITEM)	//Joly: von Neoras, wenn SC ihm Drachenei bringt. (Nur PAL oder KDF) ab Kapitel 4	//ricelordhütte OW
+	INSTANCE ItRi_Prot_Mage_02(C_ITEM)	//Joly: von Neoras, wenn SC ihm Drachenei bringt. (Nur PAL oder KDF) ab Kapitel 4	//ricelordhtte OW
 {
 	name 					=	NAME_Ring;
 
@@ -375,7 +375,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Defense";
+	description				= "Ring der Verteidigung";
 	
 	TEXT[2]					= NAME_Prot_Magic;
 	COUNT[2]				= Ri_ProtMage02;
@@ -421,7 +421,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Ring of Inconquerability";
+	description		= "Ring der Unbezwingbarkeit";
 	
 	TEXT[1]			= NAME_Prot_Magic;
 	COUNT[1]		= Ri_TProtMage;
@@ -478,7 +478,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Ring of Invincibility";
+	description		= "Ring der Unbezwingbarkeit";
 	
 	TEXT[1]			= NAME_Prot_Magic;
 	COUNT[1]		= Ri_TProtMage02;
@@ -535,7 +535,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Ring of Skill";
+	description		= "Ring der Gewandtheit";
 	
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= Ri_Dex;
@@ -561,7 +561,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	};
 	
 /******************************************************************************************/
-	INSTANCE ItRi_Dex_02(C_Item)//Joly:in OW Nähe Alter DT
+	INSTANCE ItRi_Dex_02(C_Item)//Joly:in OW Nhe Alter DT
 {
 	name 					=	NAME_Ring;
 
@@ -580,7 +580,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Dexterity";
+	description				= "Ring der Geschicklichkeit";
 
 	TEXT[2]					= 	NAME_Bonus_Dex;
 	COUNT[2]				= 	Ri_Dex02;
@@ -626,7 +626,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Life";
+	description				= "Ring der Lebenskraft";
 	
 	TEXT[2]					= NAME_Bonus_HP;
 	COUNT[2]				= Ri_Hp;
@@ -679,7 +679,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Liveliness";
+	description				= "Ring der Lebendigkeit";
 	
 	TEXT[2]					= NAME_Bonus_HP;
 	COUNT[2]				= Ri_Hp02;
@@ -732,7 +732,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Force";
+	description				= "Ring der Kraft";
 	
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= Ri_Strg;
@@ -776,7 +776,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Strength";
+	description				= "Ring der StÃ¤rke";
 	
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= Ri_Strg02;
@@ -820,7 +820,7 @@ const int Value_Ri_DexStrg 			= 800;	const int Ri_DexStrg_Dex	=  4;
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Magic";
+	description				= "Ring der Magie";
 	
 	TEXT[2]					= NAME_Bonus_Mana;
 	COUNT[2]				= Ri_Mana;
@@ -876,7 +876,7 @@ INSTANCE ItRi_Mana_02(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Astral Power";
+	description				= "Ring der astralen Kraft";
 	
 	TEXT[2]					= NAME_Bonus_Mana;
 	COUNT[2]				= Ri_Mana02;
@@ -932,7 +932,7 @@ INSTANCE ItRi_Mana_02(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Enlightenment";
+	description				= "Ring der Erleuchtung";
 	
 	TEXT[2]					= NAME_Bonus_Mana;
 	COUNT[2]				= Ri_HpMana_Mana;
@@ -1002,7 +1002,7 @@ INSTANCE ItRi_Mana_02(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Ring of Power";
+	description				= "Ring der Kraft";
 	
 	TEXT[2]					= NAME_Bonus_Str;
 	COUNT[2]				= 4;

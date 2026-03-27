@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Sheep(C_Npc)			
 {
 	//----- Maonster ----
-	name							=	"Sheep";
+	name							=	"Schaf";
 	guild							=	GIL_SHEEP;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHEEP;
 	
@@ -86,9 +86,9 @@ INSTANCE Hammel	(Mst_Default_Sheep)
 
 INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 {
-	name						= "Betsy";
+	name						= "Liesel";
 	
-	aivar[AIV_ToughGuy] = TRUE; //Liesel knn getötet werden, ohne daß jemand sich anpißt!
+	aivar[AIV_ToughGuy] = TRUE; //Liesel knn gettet werden, ohne da jemand sich anpit!
 		
 	B_SetVisuals_Sheep();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
@@ -104,7 +104,7 @@ INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 
 INSTANCE Follow_Sheep_AKIL	(Mst_Default_Sheep)
 {
-	name						= "Sheep";
+	name						= "Schaf";
 	
 	aivar[AIV_ToughGuy] = TRUE;
 	

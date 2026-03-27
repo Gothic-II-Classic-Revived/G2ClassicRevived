@@ -33,7 +33,7 @@ FUNC VOID C_IsShrineObsessed (var C_NPC slf)
 		else if ((Npc_GetDistToWP(hero,"NW_FARM1_CONNECT_XARDAS")<2000) && (ShrineIsObsessed_NW_FARM1_CONNECT_XARDAS == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_NW_FARM1_CONNECT_XARDAS = FALSE;ShrineIsObsessed = FALSE;};}
 		else if ((Npc_GetDistToWP(hero,"NW_TROLLAREA_PATH_66")<2000) && (ShrineIsObsessed_NW_TROLLAREA_PATH_66 == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_NW_TROLLAREA_PATH_66 = FALSE;ShrineIsObsessed = FALSE;};}
 		else if ((Npc_GetDistToWP(hero,"NW_TROLLAREA_PATH_04")<2000) && (ShrineIsObsessed_NW_TROLLAREA_PATH_04 == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_NW_TROLLAREA_PATH_04 = FALSE;ShrineIsObsessed = FALSE;};}
-		else if ((Npc_GetDistToWP(hero,"SAGITTA")<2000) && (ShrineIsObsessed_SAGITTA == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_SAGITTA = FALSE;ShrineIsObsessed = FALSE;};}
+		else if ((Npc_GetDistToWP(hero,"Sagitta")<2000) && (ShrineIsObsessed_SAGITTA == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_SAGITTA = FALSE;ShrineIsObsessed = FALSE;};}
 		else if ((Npc_GetDistToWP(hero,"NW_BIGMILL_MALAKSVERSTECK_02")<2000) && (ShrineIsObsessed_NW_BIGMILL_MALAKSVERSTECK_02 == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_NW_BIGMILL_MALAKSVERSTECK_02 = FALSE;ShrineIsObsessed = FALSE;};}
 		else if ((Npc_GetDistToWP(hero,"NW_FARM3_BIGWOOD_02")<2000) && (ShrineIsObsessed_NW_FARM3_BIGWOOD_02 == TRUE)){if (SHRINEHEALING == TRUE)	{ShrineIsObsessed_NW_FARM3_BIGWOOD_02 = FALSE;ShrineIsObsessed = FALSE;};}
 		else
@@ -53,7 +53,7 @@ INSTANCE PC_PrayInnos_HEALSHRINE (C_Info)
 	condition		= PC_PrayInnos_HEALSHRINE_Condition;
 	information		= PC_PrayInnos_HEALSHRINE_Info;
 	permanent		= TRUE;
-	description		= "Purify shrine"; 
+	description		= "Schrein reinigen"; 
 };
 
 FUNC INT PC_PrayInnos_HEALSHRINE_Condition ()
@@ -143,7 +143,7 @@ FUNC VOID PC_PrayInnos_End_Info()
 	B_ENDPRODUCTIONDIALOG ();
 }; 
 //*******************************************************
-//F�r das Heil der Paladine beten
+//Fr das Heil der Paladine beten
 //*******************************************************
 INSTANCE PC_PrayInnos_Paladine (C_Info)
 {
@@ -152,7 +152,7 @@ INSTANCE PC_PrayInnos_Paladine (C_Info)
 	condition		= PC_PrayInnos_Paladine_Condition;
 	information		= PC_PrayInnos_Paladine_Info;
 	permanent		= FALSE;
-	description		= "Say a prayer for the paladins."; 
+	description		= "Ein Gebet für die Paladine sprechen."; 
 };
 
 FUNC INT PC_PrayInnos_Paladine_Condition ()
@@ -185,7 +185,7 @@ INSTANCE PC_PrayInnos_Pray (C_Info)
 	condition		= PC_PrayInnos_Pray_Condition;
 	information		= PC_PrayInnos_Pray_Info;
 	permanent		= TRUE;
-	description		= "Pray"; 
+	description		= "Beten"; 
 };
 
 FUNC INT PC_PrayInnos_Pray_Condition ()
@@ -208,19 +208,19 @@ FUNC VOID PC_PrayInnos_Pray_Info()
 		{		
 			Info_ClearChoices (PC_PrayInnos_Pray);
 			Info_AddChoice (PC_PrayInnos_Pray,Dialog_Back,PC_PrayInnos_Pray_Back);
-			Info_AddChoice (PC_PrayInnos_Pray,"I want to pray and donate 0 gold pieces.",PC_PrayInnos_Pray_NoPay);
+			Info_AddChoice (PC_PrayInnos_Pray,"Ich will beten und spende 0 Goldstücke.",PC_PrayInnos_Pray_NoPay);
 			
 			if (Npc_HasItems (hero,ItMi_Gold) >=10)
 			{
-				Info_AddChoice (PC_PrayInnos_Pray,"I want to pray and donate 10 gold pieces.",PC_PrayInnos_Pray_SmallPay);
+				Info_AddChoice (PC_PrayInnos_Pray,"Ich will beten und spende 10 Goldstücke.",PC_PrayInnos_Pray_SmallPay);
 			};
 			if (Npc_HasItems (hero,ItMi_Gold) >=50)
 			{
-				Info_AddChoice (PC_PrayInnos_Pray,"I want to pray and donate 50 gold pieces.",PC_PrayInnos_Pray_MediumPay);
+				Info_AddChoice (PC_PrayInnos_Pray,"Ich will beten und spende 50 Goldstücke.",PC_PrayInnos_Pray_MediumPay);
 			};
 			if (Npc_HasItems (hero,ItMi_Gold) >=100)
 			{
-				Info_AddChoice (PC_PrayInnos_Pray,"I want to pray and donate 100 gold pieces.",PC_PrayInnos_Pray_BigPay);
+				Info_AddChoice (PC_PrayInnos_Pray,"Ich will beten und spende 100 Goldstücke.",PC_PrayInnos_Pray_BigPay);
 			};
 		};
 }; 

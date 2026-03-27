@@ -31,7 +31,7 @@ INSTANCE DIA_Jorgen_DI_Hallo   (C_INFO)
 	information = DIA_Jorgen_DI_Hallo_Info;
 	permanent	 = 	TRUE;
 
-	description = "Everything all right?";
+	description = "Alles Klar?";
 
 };
 
@@ -70,7 +70,7 @@ instance DIA_Jorgen_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Jorgen_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 	
-	description = 	"The enemy is dead.";
+	description = 	"Der Feind ist tot.";
 
 };
 
@@ -87,8 +87,8 @@ func void DIA_Jorgen_DI_UndeadDragonDead_Info ()
 	AI_Output			(self ,other, "DIA_Jorgen_DI_UndeadDragonDead_07_01"); //That's good news. Is that all we needed to do on this island?
 
 	Info_ClearChoices	(DIA_Jorgen_DI_UndeadDragonDead);
-	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "One more minute.", DIA_Jorgen_DI_UndeadDragonDead_moment );
-	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "Yes, That's it. Let's go.", DIA_Jorgen_DI_UndeadDragonDead_over );
+	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "Einen Moment noch.", DIA_Jorgen_DI_UndeadDragonDead_moment );
+	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "Ja. Schluß jetzt. Lass uns aufbrechen.", DIA_Jorgen_DI_UndeadDragonDead_over );
 	
 };
 func void DIA_Jorgen_DI_UndeadDragonDead_moment ()

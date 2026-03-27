@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Icewolf(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Ice Wolf";
+	name							=	"Eiswolf";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Icewolf;
 	

@@ -53,11 +53,11 @@ func void DIA_Urshak_HALLO_Info ()
 	
 	Log_CreateTopic (TOPIC_Urshak, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Urshak, LOG_RUNNING);
-	B_LogEntry (TOPIC_Urshak,"I found my old orc friend Ur-Shak."); 
+	B_LogEntry (TOPIC_Urshak,"Ich habe meinen alten orkischen Freund Ur-Shak gefunden."); 
 
 	Info_ClearChoices	(DIA_Urshak_HALLO);
-	Info_AddChoice	(DIA_Urshak_HALLO, "What are you doing here?", DIA_Urshak_HALLO_freund );
-	Info_AddChoice	(DIA_Urshak_HALLO, "A talking orc?", DIA_Urshak_HALLO_wer );
+	Info_AddChoice	(DIA_Urshak_HALLO, "Was machst du hier?", DIA_Urshak_HALLO_freund );
+	Info_AddChoice	(DIA_Urshak_HALLO, "Ein sprechender Ork?", DIA_Urshak_HALLO_wer );
 };
 func void DIA_Urshak_HALLO_wer ()
 {
@@ -87,7 +87,7 @@ instance DIA_Urshak_WASMACHENORKS		(C_INFO)
 	condition	 = 	DIA_Urshak_WASMACHENORKS_Condition;
 	information	 = 	DIA_Urshak_WASMACHENORKS_Info;
 
-	description	 = 	"Why are the orcs attacking the humans?";
+	description	 = 	"Warum greifen die Orks die Menschen an?";
 };
 
 func int DIA_Urshak_WASMACHENORKS_Condition ()
@@ -105,7 +105,7 @@ func void DIA_Urshak_WASMACHENORKS_Info ()
 	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_01"); //Ur-Shak always tell orc people that humans no evil and many good friends there.
 	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_02"); //But shaman no listen Ur-Shak. Ur-Shak still in disfavor with people.
 	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_03"); //So Ur-Shak no hear exactly what big plan of war against humans.
-	B_LogEntry (TOPIC_Urshak,"He still hasn't gotten his people to listen to him. He's still an exile."); 
+	B_LogEntry (TOPIC_Urshak,"Er hat es immer noch nicht geschafft, sich bei seinem Volk Gehör zu verschaffen. Er ist immer noch ein Ausgestossener."); 
 };
 
 
@@ -119,7 +119,7 @@ instance DIA_Urshak_SOVIELE		(C_INFO)
 	condition	 = 	DIA_Urshak_SOVIELE_Condition;
 	information	 = 	DIA_Urshak_SOVIELE_Info;
 
-	description	 = 	"Why are there suddenly so many of you?";
+	description	 = 	"Warum seid ihr auf einmal so viele?";
 };
 
 func int DIA_Urshak_SOVIELE_Condition ()
@@ -148,7 +148,7 @@ instance DIA_Urshak_ZAUN		(C_INFO)
 	condition	 = 	DIA_Urshak_ZAUN_Condition;
 	information	 = 	DIA_Urshak_ZAUN_Info;
 
-	description	 = 	"What is hidden behind the long orc fence in the east?";
+	description	 = 	"Was verbirgt sich hinter dem langen Orkzaun im Osten?";
 };
 
 func int DIA_Urshak_ZAUN_Condition ()
@@ -179,7 +179,7 @@ instance DIA_Urshak_WASHASTDUVOR		(C_INFO)
 	condition	 = 	DIA_Urshak_WASHASTDUVOR_Condition;
 	information	 = 	DIA_Urshak_WASHASTDUVOR_Info;
 
-	description	 = 	"What are you planning to do now?";
+	description	 = 	"Was hast du jetzt vor?";
 };
 
 func int DIA_Urshak_WASHASTDUVOR_Condition ()
@@ -198,13 +198,13 @@ func void DIA_Urshak_WASHASTDUVOR_Info ()
 	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_15_02"); //Who is Hosh-Pak?
 	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_18_03"); //Be very great shaman. Have great influence on warriors and make big plans for orcs.
 
-	B_LogEntry (TOPIC_Urshak,"Ur-Shak's plan is to meet with the orcish shaman Hosh-Pak and persuade him to accept Ur-Shak back into the council of the shamans."); 
+	B_LogEntry (TOPIC_Urshak,"Ur-Shaks Plan sieht vor, sich mit dem Orkshamanen Hosh-Pak zu treffen, damit er Ur-Shak wieder seinen alten Platz im Rat der Shamane zurück gibt."); 
 
 	Info_ClearChoices	(DIA_Urshak_WASHASTDUVOR);
 
 	Info_AddChoice	(DIA_Urshak_WASHASTDUVOR, DIALOG_BACK, DIA_Urshak_WASHASTDUVOR_weiter );
-	Info_AddChoice	(DIA_Urshak_WASHASTDUVOR, "Where can I find this Hosh-Pak?", DIA_Urshak_WASHASTDUVOR_ );
-	Info_AddChoice	(DIA_Urshak_WASHASTDUVOR, "Why don't you go to him, then?", DIA_Urshak_WASHASTDUVOR_hoshpak );
+	Info_AddChoice	(DIA_Urshak_WASHASTDUVOR, "Wo finde ich diesen Hosh-Pak?", DIA_Urshak_WASHASTDUVOR_ );
+	Info_AddChoice	(DIA_Urshak_WASHASTDUVOR, "Warum gehst du nicht zu Ihm?", DIA_Urshak_WASHASTDUVOR_hoshpak );
 };
 func void DIA_Urshak_WASHASTDUVOR_hoshpak ()
 {
@@ -239,7 +239,7 @@ instance DIA_Urshak_HOSHPAKDEAD		(C_INFO)
 	condition	 = 	DIA_Urshak_HOSHPAKDEAD_Condition;
 	information	 = 	DIA_Urshak_HOSHPAKDEAD_Info;
 
-	description	 = 	"Hosh-Pak is dead.";
+	description	 = 	"Hosh-Pak ist tot.";
 };
 
 func int DIA_Urshak_HOSHPAKDEAD_Condition ()
@@ -262,7 +262,7 @@ func void DIA_Urshak_HOSHPAKDEAD_Info ()
 	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_05"); //Friend better go over pass. Too dangerous here.
 	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_06"); //Ur-Shak sad if friend human also die.
 
-	B_LogEntry (TOPIC_Urshak,"Hosh-Pak is dead. My orcish friend is headed for Hosh-Pak's tents. He grieves for his mentor. I should let him go."); 
+	B_LogEntry (TOPIC_Urshak,"Hosh-Pak ist tot. Mein Orkfreund hat sich auf den Weg zu Hosh-Paks Zelten gemacht. Er trauert um seinen Mentor. Ich sollte ihn ziehen lassen."); 
 
 	AI_StopProcessInfos (self);
 	Npc_SetRefuseTalk (self,20);
@@ -335,7 +335,7 @@ func void DIA_Urshak_HOSHPAKRACHE_Info ()
 	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_06"); //Next time we meet we enemies. You better go now.
 	AI_StopProcessInfos (self);
 	URSHAK_SUCKED = TRUE;
-	B_LogEntry (TOPIC_Urshak,"Ur-Shak has been accepted back into the council of the orc shamans. He is on the side of the enemy now and a little tense. I'd better keep out of his way until I've settled matters with the orcs. He should have calmed down by then."); 
+	B_LogEntry (TOPIC_Urshak,"Urshak gehört wieder dem Rat der Orkshamane an. Er steht jetzt auf der feindlichen Seite und ist ein wenig gereizt. Ich sollte ihm besser aus dem Weg gehen, bis ich die Geschichte mit den Orks geregelt habe. Bis dahin wird er sich wieder beruhigt haben."); 
 	B_GivePlayerXP (XP_UrshakBecomesShaman);
 };
 

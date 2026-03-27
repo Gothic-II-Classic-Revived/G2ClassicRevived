@@ -42,9 +42,9 @@ FUNC INT DIA_Edda_Hallo_Condition()
 };
 FUNC VOID DIA_Edda_Hallo_Info()
 {	
-	AI_Output (other ,self,"DIA_Edda_Hallo_15_00"); //What are you cooking there?
-	AI_Output (self ,other,"DIA_Edda_Hallo_17_01"); //A fish soup. It's not all that tasty, but at least it's hot.
-	AI_Output (self ,other,"DIA_Edda_Hallo_17_02"); //You can try a plateful if you like.
+	AI_Output (other ,self,"DIA_Edda_Hallo_15_00"); //Was kochst du da?
+	AI_Output (self ,other,"DIA_Edda_Hallo_17_01"); //Eine Fischsuppe. Sie ist nicht besonders würzig, aber wenigstens heiß.
+	AI_Output (self ,other,"DIA_Edda_Hallo_17_02"); //Du kannst gerne einen Teller probieren.
 };
 
 // ************************************************************
@@ -57,7 +57,7 @@ INSTANCE DIA_Edda_Stadt(C_INFO)
 	condition	= DIA_Edda_Stadt_Condition;
 	information	= DIA_Edda_Stadt_Info;
 	permanent	= FALSE;
-	description = "What can you tell me about the city?";
+	description = "Was kannst du mir über die Stadt sagen?";
 };                       
 
 FUNC INT DIA_Edda_Stadt_Condition()
@@ -66,16 +66,16 @@ FUNC INT DIA_Edda_Stadt_Condition()
 };
 FUNC VOID DIA_Edda_Stadt_Info()
 {	
-	AI_Output (other ,self,"DIA_Edda_Stadt_15_00"); //What can you tell me about the city?
-	AI_Output (self ,other,"DIA_Edda_Stadt_17_01"); //Most citizens in this town are afraid of thieves. Therefore, it is not a good idea to enter strange houses.
-	AI_Output (self ,other,"DIA_Edda_Stadt_17_02"); //But if you're looking for a place to stay overnight, you're welcome to sleep in my hut. There's an extra bed that you can have.
-	AI_Output (other ,self,"DIA_Edda_Stadt_15_03"); //Aren't you afraid of thieves?
-	AI_Output (self ,other,"DIA_Edda_Stadt_17_04"); //The only valuable thing I ever owned has already been taken.
-	AI_Output (self ,other,"DIA_Edda_Stadt_17_05"); //Someone stole my statue of Innos.
+	AI_Output (other ,self,"DIA_Edda_Stadt_15_00"); //Was kannst du mir über die Stadt sagen?
+	AI_Output (self ,other,"DIA_Edda_Stadt_17_01"); //Die meisten Bürger der Stadt haben Angst vor Dieben, deshalb ist es keine gute Idee, fremde Häuser zu betreten.
+	AI_Output (self ,other,"DIA_Edda_Stadt_17_02"); //Aber wenn du einen Platz zum Schlafen suchst, kannst du gerne in meiner Hütte schlafen. Ich habe noch ein Bett frei.
+	AI_Output (other ,self,"DIA_Edda_Stadt_15_03"); //Hast du keine Angst vor Dieben?
+	AI_Output (self ,other,"DIA_Edda_Stadt_17_04"); //Das einzig Wertvolle, was ich je besaß, ist mir schon genommen worden.
+	AI_Output (self ,other,"DIA_Edda_Stadt_17_05"); //Meine Innos-Statue wurde mir gestohlen.
 	
 	Log_CreateTopic (TOPIC_Revived_EddaStatue, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Revived_EddaStatue, LOG_RUNNING);
-	B_LogEntry (TOPIC_Revived_EddaStatue,"Poor woman Edda has lost her Innos Statue, apparently it was stolen from her house."); 
+	B_LogEntry (TOPIC_Revived_EddaStatue,"Die arme Edda hat ihre Innos-Statue verloren, anscheinend wurde sie aus ihrem Haus gestohlen."); 
 };			
 // ************************************************************
 // 			Kannst du mir eine Suppe kochen?
@@ -88,7 +88,7 @@ INSTANCE DIA_Edda_Kochen(C_INFO)
 	condition	= DIA_Edda_Kochen_Condition;
 	information	= DIA_Edda_Kochen_Info;
 	permanent	= FALSE;
-	description = "Could you cook me some soup?";
+	description = "Kannst du mir eine Suppe kochen?";
 };                       
 
 FUNC INT DIA_Edda_Kochen_Condition()
@@ -97,13 +97,13 @@ FUNC INT DIA_Edda_Kochen_Condition()
 };
 FUNC VOID DIA_Edda_Kochen_Info()
 {	
-	AI_Output (other ,self,"DIA_Edda_Kochen_15_00"); //Could you cook me some soup?
+	AI_Output (other ,self,"DIA_Edda_Kochen_15_00"); //Kannst du mir eine Suppe kochen?
 	
 	if (Wld_GetDay() == 0)
 	|| (EddaSoupFirst == FALSE)
 	{
-		AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //I cook for everybody. For you, too, if you want. All you need to do is bring me a fish.
-		AI_Output (self ,other,"DIA_Edda_Suppe_17_02"); //Starting tomorrow, you can come and get some soup every day.
+		AI_Output (self ,other,"DIA_Edda_Kochen_17_01"); //Ich koche für alle Leute. Auch für dich, wenn du willst. Du musst mir nur einen Fisch bringen.
+		AI_Output (self ,other,"DIA_Edda_Suppe_17_02"); //Ab Morgen kannst du dir jeden Tag eine Suppe holen.
 
 		EddaSoupFirst = TRUE;
 	}
@@ -111,7 +111,7 @@ FUNC VOID DIA_Edda_Kochen_Info()
 	{
 		if B_GiveInvItems (other, self, ItFo_Fish,1)
 		{
-			AI_Output (self ,other,"DIA_Edda_Suppe_17_01"); //Nothing could be simpler. Here, have a plate.
+			AI_Output (self ,other,"DIA_Edda_Suppe_17_01"); //Nichts leichter als das. Hier, nimm einen Teller.
 			if(Kapitel == 1 && EddaSoup_Chapter1 == FALSE)
 			{
 				B_GiveInvItems (self, other, ITFO_REVIVED_FISHXPSOUP, 1);
@@ -144,13 +144,13 @@ FUNC VOID DIA_Edda_Kochen_Info()
 		}
 		else
 		{
-			AI_Output (self ,other,"DIA_Edda_Suppe_17_04"); //Bring me a fish, and I'll cook you a tasty soup.
+			AI_Output (self ,other,"DIA_Edda_Suppe_17_04"); //Bring mir einen Fisch, dann koche ich dir eine leckere Suppe.
 		};
 		
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Edda_Suppe_17_03"); //No, not today. Come back tomorrow.
+		AI_Output (self ,other,"DIA_Edda_Suppe_17_03"); //Heute nicht mehr. Komm Morgen wieder.
 	};
 };			
 // ************************************************************
@@ -163,7 +163,7 @@ INSTANCE DIA_Edda_Statue(C_INFO)
 	condition	= DIA_Edda_Statue_Condition;
 	information	= DIA_Edda_Statue_Info;
 	permanent	= FALSE;
-	description = "Look, I've got a statue of Innos for you.";
+	description = "Ich habe hier eine Innos-Statue für dich.";
 };                       
 FUNC INT DIA_Edda_Statue_Condition()
 {	
@@ -175,9 +175,9 @@ FUNC INT DIA_Edda_Statue_Condition()
 };
 FUNC VOID DIA_Edda_Statue_Info()
 {	
-	AI_Output (other ,self,"DIA_Edda_Statue_15_00"); //Look, I've got a statue of Innos for you.
-	AI_Output (self ,other,"DIA_Edda_Statue_17_01"); //Oh - thank you very, very much. May Innos let his light shine on you...
-	AI_Output (other ,self,"DIA_Edda_Statue_15_02"); //Yeah, never mind.
+	AI_Output (other ,self,"DIA_Edda_Statue_15_00"); //Ich habe hier eine Innos-Statue für dich.
+	AI_Output (self ,other,"DIA_Edda_Statue_17_01"); //Oh - vielen, vielen Dank! Möge Innos sein Licht über dich erstrahlen lassen ...
+	AI_Output (other ,self,"DIA_Edda_Statue_15_02"); //Ja ja, schon gut.
 	
 	B_GiveInvItems (other, self,ItMI_EddasStatue, 1); 
 	B_GivePlayerXP (XP_Edda_Statue);
@@ -196,7 +196,7 @@ INSTANCE DIA_Edda_PICKPOCKET (C_INFO)
 	condition	= DIA_Edda_PICKPOCKET_Condition;
 	information	= DIA_Edda_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be child's play to steal from her purse)";
+	description = "(Es wäre ein Kinderspiel, aus ihrer Geldbörse zu stehlen)";
 };                       
 
 FUNC INT DIA_Edda_PICKPOCKET_Condition()

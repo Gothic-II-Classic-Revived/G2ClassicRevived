@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Addon_SwampGolem(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Swamp Golem";
+	name							=	"Sumpfgolem";
 	guild							=	GIL_SWAMPGOLEM;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SWAMPGOLEM;
 

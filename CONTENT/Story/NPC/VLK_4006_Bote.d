@@ -2,7 +2,7 @@
 instance VLK_4006_Bote (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Errand-Boy"; 
+	name 		= "Bote"; 
 	guild 		= GIL_VLK;
 	id 			= 4006;
 	voice 		= 6;

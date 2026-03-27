@@ -32,7 +32,7 @@ instance DIA_Rukhar_HALLO		(C_INFO)
 	condition	 = 	DIA_Rukhar_HALLO_Condition;
 	information	 = 	DIA_Rukhar_HALLO_Info;
 
-	description	 = 	"Is the beer any good here?";
+	description	 = 	"Ist das Bier gut hier?";
 };
 
 func int DIA_Rukhar_HALLO_Condition ()
@@ -42,8 +42,8 @@ func int DIA_Rukhar_HALLO_Condition ()
 
 func void DIA_Rukhar_HALLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_HALLO_15_00"); //Is the beer any good here?
-	AI_Output			(self, other, "DIA_Rukhar_HALLO_12_01"); //It's not exactly the best, but in these bleak times, you can't be choosy.
+	AI_Output			(other, self, "DIA_Rukhar_HALLO_15_00"); //Ist das Bier gut hier?
+	AI_Output			(self, other, "DIA_Rukhar_HALLO_12_01"); //Es ist nicht das gerade das Beste, aber in diesen grauen Tagen darf man nicht wählerisch sein.
 
 };
 
@@ -57,7 +57,7 @@ instance DIA_Rukhar_WASMACHSTDU		(C_INFO)
 	condition	 = 	DIA_Rukhar_WASMACHSTDU_Condition;
 	information	 = 	DIA_Rukhar_WASMACHSTDU_Info;
 
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 
 func int DIA_Rukhar_WASMACHSTDU_Condition ()
@@ -70,14 +70,14 @@ func int DIA_Rukhar_WASMACHSTDU_Condition ()
 
 func void DIA_Rukhar_WASMACHSTDU_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_WASMACHSTDU_15_00"); //What are you doing here?
-	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_01"); //Up until a few weeks ago, I was slaving away on the landowner's fields.
-	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_02"); //One day it just got too much for me, and I took myself out of there straight away.
-	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_03"); //Now I'm my own boss. Everything I own is in this chest here. And that's all I need, too.
-	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_04"); //Interested in a little contest?
+	AI_Output			(other, self, "DIA_Rukhar_WASMACHSTDU_15_00"); //Was machst du hier?
+	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_01"); //Bis vor ein paar Wochen habe ich noch auf den Feldern des Großbauern geschuftet.
+	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_02"); //Irgendwann ist es mir einfach zu bunt geworden und ich habe mich kurzerhand aus dem Staub gemacht.
+	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_03"); //Jetzt bin ich mein eigener Herr. Alles, was ich besitze, ist in dieser Truhe hier. Und mehr brauche ich auch nicht.
+	AI_Output			(self, other, "DIA_Rukhar_WASMACHSTDU_12_04"); //Interessiert an einem kleinen Wettkampf?
 	Log_CreateTopic (TOPIC_Wettsaufen, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Wettsaufen, LOG_RUNNING);
-	B_LogEntry (TOPIC_Wettsaufen,"There are bets on at the tavern."); 
+	B_LogEntry (TOPIC_Wettsaufen,"In der Taverne wird gewettet."); 
 
 };
 
@@ -92,7 +92,7 @@ instance DIA_Rukhar_WETTKAMPF		(C_INFO)
 	condition	 = 	DIA_Rukhar_WETTKAMPF_Condition;
 	information	 = 	DIA_Rukhar_WETTKAMPF_Info;
 
-	description	 = 	"What kind of a contest would that be?";
+	description	 = 	"Was für ein Wettkampf soll das sein?";
 };
 
 func int DIA_Rukhar_WETTKAMPF_Condition ()
@@ -105,13 +105,13 @@ func int DIA_Rukhar_WETTKAMPF_Condition ()
 
 func void DIA_Rukhar_WETTKAMPF_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_WETTKAMPF_15_00"); //What kind of a contest would that be?
-	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_01"); //I call it BOTTOM'S UP.
-	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_02"); //The rules are quite simple.
-	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_03"); //We take turns ordering a tankard of the best beer the old geezer has to offer.
-	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_04"); //Every tankard has to be drunk dry, so that it doesn't even leave a ring if you set it on the table upside down .
-	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_05"); //The last man standing wins. The loser pays the tab and a stake. Well? How about it?
-	AI_Output			(other, self, "DIA_Rukhar_WETTKAMPF_15_06"); //Maybe some other time, when I'm not in a hurry.
+	AI_Output			(other, self, "DIA_Rukhar_WETTKAMPF_15_00"); //Was für ein Wettkampf soll das sein?
+	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_01"); //Ich nenne es LEERE DEN KRUG IN EINEM ZUG.
+	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_02"); //Die Regeln sind ganz einfach.
+	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_03"); //Wir bestellen beim Wirt abwechselnd jeder einen Krug mit dem besten Bier, das der alte Zausel zu bieten hat.
+	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_04"); //Jeder Krug ist bis auf den Boden leer zu trinken, so dass er nicht einmal mehr einen Ring hinterlässt, wenn man ihn umgekehrt auf den Tisch stellt.
+	AI_Output			(self, other, "DIA_Rukhar_WETTKAMPF_12_05"); //Derjenige, der als letzter noch steht, hat gewonnen. Der Verlierer zahlt Zeche und Einsatz. Na? Wie wär's?
+	AI_Output			(other, self, "DIA_Rukhar_WETTKAMPF_15_06"); //Ein anderes Mal vielleicht, wenn ich mehr Zeit habe.
 
 };
 
@@ -125,7 +125,7 @@ instance DIA_Rukhar_HOLERANDOLPH		(C_INFO)
 	condition	 = 	DIA_Rukhar_HOLERANDOLPH_Condition;
 	information	 = 	DIA_Rukhar_HOLERANDOLPH_Info;
 
-	description	 = 	"Could I bet on somebody else, though?";
+	description	 = 	"Kann ich auch auf jemand anderen setzen?";
 };
 
 func int DIA_Rukhar_HOLERANDOLPH_Condition ()
@@ -138,11 +138,11 @@ func int DIA_Rukhar_HOLERANDOLPH_Condition ()
 
 func void DIA_Rukhar_HOLERANDOLPH_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_HOLERANDOLPH_15_00"); //Could I bet on somebody else, though?
-	AI_Output			(self, other, "DIA_Rukhar_HOLERANDOLPH_12_01"); //Certainly. If you finally manage to find someone with the guts to go up against me, then I'll bet with you.
-	AI_Output			(self, other, "DIA_Rukhar_HOLERANDOLPH_12_02"); //Everybody pays the same amount into a pot. The winner gets everything. The size of the stake depends on your purse.
-	AI_Output			(self, other, "DIA_Rukhar_HOLERANDOLPH_12_03"); //Bring me someone who dares to go up against me and you've got a bet.
-	B_LogEntry (TOPIC_Wettsaufen,"Rukhar calls his little game BOTTOMS UP. No thanks, I'm not interested. I'll find someone else for him to make a fool of."); 
+	AI_Output			(other, self, "DIA_Rukhar_HOLERANDOLPH_15_00"); //Kann ich auch auf jemand anderen setzen?
+	AI_Output			(self, other, "DIA_Rukhar_HOLERANDOLPH_12_01"); //Sicherlich. Wenn du es schaffst, dass endlich mal jemand den Mut hat, gegen mich anzutreten, dann würde ich mit dir wetten.
+	AI_Output			(self, other, "DIA_Rukhar_HOLERANDOLPH_12_02"); //Jeder zahlt den gleichen Betrag in einen Topf. Wer gewinnt, bekommt alles. Wie hoch dein Einsatz ist, das hängt von deinem Geldbeutel ab.
+	AI_Output			(self, other, "DIA_Rukhar_HOLERANDOLPH_12_03"); //Bring mir jemanden, der es wagt, gegen mich anzutreten, und du hast deine Wette.
+	B_LogEntry (TOPIC_Wettsaufen,"Rukhar nennt sein kleines Spielchen, LEERE DEN KRUG IN EINEM ZUG. Kein Interesse. Ich werde ihm jemanden anderes suchen, den er verarschen kann."); 
 
 };
 
@@ -157,7 +157,7 @@ instance DIA_Rukhar_RANDOLPHWILL		(C_INFO)
 	information	 = 	DIA_Rukhar_RANDOLPHWILL_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"I've got somebody who wants to compete against you.";
+	description	 = 	"Ich habe jemanden, der gegen dich antreten will.";
 };
 
 var int DIA_Rukhar_RANDOLPHWILL_noPerm;
@@ -176,26 +176,26 @@ func int DIA_Rukhar_RANDOLPHWILL_Condition ()
 
 func void DIA_Rukhar_RANDOLPHWILL_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_15_00"); //I've got somebody who wants to compete against you.
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_01"); //Who might that be?
+	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_15_00"); //Ich habe jemanden, der gegen dich antreten will.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_01"); //Wer soll es sein?
 	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_15_02"); //Randolph.
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_03"); //Ho ho. Randolph the braggart? All right. Why not.
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_04"); //Send the wimp to me, and the deal stands.
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_05"); //You can pick him up again no more than 2 days later. Who knows? Maybe you'll get lucky and he'll be able to stand by then.
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_06"); //How big is your bet?
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_03"); //Hoho. Randolph, der Aufschneider? Na gut. Warum nicht.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_04"); //Schick den Knilch zu mir und der Deal steht.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_05"); //Spätestens 2 Tage später kannst du ihn wieder abholen. Wer weiß? Vielleicht hast du ja Glück und er steht dann wieder.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_12_06"); //Wie hoch ist dein Einsatz?
 
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
 
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "Nothing", DIA_Rukhar_RANDOLPHWILL_nix );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "gar nichts", DIA_Rukhar_RANDOLPHWILL_nix );
 	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "100", DIA_Rukhar_RANDOLPHWILL_100 );
 	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "50", DIA_Rukhar_RANDOLPHWILL_50 );
 	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "20", DIA_Rukhar_RANDOLPHWILL_20 );
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "10 gold coins", DIA_Rukhar_RANDOLPHWILL_10 );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "10 Goldmünzen", DIA_Rukhar_RANDOLPHWILL_10 );
 };
 func void DIA_Rukhar_RANDOLPHWILL_annehmen ()
 {
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_annehmen_12_00"); //I'll take your bet and hold it until the contest is over, all right?
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_annehmen_12_00"); //Ich nehme deinen Einsatz an mich und verwahre ihn so lange, bis der Wettkampf vorbei ist, klar?
 	DIA_Rukhar_RANDOLPHWILL_noPerm = TRUE;
 };
 
@@ -203,72 +203,72 @@ func void DIA_Rukhar_RANDOLPHWILL_mehr ()
 {
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
 
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "Nothing", DIA_Rukhar_RANDOLPHWILL_nix );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "gar nichts", DIA_Rukhar_RANDOLPHWILL_nix );
 	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "100", DIA_Rukhar_RANDOLPHWILL_100 );
 	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "50", DIA_Rukhar_RANDOLPHWILL_50 );
 	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "20", DIA_Rukhar_RANDOLPHWILL_20 );
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "10 gold coins", DIA_Rukhar_RANDOLPHWILL_10 );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "10 Goldmünzen", DIA_Rukhar_RANDOLPHWILL_10 );
 };
 
 
 func void DIA_Rukhar_RANDOLPHWILL_nix ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_nix_15_00"); //Nothing
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_nix_12_01"); //Then we might as well forget the whole thing.
+	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_nix_15_00"); //gar nichts
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_nix_12_01"); //Dann vergessen wir die Geschichte am besten gleich wieder.
 
 	AI_StopProcessInfos (self);
 };
 
 func void DIA_Rukhar_RANDOLPHWILL_10 ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_10_15_00"); //10 gold coins
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_10_12_01"); //Come on, you can't be serious. A few more coins won't kill you.
+	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_10_15_00"); //10 Goldmünzen
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_10_12_01"); //Komm schon, das ist doch nicht dein Ernst. Ein paar Münzen mehr könnten es schon sein.
 
 	Rukhar_Einsatz = 10;
 	Rukhar_Gewinn = 20;
 
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(select another stake)", DIA_Rukhar_RANDOLPHWILL_mehr );
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(accept stake)", DIA_Rukhar_RANDOLPHWILL_annehmen );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(anderen Einsatz wählen)", DIA_Rukhar_RANDOLPHWILL_mehr );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(Einsatz annehmen)", DIA_Rukhar_RANDOLPHWILL_annehmen );
 };
 
 func void DIA_Rukhar_RANDOLPHWILL_20 ()
 {
 	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_20_15_00"); //20
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_20_12_01"); //If you want to bet, then kindly do it right.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_20_12_01"); //Wenn du schon wetten willst, dann mach das gefälligst richtig.
 
 	Rukhar_Einsatz = 20;
 	Rukhar_Gewinn = 40;
 	
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(select another stake)", DIA_Rukhar_RANDOLPHWILL_mehr );
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(accept stake)", DIA_Rukhar_RANDOLPHWILL_annehmen );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(anderen Einsatz wählen)", DIA_Rukhar_RANDOLPHWILL_mehr );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(Einsatz annehmen)", DIA_Rukhar_RANDOLPHWILL_annehmen );
 };
 
 func void DIA_Rukhar_RANDOLPHWILL_50 ()
 {
 	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_50_15_00"); //50
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_50_12_01"); //Not so timid. Be daring.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_50_12_01"); //Nur nicht so zaghaft. Jetzt trau dich doch mal was.
 
 	Rukhar_Einsatz = 50;
 	Rukhar_Gewinn = 100;
 	
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(select another stake)", DIA_Rukhar_RANDOLPHWILL_mehr );
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(accept stake)", DIA_Rukhar_RANDOLPHWILL_annehmen );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(anderen Einsatz wählen)", DIA_Rukhar_RANDOLPHWILL_mehr );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(Einsatz annehmen)", DIA_Rukhar_RANDOLPHWILL_annehmen );
 };
 
 func void DIA_Rukhar_RANDOLPHWILL_100 ()
 {
 	AI_Output			(other, self, "DIA_Rukhar_RANDOLPHWILL_100_15_00"); //100
-	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_100_12_01"); //That's what I like to hear.
+	AI_Output			(self, other, "DIA_Rukhar_RANDOLPHWILL_100_12_01"); //Das höre ich gerne.
 	
 	Rukhar_Einsatz = 100;
 	Rukhar_Gewinn = 200;
 	
 	Info_ClearChoices	(DIA_Rukhar_RANDOLPHWILL);
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(select another stake)", DIA_Rukhar_RANDOLPHWILL_mehr );
-	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(accept stake)", DIA_Rukhar_RANDOLPHWILL_annehmen );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(anderen Einsatz wählen)", DIA_Rukhar_RANDOLPHWILL_mehr );
+	Info_AddChoice	(DIA_Rukhar_RANDOLPHWILL, "(Einsatz annehmen)", DIA_Rukhar_RANDOLPHWILL_annehmen );
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -282,7 +282,7 @@ instance DIA_Rukhar_ICHSEHEDICH		(C_INFO)
 	information	 = 	DIA_Rukhar_ICHSEHEDICH_Info;
 	permanent	 = 	TRUE;
 	
-	description	=	"Here's my stake.";
+	description	=	"Hier hast du meinen Einsatz.";
 };
 
 var int DIA_Rukhar_ICHSEHEDICH_noPerm;
@@ -301,18 +301,18 @@ func int DIA_Rukhar_ICHSEHEDICH_Condition ()
 
 func void DIA_Rukhar_ICHSEHEDICH_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_ICHSEHEDICH_15_00"); //Here's my stake.
+	AI_Output			(other, self, "DIA_Rukhar_ICHSEHEDICH_15_00"); //Hier hast du meinen Einsatz.
 
 	if (B_GiveInvItems (other, self, ItMi_Gold, Rukhar_Einsatz))
 		{
-			AI_Output			(self, other, "DIA_Rukhar_ICHSEHEDICH_12_01"); //All right. Don't take too long bringing Randolph here, you hear?
+			AI_Output			(self, other, "DIA_Rukhar_ICHSEHEDICH_12_01"); //Alles klar. Lass dir nicht zu viel Zeit, Randolph hierher zu bringen, hörst du?
 			DIA_Rukhar_ICHSEHEDICH_noPerm = TRUE;
 			MIS_Rukhar_Wettkampf = LOG_RUNNING; 
 			B_GivePlayerXP (XP_Ambient);
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Rukhar_ICHSEHEDICH_12_02"); //Very funny. Come back when you have enough money.
+			AI_Output			(self, other, "DIA_Rukhar_ICHSEHEDICH_12_02"); //Sehr witzig! Komm wieder, wenn du genug Geld hast.
 		};
 	AI_StopProcessInfos (self);
 };
@@ -329,7 +329,7 @@ instance DIA_Rukhar_GELDZURUECK		(C_INFO)
 	information	 = 	DIA_Rukhar_GELDZURUECK_Info;
 	permanent	 = 	TRUE;
 	
-	description	 = 	"I want my money back.";
+	description	 = 	"Ich will mein Geld zurück.";
 };
 
 func int DIA_Rukhar_GELDZURUECK_Condition ()
@@ -345,8 +345,8 @@ func int DIA_Rukhar_GELDZURUECK_Condition ()
 
 func void DIA_Rukhar_GELDZURUECK_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_GELDZURUECK_15_00"); //I want my money back.
-	AI_Output			(self, other, "DIA_Rukhar_GELDZURUECK_12_01"); //Gambling debts are debts of honor, pal. You should have thought it over before.
+	AI_Output			(other, self, "DIA_Rukhar_GELDZURUECK_15_00"); //Ich will mein Geld zurück.
+	AI_Output			(self, other, "DIA_Rukhar_GELDZURUECK_12_01"); //Spielschulden sind Ehrenschulden, Kumpel. Das hättest du dir vorher überlegen sollen.
 
 	AI_StopProcessInfos (self);
 };
@@ -363,7 +363,7 @@ instance DIA_Rukhar_HAENSELN		(C_INFO)
 	information	 = 	DIA_Rukhar_HAENSELN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"You seem to have bitten off more than you can chew.";
+	description	 = 	"Man soll den Mund nicht so voll nehmen.";
 };
 
 func int DIA_Rukhar_HAENSELN_Condition ()
@@ -381,11 +381,11 @@ var int DIA_Rukhar_HAENSELN_nureimalgeld;
 
 func void DIA_Rukhar_HAENSELN_Info ()
 {
-	AI_Output			(other, self, "DIA_Rukhar_HAENSELN_15_00"); //You seem to have bitten off more than you can chew.
+	AI_Output			(other, self, "DIA_Rukhar_HAENSELN_15_00"); //Man soll den Mund nicht so voll nehmen.
 
 	if	(DIA_Rukhar_HAENSELN_nureimalgeld == FALSE)
 		{
-			AI_Output			(self, other, "DIA_Rukhar_HAENSELN_12_01"); //Here's your money and not one word more.
+			AI_Output			(self, other, "DIA_Rukhar_HAENSELN_12_01"); //Hier hast du dein Geld und jetzt kein Wort mehr.
 			B_GivePlayerXP (XP_Rukhar_Lost);
 
 			IntToFloat (Rukhar_Gewinn);
@@ -397,7 +397,7 @@ func void DIA_Rukhar_HAENSELN_Info ()
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Rukhar_HAENSELN_12_02"); //I'll get even with you, you can count on it.
+			AI_Output			(self, other, "DIA_Rukhar_HAENSELN_12_02"); //Mir dir rechne ich noch ab, verlass dich drauf.
 		};
 
 	AI_StopProcessInfos (self);
@@ -413,7 +413,7 @@ instance DIA_Rukhar_Perm		(C_INFO)
 	condition	 = 	DIA_Rukhar_Perm_Condition;
 	information	 = 	DIA_Rukhar_Perm_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Did anything else of interest happen?";
+	description	 = 	"Sonst irgendwas interessantes passiert?";
 };
 
 func int DIA_Rukhar_Perm_Condition ()
@@ -425,8 +425,8 @@ func int DIA_Rukhar_Perm_Condition ()
 };
 func void DIA_Rukhar_Perm_Info ()
 {
-	AI_Output (other, self, "DIA_Rukhar_Perm_15_00"); //Did anything else of interest happen?
-	AI_Output (self, other, "DIA_Rukhar_Perm_12_01"); //Not that I know of. Nobody tells me anything.
+	AI_Output (other, self, "DIA_Rukhar_Perm_15_00"); //Sonst irgendwas interessantes passiert?
+	AI_Output (self, other, "DIA_Rukhar_Perm_12_01"); //Nicht, dass ich wüsste. Mir erzählt ja keiner mehr was.
 };
 
 

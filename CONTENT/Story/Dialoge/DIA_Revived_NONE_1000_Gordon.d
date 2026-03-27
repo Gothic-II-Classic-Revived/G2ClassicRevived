@@ -31,7 +31,7 @@ instance DIA_Revived_Gordon_Trade		(C_INFO)
 	Trade		 = 	TRUE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"What do you have to offer?";
+	description	 = 	"Was hast du anzubieten?";
 };
 
 func int DIA_Revived_Gordon_Trade_Condition ()
@@ -47,6 +47,6 @@ func void DIA_Revived_Gordon_Trade_Info ()
 		DIA_Revived_Gordon_Trade_OneTime = TRUE;
 	};
 	
-	AI_Output	(other, self, "DIA_Addon_Martin_Trade_15_00"); //What do you have to offer?
+	AI_Output	(other, self, "DIA_Addon_Martin_Trade_15_00"); //Was hast du anzubieten?
 	B_GiveTradeInv (self);
 };

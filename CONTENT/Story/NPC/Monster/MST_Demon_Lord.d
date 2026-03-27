@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_DemonLord(C_Npc)			
 {
 	//----- Monster -----
-	name							= "Demon Lord";
+	name							= "Dämonenlord";
 	guild							= GIL_DEMON;
 	aivar[AIV_MM_REAL_ID]			= ID_DEMON_LORD;
 

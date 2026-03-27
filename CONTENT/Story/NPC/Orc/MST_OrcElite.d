@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_OrcElite(C_Npc)			
 {
 	//----- Monster -----
-	name							=	"Orc Elite";
+	name							=	"Ork Elite";
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCELITE;
 	voice							=	18;
@@ -105,11 +105,11 @@ INSTANCE OrcElite_Sit (Mst_Default_OrcElite)
 //		Story Orks											
 //*********************************************************************************************************************************************************************************************************************************
 //*************************
-//	OrkElite_AntiPaladinOrkOberst    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen übelriechenden Schergen zu tun!)													
+//	OrkElite_AntiPaladinOrkOberst    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen belriechenden Schergen zu tun!)													
 //*************************
 INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 {
-	name		=	"Orc Colonel";
+	name		=	"Orkischer Oberst";
 	//----- Attribute -----	
 	attribute	[ATR_STRENGTH]		=	140;
 	attribute	[ATR_DEXTERITY]		=	120;
@@ -132,7 +132,7 @@ INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 };
 
 //*************************
-//	Orc Elite AntiPaladin    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen übelriechenden Schergen zu tun!)													
+//	Orc Elite AntiPaladin    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen belriechenden Schergen zu tun!)													
 //*************************
 INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 {
@@ -151,7 +151,7 @@ INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 };
 
 //*************************
-//	Orc Elite AntiPaladin1    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen übelriechenden Schergen zu tun!)													
+//	Orc Elite AntiPaladin1    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen belriechenden Schergen zu tun!)													
 //*************************
 INSTANCE OrcElite_AntiPaladin1 (Mst_Default_OrcElite)
 {
@@ -231,7 +231,7 @@ INSTANCE OrcElite_AntiPaladin3 (Mst_Default_OrcElite)
 //*************************
 INSTANCE OrkElite_AntiPaladinOrkOberst_DI (Mst_Default_OrcElite)
 {
-	name		=	"Orc Colonel";
+	name		=	"Orkischer Oberst";
 	//----- Attribute -----	
 	attribute	[ATR_STRENGTH]		=	150;
 	attribute	[ATR_DEXTERITY]		=	150;

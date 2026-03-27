@@ -20,42 +20,42 @@ FUNC VOID Use_Runemaking_KDW_CIRC1_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "The Circles of Water"					);
+					Doc_PrintLine	( nDocID,  0, "Die Kreise des Wassers"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
-					Doc_PrintLines	( nDocID,  0, "The runes of Water and the ingredients necessary for their creation.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des Wassers und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Whirlwind");
-					Doc_PrintLine	( nDocID,  0, "Wings of a bloodfly");
+					Doc_PrintLine	( nDocID,  0, "Wirbelwind");
+					Doc_PrintLine	( nDocID,  0, "Flügel einer Blutfliege");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Ice lance");
-					Doc_PrintLine	( nDocID,  0, "Glacier quartz");
+					Doc_PrintLine	( nDocID,  0, "Eislanze");
+					Doc_PrintLine	( nDocID,  0, "Gletscherquartz");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Geyser");
-					Doc_PrintLine	( nDocID,  0, "Aquamarine");
+					Doc_PrintLine	( nDocID,  0, "Geysir");
+					Doc_PrintLine	( nDocID,  0, "Aquamarin");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Storm");
-					Doc_PrintLine	( nDocID,  0, "Glacier quartz");
-					Doc_PrintLine	( nDocID,  0, "Wings of a bloodfly");
+					Doc_PrintLine	( nDocID,  0, "Unwetter");
+					Doc_PrintLine	( nDocID,  0, "Gletscherquartz");
+					Doc_PrintLine	( nDocID,  0, "Flügel einer Blutfliege");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Waterfist");
-					Doc_PrintLine	( nDocID,  0, "Aquamarine");
-					Doc_PrintLine	( nDocID,  0, "Rock Crystal");
+					Doc_PrintLine	( nDocID,  0, "Wasserfaust");
+					Doc_PrintLine	( nDocID,  0, "Aquamarin");
+					Doc_PrintLine	( nDocID,  0, "Bergkristall");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 	};
 };

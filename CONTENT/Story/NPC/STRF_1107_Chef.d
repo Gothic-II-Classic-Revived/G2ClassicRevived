@@ -2,7 +2,7 @@
 instance STRF_1107_Chef (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Chef";
+	name 		= "Koch";
 	guild 		= GIL_STRF;
 	id 			= 1107;
 	voice 		= 1;

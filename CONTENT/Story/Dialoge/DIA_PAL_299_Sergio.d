@@ -19,7 +19,7 @@ FUNC VOID DIA_Sergio_EXIT_Info()
 {
 	if (Npc_GetDistToWP (self,"NW_MONASTERY_CHAPELL_02") <= 1500)  // Nur wenn Sergio in der Kapelle ist M.F.  
 	{
-		AI_Output (self, other,"DIA_Sergio_EXIT_04_00");//May Innos illuminate your path.
+		AI_Output (self, other,"DIA_Sergio_EXIT_04_00");//Innos erleuchte deinen Pfad.
 	};
 	AI_StopProcessInfos (self);
 };
@@ -47,7 +47,7 @@ func int DIA_Sergio_WELCOME_Condition ()
 };
 func void DIA_Sergio_WELCOME_Info ()
 {
-	AI_Output (self, other, "DIA_Sergio_WELCOME_04_00"); //Innos be with you, what can I do for you?
+	AI_Output (self, other, "DIA_Sergio_WELCOME_04_00"); //Innos sei mit dir, was kann ich für dich tun?
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Isgaroth
@@ -72,24 +72,24 @@ func int DIA_Sergio_Isgaroth_Condition ()
 };
 func void DIA_Sergio_Isgaroth_Info ()
 {
-	AI_Output (self, other, "DIA_Sergio_Isgaroth_04_00"); //You have prayed for my brethren. I want to thank you for that. Tell me what I can do for you.
+	AI_Output (self, other, "DIA_Sergio_Isgaroth_04_00"); //Du hast für meine Brüder gebetet. Dafür will ich dir danken. Sag mir, was ich für dich tun kann.
 	
 	Info_ClearChoices (DIA_Sergio_Isgaroth);
-	Info_AddChoice 	  (DIA_Sergio_Isgaroth,"What about a little donation?",DIA_Sergio_Isgaroth_Spende);
-	Info_AddChoice 	  (DIA_Sergio_Isgaroth,"Let me share your fighting experience.",DIA_Sergio_Isgaroth_XP);
+	Info_AddChoice 	  (DIA_Sergio_Isgaroth,"Wie wäre es mit einer kleinen Spende?",DIA_Sergio_Isgaroth_Spende);
+	Info_AddChoice 	  (DIA_Sergio_Isgaroth,"Lass mich an deiner Erfahrung im Kampf teilhaben.",DIA_Sergio_Isgaroth_XP);
 };	
 FUNC VOID DIA_Sergio_Isgaroth_Spende()
 {
-	AI_Output (other, self, "DIA_Sergio_Isgaroth_Spende_15_00"); //What about a little donation?
-	AI_Output (self, other, "DIA_Sergio_Isgaroth_Spende_04_01"); //May this gold be of use to you.
+	AI_Output (other, self, "DIA_Sergio_Isgaroth_Spende_15_00"); //Wie wäre es mit einer kleinen Spende?
+	AI_Output (self, other, "DIA_Sergio_Isgaroth_Spende_04_01"); //Möge dieses Gold dir weiterhelfen.
 	
 	B_GiveInvItems (self,other, ItMi_Gold,50);
 	Info_ClearChoices (DIA_Sergio_Isgaroth);
 };
 FUNC VOID DIA_Sergio_Isgaroth_XP()
 {
-	AI_Output (other, self, "DIA_Sergio_Isgaroth_XP_15_00"); //Let me share your fighting experience.
-	AI_Output (self, other, "DIA_Sergio_Isgaroth_XP_04_01"); //When you fight, always make sure that no one can attack you from behind.
+	AI_Output (other, self, "DIA_Sergio_Isgaroth_XP_15_00"); //Lass mich an deiner Erfahrung im Kampf teilhaben.
+	AI_Output (self, other, "DIA_Sergio_Isgaroth_XP_04_01"); //Wenn du kämpfst, dann sichere dich so ab, dass dich niemand von hinten angreifen kann.
 	
 	other.HitChance[NPC_TALENT_2H] = (other.HitChance[NPC_TALENT_2H] + 2);
 	PrintScreen	(PRINT_Learn2H, -1, -1, FONT_ScreenSmall, 2);
@@ -105,7 +105,7 @@ instance DIA_Sergio_Aufgabe		(C_INFO)
 	nr			 =  3;
 	condition	 = 	DIA_Sergio_Aufgabe_Condition;
 	information	 = 	DIA_Sergio_Aufgabe_Info;
-	description	 = 	"I need access to the library.";
+	description	 = 	"Ich brauche Zugang zur Bibliothek.";
 };
 func int DIA_Sergio_Aufgabe_Condition ()
 {	
@@ -118,16 +118,16 @@ func int DIA_Sergio_Aufgabe_Condition ()
 };
 func void DIA_Sergio_Aufgabe_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_Aufgabe_15_00"); //I need access to the library.
-	AI_Output (self, other, "DIA_Sergio_Aufgabe_04_01"); //Well, I cannot grant you access. For that you must first fulfill your tasks.
-	AI_Output (self, other, "DIA_Sergio_Aufgabe_04_02"); //But I can help you. Go to Master Isgaroth and talk to him. I have heard that he needs help and would go to him - but I pass this task on to you.
+	AI_Output (other, self, "DIA_Sergio_Aufgabe_15_00"); //Ich brauche Zugang zur Bibliothek.
+	AI_Output (self, other, "DIA_Sergio_Aufgabe_04_01"); //Nun, ich kann dir den Zugang nicht gewähren. Dazu musst du erst deine Aufgaben erfüllen.
+	AI_Output (self, other, "DIA_Sergio_Aufgabe_04_02"); //Aber helfen kann ich dir. Geh zu Meister Isgaroth und sprich mit ihm. Ich hörte, er braucht Hilfe, und wollte zu ihm gehen - doch ich gebe diese Aufgabe jetzt an dich weiter.
 	
 	Sergio_Sends = TRUE;
 	Wld_InsertNpc (BlackWolf,"NW_PATH_TO_MONASTER_AREA_01"); //ist richtig geschrieben! 
 	
 	Log_CreateTopic (Topic_IsgarothWolf,LOG_MISSION);
 	Log_SetTopicStatus	 (Topic_IsgarothWolf,LOG_RUNNING);
-	B_LogEntry (Topic_IsgarothWolf,"Master Isgaroth needs help at the shrine. I should look him up.");
+	B_LogEntry (Topic_IsgarothWolf,"Meister Isgaroth am Schrein braucht Hilfe. Ich sollte ihn mal aufsuchen.");
 };	
 
 ///////////////////////////////////////////////////////////////////////
@@ -139,7 +139,7 @@ instance DIA_Sergio_WHAT		(C_INFO)
 	nr			 =  3;
 	condition	 = 	DIA_Sergio_WHAT_Condition;
 	information	 = 	DIA_Sergio_WHAT_Info;
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 func int DIA_Sergio_WHAT_Condition ()
 {	
@@ -151,11 +151,11 @@ func int DIA_Sergio_WHAT_Condition ()
 };
 func void DIA_Sergio_WHAT_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_WHAT_15_00"); //What are you doing here?
-	AI_Output (self, other, "DIA_Sergio_WHAT_04_01"); //I am praying to Innos that he strengthen my arm and my will.
-	AI_Output (self, other, "DIA_Sergio_WHAT_04_02"); //Thus, I am armed against all dangers and shall destroy all his enemies in order to do him honor.
-	AI_Output (other, self, "DIA_Sergio_WHAT_15_03"); //What enemies?
-	AI_Output (self, other, "DIA_Sergio_WHAT_04_04"); //All those who oppose the will of Innos. Whether they be human born or summoned creature.
+	AI_Output (other, self, "DIA_Sergio_WHAT_15_00"); //Was machst du hier?
+	AI_Output (self, other, "DIA_Sergio_WHAT_04_01"); //Ich bete zu Innos, dass er meinen Arm und meinen Willen stärkt.
+	AI_Output (self, other, "DIA_Sergio_WHAT_04_02"); //So bin ich gegen alle Gefahren gewappnet und werde alle seine Feinde vernichten, um ihn zu ehren.
+	AI_Output (other, self, "DIA_Sergio_WHAT_15_03"); //Was für Feinde?
+	AI_Output (self, other, "DIA_Sergio_WHAT_04_04"); //Jeder, der sich gegen den Willen Innos' stellt. Gleich, ob geborener Mensch oder beschworene Kreatur.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Babo
@@ -166,7 +166,7 @@ instance DIA_Sergio_Babo		(C_INFO)
 	nr			 =  3;
 	condition	 = 	DIA_Sergio_Babo_Condition;
 	information	 = 	DIA_Sergio_Babo_Info;
-	description	 = 	"Can you go through a few exercises with Babo?";
+	description	 = 	"Kannst du mit Babo ein paar Übungen machen?";
 };
 func int DIA_Sergio_Babo_Condition ()
 {	
@@ -179,15 +179,15 @@ func int DIA_Sergio_Babo_Condition ()
 };
 func void DIA_Sergio_Babo_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_Babo_15_00"); //Can you go through a few exercises with Babo?
-	AI_Output (self, other, "DIA_Sergio_Babo_04_01"); //Why doesn't he ask me himself?
-	AI_Output (other, self, "DIA_Sergio_Babo_15_02"); //I think he's shy.
-	AI_Output (self, other, "DIA_Sergio_Babo_04_03"); //I see. Good, if it means so much to him, I shall train with him every morning for two hours. We begin at 5 o'clock. Tell him that.
+	AI_Output (other, self, "DIA_Sergio_Babo_15_00"); //Kannst du mit Babo ein paar Übungen machen?
+	AI_Output (self, other, "DIA_Sergio_Babo_04_01"); //Warum fragt er mich nicht selbst?
+	AI_Output (other, self, "DIA_Sergio_Babo_15_02"); //Ich glaube, er ist schüchtern.
+	AI_Output (self, other, "DIA_Sergio_Babo_04_03"); //Verstehe. Gut, wenn es ihm soviel bedeutet, werde ich mit ihm von nun an jeden Morgen zwei Stunden trainieren. Wir beginnen um 5 Uhr. Sag ihm das.
 	
 	Npc_ExchangeRoutine (self, "TRAIN");
 	B_StartOtherRoutine (Babo,"TRAIN");
 
-	B_LogEntry (Topic_BaboTrain, "Sergio has agreed to train with Babo for two hours every morning from now on."); 
+	B_LogEntry (Topic_BaboTrain, "Sergio hat zugesagt, von nun an jeden Morgen mit Babo zwei Stunden zu trainieren."); 
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info WHY
@@ -198,7 +198,7 @@ instance DIA_Sergio_WHY		(C_INFO)
 	nr			 =  4;
 	condition	 = 	DIA_Sergio_WHY_Condition;
 	information	 = 	DIA_Sergio_WHY_Info;
-	description	 = 	"Why aren't you with the other paladins?";
+	description	 = 	"Warum bist du nicht bei den anderen Paladinen?";
 };
 func int DIA_Sergio_WHY_Condition ()
 {	
@@ -210,9 +210,9 @@ func int DIA_Sergio_WHY_Condition ()
 };
 func void DIA_Sergio_WHY_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_WHY_15_00"); //Why aren't you with the other paladins?
-	AI_Output (self, other, "DIA_Sergio_WHY_04_01"); //It may seem unusual that I am here, however we paladins also serve the magicians, for they preach the will of Innos.
-	AI_Output (self, other, "DIA_Sergio_WHY_04_02"); //We paladins are warriors in the name of Innos. His will is our law. At the moment, I am waiting for new orders from the magicians.
+	AI_Output (other, self, "DIA_Sergio_WHY_15_00"); //Warum bist du nicht bei den anderen Paladinen?
+	AI_Output (self, other, "DIA_Sergio_WHY_04_01"); //Es mag dir ungewöhnlich erscheinen, dass ich hier bin, jedoch dienen auch wir Paladine den Magiern, denn sie verkünden den Willen Innos'.
+	AI_Output (self, other, "DIA_Sergio_WHY_04_02"); //Wir Paladine sind die Streiter im Namen von Innos. Sein Wille ist unser Gesetz - Im Moment warte ich auf neue Befehle von den Magiern.
 
 };
 ///////////////////////////////////////////////////////////////////////
@@ -225,7 +225,7 @@ instance DIA_Sergio_ORDERS		(C_INFO)
 	condition	 = 	DIA_Sergio_ORDERS_Condition;
 	information	 = 	DIA_Sergio_ORDERS_Info;
 	permanent	 =  TRUE;
-	description	 = 	"And do you already have new orders?";
+	description	 = 	"Und hast du schon neue Befehle?";
 };
 func int DIA_Sergio_ORDERS_Condition ()
 {	
@@ -238,8 +238,8 @@ func int DIA_Sergio_ORDERS_Condition ()
 };
 func void DIA_Sergio_ORDERS_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_ORDERS_15_00"); //And do you already have new orders?
-	AI_Output (self, other, "DIA_Sergio_ORDERS_04_01"); //Until then I still have time to find strength in prayer.
+	AI_Output (other, self, "DIA_Sergio_ORDERS_15_00"); //Und hast du schon neue Befehle?
+	AI_Output (self, other, "DIA_Sergio_ORDERS_04_01"); //Bisher habe ich noch Zeit, im Gebet Kraft zu finden.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Guide Start
@@ -251,7 +251,7 @@ instance DIA_Sergio_Start		(C_INFO)
 	condition	 = 	DIA_Sergio_Start_Condition;
 	information	 = 	DIA_Sergio_Start_Info;
 	permanent	 =  FALSE;
-	description	 = 	"You are to escort me to the pass.";
+	description	 = 	"Du sollst mich zum Pass begleiten.";
 };
 func int DIA_Sergio_Start_Condition ()
 {	
@@ -264,8 +264,8 @@ func int DIA_Sergio_Start_Condition ()
 };
 func void DIA_Sergio_Start_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_Start_15_00"); //You are to escort me to the pass.
-	AI_Output (self, other, "DIA_Sergio_Start_04_01"); //Good, then I shall do that. I know the way, so follow me.
+	AI_Output (other, self, "DIA_Sergio_Start_15_00"); //Du sollst mich zum Pass begleiten.
+	AI_Output (self, other, "DIA_Sergio_Start_04_01"); //Gut, dann werde ich das tun. Ich kenne den Weg, also folge mir.
 	
 	AI_StopProcessInfos (self);
 	
@@ -283,7 +283,7 @@ instance DIA_Sergio_Guide		(C_INFO)
 	condition	 = 	DIA_Sergio_Guide_Condition;
 	information	 = 	DIA_Sergio_Guide_Info;
 	permanent	 =  TRUE;
-	description	 = 	"What's up?";
+	description	 = 	"Wie steht's?";
 };
 func int DIA_Sergio_Guide_Condition ()
 {	
@@ -295,9 +295,9 @@ func int DIA_Sergio_Guide_Condition ()
 };
 func void DIA_Sergio_Guide_Info ()
 {
-	AI_Output (other, self, "DIA_Sergio_Guide_15_00"); //How's it going?
-	AI_Output (self, other, "DIA_Sergio_Guide_04_01"); //I shall take you to the pass. But the dangerous part of the journey only begins there.
-	AI_Output (self, other, "DIA_Sergio_Guide_04_02"); //But let us waste no time. We need to be on our way.
+	AI_Output (other, self, "DIA_Sergio_Guide_15_00"); //Wie läuft's denn so?
+	AI_Output (self, other, "DIA_Sergio_Guide_04_01"); //Ich werde dich zum Pass bringen. Doch dann beginnt erst der gefährliche Teil der Reise.
+	AI_Output (self, other, "DIA_Sergio_Guide_04_02"); //Aber lass uns keine Zeit verschwenden, sondern zusehen, dass wir weiterkommen.
 	
 	AI_StopProcessInfos (self);
 	
@@ -324,13 +324,13 @@ func int DIA_Sergio_Ende_Condition ()
 };
 func void DIA_Sergio_Ende_Info ()
 {
-	AI_Output (self, other, "DIA_Sergio_Ende_04_00"); //We are there. Whatever awaits you in the Valley of the Mines, I hope that you find your way back.
-	AI_Output (other, self, "DIA_Sergio_Ende_15_01"); //Don't fear - I shall return.
-	AI_Output (self, other, "DIA_Sergio_Ende_04_02"); //Go with Innos. May he always protect you.
+	AI_Output (self, other, "DIA_Sergio_Ende_04_00"); //Wir sind da. Was auch immer dich im Minental erwarten wird, ich hoffe, du findest den Weg zurück.
+	AI_Output (other, self, "DIA_Sergio_Ende_15_01"); //Keine Angst - ich komme wieder.
+	AI_Output (self, other, "DIA_Sergio_Ende_04_02"); //Geh mit Innos. Möge er dich allzeit beschützen.
 	
 	self.aivar[AIV_PARTYMEMBER] = FALSE; 
 	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"START"); 
+	Npc_ExchangeRoutine (self,"Start"); 
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm
@@ -356,11 +356,11 @@ func void DIA_Sergio_Perm_Info ()
 {
 	if (other.guild == GIL_PAL)
 	{
-		AI_Output (self, other, "DIA_Sergio_Perm_04_00"); //For Innos, Brother. If you have come to learn something about the Consecration of the Sword, then ask Marduk.
+		AI_Output (self, other, "DIA_Sergio_Perm_04_00"); //Für Innos, Bruder. Wenn du gekommen bist, um etwas über die Schwertweihe zu erfahren, dann wende dich an Marduk.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Sergio_Perm_04_01"); //I have heard of you. You are the fellow from the farms who was in the Valley of Mines. My respects.
+		AI_Output (self, other, "DIA_Sergio_Perm_04_01"); //Ich hab schon von dir gehört. Du bist der Kerl von den Höfen, der im Minental war. Respekt.
 	};
 	AI_StopProcessInfos (self);
 	

@@ -66,7 +66,7 @@ INSTANCE DIA_Alwin_Sheep(C_INFO)
 	condition	= DIA_Alwin_Sheep_Condition;
 	information	= DIA_Alwin_Sheep_Info;
 	permanent	= FALSE;
-	description = "Are those your sheep?";
+	description = "Sind das deine Schafe?";
 };                       
 FUNC INT DIA_Alwin_Sheep_Condition()
 {
@@ -115,7 +115,7 @@ INSTANCE DIA_Alwin_FellanRunning (C_INFO)
 	condition	= DIA_Alwin_FellanRunning_Condition;
 	information	= DIA_Alwin_FellanRunning_Info;
 	permanent	= FALSE;
-	description = "I could take care of Fellan...";
+	description = "Ich könnte mich um Fellan kümmern ...";
 };                       
 FUNC INT DIA_Alwin_FellanRunning_Condition()
 {	
@@ -137,16 +137,16 @@ FUNC VOID DIA_Alwin_FellanRunning_Info()
 	
 	Log_CreateTopic (TOPIC_Alwin,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Alwin,LOG_RUNNING);
-	B_LogEntry (TOPIC_Alwin,"Alwin wants me to get Fellan to stop hammering. It doesn't seem appropriate to kill him.");
+	B_LogEntry (TOPIC_Alwin,"Alwin will das ich Fellan dazu bringe, das er mit dem Hämemrn aufhört. Es wäre bestimmt nicht angebracht, ihn zu töten.");
 		
 	
 	Info_ClearChoices (DIA_Alwin_FellanRunning);
-	Info_AddChoice (DIA_Alwin_FellanRunning, "I'll see what I can do...", DIA_Alwin_FellanRunning_Ok);
+	Info_AddChoice (DIA_Alwin_FellanRunning, "Ich werd sehen, was ich machen kann...", DIA_Alwin_FellanRunning_Ok);
 	if (hero.guild != GIL_MIL)
 	&& (hero.guild != GIL_PAL)
 	&& (hero.guild != GIL_KDF)
 	{
-		Info_AddChoice (DIA_Alwin_FellanRunning, "If I beat him up, I'll just get into trouble with the militia...", DIA_Alwin_FellanRunning_Problems);
+		Info_AddChoice (DIA_Alwin_FellanRunning, "Wenn ich ihn verprügele bekomme ich doch Ärger mit der Miliz...", DIA_Alwin_FellanRunning_Problems);
 	};
 };
 
@@ -164,8 +164,8 @@ func void DIA_Alwin_FellanRunning_Problems()
 	AI_Output (self ,other,"DIA_Alwin_Add_12_00"); //Down here at the harbor, no one pays much attention to brawls...
 	AI_Output (self ,other,"DIA_Alwin_Add_12_01"); //But if you steal around here, or mess with the sheep, you'll be in trouble.
 
-	//AI_Output (self ,other,"DIA_Alwin_FellanRunning_Problems_12_01"); //Der irre Fellan wird nicht zur Miliz rennen und dich anzeigen. Du k�nntest h�chstens ein Problem bekommen, wenn seine Nachbarn was davon mitbekommen.
-	//AI_Output (self ,other,"DIA_Alwin_FellanRunning_Problems_12_02"); //Schl�gereien sind hier nicht gerne gesehen, und je mehr Zeugen es gibt, desto schlimmer wird die Sache.
+	//AI_Output (self ,other,"DIA_Alwin_FellanRunning_Problems_12_01"); //Der irre Fellan wird nicht zur Miliz rennen und dich anzeigen. Du knntest hchstens ein Problem bekommen, wenn seine Nachbarn was davon mitbekommen.
+	//AI_Output (self ,other,"DIA_Alwin_FellanRunning_Problems_12_02"); //Schlgereien sind hier nicht gerne gesehen, und je mehr Zeugen es gibt, desto schlimmer wird die Sache.
 	//AI_Output (self ,other,"DIA_Alwin_FellanRunning_Problems_12_03"); //Aber wenn du ihn dazu bringst, dass ER dich angreift, werden alle Leute, die den Kampf mitkriegen, auf deiner Seite sein.
 };
 
@@ -179,7 +179,7 @@ INSTANCE DIA_Alwin_FellanSuccess(C_INFO)
 	condition	= DIA_Alwin_FellanSuccess_Condition;
 	information	= DIA_Alwin_FellanSuccess_Info;
 	permanent	= FALSE;
-	description	= "Fellan will hammer no longer.";
+	description	= "Fellan wird nicht mehr hämmern.";
 };                       
 FUNC INT DIA_Alwin_FellanSuccess_Condition()
 {	
@@ -219,7 +219,7 @@ INSTANCE DIA_Alwin_Endlos(C_INFO)
 	condition	= DIA_Alwin_Endlos_Condition;
 	information	= DIA_Alwin_Endlos_Info;
 	permanent	= TRUE;
-	description	= "And, how are the sheep?";
+	description	= "Und, was machen die Schafe?";
 };                       
 FUNC INT DIA_Alwin_Endlos_Condition()
 {	

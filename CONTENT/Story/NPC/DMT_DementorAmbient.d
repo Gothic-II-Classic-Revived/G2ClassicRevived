@@ -673,13 +673,13 @@ instance CastlemineDMT04 (Default_AmbientDementor)
 
 INSTANCE DragonIsle_Keymaster	(Default_AmbientDementor)
 {
-	name		=	"Key Master";
+	name		=	"SchlÃ¼sselmeister";
 	id 			= 	1236;
 
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
-	CreateInvItem	(self,ItKe_EVT_UNDEAD_02);	//der Schlüssel ist wichtig für die Türen zu den Zuggittern
+	CreateInvItem	(self,ItKe_EVT_UNDEAD_02);	//der Schlssel ist wichtig fr die Tren zu den Zuggittern
 
 	// ------ TA anmelden ------
 	start_aistate = ZS_Stand_Dementor;

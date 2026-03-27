@@ -42,24 +42,24 @@ FUNC INT DIA_Marcos_Hallo_Condition()
 };
 FUNC VOID DIA_Marcos_Hallo_Info()
 {	
-	AI_Output (self, other, "DIA_Marcos_Hallo_04_00");//HALT - in the name of Innos! I am Marcos, paladin of the king. Say what you want, and speak the truth!
+	AI_Output (self, other, "DIA_Marcos_Hallo_04_00");//HALT - im Namen Innos'! Ich bin Marcos, Paladin des Königs. Sag, was du willst, und sprich wahr!
 	
 	if (other.guild == GIL_KDF)
 	{
-		AI_Output (other, self, "DIA_Marcos_Hallo_15_01");//A Chosen of Innos always speaks the truth.
-		AI_Output (self, other, "DIA_Marcos_Hallo_04_02");//Forgive me, reverend magician. I did not realize with whom I was speaking.
-		AI_Output (other, self, "DIA_Marcos_Hallo_15_03");//Yes, all right, never mind.
-		AI_Output (self, other, "DIA_Marcos_Hallo_04_04");//If I am permitted to ask - what brings you to this area?
+		AI_Output (other, self, "DIA_Marcos_Hallo_15_01");//Ein Erwählter Innos' spricht immer wahr.
+		AI_Output (self, other, "DIA_Marcos_Hallo_04_02");//Verzeih mir, ehrwürdiger Magier. Ich habe nicht erkannt, mit wem ich spreche.
+		AI_Output (other, self, "DIA_Marcos_Hallo_15_03");//Ja ja, schon gut.
+		AI_Output (self, other, "DIA_Marcos_Hallo_04_04");//Wenn mir die Frage gestattet ist - was verschlägt dich in diese Gegend?
 	}
 	else if (other.guild == GIL_MIL)
 	{
-		AI_Output (other, self, "DIA_Marcos_Hallo_15_05");//Relax - I am in the service of Lord Hagen.
-		AI_Output (self, other, "DIA_Marcos_Hallo_04_06");//You're one of the troops. What orders bring you here?
+		AI_Output (other, self, "DIA_Marcos_Hallo_15_05");//Bleib ruhig - ich stehe im Dienst von Lord Hagen.
+		AI_Output (self, other, "DIA_Marcos_Hallo_04_06");//Du gehörst zur Truppe. Welcher Befehl verschlägt dich hier her?
 	}
 	else //SLD
 	{
-		AI_Output (other, self, "DIA_Marcos_Hallo_15_07");//Relax, we're working for the same boss - Lord Hagen.
-		AI_Output (self, other, "DIA_Marcos_Hallo_04_08");//Since when does Lord Hagen hire mercenaries? Speak - what do you want here?
+		AI_Output (other, self, "DIA_Marcos_Hallo_15_07");//Bleib ruhig, wir arbeiten für den gleichen Boss - Lord Hagen.
+		AI_Output (self, other, "DIA_Marcos_Hallo_04_08");//Seit wann heuert Lord Hagen Söldner an? Sprich - was willst du hier?
 	};
 
 };
@@ -73,7 +73,7 @@ INSTANCE DIA_Marcos_Hagen(C_INFO)
 	condition	= DIA_Marcos_Hagen_Condition;
 	information	= DIA_Marcos_Hagen_Info;
 	permanent	= FALSE;
-	description	= "I need to bring Lord Hagen proof that the dragons exist.";
+	description	= "Ich muss Lord Hagen Beweise für die Existenz der Drachen bringen.";
 };                       
 
 FUNC INT DIA_Marcos_Hagen_Condition()
@@ -86,11 +86,11 @@ FUNC INT DIA_Marcos_Hagen_Condition()
 };
 FUNC VOID DIA_Marcos_Hagen_Info()
 {	
-	AI_Output (other, self, "DIA_Marcos_Hagen_15_00");//I need to bring Lord Hagen proof that the dragons exist.
-	AI_Output (self, other, "DIA_Marcos_Hagen_04_01");//Then you shouldn't lose any time and don't risk your life unnecessarily.
-	AI_Output (self, other, "DIA_Marcos_Hagen_04_02");//Do you think you're going to find a dragon scale here you can take to him?
-	AI_Output (self, other, "DIA_Marcos_Hagen_04_03");//Try to reach the castle and speak to Commander Garond.
-	AI_Output (self, other, "DIA_Marcos_Hagen_04_04");//He must learn that you are on a mission from Lord Hagen! And he will take care of your assignment, too.
+	AI_Output (other, self, "DIA_Marcos_Hagen_15_00");//Ich muss Lord Hagen Beweise für die Existenz der Drachen bringen.
+	AI_Output (self, other, "DIA_Marcos_Hagen_04_01");//Dann solltest du keine Zeit verlieren und dein Leben nicht leichtfertig aufs Spiel setzen.
+	AI_Output (self, other, "DIA_Marcos_Hagen_04_02");//Glaubst du etwa, du findest hier eine Drachenschuppe, die du ihm bringen kannst?
+	AI_Output (self, other, "DIA_Marcos_Hagen_04_03");//Versuch, die Burg zu erreichen, und sprich mit Kommandant Garond.
+	AI_Output (self, other, "DIA_Marcos_Hagen_04_04");//Er muss erfahren, dass du im Auftrag von Lord Hagen kommst! Und er wird sich auch um deinen Auftrag kümmern.
 };	
 
 // ************************************************************
@@ -103,7 +103,7 @@ INSTANCE DIA_Marcos_Garond(C_INFO)
 	condition	= DIA_Marcos_Garond_Condition;
 	information	= DIA_Marcos_Garond_Info;
 	permanent	= FALSE;
-	description	= "I come from Garond...";
+	description	= "Ich komme von Garond...";
 };                       
 
 FUNC INT DIA_Marcos_Garond_Condition()
@@ -116,19 +116,19 @@ FUNC INT DIA_Marcos_Garond_Condition()
 };
 FUNC VOID DIA_Marcos_Garond_Info()
 {	
-	AI_Output (other, self, "DIA_Marcos_Garond_15_00");//I come from Garond - he needs to know how much ore is ready for transport.
-	AI_Output (self, other, "DIA_Marcos_Garond_04_01");//Tell Garond that I had to leave the mining site because the orc attacks became too intense.
-	AI_Output (self, other, "DIA_Marcos_Garond_04_02");//I tried to reach the castle with a few people, but I am the only survivor.
-	AI_Output (self, other, "DIA_Marcos_Garond_04_03");//I have stored the ore safely. There are FOUR chests. Go to Garond and report that to him.
-	AI_Output (self, other, "DIA_Marcos_Garond_04_04");//Tell him that I will guard the ore with my life. But I don't know how long it will be before the orcs find me here.
-	AI_Output (self, other, "DIA_Marcos_Garond_04_05");//Tell him to send me some support.
-	AI_Output (other, self, "DIA_Marcos_Garond_15_06");//I'll let him know.
+	AI_Output (other, self, "DIA_Marcos_Garond_15_00");//Ich komme von Garond - er muss wissen, wieviel Erz zum Transport bereit steht.
+	AI_Output (self, other, "DIA_Marcos_Garond_04_01");//Sag Garond, dass ich die Schürfstelle verlassen musste, weil die Ork-Angriffe zu heftig wurden.
+	AI_Output (self, other, "DIA_Marcos_Garond_04_02");//Ich habe versucht, mit ein paar Leuten die Burg zu erreichen, doch ich bin der einzige Überlebende.
+	AI_Output (self, other, "DIA_Marcos_Garond_04_03");//Das Erz habe ich sicher gestellt. Es sind VIER Kisten. Geh zu Garond und berichte ihm das.
+	AI_Output (self, other, "DIA_Marcos_Garond_04_04");//Sag ihm, dass ich das Erz mit meinen Leben schützen werde. Doch weiß ich nicht, wie lange es dauern wird, bis mich die Orks hier aufspüren.
+	AI_Output (self, other, "DIA_Marcos_Garond_04_05");//Er soll mir Unterstützung schicken.
+	AI_Output (other, self, "DIA_Marcos_Garond_15_06");//Ich werd's ihm ausrichten.
 	
-	B_LogEntry (TOPIC_ScoutMine,"Paladin Marcos guards FOUR crates of ore in a small valley.");
+	B_LogEntry (TOPIC_ScoutMine,"Der Paladin Marcos bewacht in einem kleinen Tal VIER Kisten mit Erz.");
 	
 	Log_CreateTopic (Topic_MarcosJungs,LOG_MISSION);
 	Log_SetTopicStatus (Topic_MarcosJungs,LOG_RUNNING);
-	B_LogEntry (Topic_MarcosJungs,"Marcos wants Garond to send him some help.");
+	B_LogEntry (Topic_MarcosJungs,"Marcos will, das Garond ihm Unterstützung schickt.");
 	
 	MIS_Marcos_Jungs = LOG_RUNNING;
 	Marcos_Ore = TRUE;
@@ -145,7 +145,7 @@ INSTANCE DIA_Marcos_Perm(C_INFO)
 	condition	= DIA_Marcos_Perm_Condition;
 	information	= DIA_Marcos_Perm_Info;
 	permanent	= TRUE;
-	description	= "How are things?";
+	description	= "Wie sieht's aus?";
 };                       
 
 FUNC INT DIA_Marcos_Perm_Condition()
@@ -160,21 +160,21 @@ FUNC INT DIA_Marcos_Perm_Condition()
 FUNC VOID DIA_Marcos_Perm_Info()
 {	
 
-	AI_Output (other, self, "DIA_Marcos_Perm_15_00");//How's the situation?
+	AI_Output (other, self, "DIA_Marcos_Perm_15_00");//Wie ist die Lage?
 	
 	if (self.attribute [ATR_HITPOINTS]) < (self.attribute [ATR_HITPOINTS_MAX] /2)  
 	{
-		AI_Output (self, other, "DIA_Marcos_Perm_04_01");//I need a strong draught of healing potion!
+		AI_Output (self, other, "DIA_Marcos_Perm_04_01");//Ich brauche mal einen kräftigen Schluck Heiltrank!
 		B_UseItem (self, ITPO_REVIVED_HEALTH_03);  
 		
 	}
 	else if (MIS_Marcos_Jungs == LOG_RUNNING)
 	{
-		AI_Output (self, other, "DIA_Marcos_Perm_04_02");//I shall hold out - and I hope that Garond will send me support soon.
+		AI_Output (self, other, "DIA_Marcos_Perm_04_02");//Ich harre aus - und ich hoffe, Garond schickt mir bald die Unterstützung.
 	}
 	else if (MIS_Marcos_Jungs == LOG_SUCCESS)
 	{
-		AI_Output (self, other, "DIA_Marcos_Perm_04_03");//Thank you for your help. Innos will give us the strength to stand firm.
+		AI_Output (self, other, "DIA_Marcos_Perm_04_03");//Ich danke dir für die Unterstützung. Innos wird uns die Kraft geben durchzuhalten.
 		
 		if (Marcos_einmalig == FALSE)
 		{
@@ -184,7 +184,7 @@ FUNC VOID DIA_Marcos_Perm_Info()
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Marcos_Perm_04_04");//I shall stand firm because Innos is with me!
+		AI_Output (self, other, "DIA_Marcos_Perm_04_04");//Ich werde hier durchhalten, denn Innos ist mit mir!
 	};
 	
 	AI_StopProcessInfos (self);

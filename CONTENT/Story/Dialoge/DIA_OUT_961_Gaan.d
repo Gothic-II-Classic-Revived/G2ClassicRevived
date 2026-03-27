@@ -36,7 +36,7 @@ instance DIA_Gaan_HALLO		(C_INFO)
 	condition	 = 	DIA_Gaan_HALLO_Condition;
 	information	 = 	DIA_Gaan_HALLO_Info;
 
-	description	 = 	"You've got a lot of space up here.";
+	description	 = 	"Ziemlich weitläufig, euer Land hier oben.";
 };
 
 func int DIA_Gaan_HALLO_Condition ()
@@ -46,14 +46,14 @@ func int DIA_Gaan_HALLO_Condition ()
 
 func void DIA_Gaan_HALLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_HALLO_15_00"); //You've got a lot of space up here.
-	AI_Output			(self, other, "DIA_Gaan_HALLO_03_01"); //It's nice enough. But if you go through the pass back there, you won't think so much longer.
-	AI_Output			(self, other, "DIA_Gaan_HALLO_03_02"); //If this little tract of land has impressed you, then wait till you see the Valley of Mines back there.
-	AI_Output			(other, self, "DIA_Gaan_WASMACHSTDU_15_00"); //Who are you?
-	AI_Output			(self, other, "DIA_Gaan_WASMACHSTDU_03_01"); //My name is Gaan. I'm a hunter and work for Bengar, the farmer here on the high pastures.
-	AI_Output			(self, other, "DIA_Gaan_WASMACHSTDU_03_02"); //I spend most of my time here outside, basking in the sun.
-	AI_Output	(self, other, "DIA_Addon_Gaan_AufgabeBeimRing_03_01"); //I keep an eye on the entrance to the pass, to see who goes in and out.
-	AI_Output	(self, other, "DIA_Addon_Gaan_AufgabeBeimRing_03_02"); //Since the paladins have closed the gate to the pass, however, there hasn't been much coming and going.
+	AI_Output			(other, self, "DIA_Gaan_HALLO_15_00"); //Ziemlich weitläufig, euer Land hier oben.
+	AI_Output			(self, other, "DIA_Gaan_HALLO_03_01"); //Ist ganz nett. Aber wenn du durch den Pass da hinten gehst, dann wirst du das nicht mehr denken.
+	AI_Output			(self, other, "DIA_Gaan_HALLO_03_02"); //Wenn dich dieser kleine Landstrich hier schon beeindruckt, dann wird es das Minental dahinter erst recht.
+	AI_Output			(other, self, "DIA_Gaan_WASMACHSTDU_15_00"); //Wer bist du?
+	AI_Output			(self, other, "DIA_Gaan_WASMACHSTDU_03_01"); //Mein Name ist Gaan. Ich bin Jäger und arbeite für Bengar, den Bauern hier auf dem Weidenplateau.
+	AI_Output			(self, other, "DIA_Gaan_WASMACHSTDU_03_02"); //Ich bin meistens hier draußen und lass mir die Sonne auf den Bauch scheinen.
+	AI_Output	(self, other, "DIA_Addon_Gaan_AufgabeBeimRing_03_01"); //Ich halte für uns, den Eingang zum Pass im Auge. Wer rein geht und wer raus kommt.
+	AI_Output	(self, other, "DIA_Addon_Gaan_AufgabeBeimRing_03_02"); //Seit die Paladine das Tor zum Pass verschlossen haben, tat sich da allerdings recht wenig.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -66,7 +66,7 @@ instance DIA_Gaan_WALD		(C_INFO)
 	condition	 = 	DIA_Gaan_WALD_Condition;
 	information	 = 	DIA_Gaan_WALD_Info;
 
-	description	 = 	"What do I need to know about the Valley of Mines?";
+	description	 = 	"Was muss ich über das Minental wissen?";
 };
 
 func int DIA_Gaan_WALD_Condition ()
@@ -79,19 +79,19 @@ func int DIA_Gaan_WALD_Condition ()
 
 func void DIA_Gaan_WALD_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_WALD_15_00"); //What do I need to know about the Valley of Mines?
-	AI_Output			(self, other, "DIA_Gaan_WALD_03_01"); //No idea. I've only taken a fleeting glance at the valley. Looked pretty dangerous.
-	AI_Output			(self, other, "DIA_Gaan_WALD_03_02"); //The best thing to do if you go there through the pass is to stay close to the beaten track.
-	AI_Output			(self, other, "DIA_Gaan_WALD_03_03"); //Either you take the way through the big gorge, or the road over the stone bridge. That one is shorter and safer.
-	AI_Output			(self, other, "DIA_Gaan_WALD_03_04"); //Now that the orcs are roaming all over the place, you have to be a bit careful.
-	AI_Output			(self, other, "DIA_Gaan_WALD_03_05"); //I don't want to have to drag you to the herb witch.
+	AI_Output			(other, self, "DIA_Gaan_WALD_15_00"); //Was muss ich über das Minental wissen?
+	AI_Output			(self, other, "DIA_Gaan_WALD_03_01"); //Keine Ahnung. Ich habe nur einmal einen flüchtigen Blick über das Tal geworfen. Sah ziemlich gefährlich aus.
+	AI_Output			(self, other, "DIA_Gaan_WALD_03_02"); //Am besten, du entfernst dich nicht all zu weit von den Trampelpfaden, wenn du durch den Pass dort hin gehst.
+	AI_Output			(self, other, "DIA_Gaan_WALD_03_03"); //Entweder du nimmst den Weg durch die große Schlucht oder den Weg über die Steinbrücke. Der ist kürzer und ungefährlicher.
+	AI_Output			(self, other, "DIA_Gaan_WALD_03_04"); //Jetzt, da die Orks überall herumstreunen, sollte man sich schon ein wenig vorsehen.
+	AI_Output			(self, other, "DIA_Gaan_WALD_03_05"); //Ich will dich ja nicht zur Kräuterhexe schleppen müssen.
 
-	AI_Output			(other, self, "DIA_Gaan_SAGITTA_15_00"); //Herb witch?
-	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_01"); //Her name is Sagitta. She is the healer for the farmers and the other people who live outside the harbor city.
-	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_02"); //A truly curious female.
-	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_03"); //No one really likes going to her and everybody enjoys gossiping about her.
-	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_04"); //But if you're sick, you won't find better help than Sagitta and her kitchen full of healing herbs.
-	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_05"); //You'll find her in the strip of woods behind Sekob's farm.
+	AI_Output			(other, self, "DIA_Gaan_SAGITTA_15_00"); //Kräuterhexe?
+	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_01"); //Ihr Name ist Sagitta. Sie ist die Heilerin der Bauern und der anderen Bewohner außerhalb der Hafenstadt.
+	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_02"); //Ein recht seltsames Frauenzimmer.
+	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_03"); //Niemand geht wirklich gerne zu ihr und alle zerreißen sich gerne das Maul über sie.
+	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_04"); //Aber wenn du krank bist, findest du keine bessere Hilfe als Sagitta und ihre Heilkräuterküche.
+	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_05"); //Du findest sie in dem Waldstreifen hinter Sekobs Hof.
 };
 
 // ************************************************************
@@ -105,7 +105,7 @@ INSTANCE DIA_Gaan_AskTeacher (C_INFO)
 	condition	= DIA_Gaan_AskTeacher_Condition;
 	information	= DIA_Gaan_AskTeacher_Info;
 
-	description = "Can you teach me about hunting?";
+	description = "Kannst du mir was über die Jagd beibringen?";
 };                       
 
 FUNC INT DIA_Gaan_AskTeacher_Condition()
@@ -115,12 +115,12 @@ FUNC INT DIA_Gaan_AskTeacher_Condition()
 
 FUNC VOID DIA_Gaan_AskTeacher_Info()
 {
-	AI_Output(other,self,"DIA_Gaan_AskTeacher_15_00"); //Can you teach me about hunting?
-	AI_Output(self,other,"DIA_Gaan_AskTeacher_03_01"); //No problem. For 100 gold coins I can show you how to gut the animals you bring down.
-	AI_Output(self,other,"DIA_Gaan_AskTeacher_03_02"); //Pelts and other trophies bring a lot of money in the market.
+	AI_Output(other,self,"DIA_Gaan_AskTeacher_15_00"); //Kannst du mir was über die Jagd beibringen?
+	AI_Output(self,other,"DIA_Gaan_AskTeacher_03_01"); //Kein Problem. Für 100 Goldmünzen könnte ich dir zeigen, wie du die Tiere, die du erlegst, ausweiden kannst.
+	AI_Output(self,other,"DIA_Gaan_AskTeacher_03_02"); //Felle und andere Tiertrophäen bringen eine Menge Geld auf dem Markt.
 		
 	Log_CreateTopic	(TOPIC_Teacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher, "Gaan can teach me to take animal trophies.");
+	B_LogEntry		(TOPIC_Teacher, "Bei Gaan kann ich lernen wie man Tiere ausnimmt.");
 };
 
 
@@ -135,7 +135,7 @@ INSTANCE DIA_Gaan_PayTeacher (C_INFO)
 	condition	= DIA_Gaan_PayTeacher_Condition;
 	information	= DIA_Gaan_PayTeacher_Info;
 	permanent	= TRUE;
-	description = "Here. 100 gold coins for your expertise on gutting animals. ";
+	description = "Hier. 100 Goldmünzen für dein Wissen, Tiere auszunehmen.";
 };                       
 
 var int DIA_Gaan_PayTeacher_noPerm;
@@ -151,17 +151,17 @@ FUNC INT DIA_Gaan_PayTeacher_Condition()
 
 FUNC VOID DIA_Gaan_PayTeacher_Info()
 {
-	AI_Output(other,self,"DIA_Gaan_PayTeacher_15_00"); //Here. 100 gold coins for your expertise on gutting animals.
+	AI_Output(other,self,"DIA_Gaan_PayTeacher_15_00"); //Hier. 100 Goldmünzen für dein Wissen, Tiere auszunehmen.
 
 	if (B_GiveInvItems (other, self, ItMi_Gold, 100))
 	{
-		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_01"); //Thanks. Now you're talking.
+		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_01"); //Danke. Jetzt kommen wir ins Geschäft.
 		Gaan_TeachPlayer = TRUE;
 		DIA_Gaan_PayTeacher_noPerm = TRUE;
 	}
 	else	
 	{
-		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_02"); //Ask me later, when you have some money.
+		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_02"); //Frag mich später noch mal, wenn du das Geld hast.
 	};
 };
 
@@ -176,7 +176,7 @@ instance DIA_Gaan_TEACHHUNTING		(C_INFO)
 	condition	 = 	DIA_Gaan_TEACHHUNTING_Condition;
 	information	 = 	DIA_Gaan_TEACHHUNTING_Info;
 	permanent	= TRUE;
-	description	 = 	"What can you teach me?";
+	description	 = 	"Was kannst du mir beibringen?";
 };
 
 func int DIA_Gaan_TEACHHUNTING_Condition ()
@@ -189,7 +189,7 @@ func int DIA_Gaan_TEACHHUNTING_Condition ()
 
 func void DIA_Gaan_TEACHHUNTING_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_TEACHHUNTING_15_00"); //What can you teach me?
+	AI_Output			(other, self, "DIA_Gaan_TEACHHUNTING_15_00"); //Was kannst du mir beibringen?
 	if 	(
 			(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
 			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
@@ -199,43 +199,43 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 			||((PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE) && (MIS_Gaan_Snapper == LOG_SUCCESS))
 		)
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_03_01"); //That depends on what you want to know.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_03_01"); //Kommt drauf an, was willst du wissen?
 
 			Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 		
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ReptileSkin] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Reptile skins",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ReptileSkin)),  DIA_Gaan_TEACHHUNTING_ReptileSkin);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Reptilienhäute",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ReptileSkin)),  DIA_Gaan_TEACHHUNTING_ReptileSkin);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Gaan_TEACHHUNTING_Teeth);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Zähne reissen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Gaan_TEACHHUNTING_Teeth);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Remove claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Gaan_TEACHHUNTING_Claws);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Klauen hacken",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Gaan_TEACHHUNTING_Claws);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Gaan_TEACHHUNTING_Fur);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Fell",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Gaan_TEACHHUNTING_Fur);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Bloodfly's stinger",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFSting)),  DIA_Gaan_TEACHHUNTING_BFSting);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Blutfliegenstachel",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFSting)),  DIA_Gaan_TEACHHUNTING_BFSting);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Bloodfly's wings",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Gaan_TEACHHUNTING_BFWing);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Blutfliegenflügel",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Gaan_TEACHHUNTING_BFWing);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE)
 			&& (MIS_Gaan_Snapper == LOG_SUCCESS)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Dragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Drachensnapperhorn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
 			};
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_03_02"); //At the moment, I can't teach you anything you don't already know. Sorry.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_03_02"); //Ich kann dir im Moment nicht mehr beibringen, als du ohnehin schon weißt. Tut mir Leid.
 		};
 };
 
@@ -261,9 +261,9 @@ func void DIA_Gaan_TEACHHUNTING_Claws()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Claws))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_00"); //Animals don't like to give up their claws. You have to place your knife very precisely.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_01"); //Your hands should be slightly crossed. Then you separate the claw with a powerful tug.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_02"); //Merchants are always eager to be paid in claws.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_00"); //Tiere geben ihre Klauen nicht sehr gerne her. Du musst schon sehr genau den Punkt treffen, an dem du mit deinem Messer ansetzt.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_01"); //Die Haltung deiner Hand sollte etwas verschränkt sein. Mit einem kräftigen Ruck trennst du dann die Klaue ab.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_02"); //Klauen sind immer ein begehrtes Zahlungsmittel bei einem Händler.
 		
 		};
 
@@ -277,8 +277,8 @@ func void DIA_Gaan_TEACHHUNTING_Teeth()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Teeth))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_00"); //The easiest thing to take from an animal are the teeth. You move your knife around the teeth in its mouth.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_01"); //Then you separate them from the skull with a skillful tug.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_00"); //Das einfachste, was du Tieren entnehmen kannst, sind seine Zähne. Du fährst mit deinem Messer in seinem Maul um das Gebiss.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_01"); //Dann trennst es geschickt mit einem Ruck vom Schädel des Tieres.
 	
 			
 		};
@@ -292,8 +292,8 @@ func void DIA_Gaan_TEACHHUNTING_Fur()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Fur))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_00"); //The best way to remove the pelt is by making a deep cut along the hind legs.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_01"); //After that, it should be a cinch to pull off the skin from the front to the back.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_00"); //Felle ziehst du am besten ab, indem du einen tiefen Schnitt an den Hinterläufen des Tieres vornimmst.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_01"); //Dann kannst du das Fell von vorne nach hinten eigentlich immer sehr leicht abziehen.
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
@@ -305,21 +305,21 @@ func void DIA_Gaan_TEACHHUNTING_BFSting()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFSting))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFSting_03_00"); //These flies have a soft spot on their backs.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFSting_03_01"); //If you press there, the stinger will be squeezed out very far, and you can detach it with your knife.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFSting_03_00"); //Die Fliege hat am Rücken eine weiche Stelle.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFSting_03_01"); //Wenn du dort mit der Hand gegen drückst, fährt der Stachel sehr weit aus und du kannst ihn mit dem Messer abtrennen.
 			
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
 	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
-// ------ Blutfliegenfl�gel ------
+// ------ Blutfliegenflgel ------
 func void DIA_Gaan_TEACHHUNTING_BFWing ()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFWing))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFWing_03_00"); //The best way to remove the wings of a bloodfly is with a blow from a sharp knife, very close to the fly's body.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFWing_03_01"); //You have to watch out that you don't damage the delicate tissue of the wings. They're worthless if you don't do it carefully.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFWing_03_00"); //Die Flügel einer Blutfliege entfernst du am besten mit einem Hieb einer scharfen Klinge sehr nah am Körper der Fliege.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFWing_03_01"); //Du musst nur darauf achten, dass du das feine Gewebe der Flügel nicht verletzt. Sie sind nichts mehr wert, wenn du es nicht vorsichtig machst.
 
 		};
 
@@ -331,12 +331,12 @@ func void DIA_Gaan_TEACHHUNTING_DrgSnapperHorn()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_DrgSnapperHorn))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_00"); //Now that this slightly oversized snapper is dead, I can show you how to remove its horn.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_01"); //You push your knife deep into the animal's forehead and carefully lever the thing upwards.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_02"); //If it won't come loose from the skull, you work on it with a second knife from the other side.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_00"); //Jetzt, wo dieser etwas zu groß geratene Snapper tot ist, kann ich dir zeigen, wie man an sein Horn kommt.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_01"); //Du stemmst dein Messer tief in die Stirn des Tieres, und hebelst das Ding vorsichtig nach oben.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_02"); //Sollte es sich dann noch nicht vom Schädel trennen lassen, hilfst du mit einem zweiten Messer von der anderen Seite nach.
 	
 			
-			CreateInvItems (Gaans_Snapper, ItAt_DrgSnapperHorn, 1); //falls der Snapper ihm gerade vor den F�ssen liegt!!
+			CreateInvItems (Gaans_Snapper, ItAt_DrgSnapperHorn, 1); //falls der Snapper ihm gerade vor den Fssen liegt!!
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
@@ -355,7 +355,7 @@ instance DIA_Gaan_JAGD		(C_INFO)
 	information	 = 	DIA_Gaan_JAGD_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How's the hunting?";
+	description	 = 	"Was macht die Jagd?";
 };
 
 func int DIA_Gaan_JAGD_Condition ()
@@ -365,26 +365,26 @@ func int DIA_Gaan_JAGD_Condition ()
 
 func void DIA_Gaan_JAGD_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_JAGD_15_00"); //How's the hunting?
+	AI_Output			(other, self, "DIA_Gaan_JAGD_15_00"); //Was macht die Jagd?
 
 	if ((Npc_IsDead(Gaans_Snapper))== FALSE)
 		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_01"); //The last animal I could bring down was a large rat. Not very encouraging, and bad for business.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //For several days now, some kind of snorting beast has been roaming the area.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //It not only kills everything that moves, it also interferes with my work.
+			AI_Output			(self, other, "DIA_Gaan_JAGD_03_01"); //Das letzte Tier, das ich erlegen konnte, war eine große Ratte. Nicht sehr ermutigend und schlecht fürs Geschäft.
+			AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //Seit ein paar Tagen streift so ein schnaubendes Tier in der Gegend herum.
+			AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //Es tötet nicht nur alles, was sich bewegt, es stört mich auch bei meiner Arbeit.
 			Log_CreateTopic (TOPIC_GaanSchnaubi, LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_GaanSchnaubi, LOG_RUNNING);
-			B_LogEntry (TOPIC_GaanSchnaubi,"That snorting creature's causing trouble for the hunter Gaan. Unless I defeat the beast, he can't go hunting any more."); 
+			B_LogEntry (TOPIC_GaanSchnaubi,"Die schnaubende Kreatur macht dem Jäger Gaan zu schaffen. Bevor ich das Vieh nicht beseitige, kann er nicht mehr jagen."); 
 			MIS_Gaan_Snapper = LOG_RUNNING;
 		}
 	else if (Kapitel >= 3)
 		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_04"); //It's getting crazier out here. Meanwhile, dozens of these snorting animals have come out of the pass.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_05"); //Under these circumstances, hunting is getting harder and harder up here.
+			AI_Output			(self, other, "DIA_Gaan_JAGD_03_04"); //Es wird immer verrückter hier draußen. Mittlerweile sind Duzende von diesen schnaubenden Tieren aus dem Pass gekommen.
+			AI_Output			(self, other, "DIA_Gaan_JAGD_03_05"); //Das Jagen hier oben wird unter diesen Umständen immer schwieriger. Es kann nur noch besser werden.
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //I can't complain.
+			AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //Ich kann nicht klagen.
 		};
 };
 
@@ -398,7 +398,7 @@ instance DIA_Gaan_MONSTER		(C_INFO)
 	condition	 = 	DIA_Gaan_MONSTER_Condition;
 	information	 = 	DIA_Gaan_MONSTER_Info;
 
-	description	 = 	"What does this dangerous beast look like?";
+	description	 = 	"Wie sieht dieses gefährliche Tier aus?";
 };
 
 func int DIA_Gaan_MONSTER_Condition ()
@@ -414,9 +414,9 @@ func int DIA_Gaan_MONSTER_Condition ()
 
 func void DIA_Gaan_MONSTER_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_MONSTER_15_00"); //What does this dangerous beast look like?
-	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_01"); //I don't know exactly. Up to now, I've mostly heard grunting and scratching. But I've seen what it can do.
-	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_02"); //Even wolves aren't safe from it. The beast even bit the head off of one.
+	AI_Output			(other, self, "DIA_Gaan_MONSTER_15_00"); //Wie sieht dieses gefährliche Tier aus?
+	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_01"); //Ich weiß es nicht genau. Ich habe es bisher nur hauptsächlich schnauben und kratzen hören. Aber ich habe gesehen, was es anrichten kann.
+	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_02"); //Selbst Wölfe sind vor ihm nicht sicher. Einem hat das Biest sogar den Kopf abgebissen.
 
 };
 
@@ -430,7 +430,7 @@ instance DIA_Gaan_WASZAHLSTDU		(C_INFO)
 	condition	 = 	DIA_Gaan_WASZAHLSTDU_Condition;
 	information	 = 	DIA_Gaan_WASZAHLSTDU_Info;
 
-	description	 = 	"How much would you pay me if I killed that beast for you?";
+	description	 = 	"Was würdest du zahlen, wenn ich das Tier für dich erledige?";
 };
 
 func int DIA_Gaan_WASZAHLSTDU_Condition ()
@@ -446,9 +446,9 @@ func int DIA_Gaan_WASZAHLSTDU_Condition ()
 
 func void DIA_Gaan_WASZAHLSTDU_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_WASZAHLSTDU_15_00"); //How much would you pay me if I killed that beast for you?
-	AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_01"); //I'd give the person who killed it everything I could spare.
-	//AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_02"); //30 Goldm�nzen? 
+	AI_Output			(other, self, "DIA_Gaan_WASZAHLSTDU_15_00"); //Was würdest du zahlen, wenn ich das Tier für dich erledige?
+	AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_01"); //Ich würde demjenigen, der es tötet, alles geben, was ich entbehren kann.
+	//AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_02"); //30 Goldmnzen? 
 	//Auskommentiert, weil "?" ist auch so gesprochen worden - kommt nicht gut
 	B_Say_Gold   (self,other,100);
 	MIS_Gaan_Deal = LOG_RUNNING;
@@ -464,7 +464,7 @@ instance DIA_Gaan_WOHERMONSTER		(C_INFO)
 	condition	 = 	DIA_Gaan_WOHERMONSTER_Condition;
 	information	 = 	DIA_Gaan_WOHERMONSTER_Info;
 
-	description	 = 	"Where does this scummy beast come from?";
+	description	 = 	"Woher kommt dieses Mistvieh?";
 };
 
 func int DIA_Gaan_WOHERMONSTER_Condition ()
@@ -480,9 +480,9 @@ func int DIA_Gaan_WOHERMONSTER_Condition ()
 
 func void DIA_Gaan_WOHERMONSTER_Info ()
 {
-	AI_Output			(other, self, "DIA_Gaan_WOHERMONSTER_15_00"); //Where does this scummy beast come from?
-	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_01"); //Somewhere from outside the woods. Maybe from the Valley of Mines. But I don't know for sure.
-	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_02"); //I've never been to the Valley of Mines.
+	AI_Output			(other, self, "DIA_Gaan_WOHERMONSTER_15_00"); //Woher kommt dieses Mistvieh?
+	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_01"); //Irgendwo aus den Wäldern. Vielleicht auch aus dem Minental. Aber genau weiß ich das nicht.
+	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_02"); //Ich war noch nie im Minental.
  
 };
 
@@ -512,13 +512,13 @@ func int DIA_Gaan_MONSTERTOT_Condition ()
 
 func void DIA_Gaan_MONSTERTOT_Info ()
 {
-	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_00"); //That horrible animal is dead, I assume.
-	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_01"); //Then I can finally hunt freely again.
+	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_00"); //Dieses furchtbare Tier ist tot, nehme ich an.
+	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_01"); //Dann kann ich mich bei der Jagd endlich wieder frei bewegen.
 	
 
 	if (MIS_Gaan_Deal == LOG_RUNNING)
 		{
-			AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Here's the money I promised you.
+			AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Hier hast du das versprochene Geld.
 
 			CreateInvItems (self, ItMi_Gold, 100);									
 			B_GiveInvItems (self, other, ItMi_Gold, 100);					
@@ -542,7 +542,7 @@ instance DIA_Gaan_SellSkin (C_INFO)
 	condition	= DIA_Gaan_SellSkin_Condition;
 	information	= DIA_Gaan_SellSkin_Info;
 	permanent	= TRUE;
-	description	= "I've got a few skins for you...";
+	description	= "Ich hab hier ein paar Felle für dich ...";
 };
 func int DIA_Gaan_SellSkin_Condition ()
 {
@@ -554,7 +554,7 @@ func int DIA_Gaan_SellSkin_Condition ()
 };
 func void DIA_Gaan_SellSkin_Info ()
 {
-	AI_Output (other, self, "DIA_Bosper_SellFur_15_00"); //I've got a few skins for you...
+	AI_Output (other, self, "DIA_Bosper_SellFur_15_00"); //Ich hab hier ein paar Felle für dich ...
 	
 	if (Npc_HasItems(other, itat_LurkerSkin) > 0)
 	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_SNAPPER) > 0)
@@ -608,11 +608,11 @@ func void DIA_Gaan_SellSkin_Info ()
 			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_ALLIGATOR, Npc_HasItems(other, ITAT_REVIVED_SKIN_ALLIGATOR));
 		};
 		
-		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_01"); //Thanks. Now you're talking.
+		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_01"); //Danke. Jetzt kommen wir ins Geschäft.
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Gaan_AskTeacher_03_02"); //Pelts and other trophies bring a lot of money in the market.
+		AI_Output(self,other,"DIA_Gaan_AskTeacher_03_02"); //Felle und andere Tiertrophäen bringen eine Menge Geld auf dem Markt.
 	};
 };
 

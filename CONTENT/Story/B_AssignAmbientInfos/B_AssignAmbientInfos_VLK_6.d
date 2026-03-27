@@ -29,7 +29,7 @@ INSTANCE DIA_VLK_6_JOIN(C_INFO)
 	condition	= DIA_VLK_6_JOIN_Condition;
 	information	= DIA_VLK_6_JOIN_Info;
 	permanent	= TRUE;
-	description = "How do I go about becoming a citizen of this town?";
+	description = "Wie werde ich Bürger dieser Stadt?";
 };                       
 
 FUNC INT DIA_VLK_6_JOIN_Condition()
@@ -43,10 +43,10 @@ FUNC INT DIA_VLK_6_JOIN_Condition()
 
 FUNC VOID DIA_VLK_6_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_6_JOIN_15_00"); //How do I go about becoming a citizen of this town?
-	AI_Output (self, other, "DIA_VLK_6_JOIN_06_01"); //You want to settle here? Now? When all the signs are pointing towards the end of the world?
-	AI_Output (other, self, "DIA_VLK_6_JOIN_15_02"); //I wasn't planning on staying forever.
-	AI_Output (self, other, "DIA_VLK_6_JOIN_06_03"); //Well, if you want my advice, you should hotfoot it out of here as long as you still can. But if you insist, you should talk to one of the influential citizens here.
+	AI_Output (other, self, "DIA_VLK_6_JOIN_15_00"); //Wie werde ich Bürger dieser Stadt?
+	AI_Output (self, other, "DIA_VLK_6_JOIN_06_01"); //Du willst dich hier niederlassen? Jetzt? Wo hier alle Anzeichen auf Weltuntergang stehen?
+	AI_Output (other, self, "DIA_VLK_6_JOIN_15_02"); //Ich hatte nicht vor, ewig zu bleiben.
+	AI_Output (self, other, "DIA_VLK_6_JOIN_06_03"); //Also, ich würde dir raten, dich hier zu verkrümeln, solange du noch kannst, aber wenn du's darauf anlegst, solltest du mit einem der einflussreichen Bürger hier reden.
 };
 
 // *************************************************************************
@@ -58,7 +58,7 @@ INSTANCE DIA_VLK_6_PEOPLE(C_INFO)
 	condition	= DIA_VLK_6_PEOPLE_Condition;
 	information	= DIA_VLK_6_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who are the influential citizens of Khorinis?";
+	description = "Wer sind die einflussreichen Bürger von Khorinis?";
 };                       
 
 FUNC INT DIA_VLK_6_PEOPLE_Condition()
@@ -68,9 +68,9 @@ FUNC INT DIA_VLK_6_PEOPLE_Condition()
 
 FUNC VOID DIA_VLK_6_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_6_PEOPLE_15_00"); //Who are the influential citizens of Khorinis?
-	AI_Output (self, other, "DIA_VLK_6_PEOPLE_06_01"); //Try the blacksmith or the carpenter in the lower part of town. You'll find a few other well-respected masters there, too.
-	AI_Output (self, other, "DIA_VLK_6_PEOPLE_06_02"); //If anyone here besides the city guards and the paladins has anything to say, then it's these men.
+	AI_Output (other, self, "DIA_VLK_6_PEOPLE_15_00"); //Wer sind die einflussreichen Bürger von Khorinis?
+	AI_Output (self, other, "DIA_VLK_6_PEOPLE_06_01"); //Probier's mal beim Schmied oder beim Tischler in der Unterstadt. Es gibt dort auch noch ein paar andere angesehene Meister.
+	AI_Output (self, other, "DIA_VLK_6_PEOPLE_06_02"); //Wenn hier jemand abgesehen von der Stadtwache und den Paladinen was zu sagen hat, dann diese Männer.
 };
 
 // *************************************************************************
@@ -82,7 +82,7 @@ INSTANCE DIA_VLK_6_LOCATION(C_INFO)
 	condition	= DIA_VLK_6_LOCATION_Condition;
 	information	= DIA_VLK_6_LOCATION_Info;
 	permanent	= TRUE;
-	description = "How do I go about orienting myself in this city?";
+	description = "Woran kann ich mich hier in der Stadt am besten orientieren?";
 };                       
 
 FUNC INT DIA_VLK_6_LOCATION_Condition()
@@ -92,10 +92,10 @@ FUNC INT DIA_VLK_6_LOCATION_Condition()
 
 FUNC VOID DIA_VLK_6_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_6_LOCATION_15_00"); //How do I go about orienting myself in this city?
-	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_01"); //It's not that easy finding your way around here, is it? Even the signposts don't always help.
-	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_02"); //If you have a bad sense of direction, you had better go down to the harbor - assuming you can find your way there - and look for the cartographer's house.
-	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_03"); //It's right next to the pub, at the quay. Brahim will certainly have a map of the city for you.
+	AI_Output (other, self, "DIA_VLK_6_LOCATION_15_00"); //Woran kann ich mich hier in der Stadt am besten orientieren?
+	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_01"); //Ist gar nicht so leicht, sich hier zurechtzufinden, was? Da helfen selbst die Wegweiser nicht immer.
+	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_02"); //Wenn du einen schlechten Orientierungssinn hast, wird es das Beste sein, du gehst zum Hafen - den wirst du ja wohl noch finden - und suchst das Haus des Kartenzeichners.
+	AI_Output (self, other, "DIA_VLK_6_LOCATION_06_03"); //Es liegt direkt neben der Taverne, am Kai. Brahim wird sicherlich eine Stadtkarte für dich haben.
 };
 
 // *************************************************************************
@@ -107,7 +107,7 @@ INSTANCE DIA_VLK_6_STANDARD(C_INFO)
 	condition	= DIA_VLK_6_STANDARD_Condition;
 	information	= DIA_VLK_6_STANDARD_Info;
 	permanent	= TRUE;
-	description = "What's new?";
+	description = "Was gibt's Neues?";
 };                       
 func INT DIA_VLK_6_STANDARD_Condition()
 {
@@ -115,16 +115,16 @@ func INT DIA_VLK_6_STANDARD_Condition()
 };
 FUNC VOID DIA_VLK_6_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_6_STANDARD_15_00"); //What's new?
+	AI_Output (other, self, "DIA_VLK_6_STANDARD_15_00"); //Was gibt's Neues?
 		
 	if (Kapitel == 1)
 	{
-		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_01"); //Ever since they took the Barrier away, this town has been overrun with bandits. But the paladins don't do a thing. Why the hell are they even here then?
+		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_01"); //Seitdem die Barriere weg ist, wimmelt es in der Gegend um die Stadt nur so von Banditen. Aber die Paladine unternehmen nichts. Warum zum Teufel sind die Kerle dann hier?
 	};
 	
 	if (Kapitel <= 3)
 	{
-		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_02"); //Lately, the bandit problem hasn't been so bad. It looks like someone has finally started to do something about it.
+		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_02"); //In letzter Zeit ist es schon besser geworden mit den Banditen. Es sieht so aus, als ob endlich mal jemand etwas unternehmen würde.
 	};
 	
 	if (Kapitel == 3)
@@ -132,22 +132,22 @@ FUNC VOID DIA_VLK_6_STANDARD_Info()
 	{
 		if MIS_RescueBennet == LOG_SUCCESS
 		{
-			AI_Output (self,other,"DIA_VLK_6_STANDARD_06_03"); //They let the filthy mercenary who murdered that paladin go. It certainly wouldn't have been a bad idea to hang him instead.
+			AI_Output (self,other,"DIA_VLK_6_STANDARD_06_03"); //Sie haben den dreckigen Söldner, der den Paladin ermordet hat, laufen lassen. Ihn zu hängen wäre sicherlich auch kein Fehler gewesen.
 		}
 		else
 		{
-			AI_Output (self,other,"DIA_VLK_6_STANDARD_06_04"); //They say that one of Onar's mercenaries has killed a paladin. They have caught the fellow and thrown him in jail. Soon he will hang.
+			AI_Output (self,other,"DIA_VLK_6_STANDARD_06_04"); //Es heißt, einer von Onars Söldnern hat einen der Paladine umgebracht. Sie haben den Kerl geschnappt und eingelocht. Bald wird er hängen.
 		};
 	};
 	
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_05"); //I wonder if there is anything to those stories about dragons ...
+		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_05"); //Ich frage mich, on an den Geschichten über die Drachen was dran ist ...
 	};
 
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_06"); //They say that Lord Hagen is gathering his men to free the Valley of Mines. Finally things are moving!
+		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_06"); //Es heißt, Lord Hagen sammelt seine Männer, um das Minental befreien. Endlich geht es los!
 	};
 };
 

@@ -18,7 +18,7 @@ func void ZS_Pray_Sleeper_FP ()
 
 func int ZS_Pray_Sleeper_FP_Loop ()
 {
-	if (Npc_IsOnFP (self, "PRAY"))
+	if (Npc_IsOnFP (self, "Beten"))
 	{	
 		if (!C_BodyStateContains(self, BS_SIT))
 		{
@@ -29,9 +29,9 @@ func int ZS_Pray_Sleeper_FP_Loop ()
 			AI_PlayAniBS (self, "T_PRAY_RANDOM", BS_SIT);
 		};		
 	}
-	else if (Wld_IsFPAvailable(self,"PRAY"))
+	else if (Wld_IsFPAvailable(self,"Beten"))
 	{
-		AI_GotoFP 		(self, "PRAY");
+		AI_GotoFP 		(self, "Beten");
 		AI_StandUp 		(self);
 		AI_AlignToFP 	(self);
 	};

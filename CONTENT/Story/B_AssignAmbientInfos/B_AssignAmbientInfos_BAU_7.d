@@ -29,7 +29,7 @@ INSTANCE DIA_BAU_7_JOIN(C_INFO)
 	condition	= DIA_BAU_7_JOIN_Condition;
 	information	= DIA_BAU_7_JOIN_Info;
 	permanent	= TRUE;
-	description = "What do you know about the mercenaries?";
+	description = "Was weißt du über die Söldner?";
 };                       
 
 FUNC INT DIA_BAU_7_JOIN_Condition()
@@ -42,9 +42,9 @@ FUNC INT DIA_BAU_7_JOIN_Condition()
 
 FUNC VOID DIA_BAU_7_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_BAU_7_JOIN_15_00"); //What do you know about the mercenaries?
-	AI_Output (self, other, "DIA_BAU_7_JOIN_07_01"); //Onar hired them to defend his farm.
-	AI_Output (self, other, "DIA_BAU_7_JOIN_07_02"); //Most of them behave like the farm belongs to them. But at any rate, they protect us.
+	AI_Output (other, self, "DIA_BAU_7_JOIN_15_00"); //Was weißt du über die Söldner?
+	AI_Output (self, other, "DIA_BAU_7_JOIN_07_01"); //Onar hat sie angeheuert, damit sie seinen Hof verteidigen.
+	AI_Output (self, other, "DIA_BAU_7_JOIN_07_02"); //Die meisten benehmen sich, als ob ihnen der Hof gehören würde. Aber immerhin beschützen sie uns.
 };
 
 // *************************************************************************
@@ -56,7 +56,7 @@ INSTANCE DIA_BAU_7_PEOPLE(C_INFO)
 	condition	= DIA_BAU_7_PEOPLE_Condition;
 	information	= DIA_BAU_7_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who's in charge here?";
+	description = "Wer hat hier was zu Sagen?";
 };                       
 
 FUNC INT DIA_BAU_7_PEOPLE_Condition()
@@ -66,8 +66,8 @@ FUNC INT DIA_BAU_7_PEOPLE_Condition()
 
 FUNC VOID DIA_BAU_7_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_BAU_7_PEOPLE_15_00"); //Who's in charge here?
-	AI_Output (self, other, "DIA_BAU_7_PEOPLE_07_01"); //The big farm belongs to Onar. The small farms around here, too. But he leases them out.
+	AI_Output (other, self, "DIA_BAU_7_PEOPLE_15_00"); //Wer hat hier was zu Sagen?
+	AI_Output (self, other, "DIA_BAU_7_PEOPLE_07_01"); //Der große Hof gehört Onar. Die kleinen Höfe hier in der Nähe auch. Aber die hat er verpachtet.
 };
 
 // *************************************************************************
@@ -79,7 +79,7 @@ INSTANCE DIA_BAU_7_LOCATION(C_INFO)
 	condition	= DIA_BAU_7_LOCATION_Condition;
 	information	= DIA_BAU_7_LOCATION_Info;
 	permanent	= TRUE;
-	description = "Tell me more about the area.";
+	description = "Erzähl mir mehr über die Gegend.";
 };                       
 
 FUNC INT DIA_BAU_7_LOCATION_Condition()
@@ -89,9 +89,9 @@ FUNC INT DIA_BAU_7_LOCATION_Condition()
 
 FUNC VOID DIA_BAU_7_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_BAU_7_LOCATION_15_00"); //Tell me more about the area.
-	AI_Output (self, other, "DIA_BAU_7_LOCATION_07_01"); //The big farm here in the east of the valley is Onar's. Sekob's farm lies to the north.
-	AI_Output (self, other, "DIA_BAU_7_LOCATION_07_02"); //And Bengar's farm is on the high plain to the southwest. You can get there from the valley - there's a big stone stairway that leads there.
+	AI_Output (other, self, "DIA_BAU_7_LOCATION_15_00"); //Erzähl mir mehr über die Gegend.
+	AI_Output (self, other, "DIA_BAU_7_LOCATION_07_01"); //Der große Hof hier im Osten des Tals ist der von Onar, der Hof von Sekob liegt im Norden.
+	AI_Output (self, other, "DIA_BAU_7_LOCATION_07_02"); //Und Bengars Hof liegt auf der Hochebene im Südwesten. Du kannst sie vom Tal aus erreichen - es gibt eine große Steintreppe dorthin.
 };
 
 // *************************************************************************
@@ -103,7 +103,7 @@ INSTANCE DIA_BAU_7_STANDARD(C_INFO)
 	condition	= DIA_BAU_7_STANDARD_Condition;
 	information	= DIA_BAU_7_STANDARD_Info;
 	permanent	= TRUE;
-	description = "What's new?";
+	description = "Was gibt's Neues?";
 };                       
 func INT DIA_BAU_7_STANDARD_Condition()
 {
@@ -111,31 +111,31 @@ func INT DIA_BAU_7_STANDARD_Condition()
 };
 FUNC VOID DIA_BAU_7_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_BAU_7_STANDARD_15_00"); //What's new?
+	AI_Output (other, self, "DIA_BAU_7_STANDARD_15_00"); //Was gibt's Neues?
 		
 	if (Kapitel == 1)
 	{
-		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_01"); //We have declared our independence - we're not paying taxes to the city any more. The king hasn't done anything for us - we've had enough!
+		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_01"); //Wir haben unsere Unabhängigkeit erklärt - wir machen keine Abgaben mehr an die Stadt. Der König hat nichts für uns getan - jetzt reicht es uns!
 	};
 
 	if (Kapitel == 2)
 	{
-		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_02"); //At the moment, there isn't much going on here.
+		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_02"); //Zurzeit ist hier nicht viel los.
 	};
 
 	if (Kapitel == 3)
 	{
-		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_03"); //You hear stories about dragons now! The king is always coming up with new things to squeeze more money out of the people.
+		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_03"); //Man hört jetzt Geschichten von Drachen! Dem König fällt auch immer was Neues ein, um noch mehr Geld aus dem Volk zu pressen.
 	};
 
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_04"); //Take care of yourself, an awful lot of dark figures and wild animals are coming through the pass.
+		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_04"); //Pass auf dich auf, durch den Pass kommen jede Menge finstere Gestalten und wilde Tiere.
 	};
 	
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_05"); //Now that the dragons are dead, the lord paladins deign to come out of the city. It's about time that order prevailed here again.
+		AI_Output (self,other,"DIA_BAU_7_STANDARD_07_05"); //Jetzt, wo die Drachen tot sind, bequemen sich auch die Herren Paladine aus der Stadt. Wird Zeit, dass hier wieder Ordnung herrscht.
 	};
 };
 

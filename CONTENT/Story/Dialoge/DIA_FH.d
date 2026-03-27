@@ -24,20 +24,20 @@ FUNC VOID	Change_FH_Visual()
 	if  (FH_SkinTexture < 0)
 		{
 			FH_SkinTexture = 0;
-			PrintScreen	("MINUS-Gesichter gibt큦 nicht!!!!!!!!!!!" , -1, -1, "FONT_OLD_10_WHITE.TGA", 2);		
+			PrintScreen	("MINUS-Gesichter gibt es nicht!!!!!!!!!!!" , -1, -1, "FONT_OLD_10_WHITE.TGA", 2);		
 		};
 		
 	B_SetNpcVisual 		(self, SEX, FH_HeadMesh, FH_SkinTexture, BodyTex_N, NO_ARMOR);		
 
 	var string printText;
 
-	PrintScreen	("Skin texture:" 		, -1, 10, "FONT_OLD_10_WHITE.TGA", 4 );
+	PrintScreen	("Hauttextur:" 		, -1, 10, "FONT_OLD_10_WHITE.TGA", 4 );
 	
 	printText = IntToString	(FH_SkinTexture);
 	PrintScreen	(printText		, -1, 12, "FONT_OLD_10_WHITE.TGA", 2 );
 	
 	
-	PrintScreen	("Head mesh:"		, -1, 20, "FONT_OLD_10_WHITE.TGA", 2 );
+	PrintScreen	("Kopf-Mesh:"		, -1, 20, "FONT_OLD_10_WHITE.TGA", 2 );
 	PrintScreen	(FH_HeadMesh		, -1, 22, "FONT_OLD_10_WHITE.TGA", 2 );
 
 };
@@ -78,7 +78,7 @@ INSTANCE DIA_FH_NextFace (C_INFO)
 	condition		= DIA_FH_NextFace_Condition;
 	information		= DIA_FH_NextFace_Info;
 	permanent		= 1;
-	description		= "Next Face";
+	description		= "N채chstes Gesicht";
 };                       
 
 FUNC INT DIA_FH_NextFace_Condition()
@@ -103,7 +103,7 @@ INSTANCE DIA_FH_NextFace10 (C_INFO)
 	condition		= DIA_FH_NextFace10_Condition;
 	information		= DIA_FH_NextFace10_Info;
 	permanent		= 1;
-	description		= "Next Face 10 step";
+	description		= "N채chstes Gesicht 10 Schritte";
 };                       
 
 FUNC INT DIA_FH_NextFace10_Condition()
@@ -127,7 +127,7 @@ INSTANCE DIA_FH_PreviousFace (C_INFO)
 	condition		= DIA_FH_PreviousFace_Condition;
 	information		= DIA_FH_PreviousFace_Info;
 	permanent		= 1;
-	description		= "Previous Face";
+	description		= "Vorheriges Gesicht";
 };                       
 
 FUNC INT DIA_FH_PreviousFace_Condition()
@@ -151,7 +151,7 @@ INSTANCE DIA_FH_PreviousFace10 (C_INFO)
 	condition		= DIA_FH_PreviousFace10_Condition;
 	information		= DIA_FH_PreviousFace10_Info;
 	permanent		= 1;
-	description		= "Previous Face 10 step ";
+	description		= "Vorheriges Gesicht 10 Schritte";
 };                       
 
 FUNC INT DIA_FH_PreviousFace10_Condition()
@@ -175,7 +175,7 @@ INSTANCE DIA_FH_ResetFace (C_INFO)
 	condition		= DIA_FH_ResetFace_Condition;
 	information		= DIA_FH_ResetFace_Info;
 	permanent		= 1;
-	description		= "Reset Face";
+	description		= "Gesicht zur체cksetzen";
 };                       
 
 FUNC INT DIA_FH_ResetFace_Condition()
@@ -200,7 +200,7 @@ INSTANCE DIA_FH_WomanFace (C_INFO)
 	condition		= DIA_FH_WomanFace_Condition;
 	information		= DIA_FH_WomanFace_Info;
 	permanent		= 1;
-	description		= "Go to Women's Faces";
+	description		= "Zu den Frauengesichtern";
 };                       
 
 FUNC INT DIA_FH_WomanFace_Condition()
@@ -224,7 +224,7 @@ INSTANCE DIA_FH_Repeat (C_INFO)
 	condition		= DIA_FH_Repeat_Condition;
 	information		= DIA_FH_Repeat_Info;
 	permanent		= 1;
-	description		= "Repeat Output";
+	description		= "Ausgabe wiederholen";
 };                       
 
 FUNC INT DIA_FH_Repeat_Condition()
@@ -247,7 +247,7 @@ INSTANCE DIA_FH_Sex (C_INFO)
 	condition		= DIA_FH_Sex_Condition;
 	information		= DIA_FH_Sex_Info;
 	permanent		= 1;
-	description		= "Sex";
+	description		= "Geschlecht";
 };                       
 
 FUNC INT DIA_FH_Sex_Condition()
@@ -281,7 +281,7 @@ INSTANCE DIA_FH_Choose_HeadMesh (C_INFO)
 	condition		= DIA_FH_Choose_HeadMesh_Condition;
 	information		= DIA_FH_Choose_HeadMesh_Info;
 	permanent		= 1;
-	description		= "Choose Head Mesh";
+	description		= "Kopf-Mesh ausw채hlen";
 };                       
 
 FUNC INT DIA_FH_Choose_HeadMesh_Condition()
@@ -293,7 +293,7 @@ FUNC VOID DIA_FH_Choose_HeadMesh_Info()
 {	
 	Info_ClearChoices	(DIA_FH_Choose_HeadMesh);
 
-	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "BACK" 				, DIA_FH_Choose_HeadMesh_7);
+	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "ZUR횥CK" 				, DIA_FH_Choose_HeadMesh_7);
 	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "Hum_Head_Psionic" 	, DIA_FH_Choose_HeadMesh_6);
 	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "Hum_Head_Thief" 		, DIA_FH_Choose_HeadMesh_5);
 	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "Hum_Head_Bald" 		, DIA_FH_Choose_HeadMesh_4);

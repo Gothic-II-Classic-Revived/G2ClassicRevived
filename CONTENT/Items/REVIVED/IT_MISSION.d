@@ -4,7 +4,7 @@
 //****************************************************************************
 INSTANCE ITMS_REVIVED_BALTRAMPACKAGE_PIRATES (C_Item)
 {
-	name 				=	"Package from Baltram";
+	name 				=	"Paket von Baltram";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -18,7 +18,7 @@ INSTANCE ITMS_REVIVED_BALTRAMPACKAGE_PIRATES (C_Item)
 	on_state[0]			=   Use_BaltramPackageRevived;
 	
 	description			= 	name;
-	TEXT[2]				= 	"This heavy package";
+	TEXT[2]				= 	"Dieses schwere Paket";
 	TEXT[3]				=	"of good things";
 	TEXT[4]				=	"was found with the pirates.";
 };

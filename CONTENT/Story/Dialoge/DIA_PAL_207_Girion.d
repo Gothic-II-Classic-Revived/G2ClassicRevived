@@ -42,7 +42,7 @@ FUNC INT DIA_Girion_Hallo_Condition()
 };
 FUNC VOID DIA_Girion_Hallo_Info()
 {
-	AI_Output (self, other, "DIA_Girion_Hallo_08_00"); //I am Girion, master of two-handed combat and paladin of the king. Why are you disturbing me?
+	AI_Output (self, other, "DIA_Girion_Hallo_08_00"); //Ich bin Girion, Meister des zweihändigen Kampfes und Paladin des Königs. Warum störst du mich?
 };
 ///////////////////////////////////////////////////////////////////////
 //	Can You Teach Me?
@@ -54,7 +54,7 @@ instance DIA_Girion_CanTeach		(C_INFO)
 	condition	 = 	DIA_Girion_CanTeach_Condition;
 	information	 = 	DIA_Girion_CanTeach_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Could you train me?";
+	description	 = 	"Kannst du mich trainieren?";
 };
 func int DIA_Girion_CanTeach_Condition ()
 {	
@@ -65,20 +65,20 @@ func int DIA_Girion_CanTeach_Condition ()
 };
 func void DIA_Girion_CanTeach_Info ()
 {
-	AI_Output (other, self, "DIA_Girion_CanTeach_15_00"); //Can you train me?
+	AI_Output (other, self, "DIA_Girion_CanTeach_15_00"); //Kannst du mich trainieren?
 	
 	if (hero.guild == GIL_PAL)
 	{
-		AI_Output (self, other, "DIA_Girion_CanTeach_08_01"); //You do well to train in the noblest of all combat styles. As is proper for a warrior of Innos.
-		AI_Output (self, other, "DIA_Girion_CanTeach_08_02"); //I shall instruct you. Report to me when you are ready.
+		AI_Output (self, other, "DIA_Girion_CanTeach_08_01"); //Du tust gut daran, dich in dem edelsten aller Kampfstile zu üben. So, wie es sich für einen Streiter Innos' gehört.
+		AI_Output (self, other, "DIA_Girion_CanTeach_08_02"); //Ich werde dich ausbilden. Erstatte mir Bericht, wenn du bereit bist.
 		
 		Girion_Teach2H = TRUE;	
-		B_LogEntry (TOPIC_CityTeacher,"Paladin Girion can teach me to fight with two-handed weapons.");
+		B_LogEntry (TOPIC_CityTeacher,"Paladin Girion kann mich im Kampf mit Zweihändern unterweisen.");
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Girion_CanTeach_08_03"); //If you wish to learn something, you must turn to a teacher from outside of our order.
-		AI_Output (self, other, "DIA_Girion_CanTeach_08_04"); //I am a warrior, not a teacher.
+		AI_Output (self, other, "DIA_Girion_CanTeach_08_03"); //Wenn du etwas lernen willst, musst du dich schon an einen Lehrer außerhalb unseres Ordens wenden.
+		AI_Output (self, other, "DIA_Girion_CanTeach_08_04"); //Ich bin ein Krieger, kein Lehrer.
 	};
 };
 //**************************************
@@ -91,7 +91,7 @@ INSTANCE DIA_Girion_Teach(C_INFO)
 	condition	= DIA_Girion_Teach_Condition;
 	information	= DIA_Girion_Teach_Info;
 	permanent	= TRUE;
-	description = "I'm ready for training.";
+	description = "Ich bin bereit für das Training.";
 };                       
 //----------------------------------
 var int DIA_Girion_Teach_permanent;
@@ -228,7 +228,7 @@ func int DIA_Girion_CATCHPLAYERSTOLENSHIP_Condition ()
 {
 	if (Kapitel >= 5)
 	&& (MIS_ShipIsFree == TRUE) 
-	&& (Npc_GetDistToWP(self,"NW_CITY_WAY_TO_SHIP_25")<1000) //Joly: ist nur hier, wenn SC die Wachen �berredet hat, ihm das Schiff zu geben.
+	&& (Npc_GetDistToWP(self,"NW_CITY_WAY_TO_SHIP_25")<1000) //Joly: ist nur hier, wenn SC die Wachen berredet hat, ihm das Schiff zu geben.
 	{
 		return TRUE;
 	};
@@ -239,9 +239,9 @@ func void DIA_Girion_CATCHPLAYERSTOLENSHIP_Info ()
 	AI_Output			(self, other, "DIA_Girion_CATCHPLAYERSTOLENSHIP_08_00"); //Hey! Can you tell me what you are doing here?
 
 	Info_ClearChoices	(DIA_Girion_CATCHPLAYERSTOLENSHIP);
-	Info_AddChoice	(DIA_Girion_CATCHPLAYERSTOLENSHIP, "I don't know what you're talking about.", DIA_Girion_CATCHPLAYERSTOLENSHIP_no );
-	Info_AddChoice	(DIA_Girion_CATCHPLAYERSTOLENSHIP, "Get out of my way, or I'll have to kill you.", DIA_Girion_CATCHPLAYERSTOLENSHIP_weg );
-	Info_AddChoice	(DIA_Girion_CATCHPLAYERSTOLENSHIP, "I need the ship.", DIA_Girion_CATCHPLAYERSTOLENSHIP_ship );
+	Info_AddChoice	(DIA_Girion_CATCHPLAYERSTOLENSHIP, "Ich weiß nicht, wovon du redest.", DIA_Girion_CATCHPLAYERSTOLENSHIP_no );
+	Info_AddChoice	(DIA_Girion_CATCHPLAYERSTOLENSHIP, "Geh mir aus dem Weg, sonst muß ich dich töten.", DIA_Girion_CATCHPLAYERSTOLENSHIP_weg );
+	Info_AddChoice	(DIA_Girion_CATCHPLAYERSTOLENSHIP, "Ich brauche das Schiff.", DIA_Girion_CATCHPLAYERSTOLENSHIP_ship );
 
 };
 

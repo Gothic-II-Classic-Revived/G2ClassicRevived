@@ -14,14 +14,14 @@ FUNC VOID ZS_Pray_Innos ()
 
 FUNC int ZS_Pray_Innos_Loop ()
 {
-	// ------ Hämmern ------
+	// ------ Hmmern ------
 	if (!C_BodyStateContains(self, BS_MOBINTERACT_INTERRUPT))
-	&& (Wld_IsMobAvailable(self,"INNOS"))
+	&& (Wld_IsMobAvailable(self,"Innos"))
 	{
-		AI_UseMob (self, "INNOS", 1);
+		AI_UseMob (self, "Innos", 1);
 	};
 	
-	// ------ Random-Ani beim Hämmern ------
+	// ------ Random-Ani beim Hmmern ------
 	if (Npc_GetStateTime(self) > 5)
 	&& (C_BodyStateContains(self, BS_MOBINTERACT_INTERRUPT))
     {
@@ -34,5 +34,5 @@ FUNC int ZS_Pray_Innos_Loop ()
 
 FUNC VOID ZS_Pray_Innos_End ()
 {
-	AI_UseMob (self, "INNOS", -1);
+	AI_UseMob (self, "Innos", -1);
 };

@@ -47,15 +47,15 @@ FUNC VOID DIA_OUT_7_STANDARD_Info()
 	
 	if (randy == 0)
 	{
-		AI_Output (self,other,"DIA_OUT_7_STANDARD_07_00"); //Lately it has gotten a lot more dangerous out here. And the field raiders are becoming a real plague.
+		AI_Output (self,other,"DIA_OUT_7_STANDARD_07_00"); //Hier draußen ist es in letzte Zeit immer gefährlicher geworden. Und die Feldräuber werden zu einer echten Plage.
 	};
 	if (randy == 1)
 	{
-		AI_Output (self,other,"DIA_OUT_7_STANDARD_07_01"); //We have to pay our contribution to the city. If we don't, we'll end up having trouble with the paladins.
+		AI_Output (self,other,"DIA_OUT_7_STANDARD_07_01"); //Wir müssen unseren Teil an die Stadt abgeben. Tun wir's nicht, bekommen wir am Ende noch Ärger mit den Paladinen.
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_OUT_7_STANDARD_07_02"); //Onar's rebellion will have serious consequences. I prefer to keep out of it.
+		AI_Output (self,other,"DIA_OUT_7_STANDARD_07_02"); //Der Aufstand von Onar wird noch schwere Folgen haben. Ich halt mich lieber aus der Sache raus.
 	};
 	
 	AI_StopProcessInfos	(self);

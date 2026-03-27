@@ -22,23 +22,23 @@ FUNC VOID Bookstand_Milten_03_S1()
 					
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "It's late."					);
-					Doc_PrintLines	( nDocID,  0, "The collapse of the old mine brought about the downfall of the ore barons' mood."	);
-					Doc_PrintLines	( nDocID,  0, "Gomez is like a powder keg about to explode."					);
+					Doc_PrintLines	( nDocID,  0, "Es ist spät geworden."					);
+					Doc_PrintLines	( nDocID,  0, "Mit dem Zusammenbruch der alten Mine ist auch die Stimmung der Erzbarone zusammmengebrochen."	);
+					Doc_PrintLines	( nDocID,  0, "Gomez ist wie ein Pulverfaß, das kurz vor dem explodieren steht."					);
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "Corristo");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "He thinks the new guy's to blame for the collapse of the mine. That man sure is strange. But he'd better not show his face round here again.");
+					Doc_PrintLines	( nDocID,  0, "Er glaubt das dieser neue Kerl schuld am Zusammenbruch der Mine ist. Dieser Mann ist in der Tat ungewöhnlich. Aber er sollte sich hier besser nicht mehr blicken lassen.");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "Corristo");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Gomez' temper is hotter than ever, and I think I can guess what he's planning. We must warn the Water Mages, before it's too late."					);
+					Doc_PrintLines	( nDocID,  1, "Gomez ist jähzorniger denn je zuvor und ich glaube zu wissen was er vorhat. Wir müssen unbedingt die Wassermagier unterrichten, bevor es zu spät ist."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, "Corristo"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Maybe we can ward off a disaster. It doesn't bear thinking about what would happen if the free mine ..."					);
+					Doc_PrintLines	( nDocID,  1, "Vielleicht gelingt es uns eine Katastrophe zu verhindern. Nicht auszudenken was passieren würde, wenn er die freie Mine,"					);
 					Doc_Show		( nDocID );
 
 		if (RevivedBookstandRead_Personal1 == FALSE)
@@ -67,9 +67,9 @@ FUNC VOID Bookstand_Milten_02_S1()
 					
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "I've taken the liberty of making myself more comfortable. Who'd have thought I would someday be the only mage in the camp?"					);
-					Doc_PrintLines	( nDocID,  0, "Well, I can't really say I'm glad to be back. In fact, I should be seeing about clearing out of here."	);
-					Doc_PrintLines	( nDocID,  0, "This expedition just isn't having any success."					);
+					Doc_PrintLines	( nDocID,  0, "Ich war so frei, mich hier ein wenig einzurichten. Wer hätte gedacht, das ich einmal der einzige Magier des Lagers sein werde?"					);
+					Doc_PrintLines	( nDocID,  0, "Nun ja, ich kann mich nicht wirklich darüber freuen, das ich wieder hier bin. Eigentlich sollte ich zusehen, das ich hier wegkomme."	);
+					Doc_PrintLines	( nDocID,  0, "Diese Expedition ist einfach nicht erfolgreich."					);
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0, "");
 			
@@ -77,9 +77,9 @@ FUNC VOID Bookstand_Milten_02_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The scrapers left yesterday. They took Diego with them - wouldn't surprise me if he did a runner."					);
-					Doc_PrintLines	( nDocID,  1, "He's not likely to swing a pickaxe anyhow."					);
-					Doc_PrintLines	( nDocID,  1, "Well, I'll use the time to learn a bit about the art of alchemy."					);
+					Doc_PrintLines	( nDocID,  1, "Die Schürfer sind gestern aufgebrochen. Sie haben Diego mitgenommen - würde mich nicht wundern, wenn er abhaut."					);
+					Doc_PrintLines	( nDocID,  1, "Denn er wird garantiert keine Spitzhacke schwingen."					);
+					Doc_PrintLines	( nDocID,  1, "Nun, ich werde die Zeit nutzen, um mich in die Kunst der Alchemie einzuarbeiten."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, "Milten"					);
 					Doc_Show		( nDocID );
@@ -131,35 +131,35 @@ FUNC VOID Bookstand_Engor_01_S1()
 					
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0, "Stock");
+					Doc_PrintLine	( nDocID,  0, "Bestand");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "We found some stuff - nothing much useable. Remainder as follows:"					);
+					Doc_PrintLines	( nDocID,  0, "Haben einigen Kram vorgefunden - kaum noch verwertbares Material, darunter wie folgt"					);
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "3 crates of old rags"	);
+					Doc_PrintLines	( nDocID,  0, "3 Kisten alte Stoffe"	);
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "8 crates of rusty iron"					);
+					Doc_PrintLines	( nDocID,  0, "8 Kisten rostige Eisenware"					);
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "4 crates of broken armor");
+					Doc_PrintLines	( nDocID,  0, "4 Kisten kaputte Rüstungsteile");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "5 crates of (stinking) leather and pelts");
+					Doc_PrintLines	( nDocID,  0, "5 Kisten Leder und Fellwaren (stinken schon!)");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "2 crates of pickaxes"					);
+					Doc_PrintLines	( nDocID,  1, "2 Kisten Spitzhacken"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "3 crates of tools"					);
+					Doc_PrintLines	( nDocID,  1, "3 Kisten Werkzeuge"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "16 crates of rocks (ore virtually nil)"					);
+					Doc_PrintLines	( nDocID,  1, "16 Kisten Gesteinsbrocken (kaum Erzgehalt)"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "1 crate of rusty razor blades"					);
+					Doc_PrintLines	( nDocID,  1, "1 Kiste mit rostigen Rasiermessern"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "4 crates of broken crockery"					);
+					Doc_PrintLines	( nDocID,  1, "4 Kisten kaputtes Geschirr"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "56 water barrels"					);
+					Doc_PrintLines	( nDocID,  1, "56 Fässer Wasser"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "1 crate of something swampy (whatever it was, it's rotted)"					);
+					Doc_PrintLines	( nDocID,  1, "1 Kiste Sumpf...- (was auch immer es war, es ist verdorben.)"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, "Engor"					);
 					Doc_Show		( nDocID );
@@ -197,32 +197,32 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_BookHeadline	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "Prisoners"					);
+					Doc_PrintLine	( nDocID,  0, "Gefangene"					);
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_PrintLine	( nDocID,  0, ""					);
 				if(Rengaru_Ausgeliefert == TRUE)
 				{
-					Doc_PrintLines	( nDocID,  0, "Rengaru: Stole from merchant Jora"					);
+					Doc_PrintLines	( nDocID,  0, "Rengaru: Hat den Händler Jora bestohlen."					);
 				};
 					Doc_PrintLine	( nDocID,  0, ""					);
 				if(Halvor_Ausgeliefert == TRUE)
 				{
-					Doc_PrintLines	( nDocID,  0, "Halvor: Supports bandits outside the city"					);
+					Doc_PrintLines	( nDocID,  0, "Halvor: Unterstützt Banditen außerhalb der Stadt."					);
 				};
 					Doc_PrintLine	( nDocID,  0, ""					);
 				if(Nagur_Ausgeliefert == TRUE)
 				{
-					Doc_PrintLines	( nDocID,  0, "Nagur: Murdered Baltram's errand-boy"					);
+					Doc_PrintLines	( nDocID,  0, "Nagur: Hat Baltrams Laufburschen ermordet."					);
 				};
 					Doc_PrintLine	( nDocID,  0, ""					);
 				if(MIS_Andre_REDLIGHT == LOG_SUCCESS)
 				{
-					Doc_PrintLines	( nDocID,  0, "Borka: Swampweed dealer"					);
+					Doc_PrintLines	( nDocID,  0, "Borka: Sumpfkrauthändler."					);
 				};
 					Doc_PrintLine	( nDocID,  0, ""					);
 				if(BaltramInJail == LOG_SUCCESS)
 				{
-					Doc_PrintLines	( nDocID,  0, "Baltram: Trade with pirates"					);
+					Doc_PrintLines	( nDocID,  0, "Baltram: Handel mit Piraten"					);
 				};
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
@@ -231,7 +231,7 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 				if(Fernando_ImKnast == TRUE)
 				{
-					Doc_PrintLines	( nDocID,  1, "Fernando: Sells weapons to bandits"					);
+					Doc_PrintLines	( nDocID,  1, "Fernando: Verkauft Waffen an Banditen"					);
 				};
 					Doc_PrintLine	( nDocID,  1, ""					);
 				/* if(Rengaru_InKnast == TRUE)
@@ -246,21 +246,21 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()
 					Doc_PrintLine	( nDocID,  1, ""					); */
 				if(Sarah_Ausgeliefert == TRUE)
 				{
-					Doc_PrintLines	( nDocID,  1, "Sarah: Sells weapons to Mercenaries"					);
+					Doc_PrintLines	( nDocID,  1, "Sarah: Verkauft Waffen an Söldner"					);
 				}
 				else if(Canthar_Ausgeliefert)
 				{
-					Doc_PrintLines	( nDocID,  1, "Canthar: Wanted to frame up Sarah"					);
+					Doc_PrintLines	( nDocID,  1, "Canthar: Wollte Sarah für ein falsches Verbrechen hinhängen"					);
 				};
 					Doc_PrintLine	( nDocID,  1, ""					);
 				if(MIS_RescueBennet == LOG_RUNNING)
 				{
-					Doc_PrintLines	( nDocID,  1, "Bennet: Murdered Lord Lothar"					);
+					Doc_PrintLines	( nDocID,  1, "Bennet: Hat Lord Lothar ermordet"					);
 				};
 					Doc_PrintLine	( nDocID,  1, ""					);
 				if(MIS_Richter_KillMorgahard == LOG_RUNNING)
 				{
-					Doc_PrintLines	( nDocID,  1, "Morgahard: Stole from governor Larius");
+					Doc_PrintLines	( nDocID,  1, "Morgahard: Hat Gouverneur Larius bestohlen");
 				};
 					Doc_Show		( nDocID );
 					

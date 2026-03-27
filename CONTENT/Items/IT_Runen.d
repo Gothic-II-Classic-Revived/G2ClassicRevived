@@ -766,8 +766,8 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_SummonGoblinSkeleton;
 	
-	TEXT 	[2]			=   "The wandering bones";
-	TEXT 	[3]			=   "of dead goblins.";
+	TEXT 	[2]			=   "Die wandernden Knochen";
+	TEXT 	[3]			=   "der toten Goblins";
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;

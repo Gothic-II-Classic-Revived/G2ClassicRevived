@@ -42,7 +42,7 @@ INSTANCE DIA_1051_Wegelagerer_Hello   (C_INFO)
 	condition   = DIA_Wegelagerer_Hello_Condition;
 	information = DIA_Wegelagerer_Hello_Info;
 	permanent   = FALSE;
-	description = "What are you doing here?";
+	description = "Was machst du hier?";
 };
 
 FUNC INT DIA_Wegelagerer_Hello_Condition()
@@ -69,7 +69,7 @@ INSTANCE DIA_1051_Wegelagerer_Novice   (C_INFO)
 	condition   = DIA_Wegelagerer_Novice_Condition;
 	information = DIA_Wegelagerer_Novice_Info;
 	permanent   = FALSE;
-	description = "I'm looking for a novice.";
+	description = "Ich suche einen Novizen.";
 };
 
 FUNC INT DIA_Wegelagerer_Novice_Condition()
@@ -88,7 +88,7 @@ FUNC VOID DIA_Wegelagerer_Novice_Info()
 	AI_Output (self ,other,"DIA_1051_Wegelagerer_Novice_07_01"); //That's very interesting. We're looking for someone, too.
 
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
-	Info_AddChoice (DIA_1051_Wegelagerer_Novice,"Who are you looking for?",DIA_1051_Wegelagerer_Question_Novice_Who);
+	Info_AddChoice (DIA_1051_Wegelagerer_Novice,"Wen sucht ihr?",DIA_1051_Wegelagerer_Question_Novice_Who);
 	
 };
 
@@ -102,7 +102,7 @@ INSTANCE DIA_1051_Wegelagerer_Question   (C_INFO)
 	condition   = DIA_Wegelagerer_Question_Condition;
 	information = DIA_Wegelagerer_Question_Info;
 	permanent   = FALSE;
-	description = "Just asking.";
+	description = "War nur 'ne Frage.";
 };
 
 FUNC INT DIA_Wegelagerer_Question_Condition()
@@ -124,10 +124,10 @@ FUNC VOID DIA_Wegelagerer_Question_Info()
 	if (MIS_Novizenchase == LOG_RUNNING)
 		&& (MIS_SCKnowsInnosEyeIsBroken  == FALSE)
 	{
-		Info_AddChoice (DIA_1051_Wegelagerer_Question,"I'm looking for a novice.",DIA_1051_Wegelagerer_Question_Novice);
+		Info_AddChoice (DIA_1051_Wegelagerer_Question,"Ich suche einen Novizen.",DIA_1051_Wegelagerer_Question_Novice);
 	};	
-	Info_AddChoice (DIA_1051_Wegelagerer_Question,"That's none of your business.",DIA_1051_Wegelagerer_Question_MyConcern);
-	Info_AddChoice (DIA_1051_Wegelagerer_Question,"I'm only having a look around.",DIA_1051_Wegelagerer_Question_LookAround);
+	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Das geht dich nichts an.",DIA_1051_Wegelagerer_Question_MyConcern);
+	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Ich seh mich nur mal um.",DIA_1051_Wegelagerer_Question_LookAround);
 };
 
 FUNC VOID DIA_1051_Wegelagerer_Question_Novice ()
@@ -136,7 +136,7 @@ FUNC VOID DIA_1051_Wegelagerer_Question_Novice ()
 	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_Novice_07_01"); //That's very interesting. We're looking for someone, too.
 	
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
-	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Who are you looking for?",DIA_1051_Wegelagerer_Question_Novice_Who);
+	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Wen sucht ihr?",DIA_1051_Wegelagerer_Question_Novice_Who);
 
 };	
 
@@ -156,8 +156,8 @@ FUNC VOID DIA_1051_Wegelagerer_Question_MyConcern ()
 	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_07_01"); //What do you mean? Are you looking for trouble?
 	
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
-	Info_AddChoice (DIA_1051_Wegelagerer_Question,"No, never mind. No trouble.",DIA_1051_Wegelagerer_Question_MyConcern_No);
-	Info_AddChoice (DIA_1051_Wegelagerer_Question,"If you insist.",DIA_1051_Wegelagerer_Question_MyConcern_Yes);
+	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Nein, schon gut. Kein Ärger.",DIA_1051_Wegelagerer_Question_MyConcern_No);
+	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Wenn es sein muss.",DIA_1051_Wegelagerer_Question_MyConcern_Yes);
 };
 
 FUNC VOID DIA_1051_Wegelagerer_Question_MyConcern_No ()

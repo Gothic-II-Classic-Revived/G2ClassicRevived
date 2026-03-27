@@ -24,17 +24,17 @@ FUNC VOID UseLehren_der_Goetter1()
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		); 					
 				Doc_SetFont 	( nDocID, -1, "font_10_book.tga"	   			); 
 				Doc_PrintLine	( nDocID,  0,"");										
-				Doc_PrintLines	( nDocID,  0,"Hear the words of the gods, for it is their will that you shall hear them. Heed the teachings of the gods, for it is their will that you shall heed them. Honor the priests of the gods, for they are the chosen ones.");
+				Doc_PrintLines	( nDocID,  0,"Höre die Worte der Götter, denn es ist ihr Wille, dass sie gehört werden. Befolge die Lehren der Götter, denn es ist ihr Wille, dass sie befolgt werden. Achte die Priester der Götter, denn sie sind erwählt.");
 				Doc_PrintLine	( nDocID,  0,"");
 
-				Doc_PrintLines	( nDocID,  0,"The word of Innos: And if it shall happen that you do not understand, do not despair at the words of the priests, for they are just and wise. For I am the rising sun, the light, and the life. And all that is contrary to the sun is contrary to me, and shall be banished to the shadows forever more.");
+				Doc_PrintLines	( nDocID,  0,"Die Worte Innos : Und möget ihr nicht verstehen, so zweifelt nicht an den Worten der Priester, ihr Tun ist gerecht und weise. Denn ich bin die aufgehende Sonne, das Licht und das Leben. Und alles was da wider der Sonne, ist wider mir und soll verbannt sein auf immer und ewig in die Schatten.");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLines	( nDocID,  1,"The word of Adanos: Work and live, for the day was created so that man may work. Seek learning and knowledge so that you may pass it on, for it is for that purpose that you were created. But whosoever shall be listless and idle, he shall be banished to the shadows forever more.");
+				Doc_PrintLines	( nDocID,  1,"Die Worte Adanos: Arbeite und lebe, denn der Tag ist gemacht dafür, dass der Mensch arbeite. Suche das Lernen und Wissen, auf dass Du es weitergeben kannst, denn so bist Du geschaffen worden. Wer aber müßig und faul, der soll verbannt werden auf immer und ewig in die Schatten.");
 				Doc_PrintLine	( nDocID,  1,"");
 
-				Doc_PrintLines	( nDocID,  1,"The word of Beliar: But whosoever shall do wrong and go against the will of the gods, him I will punish. I will plague his body with pain, suffering and death, but his spirit shall join me in the shadows forever more. ");
+				Doc_PrintLines	( nDocID,  1,"Die Worte Beliar: Wer aber handelt unrecht und gegen den Willen der Götter, den will ich strafen, den Körper mit Schmerz , Leid und Tod, den Geist werde ich aber zu mir nehmen auf immer und ewig in die Schatten.");
 				
 				Doc_Show		( nDocID );
 					
@@ -57,10 +57,10 @@ FUNC VOID UseLehren_der_Goetter2()
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_SetFont 	( nDocID, -1, "font_10_book.tga"	   			); 
 				Doc_PrintLine	( nDocID,  0,""); 					
-				Doc_PrintLines	( nDocID,  0,"Of the beginning of time: There was no night and no day, and no living thing moved across the land. Then Innos appeared and his light shone upon the world. And Innos gave unto the world the gift of life. But no creature could live in the light of Innos, so he created the sun. But still the light was too bright. So Innos divided himself and thus created Beliar. Beliar created the night. Now man could be. So Innos divided himself again and created Adanos. Adanos brought man versatility, knowledge, curiosity and courage. Innos was satisfied with what he had done.");
+				Doc_PrintLines	( nDocID,  0,"Vom Anbeginn der Zeit: Es ward noch kein Tag oder Nacht und kein Wesen zog über die Welt. Da erschien der Welt Innos und sein Licht erhellte alles. Und Innos schenkte der Welt das Leben. Da aber kein Wesen im Licht des Innos leben kann, schuf er die Sonne. Das Licht war aber noch zu stark. Da teilte sich Innos und schuf Beliar. Beliar brachte die Nacht. Nun konnten die Menschen sein. Da teilte sich Innos erneut und schuf Adanos. Adanos gab den Menschen die Vielseitigkeit, Wissen, Neugier und Mut. Innos war sehr zufrieden mit sich und seinem Werk.");
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,"And he decided to leave mankind in the care of Adanos, and he rested. But Beliar was consumed by envy, for the people did not pray to him, but slept at night. He grew angry and created a man. A man to pray to him alone. But the man he created was like all other men. Beliar became so furious that he killed the man and spoke: If they will not worship me, then at least they shall fear me. And he created death and ended the lives of men.");
+				Doc_PrintLines	( nDocID,  1,"Und er beschloss die Menschen Adanos ganz zu überlassen, um zu ruhen. Beliar aber wurde von Neid zerfressen, denn die Menschen beteten nicht zu ihm und ruhten des Nachts. Da wurde er zornig und er formte sich einen Menschen. Einen Menschen, der nur ihn anbeten sollte. Der Mensch aber ward genau so wie alle anderen Menschen. Beliar wurde so stark von Zorn erfüllt, dass er den Menschen tötete und sprach: Wenn sie mich nicht anbeten, dann sollen sie mich fürchten. Und er schuf den Tod und nahm den Menschen das Leben.");
 
 				Doc_Show		( nDocID );
 					
@@ -83,11 +83,11 @@ FUNC VOID UseLehren_der_Goetter3()
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_SetFont 	( nDocID, -1, "font_10_book.tga"	   			); 
 				Doc_PrintLine	( nDocID,  0,"");			
-				Doc_PrintLines	( nDocID,  0,"Innos gave mankind the power to hear him and speak to him. He gave mankind the power to perform great miracles, and he called them magic. With this power, the people were able to design the world after their will. Innos gave them no limits. And thus man received a portion of the divine power of creation. But not all the people were equal, and this dissatisfied them. So he took the power from the discontented. Innos raised the few who had shown him gratitude above the others.");
+				Doc_PrintLines	( nDocID,  0,"Innos gab den Menschen die Macht ihn zu hören und zu ihm zu sprechen. Er gab ihnen die Macht große Wunder zu vollbringen. Und er nannte sie Magie. Mit dieser Macht konnten die Menschen die Welt frei nach ihrem Willen gestalten. Es gab keine Grenzen, die Innos ihnen aufzeigte. Und so hatten die Menschen Teil an der göttlichen Schöpferkraft. Aber die Menschen waren sich alle gleich und das gefiel ihnen nicht. Also nahm er denen die unzufrieden waren, die Kraft. Die wenigen, die sich dankbar zeigten, stellte Innos über alle anderen");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,"These few were soon revered and feared, and the people  called them priests. But among them were many who soon became dissatisfied. And so it happened that they prayed to Adanos and forgot their origins. The league of priests was divided. Wars ensued and the faith in divine omnipotence soon became a myth. And so the priests were separated. Those who followed Adanos were called Magicians of the Circle of Water, while the priests of Innos became known as the Magicians of the Circle of Fire.");
+				Doc_PrintLines	( nDocID,  1,"Diese Menschen wurden alsbald verehrt und gefürchtet und wurden Priester genannt. Doch auch unter ihnen gab es viele, die bald unzufrieden waren. Und so kam es, dass sie zu Adanos beteten und ihren Ursprung vergassen. Die Riege der Priester war gespalten. Kriege wurden entfesselt und auch der Glaube an die göttliche Allmacht war bald schon nur noch Mythos. So teilten sich die Priester. Die dem Adanos folgten nannte man nun Magier des Wassers, die Geweihten des Innos hießen aber die Magier des Feuers.");
 
 				Doc_Show		( nDocID );
 					

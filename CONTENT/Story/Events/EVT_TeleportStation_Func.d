@@ -6,7 +6,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 {	
   	Wld_PlayEffect("spellFX_Teleport_RING",  hero  , hero	, 0, 0, 0, FALSE );
 	Snd_Play ("MFX_TELEPORT_CAST");
-	Npc_ClearAIQueue (hero);	//Joly:wegen Seitw�rts da durch rennen.
+	Npc_ClearAIQueue (hero);	//Joly:wegen Seitwrts da durch rennen.
 	
 	if(SCUsed_TELEPORTER != TRUE)
 	{
@@ -23,7 +23,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_NW_TELEPORTSTATION_TROLLAREA != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone at the big lake up north leads to the valley under the old watchtower."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein am großen See im Norden führt zum Tal unterhalb des alten Wachturms."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_NW_TELEPORTSTATION_TROLLAREA = TRUE; 
@@ -35,7 +35,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_NW_TELEPORTSTATION_CASTLEMINE != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone in valley under the watchtower leads to the dark forest."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein im Tal unterhalb des Wachturms führt zum dunklen Wald."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_NW_TELEPORTSTATION_CASTLEMINE = TRUE; 
@@ -47,7 +47,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_NW_TELEPORTSTATION_JAEGER != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone on the mountaintop in front of the city leads to the big lake up north."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein auf dem Berggipfel vor der Stadt führt zum großen See im Norden."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_NW_TELEPORTSTATION_JAEGER = TRUE; 
@@ -59,7 +59,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_NW_TELEPORTSTATION_FOREST != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone in the dark forest leads to the mountaintop in front of the city."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein im dunklen Wald führt zum Berggipfel vor der Stadt."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_NW_TELEPORTSTATION_FOREST = TRUE; 
@@ -78,7 +78,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_OW_TELEPORTSTATION_STONEHENGE != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone under the stone circle leads to old troll canyon."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein unter dem Steinkreis führt zur alten Trollschlucht."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_OW_TELEPORTSTATION_STONEHENGE = TRUE; 
@@ -90,7 +90,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_OW_TELEPORTSTATION_TROLLCANYON != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone in the old troll canyon leads to the monastery ruins."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein in der alten Trollschlucht führt zu den Klosterruinen."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_OW_TELEPORTSTATION_TROLLCANYON = TRUE; 
@@ -102,7 +102,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_OW_TELEPORTSTATION_MONASTERY != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone in the monastery ruins leads to the sea cliff next to the swamp."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein in den Klosterruinen führt zur Meeresklippe neben dem Sumpf."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_OW_TELEPORTSTATION_MONASTERY = TRUE; 
@@ -114,7 +114,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_OW_TELEPORTSTATION_CLIFF != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone at the sea cliff leads to the old mountain fortress."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein an der Meeresklippe führt zur alten Bergfestung."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_OW_TELEPORTSTATION_CLIFF = TRUE; 
@@ -126,7 +126,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 
 			if (SCUsed_OW_TELEPORTSTATION_STONEFORTRESS != TRUE)
 			{
-				B_LogEntry (TOPIC_Addon_TeleportsNW,"The teleporter stone in the mountain fortress leads to the stone circle."); 
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"Der Teleportstein in der Bergfestung führt zum Steinkreis."); 
 				B_GivePlayerXP (XP_Ambient);
 			
 				SCUsed_OW_TELEPORTSTATION_STONEFORTRESS = TRUE; 

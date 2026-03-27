@@ -1,5 +1,5 @@
 // ************************************************************************************************
-// Wirkung und Kosten von Tr�nken
+// Wirkung und Kosten von Trnken
 // ************************************************************************************************
 const int Value_Elixier1		= 600;			const int Mana_Elixier1			= 100;
 const int Value_ElixierEgg		= 800;			const int ManaMax_ElixierEgg	= 10;	// FIXME: was wenn der SC das selbst benutzt??
@@ -35,7 +35,7 @@ const int Value_Haste_03		= 800;			const int Time_Haste_03			= 300000;
 
 INSTANCE ITPO_REVIVED_HEALTH_01 (C_Item)
 {
-	name 			=	"Essence of Healing";
+	name 			=	"Essenz heilender Kraft";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -64,7 +64,7 @@ INSTANCE ITPO_REVIVED_HEALTH_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_HEALTH_02 (C_Item)
 {
-	name 			=	"Extract of Healing";
+	name 			=	"Extrakt heilender Kraft";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -93,7 +93,7 @@ INSTANCE ITPO_REVIVED_HEALTH_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_HEALTH_03 (C_Item)
 {
-	name 			=	"Elixir of Healing";
+	name 			=	"Elixier heilender Kraft";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -126,7 +126,7 @@ INSTANCE ITPO_REVIVED_HEALTH_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_MANA_01 (C_Item)
 {
-	name 			=	"Essence of Magic Energy";
+	name 			=	"Essenz magischer Energie";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -155,7 +155,7 @@ INSTANCE ITPO_REVIVED_MANA_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_MANA_02 (C_Item)
 {
-	name 			=	"Extract of Magic Energy";
+	name 			=	"Extrakt magischer Energie";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -184,7 +184,7 @@ INSTANCE ITPO_REVIVED_MANA_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_MANA_03 (C_Item)
 {
-	name 			=	"Elixir of Magic Energy";
+	name 			=	"Elixier magischer Energie";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -217,7 +217,7 @@ INSTANCE ITPO_REVIVED_MANA_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_HEALTH_01 (C_Item)
 {
-	name 			=	"Essence of Life";
+	name 			=	"Essenz des Lebens";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -246,7 +246,7 @@ INSTANCE ITPO_REVIVED_BOOST_HEALTH_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_HEALTH_02 (C_Item)
 {
-	name 			=	"Extract of Life";
+	name 			=	"Extrakt des Lebens";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -275,7 +275,7 @@ INSTANCE ITPO_REVIVED_BOOST_HEALTH_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_HEALTH_03 (C_Item)
 {
-	name 			=	"Elixir of Life";
+	name 			=	"Elixier des Lebens";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -306,7 +306,7 @@ INSTANCE ITPO_REVIVED_BOOST_HEALTH_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MANA_01 (C_Item)
 {
-	name 			=	"Essence of the Spirit";
+	name 			=	"Essenz des Geistes";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -335,7 +335,7 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MANA_02 (C_Item)
 {
-	name 			=	"Extract of the Spirit";
+	name 			=	"Extrakt des Geistes";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -364,7 +364,7 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MANA_03 (C_Item)
 {
-	name 			=	"Elixir of the Spirit";
+	name 			=	"Elixier des Geistes";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -395,7 +395,7 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_STR_01 (C_Item)
 {
-	name 			=	"Essence of Strength";
+	name 			=	"Essenz der Stärke";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -424,7 +424,7 @@ INSTANCE ITPO_REVIVED_BOOST_STR_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_STR_02 (C_Item)
 {
-	name 			=	"Extract of Strength";
+	name 			=	"Extrakt der Stärke";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -453,7 +453,7 @@ INSTANCE ITPO_REVIVED_BOOST_STR_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_STR_03 (C_Item)
 {
-	name 			=	"Elixir of Strength";
+	name 			=	"Elixier der Stärke";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -484,7 +484,7 @@ INSTANCE ITPO_REVIVED_BOOST_STR_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_DEX_01 (C_Item)
 {
-	name 			=	"Essence of Dexterity";
+	name 			=	"Essenz der Geschicklichkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -513,7 +513,7 @@ INSTANCE ITPO_REVIVED_BOOST_DEX_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_DEX_02 (C_Item)
 {
-	name 			=	"Extract of Dexterity";
+	name 			=	"Extrakt der Geschicklichkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -542,7 +542,7 @@ INSTANCE ITPO_REVIVED_BOOST_DEX_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_DEX_03 (C_Item)
 {
-	name 			=	"Elixir of Dexterity";
+	name 			=	"Elixier der Geschicklichkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -573,7 +573,7 @@ INSTANCE ITPO_REVIVED_BOOST_DEX_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MASTER_01 (C_Item)
 {
-	name 			=	"Potion of Power";
+	name 			=	"Trank der Macht";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -608,7 +608,7 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MASTER_02 (C_Item)
 {
-	name 			=	"Potion of Supremacy";
+	name 			=	"Trank der Herrschaft";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -643,7 +643,7 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MASTER_03 (C_Item)
 {
-	name 			=	"Potion of Godhood";
+	name 			=	"Trank der Göttlichkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -682,7 +682,7 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPEED_01 (C_Item)
 {
-	name 			=	"Potion of Swiftness";
+	name 			=	"Trank der Geschwindigkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -700,7 +700,7 @@ INSTANCE ITPO_REVIVED_SPEED_01 (C_Item)
 	inv_rotz		= 1;
 
 	description		= name;
-	TEXT[1]			= "Enables the player to short term sprints.";
+	TEXT[1]			= "Ermöglicht kurzzeitiges Sprinten";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste_01/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= Value_Haste_01;
 };
@@ -712,7 +712,7 @@ INSTANCE ITPO_REVIVED_SPEED_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPEED_02 (C_Item)
 {
-	name 			=	"Potion of Velocity";
+	name 			=	"Trank der Schnelligkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -730,7 +730,7 @@ INSTANCE ITPO_REVIVED_SPEED_02 (C_Item)
 	inv_rotz		= 1;
 
 	description		= name;
-	TEXT[1]			= "Allows the player to sprint.";
+	TEXT[1]			= "Ermöglicht Sprinten";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste_02/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= Value_Haste_02;
 };
@@ -742,7 +742,7 @@ INSTANCE ITPO_REVIVED_SPEED_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPEED_03 (C_Item)
 {
-	name 			=	"Potion of Haste";
+	name 			=	"Trank der Eile";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -760,7 +760,7 @@ INSTANCE ITPO_REVIVED_SPEED_03 (C_Item)
 	inv_rotz		= 1;
 
 	description		= name;
-	TEXT[1]			= "Enables the player to sprint longer.";
+	TEXT[1]			= "Ermöglicht längeres Sprinten";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste_03/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= Value_Haste_03;
 };
@@ -776,7 +776,7 @@ INSTANCE ITPO_REVIVED_SPEED_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPECIAL_MANA_01 (C_Item)
 {
-	name 			=	"Elixir";
+	name 			=	"Elixier";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -805,7 +805,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 {
-	name 			=	"Crawler Potion";
+	name 			=	"Crawler Elixier";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -823,7 +823,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 	inv_rotz		= 1;
 
 	description			= name;
-	TEXT[0]				= "Allows contact to the Sleeper.";
+	TEXT[0]				= "ermöglicht Kontakt zum Schläfer";
 	TEXT[1]				= NAME_Bonus_ManaMax;			COUNT[1]	= ManaMax_ElixierEgg;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_ElixierEgg;
 };
@@ -837,7 +837,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_01 (C_Item)
 {
-	name 			=	"Potion of Quick Healing";
+	name 			=	"Trank der schnellen Heilung";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -866,7 +866,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_02 (C_Item)
 {
-	name 			=	"Orc Medicine";
+	name 			=	"Ork-Medizin";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;

@@ -20,7 +20,7 @@ FUNC VOID DIA_BDT_1013_BANDIT_FIRSTEXIT_Info()
 	&& (!Npc_IsDead (Ambusher_1014)) 
 	&& (!Npc_IsDead (Ambusher_1015))
 	{
-		AI_Output	(self, other, "DIA_BDT_1013_BANDIT_FIRSTEXIT_01_00"); //I wouldn't go into the cave up here if I were you - my buddies in there will tan your hide. And they know something about fighting.
+		AI_Output	(self, other, "DIA_BDT_1013_BANDIT_FIRSTEXIT_01_00"); //Geh lieber nicht in die Höhle hier oben, meine Kollegen, die da sitzen, werden dir das Fell gerben. Und die verstehen was vom Kämpfen.
 	};
 	
 	AI_StopProcessInfos (self);
@@ -68,33 +68,33 @@ func int DIA_BDT_1013_BANDIT_WHERE_Condition ()
 
 func void DIA_BDT_1013_BANDIT_WHERE_Info ()
 {
-	AI_Output			(self, other, "DIA_BDT_1013_BANDIT_WHERE_01_00"); //Hey - where do you come from, hm?
+	AI_Output			(self, other, "DIA_BDT_1013_BANDIT_WHERE_01_00"); //Hey - wo kommst du denn her, hm?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
 	
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"I've come from the mountains.",DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN);	
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"I've come from Xardas...",DIA_BDT_1013_BANDIT_WHERE_XARDAS);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Ich komme aus den Bergen.",DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN);	
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Ich komme von Xardas...",DIA_BDT_1013_BANDIT_WHERE_XARDAS);
 };
 //-------------------------------------------------------------------------------------------
 FUNC VOID DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_15_00"); //I've come from the mountains.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_01"); //Exactly. You come from the mountains. And that is bad for you.
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_15_00"); //Ich komme aus den Bergen.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_01"); //Genau. Du kommst aus den Bergen. Und das ist schlecht für dich.
 	B_UseFakeScroll();
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_02"); //Very bad.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_03"); //They're looking for you - a whole bunch of evil guys.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_04"); //There's someone here you absolutely have to talk to. Follow me!
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_02"); //Ganz schlecht.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_03"); //Du wirst gesucht - und zwar von einem ganzen Haufen übler Kerle.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_04"); //Es gibt da jemanden, mit dem du unbedingt sprechen solltest. Folge mir!
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Who's looking for me?",DIA_BDT_1013_BANDIT_WHERE_WHO);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Vielleicht später...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Wer sucht mich?",DIA_BDT_1013_BANDIT_WHERE_WHO);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Gut! Geh voran!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
 FUNC VOID DIA_BDT_1013_BANDIT_WHERE_XARDAS()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_15_00"); //I've come from Xardas...
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_01_01"); //Is that the old sorcerer? He's called Xardas... Brago will be interested...
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_15_00"); //Ich komme von Xardas...
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_01_01"); //Ist das der alte Hexer? Xardas heißt er ... das wird Brago interessieren ...
 	
 	AI_StopProcessInfos(self);
 	B_Attack (self, other, AR_SuddenEnemyInferno, 1);
@@ -102,8 +102,8 @@ FUNC VOID DIA_BDT_1013_BANDIT_WHERE_XARDAS()
 
 FUNC VOID DIA_BDT_1013_BANDIT_WHERE_YES()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_YES_15_00"); //Fine! You go first!
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_YES_01_01"); //Then just follow me, the cave is right up here.
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_YES_15_00"); //Gut! Geh voran!
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_YES_01_01"); //Dann folge mir einfach, die Höhle ist direkt hier oben.
 	
 	Npc_ExchangeRoutine	(self,"AMBUSH"); 
 	
@@ -112,66 +112,66 @@ FUNC VOID DIA_BDT_1013_BANDIT_WHERE_YES()
 
 FUNC VOID DIA_BDT_1013_BANDIT_WHERE_WHO()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_WHO_15_00"); //Who's looking for me?
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_01"); //Half of Khorinis is after you, and you're trying to tell me that you don't know anything about it?
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_02"); //Ah! I see! You just don't want to talk to me about it, hm? All right - it's your business.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_03"); //So, you coming or not?
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_WHO_15_00"); //Wer sucht mich?
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_01"); //Halb Khorinis ist hinter dir her, und du willst mir erzählen, du hättest keine Ahnung?
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_02"); //Ah! Verstehe! Du willst nur nicht mit mir drüber reden, hm? Na gut - deine Sache.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_03"); //Also, kommst du jetzt oder nicht?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Who should I talk to?",DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Vielleicht später...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Mit wem soll ich sprechen?",DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Gut! Geh voran!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
 func void DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_15_00"); //Who should I talk to?
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_01_01"); //To my leader. His name is Brago. He can explain everything to you better than I can.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_01_02"); //So, what about it - are we going?
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_15_00"); //Mit wem soll ich sprechen?
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_01_01"); //Mit meinem Anführer. Er heißt Brago. Er kann dir alles besser erklären als ich.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_01_02"); //Also was ist - gehen wir?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"How do I know this isn't a trap?",DIA_BDT_1013_BANDIT_WHERE_NOTRAP);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Vielleicht später...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Woher weiß ich, das es keine Falle ist?",DIA_BDT_1013_BANDIT_WHERE_NOTRAP);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Gut! Geh voran!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 	
 func void DIA_BDT_1013_BANDIT_WHERE_NOTRAP()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_15_00"); //How do I know this isn't a trap?
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_01_01"); //You know, I'm getting tired of you. If you don't want my help, then just go to the city and let them put you behind bars!
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_01_02"); //You come with me NOW or you forget about it, see?
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_15_00"); //Woher weiß ich, das es keine Falle ist?
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_01_01"); //Also so langsam reicht's mir mit dir. Wenn du meine Hilfe nicht willst, dann geh doch zur Stadt und lass dich einlochen!
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_01_02"); //Du kommst JETZT mit, oder du lässt es bleiben, klar?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Someone else has already tried to trick me...",DIA_BDT_1013_BANDIT_WHERE_DAMALS);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Vielleicht später...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Es hat schon mal einer versucht mich reinzulegen...",DIA_BDT_1013_BANDIT_WHERE_DAMALS);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Gut! Geh voran!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
 func void DIA_BDT_1013_BANDIT_WHERE_DAMALS()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_00"); //Easy, my friend! Someone has already tried to trick me...
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_01_01"); //Oh?
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_02"); //This guy suggested that we should get an amulet together, and share the profit.
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_03"); //Once we had reached our goal, he and his friends attacked me.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_01_04"); //It sounds as though you got involved with the wrong people - where was that?
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_00"); //Langsam, Freundchen! Es hat schon mal einer versucht, mich reinzulegen ...
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_01_01"); //Und?
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_02"); //So'n Kerl hat mit vorgeschlagen, zusammen mit ihm ein Amulett zu holen und den Gewinn zu teilen.
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_03"); //Als wir am Ziel angekommen waren, haben er und seine Freunde mich angegriffen.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_01_04"); //Klingt ganz so, als hättest du dich mit den falschen Leuten eingelassen - wo war das?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"That's not important.",DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"I was a convict in the mining colony.",DIA_BDT_1013_BANDIT_WHERE_PRISONER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Das ist nicht wichtig.",DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Ich war Sträfling in der Minenkolonie.",DIA_BDT_1013_BANDIT_WHERE_PRISONER);
 };
 
 func void DIA_BDT_1013_BANDIT_WHERE_PRISONER()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_00"); //I was a convict in the mining colony.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_01"); //(amazed) You come from behind the Barrier? Man, then we were there together.
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_02"); //I don't know you...
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_03"); //I was a digger in the Old Camp. I didn't have much to do with the whole thing.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_04"); //(conspiratorially) But what is more important now - you are in big trouble!
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_05"); //Someone has put a pretty price on your head. And he's handed out a few posters - with your mug on them!
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_06"); //If I were you, then I would be very - very - careful. There are people with us who would kill their own mother for gold.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_07"); //But I think we boys from the penal colony ought to stick together!
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_08"); //Then I guess I had better thank you now...
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_09"); //It's nothing. Just make sure you stay alive.
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_00"); //Ich war Sträfling in der Minenkolonie.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_01"); //(verblüfft) Du kommst aus der Barriere? Mann, dann haben wir ja zusammen gesessen.
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_02"); //Ich kenne dich nicht ...
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_03"); //Ich war Buddler im Alten Lager. Hab mit der ganzen Sache nicht viel zu tun gehabt.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_04"); //(verschwörerisch) Aber was jetzt viel wichtiger ist - du hast mächtigen Ärger!
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_05"); //Irgendwer hat ein hübsches Sümmchen auf deinen Kopf ausgesetzt. Und er hat ein paar Zettel verteilt - mit deiner Visage darauf!
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_06"); //Wenn ich du wäre, dann würde ich sehr, sehr vorsichtig sein. Es gibt Leute bei uns, die würden für das Gold ihre Mutter umbringen.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_07"); //Aber ich finde, wir Jungs aus der Strafkolonie müssen zusammenhalten!
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_08"); //Dann sollte ich mich wohl jetzt besser bei dir bedanken ...
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_09"); //Geschenkt. Sieh lieber zu, dass du am Leben bleibst.
 	
 	Bdt13_Friend = TRUE;
 	B_SetAttitude (self, ATT_FRIENDLY);
@@ -183,18 +183,18 @@ func void DIA_BDT_1013_BANDIT_WHERE_PRISONER()
 
 func void DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT_15_00"); //That's not important.
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT_01_01"); //Suit yourself. So, are we going now, or not?
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT_15_00"); //Das ist nicht wichtig.
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT_01_01"); //Wie du meinst. Also, gehen wir jetzt oder nicht?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Vielleicht später...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Gut! Geh voran!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
 func VOID DIA_BDT_1013_BANDIT_WHERE_LATER()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_LATER_15_00"); //Maybe later...
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_LATER_01_01"); //There won't be a later for you, pal!
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_LATER_15_00"); //Vielleicht später...
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_LATER_01_01"); //Später wird es für dich nicht mehr geben, Freundchen!
 	
 	AI_StopProcessInfos(self);
 	B_Attack (self, other, AR_SuddenEnemyInferno, 1);
@@ -226,13 +226,13 @@ func void DIA_1013_BANDIT_AMBUSH_Info ()
 	if (Npc_IsDead(Ambusher_1014))
 	&& (Npc_IsDead(Ambusher_1015))
 	{
-		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_00"); //It was really stupid of you to follow me...
+		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_00"); //Es war sehr dumm von dir, mir zu folgen ...
 		B_Attack 			(self, other, AR_SuddenEnemyInferno, 1);
 		AI_StopProcessInfos (self);
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_01"); //Hey people, look who I have here...
+		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_01"); //Hey Leute, schaut mal, wen ich hier habe ...
 		AI_StopProcessInfos (self);
 	};
 };
@@ -247,7 +247,7 @@ instance DIA_1013_BANDIT_NAME (C_INFO)
 	condition	 = 	DIA_1013_BANDIT_NAME_Condition;
 	information	 = 	DIA_1013_BANDIT_NAME_Info;
 	PERMANENT	 =  FALSE;	
-	description	 = 	"Who's the fellow who pays the bounty?";
+	description	 = 	"Wer ist der Kerl, der das Kopfgeld zahlt?";
 };
 func int DIA_1013_BANDIT_NAME_Condition ()
 {	
@@ -258,14 +258,14 @@ func int DIA_1013_BANDIT_NAME_Condition ()
 };
 func void DIA_1013_BANDIT_NAME_Info ()
 {
-	AI_Output (other, self, "DIA_1013_BANDIT_NAME_15_00"); //Who's the fellow who pays the bounty?
-	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_01"); //That I don't know, there's only one of us who knows him.
-	AI_Output (other, self, "DIA_1013_BANDIT_NAME_15_02"); //And who would that be?
-	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_03"); //Hey, man - I really can't tell you that. You know how it goes...
+	AI_Output (other, self, "DIA_1013_BANDIT_NAME_15_00"); //Wer ist der Kerl, der das Kopfgeld zahlt?
+	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_01"); //Das weiß ich nicht, es gibt nur einen von uns, der ihn kennt.
+	AI_Output (other, self, "DIA_1013_BANDIT_NAME_15_02"); //Und wer ist das?
+	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_03"); //Hey, Mann - das kann ich dir nicht sagen. Du weißt doch, wie so was läuft ...
 	
 	Log_CreateTopic (Topic_Bandits,LOG_MISSION);
 	Log_SetTopicStatus (Topic_Bandits,LOG_RUNNING);
-	B_LogEntry (Topic_Bandits,"Some bandits are after me. They've got a wanted note. I wonder what's behind it all.");
+	B_LogEntry (Topic_Bandits,"Ein paar Banditen suchen mich. Sie haben einen Steckbrief von mir. Was wohl dahinter stecken mag?");
 	MIS_Steckbriefe = LOG_RUNNING;
 };
 
@@ -279,7 +279,7 @@ instance DIA_1013_BANDIT_DEXTER		(C_INFO)
 	condition	 = 	DIA_1013_BANDIT_DEXTER_Condition;
 	information	 = 	DIA_1013_BANDIT_DEXTER_Info;
 	PERMANENT	 =  TRUE;	
-	description	 = 	"10 gold pieces for the name of the guy who raised the bounty.";
+	description	 = 	"10 Goldstücke für den Namen des Kerls, der das Kopfgeld ausgesetzt hat!";
 };
 func int DIA_1013_BANDIT_DEXTER_Condition ()
 {	
@@ -292,25 +292,25 @@ func int DIA_1013_BANDIT_DEXTER_Condition ()
 };
 func void DIA_1013_BANDIT_DEXTER_Info ()
 {
-	AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_00"); //10 gold pieces for the name of the guy who raised the bounty.
-	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_01"); //Oh, man, I really can't do that...
-	AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_02"); //Spit it out already!
-	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_03"); //(takes a deep breath) Oh man! All right. His name is Dexter. Near the big farm there's a steep rock.
-	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_04"); //There's a watch tower up there, and a few mines. He has his hideout somewhere nearby.
+	AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_00"); //10 Goldstücke für den Namen des Kerls, der das Kopfgeld ausgesetzt hat!
+	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_01"); //Ach, Mann, das kann ich echt nicht machen ...
+	AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_02"); //Nun spuck's schon aus!
+	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_03"); //(holt tief Luft) Oh Mann! Na gut. Dexter ist sein Name. In der Nähe des Großbauern gibt es einen steilen Felsen.
+	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_04"); //Da oben gibt's 'nen Wachturm und ein paar Minen. Irgendwo da hat er sein Versteck.
 	
-	B_LogEntry (Topic_Bandits,"The bandits' leader is Dexter, a Shadow from the Old Camp. He's hiding out in a mine near the landowner's.");
+	B_LogEntry (Topic_Bandits,"Der Anführer der Banditen ist Dexter, ein Schatten aus dem Alten Lager. Er hält sich in einer Mine in der Nähe des Großbauernhofs auf.");
 	
 	if (B_GiveInvItems(other, self, itmi_gold, 10))
 	{
-		AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_05"); //See, that wasn't so hard. Here's your gold.
+		AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_05"); //Na bitte! Hier hast du dein Gold.
 	}
 	else
 	{
-		AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_06"); //Er - I just realized I haven't got ten gold pieces left.
-		AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_07"); //What?! I... Oh - forget it - it's my own fault. I shouldn't have told you the name before I saw the gold...
+		AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_06"); //Äh - ich merke gerade, ich hab keine 10 Goldstücke mehr.
+		AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_07"); //Was?! Ich ... Ach - vergiss es - ich bin selbst Schuld. Was sag ich dir auch den Namen, bevor ich das Gold gesehen hab ...
 	};
 	
-	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_08"); //And just don't tell them who told you.
+	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_08"); //Und sag ihnen bloß nicht, wer dir das gesteckt hat.
 			
 	Bdt13_Dexter_verraten = TRUE;
 };
@@ -325,7 +325,7 @@ instance DIA_1013_BANDIT_PIC		(C_INFO)
 	condition	 = 	DIA_1013_BANDIT_PIC_Condition;
 	information	 = 	DIA_1013_BANDIT_PIC_Info;
 	PERMANENT	 =  FALSE;	
-	description	 = 	"Can I have the picture?";
+	description	 = 	"Kann ich das Bild haben?";
 };
 func int DIA_1013_BANDIT_PIC_Condition ()
 {	
@@ -336,8 +336,8 @@ func int DIA_1013_BANDIT_PIC_Condition ()
 };
 func void DIA_1013_BANDIT_PIC_Info ()
 {
-	AI_Output (other, self, "DIA_1013_BANDIT_PIC_15_00"); //Can I have the picture?
-	AI_Output (self, other, "DIA_1013_BANDIT_PIC_01_01"); //Sure (grins) - after all, it's YOUR mug on there.
+	AI_Output (other, self, "DIA_1013_BANDIT_PIC_15_00"); //Kann ich das Bild haben?
+	AI_Output (self, other, "DIA_1013_BANDIT_PIC_01_01"); //Klar (grinst) - ist ja schließlich DEINE Visage drauf.
 	B_GiveInvItems (self, other, ItWr_Poster_MIS,1);
 };
 
@@ -351,7 +351,7 @@ instance DIA_1013_BANDIT_FromMaleth		(C_INFO)
 	condition	 = 	DIA_1013_BANDIT_FromMaleth_Condition;
 	information	 = 	DIA_1013_BANDIT_FromMaleth_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"One of the farmers outside of town sent me...";
+	description	 = 	"Einer der Bauern vor der Stadt hat mich geschickt...";
 };
 func int DIA_1013_BANDIT_FromMaleth_Condition ()
 {	
@@ -363,9 +363,9 @@ func int DIA_1013_BANDIT_FromMaleth_Condition ()
 };
 func void DIA_1013_BANDIT_FromMaleth_Info ()
 {
-	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_00"); //One of the farmers outside of town sent me...
-	AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_01"); //What? The farmers know the hideout?
-	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_02"); //They have noticed the missing sheep.
+	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_00"); //Einer der Bauern vor der Stadt hat mich geschickt...
+	AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_01"); //Was? Die Bauern kennen das Versteck?
+	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_02"); //Die Sache mit den Schafen ist aufgefallen.
 	
 	var C_NPC b14; b14 = Hlp_GetNpc(BDT_1014_BRAGO);
 	var C_NPC b15; b15 = Hlp_GetNpc(Bdt_1015_Bandit_L);
@@ -373,13 +373,13 @@ func void DIA_1013_BANDIT_FromMaleth_Info ()
 	if (Npc_IsDead (b14))
 	&& (Npc_IsDead (b15))
 	{
-		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_03"); //Damn! Well, then I'll have to move. If they find the hideout empty, maybe they won't keep looking for me.
+		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_03"); //Verdammt! Na, dann werd ich mal umziehen. Wenn die Typen das Versteck leer vorfinden, suchen sie vielleicht nicht weiter nach mir.
 	}
 	else //mindestens einer lebt noch
 	{
-		AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_04"); //He wants to see you all dead...
-		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_05"); //Wait - you're not going do me in, are you - after I helped you?
-		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_06"); //Go on in and bump off the others if you're that eager to see blood - I'm staying out of it!
+		AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_04"); //Er will euch alle tot sehen ...
+		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_05"); //Moment - du willst mir doch wohl keins überbraten - wo ich dir geholfen hab?
+		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_06"); //Geh rein und leg die anderen um, wenn du unbedingt Blut sehen willst - ich verzieh mich!
 	};
 	
 	Bdt_1013_Away = TRUE;
@@ -400,7 +400,7 @@ instance DIA_1013_BANDIT_FromCavalorn (C_INFO)
 	condition	 = 	DIA_1013_BANDIT_FromCavalorn_Condition;
 	information	 = 	DIA_1013_BANDIT_FromCavalorn_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"There's bound to be a lot of trouble here before long!";
+	description	 = 	"Bald wird es hier ziemlichen Ärger geben!";
 };
 func int DIA_1013_BANDIT_FromCavalorn_Condition ()
 {	
@@ -412,10 +412,10 @@ func int DIA_1013_BANDIT_FromCavalorn_Condition ()
 };
 func void DIA_1013_BANDIT_FromCavalorn_Info ()
 {
-	AI_Output (other, self, "DIA_ADDON_1013_BANDIT_FromCavalorn_15_00"); //There's bound to be a lot of trouble here before long!
-	AI_Output (self, other, "DIA_ADDON_1013_BANDIT_FromCavalorn_01_01"); //What's up?
-	AI_Output (other, self, "DIA_ADDON_1013_BANDIT_FromCavalorn_15_02"); //A guy named Cavalorn is coming to get you!
-	AI_Output (self, other, "DIA_ADDON_1013_BANDIT_FromCavalorn_01_03"); //Rats! He's still alive? I'm outta here.
+	AI_Output (other, self, "DIA_ADDON_1013_BANDIT_FromCavalorn_15_00"); //Bald wird es hier ziemlichen Ärger geben!
+	AI_Output (self, other, "DIA_ADDON_1013_BANDIT_FromCavalorn_01_01"); //Wie steht's?
+	AI_Output (other, self, "DIA_ADDON_1013_BANDIT_FromCavalorn_15_02"); //Ein Typ namens Cavalorn kommt euch holen!
+	AI_Output (self, other, "DIA_ADDON_1013_BANDIT_FromCavalorn_01_03"); //Mist! Der Typ hat überlebt? Ich bin weg.
 
 	Bdt_1013_Away = TRUE;
 	B_GivePlayerXP (XP_BanditWeg);
@@ -446,7 +446,7 @@ instance DIA_1013_BANDIT_PERM		(C_INFO)
 	condition	 = 	DIA_1013_BANDIT_PERM_Condition;
 	information	 = 	DIA_1013_BANDIT_PERM_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Is there anything else that might interest me?";
+	description	 = 	"Gibt's noch was interessantes für mich?";
 };
 func int DIA_1013_BANDIT_PERM_Condition ()
 {	
@@ -458,16 +458,16 @@ func int DIA_1013_BANDIT_PERM_Condition ()
 };
 func void DIA_1013_BANDIT_PERM_Info ()
 {
-	AI_Output (other, self, "DIA_1013_BANDIT_PERM_15_00"); //Is there anything else that might interest me?
+	AI_Output (other, self, "DIA_1013_BANDIT_PERM_15_00"); //Gibt's noch was interessantes für mich?
 
 	if (bdt13_Gossip_Wildnis == FALSE)
 	{
-		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_01"); //You mean about the area here? If you want to stay alive, stay on the paths.
-		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_02"); //The farther you go into the wilderness, the more dangerous it is.
+		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_01"); //Du meinst über die Gegend hier? Wenn du am Leben bleiben willst, halte dich auf den Wegen.
+		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_02"); //Je weiter du dich in die Wildnis begibst, desto gefährlicher wird es.
 		bdt13_Gossip_Wildnis = TRUE;
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_03"); //I've told you everything I can.
+		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_03"); //Ich hab dir alles erzählt, was ich dir sagen kann.
 	};
 };

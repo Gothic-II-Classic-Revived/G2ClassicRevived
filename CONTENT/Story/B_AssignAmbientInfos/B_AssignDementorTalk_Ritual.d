@@ -11,9 +11,9 @@ func void B_AssignDementorTalk_Ritual ()
 	if (MIS_SCKnowsInnosEyeIsBroken == FALSE)
 	
 	{
-		AI_Output			(self ,other, "DIA_RitualDementor_19_00"); //You have come too late.
-		AI_Output			(self ,other, "DIA_RitualDementor_19_01"); //We have destroyed the Eye of Innos, so that it can never regain its power.
-		AI_Output			(self ,other, "DIA_RitualDementor_19_02"); //We shall now demonstrate the futility of your attempt to challenge the Master.
+		AI_Output			(self ,other, "DIA_RitualDementor_19_00"); //Du kommst zu spät.
+		AI_Output			(self ,other, "DIA_RitualDementor_19_01"); //Wir haben das Auge Innos' zerstört, auf dass es seine Macht niemals zurückerlangen wird.
+		AI_Output			(self ,other, "DIA_RitualDementor_19_02"); //Wir werden dir jetzt zeigen, was für sinnloses Unterfangen es doch war, den Meister herauszufordern.
 
 		DMT_1201_Dementor.flags = 0;
 		DMT_1202_Dementor.flags = 0;
@@ -28,8 +28,8 @@ func void B_AssignDementorTalk_Ritual ()
 		DMT_1211_Dementor.flags = 0;
 
 		MIS_SCKnowsInnosEyeIsBroken  = TRUE;
-		B_LogEntry (TOPIC_INNOSEYE, "Those sinister guys are getting on my nerves. They destroyed the Eye of Innos. I've no idea how I'm supposed to fix it.");
- 		B_LogEntry (TOPIC_TraitorPedro, "I found the Eye of Innos. But there hasn't been a trace of Pedro anywhere so far. Those black magicians are in cahoots with him.");
+		B_LogEntry (TOPIC_INNOSEYE, "Diese schwarzen Kerle gehen mir langsam auf die Nerven. Sie haben das Auge Innos zerstört. Kein Ahnung, wie ich das nun wieder regeln soll.");
+ 		B_LogEntry (TOPIC_TraitorPedro, "Das Auge Innos habe ich gefunden. Aber von Pedro war bisher noch keine Spur zu sehen. Diese schwarzen Magier stecken mit ihm unter einer Decke.");
 		B_GivePlayerXP (XP_SCKnowsInnosEyeIsBroken);
 
 		CreateInvItems (Cornelius, ItWr_CorneliusTagebuch_Mis,1);
@@ -41,19 +41,19 @@ func void B_AssignDementorTalk_Ritual ()
 		
 	 	if (randy == 0)
 		{
-			AI_Output			(self ,other, "DIA_RitualDementor_19_03"); //Now feel our power.
+			AI_Output			(self ,other, "DIA_RitualDementor_19_03"); //Jetzt wirst du unsere Macht spüren.
 		};
 		if (randy == 1)
 		{
-			AI_Output			(self ,other, "DIA_RitualDementor_19_04"); //For the Master.
+			AI_Output			(self ,other, "DIA_RitualDementor_19_04"); //Für den Meister.
 		};
 		if (randy == 2)
 		{
-			AI_Output			(self ,other, "DIA_RitualDementor_19_05"); //You cannot hide.
+			AI_Output			(self ,other, "DIA_RitualDementor_19_05"); //Du kannst dich nicht verstecken.
 		};
 		if (randy == 3)
 		{
-			AI_Output			(self ,other, "DIA_RitualDementor_19_06"); //We shall kill you.
+			AI_Output			(self ,other, "DIA_RitualDementor_19_06"); //Wir werden dich töten.
 		};
 	};
 	Npc_SetRefuseTalk (self,30);

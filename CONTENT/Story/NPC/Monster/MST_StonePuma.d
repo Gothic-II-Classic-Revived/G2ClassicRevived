@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_StonePuma(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Stone Panther";
+	name							=	"Steinpanther";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 

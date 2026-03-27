@@ -84,7 +84,7 @@ const int	REV_Value_2H_Axe_Gorn				=	560;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_AXE_OLD_01 (C_Item)
 {	
-	name 				=	"Old Battle Axe";
+	name 				=	"Alte Streitaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -109,7 +109,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_OLD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_OLD_02 (C_Item)
 {	
-	name 				=	"Blood Harvester";
+	name 				=	"Bluternter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -134,7 +134,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_OLD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_OLD_03 (C_Item)
 {	
-	name 				=	"Old Judge";
+	name 				=	"Alter Richter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -159,7 +159,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_OLD_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_01 (C_Item)
 {	
-	name 				=	"Light Battle Axe";
+	name 				=	"Leichte Streitaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -184,7 +184,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_02 (C_Item)
 {	
-	name 				=	"Thunderstrike";
+	name 				=	"Donnerschlag";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -209,7 +209,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_03 (C_Item)
 {	
-	name 				=	"Smash";
+	name 				=	"Schmetterschlag";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -234,7 +234,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_01 (C_Item)
 {	
-	name 				=	"War Axe";
+	name 				=	"Streitaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -259,7 +259,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_02 (C_Item)
 {	
-	name 				=	"Warrior's Voice";
+	name 				=	"Kriegerstimme";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -284,7 +284,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_03 (C_Item)
 {	
-	name 				=	"Barbarian's Fist";
+	name 				=	"Barbarenfaust";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -309,7 +309,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_04 (C_Item)
 {	
-	name 				=	"Troll Fist";
+	name 				=	"Trollfaust";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;	
@@ -339,7 +339,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_ORE_01 (C_Item)
 {	
-	name 				=	"Ore Axe";
+	name 				=	"Erzaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -368,7 +368,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_ORE_01 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_AXE_LEE (C_Item)
 {
-	name 				=	"Lee's Axe";
+	name 				=	"Lees Axt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -396,7 +396,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LEE (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_SYLVIO (C_Item)
 {
-	name 				=	"Sylvio's Axe"; //"Orik's Axe";
+	name 				=	"Sylvios Axt"; //"Orik's Axe";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -424,7 +424,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_SYLVIO (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_TORLOF (C_Item)
 {
-	name 				=	"Torlof's Axe";
+	name 				=	"Torlofs Axt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
@@ -452,7 +452,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_TORLOF (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_AXE_GORN (C_Item)
 {
-	name 				=	"Gorn's Revenge";
+	name 				=	"Gorns Rache";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;

@@ -33,7 +33,7 @@ INSTANCE DIA_NONE_101_MARIO_DI_Job (C_INFO)
 	information = DIA_NONE_101_MARIO_DI_Job_Info;
 	permanent   = TRUE;
 
-	description	= "Here's your chance to prove your fighting abilities.";
+	description	= "Jetzt kannst du deine Kampfkraft unter Beweis stellen.";
 };
 
 FUNC INT DIA_NONE_101_MARIO_DI_Job_Condition()

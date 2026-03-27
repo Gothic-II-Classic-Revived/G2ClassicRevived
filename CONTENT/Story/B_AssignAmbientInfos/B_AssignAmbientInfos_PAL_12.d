@@ -29,7 +29,7 @@ INSTANCE DIA_PAL_12_JOIN(C_INFO)
 	condition	= DIA_PAL_12_JOIN_Condition;
 	information	= DIA_PAL_12_JOIN_Info;
 	permanent	= TRUE;
-	description = "I want to become a paladin!";
+	description = "Ich will ein Paladin werden!";
 };                       
 
 FUNC INT DIA_PAL_12_JOIN_Condition()
@@ -42,10 +42,10 @@ FUNC INT DIA_PAL_12_JOIN_Condition()
 
 FUNC VOID DIA_PAL_12_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_12_JOIN_15_00"); //I want to become a paladin!
-	AI_Output (self, other, "DIA_PAL_12_JOIN_12_01"); //You? Don't make me laugh! You're not even a member of the city guard.
-	AI_Output (self, other, "DIA_PAL_12_JOIN_12_02"); //If I couldn't plainly see what a dense yokel you are, I'd think you were trying to insult me.
-	AI_Output (self, other, "DIA_PAL_12_JOIN_12_03"); //Only the best of the best among the faithful followers of the king and our Lord Innos are accepted as paladins.
+	AI_Output (other, self, "DIA_PAL_12_JOIN_15_00"); //Ich will ein Paladin werden!
+	AI_Output (self, other, "DIA_PAL_12_JOIN_12_01"); //Du? Dass ich nicht lache! Du gehörst ja noch nicht einmal der Stadtwache an.
+	AI_Output (self, other, "DIA_PAL_12_JOIN_12_02"); //Wenn ich nicht sehen würde, was für ein dummer Bursche du bist, würde ich annehmen, dass du mich beleidigen willst.
+	AI_Output (self, other, "DIA_PAL_12_JOIN_12_03"); //Als Paladine werden nur die Besten der Besten unter den Getreuen des Königs und unseres Herrn Innos aufgenommen.
 };
 
 // *************************************************************************
@@ -57,7 +57,7 @@ INSTANCE DIA_PAL_12_PEOPLE(C_INFO)
 	condition	= DIA_PAL_12_PEOPLE_Condition;
 	information	= DIA_PAL_12_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who's in command here?";
+	description = "Wer hat hier das Kommando?";
 };                       
 
 FUNC INT DIA_PAL_12_PEOPLE_Condition()
@@ -70,9 +70,9 @@ FUNC INT DIA_PAL_12_PEOPLE_Condition()
 
 FUNC VOID DIA_PAL_12_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_12_PEOPLE_15_00"); //Who's in command here?
-	AI_Output (self, other, "DIA_PAL_12_PEOPLE_12_01"); //The honorable Lord Hagen. But Lord Andre is responsible for all the matters concerning the simple folk.
-	AI_Output (self, other, "DIA_PAL_12_PEOPLE_12_02"); //You'll find him in the barracks. Maybe you'll get lucky and he'll devote a few minutes of his valuable time to you.
+	AI_Output (other, self, "DIA_PAL_12_PEOPLE_15_00"); //Wer hat hier das Kommando?
+	AI_Output (self, other, "DIA_PAL_12_PEOPLE_12_01"); //Das ist der ehrenwerte Lord Hagen. Aber für alle Belange des einfachen Volkes ist Lord Andre zuständig.
+	AI_Output (self, other, "DIA_PAL_12_PEOPLE_12_02"); //Du findest ihn in der Kaserne. Vielleicht hast du Glück und er widmet dir ein paar Minuten seiner kostbaren Zeit.
 };
 
 // *************************************************************************
@@ -84,7 +84,7 @@ INSTANCE DIA_PAL_12_LOCATION(C_INFO)
 	condition	= DIA_PAL_12_LOCATION_Condition;
 	information	= DIA_PAL_12_LOCATION_Info;
 	permanent	= TRUE;
-	description = "What are you paladins doing here in Khorinis?";
+	description = "Was macht ihr Paladine hier in Khorinis?";
 };                       
 
 FUNC INT DIA_PAL_12_LOCATION_Condition()
@@ -97,10 +97,10 @@ FUNC INT DIA_PAL_12_LOCATION_Condition()
 
 FUNC VOID DIA_PAL_12_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_12_LOCATION_15_00"); //What are you paladins doing here in Khorinis?
-	AI_Output (self, other, "DIA_PAL_12_LOCATION_12_01"); //People who ask questions like that wind up on the gallows before they know it.
-	AI_Output (self, other, "DIA_PAL_12_LOCATION_12_02"); //If there's ONE thing Lord Andre cannot afford, it's having knowledge of our mission falling into the hands of spies.
-	AI_Output (self, other, "DIA_PAL_12_LOCATION_12_03"); //So, you'd better watch out what you ask.
+	AI_Output (other, self, "DIA_PAL_12_LOCATION_15_00"); //Was macht ihr Paladine hier in Khorinis?
+	AI_Output (self, other, "DIA_PAL_12_LOCATION_12_01"); //Wer solche Fragen stellt, endet ziemlich schnell am Galgen.
+	AI_Output (self, other, "DIA_PAL_12_LOCATION_12_02"); //Wenn Lord Hagen sich EINE Sache nicht leisten kann, dann ist dies, das Wissen über unsere Mission in die Hände von Spionen fallen zu lassen.
+	AI_Output (self, other, "DIA_PAL_12_LOCATION_12_03"); //Also pass besser auf, wonach du fragst.
 };
 
 // *************************************************************************
@@ -112,7 +112,7 @@ INSTANCE DIA_PAL_12_STANDARD(C_INFO)
 	condition	= DIA_PAL_12_STANDARD_Condition;
 	information	= DIA_PAL_12_STANDARD_Info;
 	permanent	= TRUE;
-	description = "How are things?";
+	description = "Wie sieht's aus?";
 };
                        
 func INT DIA_PAL_12_STANDARD_Condition()
@@ -122,7 +122,7 @@ func INT DIA_PAL_12_STANDARD_Condition()
 
 FUNC VOID DIA_PAL_12_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_PAL_12_STANDARD_15_00"); //How are things?
+	AI_Output (other, self, "DIA_PAL_12_STANDARD_15_00"); //Wie sieht's aus?
 
 	if (other.guild == GIL_PAL)
 	|| (other.guild == GIL_KDF)
@@ -131,22 +131,22 @@ FUNC VOID DIA_PAL_12_STANDARD_Info()
 		{
 			if (MIS_OLDWORLD == LOG_SUCCESS)
 			{
-				AI_Output (self, other, "DIA_PAL_12_STANDARD_12_01"); //Now that we know we're dealing with dragons, our commander will surely do something soon.
+				AI_Output (self, other, "DIA_PAL_12_STANDARD_12_01"); //Jetzt, da wir wissen, dass wir es mit Drachen zu tun haben, wird unser Kommandant sicherlich bald etwas unternehmen.
 			}
 			else
 			{
-				AI_Output (self, other, "DIA_PAL_12_STANDARD_12_02"); //We still don't have any news from our detachment in the Valley of Mines. That is very disturbing.
+				AI_Output (self, other, "DIA_PAL_12_STANDARD_12_02"); //Wir haben noch immer keine Nachricht von unserem Trupp im Minental. Das ist sehr beunruhigend.
 			};
 		};
 
 		if (Kapitel >= 5)
 		{
-			AI_Output (self, other, "DIA_PAL_12_STANDARD_12_03"); //Thanks be to Innos! The threat of the dragons has been averted. Now we only have to deal with the orcs to get to the ore.
+			AI_Output (self, other, "DIA_PAL_12_STANDARD_12_03"); //Innos sei Dank! Die Bedrohung der Drachen ist abgewendet. Jetzt müssen wir uns nur noch um die Orks kümmern, um an das Erz zu kommen.
 		};
 	}
 	else //KEIN Paladin
 	{
-		AI_Output (self, other, "DIA_PAL_12_STANDARD_12_04"); //You don't seriously expect me to answer that question, boy!
+		AI_Output (self, other, "DIA_PAL_12_STANDARD_12_04"); //Du erwartest doch nicht im Ernst von mir eine Antwort auf diese Frage, Bursche!
 	};
 };
 

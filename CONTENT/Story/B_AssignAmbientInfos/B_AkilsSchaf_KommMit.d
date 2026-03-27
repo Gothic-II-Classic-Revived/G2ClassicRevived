@@ -8,7 +8,7 @@ INSTANCE DIA_AkilsSchaf_KommMit (C_INFO)
 	condition	= DIA_AkilsSchaf_KommMit_Condition;
 	information	= DIA_AkilsSchaf_KommMit_Info;
 
-	description = "Come with me!"; 
+	description = "Los komm mit!"; 
 };                       
 FUNC INT DIA_AkilsSchaf_KommMit_Condition()
 {

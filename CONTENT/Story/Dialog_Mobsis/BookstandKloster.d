@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------
-//				Weitere Buchständer in der Magierbibliothek
+//				Weitere Buchstnder in der Magierbibliothek
 //-------------------------------------------------------------------------------------
 //				Runensteine 
 //-------------------------------------------------------------------------------------
@@ -21,8 +21,8 @@ FUNC VOID Use_Bookstand_Rune_01_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "Page 1"					);
-					Doc_PrintLine	( nDocID,  0, "The Runestones"					);
+					Doc_PrintLine	( nDocID,  0, "Seite 1"					);
+					Doc_PrintLine	( nDocID,  0, "Die Runensteine"					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
 					Doc_PrintLines	( nDocID,  0, "");
@@ -30,7 +30,7 @@ FUNC VOID Use_Bookstand_Rune_01_S1()
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, "Page 2"					);
+					Doc_PrintLine	( nDocID,  1, "Seite 2"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
 					Doc_PrintLines	( nDocID,  1, " "					);
@@ -57,8 +57,8 @@ FUNC VOID Use_Bookstand_Rune_02_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "Page 1"					);
-					Doc_PrintLine	( nDocID,  0, "The Runes and their Ingredients"	);
+					Doc_PrintLine	( nDocID,  0, "Seite 1"					);
+					Doc_PrintLine	( nDocID,  0, "Die Runen und ihre Ingredenzien"	);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
 					Doc_PrintLines	( nDocID,  0, "");
@@ -66,7 +66,7 @@ FUNC VOID Use_Bookstand_Rune_02_S1()
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, "Page 2"					);
+					Doc_PrintLine	( nDocID,  1, "Seite 2"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
 					Doc_PrintLines	( nDocID,  1, " "					);
@@ -93,8 +93,8 @@ FUNC VOID Use_Bookstand_Innos_01_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "Page 1"					);
-					Doc_PrintLine	( nDocID,  0, "Teachings of Innos"	);
+					Doc_PrintLine	( nDocID,  0, "Seite 1"					);
+					Doc_PrintLine	( nDocID,  0, "Die Lehren Innos"	);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
 					Doc_PrintLines	( nDocID,  0, "");
@@ -102,7 +102,7 @@ FUNC VOID Use_Bookstand_Innos_01_S1()
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, "Page 2"					);
+					Doc_PrintLine	( nDocID,  1, "Seite 2"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
 					Doc_PrintLines	( nDocID,  1, " "					);
@@ -129,8 +129,8 @@ FUNC VOID Use_Bookstand_Innos_02_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "Page 1"					);
-					Doc_PrintLine	( nDocID,  0, "Commandments of Innos"	);
+					Doc_PrintLine	( nDocID,  0, "Seite 1"					);
+					Doc_PrintLine	( nDocID,  0, "Die Gebote Innos"	);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
 					Doc_PrintLines	( nDocID,  0, "");
@@ -138,7 +138,7 @@ FUNC VOID Use_Bookstand_Innos_02_S1()
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, "Page 2"					);
+					Doc_PrintLine	( nDocID,  1, "Seite 2"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
 					Doc_PrintLines	( nDocID,  1, " "					);
@@ -165,8 +165,8 @@ FUNC VOID Use_Bookstand_Rules_01_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "Page 1"					);
-					Doc_PrintLine	( nDocID,  0, "Rules"	);
+					Doc_PrintLine	( nDocID,  0, "Seite 1"					);
+					Doc_PrintLine	( nDocID,  0, "Regeln"	);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					
 					Doc_PrintLines	( nDocID,  0, "");
@@ -174,7 +174,7 @@ FUNC VOID Use_Bookstand_Rules_01_S1()
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  1, "Page 2"					);
+					Doc_PrintLine	( nDocID,  1, "Seite 2"					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
 					Doc_PrintLines	( nDocID,  1, " "					);

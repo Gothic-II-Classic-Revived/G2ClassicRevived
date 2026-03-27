@@ -47,15 +47,15 @@ FUNC VOID DIA_OUT_13_STANDARD_Info()
 	
 	if (randy == 0)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_13_00"); //Until now, we've been able to keep the orcs off our backs. But recently there's been more and more of them.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_13_00"); //Bisher konnten wir uns die Orks immer vom Hals halten. Aber in letzter Zeit werden es immer mehr.
 	};
 	if (randy == 1)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_13_01"); //The militia don't come and help us either. They only come from the city to take away our harvest and livestock.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_13_01"); //Die Miliz kommt uns auch nicht zu Hilfe. Sie kommt nur aus der Stadt, um uns unsere Ernte und unser Vieh wegzunehmen.
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_13_02"); //Onar is out of his mind to pick a fight with the city just when the paladins are there.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_13_02"); //Onar ist verrückt, sich mit der Stadt anzulegen, gerade jetzt, wo die Paladine da sind.
 	};
 	
 	AI_StopProcessInfos	(self);

@@ -1,6 +1,6 @@
 FUNC INT B_GoldMob_Bestimmung()
 {
-	//bin ich mobsi X und habe ich noch Gold übrig?
+	//bin ich mobsi X und habe ich noch Gold brig?
 	if Hlp_StrCmp (Npc_GetNearestWP (self), "ADW_MINE_PICK_01") && (GoldMob_01_Amount_MAX > GoldMob_01_Amount)
 	{
 		GoldMob_01_Amount = (GoldMob_01_Amount +1);
@@ -153,7 +153,7 @@ INSTANCE PC_Goldhacken_Addon_Hour (C_Info)
 	condition		= PC_Goldhacken_Addon_Hour_Condition;
 	information		= PC_Goldhacken_Addon_Hour_Info;
 	permanent		= TRUE;
-	description		= "Just chop a little."; 
+	description		= "Einfach mal hacken."; 
 };
 
 FUNC INT PC_Goldhacken_Addon_Hour_Condition ()
@@ -200,7 +200,7 @@ FUNC VOID PC_Goldhacken_Addon_Hour_Info()
 			&& (MultiNugget >= 8)
 			{
 				CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);	
-				PrintScreen ("3 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+				PrintScreen ("3 Goldbrocken gehackt! ...", -1, -1, FONT_ScreenSmall, 2);	
 				Truemmer_Count = 0;
 				
 			}
@@ -208,32 +208,32 @@ FUNC VOID PC_Goldhacken_Addon_Hour_Info()
 			&& (MultiNugget >= 5)
 			{
 				CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);	
-				PrintScreen ("2 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+				PrintScreen ("2 Goldbrocken gehackt! ...", -1, -1, FONT_ScreenSmall, 2);	
 				Truemmer_Count = 0;
 				GoldCounter = (GoldCounter +1);
 			}
 			else
 			{
 				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-				PrintScreen ("1 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+				PrintScreen ("1 Goldbrocken gehackt! ...", -1, -1, FONT_ScreenSmall, 2);	
 				Truemmer_Count = 0;
 				GoldCounter = (GoldCounter +1);
 			};
 		}
 		else
 		{
-			PrintScreen ("Gold splinters fly everywhere...", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("Goldsplitter fliegen durch die Gegend ...", -1, -1, FONT_ScreenSmall, 2);	
 			Truemmer_Count = (Truemmer_Count +1);
 		};
 	}
 	else
 	{
-		PrintScreen ("There's nothing else to be had here.", -1, -1, FONT_ScreenSmall, 2);	
+		PrintScreen ("Hier gibt's Nichts mehr zu holen.", -1, -1, FONT_ScreenSmall, 2);	
 		B_ENDPRODUCTIONDIALOG ();
 	};
 };
 //*******************************************************
-//	Goldhacken Trümmerschlag
+//	Goldhacken Trmmerschlag
 //*******************************************************
 INSTANCE PC_Goldhacken_Addon_TSchlag (C_Info)
 {
@@ -242,7 +242,7 @@ INSTANCE PC_Goldhacken_Addon_TSchlag (C_Info)
 	condition		= PC_Goldhacken_Addon_TSchlag_Condition;
 	information		= PC_Goldhacken_Addon_TSchlag_Info;
 	permanent		= TRUE;
-	description		= "Give it a really good whack."; 
+	description		= "TrÃ¼mmerschlag ansetzen."; 
 };
 
 FUNC INT PC_Goldhacken_Addon_TSchlag_Condition ()
@@ -261,7 +261,7 @@ FUNC VOID PC_Goldhacken_Addon_TSchlag_Info()
 		
 	if (TruemmerChance < 5)
 	{
-			PrintScreen ("Nothing...", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("Nichts ...", -1, -1, FONT_ScreenSmall, 2);	
 	}
 	else
 	{
@@ -273,19 +273,19 @@ FUNC VOID PC_Goldhacken_Addon_TSchlag_Info()
 		{
 			//----Gold verteilen-----------------------
 			CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);	
-			PrintScreen ("3 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("3 Goldbrocken gehackt! ...", -1, -1, FONT_ScreenSmall, 2);	
 			
 		}
 		else if (TruemmerChance >= 50)
 		{
 			CreateInvItems (hero, ItMi_GoldNugget_Addon, 2);	
-			PrintScreen ("2 gold nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("2 Goldbrocken gehackt! ...", -1, -1, FONT_ScreenSmall, 2);	
 		
 		}
 		else 
 		{
 			CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
-			PrintScreen ("1 gold nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("1 Goldbrocken gehackt! ...", -1, -1, FONT_ScreenSmall, 2);	
 		};
 	};
 	Truemmer_Count = 0;
@@ -302,7 +302,7 @@ INSTANCE PC_Goldhacken_Addon_Chance (C_Info)
 	condition		= PC_Goldhacken_Addon_Chance_Condition;
 	information		= PC_Goldhacken_Addon_Chance_Info;
 	permanent		= TRUE;
-	description		= "(assess own ability)"; 
+	description		= "(Eigene FÃ¤higkeit prÃ¼fen)"; 
 };
 
 FUNC INT PC_Goldhacken_Addon_Chance_Condition ()
@@ -319,15 +319,15 @@ FUNC VOID PC_Goldhacken_Addon_Chance_Info()
 	
 	if (Hero_HackChance < 20) 
 	{
-		ConcatText = ConcatStrings ("blutiger Anfänger (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Blutiger AnfÃ¤nger (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 40) 
 	{
-		ConcatText = ConcatStrings ("ganz passabler Schürfer (" , IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Ganz passabler GoldschÃ¼rfer (" , IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 55) 
 	{
-		ConcatText = ConcatStrings ("erfahrener Goldschürfer (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Erfahrener GoldschÃ¼rfer (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 75) 
 	{

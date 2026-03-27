@@ -36,7 +36,7 @@ INSTANCE DIA_Dar_Hallo (C_INFO)
 	condition   = DIA_Dar_Hallo_Condition;
 	information = DIA_Dar_Hallo_Info;
 	permanent   = FALSE;
-	description = "What are you smoking there?";
+	description = "Was rauchst du da?";
 };
 
 FUNC INT DIA_Dar_Hallo_Condition()
@@ -46,30 +46,30 @@ FUNC INT DIA_Dar_Hallo_Condition()
 
 FUNC VOID DIA_Dar_Hallo_Info()
 {
-	AI_Output (other, self, "DIA_Dar_Hallo_15_00"); //What are you smoking there?
-	AI_Output (self, other, "DIA_Dar_Hallo_03_01"); //Want a toke?
+	AI_Output (other, self, "DIA_Dar_Hallo_15_00"); //Was rauchst du da?
+	AI_Output (self, other, "DIA_Dar_Hallo_03_01"); //Willst du mal ziehen?
 	
 	Info_ClearChoices (DIA_Dar_Hallo);
-	Info_AddChoice (DIA_Dar_Hallo, "No.", DIA_Dar_Hallo_Nein);
-	Info_AddChoice (DIA_Dar_Hallo, "Sure.", DIA_Dar_Hallo_Ja);
+	Info_AddChoice (DIA_Dar_Hallo, "Nein.", DIA_Dar_Hallo_Nein);
+	Info_AddChoice (DIA_Dar_Hallo, "Ja.", DIA_Dar_Hallo_Ja);
 };
 
 func void DIA_Dar_Hallo_Ja()
 {
-	AI_Output (other, self, "DIA_Dar_Hallo_Ja_15_00"); //Sure.
+	AI_Output (other, self, "DIA_Dar_Hallo_Ja_15_00"); //Ja.
 	CreateInvItem (other, ITMI_REVIVED_JOINT_REGULAR);
 	B_UseItem (other, ITMI_REVIVED_JOINT_REGULAR);
-	AI_Output (self, other, "DIA_Dar_Hallo_Ja_03_01"); //Not bad, eh?
-	AI_Output (other, self, "DIA_Dar_Hallo_Ja_15_02"); //Where did you get the stuff?
+	AI_Output (self, other, "DIA_Dar_Hallo_Ja_03_01"); //Nicht schlecht, was?
+	AI_Output (other, self, "DIA_Dar_Hallo_Ja_15_02"); //Wo hast du das Zeug her?
 	CreateInvItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
-	AI_Output (self, other, "DIA_Dar_Hallo_Ja_03_03"); //(grins) I have my sources.
+	AI_Output (self, other, "DIA_Dar_Hallo_Ja_03_03"); //(grinst) Ich hab so meine Quellen.
 	Info_ClearChoices (DIA_Dar_Hallo);	
 };
 
 func void DIA_Dar_Hallo_Nein()
 {
-	AI_Output (other, self, "DIA_Dar_Hallo_Nein_15_00"); //No.
+	AI_Output (other, self, "DIA_Dar_Hallo_Nein_15_00"); //Nein.
 	Info_ClearChoices (DIA_Dar_Hallo);	
 };
 
@@ -85,7 +85,7 @@ INSTANCE DIA_Dar_PERM (C_INFO)
 	condition   = DIA_Dar_PERM_Condition;
 	information = DIA_Dar_PERM_Info;
 	permanent   = TRUE;
-	description = "Do you do anything besides smoke?";
+	description = "Machst du noch was anderes, außer zu rauchen?";
 };
 
 FUNC INT DIA_Dar_PERM_Condition()
@@ -98,17 +98,17 @@ FUNC INT DIA_Dar_PERM_Condition()
 
 FUNC VOID DIA_Dar_PERM_Info()
 {
-	AI_Output (other, self, "DIA_Dar_PERM_15_00"); //Do you do anything besides smoke?
+	AI_Output (other, self, "DIA_Dar_PERM_15_00"); //Machst du noch was anderes, außer zu rauchen?
 	
 	if (Dar_LostAgainstCipher == TRUE)
 	&& (Dar_einmal == FALSE)
 	{
-		AI_Output (self, other, "DIA_Dar_PERM_03_01"); //(sarcastic) Sometimes I let some vengeful swampweed junkies beat me up..
+		AI_Output (self, other, "DIA_Dar_PERM_03_01"); //(sarkastisch) Manchmal lasse ich mich auch von rachsüchtigen Sumpfkraut-Junkies zusammenschlagen.
 		Dar_einmal = TRUE;
 	}
 		else //DEFAULT
 	{
-		AI_Output (self, other, "DIA_Dar_PERM_03_02"); //Not at the moment.
+		AI_Output (self, other, "DIA_Dar_PERM_03_02"); //Im Moment nicht.
 	};
 };
 
@@ -123,7 +123,7 @@ INSTANCE DIA_Dar_WannaJoin (C_INFO)
 	condition   = DIA_Dar_WannaJoin_Condition;
 	information = DIA_Dar_WannaJoin_Info;
 	permanent   = FALSE;
-	description = "I want to join the mercenaries. Do you mind?";
+	description = "Ich will mich den Söldnern anschließen. Hast du was dagegen?";
 };
 
 FUNC INT DIA_Dar_WannaJoin_Condition()
@@ -138,8 +138,8 @@ FUNC INT DIA_Dar_WannaJoin_Condition()
 
 FUNC VOID DIA_Dar_WannaJoin_Info()
 {
-	AI_Output (other, self, "DIA_Dar_WannaJoin_15_00"); //I want to join the mercenaries. Do you mind?
-	AI_Output (self, other, "DIA_Dar_WannaJoin_03_01"); //Who cares.
+	AI_Output (other, self, "DIA_Dar_WannaJoin_15_00"); //Ich will mich den Söldnern anschließen. Hast du was dagegen?
+	AI_Output (self, other, "DIA_Dar_WannaJoin_03_01"); //Mir egal.
 };
 
 // ************************************************************
@@ -153,12 +153,12 @@ INSTANCE DIA_Dar_DuDieb (C_INFO)
 	condition   = DIA_Dar_DuDieb_Condition;
 	information = DIA_Dar_DuDieb_Info;
 	permanent   = FALSE;
-	description = "Cipher told me that someone stole a package of swampweed from him...";
+	description = "Cipher hat mir erzählt, ihm wäre ein Paket Sumpfkraut gestohlen worden ...";
 };
 
 FUNC INT DIA_Dar_DuDieb_Condition()
 {
-	if (Npc_KnowsInfo (other, DIA_Cipher_TradeWhat)) //von Diebstahl geh�rt
+	if (Npc_KnowsInfo (other, DIA_Cipher_TradeWhat)) //von Diebstahl gehrt
 	&& (MIS_Cipher_Paket == LOG_RUNNING)
 	{
 		return TRUE;
@@ -167,10 +167,10 @@ FUNC INT DIA_Dar_DuDieb_Condition()
 
 FUNC VOID DIA_Dar_DuDieb_Info()
 {
-	AI_Output (other, self, "DIA_Dar_DuDieb_15_00"); //Cipher told me that someone stole a package of swampweed from him...
-	AI_Output (self, other, "DIA_Dar_DuDieb_03_01"); //(laughs subdued and moronically)
-	AI_Output (other, self, "DIA_Dar_DuDieb_15_02"); //Would you know anything about that?
-	AI_Output (self, other, "DIA_Dar_DuDieb_03_03"); //(very short) No.
+	AI_Output (other, self, "DIA_Dar_DuDieb_15_00"); //Cipher hat mir erzählt, ihm wäre ein Paket Sumpfkraut gestohlen worden ...
+	AI_Output (self, other, "DIA_Dar_DuDieb_03_01"); //(lacht verhalten und debil)
+	AI_Output (other, self, "DIA_Dar_DuDieb_15_02"); //Hast du was damit zu tun?
+	AI_Output (self, other, "DIA_Dar_DuDieb_03_03"); //(superkurz) Nein.
 	
 	Dar_Verdacht = TRUE;
 };
@@ -186,7 +186,7 @@ INSTANCE DIA_Dar_WoPaket (C_INFO)
 	condition   = DIA_Dar_WoPaket_Condition;
 	information = DIA_Dar_WoPaket_Info;
 	permanent   = TRUE;
-	description = "Where's the package?";
+	description = "Wo ist das Paket!?";
 };
 
 FUNC INT DIA_Dar_WoPaket_Condition()
@@ -201,22 +201,22 @@ FUNC INT DIA_Dar_WoPaket_Condition()
 
 FUNC VOID DIA_Dar_WoPaket_Info()
 {
-	AI_Output (other, self, "DIA_Dar_WoPaket_15_00"); //(threatens) Where's the package?
+	AI_Output (other, self, "DIA_Dar_WoPaket_15_00"); //(droht) Wo ist das Paket!?
 		
 	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
 	{	
-		AI_Output (self, other, "DIA_Dar_WoPaket_03_01"); //Okay, okay, okay. I sold it to some bum in town.
-		AI_Output (self, other, "DIA_Dar_WoPaket_03_02"); //It was at the harbor. I can't remember what he looked like.
-		AI_Output (other, self, "DIA_Dar_WoPaket_15_03"); //Could it be that you need another thrashing?
-		AI_Output (self, other, "DIA_Dar_WoPaket_03_04"); //Honest, man, I was totally stoned. I don't have the slightest idea what the guy looked like.
-		AI_Output (self, other, "DIA_Dar_WoPaket_03_05"); //It was at the harbor near the boat-builders'. That's all I can remember.
+		AI_Output (self, other, "DIA_Dar_WoPaket_03_01"); //Okay, okay, okay! Ich hab's an irgendeinen Penner in der Stadt verhökert.
+		AI_Output (self, other, "DIA_Dar_WoPaket_03_02"); //Es war am Hafen. Ich weiß nicht mehr, wie er aussah.
+		AI_Output (other, self, "DIA_Dar_WoPaket_15_03"); //Du brauchst doch wohl nicht noch mal Schläge?
+		AI_Output (self, other, "DIA_Dar_WoPaket_03_04"); //Ehrlich, Mann, ich war total dicht. Hab keine Ahnung mehr, wie der Kerl aussah.
+		AI_Output (self, other, "DIA_Dar_WoPaket_03_05"); //Es war am Hafen in der Nähe des Bootsbauers. An mehr kann ich mich nicht erinnern.
 	
 		Dar_Dieb = TRUE;
-		B_LogEntry (Topic_CipherPaket,"Dar's admitted he stole the package of weed. He sold it in the harbor district of Khorinis, near the boat-builder's.");
+		B_LogEntry (Topic_CipherPaket,"Dar hat zugegeben, das er das Krautpaket gestohlen hat. Er hat es im Hafenviertel von Khorinis verkauft, in der Nähe des Bootsbauers.");
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Dar_WoPaket_03_06"); //What do I know?
+		AI_Output (self, other, "DIA_Dar_WoPaket_03_06"); //Was weiß ich?
 	};
 };
 
@@ -231,7 +231,7 @@ INSTANCE DIA_Dar_AufsMaul (C_INFO)
 	condition   = DIA_Dar_AufsMaul_Condition;
 	information = DIA_Dar_AufsMaul_Info;
 	permanent   = FALSE;
-	description = "I'll knock it out of you!";
+	description = "Ich prügel es aus dir raus!";
 };
 
 FUNC INT DIA_Dar_AufsMaul_Condition()
@@ -246,10 +246,10 @@ FUNC INT DIA_Dar_AufsMaul_Condition()
 
 FUNC VOID DIA_Dar_AufsMaul_Info()
 {
-	AI_Output (other, self, "DIA_Dar_AufsMaul_15_00"); //I'll knock it out of you!
-	AI_Output (self, other, "DIA_Dar_AufsMaul_03_01"); //Relax. I'm way too stoned to fight with you!
+	AI_Output (other, self, "DIA_Dar_AufsMaul_15_00"); //Ich prügel es aus dir raus!
+	AI_Output (self, other, "DIA_Dar_AufsMaul_03_01"); //Entspann dich. Ich bin viel zu dicht, um mich mit dir zu prügeln!
 	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR, 1);
-	AI_Output (self, other, "DIA_Dar_AufsMaul_03_02"); //Here, first take a big toke!
+	AI_Output (self, other, "DIA_Dar_AufsMaul_03_02"); //Hier, nimm erstmal 'nen tiefen Zug.
 };
 
 // ************************************************************
@@ -277,11 +277,11 @@ FUNC INT DIA_Dar_Kameradenschwein_Condition()
 
 FUNC VOID DIA_Dar_Kameradenschwein_Info()
 {
-	AI_Output (self, other, "DIA_Dar_Kameradenschwein_03_00"); //Blabbermouth! You told Cipher I took his weed!
+	AI_Output (self, other, "DIA_Dar_Kameradenschwein_03_00"); //Kameradenschwein! Du hast Cipher erzählt, dass ich sein Kraut genommen habe!
 	if (Npc_KnowsInfo (other, DIA_Dar_WannaJoin))
 	&& (other.guild == GIL_NONE)
 	{
-		AI_Output (self, other, "DIA_Dar_Kameradenschwein_03_01");  //Like hell will I vote for you.
+		AI_Output (self, other, "DIA_Dar_Kameradenschwein_03_01");  //Ich werde den Teufel tun, für dich zu stimmen.
 	};
 };
 
@@ -296,7 +296,7 @@ INSTANCE DIA_Dar_Pilztabak (C_INFO)
 	condition   = DIA_Dar_Pilztabak_Condition;
 	information = DIA_Dar_Pilztabak_Info;
 	permanent   = FALSE;
-	description	= "Have you ever tried shroom tobacco?";
+	description	= "Hast du schon mal Pilztabak probiert?";
 };
 
 FUNC INT DIA_Dar_Pilztabak_Condition()
@@ -309,23 +309,23 @@ FUNC INT DIA_Dar_Pilztabak_Condition()
 
 FUNC VOID DIA_Dar_Pilztabak_Info()
 {
-	AI_Output (other, self, "DIA_Dar_Pilztabak_15_00"); //Have you ever tried shroom tobacco?
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_01"); //Sounds interesting. Give it here.
+	AI_Output (other, self, "DIA_Dar_Pilztabak_15_00"); //Hast du schon mal Pilztabak probiert?
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_01"); //Klingt interessant. Immer her damit.
 	B_GiveInvItems (other, self, Itmi_Pilztabak, 1);
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_02"); //All right, here we go...
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_02"); //Dann wollen wir mal ...
 	CreateInvItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_03"); //Have you ever smoked that stuff YOURSELF?
-	AI_Output (other, self, "DIA_Dar_Pilztabak_15_04"); //Well...
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_03"); //Hast du das Zeug schon SELBER geraucht?
+	AI_Output (other, self, "DIA_Dar_Pilztabak_15_04"); //Nun ...
 	CreateInvItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_05"); //Have you or haven't you?
-	AI_Output (other, self, "DIA_Dar_Pilztabak_15_06"); //I've been sort of busy...
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_07"); //Oh, shit!
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_05"); //Hast du oder hast du nicht?
+	AI_Output (other, self, "DIA_Dar_Pilztabak_15_06"); //Ich hatte viel zu tun ...
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_07"); //Ach du Scheiße!
 	AI_PlayAni (self, "T_MAGRUN_2_HEASHOOT");
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_08"); //Holy Rhobar!
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_08"); //Heiliger Rhobar!
 	AI_PlayAni (self, "T_HEASHOOT_2_STAND");
-	AI_Output (self, other, "DIA_Dar_Pilztabak_03_09"); //That stuff is way too harsh! Don't even try it!
+	AI_Output (self, other, "DIA_Dar_Pilztabak_03_09"); //Das Zeug ist echt zu krass! Probier das bloß nicht!
 	B_GivePlayerXP (XP_Ambient);
 };
 
@@ -409,7 +409,7 @@ instance DIA_Dar_ORCRING		(C_INFO)
 	condition	 = 	DIA_Dar_ORCRING_Condition;
 	information	 = 	DIA_Dar_ORCRING_Info;
 
-	description	 = 	"There seem to be some mercenaries missing here.";
+	description	 = 	"Ich habe den Eindruck, hier fehlen einige Söldner.";
 };
 
 func int DIA_Dar_ORCRING_Condition ()
@@ -422,82 +422,82 @@ func int DIA_Dar_ORCRING_Condition ()
 
 func void DIA_Dar_ORCRING_Info ()
 {
-	AI_Output			(other, self, "DIA_Dar_ORCRING_15_00"); //There seem to be some mercenaries missing here.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_03_01"); //Sure. That's true. Sylvio is miles away, and he took half the crew with him.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_03_02"); //Who cares. I've got a better chance of becoming someone with Lee's boys. All I need is a bang.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_03_03"); //If I could bring proof that I'm a real tough guy, maybe I could even become one of Lee's bodyguards.
+	AI_Output			(other, self, "DIA_Dar_ORCRING_15_00"); //Ich habe den Eindruck, hier fehlen einige Söldner.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_03_01"); //Klar. Das ist auch so. Sylvio ist über alle Berge und hat die halbe Mannschaft mitgenommen.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_03_02"); //Mir egal. So hab ich eine größere Chance, bei Lees Jungs was zu werden. Mir fehlt nur noch der Knaller.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_03_03"); //Wenn ich einen Beweis erbringen könnte, dass ich ein richtig harter Kerl bin, könnte ich vielleicht sogar zu Lees Leibgarde aufsteigen.
 
 	Info_ClearChoices	(DIA_Dar_ORCRING);
-	Info_AddChoice	(DIA_Dar_ORCRING, "That doesn't concern me.", DIA_Dar_ORCRING_no );
-	Info_AddChoice	(DIA_Dar_ORCRING, "Tough guy? You?", DIA_Dar_ORCRING_necken );
+	Info_AddChoice	(DIA_Dar_ORCRING, "Interessiert mich nicht.", DIA_Dar_ORCRING_no );
+	Info_AddChoice	(DIA_Dar_ORCRING, "Harter Kerl? Du?", DIA_Dar_ORCRING_necken );
 	
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG) || (hero.guild == GIL_KDF))
 	{
-		Info_AddChoice	(DIA_Dar_ORCRING, "What would that look like?", DIA_Dar_ORCRING_wie );
+		Info_AddChoice	(DIA_Dar_ORCRING, "Wie soll das aussehen?", DIA_Dar_ORCRING_wie );
 	};
 };
 
 func void DIA_Dar_ORCRING_necken ()
 {
-	AI_Output			(other, self, "DIA_Dar_ORCRING_necken_15_00"); //Tough guy? You?
-	AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_01"); //(angry) Oh, come on, shut up. Who are you anyway?
+	AI_Output			(other, self, "DIA_Dar_ORCRING_necken_15_00"); //Harter Kerl? Du?
+	AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_01"); //(verärgert) Ach, komm, halt die Schnauze. Wer bist du denn schon?
 	
 		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
-			AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_02"); //Some puffed-up nitwit from the city. You dorks got nothing going for you.
+			AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_02"); //So'n aufgeblasener Pinsel aus der Stadt. Ihr Blechkameraden habt doch nichts drauf.
 		};
 
 		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-			AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_03"); //You've only been here for a couple of days, and you're spouting off already.
+			AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_03"); //Gerade mal ein paar Tage bei uns und schon haste 'ne große Fresse.
 		};
 
 		if (hero.guild == GIL_KDF)
 		{
-			AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_04"); //Who you trying to scare with your stupid magic bullshit? Not me anyway.
+			AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_04"); //Wem willst du denn mit deinem dämlichen magischen Firlefanz Angst machen? Mir jedenfalls nicht.
 		}; 
 	
 
 	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 	{
-		AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_05"); //Now that I think about it, splitting your skull is exactly what would get me a lot of respect with Lee's boys.
+		AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_05"); //Wenn ich es mir recht überlege, dir den Schädel zu spalten, wäre genau das, was mir 'ne Menge Respekt bei Lees Jungs verschaffen würde.
 
 		Info_ClearChoices	(DIA_Dar_ORCRING);
-		Info_AddChoice	(DIA_Dar_ORCRING, "I've got no time for this kind of bullshit.", DIA_Dar_ORCRING_necken_no );
-		Info_AddChoice	(DIA_Dar_ORCRING, "OK. Just try it.", DIA_Dar_ORCRING_necken_schlagen );
+		Info_AddChoice	(DIA_Dar_ORCRING, "Ich hab´ keine Zeit für so einen Blödsinn.", DIA_Dar_ORCRING_necken_no );
+		Info_AddChoice	(DIA_Dar_ORCRING, "Ok. Versuch´s.", DIA_Dar_ORCRING_necken_schlagen );
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_06"); //Just you wait. I'll find a way to make an impression on Lee.
+		AI_Output			(self, other, "DIA_Dar_ORCRING_necken_03_06"); //Wart's mal ab. Ich werde schon noch das passende finden, um Lee zu beeindrucken.
 	};
 };
 var int Dar_FightAgainstPaladin;
 func void DIA_Dar_ORCRING_necken_schlagen ()
 {
 	Dar_FightAgainstPaladin = TRUE;
-	AI_Output			(other, self, "DIA_Dar_ORCRING_necken_schlagen_15_00"); //OK. Just try it.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_necken_schlagen_03_01"); //Ooh, I can't wait.
+	AI_Output			(other, self, "DIA_Dar_ORCRING_necken_schlagen_15_00"); //Ok. Versuch´s.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_necken_schlagen_03_01"); //Da bin ja mal gespannt.
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);
 };
 
 func void DIA_Dar_ORCRING_necken_no ()
 {
-	AI_Output			(other, self, "DIA_Dar_ORCRING_necken_no_15_00"); //I've got no time for this kind of bullshit.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_necken_no_03_01"); //Oh, yeah. The shining knight of justice, I forgot. Too bad. I thought you had more guts.
+	AI_Output			(other, self, "DIA_Dar_ORCRING_necken_no_15_00"); //Ich hab´ keine Zeit für so einen Blödsinn.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_necken_no_03_01"); //Ach ja. Der strahlende Ritter der Gerechtigkeit, ich vergaß. Schade. Ich dachte, du hättest mehr Mumm in den Knochen.
 	AI_StopProcessInfos (self);
 };
 
 func void DIA_Dar_ORCRING_wie ()
 {
-	AI_Output			(other, self, "DIA_Dar_ORCRING_wie_15_00"); //What would that look like?
-	AI_Output			(self, other, "DIA_Dar_ORCRING_wie_03_01"); //I don't know exactly. Some kind of orc trophy wouldn't be bad.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_wie_03_02"); //Some kind of insignia from the orc leaders or something. A banner, an armband or a ring, or something like that.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_wie_03_03"); //I can't make any kind of impression here with much less. That much is obvious.
+	AI_Output			(other, self, "DIA_Dar_ORCRING_wie_15_00"); //Wie soll das aussehen?
+	AI_Output			(self, other, "DIA_Dar_ORCRING_wie_03_01"); //Ich weiß nicht genau. Irgendeine Orktrophäe wäre nicht so schlecht.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_wie_03_02"); //So was wie ein Zeichen der Orkischen Anführer oder so. Eine Standarte, ein Armreif oder Ring oder ähnliches.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_wie_03_03"); //Mit sehr viel weniger kann ich hier keinen Eindruck schinden. So viel ist schon mal klar.
 	
 	Log_CreateTopic (TOPIC_Dar_BringOrcEliteRing, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Dar_BringOrcEliteRing, LOG_RUNNING);
-	B_LogEntry (TOPIC_Dar_BringOrcEliteRing,"Dar wants to be a bigshot among the mercenaries. He wants an orc trophy. A banner, an armband, a ring or something."); 
+	B_LogEntry (TOPIC_Dar_BringOrcEliteRing,"Dar will eine große Nummer bei den Söldnern werden. Er will eine Orktrophäe. Eine Standarte, ein Armreif oder Ring oder ähnliches."); 
 
 	MIS_Dar_BringOrcEliteRing = LOG_RUNNING;
 	Info_ClearChoices	(DIA_Dar_ORCRING);
@@ -505,8 +505,8 @@ func void DIA_Dar_ORCRING_wie ()
 
 func void DIA_Dar_ORCRING_no ()
 {
-	AI_Output			(other, self, "DIA_Dar_ORCRING_no_15_00"); //That doesn't concern me.
-	AI_Output			(self, other, "DIA_Dar_ORCRING_no_03_01"); //(angry) Of course not. I'd have been amazed.
+	AI_Output			(other, self, "DIA_Dar_ORCRING_no_15_00"); //Interessiert mich nicht.
+	AI_Output			(self, other, "DIA_Dar_ORCRING_no_03_01"); //(verärgert) Natürlich nicht. Hätte mich auch gewundert.
 	Info_ClearChoices	(DIA_Dar_ORCRING);
 };
 
@@ -533,8 +533,8 @@ func int DIA_Dar_FIGHTAGAINSTPALOVER_Condition ()
 
 func void DIA_Dar_FIGHTAGAINSTPALOVER_Info ()
 {
-	AI_Output			(self, other, "DIA_Dar_FIGHTAGAINSTPALOVER_03_00"); //All right, I know Lee won't exactly be thrilled if I get into it again with you.
-	AI_Output			(self, other, "DIA_Dar_FIGHTAGAINSTPALOVER_03_01"); //I don't want to make any enemies here. So let's forget the nonsense, okay?
+	AI_Output			(self, other, "DIA_Dar_FIGHTAGAINSTPALOVER_03_00"); //Schon gut. Ich weiß, dass Lee nicht gerade erbaut ist, wenn ich mich weiter mit dir anlege.
+	AI_Output			(self, other, "DIA_Dar_FIGHTAGAINSTPALOVER_03_01"); //Ich will mir hier schließlich keine Feinde machen. Also lassen wir den Unsinn, ok?
 	B_GivePlayerXP (XP_Ambient);
 	AI_StopProcessInfos (self);
 };
@@ -549,7 +549,7 @@ instance DIA_Dar_BRINGORCELITERING		(C_INFO)
 	condition	 = 	DIA_Dar_BRINGORCELITERING_Condition;
 	information	 = 	DIA_Dar_BRINGORCELITERING_Info;
 
-	description	 = 	"I've got the orc trophy you were looking for.";
+	description	 = 	"Ich habe die Orktrophäe, die du suchst.";
 };
 
 func int DIA_Dar_BRINGORCELITERING_Condition ()
@@ -564,50 +564,50 @@ func int DIA_Dar_BRINGORCELITERING_Condition ()
 
 func void DIA_Dar_BRINGORCELITERING_Info ()
 {
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_15_00"); //I've got the orc trophy you were looking for.
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_03_01"); //What's this you've brought me?
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_15_02"); //The ring of an orcish warlord.
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_03_03"); //Wow, in that case... What do you want for it?
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_15_00"); //Ich habe die Orktrophäe, die du suchst.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_03_01"); //Was schleppst du mir denn da an?
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_15_02"); //Den Ring eines Orkischen Kriegsherrn.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_03_03"); //Das ist allerdings ... Was willst du dafür haben?
 	MIS_Dar_BringOrcEliteRing = LOG_SUCCESS;
 
 	Info_ClearChoices	(DIA_Dar_BRINGORCELITERING);
 
-	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "What can you offer me?", DIA_Dar_BRINGORCELITERING_was );
+	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Was kannst du mir anbieten?", DIA_Dar_BRINGORCELITERING_was );
 
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 	{
-		Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Give me some gold.", DIA_Dar_BRINGORCELITERING_geld );
+		Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Gib mir Geld.", DIA_Dar_BRINGORCELITERING_geld );
 	};
 		
 };
 func void DIA_Dar_BRINGORCELITERING_geld ()
 {
 	
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_15_00"); //Give me some gold.
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_15_00"); //Gib mir Geld.
 
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 	{
-		AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_03_01"); //Mmh. 600 gold coins?
-		AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_15_02"); //What was that?
+		AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_03_01"); //Mmh. 600 Goldmünzen?
+		AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_15_02"); //Was war das denn?
 	};
 
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_03_03"); //Okay. I'll give you 1200 gold coins for it.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_03_03"); //Ok. Ich geb dir 1200 Goldmünzen dafür.
 	
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 	{
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_03_04"); //Take it or keep the ring.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_03_04"); //Friss es oder behalt den Ring.
 	};
 	
 	Info_ClearChoices	(DIA_Dar_BRINGORCELITERING);
-	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "That's not enough.", DIA_Dar_BRINGORCELITERING_geld_no );
-	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "It's a deal.", DIA_Dar_BRINGORCELITERING_geld_ok );
+	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Das ist nicht genug.", DIA_Dar_BRINGORCELITERING_geld_no );
+	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Abgemacht.", DIA_Dar_BRINGORCELITERING_geld_ok );
 
 };
 func void DIA_Dar_BRINGORCELITERING_geld_ok ()
 {
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_ok_15_00"); //It's a deal. Here's the ring.
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_ok_15_00"); //Abgemacht. Hier hast du den Ring.
 	B_GiveInvItems 		(other, self, ItRi_OrcEliteRing, 1);					
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_ok_03_01"); //Thanks. I can't wait to hear what the others will say about it.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_ok_03_01"); //Danke. Bin schon gespannt, was die anderen dazu sagen werden.
 
 	CreateInvItems 		(self, ItMi_Gold, 1200);									
 	B_GiveInvItems 		(self, other, ItMi_Gold, 1200);					
@@ -618,33 +618,33 @@ func void DIA_Dar_BRINGORCELITERING_geld_ok ()
 
 func void DIA_Dar_BRINGORCELITERING_geld_no ()
 {
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_no_15_00"); //That's not enough.
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_no_03_01"); //And I think it's too much. This business is too shady for me. No offense.
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_geld_no_15_00"); //Das ist nicht genug.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_geld_no_03_01"); //Und mir schon zu viel. Das Geschäft ist mir zu windig. Nix für ungut.
 	Info_ClearChoices	(DIA_Dar_BRINGORCELITERING);
 };
 
 func void DIA_Dar_BRINGORCELITERING_was ()
 {
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_was_15_00"); //What can you offer me?
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_03_01"); //Either take the money, or this amulet that I... well, let's say, acquired a while ago.
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_03_02"); //It improves your dexterity. I've tried it myself.
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_was_15_00"); //Was kannst du mir anbieten?
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_03_01"); //Entweder du nimmst Geld oder dieses Amulett, das ich ... nun, sagen wir, vor einiger Zeit erworben habe.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_03_02"); //Es verbessert deine Geschicklichkeit. Hab's selbst schon ausprobiert.
 
 	Info_ClearChoices	(DIA_Dar_BRINGORCELITERING);
-	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Give me some gold.", DIA_Dar_BRINGORCELITERING_geld );
-	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Give me the amulet.", DIA_Dar_BRINGORCELITERING_was_am );
+	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Gib mir Geld.", DIA_Dar_BRINGORCELITERING_geld );
+	Info_AddChoice	(DIA_Dar_BRINGORCELITERING, "Gib mir das Ammulett.", DIA_Dar_BRINGORCELITERING_was_am );
 };
 
 func void DIA_Dar_BRINGORCELITERING_was_am ()
 {
-	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_was_am_15_00"); //Give me the amulet.
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_am_03_01"); //Sure thing. Have fun with it. Now gimme that ring.
+	AI_Output			(other, self, "DIA_Dar_BRINGORCELITERING_was_am_15_00"); //Gib mir das Ammulett.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_am_03_01"); //Alles klar. Viel Spaß damit. Und jetzt her mit dem Ring.
 
 	B_GiveInvItems 		(other, self, ItRi_OrcEliteRing, 1);					
 	CreateInvItems 		(self, ITAM_REVIVED_DEX_01, 1);									
 	B_GiveInvItems 		(self, other, ITAM_REVIVED_DEX_01, 1);					
 	B_GivePlayerXP 		(XP_Dar_BringOrcEliteRing);
 
-	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_am_03_02"); //It was a pleasure.
+	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_am_03_02"); //War mir ein Vergnügen.
 	Info_ClearChoices	(DIA_Dar_BRINGORCELITERING);
 
 };

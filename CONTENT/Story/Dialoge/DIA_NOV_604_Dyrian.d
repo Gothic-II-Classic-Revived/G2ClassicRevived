@@ -55,7 +55,7 @@ INSTANCE DIA_Dyrian_Wurst(C_INFO)
 	condition	= DIA_Dyrian_Wurst_Condition;
 	information	= DIA_Dyrian_Wurst_Info;
 	permanent	= FALSE;
-	description = "I'm busy distributing sausages.";
+	description = "Ich verteile gerade Würste.";
 };                       
 
 FUNC INT DIA_Dyrian_Wurst_Condition()
@@ -96,7 +96,7 @@ INSTANCE DIA_Dyrian_Job   (C_INFO)
 	condition   = DIA_Dyrian_Job_Condition;
 	information = DIA_Dyrian_Job_Info;
 	permanent   = FALSE;
-	description = "What are you doing here?";
+	description = "Was machst du hier?";
 };
 FUNC INT DIA_Dyrian_Job_Condition()
 {	
@@ -125,7 +125,7 @@ INSTANCE DIA_Dyrian_WhatDone   (C_INFO)
 	condition   = DIA_Dyrian_WhatDone_Condition;
 	information = DIA_Dyrian_WhatDone_Info;
 	permanent   = FALSE;
-	description = "Tell me what happened.";
+	description = "Erzähl mir, was passiert ist.";
 };
 FUNC INT DIA_Dyrian_WhatDone_Condition()
 {
@@ -156,7 +156,7 @@ INSTANCE DIA_Dyrian_CanHelp   (C_INFO)
 	condition   = DIA_Dyrian_CanHelp_Condition;
 	information = DIA_Dyrian_CanHelp_Info;
 	permanent   = TRUE;
-	description = "Is there any way I can help you?";
+	description = "Kann ich dir irgendwie helfen?";
 };
 FUNC INT DIA_Dyrian_CanHelp_Condition()
 {	
@@ -174,7 +174,7 @@ FUNC VOID DIA_Dyrian_CanHelp_Info()
 	AI_Output (self ,other,"DIA_Dyrian_CanHelp_13_01"); //No, I've been delivered up to the mercy of Innos and the magicians.
 };
 //**************************************************************************
-//	SC hat die Pr�fung des Feuers angenommen und mit Hyglas gesprochen
+//	SC hat die Prfung des Feuers angenommen und mit Hyglas gesprochen
 //**************************************************************************
 INSTANCE DIA_Dyrian_Scroll   (C_INFO)
 {
@@ -201,9 +201,9 @@ FUNC VOID DIA_Dyrian_Scroll_Info()
 	AI_Output (self ,other,"DIA_Dyrian_Scroll_13_02"); //Good - maybe I can help you with it. I can give you a very useful spell scroll. A SLEEP spell. Interested?
 
 	Info_ClearChoices (DIA_Dyrian_Scroll);
-	Info_AddChoice (DIA_Dyrian_Scroll,"No, I don't need your help.",DIA_Dyrian_Scroll_No);
-	Info_AddChoice (DIA_Dyrian_Scroll,"What do you want for it?",DIA_Dyrian_Scroll_How);
-	Info_AddChoice (DIA_Dyrian_Scroll,"What can I do with it?",DIA_Dyrian_Scroll_What);
+	Info_AddChoice (DIA_Dyrian_Scroll,"Nein, ich brauche deine Hilfe nicht.",DIA_Dyrian_Scroll_No);
+	Info_AddChoice (DIA_Dyrian_Scroll,"Was willst du dafür?",DIA_Dyrian_Scroll_How);
+	Info_AddChoice (DIA_Dyrian_Scroll,"Was kann ich damit machen?",DIA_Dyrian_Scroll_What);
 };
 FUNC VOID DIA_Dyrian_Scroll_What ()
 {
@@ -226,8 +226,8 @@ FUNC VOID DIA_Dyrian_Scroll_How ()
 	AI_Output (self ,other,"DIA_Dyrian_Scroll_How_13_02"); //And if you really pass the test of Fire, then you could fix it so that I can stay in the monastery.
 	
 	Info_ClearChoices (DIA_Dyrian_Scroll);
-	Info_AddChoice (DIA_Dyrian_Scroll,"No, I don't need your help.",DIA_Dyrian_Scroll_No);
-	Info_AddChoice (DIA_Dyrian_Scroll,"All right, give me the spell scroll.",DIA_Dyrian_Scroll_Yes);
+	Info_AddChoice (DIA_Dyrian_Scroll,"Nein, ich brauche deine Hilfe nicht.",DIA_Dyrian_Scroll_No);
+	Info_AddChoice (DIA_Dyrian_Scroll,"Okay, gib mir die Spruchrolle.",DIA_Dyrian_Scroll_Yes);
 	
 };
 FUNC VOID DIA_Dyrian_Scroll_Yes ()
@@ -239,7 +239,7 @@ FUNC VOID DIA_Dyrian_Scroll_Yes ()
 	MIS_HelpDyrian = LOG_RUNNING;
 	Log_CreateTopic (Topic_DyrianDrin,LOG_MISSION);
 	Log_SetTopicStatus (Topic_DyrianDrin,LOG_RUNNING);
-	B_LogEntry (Topic_DyrianDrin,"Dyrian gave me a Sleep spell scroll. In return, he wants me to see to it that he's allowed to stay in the monastery, if I become a magician.");
+	B_LogEntry (Topic_DyrianDrin,"Dyrian hat mir eine Schlaf - Spruchrolle gegeben. Dafür will er, das ich mich dafür einsetze, das er im Kloster bleiben darf, falls ich Magier werde.");
 	Info_ClearChoices (DIA_Dyrian_Scroll);
 	
 };
@@ -253,7 +253,7 @@ INSTANCE DIA_Dyrian_Doch   (C_INFO)
 	condition   = DIA_Dyrian_Doch_Condition;
 	information = DIA_Dyrian_Doch_Info;
 	permanent   = TRUE;
-	description = "I changed my mind. Give me the sleep spell.";
+	description = "Ich hab's mir überlegt. Gib mir den Schlaf-Zauber.";
 };
 FUNC INT DIA_Dyrian_Doch_Condition()
 {	
@@ -304,7 +304,7 @@ FUNC VOID DIA_Dyrian_HelloAgain_Info()
 };
 
 //*****************************************************************************
-//			Wie gehts? //Info f�r Magier Success 
+//			Wie gehts? //Info fr Magier Success 
 //*****************************************************************************
 func void B_Dyrian_PlayerHowIsIt()
 {
@@ -318,7 +318,7 @@ INSTANCE DIA_Dyrian_HowIsIt   (C_INFO)
 	condition   = DIA_Dyrian_HowIsIt_Condition;
 	information = DIA_Dyrian_HowIsIt_Info;
 	permanent   = TRUE;
-	description = "How's it going?";
+	description = "Wie läuft's denn so?";
 };
 FUNC INT DIA_Dyrian_HowIsIt_Condition()
 {
@@ -335,7 +335,7 @@ FUNC VOID DIA_Dyrian_HowIsIt_Info()
 	AI_StopProcessInfos (self);	
 };
 //*****************************************************************************
-//			Wie gehts? //Info f�r alle anderen 
+//			Wie gehts? //Info fr alle anderen 
 //*****************************************************************************
 INSTANCE DIA_Dyrian_other   (C_INFO)
 {
@@ -344,7 +344,7 @@ INSTANCE DIA_Dyrian_other   (C_INFO)
 	condition   = DIA_Dyrian_other_Condition;
 	information = DIA_Dyrian_other_Info;
 	permanent   = TRUE;
-	description = "How's it going?";
+	description = "Wie läuft's denn so?";
 };
 FUNC INT DIA_Dyrian_other_Condition()
 {
@@ -373,7 +373,7 @@ INSTANCE DIA_Dyrian_Kneipe   (C_INFO)
 	condition   = DIA_Dyrian_Kneipe_Condition;
 	information = DIA_Dyrian_Kneipe_Info;
 	permanent   = TRUE;
-	description = "How's it going?";
+	description = "Wie läuft's denn so?";
 };
 FUNC INT DIA_Dyrian_Kneipe_Condition()
 {
@@ -390,9 +390,9 @@ FUNC VOID DIA_Dyrian_Kneipe_Info()
 	AI_Output (self ,other,"DIA_Dyrian_Kneipe_13_02"); //Now I've got nothing left but alcohol. And it's all your fault!
 	
 	Info_ClearChoices (DIA_Dyrian_Kneipe);
-	Info_AddChoice (DIA_Dyrian_Kneipe,"Here, 5 gold for you.",DIA_Dyrian_Kneipe_Gold);
-	Info_AddChoice (DIA_Dyrian_Kneipe,"I can explain everything.",DIA_Dyrian_Kneipe_CanExplain);
-	Info_AddChoice (DIA_Dyrian_Kneipe,"Watch what you're saying there.",DIA_Dyrian_Kneipe_ShutUp);
+	Info_AddChoice (DIA_Dyrian_Kneipe,"Hier hast Du 5 Gold.",DIA_Dyrian_Kneipe_Gold);
+	Info_AddChoice (DIA_Dyrian_Kneipe,"Ich kann alles erklären.",DIA_Dyrian_Kneipe_CanExplain);
+	Info_AddChoice (DIA_Dyrian_Kneipe,"Pass auf was du sagst!",DIA_Dyrian_Kneipe_ShutUp);
 		
 };
 
@@ -434,7 +434,7 @@ INSTANCE DIA_Dyrian_nachher   (C_INFO)
 	condition   = DIA_Dyrian_nachher_Condition;
 	information = DIA_Dyrian_nachher_Info;
 	permanent   = TRUE;
-	description = "What's up?";
+	description = "Wie steht's?";
 };
 FUNC INT DIA_Dyrian_nachher_Condition()
 {

@@ -5,7 +5,7 @@
 
 PROTOTYPE Mst_Default_MinecrawlerQueen(C_Npc)			
 {
-	name							=	"Minecrawler Queen";
+	name							=	"Minecrawler Königin";
 	guild							=	GIL_MINECRAWLER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MINECRAWLERQUEEN;
 	

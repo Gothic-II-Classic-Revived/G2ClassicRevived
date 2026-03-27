@@ -34,7 +34,7 @@ instance DIA_Khaled_Hallo		(C_INFO)
 	condition	= DIA_Khaled_Hallo_Condition;
 	information	= DIA_Khaled_Hallo_Info;
 	permanent	= TRUE;
-	description	= "Everything all right with you?";
+	description	= "Alles klar bei dir?";
 };
 
 func int DIA_Khaled_Hallo_Condition ()
@@ -47,17 +47,17 @@ func int DIA_Khaled_Hallo_Condition ()
 
 func void DIA_Khaled_Hallo_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_Hallo_15_00"); //Everything fine with you?
+	AI_Output (other, self, "DIA_Khaled_Hallo_15_00"); //Alles klar bei dir?
 	if (Npc_KnowsInfo (other, DIA_Lee_WannaJoin))
 	{
-		AI_Output (self, other, "DIA_Khaled_Hallo_11_01"); //So - you want to join us, then? Do you even have a decent weapon?
+		AI_Output (self, other, "DIA_Khaled_Hallo_11_01"); //So - du willst also bei uns mitmachen? Hast du überhaupt schon eine vernünftige Waffe?
 		Khaled_weiter = TRUE;
 		Log_CreateTopic (Topic_SoldierTrader,LOG_NOTE);
-		B_LogEntry (Topic_SoldierTrader,"Khaled is a weapons dealer.");
+		B_LogEntry (Topic_SoldierTrader,"Khaled handelt mit Waffen.");
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Khaled_Hallo_11_02"); //If it's something important, go talk to Lee. Otherwise, leave me alone.
+		AI_Output (self, other, "DIA_Khaled_Hallo_11_02"); //Wenn es was Wichtiges ist, rede mit Lee. Ansonsten lass mich in Ruhe.
 		AI_StopProcessInfos (self);
 	};	
 };
@@ -72,7 +72,7 @@ instance DIA_Khaled_TRADE		(C_INFO)
 	condition	= DIA_Khaled_TRADE_Condition;
 	information	= DIA_Khaled_TRADE_Info;
 	permanent	= TRUE;
-	description	= "What weapons do you have to offer?";
+	description	= "Welche Waffen hast du anzubieten?";
 	trade		= TRUE;
 };
 
@@ -86,9 +86,9 @@ func int DIA_Khaled_TRADE_Condition ()
 
 func void DIA_Khaled_TRADE_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_TRADE_15_00"); //What weapons do you have to offer?
+	AI_Output (other, self, "DIA_Khaled_TRADE_15_00"); //Welche Waffen hast du anzubieten?
 	B_GiveTradeInv (self);
-	AI_Output (self, other, "DIA_Khaled_TRADE_11_01"); //Only the best. Just take a look at them.
+	AI_Output (self, other, "DIA_Khaled_TRADE_11_01"); //Nur die besten. Sieh sie dir doch einfach an.
 };
 
 // ************************************************************
@@ -101,7 +101,7 @@ instance DIA_Khaled_WannaJoin		(C_INFO)
 	condition	= DIA_Khaled_WannaJoin_Condition;
 	information	= DIA_Khaled_WannaJoin_Info;
 	permanent	= TRUE;
-	description	= "Would you mind if I joined you?";
+	description	= "Hast du was dagegen, wenn ich bei euch mitmache?";
 };
 
 func int DIA_Khaled_WannaJoin_Condition ()
@@ -115,13 +115,13 @@ func int DIA_Khaled_WannaJoin_Condition ()
 
 func void DIA_Khaled_WannaJoin_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_WannaJoin_15_00"); //Would you mind if I joined you?
-	AI_Output (self, other, "DIA_Khaled_WannaJoin_11_01"); //Once you have passed the test, I shall vote for you.
+	AI_Output (other, self, "DIA_Khaled_WannaJoin_15_00"); //Hast du was dagegen, wenn ich bei euch mitmache?
+	AI_Output (self, other, "DIA_Khaled_WannaJoin_11_01"); //Wenn du die Probe bestanden hast, werde ich für dich stimmen.
 	if (MIS_Torlof_HolPachtVonSekob == LOG_SUCCESS)
 	|| (MIS_Torlof_BengarMilizKlatschen == LOG_SUCCESS)
 	{
-		AI_Output (other, self, "DIA_Khaled_WannaJoin_15_02"); //I passed it already.
-		AI_Output (self, other, "DIA_Khaled_WannaJoin_11_03"); //Well, that's all right then.
+		AI_Output (other, self, "DIA_Khaled_WannaJoin_15_02"); //Das habe ich.
+		AI_Output (self, other, "DIA_Khaled_WannaJoin_11_03"); //Na, dann ist ja alles klar.
 	};
 };
 
@@ -135,7 +135,7 @@ instance DIA_Khaled_Woher		(C_INFO)
 	condition	= DIA_Khaled_Woher_Condition;
 	information	= DIA_Khaled_Woher_Info;
 	permanent	= FALSE;
-	description	= "How did you end up with the mercenaries?";
+	description	= "Wie bist du zu den Söldnern gekommen?";
 };
 
 func int DIA_Khaled_Woher_Condition ()
@@ -148,8 +148,8 @@ func int DIA_Khaled_Woher_Condition ()
 
 func void DIA_Khaled_Woher_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_Woher_15_00"); //How did you end up with the mercenaries?
-	AI_Output (self, other, "DIA_Khaled_Woher_11_01"); //I came with Sylvio from the south. We belonged to an army of mercenaries which fought against the orcs.
+	AI_Output (other, self, "DIA_Khaled_Woher_15_00"); //Wie bist du zu den Söldnern gekommen?
+	AI_Output (self, other, "DIA_Khaled_Woher_11_01"); //Ich bin mit Sylvio aus dem Süden gekommen. Wir waren in einer Söldnerarmee, die gegen die Orks gekämpft hat.
 };
 
 // ************************************************************
@@ -162,7 +162,7 @@ instance DIA_Khaled_AboutSylvio		(C_INFO)
 	condition	= DIA_Khaled_AboutSylvio_Condition;
 	information	= DIA_Khaled_AboutSylvio_Info;
 	permanent	= FALSE;
-	description	= "What's your opinion of Sylvio?";
+	description	= "Was denkst du über Sylvio?";
 };
 
 func int DIA_Khaled_AboutSylvio_Condition ()
@@ -175,8 +175,8 @@ func int DIA_Khaled_AboutSylvio_Condition ()
 
 func void DIA_Khaled_AboutSylvio_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_AboutSylvio_15_00"); //What's your opinion of Sylvio?
-	AI_Output (self, other, "DIA_Khaled_AboutSylvio_11_01"); //He's a dangerous fellow! And many of the mercenaries who came with him this far listen to what he says. Better not pick a fight with him.
+	AI_Output (other, self, "DIA_Khaled_AboutSylvio_15_00"); //Was denkst du über Sylvio?
+	AI_Output (self, other, "DIA_Khaled_AboutSylvio_11_01"); //Der Typ ist gefährlich! Und viele der Söldner, die mit ihm hierher gekommen sind, hören auf ihn. Leg dich besser nicht mit ihm an.
 };
 
 // ************************************************************
@@ -189,7 +189,7 @@ instance DIA_Khaled_AboutLee		(C_INFO)
 	condition	= DIA_Khaled_AboutLee_Condition;
 	information	= DIA_Khaled_AboutLee_Info;
 	permanent	= FALSE;
-	description	= "What do you think of Lee?";
+	description	= "Was denkst du über Lee?";
 };
 
 func int DIA_Khaled_AboutLee_Condition ()
@@ -202,11 +202,11 @@ func int DIA_Khaled_AboutLee_Condition ()
 
 func void DIA_Khaled_AboutLee_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_AboutLee_15_00"); //What's your opinion of Lee?
-	AI_Output (self, other, "DIA_Khaled_AboutLee_11_01"); //I think that the only thing Lee is really interested in is getting away from this island.
-	AI_Output (self, other, "DIA_Khaled_AboutLee_11_02"); //He wants to go to the mainland. Seems to have a bone to pick with someone there...
-	AI_Output (self, other, "DIA_Khaled_AboutLee_11_03"); //At any rate, he does a far better job than Sylvio ever could.
-	AI_Output (self, other, "DIA_Khaled_AboutLee_11_04"); //Moreover, he's a good leader. Most of the time we can do whatever we want here.
+	AI_Output (other, self, "DIA_Khaled_AboutLee_15_00"); //Was denkst du über Lee?
+	AI_Output (self, other, "DIA_Khaled_AboutLee_11_01"); //Ich glaube, das einzige, was Lee wirklich interessiert, ist, von dieser Insel runterzukommen.
+	AI_Output (self, other, "DIA_Khaled_AboutLee_11_02"); //Er will aufs Festland. Hat da wohl noch 'ne Rechnung offen ...
+	AI_Output (self, other, "DIA_Khaled_AboutLee_11_03"); //Jedenfalls versteht er sein Handwerk um Längen besser, als Sylvio das jemals könnte.
+	AI_Output (self, other, "DIA_Khaled_AboutLee_11_04"); //Außerdem ist er ein guter Anführer. Die meiste Zeit kann man hier machen, was man will.
 };
 
 

@@ -66,7 +66,7 @@ const int	REV_Value_1H_Mace_Fortuno			=	110;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_MACE_01 (C_Item)
 {	
-	name 				=	"Mace";
+	name 				=	"Streitkolben";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -91,7 +91,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_02 (C_Item)
 {	
-	name 				=	"Sting Mace";
+	name 				=	"Stachelkeule";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -116,7 +116,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_03 (C_Item)
 {	
-	name 				=	"Bloodfly Sting";
+	name 				=	"Blutfliegenstachel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -141,7 +141,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_04 (C_Item)
 {	
-	name 				=	"Steel Tongue";
+	name 				=	"Stahlzunge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -166,7 +166,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_04 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_MACE_WAR_01 (C_Item)
 {	
-	name 				=	"Morning Star";
+	name 				=	"Morgenstern";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -191,7 +191,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_WAR_02 (C_Item)
 {	
-	name 				=	"Steel Mace";
+	name 				=	"Stahlgeflecht";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -216,7 +216,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_WAR_03 (C_Item)
 {	
-	name 				=	"Stone Crusher";
+	name 				=	"Steinbrecher";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -241,7 +241,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_WAR_04 (C_Item)
 {	
-	name 				=	"Heartbreaker";
+	name 				=	"Herzensbrecher";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -271,7 +271,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_04 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_MACE_LESTER (C_Item)
 {
-	name 				=	"Lester's Mediator";
+	name 				=	"Lesters Streitschlichter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -299,7 +299,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_LESTER (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_NAMIB (C_Item)
 {
-	name 				=	"Namib's Club";
+	name 				=	"Namibs Keule";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -327,7 +327,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_NAMIB (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_MOE (C_Item)
 {
-	name 				=	"Moe's Club";
+	name 				=	"Moes Keule";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -355,7 +355,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_MOE (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_MACE_FORTUNO (C_Item)
 {
-	name 				=	"Fortuno's Club";
+	name 				=	"Fortunos Keule";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;

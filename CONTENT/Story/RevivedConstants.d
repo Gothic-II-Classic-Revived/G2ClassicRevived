@@ -2,23 +2,23 @@
 // Quest Log
 // ***************
 
-const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
+const string	TOPIC_Revived_DaronStatuette		=	"Feuermagier in Aufruhr";
 var int			MiltenORPedro_LostInnosStatue_Daron;
 var int 		TOPIC_Revived_DaronStatuette_END;
 
-const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
+const string	TOPIC_Revived_ThievesGuild			=	"Diebesgilde";
 
-const string	TOPIC_Revived_EddaStatue			=	"Robbed in the Harbour";
+const string	TOPIC_Revived_EddaStatue			=	"Im Hafen ausgeraubt";
 
-const string	TOPIC_Tobacco						=	"Mixing tobacco";
-const string	LogText_TobaccoLearned				=	"By mixing Abuyin's apple tobacco at an alchemist's bench I can make:";
+const string	TOPIC_Tobacco						=	"Tabak mischen";
+const string	LogText_TobaccoLearned				=	"Indem ich Abuyins Apfeltabak an einem Alchemietisch mische, kann ich herstellen:";
 
-const string	TOPIC_Cooking						=	"Cooking";
+const string	TOPIC_Cooking						=	"Kochen";
 
-const string	TOPIC_Booze							=	"Distilling booze";
+const string	TOPIC_Booze							=	"Schnaps destillieren";
 
 
-const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower can sell me food and frying pans.";
+const string	LogText_Revived_GordonTrade	 		=	"Gorden im zerbrochenen Turm kann mir Essen und Bratpfannen verkaufen.";
 
 
 
@@ -27,154 +27,154 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 // ***************
 
 // NPC Names
-const string NAME_DementorNovice		= "Seeker Novice";
-const string NAME_Templar				= "Apocalyptic Templar";
-const string NAME_JudgeGuard			= "Judge's House Guard";
+const string NAME_DementorNovice		= "Suchender Novize";
+const string NAME_Templar				= "Apokalyptischer Templer";
+const string NAME_JudgeGuard			= "Richterhaus Wache";
 
 // Death Messages
-const string PRINT_DEATH_MESSAGE_0		=	"Your journey ends here.";
-const string PRINT_DEATH_MESSAGE_1		=	"Maybe you should've spent more learning points.";
-const string PRINT_DEATH_MESSAGE_2		=	"Guess you weren't the Chosen One after all.";
-const string PRINT_DEATH_MESSAGE_3		=	"When was the last time you saved...?";
-const string PRINT_DEATH_MESSAGE_4		=	"You are finally free.";
+const string PRINT_DEATH_MESSAGE_0		=	"Deine Reise endet hier.";
+const string PRINT_DEATH_MESSAGE_1		=	"Vielleicht hättest du mehr Lernpunkte ausgeben sollen.";
+const string PRINT_DEATH_MESSAGE_2		=	"Du warst wohl doch nicht der Auserwählte.";
+const string PRINT_DEATH_MESSAGE_3		=	"Wann hast du das letzte Mal gespeichert...?";
+const string PRINT_DEATH_MESSAGE_4		=	"Du bist endlich frei.";
 
 
 // Eating Bonus Messages
-const string PRINT_Eat_Apple1				= "Tastes juicy and fresh.";
-const string PRINT_Eat_Apple2				= "You feel refreshed.";
-const string PRINT_Eat_Apple3				= "You feel well and strong!";
-const string PRINT_Eat_SourApple1			= "The taste sparks your curiosity.";
-const string PRINT_Eat_SourApple2			= "You feel energized.";
-const string PRINT_Eat_SourApple3			= "You feel agile and alert!";
-const string PRINT_Eat_Pear1				= "Sweet and mellow taste.";
-const string PRINT_Eat_Pear2				= "You feel a strange clarity.";
-const string PRINT_Eat_Pear3				= "You feel open to new knowledge!";
-const string PRINT_Eat_MPMushroom1			= "The mushroom tingles with magic power.";
-const string PRINT_Eat_MPMushroom2			= "You feel a spark of energy.";
-const string PRINT_Eat_MPMushroom3			= "Your mind clears and mana flows!";
-const string PRINT_Eat_HPMushroom1			= "Earthy and rich in taste.";
-const string PRINT_Eat_HPMushroom2			= "The hearty flavor revitalizes you.";
-const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
+const string PRINT_Eat_Apple1				= "Schmeckt saftig und frisch";
+const string PRINT_Eat_Apple2				= "Du fühlst dich erfrischt";
+const string PRINT_Eat_Apple3				= "Du fühlst dich gesund und stark!";
+const string PRINT_Eat_SourApple1			= "Der Geschmack weckt deine Neugier.";
+const string PRINT_Eat_SourApple2			= "Du fühlst dich voller Energie.";
+const string PRINT_Eat_SourApple3			= "Du fühlst dich agil und wachsam!";
+const string PRINT_Eat_Pear1				= "Süßer und milder Geschmack.";
+const string PRINT_Eat_Pear2				= "Du spürst eine seltsame Klarheit.";
+const string PRINT_Eat_Pear3				= "Du bist offen für neues Wissen!";
+const string PRINT_Eat_MPMushroom1			= "Der Pilz kribbelt vor magischer Kraft.";
+const string PRINT_Eat_MPMushroom2			= "Du spürst einen Energieschub.";
+const string PRINT_Eat_MPMushroom3			= "Dein Geist klärt sich und Mana fließt!";
+const string PRINT_Eat_HPMushroom1			= "Erdig und reichhaltig im Geschmack.";
+const string PRINT_Eat_HPMushroom2			= "Der herzhafte Geschmack belebt dich.";
+const string PRINT_Eat_HPMushroom3			= "Dein Körper fühlt sich widerstandsfähiger an!";
 
 
 // Log Entries
-const string LOGENTRY_RECIPE_HEALTH_01			= "Ingredients for 'Essence of Healing':\n2 Healing Plant\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_HEALTH_02			= "Ingredients for 'Extract of Healing':\n2 Healing Herb\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_HEALTH_03			= "Ingredients for 'Elixir of Healing':\n2 Healing Root\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_HEALTH_04			= "Ingredients for 'Pure Life Energy':\n3 Essence of Healing\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_MANA_01			= "Ingredients for 'Essence of Magic Energy':\n2 Fire Nettle\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_MANA_02			= "Ingredients for 'Extract of Magic Energy':\n2 Fireweed\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_MANA_03			= "Ingredients for 'Elixir of Magic Energy':\n2 Fire Root\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_MANA_04			= "Ingredients for 'Pure Life Energy':\n3 Essence of Magic Energy\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_HEALTH_01			= "Zutaten für 'Essenz der Heilung':\n2 Heilpflanze\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_HEALTH_02			= "Zutaten für 'Extrakt der Heilung':\n2 Heilkraut\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_HEALTH_03			= "Zutaten für 'Elixier der Heilung':\n2 Heilwurzel\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_HEALTH_04			= "Zutaten für 'Reine Lebensenergie':\n3 Essenz der Heilung\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_MANA_01			= "Zutaten für 'Essenz der magischen Energie':\n2 Feuernessel\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_MANA_02			= "Zutaten für 'Extrakt der magischen Energie':\n2 Feuerkraut\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_MANA_03			= "Zutaten für 'Elixier der magischen Energie':\n2 Feuerwurzel\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_MANA_04			= "Zutaten für 'Reine Lebensenergie':\n3 Essenz der magischen Energie\n1 Feldknöterich";
 
-const string LOGENTRY_RECIPE_PERM_HEALTH_01		= "Ingredients for 'Essence of Life':\n2 Essence of Healing\n1 King's Sorrel\n1 Healing Root";
-const string LOGENTRY_RECIPE_PERM_HEALTH_02		= "Ingredients for 'Extract of Life':\n2 Extract of Healing\n1 King's Sorrel\n1 Healing Root";
-const string LOGENTRY_RECIPE_PERM_HEALTH_03		= "Ingredients for 'Elixir of Life':\n2 Elixir of Healing\n1 King's Sorrel\n1 Healing Root";
-const string LOGENTRY_RECIPE_PERM_MANA_01		= "Ingredients for 'Essence of Spirit':\n2 Essence of Magic Energy\n1 King's Sorrel\n1 Fire Root";
-const string LOGENTRY_RECIPE_PERM_MANA_02		= "Ingredients for 'Extract of Spirit':\n2 Extract of Magic Energy\n1 King's Sorrel\n1 Fire Root";
-const string LOGENTRY_RECIPE_PERM_MANA_03		= "Ingredients for 'Elixir of Spirit':\n2 Elixir of Magic Energy\n1 King's Sorrel\n1 Fire Root";
-const string LOGENTRY_RECIPE_PERM_STR_01		= "Ingredients for 'Essence of Strength':\n1 Dragonroot\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_PERM_STR_02		= "Ingredients for 'Extract of Strength':\n2 Dragonroot\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_PERM_STR_03		= "Ingredients for 'Elixir of Strength':\n3 Dragonroot\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_PERM_DEX_01		= "Ingredients for 'Essence of Dexterity':\n1 Goblin Berries\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_PERM_DEX_02		= "Ingredients for 'Extract of Dexterity':\n2 Goblin Berries\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_PERM_DEX_03		= "Ingredients for 'Elixir of Dexterity':\n3 Goblin Berries\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_PERM_MASTER_01		= "Ingredients for 'Potion of Power':\n1 Essence of Strength\n1 Essence of Dexterity\n1 King's Sorrel";
-const string LOGENTRY_RECIPE_PERM_MASTER_02		= "Ingredients for 'Potion of Supremacy':\n1 Extract of Strength\n1 Extract of Dexterity\n1 King's Sorrel";
-const string LOGENTRY_RECIPE_PERM_MASTER_03		= "Ingredients for 'Potion of Godhood':\n1 Elixir of Strength\n1 Elixir of Dexterity\n1 King's Sorrel";
-const string LOGENTRY_RECIPE_SPEED_01			= "Ingredients for 'Potion of Swiftness':\n1 Snapperweed\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_SPEED_02			= "Ingredients for 'Potion of Velocity':\n2 Snapperweed\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_SPEED_03			= "Ingredients for 'Potion of Haste':\n3 Snapperweed\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_HEALTH_01		= "Zutaten für 'Essenz des Lebens':\n2 Essenz der Heilung\n1 Kronstöckl\n1 Heilwurzel";
+const string LOGENTRY_RECIPE_PERM_HEALTH_02		= "Zutaten für 'Extrakt des Lebens':\n2 Extrakt der Heilung\n1 Kronstöckl\n1 Heilwurzel";
+const string LOGENTRY_RECIPE_PERM_HEALTH_03		= "Zutaten für 'Elixier des Lebens':\n2 Elixier der Heilung\n1 Kronstöckl\n1 Heilwurzel";
+const string LOGENTRY_RECIPE_PERM_MANA_01		= "Zutaten für 'Essenz des Geistes':\n2 Essenz der magischen Energie\n1 Kronstöckl\n1 Feuerwurzel";
+const string LOGENTRY_RECIPE_PERM_MANA_02		= "Zutaten für 'Extrakt des Geistes':\n2 Extrakt der magischen Energie\n1 Kronstöckl\n1 Feuerwurzel";
+const string LOGENTRY_RECIPE_PERM_MANA_03		= "Zutaten für 'Elixier des Geistes':\n2 Elixier der magischen Energie\n1 Kronstöckl\n1 Feuerwurzel";
+const string LOGENTRY_RECIPE_PERM_STR_01		= "Zutaten für 'Essenz der Stärke':\n1 Drachenwurzel\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_PERM_STR_02		= "Zutaten für 'Extrakt der Stärke':\n2 Drachenwurzel\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_PERM_STR_03		= "Zutaten für 'Elixier der Stärke':\n3 Drachenwurzel\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_PERM_DEX_01		= "Zutaten für 'Essenz der Geschicklichkeit':\n1 Goblinbeeren\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_PERM_DEX_02		= "Zutaten für 'Extrakt der Geschicklichkeit':\n2 Goblinbeeren\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_PERM_DEX_03		= "Zutaten für 'Elixier der Geschicklichkeit':\n3 Goblinbeeren\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_PERM_MASTER_01		= "Zutaten für 'Trank der Kraft':\n1 Essenz der Stärke\n1 Essenz der Geschicklichkeit\n1 Kronstöckl";
+const string LOGENTRY_RECIPE_PERM_MASTER_02		= "Zutaten für 'Trank der Überlegenheit':\n1 Extrakt der Stärke\n1 Extrakt der Geschicklichkeit\n1 Kronstöckl";
+const string LOGENTRY_RECIPE_PERM_MASTER_03		= "Zutaten für 'Trank der Göttlichkeit':\n1 Elixier der Stärke\n1 Elixier der Geschicklichkeit\n1 Kronstöckl";
+const string LOGENTRY_RECIPE_SPEED_01			= "Zutaten für 'Trank der Schnelligkeit':\n1 Snapperkraut\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_SPEED_02			= "Zutaten für den 'Trank der Geschwindigkeit':\n2 Snapperkraut\n1 Feldknöterich";
+const string LOGENTRY_RECIPE_SPEED_03			= "Zutaten für den 'Trank der Eile':\n3 Snapperkraut\n1 Feldknöterich";
 
-const string LOGENTRY_RECIPE_LOUHAMMER			= "Ingredients for 'Lou's Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 White Rum";
-const string LOGENTRY_RECIPE_LOUHAMMERDOUBLE	= "Ingredients for 'Lou's Double Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 Lou's Hammer";
-const string LOGENTRY_RECIPE_FASTHERRING		= "Ingredients for 'Hasty Herring':\n1 Fish\n1 Snapperweed\n1 White Rum";
-const string LOGENTRY_RECIPE_TURNIPBOOZE		= "Ingredients for 'Turnip Booze':\n4 Turnip\n1 Beer\n1 Minecrawler Mandibles";
-const string LOGENTRY_RECIPE_VINOBOOZE			= "Ingredients for 'Vino's Special':\n4 Berries\n2 Apple\n2 Pear\n1 Bloodfly's wings";
-const string LOGENTRY_RECIPE_MONSTERDRINK		= "Ingredients for 'Monster Drink':\n2 King's Sorrel\n2 Troll Tusk\n4 Teeth\n4 Claws";
-const string LOGENTRY_RECIPE_MAGEWINE			= "Ingredients for 'Monastery Wine':\n4 Grapes\n1 Bloodfly's stinger";
-const string LOGENTRY_RECIPE_RICESCHNAPS		= "Ingredients for 'Rice Schnapps':\n4 Riceplant\n1 Lurker claws";
-const string LOGENTRY_RECIPE_MEAD				= "Ingredients for 'Mead':\n2 Honey comb\n1 Field Raider mandibles";
+const string LOGENTRY_RECIPE_LOUHAMMER			= "Zutaten für 'Lous Hammer':\n2 Rübe\n1 Sumpfkraut\n1 Sumpfhaizahn\n1 Weißer Rum";
+const string LOGENTRY_RECIPE_LOUHAMMERDOUBLE	= "Zutaten für 'Lous Doppelhammer':\n2 Rüben\n1 Sumpfkraut\n1 Sumpfhaizahn\n1 Lous Hammer";
+const string LOGENTRY_RECIPE_FASTHERRING		= "Zutaten für 'Eiligen Hering':\n1 Fisch\n1 Snapperkraut\n1 Weißer Rum";
+const string LOGENTRY_RECIPE_TURNIPBOOZE		= "Zutaten für 'Rüben-Schnaps':\n4 Rüben\n1 Bier\n1 Minecrawlerzange";
+const string LOGENTRY_RECIPE_VINOBOOZE			= "Zutaten für 'Vinos Spezial':\n4 Beeren\n2 Äpfel\n2 Birnen\n1 Blutfliegenflügel";
+const string LOGENTRY_RECIPE_MONSTERDRINK		= "Zutaten für 'Monstergetränk':\n2 Kronstöckl\n2 Trollhauer\n4 Zähne\n4 Krallen";
+const string LOGENTRY_RECIPE_MAGEWINE			= "Zutaten für 'Klosterwein':\n4 Trauben\n1 Blutfliegenstachel";
+const string LOGENTRY_RECIPE_RICESCHNAPS		= "Zutaten für 'Reisschnaps':\n4 Reispflanzen\n1 Lurkerklaue";
+const string LOGENTRY_RECIPE_MEAD				= "Zutaten für 'Met':\n2 Honigwaben\n1 Feldräuberzange";
 
-const string LOGENTRY_RECIPE_MEATSTEW        	= "Ingredients for 'Full Meat Stew':\n2 Meat\n1 Clam Meat\n1 Sausage\n1 Bacon";
-const string LOGENTRY_RECIPE_FISHSOUP        	= "Ingredients for 'Fish Soup':\n2 Fish\n1 Water";
-const string LOGENTRY_RECIPE_MEATBUGRAGOUT  	= "Ingredients for 'Meatbug Ragout':\n5 Dark Mushroom\n3 Meatbug Meat\n2 Rice plants";
-const string LOGENTRY_RECIPE_ROOTSOUP        	= "Ingredients for 'Root Soup':\n2 Meadow Berry\n2 Forest Berry\n2 Swamp weed";
-const string LOGENTRY_RECIPE_MINECRAWLERSOUP 	= "Ingredients for 'Minecrawler Soup':\n2 Minecrawler Mandibles\n4 Swamp weed";
-const string LOGENTRY_RECIPE_RICEBOWL        	= "Ingredients for 'Rice bowl':\n3 Rice plants";
-const string LOGENTRY_RECIPE_BERRYMARMALADE  	= "Ingredients for 'Berry Marmalade':\n2 Grapes\n2 Berries\n2 Meadow berry\n2 Forest berry";
-const string LOGENTRY_RECIPE_FRUITSALAD      	= "Ingredients for 'Fruit salad':\n1 Apple\n1 Pear\n1 Berry\n1 Grape\n1 Milk bottle";
-const string LOGENTRY_RECIPE_CONVICTSTEW    	= "Ingredients for 'Convict's Stew':\n1 Hard Bread\n1 Stinky Cheese\n1 Old Beer\n1 Stale Water";
+const string LOGENTRY_RECIPE_MEATSTEW        	= "Zutaten für 'Fleischeintopf':\n2 Fleisch\n1 Muschelfleisch\n1 Wurst\n1 Schinken";
+const string LOGENTRY_RECIPE_FISHSOUP        	= "Zutaten für 'Fischsuppe':\n2 Fische\n1 Wasser";
+const string LOGENTRY_RECIPE_MEATBUGRAGOUT  	= "Zutaten für 'Fleischwanzenragout':\n5 Dunkelpilze\n3 Fleischwanzenfleisch\n2 Reispflanzen";
+const string LOGENTRY_RECIPE_ROOTSOUP        	= "Zutaten für 'Wurzelsuppe':\n2 Weidenbeeren\n2 Waldbeeren\n2 Sumpfkraut";
+const string LOGENTRY_RECIPE_MINECRAWLERSOUP 	= "Zutaten für 'Minecrawlersuppe':\n2 Minecrawlerzangen\n4 Sumpfkraut";
+const string LOGENTRY_RECIPE_RICEBOWL        	= "Zutaten für 'Reisschüssel':\n3 Reispflanzen";
+const string LOGENTRY_RECIPE_BERRYMARMALADE  	= "Zutaten für 'Beerenmarmelade':\n2 Trauben\n2 Beeren\n2 Weidenbeeren\n2 Waldbeeren";
+const string LOGENTRY_RECIPE_FRUITSALAD      	= "Zutaten für 'Obstsalat':\n1 Apfel\n1 Birne\n1 Beere\n1 Traube\n1 Milchflasche";
+const string LOGENTRY_RECIPE_CONVICTSTEW    	= "Zutaten für 'Sträflings-Eintopf':\n1 Hartes Brot\n1 Stinkender Käse\n1 Altes Bier\n1 Verdorbenes Wasser";
 
 // NPC Names
-const string NAME_LOAFER				=	"Loafer";
-const string NAME_HIGHWAYMAN			=	"Highwayman";
+const string NAME_LOAFER				=	"Herumtreiber";
+const string NAME_HIGHWAYMAN			=	"Wegelagerer";
 
 
 // Items
-const string NAME_OrcWeapon				=	"Orc Weapon";
-const string NAME_OrcWeaponFix			=	"Orc Weapon (Reforged)";
-const string NAME_HolyWeapon1H			=	"One-Handed Weapon (Holy)";
-const string NAME_HolyWeapon2H			=	"Two-Handed Weapon (Holy)";
-const string NAME_BlessedWeapon1H		=	"One-Handed Weapon (Blessed)";
-const string NAME_BlessedWeapon2H		=	"Two-Handed Weapon (Blessed)";
-const string NAME_TaintedWeapon1H		=	"One-Handed Weapon (Tainted)";
-const string NAME_TaintedWeapon2H		=	"Two-Handed Weapon (Tainted)";
-const string NAME_ForgedWeapon1H		=	"One-Handed Weapon (Forged)";
-const string NAME_ForgedWeapon2H		=	"Two-Handed Weapon (Forged)";
+const string NAME_OrcWeapon				=	"Ork-Waffe";
+const string NAME_OrcWeaponFix			=	"Ork-Waffe (neu geschmiedet)";
+const string NAME_HolyWeapon1H			=	"Einhandwaffe (heilig)";
+const string NAME_HolyWeapon2H			=	"Zweihandwaffe (heilig)";
+const string NAME_BlessedWeapon1H		=	"Einhandwaffe (gesegnet)";
+const string NAME_BlessedWeapon2H		=	"Zweihandwaffe (gesegnet)";
+const string NAME_TaintedWeapon1H		=	"Einhandwaffe (verdorben)";
+const string NAME_TaintedWeapon2H		=	"Zweihandwaffe (Verunreinigt)";
+const string NAME_ForgedWeapon1H		=	"Einhandwaffe (Geschmiedet)";
+const string NAME_ForgedWeapon2H		=	"Zweihandwaffe (Geschmiedet)";
 
-const string NAME_HP_needed				=	"Hitpoints required";
+const string NAME_HP_needed				=	"Erforderliche Trefferpunkte";
 
-const string NAME_Penalty_HP			=	"Hitpoint penalty";
-const string NAME_Penalty_Mana			=	"Mana penalty";
+const string NAME_Penalty_HP			=	"Trefferpunktabzug";
+const string NAME_Penalty_Mana			=	"Manaabzug";
 
-const string NAME_Prot_Edge				=	"Slash Protection";
-const string NAME_Prot_Blunt			=	"Blunt Protection";
+const string NAME_Prot_Edge				=	"Schutz gegen Schnittangriffe";
+const string NAME_Prot_Blunt			=	"Schutz gegen stumpfe Angriffe";
 
-const string NAME_Damage_Edge			=	"Slash Damage";
-const string NAME_Damage_Blunt			=	"Blunt Damage";
-const string NAME_Damage_Point			=	"Point Damage";
-const string NAME_Damage_Magic			=	"Magic Damage";
-const string NAME_Damage_Fire			=	"Fire Damage";
+const string NAME_Damage_Edge			=	"Schadenswert bei Schnittangriffen";
+const string NAME_Damage_Blunt			=	"Schadenswert bei stumpfen Angriffen";
+const string NAME_Damage_Point			=	"Schadenswert bei Stichangriffen";
+const string NAME_Damage_Magic			=	"Magieschaden";
+const string NAME_Damage_Fire			=	"Feuerschaden";
 
-const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
-const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
-const string NAME_RaiseWeaponSkill		=	"Melee Weapon Talent Bonus";
+const string NAME_RaiseStrDex			=	"Stärke und Geschick +";
+const string NAME_RaiseHPMP				=	"Trefferpunkte und Mana +";
+const string NAME_RaiseWeaponSkill		=	"Talentbonus für Nahkampfwaffen";
 
-const string NAME_BonusHPMP				=	"Hitpoints and Mana bonus";
+const string NAME_BonusHPMP				=	"Trefferpunkte- und Manabonus";
 
-const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
+const string NAME_Addon_BeArArcher		=	"Zusammen mit Bogenschützen-Rüstung +";
 
-const string PRINT_GotFood				=	"Package was filled with food";
+const string PRINT_GotFood				=	"Das Paket war mit Essen gefüllt";
 
 
 // MobInter
-const string _STR_MESSAGE_OCLEVER_STUCKS	= "The lever doesn't move at all."			;
-const string _STR_MESSAGE_ORCLEVER_MOVES	= "The statuette moves the lever."			;
-const string _STR_MESSAGE_PILLAR_STUCKS		= "The pillar won't budge."					;
-const string _STR_MESSAGE_WHEEL_STUCKS		= "The winch is jammed."					;
+const string _STR_MESSAGE_OCLEVER_STUCKS	= "der Hebel bewegt sich kein Haarbreit"			;
+const string _STR_MESSAGE_ORCLEVER_MOVES	= "die Statuette bewegt den Hebel"			;
+const string _STR_MESSAGE_PILLAR_STUCKS		= "Die Säule rührt sich nicht von der Stelle."					;
+const string _STR_MESSAGE_WHEEL_STUCKS		= "die Winde klemmt"					;
 
 
 // MobName
-CONST STRING MOBNAME_CHESTOLD				= "Old Chest";
-CONST STRING MOBNAME_LEVER					= "Lever";
-CONST STRING MOBNAME_PILLAR					= "Pillar";
-CONST STRING MOBNAME_LADDER					= "Ladder";
+CONST STRING MOBNAME_CHESTOLD				= "Alte Truhe";
+CONST STRING MOBNAME_LEVER					= "Hebel";
+CONST STRING MOBNAME_PILLAR					= "Säule";
+CONST STRING MOBNAME_LADDER					= "Leiter";
 
-CONST STRING MOBNAME_LATI					= "Alchemist's Lab";
-CONST STRING MOBNAME_ORB					= "Magic Orb";
+CONST STRING MOBNAME_LATI					= "Alchemielabor";
+CONST STRING MOBNAME_ORB					= "Magischer Orb";
 
-CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue of Adanos";
+CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue von Adanos";
 
-CONST STRING MOBNAME_WEEDSMASHER			= "Weed smasher";
-CONST STRING MOBNAME_STOMPER				= "Stomper";
+CONST STRING MOBNAME_WEEDSMASHER			= "Unkrautvernichter";
+CONST STRING MOBNAME_STOMPER				= "Stampfer";
 
-CONST STRING MOBNAME_VINEYARD				= "Grapevine";
-CONST STRING MOBNAME_ORE_DEPLETED			= "Depleted Ore";
+CONST STRING MOBNAME_VINEYARD				= "Weinrebe";
+CONST STRING MOBNAME_ORE_DEPLETED			= "Erschöpftes Erz";
 
-CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
-CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
-CONST STRING MOBNAME_ALCHEMIST_01			= "Constantino Alchemist";
+CONST STRING MOBNAME_GR_CHAPEL				= "Zur Kapelle";
+CONST STRING MOBNAME_CHESTMAKER_01			= "Thorbens Werkstatt";
+CONST STRING MOBNAME_ALCHEMIST_01			= "Alchemist Constantino";
 
 
 
@@ -191,21 +191,21 @@ CONST STRING TESTLEVEL_TELEPORT_DI			= "DRAGONISLAND.ZEN";
 
 
 // Graves
-CONST STRING MOBNAME_GRAVE_REVIVED_01		= "Crygreg - 'Happy Anniversary!'";
-CONST STRING MOBNAME_GRAVE_REVIVED_02		= "Macintosh - 'You couldn't have fucking told me this earlier?!'";
-CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Angel - 'Hi Damiaeing.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb - 'Can I help you with a sausage in these troubled times?'";
-CONST STRING MOBNAME_GRAVE_REVIVED_05		= "Alistair - 'Crygreg yearns for Bjorn.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joka - 'The Cocos are invading!'";
-CONST STRING MOBNAME_GRAVE_REVIVED_07		= "bloody - 'The UV mapping here sucks.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_08		= "Thorusus - 'The server release is postponed.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_09		= "Uvi - 'Oh my goodness gracious'";
-CONST STRING MOBNAME_GRAVE_REVIVED_10		= "n00wls - 'unknown111 and his consequences were a disaster for totuka modding scene'";
-CONST STRING MOBNAME_GRAVE_REVIVED_11		= "Asden - 'I dont see how me being 5 times richer than Gomez collapses the economy of the colony.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_12		= "Dave - 'Can you beat Gothic as a digger?'";
-CONST STRING MOBNAME_GRAVE_REVIVED_13		= "Sord - 'My power is MAXIMUM!'";
-CONST STRING MOBNAME_GRAVE_REVIVED_14		= "Arkhan - 'This is Kingdom of Drakania.'";
-CONST STRING MOBNAME_GRAVE_REVIVED_15		= "Konny - 'You are now permabanned.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_01		= "Crygreg – 'Schönes Jubiläum!'";
+CONST STRING MOBNAME_GRAVE_REVIVED_02		= "Macintosh – 'Hättest du mir das nicht verdammt noch mal früher sagen können?!'";
+CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Angel – 'Hallo Damiaeing.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb – 'Kann ich dir in diesen schwierigen Zeiten mit einer Wurst helfen?'";
+CONST STRING MOBNAME_GRAVE_REVIVED_05		= "Alistair Afton – 'Crygreg sehnt sich nach Björn.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joka – 'Die Cocos fallen ein!'";
+CONST STRING MOBNAME_GRAVE_REVIVED_07		= "bloody – 'Das UV-Mapping hier ist scheiße.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_08		= "Thorusus – 'Die Serververöffentlichung wird verschoben.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_09		= "Uvi – 'Oh mein Gott'";
+CONST STRING MOBNAME_GRAVE_REVIVED_10		= "n00wls – 'unknown111 und seine Folgen waren eine Katastrophe für die Totuka-Modding-Szene'";
+CONST STRING MOBNAME_GRAVE_REVIVED_11		= "Asden – 'Ich verstehe nicht, wie die Tatsache, dass ich fünfmal reicher bin als Gomez, die Wirtschaft der Kolonie zum Einsturz bringen soll.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_12		= "Dave – 'Kann man Gothic als Buddler durchspielen?'";
+CONST STRING MOBNAME_GRAVE_REVIVED_13		= "Sord – 'Meine Kraft ist MAXIMAL!'";
+CONST STRING MOBNAME_GRAVE_REVIVED_14		= "Arkhan – 'Das hier ist das Königreich Drakania.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_15		= "Konny – 'Du bist jetzt dauerhaft gesperrt.'";
 
 // Graves (OW)
 CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_01		= "Wegan";
@@ -221,63 +221,63 @@ CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_10		= "Bartired";
 
 
 // Shrines
-const string NAME_PRAYADANOS_GIVENOTHING			= "I will pray and offer nothing.";
-const string NAME_PRAYADANOS_GIVELP1				= "I will pray and offer 1 learn point.";
-const string NAME_PRAYADANOS_GIVELP2				= "I will pray and offer 2 learn points.";
-const string NAME_PRAYADANOS_GIVELP3				= "I will pray and offer 3 learn points.";
-const string NAME_PRAYADANOS_GIVEEXP				= "I will pray and offer 1000 experience.";
+const string NAME_PRAYADANOS_GIVENOTHING			= "Ich will beten und spende nichts.";
+const string NAME_PRAYADANOS_GIVELP1				= "Ich werde beten und 1 Lernpunkt opfern.";
+const string NAME_PRAYADANOS_GIVELP2				= "Ich werde beten und 2 Lernpunkte opfern.";
+const string NAME_PRAYADANOS_GIVELP3				= "Ich werde beten und 3 Lernpunkte opfern.";
+const string NAME_PRAYADANOS_GIVEEXP				= "Ich werde beten und 1000 Erfahrungspunkte opfern.";
 
-const string PRINT_PRAYADANOS_Bless1H				= "Adanos increases your one-handed weapon skills.";
-const string PRINT_PRAYADANOS_Bless2H				= "Adanos increases your two-handed weapon skills.";
-const string Print_PRAYADANOS_BlessBOW				= "Adanos increases your bow skills.";
-const string Print_PRAYADANOS_BlessCBOW				= "Adanos increases your crossbow skills.";
-const string Print_PRAYADANOS_BlessWisp				= "Adanos blesses you.";
-const string Print_PRAYADANOS_BlessNone				= "Adanos thanks you for your prayer.";
-const string Print_PRAYADANOS_BlessCant				= "Adanos can't take your offering.";
-const string PRINT_BlessMANA_MAX					= "Adanos grants you: Mana + ";
+const string PRINT_PRAYADANOS_Bless1H				= "Adanos erhöht deine Fertigkeiten mit Einhandwaffen.";
+const string PRINT_PRAYADANOS_Bless2H				= "Adanos erhöht deine Fertigkeiten mit Zweihandwaffen.";
+const string Print_PRAYADANOS_BlessBOW				= "Adanos erhöht deine Fertigkeiten mit dem Bogen.";
+const string Print_PRAYADANOS_BlessCBOW				= "Adanos erhöht deine Fertigkeiten mit der Armbrust.";
+const string Print_PRAYADANOS_BlessWisp				= "Adanos segnet dich.";
+const string Print_PRAYADANOS_BlessNone				= "Adanos dankt dir für dein Gebet.";
+const string Print_PRAYADANOS_BlessCant				= "Adanos kann deine Opfergabe nicht annehmen.";
+const string PRINT_BlessMANA_MAX					= "Adanos gewährt dir: Mana +";
 
-const string PurifySword							= "Purify Sword (Tears of Innos)";
+const string PurifySword							= "Schwert reinigen (Tränen von Innos)";
 
-const string Print_PRAYBELIAR_GETLP					= "Beliar grants you 1 learn point.";
+const string Print_PRAYBELIAR_GETLP					= "Beliar gewährt dir 1 Lernpunkt.";
 
 
 // Cooking
-const string PRINT_CookingSuccess					= "Recipe prepared!";
-const string PRINT_CookingDesc_MeatStew				= "Prepare a 'Meat Stew'";
-const string PRINT_CookingDesc_FishSoup				= "Prepare a 'Fish Soup'";
-const string PRINT_CookingDesc_MeatbugRagout		= "Prepare a 'Meatbug Ragout'";
-const string PRINT_CookingDesc_RootSoup				= "Prepare a 'Root Soup'";
-const string PRINT_CookingDesc_MinecrawlerSoup		= "Prepare a 'Minecrawler Soup'";
-const string PRINT_CookingDesc_RiceBowl				= "Prepare a 'Rice bowl'";
-const string PRINT_CookingDesc_Marmalade			= "Prepare a 'Berry marmalade'";
-const string PRINT_CookingDesc_FruitSalad			= "Prepare a 'Fruit salad'";
-const string PRINT_CookingDesc_ConvictStew			= "Prepare a 'Convict's Stew'";
+const string PRINT_CookingSuccess					= "Rezept fertig!";
+const string PRINT_CookingDesc_MeatStew				= "Bereite einen 'Fleischeintopf' zu";
+const string PRINT_CookingDesc_FishSoup				= "Bereite eine 'Fischsuppe' zu";
+const string PRINT_CookingDesc_MeatbugRagout		= "Bereite ein 'Fleischwanzenragout' zu";
+const string PRINT_CookingDesc_RootSoup				= "Bereite eine 'Wurzelsuppe' zu";
+const string PRINT_CookingDesc_MinecrawlerSoup		= "Bereite eine 'Minecrawlersuppe' zu";
+const string PRINT_CookingDesc_RiceBowl				= "Bereite eine 'Reisschüssel' zu";
+const string PRINT_CookingDesc_Marmalade			= "Bereite eine 'Beerenmarmelade' zu";
+const string PRINT_CookingDesc_FruitSalad			= "Bereite einen 'Obstsalat' zu";
+const string PRINT_CookingDesc_ConvictStew			= "Bereite einen 'Sträflings-Eintopf' zu";
 
 
 // Alchemy
-const string PRINT_PotionMixSuccess					= "Potions mixed!";
-const string PRINT_BoozeSuccess						= "Booze mixed!";
-const string PRINT_TabakSuccessREVIVED				= "Reefer rolled!";
+const string PRINT_PotionMixSuccess					= "Tränke gemischt!";
+const string PRINT_BoozeSuccess						= "Schnaps gemischt!";
+const string PRINT_TabakSuccessREVIVED				= "Stängel gedreht!";
 
 
 // Skills
-const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";	
+const string PRINT_ADDON_HACKCHANCE					= "Kenntnisse im Buddeln verbessert! (+";	
 
-const string Print_LearnFromBookstand				= "You seem to have learned something new.";
-const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";
-const string Print_XPFromBookstand					= "You seem to have gained a bit of knowledge.";	
+const string Print_LearnFromBookstand				= "Du scheinst etwas Neues gelernt zu haben.";
+const string Print_TalentFromBookstand				= "Du scheinst eine neue Fertigkeit erworben zu haben.";
+const string Print_XPFromBookstand					= "Du scheinst ein wenig Wissen dazugewonnen zu haben.";	
 	
 
-const string PRINT_LearnBowyer						= "Learn: Bowmaking";
-const string PRINT_LearnCooking						= "Learn: Cooking";
-const string PRINT_LearnTobacco						= "Learn: Blend tobacco";
-const string PRINT_LearnBooze						= "Learn: Distill booze";
+const string PRINT_LearnBowyer						= "Erlernen: Bogenbau";
+const string PRINT_LearnCooking						= "Lerne: Kochen";
+const string PRINT_LearnTobacco						= "Erlernen: Tabak mischen";
+const string PRINT_LearnBooze						= "Erlernen: Schnaps brennen";
 
 
 // Output
-const string PRINT_NoMorePicklocks					= "No more lock picks!";
-const string PRINT_Ranged_No_Ammo_Crossbow			= "No more bolts!";
-const string PRINT_Ranged_No_Ammo_Bow				= "No more arrows!";
+const string PRINT_NoMorePicklocks					= "Keine Dietrich mehr!";
+const string PRINT_Ranged_No_Ammo_Crossbow			= "Keine Bolzen mehr!";
+const string PRINT_Ranged_No_Ammo_Bow				= "Keine Pfeile mehr!";
 
 
 // ***************
@@ -707,82 +707,82 @@ const int	BLESS_TALENT_CROSSBOW	= 10;
 
 
 const int 	SPL_TeleportNC				= 90;
-const string NAME_SPL_TeleportNC		= "Teleport to New Camp";
+const string NAME_SPL_TeleportNC		= "Zum neuen Lager teleportieren";
 
 const int 	SPL_TeleportPsi				= 91;
-const string NAME_SPL_TeleportPsi		= "Teleport to Brotherhood";
+const string NAME_SPL_TeleportPsi		= "Zur Bruderschaft teleportieren";
 
 const int 	SPL_TeleportOrc				= 92;
-const string NAME_SPL_TeleportOrc		= "Orc Teleport";
+const string NAME_SPL_TeleportOrc		= "orkischer Teleport";
 
 
 const int	SPL_Telekinesis				= 100;
-const string NAME_SPL_Telekinesis		= "Telekinesis";
+const string NAME_SPL_Telekinesis		= "Telekinese";
 
 const int	SPL_Control					= 101;
-const string NAME_SPL_Control			= "Control";
+const string NAME_SPL_Control			= "Kontrolle";
 
 
 const int	SPL_TrfMeatbug				= 102;
-const string NAME_SPL_TrfMeatbug		= "Transform into Meatbug";
+const string NAME_SPL_TrfMeatbug		= "Verwandlung Fleischwanze";
 
 const int	SPL_TrfMolerat				= 103;
-const string NAME_SPL_TrfMolerat		= "Transform into Molerat";
+const string NAME_SPL_TrfMolerat		= "Verwandlung Molerat";
 
 const int	SPL_TrfBloodfly				= 104;
-const string NAME_SPL_TrfBloodfly		= "Transform into Bloodfly";
+const string NAME_SPL_TrfBloodfly		= "Verwandlung Bloodfly";
 
 const int	SPL_TrfSwampDrone			= 105;
-const string NAME_SPL_TrfSwampDrone		= "Transform into Swampgas drone";
+const string NAME_SPL_TrfSwampDrone		= "In eine Sumpfgas-Drohne verwandeln";
 
 const int	SPL_TrfMinecrawler			= 106;
-const string NAME_SPL_TrfMinecrawler	= "Transform into Minecrawler";
+const string NAME_SPL_TrfMinecrawler	= "Verwandlung Crawler";
 
 const int	SPL_TrfMantis				= 107;
-const string NAME_SPL_TrfMantis			= "Transform into Mantis";
+const string NAME_SPL_TrfMantis			= "In eine Fangheuschrecke verwandeln";
 
 const int	SPL_TrfBoar					= 108;
-const string NAME_SPL_TrfBoar			= "Transform into Boar";
+const string NAME_SPL_TrfBoar			= "In ein Wildschwein verwandeln";
 
 const int	SPL_TrfOrcDog				= 109;
-const string NAME_SPL_TrfOrcDog			= "Transform into Orc Dog";
+const string NAME_SPL_TrfOrcDog			= "Verwandlung Orcdog";
 
 const int	SPL_TrfRazor				= 110;
-const string NAME_SPL_TrfRazor			= "Transform into Razor";
+const string NAME_SPL_TrfRazor			= "In einen Razor verwandeln";
 
 const int	SPL_TrfChomper				= 111;
-const string NAME_SPL_TrfChomper		= "Transform into Chomper";
+const string NAME_SPL_TrfChomper		= "In einen Beißer verwandeln";
 
 const int	SPL_TrfBloodhound			= 112;
-const string NAME_SPL_TrfBloodhound		= "Transform into Bloodhound";
+const string NAME_SPL_TrfBloodhound		= "In einen Bluthund verwandeln";
 
 const int	SPL_TrfHellhound			= 113;
-const string NAME_SPL_TrfHellhound		= "Transform into Hellhound";
+const string NAME_SPL_TrfHellhound		= "In einen Höllenhund verwandeln";
 
 const int	SPL_TrfPanther				= 114;
-const string NAME_SPL_TrfPanther		= "Transform into Panther";
+const string NAME_SPL_TrfPanther		= "In einen Panther verwandeln";
 
 const int	SPL_TrfAlligator			= 115;
-const string NAME_SPL_TrfAlligator		= "Transform into Alligator";
+const string NAME_SPL_TrfAlligator		= "In einen Alligator verwandeln";
 
 const int	SPL_TrfSwampshark			= 116;
-const string NAME_SPL_TrfSwampshark		= "Transform into Swampshark";
+const string NAME_SPL_TrfSwampshark		= "In einen Sumpfhai verwandeln";
 
 const int	SPL_TrfHarpy				= 117;
-const string NAME_SPL_TrfHarpy			= "Transform into Harpy";
+const string NAME_SPL_TrfHarpy			= "In eine Harpie verwandeln";
 
 const int	SPL_TrfTroll				= 118;
-const string NAME_SPL_TrfTroll			= "Transform into Troll";
+const string NAME_SPL_TrfTroll			= "In einen Troll verwandeln";
 
 const int	SPL_TrfGoblin				= 119;
-const string NAME_SPL_TrfGoblin			= "Transform into Goblin";
+const string NAME_SPL_TrfGoblin			= "In einen Goblin verwandeln";
 
 
 const int	SPL_SummonStonepuma			= 120;
-const string NAME_SPL_SummonStonepuma 	= "Summon Stonepuma";
+const string NAME_SPL_SummonStonepuma 	= "Stonepuma beschwören";
 
 const int	SPL_SummonWisp				= 121;
-const string NAME_SPL_SummonWisp		= "Summon Wisp";
+const string NAME_SPL_SummonWisp		= "Wisp beschwören";
 
 
 
@@ -837,69 +837,69 @@ const int NPC_TALENT_TOBACCO			= 21;
 // Swordmaking
 // ***************
 
-const string NAME_1H_COMMON_01_DESC		= "Crude Sword (One-Handed)";
+const string NAME_1H_COMMON_01_DESC		= "Einfaches Schwert (einhändig)";
 
 const int WEAPON_1H_REVIVED_01			= 13;
-const string NAME_1H_REVIVED_01			= "Short Sword";
-const string NAME_1H_REVIVED_01_DESC	= "Short Sword (One-Handed)";
+const string NAME_1H_REVIVED_01			= "Kurzschwert";
+const string NAME_1H_REVIVED_01_DESC	= "Kurzes Schwert (einhändig)";
 const int WEAPON_1H_REVIVED_02			= 14;
-const string NAME_1H_REVIVED_02			= "Long Sword";
-const string NAME_1H_REVIVED_02_DESC	= "Long Sword (One-Handed)";
+const string NAME_1H_REVIVED_02			= "Langschwert";
+const string NAME_1H_REVIVED_02_DESC	= "Langschwert (einhändig)";
 const int WEAPON_1H_REVIVED_03			= 15;
-const string NAME_1H_REVIVED_03			= "Broad Sword";
-const string NAME_1H_REVIVED_03_DESC	= "Broad Sword (One-Handed)";
+const string NAME_1H_REVIVED_03			= "Breitschwert";
+const string NAME_1H_REVIVED_03_DESC	= "Breitschwert (einhändig)";
 const int WEAPON_1H_REVIVED_04			= 16;
-const string NAME_1H_REVIVED_04			= "Sword";
-const string NAME_1H_REVIVED_04_DESC	= "Sword (One-Handed)";
+const string NAME_1H_REVIVED_04			= "sword";
+const string NAME_1H_REVIVED_04_DESC	= "Schwert (einhändig)";
 const int WEAPON_1H_REVIVED_05			= 17;
-const string NAME_1H_REVIVED_05			= "Bastard Sword";
-const string NAME_1H_REVIVED_05_DESC	= "Bastard Sword (One-Handed)";
+const string NAME_1H_REVIVED_05			= "Bastardschwert";
+const string NAME_1H_REVIVED_05_DESC	= "Bastardschwert (einhändig)";
 const int WEAPON_2H_REVIVED_01			= 18;
-const string NAME_2H_REVIVED_01			= "Light Sword";
-const string NAME_2H_REVIVED_01_DESC	= "Light Sword (Two-Handed)";
+const string NAME_2H_REVIVED_01			= "Leichtes Schwert";
+const string NAME_2H_REVIVED_01_DESC	= "Leichtes Schwert (zweihändig)";
 const int WEAPON_2H_REVIVED_02			= 19;
-const string NAME_2H_REVIVED_02			= "Heavy Sword";
-const string NAME_2H_REVIVED_02_DESC	= "Heavy Sword (Two-Handed)";
+const string NAME_2H_REVIVED_02			= "Schweres Schwert";
+const string NAME_2H_REVIVED_02_DESC	= "Schweres Schwert (zweihändig)";
 const int WEAPON_2H_REVIVED_03			= 20;
-const string NAME_2H_REVIVED_03			= "Broad Sword";
-const string NAME_2H_REVIVED_03_DESC	= "Broad Sword (Two-Handed)";
+const string NAME_2H_REVIVED_03			= "Breitschwert";
+const string NAME_2H_REVIVED_03_DESC	= "Breitschwert (zweihändig)";
 const int WEAPON_2H_REVIVED_04			= 21;
-const string NAME_2H_REVIVED_04			= "Sword";
-const string NAME_2H_REVIVED_04_DESC	= "Sword (Two-Handed)";
+const string NAME_2H_REVIVED_04			= "sword";
+const string NAME_2H_REVIVED_04_DESC	= "Schwert (zweihändig)";
 const int WEAPON_2H_REVIVED_05			= 22;
-const string NAME_2H_REVIVED_05			= "Bastard Sword";
-const string NAME_2H_REVIVED_05_DESC	= "Bastard Sword (Two-Handed)";
+const string NAME_2H_REVIVED_05			= "Bastardschwert";
+const string NAME_2H_REVIVED_05_DESC	= "Bastardschwert (zweihändig)";
 
 const int WEAPON_1H_REVIVED_ORE_01		= 23;
-const string NAME_1H_REVIVED_ORE_01		= "Rough Ore Blade";
-const string NAME_1H_REVIVED_ORE_01_DESC= "Rough Ore Blade (One-Handed)";
+const string NAME_1H_REVIVED_ORE_01		= "Rohe Erzklinge";
+const string NAME_1H_REVIVED_ORE_01_DESC= "Rohes Erzschwert (einhändig)";
 const int WEAPON_1H_REVIVED_ORE_02		= 24;
-const string NAME_1H_REVIVED_ORE_02		= "Master Ore Blade";
-const string NAME_1H_REVIVED_ORE_02_DESC= "Master Ore Blade (One-Handed)";
+const string NAME_1H_REVIVED_ORE_02		= "Meister-Erzschwert";
+const string NAME_1H_REVIVED_ORE_02_DESC= "Meister-Erzschwert (einhändig)";
 const int WEAPON_1H_REVIVED_ORE_03		= 25;
-const string NAME_1H_REVIVED_ORE_03		= "Ore Battle Blade";
-const string NAME_1H_REVIVED_ORE_03_DESC= "Ore Battle Blade (One-Handed)";
+const string NAME_1H_REVIVED_ORE_03		= "Erz-Schlachtklinge";
+const string NAME_1H_REVIVED_ORE_03_DESC= "Erz-Kampfschwert (einhändig)";
 const int WEAPON_1H_REVIVED_ORE_04		= 26;
-const string NAME_1H_REVIVED_ORE_04		= "Ore Dragon Slayer";
-const string NAME_1H_REVIVED_ORE_04_DESC= "Ore Dragon Slayer (One-Handed)";
+const string NAME_1H_REVIVED_ORE_04		= "Erz-Drachentöter";
+const string NAME_1H_REVIVED_ORE_04_DESC= "Erz-Drachentöter (einhändig)";
 const int WEAPON_1H_REVIVED_ORE_05		= 27;
-const string NAME_1H_REVIVED_ORE_05		= "Ore Bastard Sword";
-const string NAME_1H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (One-Handed)";
+const string NAME_1H_REVIVED_ORE_05		= "Erz-Bastardschwert";
+const string NAME_1H_REVIVED_ORE_05_DESC= "Erz-Bastardschwert (einhändig)";
 const int WEAPON_2H_REVIVED_ORE_01		= 28;
-const string NAME_2H_REVIVED_ORE_01		= "Master Ore Sword";
-const string NAME_2H_REVIVED_ORE_01_DESC= "Master Ore Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_01		= "Meister-Erzschwert";
+const string NAME_2H_REVIVED_ORE_01_DESC= "Meister-Erzschwert (zweihändig)";
 const int WEAPON_2H_REVIVED_ORE_02		= 29;
-const string NAME_2H_REVIVED_ORE_02		= "Rough Ore Sword";
-const string NAME_2H_REVIVED_ORE_02_DESC= "Rough Ore Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_02		= "Grobes Erzschwert";
+const string NAME_2H_REVIVED_ORE_02_DESC= "Grobes Erzschwert (zweihändig)";
 const int WEAPON_2H_REVIVED_ORE_03		= 30;
-const string NAME_2H_REVIVED_ORE_03		= "Ore Battle Sword";
-const string NAME_2H_REVIVED_ORE_03_DESC= "Ore Battle Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_03		= "Erz-Kampfschwert";
+const string NAME_2H_REVIVED_ORE_03_DESC= "Erz-Kampfschwert (zweihändig)";
 const int WEAPON_2H_REVIVED_ORE_04		= 31;
-const string NAME_2H_REVIVED_ORE_04		= "Heavy Ore Dragon Slayer";
-const string NAME_2H_REVIVED_ORE_04_DESC= "Heavy Ore Dragon Slayer (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_04		= "Schweres Erz-Drachentöter";
+const string NAME_2H_REVIVED_ORE_04_DESC= "Schweres Erz-Drachentöter (zweihändig)";
 const int WEAPON_2H_REVIVED_ORE_05		= 32;
-const string NAME_2H_REVIVED_ORE_05		= "Ore Bastard Sword";
-const string NAME_2H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (Two-Handed)";
+const string NAME_2H_REVIVED_ORE_05		= "Erz-Bastardschwert";
+const string NAME_2H_REVIVED_ORE_05_DESC= "Erz-Bastardschwert (zweihändig)";
 
 
 const int MAX_WEAPONS_MELEE 			= 33;
@@ -912,21 +912,21 @@ var int PLAYER_TALENT_SMITH[MAX_WEAPONS_MELEE];
 // ***************
 
 const int WEAPON_BOW_REVIVED_01			= 1;
-const string NAME_BOW_REVIVED_01		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_01		= "Erz-Bastardschwert";
 const int WEAPON_BOW_REVIVED_02			= 2;
-const string NAME_BOW_REVIVED_02		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_02		= "Erz-Bastardschwert";
 const int WEAPON_BOW_REVIVED_03			= 3;
-const string NAME_BOW_REVIVED_03		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_03		= "Erz-Bastardschwert";
 const int WEAPON_BOW_REVIVED_04			= 4;
-const string NAME_BOW_REVIVED_04		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_04		= "Erz-Bastardschwert";
 const int WEAPON_CBOW_REVIVED_01		= 5;
-const string NAME_CBOW_REVIVED_01		= "Ore Bastard Sword";
+const string NAME_CBOW_REVIVED_01		= "Erz-Bastardschwert";
 const int WEAPON_CBOW_REVIVED_02		= 6;
-const string NAME_CBOW_REVIVED_02		= "Ore Bastard Sword";
+const string NAME_CBOW_REVIVED_02		= "Erz-Bastardschwert";
 const int WEAPON_CBOW_REVIVED_03		= 7;
-const string NAME_CBOW_REVIVED_03		= "Ore Bastard Sword";
+const string NAME_CBOW_REVIVED_03		= "Erz-Bastardschwert";
 const int WEAPON_CBOW_REVIVED_04		= 8;
-const string NAME_CBOW_REVIVED_04		= "Ore Bastard Sword";
+const string NAME_CBOW_REVIVED_04		= "Erz-Bastardschwert";
 
 
 const int MAX_WEAPONS_RANGED 			= 9;

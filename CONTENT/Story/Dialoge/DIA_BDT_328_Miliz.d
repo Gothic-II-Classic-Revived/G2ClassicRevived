@@ -38,11 +38,11 @@ func int DIA_328_Miliz_Hi_Condition ()
 };
 func void DIA_328_Miliz_Hi_Info ()
 {
-	AI_Output (self, other, "DIA_328_Miliz_Hi_08_00"); //Hey, you've got no business here, understand?
-	AI_Output (other, self, "DIA_328_Miliz_Hi_15_01"); //Who are you?
-	AI_Output (self, other, "DIA_328_Miliz_Hi_08_02"); //That's none of your business! I'm the boss here, okay?
-	AI_Output (other, self, "DIA_328_Miliz_Hi_15_03"); //The boss? Of what? Of those chests?
-	AI_Output (self, other, "DIA_328_Miliz_Hi_08_04"); //Hey, the storeroom is under my supervision, got it? So piss off, or else I'll bash in your skull.
+	AI_Output (self, other, "DIA_328_Miliz_Hi_08_00"); //Hey, du hast hier nichts zu suchen, klar?
+	AI_Output (other, self, "DIA_328_Miliz_Hi_15_01"); //Wer bist du?
+	AI_Output (self, other, "DIA_328_Miliz_Hi_08_02"); //Das geht dich nichts an? Ich bin hier der Chef, okay?
+	AI_Output (other, self, "DIA_328_Miliz_Hi_15_03"); //Der Chef? Von was? Von den Kisten?
+	AI_Output (self, other, "DIA_328_Miliz_Hi_08_04"); //Hey, das Lagerhaus untersteht meiner Aufsicht, klar? Also verpiss dich, sonst schlage ich dir den Schädel ein.
 	
 	AI_StopProcessInfos (self);
 	
@@ -69,8 +69,8 @@ func int DIA_328_Miliz_Kill_Condition ()
 };
 func void DIA_328_Miliz_Kill_Info ()
 {
-	AI_Output (self, other, "DIA_328_Miliz_Kill_08_00"); //Hey, you're still here. Didn't I tell you to piss off?
-	AI_Output (self, other, "DIA_328_Miliz_Kill_08_01"); //Now I'll show you who's boss around here!
+	AI_Output (self, other, "DIA_328_Miliz_Kill_08_00"); //Hey, du bist ja immer noch hier. Hatte ich nicht gesagt, du sollst dich verpissen?
+	AI_Output (self, other, "DIA_328_Miliz_Kill_08_01"); //Jetzt zeige ich dir, wer hier der Chef ist!
 	
 	AI_StopProcessInfos (self);
 	Npc_SetRefuseTalk (self,20);

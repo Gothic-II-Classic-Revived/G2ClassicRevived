@@ -42,12 +42,12 @@ func int DIA_PAL_269_HERO_Condition ()
 var int DIA_Ritter_HERO_NoPerm;
 func void DIA_PAL_269_HERO_Info ()
 {
-	AI_Output			(self, other, "DIA_Ritter_HERO_04_00"); //Your appearance here is a sign for all of us. We all draw new courage from it.
+	AI_Output			(self, other, "DIA_Ritter_HERO_04_00"); //Dein Auftauchen hier ist ein Zeichen für uns alle. Wir alle schöpfen daraus neuen Mut.
 
 	if (DIA_Ritter_HERO_NoPerm == FALSE)
 		{
-			AI_Output			(self, other, "DIA_Ritter_HERO_04_01"); //We know that our lads in the city have not forgotten us. The Eye of Innos watches over us.
-			AI_Output			(self, other, "DIA_Ritter_HERO_04_02"); //And if the orcs and dragons storm the gates, we shall meet them upright, to victory or death.
+			AI_Output			(self, other, "DIA_Ritter_HERO_04_01"); //Wir wissen, dass unsere Jungs in der Stadt uns nicht vergessen werden. Innos' Auge blickt auf uns.
+			AI_Output			(self, other, "DIA_Ritter_HERO_04_02"); //Und wenn auch die Orks und Drachen die Tore stürmen, dann werden wir ihnen aufrecht entgegen gehen, bis zum Sieg oder zum Tod.
 			DIA_Ritter_HERO_NoPerm = TRUE;
 		};
 };

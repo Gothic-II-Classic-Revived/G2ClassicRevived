@@ -11,7 +11,7 @@
 
 INSTANCE REVIVED_LEARN_ALCHEMY_ALL(C_Item)
 {
-	name = "DEBUG (Potion Learn)";
+	name = "DEBUG (Tränke erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -89,7 +89,7 @@ func void use_REVIVED_LEARN_ALCHEMY_ALL()
 
 INSTANCE REVIVED_LEARN_SMITHING_ALL(C_Item)
 {
-	name = "DEBUG (Smithing Learn)";
+	name = "DEBUG (Schmieden erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -129,7 +129,7 @@ func void use_REVIVED_LEARN_SMITHING_ALL()
 
 INSTANCE REVIVED_LEARN_BOWMAKING_ALL(C_Item)
 {
-	name = "DEBUG (Bowmaking Learn)";
+	name = "DEBUG (Bogenbau erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -159,7 +159,7 @@ func void use_REVIVED_LEARN_BOWMAKING_ALL()
 
 INSTANCE REVIVED_LEARN_RUNES_ALL(C_Item)
 {
-	name = "DEBUG (Runes Learn)";
+	name = "DEBUG (Runen erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -210,7 +210,7 @@ func void use_REVIVED_LEARN_RUNES_ALL()
 
 INSTANCE REVIVED_LEARN_TROPHIES_ALL(C_Item)
 {
-	name = "DEBUG (Trophies Learn)";
+	name = "DEBUG (Trophäen erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -245,7 +245,7 @@ func void use_REVIVED_LEARN_TROPHIES_ALL()
 
 INSTANCE REVIVED_LEARN_TALENTS_ALL(C_Item)
 {
-	name = "DEBUG (Talent Learn)";
+	name = "DEBUG (Talente erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;

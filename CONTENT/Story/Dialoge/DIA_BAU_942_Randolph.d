@@ -31,7 +31,7 @@ instance DIA_Randolph_SchwereLuft		(C_INFO)
 	condition	 = 	DIA_Randolph_SchwereLuft_Condition;
 	information	 = 	DIA_Randolph_SchwereLuft_Info;
 	permanent  	 =  FALSE;
-	description	 = 	"Everything all right?";
+	description	 = 	"Alles Klar?";
 };
 func int DIA_Randolph_SchwereLuft_Condition ()
 {	
@@ -44,14 +44,14 @@ func int DIA_Randolph_SchwereLuft_Condition ()
 };
 func void DIA_Randolph_SchwereLuft_Info ()
 {
-	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_00"); //Everything all right?
-	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm... as soon as anyone says anything wrong around here, the dance starts... so watch your step, or there'll be a slaughter.
-	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_02"); //Will you join the fight?
-	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_03"); //I'm not going to just stand here when the ruckus starts. But I'm not going to push it either.
+	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_00"); //Alles Klar?
+	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm ... sobald hier einer was Falsches sagt, geht der Tanz los ... also halt lieber die Füße still, sonst gibt's ein Gemetzel...
+	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_02"); //Kämpfst du mit?
+	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_03"); //Ich werde nicht hier herum stehen, wenn der Tanz beginnt. Aber ich werd's auch nicht herauf beschwören.
 	Akils_SLDStillthere = TRUE;
 	Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
-	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries."); 
+	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akils Hof wird von Söldnern bedroht."); 
 	B_NpcClearObsessionByDMT (self);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -64,7 +64,7 @@ instance DIA_Randolph_HALLO		(C_INFO)
 	condition	 = 	DIA_Randolph_HALLO_Condition;
 	information	 = 	DIA_Randolph_HALLO_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"Everything all right?";
+	description	 = 	"Alles Klar?";
 };
 
 func int DIA_Randolph_HALLO_Condition ()
@@ -78,21 +78,21 @@ func int DIA_Randolph_HALLO_Condition ()
 };
 func void DIA_Randolph_HALLO_Info ()
 {
-	AI_Output (other, self, "DIA_Randolph_HALLO_15_00"); //Everything all right?
+	AI_Output (other, self, "DIA_Randolph_HALLO_15_00"); //Alles Klar?
 	
 	if Npc_IsDead (Akil)
 	&& Npc_IsDead (Kati)
 	{
-		AI_Output (self, other, "DIA_Randolph_HALLO_06_01"); //Now that Kati and Akil have been taken to the realm of Innos, I'm going to run the farm.
+		AI_Output (self, other, "DIA_Randolph_HALLO_06_01"); //Jetzt, da Kati und Akil in Innos' Reich eingekehrt sind, werde ich den Hof führen.
 		
-		Npc_ExchangeRoutine (self,"START");
+		Npc_ExchangeRoutine (self,"Start");
 		AI_ContinueRoutine  (self);
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Randolph_HALLO_06_02"); //Yes, I'm fine. That Alvares has become bolder and bolder lately. Good thing that's over now.
+		AI_Output (self, other, "DIA_Randolph_HALLO_06_02"); //Ja, mir geht's gut. Dieser Alvares ist in letzter Zeit immer dreister geworden. Gut, dass es jetzt vorbei ist.
 	};
-	AI_Output (self, other, "DIA_Randolph_HALLO_06_03"); //What I could use now is a good drop in the tavern.
+	AI_Output (self, other, "DIA_Randolph_HALLO_06_03"); //Jetzt bräuchte ich einen kräftigen Schluck in der Taverne.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -105,7 +105,7 @@ instance DIA_Randolph_Baltram		(C_INFO)
 	condition	 = 	DIA_Randolph_Baltram_Condition;
 	information	 = 	DIA_Randolph_Baltram_Info;
 	permanent  	 =  FALSE;
-	description	 = 	"Baltram sent me...";
+	description	 = 	"Ich komme von Baltram...";
 };
 
 func int DIA_Randolph_Baltram_Condition ()
@@ -123,8 +123,8 @@ func int DIA_Randolph_Baltram_Condition ()
 
 func void DIA_Randolph_Baltram_Info ()
 {
-	AI_Output (other, self, "DIA_Randolph_Baltram_15_00"); //Baltram sent me. I'm supposed to pick up his shipment.
-	AI_Output (self, other, "DIA_Randolph_Baltram_06_01"); //Good. I've already prepared everything. Here's your package.
+	AI_Output (other, self, "DIA_Randolph_Baltram_15_00"); //Baltram schickt mich. Ich soll seine Lieferung abholen.
+	AI_Output (self, other, "DIA_Randolph_Baltram_06_01"); //Gut. Ich habe schon alles fertig gemacht. Hier ist das Paket.
 	CreateInvItems 	(self, ItMi_BaltramPaket, 1 );
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
@@ -140,7 +140,7 @@ instance DIA_Randolph_Geschichte		(C_INFO)
 	condition	 = 	DIA_Randolph_Geschichte_Condition;
 	information	 = 	DIA_Randolph_Geschichte_Info;
 	permanent	 =  FALSE;
-	description	 = 	"You're not from around here, right?";
+	description	 = 	"Du kommst nicht aus der Gegend, richtig?";
 };
 
 func int DIA_Randolph_Geschichte_Condition ()
@@ -154,24 +154,24 @@ func int DIA_Randolph_Geschichte_Condition ()
 
 func void DIA_Randolph_Geschichte_Info ()
 {
-	AI_Output (other, self, "DIA_Randolph_Geschichte_15_00"); //You're not from around here, right?
-	AI_Output (self, other, "DIA_Randolph_Geschichte_06_01"); //I come from the southern isles. At some point they said they needed people in Khorinis, because of that magic ore.
-	AI_Output (self, other, "DIA_Randolph_Geschichte_06_02"); //But when I got there, they had this huge barrier in place. And I didn't want to go in there. So I started working in the harbor.
-	AI_Output (self, other, "DIA_Randolph_Geschichte_06_03"); //Well, the ships stopped coming in, and so I went to work for Akil. I've had worse jobs, actually.
+	AI_Output (other, self, "DIA_Randolph_Geschichte_15_00"); //Du kommst nicht aus der Gegend, richtig?
+	AI_Output (self, other, "DIA_Randolph_Geschichte_06_01"); //Ich komme von den südlichen Inseln. Irgendwann hieß es, sie bräuchten Leute in Khorinis, wegen dem magischen Erz.
+	AI_Output (self, other, "DIA_Randolph_Geschichte_06_02"); //Aber als ich ankam, war da diese riesige Barriere. Und da wollte ich nicht rein. Ich hab dann angefangen, im Hafen zu arbeiten.
+	AI_Output (self, other, "DIA_Randolph_Geschichte_06_03"); //Nun, seitdem keine Schiffe mehr kommen, bin ich halt zu Akil gegangen. Na ja, ich hab schon schlechtere Jobs gemacht.
 };
 /*
 	Du kommst nicht aus der Gegend, richtig? 
-	Ich komme von den s�dlichen Inseln. Irgendwann hie� es, sie br�uchten Leute in Khorinis, wegen dem magischen Erz. 
+	Ich komme von den sdlichen Inseln. Irgendwann hie es, sie bruchten Leute in Khorinis, wegen dem magischen Erz. 
 	Aber als ich ankam war da diese riesige Barriere. Und da wollte ich nicht rein. Ich hab dann angefangen im Hafen zu arbeiten. 
 	Und seitdem keine Schiffe mehr kommen, bin ich halt zu Akil gegangen. Naja, ich hab schon schlechtere Jobs gemacht.  
 	
 	
 	Hey, ich kenne da noch jemanden, der dir ein paar Sachen besorgen kann. 
-	Ein Freund, der mit mir zusammen aus dem S�den gekommen ist. 
-	Aber ich brauche 10 Goldm�nzen, um beim Wett - Trinken in der Taverne mitzumachen.  
+	Ein Freund, der mit mir zusammen aus dem Sden gekommen ist. 
+	Aber ich brauche 10 Goldmnzen, um beim Wett - Trinken in der Taverne mitzumachen.  
 	Also wenn du die Info willst, dann gib mir das Gold. 
 	
-//Wenn du die Taverne suchst dann geh einfach �ber die Br�cke und folge dem Weg, dann kommst direkt daran vorbei.
+//Wenn du die Taverne suchst dann geh einfach ber die Brcke und folge dem Weg, dann kommst direkt daran vorbei.
 */
 ///////////////////////////////////////////////////////////////////////
 //	Info Taverne
@@ -183,7 +183,7 @@ instance DIA_Randolph_TAVERNE		(C_INFO)
 	condition	 = 	DIA_Randolph_TAVERNE_Condition;
 	information	 = 	DIA_Randolph_TAVERNE_Info;
 
-	description	 = 	"You hang out in the tavern?";
+	description	 = 	"Du gehst in die Taverne?";
 };
 
 func int DIA_Randolph_TAVERNE_Condition ()
@@ -212,7 +212,7 @@ instance DIA_Randolph_WASISTINTAVERNE		(C_INFO)
 	condition	 = 	DIA_Randolph_WASISTINTAVERNE_Condition;
 	information	 = 	DIA_Randolph_WASISTINTAVERNE_Info;
 
-	description	 = 	"What exactly is going on there in the tavern?";
+	description	 = 	"Was genau passiert dort in der Taverne?";
 };
 
 func int DIA_Randolph_WASISTINTAVERNE_Condition ()
@@ -232,7 +232,7 @@ func void DIA_Randolph_WASISTINTAVERNE_Info ()
 	AI_Output			(self, other, "DIA_Randolph_WASISTINTAVERNE_06_03"); //In the end, I did nothing but lose, and now I need to make some more money first.
 	Log_CreateTopic (TOPIC_Wettsaufen, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Wettsaufen, LOG_RUNNING);
-	B_LogEntry (TOPIC_Wettsaufen,"There are bets on at the tavern."); 
+	B_LogEntry (TOPIC_Wettsaufen,"In der Taverne wird gewettet."); 
 
 };
 
@@ -246,7 +246,7 @@ instance DIA_Randolph_GEGENWEN		(C_INFO)
 	condition	 = 	DIA_Randolph_GEGENWEN_Condition;
 	information	 = 	DIA_Randolph_GEGENWEN_Info;
 
-	description	 = 	"Who did you go up against?";
+	description	 = 	"Gegen wen bist du angetreten?";
 };
 
 func int DIA_Randolph_GEGENWEN_Condition ()
@@ -267,8 +267,8 @@ func void DIA_Randolph_GEGENWEN_Info ()
 	AI_Output			(self, other, "DIA_Randolph_GEGENWEN_06_04"); //Somebody ought to sneak some plain water into his chest. Then he could lace my beer all he wants.
 	AI_Output			(self, other, "DIA_Randolph_GEGENWEN_06_05"); //If only I had enough money to compete against him one more time.
 
-	B_LogEntry (TOPIC_Wettsaufen,"Randolph told me about Rukhar and the drinking contest. Randolph doesn't have enough money to compete against Rukhar again."); 
-	B_LogEntry (TOPIC_Wettsaufen,"Randolph suspects Rukhar of cheating in the drinking contest. Randolph would like to swap the gin bottle in Rukhar's chest for a bottle of water."); 
+	B_LogEntry (TOPIC_Wettsaufen,"Randolph erzählte mir von Rukhar und seinem Wettsaufen. Randolph hat nicht genug Geld um nochmal gegen Rukhar anzutreten."); 
+	B_LogEntry (TOPIC_Wettsaufen,"Randolph hat den Verdacht, dass Rukhar beim Wettsaufen betrügt. Randolph würde die Flasche Wacholder in Rukhars Truhe am liebsten mit einer Flasche Wasser vertauschen."); 
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -281,7 +281,7 @@ instance DIA_Randolph_WASBRAUCHSTDU		(C_INFO)
 	condition	 = 	DIA_Randolph_WASBRAUCHSTDU_Condition;
 	information	 = 	DIA_Randolph_WASBRAUCHSTDU_Info;
 
-	description	 = 	"How much money do you need for the contest?";
+	description	 = 	"Wie viel Geld brauchst du für den Wettkampf?";
 };
 
 func int DIA_Randolph_WASBRAUCHSTDU_Condition ()
@@ -311,7 +311,7 @@ instance DIA_Randolph_ICHGEBEDIRGELD		(C_INFO)
 	information	 = 	DIA_Randolph_ICHGEBEDIRGELD_Info;
 	permanent	 =  TRUE;
 
-	description	 = 	"I'll give you the money to compete against Rukhar.";
+	description	 = 	"Ich gebe dir das Geld für den Wettkampf gegen Rukhar.";
 };
 
 var int DIA_Randolph_ICHGEBEDIRGELD_noPerm;
@@ -335,7 +335,7 @@ func void DIA_Randolph_ICHGEBEDIRGELD_Info ()
 			AI_Output			(self, other, "DIA_Randolph_ICHGEBEDIRGELD_06_01"); //(enthusiastically) Really? Thank you so much. I'll repay you soon.
 			AI_Output			(self, other, "DIA_Randolph_ICHGEBEDIRGELD_06_02"); //If I win, I'll even fork out a little more than that. I'll be seeing you.
 		
-			B_LogEntry (TOPIC_Wettsaufen,"The bet's on. I should watch this."); 
+			B_LogEntry (TOPIC_Wettsaufen,"Die Wette läuft. Das sollte ich weiter beobachten."); 
 			B_GivePlayerXP (XP_Randolph_WettkampfStart);
 		
 			DIA_Randolph_ICHGEBEDIRGELD_noPerm = TRUE;
@@ -366,7 +366,7 @@ instance DIA_Randolph_WETTKAMPFZUENDE		(C_INFO)
 	information	 = 	DIA_Randolph_WETTKAMPFZUENDE_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Hangover?";
+	description	 = 	"Kopfschmerzen?";
 };
 
 func int DIA_Randolph_WETTKAMPFZUENDE_Condition ()
@@ -417,7 +417,7 @@ instance DIA_Randolph_PERM		(C_INFO)
 	information	 = 	DIA_Randolph_PERM_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Are you crazy?";
+	description	 = 	"Geht's dir gut?";
 };
 
 func int DIA_Randolph_PERM_Condition ()
@@ -463,7 +463,7 @@ func void DIA_Randolph_PERM_Info ()
 					};
 					Log_CreateTopic (TOPIC_HealRandolph, LOG_MISSION);
 					Log_SetTopicStatus(TOPIC_HealRandolph, LOG_RUNNING);
-					B_LogEntry (TOPIC_HealRandolph,"Randolph's supposedly given up drinking and has sent me to see Sagitta the herb witch and get her to give me something for his withdrawal symptoms."); 
+					B_LogEntry (TOPIC_HealRandolph,"Randolph hat angeblich mit dem Saufen aufgehört und schickt mich nun zu Sagitta der Kräuterhexe um ihm ein Mittel zu besorgen gegen seine Entzugserscheinungen."); 
 
 					MIS_HealRandolph = LOG_RUNNING;
 				}
@@ -485,7 +485,7 @@ instance DIA_Randolph_Heilung		(C_INFO)
 	information	 = 	DIA_Randolph_Heilung_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Booze got to your head, huh?";
+	description	 = 	"Das Saufen ist dir zu Kopf gestiegen, was?";
 };
 
 func int DIA_Randolph_Heilung_Condition ()
@@ -515,7 +515,7 @@ instance DIA_Randolph_SAGITTAHEAL		(C_INFO)
 	condition	 = 	DIA_Randolph_SAGITTAHEAL_Condition;
 	information	 = 	DIA_Randolph_SAGITTAHEAL_Info;
 
-	description	 = 	"Here. This will ease your withdrawal symptoms. ";
+	description	 = 	"Hier. Das wird deinen Entzug lindern.";
 };
 
 func int DIA_Randolph_SAGITTAHEAL_Condition ()

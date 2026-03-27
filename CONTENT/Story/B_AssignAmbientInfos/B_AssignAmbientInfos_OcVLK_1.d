@@ -30,7 +30,7 @@ INSTANCE DIA_OCVLK_1_PEOPLE(C_INFO)
 	condition	= DIA_OCVLK_1_PEOPLE_Condition;
 	information	= DIA_OCVLK_1_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who's in command here?";
+	description = "Wer hat hier das Kommando?";
 };                       
 
 FUNC INT DIA_OCVLK_1_PEOPLE_Condition()
@@ -44,8 +44,8 @@ FUNC INT DIA_OCVLK_1_PEOPLE_Condition()
 
 FUNC VOID DIA_OCVLK_1_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_OCVLK_1_PEOPLE_15_00"); //Who's in command here?
-	AI_Output (self, other, "DIA_OCVLK_1_PEOPLE_01_01"); //Commander Garond. But since the situation here has become worse, he has not been seen outside the throne room. I'm afraid that will come to a bad end.
+	AI_Output (other, self, "DIA_OCVLK_1_PEOPLE_15_00"); //Wer hat hier das Kommando?
+	AI_Output (self, other, "DIA_OCVLK_1_PEOPLE_01_01"); //Kommandant Garond. Aber seit sich die Lage hier zugespitzt hat, hat er sich nicht mehr außerhalb seines Thronsaals blicken lassen. Ich fürchte, das nimmt kein gutes Ende.
 };
 
 // *************************************************************************
@@ -57,7 +57,7 @@ INSTANCE DIA_OCVLK_1_LOCATION(C_INFO)
 	condition	= DIA_OCVLK_1_LOCATION_Condition;
 	information	= DIA_OCVLK_1_LOCATION_Info;
 	permanent	= TRUE;
-	description = "What do you know about the Valley of Mines?";
+	description = "Was weißt du über das Minental?";
 };                       
 
 FUNC INT DIA_OCVLK_1_LOCATION_Condition()
@@ -71,9 +71,9 @@ FUNC INT DIA_OCVLK_1_LOCATION_Condition()
 
 FUNC VOID DIA_OCVLK_1_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_OCVLK_1_LOCATION_15_00"); //What do you know about the Valley of Mines?
-	AI_Output (self, other, "DIA_OCVLK_1_LOCATION_01_01"); //A few of our boys are at the mines and still prospecting, as far as I know.
-	AI_Output (self, other, "DIA_OCVLK_1_LOCATION_01_02"); //I wouldn't want to trade with them. The whole valley is swarming with orcs. Not to mention the dragons.
+	AI_Output (other, self, "DIA_OCVLK_1_LOCATION_15_00"); //Was weißt du über das Minental?
+	AI_Output (self, other, "DIA_OCVLK_1_LOCATION_01_01"); //Ein paar von unseren Jungs sind bei den Minen und schürfen noch, soviel ich weiß.
+	AI_Output (self, other, "DIA_OCVLK_1_LOCATION_01_02"); //Ich möchte nicht mit denen tauschen. Im ganzen Tal wimmelt es nur so von Orks. Ganz zu schweigen von den Drachen.
 };
 
 // *************************************************************************
@@ -85,7 +85,7 @@ INSTANCE DIA_OCVLK_1_STANDARD(C_INFO)
 	condition	= DIA_OCVLK_1_STANDARD_Condition;
 	information	= DIA_OCVLK_1_STANDARD_Info;
 	permanent	= TRUE;
-	description = "How are things?";
+	description = "Wie sieht's aus?";
 };                       
 func INT DIA_OCVLK_1_STANDARD_Condition()
 {
@@ -93,22 +93,22 @@ func INT DIA_OCVLK_1_STANDARD_Condition()
 };
 FUNC VOID DIA_OCVLK_1_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_OCVLK_1_STANDARD_15_00"); //How are things?
+	AI_Output (other, self, "DIA_OCVLK_1_STANDARD_15_00"); //Wie sieht's aus?
 		
 	if (Kapitel <= 3)
 	{
-		AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_01"); //The orcs have us right where they want us! Without reinforcements, none of us here will survive! I'm amazed the dragons haven't finished us off completely.
+		AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_01"); //Die Orks haben uns in der Zange! Ohne Unterstützung wird das hier keiner von uns überleben! Mich wundert, dass die Drachen uns nicht direkt den Rest geben!
 	};
 	
 	if (Kapitel == 4)
 	{
 		if (MIS_KilledDragons < 4)
 		{
-			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_02"); //At least we'll finally get some reinforcements.
+			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_02"); //Endlich bekommen wir zumindest ein bisschen Verstärkung hier.
 		}
 		else
 		{
-			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_03"); //I heard that all the dragons have been slain? Thank Innos!
+			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_03"); //Ich habe gehört, alle Drachen sind getötet worden? Innos sei Dank!
 		};
 	};
 
@@ -116,11 +116,11 @@ FUNC VOID DIA_OCVLK_1_STANDARD_Info()
 	{
 		if (MIS_OCGateOpen == FALSE)
 		{
-			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_04"); //This accursed ore. We should throw our entire ore supply down from the battlements. Maybe the orcs will leave us in peace then.
+			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_04"); //Dieses verfluchte Erz. Wir sollten den ganzen Erzvorrat von den Zinnen werfen. Vielleicht lassen uns die Orks dann in Ruhe.
 		}
 		else
 		{
-			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_05"); //Those ridiculous boxes which they have piled up haphazardly in front of the entrance will do nothing to deter the orcs!
+			AI_Output (self,other,"DIA_OCVLK_1_STANDARD_01_05"); //Diese lächerlichen Kisten, die sie notdürftig vor den Eingang gestapelt haben, werden die Orks auch nicht aufhalten!
 		};
 	};
 };

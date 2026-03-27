@@ -29,13 +29,13 @@ FUNC VOID Use_BookstandRevived_MAGIC1_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0,"");										
-					Doc_PrintLines	( nDocID,  0,"All magic originates from the magic powers of the user. The user is called a magician.");
+					Doc_PrintLines	( nDocID,  0,"Alle Zauber werden durch die magische Energie des Anwenders ausgelöst.Der Anwender wird als Magier bezeichnet.");
 					Doc_PrintLine	( nDocID,  0,"");
-					Doc_PrintLines	( nDocID,  0,"Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
+					Doc_PrintLines	( nDocID,  0,"Jede Aktivierung eines Zaubers kostet den Magier einen Teil seiner Kraft. diese Kraft wird als Mana bezeichnet.");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1,"");
-					Doc_PrintLines	( nDocID,  1,"When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use. ");
+					Doc_PrintLines	( nDocID,  1,"Als die Götter den Menschen die Fähigkeit zur Magie schenkten, schenkten sie ihnen auch das Wissen magische Runen herzustellen. Die Diener der Götter haben die ehrenvolle Aufgabe übernommen, diese Artefakte göttlicher Macht zu erschaffen und zu benutzen, wobei der Kreis des Magiers bestimmt, welche Zauber er in der Lage ist zu verstehen und anzuwenden.");
 					Doc_PrintLine	( nDocID,  1,"");
 					
 					Doc_Show		( nDocID );
@@ -65,14 +65,14 @@ FUNC VOID Use_BookstandRevived_MAGIC2_S1()
 					Doc_SetMargins	( nDocID,  0,  270, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0,"Elementary Arcanum");
+					Doc_PrintLine	( nDocID,  0,"Elementare Arcanei");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   				); 	
-					Doc_PrintLines	( nDocID,  0,"The Place of Magic in the Order of the Worldly");
+					Doc_PrintLines	( nDocID,  0,"Einordung der Magie in das Gefüge des Irdischen");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"Much research has taken place on magic and its relation to the elements. It is just to claim that magic represents the perfect element. It has the power to transform all the elements and to shape them, which means it is superior to them.");
+					Doc_PrintLines	( nDocID,  0,"Viel wurde geforscht über die Magie und ihrer Stellung zu den Elementen. Man kann mit Fug und Recht behaupten, dass die Magie als das absolute Element angesehen werden kann. Sie hat die Macht alle Elmente zu verändern und zu formen und ist ihnen somit augenscheinlich übergestellt.");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 					Doc_PrintLine	( nDocID,  1, "");
@@ -80,7 +80,7 @@ FUNC VOID Use_BookstandRevived_MAGIC2_S1()
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1,"Each element, when viewed in its purest form, unearths a connection to magic. Natural connections of this kind can only be found in very few places, and they are highly sought-after. A magus' ability to conjure up the elements, seemingly from nothing, proves that the power of magic is the purest, greatest good in existence.");
+					Doc_PrintLines	( nDocID,  1,"Eine Verbindung von Element und Magie bringt jedes Element in seiner reinsten Form zutage, so gibt es an wenigen Stellen natürliche Vorkommen solcher Verbindungen und sie sind gar sehr begehrt. Auch die Fähigkeiten eines Magus Elemente scheinbar aus dem Nichts zu erschaffen sind Beweis, dass die magische Kraft das reinste und höchste Gut darstellt, das existiert.");
 					
 					Doc_Show		( nDocID );
 					
@@ -109,15 +109,15 @@ FUNC VOID Use_BookstandRevived_MAGIC3_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0,"True Power");
+					Doc_PrintLine	( nDocID,  0,"Wahre Macht");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   				); 	
-					Doc_PrintLines	( nDocID,  0,"The Sacred Duty of the Skillful");
+					Doc_PrintLines	( nDocID,  0,"Die heilige Pflicht des Kundigen");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"It is power that distinguishes a magus from his fellow men. Equipped with the ability to influence the divine power, he is a being independent of the laws of nature which apply to mortal man.");
+					Doc_PrintLines	( nDocID,  0,"Es ist seine Macht, die den Magus von den normalen Menschen unterscheidet. Er, ausgestattet mit der Fähigkeit göttliche Kraft zu beeinflussen, ist ein Wesen, für welches die normalen Grenzen des Sterblichen nicht gelten müssen.");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 					Doc_PrintLine	( nDocID,  1, "");
@@ -126,7 +126,7 @@ FUNC VOID Use_BookstandRevived_MAGIC3_S1()
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1,"Once a magus has reached a stage which enables him to rise above the limits of his existence, he can place himself on a higher plane than that in which mortal man lives. He can break through the boundaries of time and space, and not even death, the eve of existence, can stop him.");
+					Doc_PrintLines	( nDocID,  1,"Hat der Magus erst einmal einen Grad erreicht, der es ihm ermöglicht die Grenzen seines Daseins zu sprengen, so kann er sich selbst auf eine Stufe über der des normalen Sterblichen stellen. Er kann Grenzen von Raum und Zeit durchdringen, selbst das Ende allen Seins, der Tod, ist kein Hindernis auf seinem Weg.");
 					
 					Doc_Show		( nDocID );
 					
@@ -156,20 +156,20 @@ FUNC VOID Use_BookstandRevived_MAGIC4_S1()
 
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0,"The Secrets of Magic");
+					Doc_PrintLine	( nDocID,  0,"Geheimnisse der Zauberei");
 					
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"The magic is not inherent in the magus himself, he is far more able to work it. The only skill he possesses is the ability to influence and guide magic. A disciple of the art of magic must be able to use his spirit as a tool.");
+					Doc_PrintLines	( nDocID,  0,"Dem Magus selbst wohnt wohl keine Magie inne, er ist vielmehr in der Lage sich ihrer zu bedienen. Er selbst hat ausschließlich die Fähigkeit die Magie zu beeinflussen und zu lenken. Der in der Hohen Kunst der Magie eingeweihte Adept muss in der Lage sein, seinen Geist als Werkzeug zu benutzen");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1,"His spirit serves as a vessel for the all-encompassing arcane power ... to shape it, focus it and finally release it into the world we know. During these moments of total concentration, the magus' spirit rises above our sphere and gazes upon the Other Side, the home of power. The magus himself is but a conductor and shaper of that power.");
+					Doc_PrintLines	( nDocID,  1,"Sein Geist ist es, der die allumgebene Arkane Kraft sammelt, sie formt, bündelt und letztendlich in die uns zugängliche Welt entlässt. Während dieser Zeit höchster Konzentration gelingt es dem Magus mit seinem Geist unsere Sphäre zu durchdringen und auf die Andere Seite zu blicken, von dort kommt die Kraft, der Magus selbst ist nur Leiter und Former dieser Kraft.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1,"Barthos of Laran");
+					Doc_PrintLine	( nDocID,  1,"Barthos von Laran");
 
 					Doc_Show		( nDocID );
 					
@@ -199,18 +199,18 @@ FUNC VOID Use_BookstandRevived_MAGIC5_S1()
 
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0," ");
-					Doc_PrintLine	( nDocID,  0,"A Gift from the Gods");
+					Doc_PrintLine	( nDocID,  0,"Göttergabe");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"Man has been trying to fathom the nature and origins of magic for centuries. But where should the search begin? How does one describe magic? It is the most conflicting power that has ever been known. It can kill and it can heal, it can create and it can destroy.");
+					Doc_PrintLines	( nDocID,  0,"Seit Jahrhunderten versucht man das Wesen und den Ursprung der Magie zu ergründen. Doch wo soll man suchen? Wie kann man sie beschreiben? Sie ist die widersprüchlichste Kraft, die wir kennen. Sie kann töten und gleichzeitig heilen, Sie kann formen und zerstören.");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1,"What does such power look like? Where can a man find this invisible, yet incredibly powerful force? Magic is what it is. It is the most marvelous and the most powerful gift the gods have ever given us. It is the divine gift presented to users and  weavers of magic. A healing power that only a few chosen ones are able to control.");	
+					Doc_PrintLines	( nDocID,  1,"Wie sieht eine solche Kraft aus ? Wo kann man diese unsichtbare und doch so mächtige Kraft finden? Die Magie ist das, was sie ist. Das herrlichste und zugleich mächtigste Geschenk der Götter. Dem Nutzer und Wirker dieser Kraft ist damit auch ein göttliches Geschenk gegeben. Eine heilige Kraft, die nur wenige Auserwählte in der Lage sind zu kontrollieren.");	
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1,"Barthos of Laran");
+					Doc_PrintLine	( nDocID,  1,"Barthos von Laran");
 
 					Doc_Show		( nDocID );
 					
@@ -240,14 +240,14 @@ FUNC VOID Use_BookstandRevived_MAGIC6_S1()
 
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
+					Doc_PrintLines	( nDocID,  0,"Manche Zauber können mit einer bestimmten größeren Anzahl von magischer Energie gespeist werden, diese werden auch Aufladungszauber genannt.");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
+					Doc_PrintLines	( nDocID,  0,"Andere Zauber werden aufrechterhalten, solange der Magier sein Mana in dieses Spruch einfliessen lässt. Solche Zauber heissen Investierungszauber.");
 
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1,"The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
+					Doc_PrintLines	( nDocID,  1,"Das besondere an diesen magischen Formeln ist, das sie, obwohl als Runen geschaffen,von jedem der magische Energie in sich trägt gesprochen werden können.Die Magie die diese Formeln umgibt, kann sofort aktiviert werden. Es gibt keine Einschränkungen für Teleportationszauber.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 
@@ -277,21 +277,21 @@ FUNC VOID Use_BookstandRevived_MAGIC7_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1);  //  0 -> margins are in pixels
 					
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0,"A Powerful Art");
+					Doc_PrintLine	( nDocID,  0,"Machtvolle Kunst");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_SetFont 	( nDocID, -1, FONT_Book);
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"A Work for Those Instructed in the Arcane Art");
+					Doc_PrintLines	( nDocID,  0,"Ein Werk für den Eingweihten der Arkanen Kunst");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"A magician's ability to control the divine power grows. At first, it appears like a small seed in a field. It must be tended or it will wither. But once the seed begins to grow, its splendor unfolds.");
+					Doc_PrintLines	( nDocID,  0,"Die Fähigkeiten die göttliche Macht zu kanalisieren wächst in dem Magier. Anfangs keimt sie nur wie ein kleiner Schössling auf dem Feld und man muss ihn pflegen, damit er nicht verkümmert. Doch wenn dieser Schössling erst einmal herangewachsen ist, entfaltet er seine volle Pracht");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1,"It continues to grow with each passing day. The same applies to a receptive magus. His powers may be weak to begin with, but given time they will wax and thrive, unfolding a power whose limits are unforeseeable. To guide this power to the point of perfection is the sacred duty of every magus, for the seed sown by the gods is the greatest gift a mortal can receive.");
+					Doc_PrintLines	( nDocID,  1,"Er wächst und wächst und wird stärker mit jedem Tag. So ergeht es auch dem gelehrigen Magus. Seine anfänglich sehr geringen Kräfte wachsen und gedeihen und entfalten mit der Zeit eine Macht, die in ihrer Vollendung nicht absehbar ist. Diese Macht zu ihrer höchsten Vollendung zu führen ist die heilige Pflicht eines jeden Magus, denn dieser Schößling gesät von den Göttern selbst ist das größte Geschenk, welches ein Sterblicher empfangen kann.");
 					
 					Doc_Show		( nDocID );
 					
@@ -313,19 +313,19 @@ FUNC VOID UseGolemBook1()
 		Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga" , 0		);
 		Doc_SetFont 	( nDocID, -1, "font_10_book.tga"); 
 		Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1);
-		Doc_PrintLine	( nDocID,  0,"ARCANUM GOLUM - Volume I");
+		Doc_PrintLine	( nDocID,  0,"Arkanum Golum - Band I");
 		Doc_PrintLine	( nDocID,  0, "=====================");
-		Doc_PrintLines	( nDocID,  0,"(Magic of the Golems)");
+		Doc_PrintLines	( nDocID,  0,"(Magie der Golems)");
 		Doc_PrintLine	( nDocID,  0, "");
-		Doc_PrintLines	( nDocID,  0,"Only who has been confronted with these creatures that came from the elements can truly understand how much respect these magical beings will teach an adventurous wanderer.");
+		Doc_PrintLines	( nDocID,  0,"Nur wer schon einmal einem dieser aus den Elementen erschaffenen Kreaturen begegnet ist, wird wirklich verstehen, welchen Respekt diese magieschen Wesen einem abenteuerlustigen Wanderer einflößen können.");
 		Doc_PrintLine	( nDocID,  0, "");
 
 		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
-		Doc_PrintLine	( nDocID,  1,"Stone Golem");
+		Doc_PrintLine	( nDocID,  1,"Steingolem");
 		Doc_PrintLine	( nDocID,  1,"------------");
-		Doc_PrintLines	( nDocID,  1,"These colossuses of stone are nearly invulnerable in battle. Swords, axes and bows do not seem to do any damage to these monsters.");
+		Doc_PrintLines	( nDocID,  1,"Diese steinernen Kolosse sind im Kampf fast unverwundbar. Schwerter, Äxte und Bögen scheinen diesen Monstren nichts anhaben zu können.");
 		Doc_PrintLine	( nDocID,  1, "");
-		Doc_PrintLines	( nDocID,  1,"The only plausible report of a battle against such a leviathan was written by a mercenary. He reported how the blunt hit of a war hammer caused cracks in the golem, until it finally burst apart.");
+		Doc_PrintLines	( nDocID,  1,"Der einzige glaubhafte Bericht von der Bezwingung eines solchen Leviathans stammt von einem Söldner. Er schrieb davon, wie der stumpfe Aufprall seines Kriegshammers Risse in den Golem trieb, bis dieser schlußendlich zerbarst.");
 
 		Doc_Show		( nDocID );
 					
@@ -347,21 +347,21 @@ FUNC VOID UseGolemBook2()
 		Doc_SetFont 	( nDocID, -1, "font_10_book.tga"); 
 
 		Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-		Doc_PrintLine	( nDocID,  0,"ARCANUM GOLUM - Volume II");
+		Doc_PrintLine	( nDocID,  0,"Arkanum Golum - Band II");
 		Doc_PrintLine	( nDocID,  0, "======================");
 		Doc_PrintLine	( nDocID,  0, "");
-		Doc_PrintLine	( nDocID,  0,"Ice Golem");
+		Doc_PrintLine	( nDocID,  0,"Eisgolem");
 		Doc_PrintLine	( nDocID,  0,"---------");
-		Doc_PrintLines	( nDocID,  0,"The ice golems are somehow related to the stone golems, though their physical substance seems to consist of water. Any familiar weapon seems to slide off the surface of this icy being.");
-		Doc_PrintLines	( nDocID,  0,"Adventurous wanderers be warned of this creature's icy breath as well, because it surrounds the unsuspecting with a pillar of ice.");
+		Doc_PrintLines	( nDocID,  0,"Den Steingolems verwandt sind die Eisgolems, deren physische Substanz jedoch völlig aus gefrorenem Wasser zu bestehen scheint. Jede uns bekannte Waffe scheint an der glatten Oberfläche dieser eisigen Wesen abzugleiten.");
+		Doc_PrintLines	( nDocID,  0,"Auch sei der abenteuerlustige Wanderer gewarnt vor dem Eisatem dieser Kreatur, schließt sie doch jeden Ahnungslosen im Nu in einer Säule aus Eis ein.");
 
 		Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
-		Doc_PrintLines	( nDocID,  1,"A Magician of Fire reported an encounter with such a creature, but apparently he didn't see much of a threat in it.");
+		Doc_PrintLines	( nDocID,  1,"Einst berichtete ein Feuermagier von der Begegnung mit einem solchen Geschöpf, doch schien er keine ernste Bedrohung darin erkannt zu haben.");
 		Doc_PrintLine	( nDocID,  1, "");
-		Doc_PrintLine	( nDocID,  1,"Fire Golem");
+		Doc_PrintLine	( nDocID,  1,"Feuergolem");
 		Doc_PrintLine	( nDocID,  1,"------------");
-		Doc_PrintLines	( nDocID,  1,"According to reports, these fiery beings can convert their victims into a sea of flames with only one touch.");
-		Doc_PrintLines	( nDocID,  1,"It was only last year that a group of hunters met such a walking mound of embers. There is no report on the outcome of the encounter, but apparently lightning bolts and ice had some effect on the hellish creature.");
+		Doc_PrintLines	( nDocID,  1,"Berichten zufolge können diese feurigen Geschöpfe ihre Opfer mit nur einer Berührung in ein Flammenmeer verwandeln.");
+		Doc_PrintLines	( nDocID,  1,"Erst im letzten Jahr stieß eine Jagdgruppe im Hochland auf solch einen wandelnden Gluthaufen. Der Ausgang ist unklar, doch sollen Blitze und Eis die Höllenkreatur gestoppt haben.");
 		
 		Doc_Show		( nDocID );
 					

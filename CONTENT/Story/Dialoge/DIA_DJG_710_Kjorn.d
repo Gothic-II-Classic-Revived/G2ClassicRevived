@@ -63,7 +63,7 @@ INSTANCE DIA_Kjorn_TRADE   (C_INFO)
 	information = DIA_Kjorn_TRADE_Info;
 	Trade		= TRUE;
 	permanent   = TRUE;
-	description	= "What can you offer me?";
+	description	= "Was kannst du mir anbieten?";
 				
 };
 
@@ -89,7 +89,7 @@ INSTANCE DIA_Kjorn_SellInfos   (C_INFO)
 	condition   = DIA_Kjorn_SellInfos_Condition;
 	information = DIA_Kjorn_SellInfos_Info;
 	permanent   = FALSE;
-	description	= "Do you sell information as well?";
+	description	= "Verkaufst du auch Informationen?";
 				
 };
 
@@ -107,7 +107,7 @@ FUNC VOID DIA_Kjorn_SellInfos_Info()
 };
 
 //*********************************************************************
-//	Ich brauche Infos �ber.. 
+//	Ich brauche Infos ber.. 
 //*********************************************************************
 INSTANCE DIA_Kjorn_BuyInfos   (C_INFO)
 {
@@ -116,7 +116,7 @@ INSTANCE DIA_Kjorn_BuyInfos   (C_INFO)
 	condition   = DIA_Kjorn_BuyInfos_Condition;
 	information = DIA_Kjorn_BuyInfos_Info;
 	permanent   = TRUE;
-	description	= "I need some information.";
+	description	= "Ich brauche Informationen.";
 				
 };
 
@@ -134,11 +134,11 @@ FUNC VOID DIA_Kjorn_BuyInfos_Info()
 	AI_Output 	(self ,other,"DIA_Kjorn_BuyInfos_06_01"); //50 gold pieces!
 	
 	Info_ClearChoices (DIA_Kjorn_BuyInfos);
-	Info_AddChoice (DIA_Kjorn_BuyInfos,"That's too expensive for me.",DIA_Kjorn_BuyInfos_HoldMoney);	
+	Info_AddChoice (DIA_Kjorn_BuyInfos,"Das ist mir zu teuer.",DIA_Kjorn_BuyInfos_HoldMoney);	
 	
 	IF (Npc_HasItems (other,ItMi_Gold) >=50)
 	{	
-		Info_AddChoice (DIA_Kjorn_BuyInfos,"Yes, here.",DIA_Kjorn_BuyInfos_GiveMoney);
+		Info_AddChoice (DIA_Kjorn_BuyInfos,"Ja, hier.",DIA_Kjorn_BuyInfos_GiveMoney);
 	};	
 };
 
@@ -158,7 +158,7 @@ FUNC VOID DIA_Kjorn_BuyInfos_GiveMoney ()
 	
 	Info_ClearChoices (DIA_Kjorn_BuyInfos);
 	
-	//----- Zur�ck -----
+	//----- Zurck -----
 	
 	Info_AddChoice (DIA_Kjorn_BuyInfos,DIALOG_BACK,DIA_Kjorn_BuyInfos_Back);
 	
@@ -166,45 +166,45 @@ FUNC VOID DIA_Kjorn_BuyInfos_GiveMoney ()
 	
 	if KjornToldDragon == 0
 	{
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... about the dragons.",DIA_Kjorn_BuyInfos_Dragon1);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...über die Drachen.",DIA_Kjorn_BuyInfos_Dragon1);
 	}
 	else if KjornToldDragon == 1
 	{
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... more about the dragons.",DIA_Kjorn_BuyInfos_Dragon2);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...mehr über die Drachen.",DIA_Kjorn_BuyInfos_Dragon2);
 	};
 	
 	//----- Das Minental -----
 	
 	if KjornToldColony == 0
 	{	
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... about the Valley of Mines.",DIA_Kjorn_BuyInfos_Colony1);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...über das Minental.",DIA_Kjorn_BuyInfos_Colony1);
 	}
 	else if KjornToldColony == 1
 	{
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... more about the Valley of Mines.",DIA_Kjorn_BuyInfos_Colony2);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...mehr über das Minental.",DIA_Kjorn_BuyInfos_Colony2);
 	};
 	
 	//----- die Burg -----
 	
 	if KJornToldOldCamp == 0
 	{
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... about the castle.",DIA_Kjorn_BuyInfos_OldCamp1);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...über die Burg.",DIA_Kjorn_BuyInfos_OldCamp1);
 	};
 	
 	//----- Die Orks -----
 	
 	if KjornToldOrks == 0
 	{
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... about the orcs.",DIA_Kjorn_BuyInfos_Orks1);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...über die Orks.",DIA_Kjorn_BuyInfos_Orks1);
 	}
 	else if KjornToldOrks == 1
 	{
-		Info_AddChoice	(DIA_Kjorn_BuyInfos,"... more about the orcs.",DIA_Kjorn_BuyInfos_Orks2);
+		Info_AddChoice	(DIA_Kjorn_BuyInfos,"...mehr über die Orks.",DIA_Kjorn_BuyInfos_Orks2);
 	};	
 	
 };
 
-//------ Zur�ck -----
+//------ Zurck -----
 
 FUNC VOID DIA_Kjorn_BuyInfos_Back ()
 {
@@ -235,7 +235,7 @@ FUNC VOID DIA_Kjorn_BuyInfos_Dragon2 ()
 	AI_Output (self ,other,"DIA_Kjorn_BuyInfos_Dragon2_06_02"); //Some of them could cover the entire land with a layer of ice several feet thick.
 	AI_Output (self ,other,"DIA_Kjorn_BuyInfos_Dragon2_06_03"); //Others prefer living in swampy surroundings, or in volcanoes.
 	
-	B_LogEntry (TOPIC_DRACHENJAGD,"Kjorn the Dragon Hunter thinks there are different kinds of dragons. Some supposedly prefer cold, damp places, others seem to like fire better."); 
+	B_LogEntry (TOPIC_DRACHENJAGD,"Kjorn der Drachenjäger ist der Meinung, dass es verschiedene Arten von Drachen gibt. Einige halten sich angeblich lieber in kalten oder feuchten Gebieten auf, während andere das Feuer bevorzugen."); 
 
 	KjornToldDragon = 2;
 	Info_ClearChoices (DIA_Kjorn_BuyInfos);
@@ -314,7 +314,7 @@ INSTANCE DIA_Kjorn_AllDragonsDead   (C_INFO)
 	condition   = DIA_Kjorn_AllDragonsDead_Condition;
 	information = DIA_Kjorn_AllDragonsDead_Info;
 	permanent   = FALSE;
-	description	= "I killed all the dragons!";
+	description	= "Ich habe alle Drachen getötet!";
 				
 };
 

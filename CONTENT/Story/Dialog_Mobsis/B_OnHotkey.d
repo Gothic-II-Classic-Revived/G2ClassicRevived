@@ -298,12 +298,12 @@ func void PLAYER_HOTKEY_LAME_POTION()
 				}
 				else
 				{
-					Print ("No mana potions available!");
+					Print ("Keine Manatränke vorhanden!");
 				};
 		 }
 		 else
 		 {
-				Print ("Max. mana already reached!");
+				Print ("Bereits Maximales Mana!");
 		 };
 	};
 };
@@ -356,12 +356,12 @@ if (Npc_IsInState (hero,ZS_Dead)==FALSE)
 				}
 				else
 				{
-					Print ("No healing potions available!");
+					Print ("Keine Heiltränke vorhanden!");
 				};
 		 }
 		 else
 		 {
-				Print ("Maximum Hitpoints already reached!");
+				Print ("Bereits Maximale Lebensenergie!");
 		 };
 	};
 };

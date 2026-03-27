@@ -47,15 +47,15 @@ FUNC VOID DIA_OUT_1_STANDARD_Info()
 	
 	if (randy == 0)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_00"); //Since the Barrier around the penal colony disappeared, we've had constant trouble with bandits.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_00"); //Seit die Barriere um die Strafkolonie weg ist, haben wir ständig Ärger mit Banditen.
 	};
 	if (randy == 1)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_01"); //The militia can't be relied on. We have to defend ourselves.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_01"); //Auf die Miliz ist kein Verlass. Wir müssen uns selbst verteidigen.
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_02"); //I won't let myself be used by anybody. Neither the king, nor fat Onar. I fight only for myself.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_02"); //Ich lass mich für niemanden einspannen. Weder vom König, noch von dem fetten Onar. Ich kämpfe nur für mich selbst.
 	};
 	
 	AI_StopProcessInfos	(self);

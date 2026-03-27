@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_OrcWarrior(C_Npc)			
 {
 	//----- Monster -----
-	name							=	"Orc Warrior";
+	name							=	"Ork Krieger";
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCWARRIOR;
 	voice							=	18;

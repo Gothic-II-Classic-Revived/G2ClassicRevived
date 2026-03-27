@@ -30,7 +30,7 @@ instance DIA_Mil_309_Stadtwache_Hallo		(C_INFO)
 	condition	 = 	DIA_Mil_309_Stadtwache_Hallo_Condition;
 	information	 = 	DIA_Mil_309_Stadtwache_Hallo_Info;
 	permanent	 =  TRUE;
-	description	 = 	"What's up?";
+	description	 = 	"Wie steht's?";
 };
 func int DIA_Mil_309_Stadtwache_Hallo_Condition ()
 {
@@ -38,40 +38,40 @@ func int DIA_Mil_309_Stadtwache_Hallo_Condition ()
 };
 func void DIA_Mil_309_Stadtwache_Hallo_Info ()
 {
-	AI_Output (other, self, "DIA_Mil_309_Stadtwache_Hallo_15_00"); //What's up?
+	AI_Output (other, self, "DIA_Mil_309_Stadtwache_Hallo_15_00"); //Wie steht's?
 	if (hero.guild == GIL_MIL)
 	|| (hero.guild == GIL_PAL)
 	|| (hero.guild == GIL_KDF)
 	{
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_01"); //All is quiet. We shall keep our eyes peeled.
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_01"); //Alles ruhig. Wir halten weiter die Augen offen.
 	}
 	else if (Stadtwache_310.aivar[AIV_PASSGATE] == FALSE)
 	&& (MIl_309_News < 1)
 	{
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_02"); //Now listen. We can't let you into the city.
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_03"); //But I'll give you a tip, and it's completely free of charge.
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_04"); //Stay well away from this forest in front of us - it's haunted by ferocious monsters.
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_02"); //Pass mal auf - du kommst nicht in die Stadt.
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_03"); //Aber ich will dir mal 'nen Tipp geben, der ist auch ganz umsonst.
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_04"); //Halt dich von dem Wald hier vorne fern - da streunen gefährliche Monster rum.
 		
 		MIl_309_News = 1;
 	}
 	else if  (Stadtwache_310.aivar[AIV_PASSGATE] == FALSE)
 	&&		 (MIl_309_News == 1)
 	{	
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_05"); //Crawl back under your rock, you lowlife!
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_05"); //Kriech zurück unter deinen Stein, Penner!
 	};
 	
 	if  (Stadtwache_310.aivar[AIV_PASSGATE] == TRUE)
 	&&  (MIl_309_News < 2)
 	{
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_06"); //Listen - you now have access to the city. But that doesn't mean that you can do whatever you want around here.
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_07"); //If you don't stick to the rules, you'll lose all your rights here!
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_06"); //Hör Mal - du hast jetzt Zugang zur Stadt. Aber das heißt nicht, dass du hier machen kannst, was du willst.
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_07"); //Wenn du dich nicht an die Regeln hältst, verlierst du hier alle Rechte!
 		
 		MIl_309_News = 2;
 	}
 	else if (Stadtwache_310.aivar[AIV_PASSGATE] == TRUE)
 	&& 		(MIl_309_News == 2)
 	{
-		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_08"); //Move on - go ahead!
+		AI_Output (self, other, "DIA_Mil_309_Stadtwache_Hallo_06_08"); //Weitergehen - na mach schon!
 	};
 	
 	

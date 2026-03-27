@@ -47,15 +47,15 @@ FUNC VOID DIA_STRF_13_STANDARD_Info()
 	
 	if (randy == 0)
 	{
-		AI_Output (self,other,"DIA_STRF_13_STANDARD_13_00"); //Leave me alone, man!
+		AI_Output (self,other,"DIA_STRF_13_STANDARD_13_00"); //Lass mich in Frieden, Mann!
 	};
 	if (randy == 1)
 	{
-		AI_Output (self,other,"DIA_STRF_13_STANDARD_13_01"); //What do you want from me? Leave me in peace!
+		AI_Output (self,other,"DIA_STRF_13_STANDARD_13_01"); //Was willst du von mir? Lass mich in Ruhe!
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_STRF_13_STANDARD_13_02"); //We're all going to die here!
+		AI_Output (self,other,"DIA_STRF_13_STANDARD_13_02"); //Wir werden hier alle sterben!
 	};
 	
 	AI_StopProcessInfos	(self);

@@ -6,9 +6,9 @@
 //****************************************************
 FUNC VOID B_ENTER_NEWWORLD_Kapitel_1 ()
 {
-		// ------ Gilden-Attitüden ändern ------
+		// ------ Gilden-Attitden ndern ------
 
-		// ------ TAs ändern ------
+		// ------ TAs ndern ------
 		if (ENTERED_ADDONWORLD == TRUE)
 		{
 			if (SC_GotPORTALTEMPELWALKTHROUGHKey == FALSE)
@@ -29,12 +29,12 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_2 ()
 	
 	if (EnterNW_Kapitel2 == FALSE)
 	{
-		// ------ Gilden-Attitüden ändern ------
+		// ------ Gilden-Attitden ndern ------
 
-		// ------ Immortal-Flags löschen ------
+		// ------ Immortal-Flags lschen ------
 		//Joly: NOV_600_Pedro bleibt erst noch immortel -> Pedro klaut das Auge Innos im Kapitel 3 
 		
-		// ------ TAs ändern ------
+		// ------ TAs ndern ------
 		
 		// ------ Respawn ------
 	 	Wld_InsertNpc 	(Gobbo_Skeleton, 	"FP_ROAM_MEDIUMFOREST_KAP2_24");
@@ -93,7 +93,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_2 ()
   		Wld_InsertNpc 	(Gobbo_Green,	"NW_BIGFARM_LAKE_MONSTER_05_01"); 
   		Wld_InsertNpc 	(Gobbo_Green,	"NW_BIGFARM_LAKE_MONSTER_05_01"); 
   		Wld_InsertNpc 	(Gobbo_Green,	"NW_BIGFARM_LAKE_MONSTER_05_01"); 
-		//Joly:Xardas Secret-Area (gegenüber vom Turm in den Bergen.)
+		//Joly:Xardas Secret-Area (gegenber vom Turm in den Bergen.)
 		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
 			Wld_InsertItem		(ITAM_REVIVED_DEX_01,		"FP_ROAM_XARDAS_SECRET_26");
@@ -123,14 +123,14 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 {
 	if (EnterNW_Kapitel3 == FALSE)
 	{
-		// ------ Gilden-Attitüden ändern ------
+		// ------ Gilden-Attitden ndern ------
 		if (Npc_IsDead(Salandril)== FALSE)
 		{Salandril.aivar[AIV_ToughGuy] 	= TRUE;};
 
-		// ------ Immortal-Flags löschen ------
+		// ------ Immortal-Flags lschen ------
 		Cornelius.Flags = 0;
 
-		// ------ TAs ändern ------
+		// ------ TAs ndern ------
 
 		if ((!Npc_IsDead (Dyrian)) && (hero.guild != GIL_KDF))
 		{
@@ -147,17 +147,17 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		if (Npc_IsDead (DiegoNW))
 		{ 
 			Wld_InsertNpc (PC_THIEF_NW ,"NW_CITY_ENTRANCE_01");
-			B_StartOtherRoutine (DiegoNW,"START");		//zur Sicherheit
+			B_StartOtherRoutine (DiegoNW,"Start");		//zur Sicherheit
 		};
 		if (Npc_IsDead (GornNW_vor_DJG))
 		{ 
 			Wld_InsertNpc (PC_Fighter_NW_vor_DJG ,"BIGFARM");
-			B_StartOtherRoutine (GornNW_vor_DJG,"START");		//zur Sicherheit
+			B_StartOtherRoutine (GornNW_vor_DJG,"Start");		//zur Sicherheit
 		};
 
 		if (Npc_IsDead (Lares) == FALSE)
 		{ 
-			B_StartOtherRoutine (Lares,"START");		//damit er auch wieder in der Stadt steht
+			B_StartOtherRoutine (Lares,"Start");		//damit er auch wieder in der Stadt steht
 		};
 
 		Wld_InsertNpc 	(DMT_DementorAmbientSpeaker,"NW_PASS_GATE_02");		//Im Pass
@@ -391,11 +391,11 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 {
 	if (EnterNW_Kapitel4 == FALSE)
 	{
-		// ------ Gilden-Attitüden ändern ------
+		// ------ Gilden-Attitden ndern ------
 		
-		// ------ Immortal-Flags löschen ------
+		// ------ Immortal-Flags lschen ------
 
-		// ------ TAs ändern ------
+		// ------ TAs ndern ------
 		if (Npc_GetDistToWP(Salandril,"ALTAR")<10000) 
 		{B_StartOtherRoutine	(Salandril,"Start"); };
 
@@ -404,8 +404,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 	
 		// ------ Respawn ------
 	
-		//***********GILDEN_UN_ABHÄNGIG*****************************************
-		//Joly: Dienen nur als Hint für Spieler , die´s raffen und sich über die "strangen" Sachen wundern, die für andere Gilden bestimmt sind!!
+		//***********GILDEN_UN_ABHNGIG*****************************************
+		//Joly: Dienen nur als Hint fr Spieler , dies raffen und sich ber die "strangen" Sachen wundern, die fr andere Gilden bestimmt sind!!
 		Wld_InsertItem	(ItAt_DragonEgg_MIS , "FP_ITEM_XARDAS_01"); 	
 		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDASCAVE_DJG_01");
 		Wld_InsertNpc	(Draconian, "FP_ROAM_XARDASCAVE_DJG_02");
@@ -423,8 +423,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
  		Wld_InsertNpc 	(DragonSnapper, 	"NW_FARM3_BIGWOOD_04");
 		Wld_InsertNpc 	(Maya_Troll, 		"NW_TROLLAREA_RUINS_41");
 	
-		//***********GILDENABHÄNGIG*****************************************
-		//AntiPaladine für den Paladin 
+		//***********GILDENABHNGIG*****************************************
+		//AntiPaladine fr den Paladin 
 		if (hero.Guild == GIL_PAL)
 		{
 		Wld_InsertNpc	(OrcElite_AntiPaladin1, "NW_FARM3_PATH_BRIDGE");
@@ -479,7 +479,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_42");
 		
 		Wld_InsertNpc	(OrcWarrior_Roam, "FP_ROAM_CITY_TO_FOREST_41");
-		Wld_InsertNpc	(OrcElite_AntiPaladin, 	"XARDAS"); 
+		Wld_InsertNpc	(OrcElite_AntiPaladin, 	"Xardas"); 
 	
 		Wld_InsertNpc	(OrcElite_AntiPaladin, "NW_BIGFARM_FARM4_PATH_04");
 		Wld_InsertNpc	(OrcWarrior_Roam, "FP_PICK_NW_FARM4_FIELD_01");
@@ -703,11 +703,11 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 {
 	if (EnterNW_Kapitel5 == FALSE)
 	{
-		// ------ Gilden-Attitüden ändern ------
+		// ------ Gilden-Attitden ndern ------
 		
-		// ------ Immortal-Flags löschen ------
+		// ------ Immortal-Flags lschen ------
 
-		// ------ TAs ändern ------
+		// ------ TAs ndern ------
 	B_RemoveNpc	(Xardas); 
 	B_StartOtherRoutine	(Lester,"XardasWeg"); 
 
@@ -747,7 +747,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
  	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_MOUNTAINLAKE_05");
 	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_MOUNTAINLAKE_05");
 
-	Wld_InsertNpc 		(NONE_101_Mario		, 	"NW_CITY_ENTRANCE_01");	// Mario, Seesoldat fürs 6. Kapitel (Bösewicht)
+	Wld_InsertNpc 		(NONE_101_Mario		, 	"NW_CITY_ENTRANCE_01");	// Mario, Seesoldat frs 6. Kapitel (Bsewicht)
 
 	Wld_InsertItem		(ItWr_HallsofIrdorath_Mis , 	"FP_NW_ITEM_LIBRARY_IRDORATHBOOK"); 	 	
 	Wld_InsertItem		(ItWr_Seamap_Irdorath 	, 		"FP_NW_ITEM_LIBRARY_SEAMAP"); 	
@@ -881,11 +881,11 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_6 ()
 {
 	if (EnterNW_Kapitel6 == FALSE)
 	{
-		// ------ Gilden-Attitüden ändern ------
+		// ------ Gilden-Attitden ndern ------
 		
-		// ------ Immortal-Flags löschen ------
+		// ------ Immortal-Flags lschen ------
 
-		// ------ TAs ändern ------
+		// ------ TAs ndern ------
 
 		// ------ Respawn ------
 
@@ -894,7 +894,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_6 ()
 };
 
 // ******************************************************************************************************************************************************************
-// B_ENTER_NEWWORLD			 (wird über INIT_NEWWORLD in der NW beim Betreten aufgerufen (Beispiel: für DJG, die erst nach dem 1.Betreten der OW eingesetzt werden))
+// B_ENTER_NEWWORLD			 (wird ber INIT_NEWWORLD in der NW beim Betreten aufgerufen (Beispiel: fr DJG, die erst nach dem 1.Betreten der OW eingesetzt werden))
 // ******************************************************************************************************************************************************************
 
 FUNC VOID B_ENTER_NEWWORLD ()	

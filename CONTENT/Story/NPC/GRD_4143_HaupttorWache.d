@@ -2,7 +2,7 @@
 instance GRD_4143_HaupttorWache (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Castle Gate Guard"; 
+	name 		= "Burgtorwache"; 
 	guild 		= GIL_MIL;
 	id 			= 4143;
 	voice 		= 13;

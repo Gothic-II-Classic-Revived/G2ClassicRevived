@@ -42,7 +42,7 @@ func int DIA_Cedric_Hallo_Condition ()
 };
 func void DIA_Cedric_Hallo_Info ()
 {
-	AI_Output (self, other, "DIA_Cedric_Hallo_12_00"); //I am Cedric the swordmaster, paladin of the king.
+	AI_Output (self, other, "DIA_Cedric_Hallo_12_00"); //Ich bin Schwertmeister Cedric, Paladin des Königs.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -55,7 +55,7 @@ instance DIA_Cedric_CanTeach		(C_INFO)
 	condition	 = 	DIA_Cedric_CanTeach_Condition;
 	information	 = 	DIA_Cedric_CanTeach_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Could you train me?";
+	description	 = 	"Kannst du mich trainieren?";
 };
 func int DIA_Cedric_CanTeach_Condition ()
 {	
@@ -66,17 +66,17 @@ func int DIA_Cedric_CanTeach_Condition ()
 };
 func void DIA_Cedric_CanTeach_Info ()
 {
-	AI_Output (other, self, "DIA_Cedric_CanTeach_15_00"); //Can you train me?
+	AI_Output (other, self, "DIA_Cedric_CanTeach_15_00"); //Kannst du mich trainieren?
 	
 	if (other.guild == GIL_PAL)
 	{
-		AI_Output (self, other, "DIA_Cedric_CanTeach_12_01"); //I can train you in combat with one-handed weapons.
+		AI_Output (self, other, "DIA_Cedric_CanTeach_12_01"); //Ich kann dich im Kampf mit einhändigen Waffen trainieren.
 		Cedric_Teach1H = TRUE;
-		B_LogEntry (TOPIC_CityTeacher,"Paladin Cedric can teach me to fight with one-handed weapons.");
+		B_LogEntry (TOPIC_CityTeacher,"Paladin Cedric kann mich im Kampf mit Einhändern unterweisen.");
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Cedric_CanTeach_12_02"); //I only train paladins.
+		AI_Output (self, other, "DIA_Cedric_CanTeach_12_02"); //Ich trainiere nur Paladine.
 	};
 	
 };
@@ -90,7 +90,7 @@ INSTANCE DIA_Cedric_Teach(C_INFO)
 	condition	= DIA_Cedric_Teach_Condition;
 	information	= DIA_Cedric_Teach_Info;
 	permanent	= TRUE;
-	description = "I want to train.";
+	description = "Ich will trainieren";
 };                       
 //----------------------------------
 var int DIA_Cedric_Teach_permanent;

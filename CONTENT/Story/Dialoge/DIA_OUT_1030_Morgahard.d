@@ -32,7 +32,7 @@ instance DIA_Morgahard_HALLO		(C_INFO)
 	condition	 = 	DIA_Morgahard_HALLO_Condition;
 	information	 = 	DIA_Morgahard_HALLO_Info;
 
-	description	 = 	"You are Morgahard.";
+	description	 = 	"Du bist Morgahard.";
 };
 
 func int DIA_Morgahard_HALLO_Condition ()
@@ -42,48 +42,48 @@ func int DIA_Morgahard_HALLO_Condition ()
 
 func void DIA_Morgahard_HALLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_15_00"); //You are Morgahard.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_01"); //How come you know my name?
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_15_02"); //The judge is looking for you. You fled from his jail.
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_15_03"); //What did you do, then? Steal his wallet?
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_04"); //Not his. The governor's. And on his behalf, too.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_05"); //After we attacked the governor, he didn't want to share the booty with us and had us arrested.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_06"); //We didn't want to wind up on the gallows, so we fled.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_07"); //We thought they'd never catch us that way. That seems to have been a mistake.
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_15_00"); //Du bist Morgahard.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_01"); //Woher kennst du meinen Namen?
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_15_02"); //Der Richter sucht nach dir. Du bist aus seinem Gefängnis geflohen.
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_15_03"); //Was hast du angestellt? Seine Brieftasche geklaut?
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_04"); //Nicht seine. Die des Stadthalters. Und das auch noch in seinem Auftrag.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_05"); //Nachdem wir den Stadthalter überfallen haben, wollte er die Beute nicht mit uns teilen und hat uns verhaften lassen.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_06"); //Wir wollten nicht am Galgen enden, also sind wir geflohen.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_07_07"); //Wir dachten, so würden sie uns niemals kriegen. Das war wohl ein Irrtum.
 
 	Info_ClearChoices	(DIA_Morgahard_HALLO);
-	Info_AddChoice	(DIA_Morgahard_HALLO, "Stop whining and draw your weapon.", DIA_Morgahard_HALLO_attack );
-	Info_AddChoice	(DIA_Morgahard_HALLO, "What can we do against the judge?", DIA_Morgahard_HALLO_richter );
-	Info_AddChoice	(DIA_Morgahard_HALLO, "The judge ordered me to kill you.", DIA_Morgahard_HALLO_tot );
-	B_LogEntry (TOPIC_RichterLakai,"I've found Morgahard, the leader of the fugitives."); 
+	Info_AddChoice	(DIA_Morgahard_HALLO, "Hör auf zu jammern und zieh deine Waffe.", DIA_Morgahard_HALLO_attack );
+	Info_AddChoice	(DIA_Morgahard_HALLO, "Was können wir gegen den Richter unternehmen?", DIA_Morgahard_HALLO_richter );
+	Info_AddChoice	(DIA_Morgahard_HALLO, "Der Richter gab mir den Auftrag, dich zu töten.", DIA_Morgahard_HALLO_tot );
+	B_LogEntry (TOPIC_RichterLakai,"Ich habe den Anführer der Flüchtlinge Morgahard gefunden."); 
 	SCFoundMorgahard = TRUE;
 	B_GivePlayerXP (XP_FoundMorgahard);
 };
 func void DIA_Morgahard_HALLO_tot ()
 {
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_tot_15_00"); //The judge ordered me to kill you.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_tot_07_01"); //Yeah, sure. That's why you're here, isn't it?
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_tot_15_00"); //Der Richter gab mir den Auftrag, dich zu töten.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_tot_07_01"); //Ja sicher. Deswegen bist du doch hier, oder?
 
 };
 
 func void DIA_Morgahard_HALLO_richter ()
 {
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_richter_15_00"); //What can we do against the judge?
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_01"); //Nothing at all. He sits up there in the upper end of town like a spider in its web, untouchable.
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_richter_15_02"); //I wouldn't say that. We'd only need some proof of his guilt in the matter concerning the governor.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_03"); //Proof, you say? I have that. But who would listen to a convicted criminal?
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_richter_15_04"); //Give me your proof, and I'll see to it that no one will hunt you again.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_05"); //Are you sure? All right. Here, take this letter. It bears the judge's signature.
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_richter_15_00"); //Was können wir gegen den Richter unternehmen?
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_01"); //Gar nichts. Der sitzt wie die Spinne im Netz da oben im oberen Viertel und ist unantastbar.
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_richter_15_02"); //Das würde ich nicht sagen. Man bräuchte nur einen Beweis seiner Schuld bei der Sache mit dem Statthalter.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_03"); //Einen Beweis, sagst du? Den habe ich. Aber wer würde schon auf einen verurteilten Verbrecher hören.
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_richter_15_04"); //Gib mir deinen Beweis, und ich werde dafür sorgen, dass dich niemand mehr jagen wird.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_05"); //Bist du sicher? Na gut. Hier nimm diesen Brief. Er trägt die Unterschrift des Richters.
 	B_GiveInvItems 		(self, other, ItWr_RichterKomproBrief_MIS, 1);					
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_06"); //Even if it doesn't change my guilt, it should be enough to confirm that he was an accomplice in the business.
-	B_LogEntry (TOPIC_RichterLakai,"Morgahard gave me the judge's assignment. This piece of paper definitely proves that the judge had Governor Larius robbed. I think this is just the kind of thing Lee wanted me to find."); 
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_richter_07_06"); //Auch wenn es an meiner Schuld nichts ändert, wird er doch ausreichen, seine Mittäterschaft bei der Sache zu bestätigen.
+	B_LogEntry (TOPIC_RichterLakai,"Morgahard gab mir den Auftrag des Richters. Dieses Papier beweist eindeutig, dass der Richter den Statthalter Larius hat ausrauben lassen. Ich denke, das ist genau das, was ich für Lee suchen sollte."); 
 	AI_StopProcessInfos (self);
 };
 var int MorgahardSucked;
 func void DIA_Morgahard_HALLO_attack ()
 {
-	AI_Output			(other, self, "DIA_Morgahard_HALLO_attack_15_00"); //Stop whining and draw your weapon. We'll put an end to this now.
-	AI_Output			(self, other, "DIA_Morgahard_HALLO_attack_07_01"); //Suits me fine. I've got nothing left to lose anyway.
+	AI_Output			(other, self, "DIA_Morgahard_HALLO_attack_15_00"); //Hör auf zu jammern und zieh deine Waffe. Wir werden das jetzt beenden.
+	AI_Output			(self, other, "DIA_Morgahard_HALLO_attack_07_01"); //Wie du meinst. Ich habe sowieso nichts mehr zu verlieren.
 	AI_StopProcessInfos (self);
 	MorgahardSucked = TRUE;
 	B_Attack (self, other, AR_SuddenEnemyInferno, 1);
@@ -116,7 +116,7 @@ func int DIA_Morgahard_Perm_Condition ()
 
 func void DIA_Morgahard_Perm_Info ()
 {
-	AI_Output			(self, other, "DIA_Morgahard_Perm_07_00"); //That swine of a judge - I'll see him swing some day.
+	AI_Output			(self, other, "DIA_Morgahard_Perm_07_00"); //Irgendwann werde ich dieses Richterschwein noch mal am Galgen baumeln sehen.
 	AI_StopProcessInfos (self);
 };
 
@@ -144,7 +144,7 @@ func int DIA_Morgahard_Perm2_Condition ()
 };
 func void DIA_Morgahard_Perm2_Info ()
 {
-	AI_Output			(self, other, "DIA_Morgahard_Perm2_07_00"); //Why don't you just disappear?
+	AI_Output			(self, other, "DIA_Morgahard_Perm2_07_00"); //Warum verschwindest du nicht einfach?
 	AI_StopProcessInfos (self);
 };
 

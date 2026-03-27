@@ -32,7 +32,7 @@ INSTANCE DIA_DJG_715_Ferros_Hello   (C_INFO)
 	condition   = DIA_DJG_715_Ferros_Hello_Condition;
 	information = DIA_DJG_715_Ferros_Hello_Info;
 	permanent   = FALSE;
-	description = "Where do you come from?";
+	description = "Wo kommt ihr her?";
 };
 
 FUNC INT DIA_DJG_715_Ferros_Hello_Condition()
@@ -63,7 +63,7 @@ INSTANCE DIA_DJG_715_Ferros_War   (C_INFO)
 	condition   = DIA_DJG_715_Ferros_War_Condition;
 	information = DIA_DJG_715_Ferros_War_Info;
 	permanent   = FALSE;
-	description = "What else do you know about the war?";
+	description = "Weißt du noch mehr über den Krieg?";
 };
 
 FUNC INT DIA_DJG_715_Ferros_War_Condition()
@@ -101,7 +101,7 @@ INSTANCE DIA_DJG_715_Ferros_OldCamp   (C_INFO)
 	condition   = DIA_DJG_715_Ferros_OldCamp_Condition;
 	information = DIA_DJG_715_Ferros_OldCamp_Info;
 	permanent   = FALSE;
-	description = "What are you doing here in the castle?";
+	description = "Was machst du hier in der Burg?";
 };
 
 FUNC INT DIA_DJG_715_Ferros_OldCamp_Condition()
@@ -117,15 +117,15 @@ FUNC VOID DIA_DJG_715_Ferros_OldCamp_Info()
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_OldCamp_01_03"); //Without a sword, I can't get out of here, and the swords I can buy here are the worst junk.
 
 	Info_ClearChoices (DIA_DJG_715_Ferros_OldCamp);
-	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"I wish you luck with your search.",DIA_DJG_715_Ferros_OldCamp_No);
-	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"What will you give me if I find you a good sword?",DIA_DJG_715_Ferros_OldCamp_Price);
-	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"I shall find your sword.",DIA_DJG_715_Ferros_OldCamp_Yes);
+	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"Viel Glück bei der Suche.",DIA_DJG_715_Ferros_OldCamp_No);
+	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"Was kriege ich, wenn ich dir ein gutes Schwert besorge?",DIA_DJG_715_Ferros_OldCamp_Price);
+	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"Ich werde dein Schwert finden.",DIA_DJG_715_Ferros_OldCamp_Yes);
 	Wld_InsertItem		(ItMW_1H_FerrosSword_Mis , "FP_OW_ITEM_08"); 
 	MIS_FerrosSword = LOG_RUNNING; 
 	
 	Log_CreateTopic (TOPIC_FerrosSword, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FerrosSword, LOG_RUNNING);
-	B_LogEntry (TOPIC_FerrosSword,"Feros left his sword with the orcs. That was stupid."); 
+	B_LogEntry (TOPIC_FerrosSword,"Feros hat sein Schwert bei den Orks liegen lassen. Sehr leichtsinnig."); 
 };
 
 FUNC VOID DIA_DJG_715_Ferros_OldCamp_No ()
@@ -149,7 +149,7 @@ FUNC VOID DIA_DJG_715_Ferros_OldCamp_Yes ()
 	AI_Output (other,self ,"DIA_DJG_715_Ferros_OldCamp_Yes_15_00"); //I shall find your sword.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_01"); //That would be great. You should look for it on the high cliff to the south.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_02"); //I probably lost it there, near the orc tents.
-	B_LogEntry (TOPIC_FerrosSword,"It seems Feros lost his sword on the tall cliff in the south, where the orc tents are."); 
+	B_LogEntry (TOPIC_FerrosSword,"Auf der hohen Klippe im Süden, wo die Orkzelte stehen, hat Feros sein Schwert angeblich verloren."); 
 	
 	Info_ClearChoices (DIA_DJG_715_Ferros_OldCamp);
 };
@@ -164,7 +164,7 @@ INSTANCE DIA_DJG_715_Ferros_FerrosAnySword   (C_INFO)
 	condition   = DIA_DJG_715_Ferros_FerrosAnySword_Condition;
 	information = DIA_DJG_715_Ferros_FerrosAnySword_Info;
 	permanent   = FALSE;
-	description = "Maybe I've got another sword for you.";
+	description = "Vielleicht hab ich ein anderes Schwert für dich.";
 };
 
 FUNC INT DIA_DJG_715_Ferros_FerrosAnySword_Condition()
@@ -212,8 +212,8 @@ FUNC VOID B_Ferros_FerrosAnySword_Give ()
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Give_01_01"); //Are you sure you want to give it to me just like that?
 
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
-	Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,"No, I need it myself.",B_Ferros_FerrosAnySword_No);
-	Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,"Yes, take it.",B_Ferros_FerrosAnySword_Yes);
+	Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,"Nein, die brauche ich selbst.",B_Ferros_FerrosAnySword_No);
+	Info_AddChoice (DIA_DJG_715_Ferros_FerrosAnySword,"Ja, nimm sie!",B_Ferros_FerrosAnySword_Yes);
 };
 
 FUNC VOID B_Ferros_FerrosAnySword_Yes ()
@@ -233,7 +233,7 @@ FUNC VOID B_Ferros_FerrosAnySword_Yes ()
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01"); //In return, I'll show you a couple of tricks that will allow you to use your strength and dexterity better in combat.
 
 	Log_CreateTopic	(TOPIC_Teacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher, "Feros can teach me to improve my strength and dexterity.");
+	B_LogEntry		(TOPIC_Teacher, "Ferros kann mir beibringen wie ich meine Stärke und Geschicklichkeit steigern kann.");
 
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
 	MIS_FerrosSword = LOG_SUCCESS;
@@ -259,7 +259,7 @@ INSTANCE DIA_DJG_715_Ferros_FerrosHisSword   (C_INFO)
 	condition   = DIA_DJG_715_Ferros_FerrosHisSword_Condition;
 	information = DIA_DJG_715_Ferros_FerrosHisSword_Info;
 	permanent   = FALSE;
-	description = "I found your sword.";
+	description = "Ich hab dein Schwert gefunden.";
 };
 
 FUNC INT DIA_DJG_715_Ferros_FerrosHisSword_Condition()
@@ -280,7 +280,7 @@ FUNC VOID DIA_DJG_715_Ferros_FerrosHisSword_Info()
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01"); //In return, I'll show you a couple of tricks that will allow you to use your strength and dexterity better in combat.
 
 	Log_CreateTopic	(TOPIC_Teacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher, "Feros can teach me to improve my strength and dexterity.");
+	B_LogEntry		(TOPIC_Teacher, "Ferros kann mir beibringen wie ich meine Stärke und Geschicklichkeit steigern kann.");
 
 	MIS_FerrosSword = LOG_SUCCESS;	
 	B_GivePlayerXP (XP_FerrosSword + XP_Ambient);
@@ -297,7 +297,7 @@ INSTANCE DIA_Ferros_Teach(C_INFO)
 	condition	= DIA_Ferros_Teach_Condition;
 	information	= DIA_Ferros_Teach_Info;
 	permanent	= TRUE;
-	description = "Show me how to improve my abilities.";
+	description = "Zeig mir, wie ich meine Fähigkeiten verbessere.";
 };                       
 
 FUNC INT DIA_Ferros_Teach_Condition()
@@ -369,7 +369,7 @@ INSTANCE DIA_Ferros_AllDragonsDead   (C_INFO)
 	condition   = DIA_Ferros_AllDragonsDead_Condition;
 	information = DIA_Ferros_AllDragonsDead_Info;
 	permanent   = FALSE;
-	description	= "All the dragons are dead.";
+	description	= "Alle Drachen sind tot.";
 				
 };
 

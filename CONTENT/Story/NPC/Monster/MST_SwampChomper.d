@@ -4,7 +4,7 @@
 
 PROTOTYPE Mst_Default_SwampBiter(C_Npc)			
 {
-	name							=	"Swamp Chomper";
+	name							=	"Sumpfbeisser";
 	guild							=	GIL_SCAVENGER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCBITER;
 

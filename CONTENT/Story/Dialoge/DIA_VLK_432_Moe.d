@@ -82,111 +82,111 @@ FUNC INT DIA_Moe_Hallo_Condition()
 };
 FUNC VOID DIA_Moe_Hallo_Info()
 {
-	AI_Output (self ,other,"DIA_Moe_Hallo_01_00"); //Hey, I don't know you. What do you want here? Are you headed for the pub?
+	AI_Output (self ,other,"DIA_Moe_Hallo_01_00"); //Hey, ich kenne dich nicht. Was willst du hier? Willst du in die Kneipe?
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
-	Info_AddChoice    (DIA_Moe_Hallo,"No, I'm not headed for the tavern... (END)",DIA_Moe_Hallo_Gehen);
-	Info_AddChoice 	  (DIA_Moe_Hallo,"Oh, so this is the watering hole...",DIA_Moe_Hallo_Witz);
-	Info_AddChoice 	  (DIA_Moe_Hallo,"Yes, do you mind?",DIA_Moe_Hallo_Reizen);
+	Info_AddChoice    (DIA_Moe_Hallo,"Nein, ich will nicht in die Kneipe...(ENDE)",DIA_Moe_Hallo_Gehen);
+	Info_AddChoice 	  (DIA_Moe_Hallo,"Ach das hier ist die Kneipe...",DIA_Moe_Hallo_Witz);
+	Info_AddChoice 	  (DIA_Moe_Hallo,"Ja, hast du was dagegen?",DIA_Moe_Hallo_Reizen);
 };
 FUNC VOID DIA_Moe_Hallo_Gehen()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Gehen_15_00"); //No, I'm not headed for the pub...
-	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_01"); //Yeah, that's what I would have said. But that isn't important - and that's why we can get straight down to business.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_02"); //Since you're new here, I'll make you an offer. You give me 50 gold pieces, and you can go.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_03"); //That's your entrance fee for the pub.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Gehen_15_00"); //Nein, ich will nicht in die Kneipe ...
+	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_01"); //Ja, das hätte ich jetzt auch gesagt. Aber das ist nicht wichtig - und deshalb können wir direkt zum Geschäft kommen.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_02"); //Da du neu hier bist, mache ich dir ein Angebot. Du gibst mir 50 Goldstücke und kannst gehen.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Gehen_01_03"); //Das ist dein Eintrittspreis für die Kneipe.
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
-	Info_AddChoice    (DIA_Moe_Hallo,"Let's find out what the militia thinks of that...",DIA_Moe_Hallo_Miliz);
-	Info_AddChoice    (DIA_Moe_Hallo,"Forget it, you won't get a single coin!",DIA_Moe_Hallo_Vergisses);
-	Info_AddChoice    (DIA_Moe_Hallo,"All right. I'll pay.",DIA_Moe_Hallo_Zahlen);
-	Info_AddChoice    (DIA_Moe_Hallo,"But I don't want to go to the tavern!",DIA_Moe_Hallo_Kneipe);
+	Info_AddChoice    (DIA_Moe_Hallo,"Wir können ja mal sehen, was die Miliz dazu sagt...",DIA_Moe_Hallo_Miliz);
+	Info_AddChoice    (DIA_Moe_Hallo,"Vergiss es, du kriegst nicht ein Goldstück!",DIA_Moe_Hallo_Vergisses);
+	Info_AddChoice    (DIA_Moe_Hallo,"Okay, ich bezahle.",DIA_Moe_Hallo_Zahlen);
+	Info_AddChoice    (DIA_Moe_Hallo,"Aber, ich will nicht in die Kneipe!",DIA_Moe_Hallo_Kneipe);
 };
 FUNC VOID DIA_Moe_Hallo_Kneipe()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Kneipe_15_00"); //But I don't want to go to the pub!
-	AI_Output (self ,other,"DIA_Moe_Hallo_Kneipe_01_01"); //You know, sooner or later, everyone wants to go into the pub. So you can pay right now - then you'll have it over with.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Kneipe_15_00"); //Aber, ich will nicht in die Kneipe!
+	AI_Output (self ,other,"DIA_Moe_Hallo_Kneipe_01_01"); //Weißt du, früher oder später will jeder mal in die Kneipe. Also kannst du auch direkt bezahlen - dann hast du es hinter dir.
 };
 FUNC VOID  DIA_Moe_Hallo_Witz()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Witz_15_00"); //Oh, so this is the harbor watering hole. And there I was, taking it for the governor's palace.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Witz_01_01"); //Hey - cut out the bad jokes, runt, otherwise you'll be chewing the cobblestones.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Witz_15_00"); //Ach, das hier ist die Hafenkneipe. Ich dachte schon, das wäre das Haus des Statthalters.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Witz_01_01"); //Hey - spar dir deine schlechten Sprüche, Kleiner, sonst schmeckst du gleich den Staub der Straße.
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
-	Info_AddChoice    (DIA_Moe_Hallo,"I see, I'll be forced to tan your hide...",DIA_Moe_Hallo_Pruegel);
-	Info_AddChoice    (DIA_Moe_Hallo,"Are you trying to make trouble for me?",DIA_Moe_Hallo_Aerger);
-	Info_AddChoice    (DIA_Moe_Hallo,"Calm down, all I want to do is drink a beer.",DIA_Moe_Hallo_Ruhig);
-	Info_AddChoice    (DIA_Moe_Hallo,"But I don't want to go to the tavern!",DIA_Moe_Hallo_Kneipe);
+	Info_AddChoice    (DIA_Moe_Hallo,"Ich sehe schon, ich muss dich wohl verprügeln,...",DIA_Moe_Hallo_Pruegel);
+	Info_AddChoice    (DIA_Moe_Hallo,"Willst du mir Ärger machen?",DIA_Moe_Hallo_Aerger);
+	Info_AddChoice    (DIA_Moe_Hallo,"Reg dich nicht auf, ich will nur ein Bier trinken.",DIA_Moe_Hallo_Ruhig);
+	Info_AddChoice    (DIA_Moe_Hallo,"Aber, ich will nicht in die Kneipe!",DIA_Moe_Hallo_Kneipe);
 };
 FUNC VOID DIA_Moe_Hallo_Reizen()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Reizen_15_00"); //Yes, do you mind?
-	AI_Output (self ,other,"DIA_Moe_Hallo_Reizen_01_01"); //You've got no business here, runt.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Reizen_15_00"); //Ja, hast du was dagegen?
+	AI_Output (self ,other,"DIA_Moe_Hallo_Reizen_01_01"); //Du hast hier nichts verloren, Kleiner.
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
-	Info_AddChoice    (DIA_Moe_Hallo,"I see, I'll be forced to tan your hide...",DIA_Moe_Hallo_Pruegel);
-	Info_AddChoice    (DIA_Moe_Hallo,"Are you trying to make trouble for me?",DIA_Moe_Hallo_Aerger);
-	Info_AddChoice    (DIA_Moe_Hallo,"Calm down, all I want to do is drink a beer.",DIA_Moe_Hallo_Ruhig);
+	Info_AddChoice    (DIA_Moe_Hallo,"Ich sehe schon, ich muss dich wohl verprügeln,...",DIA_Moe_Hallo_Pruegel);
+	Info_AddChoice    (DIA_Moe_Hallo,"Willst du mir Ärger machen?",DIA_Moe_Hallo_Aerger);
+	Info_AddChoice    (DIA_Moe_Hallo,"Reg dich nicht auf, ich will nur ein Bier trinken.",DIA_Moe_Hallo_Ruhig);
 };
 FUNC VOID DIA_Moe_Hallo_Miliz()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Miliz_15_00"); //Let's find out what the militia thinks of that...
-	AI_Output (self ,other,"DIA_Moe_Hallo_Miliz_01_01"); //(laughs) The militia isn't here. And do you know why they aren't here?
-	AI_Output (self ,other,"DIA_Moe_Hallo_Miliz_01_02"); //This here is the harbor district, runt. None of the militia will pick a fight with me down here.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Miliz_01_03"); //At the most, they go to the 'Red Lantern'. You see, it's just you and me. (filthy grin)
+	AI_Output (other ,self,"DIA_Moe_Hallo_Miliz_15_00"); //Wir können ja mal sehen, was die Miliz dazu sagt...
+	AI_Output (self ,other,"DIA_Moe_Hallo_Miliz_01_01"); //(lacht) Die Miliz ist nicht hier. Und weißt du auch, warum sie nicht hier ist?
+	AI_Output (self ,other,"DIA_Moe_Hallo_Miliz_01_02"); //Das hier ist das Hafenviertel, Kleiner. Hier wird sich keiner von der Miliz mit mir anlegen.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Miliz_01_03"); //Die gehen höchstens in die 'Rote Laterne'. Du siehst, wir sind ganz unter uns. (grinst dreckig)
 };
 FUNC VOID DIA_Moe_Hallo_Pruegel()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Pruegel_15_00"); //I see, I'll be forced to tan your hide in order to make any progress.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Pruegel_01_01"); //You're welcome to try, runt. Show me what you got!
+	AI_Output (other ,self,"DIA_Moe_Hallo_Pruegel_15_00"); //Ich sehe schon, ich muss dich wohl verprügeln, damit ich weiterkomme.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Pruegel_01_01"); //Das kannst du ja gerne mal probieren, Kleiner. Zeig mir was du kannst!
 	
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE,1);
 };
 FUNC VOID DIA_Moe_Hallo_Aerger()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Aerger_15_00"); //Are you trying to make trouble for me?
-	AI_Output (self ,other,"DIA_Moe_Hallo_Aerger_01_01"); //Sure, I'm a master at making trouble. So defend yourself, runt.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Aerger_15_00"); //Willst du mir Ärger machen?
+	AI_Output (self ,other,"DIA_Moe_Hallo_Aerger_01_01"); //Klar, ich bin Meister im Ärger machen. Also wehr dich, Kleiner.
 	
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE,1);
 };
 FUNC VOID DIA_Moe_Hallo_Ruhig()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Ruhig_15_00"); //Calm down, all I want to do is drink a beer.
-	AI_Output (self ,other,"DIA_Moe_Hallo_Ruhig_01_01"); //Okay, but it'll cost you 50 gold pieces to get in. (grins)
+	AI_Output (other ,self,"DIA_Moe_Hallo_Ruhig_15_00"); //Reg dich nicht auf, ich will nur ein Bier trinken.
+	AI_Output (self ,other,"DIA_Moe_Hallo_Ruhig_01_01"); //Okay, aber der Eintritt kostet dich 50 Goldstücke. (grinst)
 	
 	Info_ClearChoices (DIA_Moe_Hallo);
-	Info_AddChoice    (DIA_Moe_Hallo,"Forget it, you won't get a single coin!",DIA_Moe_Hallo_Vergisses);
-	Info_AddChoice    (DIA_Moe_Hallo,"All right. I'll pay.",DIA_Moe_Hallo_Zahlen);
+	Info_AddChoice    (DIA_Moe_Hallo,"Vergiss es, du kriegst nicht ein Goldstück!",DIA_Moe_Hallo_Vergisses);
+	Info_AddChoice    (DIA_Moe_Hallo,"Okay, ich bezahle.",DIA_Moe_Hallo_Zahlen);
 	
 };
 FUNC VOID DIA_Moe_Hallo_Zahlen()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Zahlen_15_00"); //All right, I'll pay.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Zahlen_15_00"); //Okay, ich bezahle.
 	
 	if B_GiveInvItems (other, self, ItMi_Gold,50)
 	{
-		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_01"); //Great. And since this went so well, now you can give me the rest of what you've got on you.
+		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_01"); //Na gut. Und weil das so gut geklappt hat, zahlst du mir jetzt noch den Rest, den du dabei hast.
 		
 		Info_ClearChoices (DIA_Moe_Hallo);
-		Info_AddChoice    (DIA_Moe_Hallo,"Forget it, you won't get a single coin!",DIA_Moe_Hallo_Vergisses);
-		Info_AddChoice    (DIA_Moe_Hallo,"OK, this is all I have.",DIA_Moe_Hallo_Alles);
+		Info_AddChoice    (DIA_Moe_Hallo,"Vergiss es, du kriegst nicht ein Goldstück!",DIA_Moe_Hallo_Vergisses);
+		Info_AddChoice    (DIA_Moe_Hallo,"Okay, hier ist alles was ich habe.",DIA_Moe_Hallo_Alles);
 	}
 	else if (Npc_HasItems (hero, ItMi_Gold) > 9)
 	{
-		AI_Output (other ,self,"DIA_Moe_Hallo_Zahlen_15_02"); //... but I don't have that much gold with me.
-		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_03"); //That doesn't matter. Just give me everything you've got on you.
+		AI_Output (other ,self,"DIA_Moe_Hallo_Zahlen_15_02"); //... aber ich hab so viel Gold gerade nicht bei mir.
+		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_03"); //Das macht nichts. Dann gib mir einfach alles, was du dabei hast.
 		
 		Info_ClearChoices (DIA_Moe_Hallo);
-		Info_AddChoice    (DIA_Moe_Hallo,"Forget it, you won't get a single coin!",DIA_Moe_Hallo_Vergisses);
-		Info_AddChoice    (DIA_Moe_Hallo,"OK, this is all I have.",DIA_Moe_Hallo_Alles);
+		Info_AddChoice    (DIA_Moe_Hallo,"Vergiss es, du kriegst nicht ein Goldstück!",DIA_Moe_Hallo_Vergisses);
+		Info_AddChoice    (DIA_Moe_Hallo,"Okay, hier ist alles was ich habe.",DIA_Moe_Hallo_Alles);
 	}
 	else
 	{
-		AI_Output (other ,self,"DIA_Moe_Hallo_Zahlen_15_04"); //... but I don't even have 10 gold pieces.
-		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_05"); //Man, did I pick a live one.
-		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_06"); //All right - sigh - you can go.
+		AI_Output (other ,self,"DIA_Moe_Hallo_Zahlen_15_04"); //... aber ich habe nicht mal 10 Goldstücke dabei.
+		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_05"); //Mann, da habe ich mir ja den richtigen ausgesucht.
+		AI_Output (self ,other,"DIA_Moe_Hallo_Zahlen_01_06"); //Na schön - seufz - du kannst gehen.
 		
 		AI_StopProcessInfos (self);
 	};
@@ -194,19 +194,19 @@ FUNC VOID DIA_Moe_Hallo_Zahlen()
 };
 FUNC VOID DIA_Moe_Hallo_Vergisses()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Vergisses_15_00"); //Forget it, you won't get a single coin!
-	AI_Output (self ,other,"DIA_Moe_Hallo_Vergisses_01_01"); //Then I'll take everything you have - as soon as you're lying on the ground in front of me.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Vergisses_15_00"); //Vergiss es, du kriegst nicht ein Goldstück!
+	AI_Output (self ,other,"DIA_Moe_Hallo_Vergisses_01_01"); //Dann nehme ich mir halt alles, was du hast - sobald du im Staub vor mir liegst.
 	
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE,1);
 };
 FUNC VOID DIA_Moe_Hallo_Alles()
 {
-	AI_Output (other ,self,"DIA_Moe_Hallo_Alles_15_00"); //OK, this is all I have.
+	AI_Output (other ,self,"DIA_Moe_Hallo_Alles_15_00"); //Okay, hier ist alles was ich habe.
 	
 	B_GiveInvItems (other, self, ItMi_Gold, Npc_HasItems (other,ItMi_Gold));
 	
-	AI_Output (self ,other,"DIA_Moe_Hallo_Alles_01_01"); //All right, that's enough, then. Ever generous - that's me. (grins)
+	AI_Output (self ,other,"DIA_Moe_Hallo_Alles_01_01"); //Also gut, das reicht mir. Ich bin ja großzügig. (grinst)
 	AI_StopProcessInfos (self);
 };
 //************************************************
@@ -220,7 +220,7 @@ INSTANCE DIA_Moe_Harbor(C_INFO)
 	condition	= DIA_Moe_Harbor_Condition;
 	information	= DIA_Moe_Harbor_Info;
 	permanent	= TRUE;
-	description = "You know your way about the harbor, don't you?";
+	description = "Du kennst dich hier im Hafen aus, oder?";
 };                       
 
 FUNC INT DIA_Moe_Harbor_Condition()
@@ -235,9 +235,9 @@ FUNC VOID DIA_Moe_Harbor_Info()
 	
 	Info_ClearChoices (DIA_Moe_Harbor);
 	Info_AddChoice		(DIA_Moe_Harbor, DIALOG_BACK, DIA_Moe_Harbor_Back);
-	Info_AddChoice		(DIA_Moe_Harbor,"How's the shipping traffic?",DIA_Moe_Harbor_Ship);
-	Info_AddChoice		(DIA_Moe_Harbor,"Why don't I see any militia?",DIA_Moe_Harbor_Militia);
-	Info_AddChoice 		(DIA_Moe_Harbor,"What kind of rumors are floating about?",DIA_Moe_Harbor_Rumors);
+	Info_AddChoice		(DIA_Moe_Harbor,"Wie läuft der Schiffsverkehr?",DIA_Moe_Harbor_Ship);
+	Info_AddChoice		(DIA_Moe_Harbor,"Wieso sehe ich hier keine Miliz?",DIA_Moe_Harbor_Militia);
+	Info_AddChoice 		(DIA_Moe_Harbor,"Was sind denn für Gerüchte im Umlauf?",DIA_Moe_Harbor_Rumors);
 };
 
 FUNC VOID DIA_Moe_Harbor_Back ()

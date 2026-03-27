@@ -29,7 +29,7 @@ INSTANCE DIA_VLK_8_JOIN(C_INFO)
 	condition	= DIA_VLK_8_JOIN_Condition;
 	information	= DIA_VLK_8_JOIN_Info;
 	permanent	= TRUE;
-	description = "I want to become a citizen of this town!";
+	description = "Ich will Bürger dieser Stadt werden!";
 };                       
 
 FUNC INT DIA_VLK_8_JOIN_Condition()
@@ -43,11 +43,11 @@ FUNC INT DIA_VLK_8_JOIN_Condition()
 
 FUNC VOID DIA_VLK_8_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_8_JOIN_15_00"); //I want to become a citizen of this town!
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_01"); //And why are you telling me that? Go to one of the master craftsmen in the lower part of the city. Maybe, if you're lucky, one of them is looking for an apprentice.
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_02"); //Otherwise, you'll have to go to the governor and have yourself registered as a citizen.
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_03"); //But right now, you can forget that. The governor isn't in charge any more, since the paladins came.
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_04"); //And their leader, Lord Hagen, is guaranteed not to have time for things like that.
+	AI_Output (other, self, "DIA_VLK_8_JOIN_15_00"); //Ich will Bürger dieser Stadt werden!
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_01"); //Und warum erzählst du mir das? Geh zu einem der Handwerksmeister in der Unterstadt. Vielleicht hast du Glück und sie suchen noch einen Lehrling.
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_02"); //Ansonsten müsstest du zum Statthalter gehen und dich als Bürger eintragen lassen.
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_03"); //Aber das kannst du zurzeit vergessen. Der Statthalter hat nichts mehr zu sagen, seit die Paladine da sind.
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_04"); //Und ihr Anführer, Lord Hagen, nimmt sich für solche Dinge garantiert keine Zeit.
 };
 
 // *************************************************************************
@@ -59,7 +59,7 @@ INSTANCE DIA_VLK_8_PEOPLE(C_INFO)
 	condition	= DIA_VLK_8_PEOPLE_Condition;
 	information	= DIA_VLK_8_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who are the most important citizens in this town?";
+	description = "Wer sind die wichtigsten Bürger dieser Stadt?";
 };                       
 
 FUNC INT DIA_VLK_8_PEOPLE_Condition()
@@ -69,8 +69,8 @@ FUNC INT DIA_VLK_8_PEOPLE_Condition()
 
 FUNC VOID DIA_VLK_8_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_8_PEOPLE_15_00"); //Who are the most important citizens in this town?
-	AI_Output (self, other, "DIA_VLK_8_PEOPLE_08_01"); //Besides the paladins ... the master craftsmen in the lower part of town. They are all very important.
+	AI_Output (other, self, "DIA_VLK_8_PEOPLE_15_00"); //Wer sind die wichtigsten Bürger dieser Stadt?
+	AI_Output (self, other, "DIA_VLK_8_PEOPLE_08_01"); //Wenn man mal von den Paladinen absieht ... die Handwerksmeister aus der Unterstadt. Sie sind alle sehr hoch angesehen.
 };
 
 // *************************************************************************
@@ -82,7 +82,7 @@ INSTANCE DIA_VLK_8_LOCATION(C_INFO)
 	condition	= DIA_VLK_8_LOCATION_Condition;
 	information	= DIA_VLK_8_LOCATION_Info;
 	permanent	= TRUE;
-	description = "What interesting things are there to see here?";
+	description = "Was gibt hier Interessantes zu sehen?";
 };                       
 
 FUNC INT DIA_VLK_8_LOCATION_Condition()
@@ -92,10 +92,10 @@ FUNC INT DIA_VLK_8_LOCATION_Condition()
 
 FUNC VOID DIA_VLK_8_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_8_LOCATION_15_00"); //What interesting things are there to see here?
-	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_01"); //The big ship that the paladins came in is in the harbor. It's an enormous boat! You have to take a look at it.
-	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_02"); //But I can't imagine that they'll let you on board. The paladins guard the ship like the crown jewels.
-	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_03"); //No wonder. It's also the only sea-worthy vessel anchored anywhere far and wide.
+	AI_Output (other, self, "DIA_VLK_8_LOCATION_15_00"); //Was gibt hier Interessantes zu sehen?
+	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_01"); //Das große Schiff, mit dem die Paladine gekommen sind, liegt am Hafen. Es ist ein Riesenkahn! Den musst du dir mal ansehen.
+	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_02"); //Allerdings kann ich mir nicht vorstellen, dass sie dich da drauf lassen. Die Paladine hüten das Schiff wie ihren Augapfel.
+	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_03"); //Kein Wunder. Ist ja auch der einzige seetüchtige Kahn, der hier weit und breit vor Anker liegt.
 };
 
 // *************************************************************************
@@ -107,7 +107,7 @@ INSTANCE DIA_VLK_8_STANDARD(C_INFO)
 	condition	= DIA_VLK_8_STANDARD_Condition;
 	information	= DIA_VLK_8_STANDARD_Info;
 	permanent	= TRUE;
-	description = "What's new?";
+	description = "Was gibt's Neues?";
 };                       
 func INT DIA_VLK_8_STANDARD_Condition()
 {
@@ -115,34 +115,34 @@ func INT DIA_VLK_8_STANDARD_Condition()
 };
 FUNC VOID DIA_VLK_8_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_8_STANDARD_15_00"); //What's new?
+	AI_Output (other, self, "DIA_VLK_8_STANDARD_15_00"); //Was gibt's Neues?
 		
 	if (Kapitel == 1)
 	{
-		AI_Output (self,other,"DIA_Addon_VLK_8_STANDARD_08_00"); //Everyone has been worried lately.
+		AI_Output (self,other,"DIA_Addon_VLK_8_STANDARD_08_00"); //Alle sind in letzter Zeit sehr beunruhigt.
 	};
 	
 	if (Kapitel == 2)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_01"); //Everyone is waiting for the paladins to announce why they're really here. I suspect it's because of the orcs. They're sure to attack soon!
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_02"); //The paladins may have the blessing of Innos, but when the orc hordes show up here, that's it for us.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_01"); //Jeder wartet darauf, dass die Paladine verkünden, warum sie eigentlich hier sind. Ich vermute, es ist wegen der Orks. Sie greifen bestimmt bald an!
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_02"); //Die Paladine mögen zwar den Segen Innos' haben, aber wenn hier die Orkhorden auflaufen, sind wir geliefert.
 	};
 	
 	if (Kapitel == 3)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_03"); //They say the paladins are only here to get all the ore on the island. For the war on the mainland, they say.
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_04"); //Do you know what that means? The king doesn't give a damn if we all die miserably when the orcs attack.
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_05"); //I'll make sure that I'm on the ship when the paladins weigh anchor.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_03"); //Es heißt, die Paladine sind nur hier, um alles Erz von dieser Insel zu holen. Für den Krieg auf dem Festland, heißt es.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_04"); //Weißt du, was das heißt? Es ist dem König egal, ob wir hier alle verrecken, wenn die Orks angreifen.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_05"); //Ich werde zusehen, dass ich mit aufs Schiff komme, wenn die Paladine ablegen.
 	};
 
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_06"); //They say the orcs are riding here on dragons that are as big as half the city! We don't stand a chance!
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_06"); //Es heißt, die Orks reiten auf Drachen hierher, die so groß sind wie die halbe Stadt! Wir haben keine Chance!
 	};
 	
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_07"); //People are saying that the dragons have been defeated. Could it be true?
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_07"); //Die Leute erzählen sich, die Drachen wären besiegt worden. Ob das stimmt?
 	};
 };
 

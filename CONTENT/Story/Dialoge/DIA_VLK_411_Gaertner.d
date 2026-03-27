@@ -66,7 +66,7 @@ INSTANCE DIA_Gaertner_Job(C_INFO)
 	condition	= DIA_Gaertner_Job_Condition;
 	information	= DIA_Gaertner_Job_Info;
 	permanent	= FALSE;
-	description = "What are you doing here?";
+	description = "Was machst du hier?";
 };                       
 
 FUNC INT DIA_Gaertner_Job_Condition()
@@ -94,7 +94,7 @@ INSTANCE DIA_Gaertner_Plants(C_INFO)
 	condition	= DIA_Gaertner_Plants_Condition;
 	information	= DIA_Gaertner_Plants_Info;
 	permanent	= FALSE;
-	description = "Are you growing herbs as well?";
+	description = "Baust du auch Pflanzen an?";
 };                       
 
 FUNC INT DIA_Gaertner_Plants_Condition()
@@ -111,7 +111,7 @@ FUNC VOID DIA_Gaertner_Plants_Info()
 	AI_Output (self ,other,"DIA_Gaertner_Plants_09_02"); //Well, I just harvested. So, if you want to buy something...
 	
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-	B_LogEntry (Topic_CityTrader,"The governor's gardener can sell me plants.");
+	B_LogEntry (Topic_CityTrader,"Der Gärtner des Statthalters kann mir Pflanzen verkaufen.");
 };
 //*************************************************************
 //		Trade
@@ -123,7 +123,7 @@ INSTANCE DIA_Gaertner_Trade(C_INFO)
 	condition	= DIA_Gaertner_Trade_Condition;
 	information	= DIA_Gaertner_Trade_Info;
 	permanent	= TRUE;
-	description = "Show me your wares.";
+	description = "Zeig mir deine Ware.";
 	trade		= TRUE;
 };                       
 
@@ -149,7 +149,7 @@ INSTANCE DIA_Gaertner_Krautabak(C_INFO)
 	condition	= DIA_Gaertner_Krautabak_Condition;
 	information	= DIA_Gaertner_Krautabak_Info;
 	permanent	= FALSE;
-	description = "I've got some weed tobacco here.";
+	description = "Ich habe hier Krautabak.";
 };                       
 
 FUNC INT DIA_Gaertner_Krautabak_Condition()
@@ -187,7 +187,7 @@ INSTANCE DIA_Gaertner_Sign(C_INFO)
 	condition	= DIA_Gaertner_Sign_Condition;
 	information	= DIA_Gaertner_Sign_Info;
 	permanent	= FALSE;
-	description = "(Show thieves' signal)";
+	description = "(Diebeszeichen zeigen)";
 };                       
 
 FUNC INT DIA_Gaertner_Sign_Condition()

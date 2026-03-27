@@ -43,7 +43,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Fire";
+	description		= "Amulett der Flammen";
 	
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= Am_ProtFire;
@@ -85,7 +85,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Harness Amulet";
+	description		= "Harnischamulett";
 	
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= Am_ProtEdge;
@@ -130,7 +130,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Oak Skin";
+	description		= "Amulett der Eichenhaut";
 	
 	TEXT[2]			= NAME_Prot_Point;
 	COUNT[2]		= Am_ProtPoint;
@@ -154,7 +154,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Prot_Mage_01(C_ITEM) // Magie Schutz Amulett von Serpentes an KDF für alle Minenanteile (Mission -> MIS_Serpentes_MinenAnteil_KDF == LOG_SUCCESS)
+	INSTANCE  ItAm_Prot_Mage_01(C_ITEM) // Magie Schutz Amulett von Serpentes an KDF fr alle Minenanteile (Mission -> MIS_Serpentes_MinenAnteil_KDF == LOG_SUCCESS)
 {
 	name 			=	NAME_Amulett;
 
@@ -173,7 +173,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Spiritual Power";
+	description		= "Amulett der Geisteskraft";
 	
 	TEXT[2]			= NAME_Prot_Magic;
 	COUNT[2]		= Am_ProtMage;
@@ -197,7 +197,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 
 /******************************************************************************************/
 
-	INSTANCE  ItAm_Prot_Total_01(C_ITEM)//ItAm_AmulettOfDeath_Mis (alle + 30)  MAGIER_EXKLUSIV_AMULETT für den Endkampf des KDFs  (Kapitel 5)
+	INSTANCE  ItAm_Prot_Total_01(C_ITEM)//ItAm_AmulettOfDeath_Mis (alle + 30)  MAGIER_EXKLUSIV_AMULETT fr den Endkampf des KDFs  (Kapitel 5)
 
 {
 	name 			=	NAME_Amulett;
@@ -217,7 +217,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Ore Skin";
+	description		= "Amulett der Erzhaut";
 	
 	TEXT[1]			= NAME_Prot_Fire;
 	COUNT[1]		= AM_TProtFire;
@@ -254,7 +254,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Dex_01(C_Item)	//Joly: von Dar an KDF und DJG vergeben ab Kapitel 4 \ Xardas_Secret-area für PAL	(Kapitel 3)
+	INSTANCE  ItAm_Dex_01(C_Item)	//Joly: von Dar an KDF und DJG vergeben ab Kapitel 4 \ Xardas_Secret-area fr PAL	(Kapitel 3)
 {
 	name 			=	NAME_Amulett;
 
@@ -273,7 +273,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Agility";
+	description		= "Amulett der Wendigkeit";
 	
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= Am_Dex;
@@ -317,7 +317,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Strength";
+	description		= "Amulett der StÃ¤rke";
 	
 	TEXT[2]			= NAME_Bonus_Str;
 	COUNT[2]		= Am_Strg;
@@ -341,7 +341,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 
 /******************************************************************************************/
 
-	INSTANCE  ItAm_Hp_01(C_Item)  //von Bennet dem Schmied an den PAL und dem KDF        (Kapitel 3)\Xardas_Secret-area für DJG	(Kapitel 3)
+	INSTANCE  ItAm_Hp_01(C_Item)  //von Bennet dem Schmied an den PAL und dem KDF        (Kapitel 3)\Xardas_Secret-area fr DJG	(Kapitel 3)
 {
 	name 			=	NAME_Amulett;
 
@@ -360,7 +360,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Life";
+	description		= "Amulett der Lebenskraft";
 
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= Am_Hp;
@@ -413,7 +413,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Magic";
+	description		= "Amulett der Magie";
 	
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= Am_Mana;
@@ -446,9 +446,9 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Dex_Strg_01(C_Item)	// wird dem PAL von Ulthar überreicht für die Reinigung der Schreine Kapitel 3\
+	INSTANCE  ItAm_Dex_Strg_01(C_Item)	// wird dem PAL von Ulthar berreicht fr die Reinigung der Schreine Kapitel 3\
 {
-	name 			=	"Amulet of Power";
+	name 			=	"Amulett der Kraft";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -465,7 +465,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Power";
+	description		= "Amulett der Kraft";
 	
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= Am_DexStrg_Dex;
@@ -493,9 +493,9 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	};
 
 /******************************************************************************************/
-	INSTANCE  ItAm_Hp_Mana_01 (C_Item)	//Xardas_Secret-area für KDF	(Kapitel 3)
+	INSTANCE  ItAm_Hp_Mana_01 (C_Item)	//Xardas_Secret-area fr KDF	(Kapitel 3)
 {
-	name 			=	"Amulet of Enlightenment";
+	name 			=	"Amulett der Erleuchtung";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -512,7 +512,7 @@ INSTANCE  ItAm_Prot_Fire_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Amulet of Enlightenment";
+	description		= "Amulett der Erleuchtung";
 	
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= Am_HpMana_Hp;

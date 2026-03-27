@@ -62,7 +62,7 @@ INSTANCE DIA_Keroloth_WantTeach(C_INFO)
 	condition	= DIA_Keroloth_WantTeach_Condition;
 	information	= DIA_Keroloth_WantTeach_Info;
 	permanent	= FALSE;
-	description = "Can you train me, too?";
+	description = "Kannst du mich auch trainieren?";
 };                       
 
 FUNC INT DIA_Keroloth_WantTeach_Condition()
@@ -82,10 +82,10 @@ FUNC VOID DIA_Keroloth_WantTeach_Info()
 		
 	Keroloth_TeachPlayer = TRUE;
 	Log_CreateTopic (TOPIC_Teacher_OC,LOG_NOTE);
-	B_LogEntry (TOPIC_Teacher_OC,"Keroloth trains swordfighters at the castle.");
+	B_LogEntry (TOPIC_Teacher_OC,"Keroloth trainiert Schwertkampf in der Burg.");
 	
 	Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
-	B_LogEntry (TOPIC_Trader_OC,"Tandor trades in weapons at the castle.");
+	B_LogEntry (TOPIC_Trader_OC,"Tandor handelt mit Waffen in der Burg.");
 };
 //***********************************************
 //	Kampflehrer EINHAND
@@ -98,7 +98,7 @@ INSTANCE DIA_Keroloth_Teacher(C_INFO)
 	condition	= DIA_Keroloth_Teacher_Condition;
 	information	= DIA_Keroloth_Teacher_Info;
 	permanent	= TRUE;
-	description = "(Learn one-handed combat)";
+	description = "(Einhand Kampf lernen)";
 };                       
 
 FUNC INT DIA_Keroloth_Teacher_Condition()
@@ -176,7 +176,7 @@ INSTANCE DIA_Keroloth_Teach(C_INFO)
 	condition	= DIA_Keroloth_Teach_Condition;
 	information	= DIA_Keroloth_Teach_Info;
 	permanent	= TRUE;
-	description = "(Learn two-handed combat)";
+	description = "(Zweihand Kampf lernen)";
 };                       
 //----------------------------------
 var int DIA_Keroloth_Teach_permanent;
@@ -243,7 +243,7 @@ INSTANCE DIA_Keroloth_Udar(C_INFO)
 	condition	= DIA_Keroloth_Udar_Condition;
 	information	= DIA_Keroloth_Udar_Info;
 	permanent	= FALSE;
-	description = "What about long-range combat?";
+	description = "Was ist mit Fernkampf?";
 };                       
 
 FUNC INT DIA_Keroloth_Udar_Condition()
@@ -264,7 +264,7 @@ FUNC VOID DIA_Keroloth_Udar_Info()
 	
 	
 	Log_CreateTopic	(TOPIC_Teacher_OC, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher_OC, "Udar, from the castle in the Valley of Mines, knows all about crossbows.");
+	B_LogEntry		(TOPIC_Teacher_OC, "Udar aus der Burg des Minentals kennt sich mit Armbrüsten aus.");
 };
 //#####################################################################
 //##
@@ -343,7 +343,7 @@ instance DIA_Keroloth_KAP4_HELLO		(C_INFO)
 	condition	 = 	DIA_Keroloth_KAP4_HELLO_Condition;
 	information	 = 	DIA_Keroloth_KAP4_HELLO_Info;
 
-	description	 = 	"You're pulling such a long face.";
+	description	 = 	"Du machst so ein langes Gesicht.";
 };
 
 func int DIA_Keroloth_KAP4_HELLO_Condition ()
@@ -361,9 +361,9 @@ func void DIA_Keroloth_KAP4_HELLO_Info ()
 	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_07_02"); //If you turn your back for a moment, all your stuff is gone. Dirty scum!
 
 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, DIALOG_BACK, DIA_Keroloth_KAP4_HELLO_ende );
-	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "A paladin shouldn't lose his temper like that.", DIA_Keroloth_KAP4_HELLO_ruhig );
- 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Did someone steal from you?", DIA_Keroloth_KAP4_HELLO_bestohlen );
-	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "What scum?", DIA_Keroloth_KAP4_HELLO_pack );
+	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Ein Paladin sollte sich nicht so aufregen.", DIA_Keroloth_KAP4_HELLO_ruhig );
+ 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Hat man dich bestohlen?", DIA_Keroloth_KAP4_HELLO_bestohlen );
+	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Welches Pack?", DIA_Keroloth_KAP4_HELLO_pack );
 
 
 };
@@ -378,7 +378,7 @@ func void DIA_Keroloth_KAP4_HELLO_bestohlen ()
 	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_01"); //No. They smuggled 20 gold pieces into my pocket. Of course they stole something, you idiot!
 	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_02"); //I tell you, when I get my hands on the dirty swine...
 
-	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "So what are you missing?", DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt );
+	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Was fehlt dir denn?", DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt );
 };
 func void DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt ()
 {
@@ -390,7 +390,7 @@ func void DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt ()
 
 	Log_CreateTopic (TOPIC_KerolothsGeldbeutel, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KerolothsGeldbeutel, LOG_RUNNING);
-	B_LogEntry (TOPIC_KerolothsGeldbeutel,"The paladin Keroloth is missing his purse. He claims the Dragon Hunters stole it from him."); 
+	B_LogEntry (TOPIC_KerolothsGeldbeutel,"Der Paladin Keroloth vermisst seinen Geldbeutel. Er behauptet, er sei ihm von den Drachenjägern gestohlen worden."); 
 
 
 	Info_ClearChoices	(DIA_Keroloth_KAP4_HELLO);
@@ -429,7 +429,7 @@ instance DIA_Keroloth_KAP4_GELDGEFUNDEN		(C_INFO)
 	condition	 = 	DIA_Keroloth_KAP4_GELDGEFUNDEN_Condition;
 	information	 = 	DIA_Keroloth_KAP4_GELDGEFUNDEN_Info;
 
-	description	 = 	"I think I found your purse.";
+	description	 = 	"Ich glaube, ich habe deinen Geldbeutel gefunden.";
 };
 
 func int DIA_Keroloth_KAP4_GELDGEFUNDEN_Condition ()
@@ -462,12 +462,12 @@ func void DIA_Keroloth_KAP4_GELDGEFUNDEN_Info ()
 	
 	if (hero.guild == GIL_DJG)
 	{
-		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Just a minute. What about a reward?", DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn );
+		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Moment. Wie sieht´s mit einer Belohnung aus?", DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn );
 	};
 
-	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "It was over there, by the smithy.", DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede );
-	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "I suspect one of the dragon hunters.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
-	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "How would I know?", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung);
+	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Er lag da drüben bei der Schmiede.", DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede );
+	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Ich habe einen der Drachenjäger in Verdacht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
+	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Weiß ich doch nicht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung);
 };
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung ()
 {
@@ -478,8 +478,8 @@ func void DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung ()
 		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_07_01"); //Are you trying to pull my leg? It was you, admit it.
 		
 		Info_ClearChoices	(DIA_Keroloth_KAP4_GELDGEFUNDEN);
-		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "I suspect one of the dragon hunters.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
-		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Kiss my ass.", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_kannstmich );
+		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Ich habe einen der Drachenjäger in Verdacht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
+		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Du kannst mich mal.", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_kannstmich );
 	}
 	else
 	{
@@ -567,7 +567,7 @@ instance DIA_Keroloth_KAP4_BELOHNUNG		(C_INFO)
 	information	 = 	DIA_Keroloth_KAP4_BELOHNUNG_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"I want my finder's fee for your purse.";
+	description	 = 	"Ich will Finderlohn für deinen Geldbeutel.";
 };
 
 func int DIA_Keroloth_KAP4_BELOHNUNG_Condition ()
@@ -612,7 +612,7 @@ instance DIA_Keroloth_KAP4_ENTSPANNDICH		(C_INFO)
 	information	 = 	DIA_Keroloth_KAP4_ENTSPANNDICH_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Relax.";
+	description	 = 	"Reg´ dich ab.";
 };
 
 func int DIA_Keroloth_KAP4_ENTSPANNDICH_Condition ()

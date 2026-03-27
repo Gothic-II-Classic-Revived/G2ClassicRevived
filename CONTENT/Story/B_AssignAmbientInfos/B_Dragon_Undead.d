@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------
 func void B_Dragon_Undead_Bla()
 {
-	AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_00"); //Well, kid? Have you got an original copy, then?
+	AI_Output (self, other, "DIA_Addon_UndeadDragon_Add_20_00"); //Na, mein Kleiner? Hast du denn auch eine Originalversion?
 };
 
 // *************************************************************************
@@ -59,65 +59,65 @@ FUNC INT DIA_Dragon_Undead_Hello_Condition()
 
 FUNC VOID DIA_Dragon_Undead_Hello_Info()
 {	
-	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_00"); //So now you have managed to find me. I have waited all too long for your arrival.
-	AI_Output (other, self, "DIA_Dragon_Undead_Hello_15_01"); //Come on. Stop pretending you planned it that way.
-	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_02"); //(laughs loudly) What do you know of my intentions?
-	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_03"); //Have I not sent you the Seekers to lure you onto my trail?
-	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_04"); //Have I not left the signs of my existence so clearly that you absolutely could not miss me?
+	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_00"); //Nun hast du es also geschafft, mich zu finden. Allzu lange warte ich nun schon auf deine Ankunft.
+	AI_Output (other, self, "DIA_Dragon_Undead_Hello_15_01"); //Komm schon. Tu doch nicht so, als hättest du das geplant.
+	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_02"); //(Lacht laut) Was weißt du denn schon von meinen Absichten?
+	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_03"); //Habe ich dir nicht die Suchenden geschickt, um dich auf meine Fährte zu locken?
+	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_04"); //Habe ich nicht die Zeichen meiner Existenz so sichtbar hinterlassen, dass du mich gar nicht verfehlen konntest?
 
 	if (hero.guild == GIL_DJG)
 	&& (DragonEggCounter >= 7)
 	{
-		AI_Output			(self, other, "DIA_Dragon_Undead_Hello_20_05"); //And have the dragon eggs not contributed to your armor, which helped you get to me?
+		AI_Output			(self, other, "DIA_Dragon_Undead_Hello_20_05"); //Haben die Dracheneier etwa nicht dazu beigetragen, dich zu rüsten, um zu mir zu gelangen?
 	};
 
 	if (hero.guild == GIL_PAL)
 	{	
-		AI_Output			(self, other, "DIA_Dragon_Undead_Hello_20_06"); //Were not the converted paladins reason enough for you to seek after the secret driving force?
+		AI_Output			(self, other, "DIA_Dragon_Undead_Hello_20_06"); //Waren die bekehrten Paladine nicht genug Grund für dich, nach der treibenden Macht im Verborgenen zu suchen?
 	};
 
 	if (hero.guild == GIL_KDF)
 	{	
-		AI_Output			(self, other, "DIA_Dragon_Undead_Hello_20_07"); //Were not the possessed of your kind reason enough for you to seek after the secret driving force?
+		AI_Output			(self, other, "DIA_Dragon_Undead_Hello_20_07"); //Waren die Besessenen deiner Art denn etwa nicht Grund genug für dich, nach der treibenden Macht im Verborgenen zu suchen?
 	};
 
-	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_08"); //As much as you twist and turn, you cannot dispute all of that.
+	AI_Output (self, other, "DIA_Dragon_Undead_Hello_20_08"); //So sehr du dich auch abwenden und winden magst, du wirst das alles nicht leugnen können.
 	
-	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Enough said.", DIA_Dragon_Undead_Hello_attack );
-	Info_AddChoice	(DIA_Dragon_Undead_Hello, "On whose behalf are you leading your minions to war against humankind?", DIA_Dragon_Undead_Hello_Auftraggeber );
-	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Why are you here?", DIA_Dragon_Undead_Hello_warum );
-	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Who are you?", DIA_Dragon_Undead_Hello_wer );
+	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Genug der Worte.", DIA_Dragon_Undead_Hello_attack );
+	Info_AddChoice	(DIA_Dragon_Undead_Hello, "In welchem Auftrag führst du deine Schergen in den Krieg gegen die Menschen?", DIA_Dragon_Undead_Hello_Auftraggeber );
+	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Weshalb bist du hier?", DIA_Dragon_Undead_Hello_warum );
+	Info_AddChoice	(DIA_Dragon_Undead_Hello, "Wer bist du?", DIA_Dragon_Undead_Hello_wer );
 
-	B_LogEntry (TOPIC_HallenVonIrdorath,"The enemy is an undead dragon. I have to kill him before I can leave this damned island."); 
+	B_LogEntry (TOPIC_HallenVonIrdorath,"Der Feind ist ein untoter Drache. Ich muß ihn töten, damit ich diese verfluchte Insel wieder verlassen kann."); 
 };
 func void DIA_Dragon_Undead_Hello_wer ()
 {
-	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_wer_15_00"); //Who are you?
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_01"); //(laughs) You still have to ask that? Search within yourself, you fool. You know who I am.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_02"); //I bear no name. Just as you bear no name.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_03"); //I am given the divine power from my creator. Just as you bear the power of your god in you.
+	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_wer_15_00"); //Wer bist du?
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_01"); //(lacht) Das fragst du noch? Kehre in dich, du Narr. Du weißt, wer ich bin.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_02"); //Ich trage keinen Namen. So wie du keinen Namen trägst.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_03"); //Ich erhalte die göttliche Kraft von meinem Schöpfer. So wie du die Kraft deines Gottes in dir trägst.
 
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_04"); //My fate is the destruction of the world.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_04"); //Mein Schicksal ist die Zerstörung der Welt.
 	
 	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
-			AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_05"); //Just as your fate is determined by the integrity and virtue of a paladin.
+			AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_05"); //So wie dein Schicksal von der Rechtschaffenheit und den Tugenden eines Paladins bestimmt wird.
 		};
 
 		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-			AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_06"); //Just as your hand brings certain death, dragon hunter.
+			AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_06"); //So wie auch deine Hand den sicheren Tod bringt, Drachenjäger.
 		};
 
 		if (hero.guild == GIL_KDF)
 		{
-			AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_07"); //Just as the preaching of the faith of Innos is your purpose, Magician of Fire.
+			AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_07"); //So wie die Verkündung des Glaubens an Innos deine Bestimmung ist, Magier des Feuers.
 		};
 
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_08"); //Do you not feel the bond that ties us together? Yes. You know who I am.
-	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_wer_15_09"); //(confused) No. That cannot be. Xardas always said ...
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_10"); //Xardas is weak and no threat to me. You alone are worthy of facing me.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_11"); //So it is written. The time has come to accept your fate.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_08"); //Spürst du nicht das Band, das uns verbindet? Ja. Du weißt, wer ich bin.
+	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_wer_15_09"); //(irritiert) Nein. Das kann nicht sein. Xardas hat immer gesagt ...
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_10"); //Xardas ist schwach und keine Bedrohung für mich. Nur du allein bist würdig, mir entgegenzutreten.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_wer_20_11"); //So steht es geschrieben. Die Zeit ist gekommen, dein Schicksal zu akzeptieren.
 	
 	
 
@@ -125,17 +125,17 @@ func void DIA_Dragon_Undead_Hello_wer ()
 
 func void DIA_Dragon_Undead_Hello_warum ()
 {
-	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_warum_15_00"); //Why are you here?
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_warum_20_01"); //The divinity bestowed upon me will inspire me to drown the world in a river of violence.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_warum_20_02"); //Only when the last fortress of the righteous has fallen shall I rest.
+	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_warum_15_00"); //Weshalb bist du hier?
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_warum_20_01"); //Die mir verliehene Göttlichkeit wird mich beflügeln, die Welt im Strom der Gewalt zu ertränken.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_warum_20_02"); //Erst wenn die letzte Festung der Rechtschaffenen gefallen ist, werde ich ruhen.
 
 };
 
 func void DIA_Dragon_Undead_Hello_Auftraggeber ()
 {
-	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_Auftraggeber_15_00"); //On whose behalf are you leading your minions to war against humankind?
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_Auftraggeber_20_01"); //My master is the Lord of Night. You know him. You can hear his call.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_Auftraggeber_20_03"); //My armies will rise from the ground in his name and shroud the world in darkness.
+	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_Auftraggeber_15_00"); //In welchem Auftrag führst du deine Schergen in den Krieg gegen die Menschen?
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_Auftraggeber_20_01"); //Mein Gebieter ist der Herr der Nacht. Du kennst ihn. Du kannst seinen Ruf hören.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_Auftraggeber_20_03"); //In seinem Namen werden meine Heerscharen sich aus der Erde erheben und die Welt in Dunkelheit hüllen.
 };
 
 func void DIA_Dragon_Undead_Hello_attack ()
@@ -144,9 +144,9 @@ func void DIA_Dragon_Undead_Hello_attack ()
 	Wld_PlayEffect("spellFX_MasterOfDisaster",  self, self, 0, 0, 0, FALSE );
 	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE ); 
 
-	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_attack_15_00"); //Enough said. I shall chase you back under the rock from whence you crept, you monster.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_01"); //(laughs) You are not yet ready to defeat me. Only one brief moment and I shall have reached my goal.
-	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_02"); //Your bones will serve me to let the ill winds of death blow across the world.
+	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_attack_15_00"); //Genug der Worte. Ich werde dich dorthin zurück jagen, wo du Ungetüm entkrochen bist.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_01"); //(lacht) Du bist noch nicht bereit, mich zu besiegen. Nur noch ein kurzer Moment und ich habe mein Ziel erreicht.
+	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_02"); //Deine Gebeine werden mir dienen, um der Welt den Atem des Todes zu bringen.
 		
 	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
 	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);	 

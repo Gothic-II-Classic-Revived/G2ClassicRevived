@@ -32,7 +32,7 @@ instance DIA_Wolf_DI_HALLO		(C_INFO)
 	information	 = 	DIA_Wolf_DI_HALLO_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How's it going?";
+	description	 = 	"Wie läuft's denn so?";
 };
 
 func int DIA_Wolf_DI_HALLO_Condition ()
@@ -45,20 +45,20 @@ func int DIA_Wolf_DI_HALLO_Condition ()
 var int DIA_Wolf_DI_HALLO_OneTime;
 func void DIA_Wolf_DI_HALLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Wolf_DI_HALLO_15_00"); //How's it going?
+	AI_Output			(other, self, "DIA_Wolf_DI_HALLO_15_00"); //Wie läuft's denn so?
 
 	if ( Bennet_IsOnBoard == LOG_SUCCESS)
 	&& (Npc_IsDead(Bennet_DI)	==	FALSE)
 		{
-			AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_01"); //Did you HAVE to take Bennet along, man?
-			AI_Output			(other, self, "DIA_Wolf_DI_HALLO_15_02"); //What's the problem?
-			AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_03"); //Ah, nothing. It's all right. Do your job and then get out of here, okay?
+			AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_01"); //Musstest du unbedingt Bennet mitnehmen, Mann?
+			AI_Output			(other, self, "DIA_Wolf_DI_HALLO_15_02"); //Was ist dein Problem?
+			AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_03"); //Ach, gar nichts. Ist schon gut. Erledige deine Aufgaben und dann schnell weg hier, ok?
 		}
 	else
 		{
 			if (DIA_Wolf_DI_HALLO_OneTime == FALSE)
 				{
-					AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_04"); //The smithy isn't the best, but I think I'll give it a try.
+					AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_04"); //Die Schmiede ist zwar nicht die beste, aber ich denke, ich probier sie mal aus.
 					B_GivePlayerXP (XP_Ambient);
 					DIA_Wolf_DI_HALLO_OneTime = TRUE;
 					AI_StopProcessInfos (self);
@@ -66,8 +66,8 @@ func void DIA_Wolf_DI_HALLO_Info ()
 				}
 			else
 				{
-					AI_Output			(other, self, "DIA_Wolf_DI_HALLO_15_05"); //Could you build me some armor?
-					AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_06"); //Sorry, man. Not with these tools. That'll have to wait until we're on the mainland.
+					AI_Output			(other, self, "DIA_Wolf_DI_HALLO_15_05"); //Kannst du mir eine Rüstung bauen?
+					AI_Output			(self, other, "DIA_Wolf_DI_HALLO_08_06"); //Ne, Mann. Nicht mit diesen Mitteln. Damit müssen wir schon noch warten, bis wir auf dem Festland sind.
 				};
 		};
 };
@@ -84,7 +84,7 @@ INSTANCE DIA_Wolf_DI_Training (C_INFO)
 	information	= DIA_Wolf_DI_Training_Info;
 	permanent	 = 	TRUE;
 
-	description = "Train me in long-distance combat.";
+	description = "Trainiere mich im Fernkampf.";
 };                       
 FUNC INT DIA_Wolf_DI_Training_Condition()
 {
@@ -96,8 +96,8 @@ FUNC INT DIA_Wolf_DI_Training_Condition()
 
 FUNC VOID DIA_Wolf_DI_Training_Info()
 {	
-	AI_Output (other,self ,"DIA_Wolf_DI_Training_15_00"); //Train me in long-distance combat.
-	AI_Output (self ,other,"DIA_Wolf_DI_Training_08_01"); //What kind?
+	AI_Output (other,self ,"DIA_Wolf_DI_Training_15_00"); //Trainiere mich im Fernkampf.
+	AI_Output (self ,other,"DIA_Wolf_DI_Training_08_01"); //In welcher Kategorie?
 	
 	Info_ClearChoices 	(DIA_Wolf_DI_Training);
 	Info_AddChoice	  	(DIA_Wolf_DI_Training, DIALOG_BACK, DIA_Wolf_DI_Training_BACK);
@@ -197,7 +197,7 @@ instance DIA_Wolf_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Wolf_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 	
-	description = 	"Everything all right?";
+	description = 	"Alles Klar?";
 };
 
 func int DIA_Wolf_DI_UndeadDragonDead_Condition ()

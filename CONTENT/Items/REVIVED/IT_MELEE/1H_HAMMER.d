@@ -47,7 +47,7 @@ const int	REV_Value_1H_Hammer_Holy			=	3000;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_WARHAMMER_01 (C_Item)
 {	
-	name 				=	"Orc Hammer";
+	name 				=	"Orkhammer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -72,7 +72,7 @@ INSTANCE ITMW_REVIVED_1H_WARHAMMER_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_WARHAMMER_02 (C_Item)
 {	
-	name 				=	"War Hammer";
+	name 				=	"Kriegshammer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -97,7 +97,7 @@ INSTANCE ITMW_REVIVED_1H_WARHAMMER_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_WARHAMMER_03 (C_Item)
 {	
-	name 				=	"God's Hammer";
+	name 				=	"Götterhammer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -127,7 +127,7 @@ INSTANCE ITMW_REVIVED_1H_WARHAMMER_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_HAMMER_01 (C_Item)
 {	
-	name 				=	"Legbreaker";
+	name 				=	"Beinbrecher";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -152,7 +152,7 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_HAMMER_02 (C_Item)
 {	
-	name 				=	"Short Aristocrat";
+	name 				=	"Kurzer Aristokrat";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -177,7 +177,7 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_HAMMER_03 (C_Item)
 {	
-	name 				=	"Bloody Pillager"; //KRWAWY ?UPIGNAT
+	name 				=	"Blutiger Plünderer"; //KRWAWY ?UPIGNAT
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -207,7 +207,7 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_HAMMER_ORE_01 (C_Item)
 {	
-	name 				=	"Ore Hammer";
+	name 				=	"Erzhammer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -236,7 +236,7 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_ORE_01 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_HAMMER_HOLY (C_Item)
 {	
-	name 				=	"Sacred Hammer";  
+	name 				=	"Heiliger Hammer";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_MISSION|ITEM_AXE;	

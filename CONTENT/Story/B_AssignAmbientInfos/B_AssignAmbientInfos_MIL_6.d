@@ -29,7 +29,7 @@ INSTANCE DIA_MIL_6_JOIN(C_INFO)
 	condition	= DIA_MIL_6_JOIN_Condition;
 	information	= DIA_MIL_6_JOIN_Info;
 	permanent	= TRUE;
-	description = "What do I have to do to join the militia?";
+	description = "Was muß ich tun, um mich der Miliz anzuschließen?";
 };                       
 
 FUNC INT DIA_MIL_6_JOIN_Condition()
@@ -42,11 +42,11 @@ FUNC INT DIA_MIL_6_JOIN_Condition()
 
 FUNC VOID DIA_MIL_6_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_JOIN_15_00"); //What do I have to do to join the militia?
-	AI_Output (self, other, "DIA_MIL_6_JOIN_06_01"); //Go to Lord Andre and talk to him. Since the paladins have come to town, he's had the command over the entire militia.
+	AI_Output (other, self, "DIA_MIL_6_JOIN_15_00"); //Was muß ich tun, um mich der Miliz anzuschließen?
+	AI_Output (self, other, "DIA_MIL_6_JOIN_06_01"); //Geh zu Lord Andre und rede mit ihm. Seit die Paladine in der Stadt sind, hat er das Kommando über die ganze Miliz.
 	if (C_NpcIsInQuarter (self) != Q_KASERNE)
 	{
-		AI_Output (self, other, "DIA_MIL_6_JOIN_06_02"); //You can find him in the barracks. He's practically always there.
+		AI_Output (self, other, "DIA_MIL_6_JOIN_06_02"); //Du findest ihn in der Kaserne. Dort ist er eigentlich immer anzutreffen.
 	};
 };
 
@@ -59,7 +59,7 @@ INSTANCE DIA_MIL_6_PEOPLE(C_INFO)
 	condition	= DIA_MIL_6_PEOPLE_Condition;
 	information	= DIA_MIL_6_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Tell me about these paladins.";
+	description = "Erzähl mir etwas über die Paladine.";
 };                       
 
 FUNC INT DIA_MIL_6_PEOPLE_Condition()
@@ -72,10 +72,10 @@ FUNC INT DIA_MIL_6_PEOPLE_Condition()
 
 FUNC VOID DIA_MIL_6_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_PEOPLE_15_00"); //Tell me about these paladins.
-	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_01"); //Since the paladins have arrived in Khorinis, they have retreated to the upper end of town.
-	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_02"); //They're not letting anyone in there any more. Except for the citizens of the town and the militia, of course.
-	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_03"); //There are also some paladins who guard the ship down at the harbor. But those are far from talkative.
+	AI_Output (other, self, "DIA_MIL_6_PEOPLE_15_00"); //Erzähl mir etwas über die Paladine.
+	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_01"); //Seit die Paladine in Khorinis angekommen sind, haben sie sich ins obere Viertel zurückgezogen.
+	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_02"); //Sie lassen niemanden mehr da rein. Außer die Bürger der Stadt und die Miliz natürlich.
+	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_03"); //Es gibt auch noch einige Paladine am Hafen, die das Schiff bewachen. Aber die sind alles andere als gesprächig.
 };
 
 // *************************************************************************
@@ -87,7 +87,7 @@ INSTANCE DIA_MIL_6_LOCATION(C_INFO)
 	condition	= DIA_MIL_6_LOCATION_Condition;
 	information	= DIA_MIL_6_LOCATION_Info;
 	permanent	= TRUE;
-	description = "What is there to know about this town?";
+	description = "Was gibt es über diese Stadt zu wissen?";
 };                       
 
 FUNC INT DIA_MIL_6_LOCATION_Condition()
@@ -97,11 +97,11 @@ FUNC INT DIA_MIL_6_LOCATION_Condition()
 
 FUNC VOID DIA_MIL_6_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_LOCATION_15_00"); //What is there to know about this town?
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_01"); //The paladins now have control over the whole city. The entire militia reports to them.
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_02"); //Lord Andre is commander of the militia - at the same time, he acts as the judge.
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_03"); //If you should ever run afoul of the law, you'll have to justify yourself to him.
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_04"); //But he is pretty lenient for all one hears. He usually lets people get away with a fine.
+	AI_Output (other, self, "DIA_MIL_6_LOCATION_15_00"); //Was gibt es über diese Stadt zu wissen?
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_01"); //Die Paladine haben jetzt die Kontrolle über die ganze Stadt. Die gesamte Miliz untersteht ihnen.
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_02"); //Der Kommandant der Miliz ist Lord Andre, er übt auch gleichzeitig das Amt des Richters aus.
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_03"); //Wenn du jemals mit dem Gesetz in Konflikt geraten solltest, wirst du dich vor ihm rechtfertigen müssen.
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_04"); //Aber er ist recht gnädig, nach allem, was man hört. Die meisten Fälle lässt er mit einer Geldstrafe davonkommen.
 	
 };
 
@@ -114,7 +114,7 @@ INSTANCE DIA_MIL_6_STANDARD(C_INFO)
 	condition	= DIA_MIL_6_STANDARD_Condition;
 	information	= DIA_MIL_6_STANDARD_Info;
 	permanent	= TRUE;
-	description = "What's new?";
+	description = "Was gibt's Neues?";
 };                       
 func INT DIA_MIL_6_STANDARD_Condition()
 {
@@ -122,34 +122,34 @@ func INT DIA_MIL_6_STANDARD_Condition()
 };
 FUNC VOID DIA_MIL_6_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_STANDARD_15_00"); //What's new?
+	AI_Output (other, self, "DIA_MIL_6_STANDARD_15_00"); //Was gibt's Neues?
 		
 	if (Kapitel == 1)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_01"); //More and more riffraff have been pouring into town lately.
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_02"); //Thefts are on the rise, and Lord Andre suspects that it's the work of a gang.
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_03"); //Not long ago, we turned the entire harbor district upside down, but we still haven't found a thing.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_01"); //In letzter Zeit kommt immer mehr Gesindel in die Stadt.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_02"); //Die Diebstähle häufen sich und Lord Andre vermutet, dass eine Bande dahinter steckt.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_03"); //Wir haben vor kurzem das gesamte Hafenviertel auf den Kopf gestellt, aber gefunden haben wir noch nichts.
 	};
 
 	if (Kapitel == 2)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_04"); //It looks like we now have the bandit problem more or less under control. The raids have all but died off lately.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_04"); //Das Problem mit den Banditen bekommen wir langsam in den Griff, so wie's aussieht. Die Überfälle sind in letzter Zeit stark zurückgegangen.
 	};
 
 	if (Kapitel == 3)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_05"); //It's getting worse and worse, what with all that riffraff coming to town. Last night I trailed a man in a black robe through the upper end of town.
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_06"); //I'm sure he was up to no good. But when I followed him around the governor's house, he had simply disappeared. A strange character, that was ...
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_05"); //Es wird immer schlimmer mit dem Gesindel, das in die Stadt kommt. Letzte Nacht habe ich einen Mann in schwarzer Robe durch das obere Viertel verfolgt.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_06"); //Ich bin mir sicher, der führte was im Schilde. Aber als ich ihm um das Haus des Statthalters folgte, war er einfach verschwunden. Merkwürdige Gestalt ...
 	};
 
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_07"); //They say that Lord Hagen has hired mercenaries to fight against the dragons. I'm fine with that, I wouldn't want to fight a dragon myself.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_07"); //Es heißt, Lord Hagen hat Söldner angeheuert, um gegen die Drachen zu kämpfen. Mir soll's recht sein, ich hätte keine Lust, gegen einen Drachen anzutreten.
 	};
 	
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_08"); //They say the dragons have been vanquished! Lord Hagen is collecting his forces to drive the remaining creatures from the Valley of Mines as well.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_08"); //Es heißt, die Drachen sind besiegt worden! Lord Hagen sammelt seine Männer, um auch die restlichen Kreaturen aus dem Minental zu vertreiben.
 	};
 };
 

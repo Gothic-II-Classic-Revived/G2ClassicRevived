@@ -78,8 +78,8 @@ FUNC INT DIA_Gritta_Hello_Condition()
 };
 FUNC VOID DIA_Gritta_Hello_Info()
 {	
-	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //What do you want, stranger? I f you have come to beg, I must disappoint you. I am a poor widow.
-	AI_Output (self ,other,"DIA_Gritta_Hello_16_01"); //My name is Gritta. Ever since my husband died, I have been running the household for my uncle, Thorben.
+	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //Was willst du, Fremder? Wenn du gekommen bist, um zu betteln, muss ich dich enttäuschen, ich bin eine arme Witwe.
+	AI_Output (self ,other,"DIA_Gritta_Hello_16_01"); //Mein Name ist Gritta. Seit mein Mann tot ist, kümmere ich mich um den Haushalt von meinem Onkel Thorben.
 };
 //*************************************************************
 //			Matteo will sein Geld
@@ -91,7 +91,7 @@ INSTANCE DIA_Gritta_WantsMoney(C_INFO)
 	condition	= DIA_Gritta_WantsMoney_Condition;
 	information	= DIA_Gritta_WantsMoney_Info;
 	permanent	= FALSE;
-	description = "Matteo sent me. You still owe him some gold.";
+	description = "Ich komme von Matteo, du schuldest ihm noch Gold.";
 };                       
 FUNC INT DIA_Gritta_WantsMoney_Condition()
 {
@@ -112,8 +112,8 @@ FUNC VOID DIA_Gritta_WantsMoney_Info()
 	AI_Output (self ,other,"DIA_Gritta_WantsMoney_16_03"); //Let me tell you, back when my husband was alive, he wouldn't have dared to do that. Oh, my poor husband...
 
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Cut it out. Where's the dough?",DIA_Gritta_WantsMoney_WhereMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Continue...",DIA_Gritta_WantsMoney_Continue01);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Geld?",DIA_Gritta_WantsMoney_WhereMoney);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Weiter...",DIA_Gritta_WantsMoney_Continue01);
 };
 FUNC VOID DIA_Gritta_WantsMoney_Continue01 ()
 {
@@ -122,8 +122,8 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue01 ()
 	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue01_16_02"); //... the fine dining and civilized conversations. Everything was better back then. No one would have dared to humiliate the heart of a poor widow with such...
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Cut it out. Where's the dough?",DIA_Gritta_WantsMoney_WhereMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Continue...",DIA_Gritta_WantsMoney_Continue02);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Geld?",DIA_Gritta_WantsMoney_WhereMoney);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Weiter...",DIA_Gritta_WantsMoney_Continue02);
 };
 FUNC VOID DIA_Gritta_WantsMoney_Continue02 ()
 {
@@ -132,8 +132,8 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue02 ()
 	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue02_16_02"); //... from his long journeys, he always brought me presents - exquisite fabrics from the mainland, precious spices from the southern countries...
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Cut it out. Where's the dough?",DIA_Gritta_WantsMoney_WhereMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Continue...",DIA_Gritta_WantsMoney_Continue03);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Geld?",DIA_Gritta_WantsMoney_WhereMoney);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Weiter...",DIA_Gritta_WantsMoney_Continue03);
 };
 FUNC VOID DIA_Gritta_WantsMoney_Continue03 ()
 {
@@ -143,8 +143,8 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue03 ()
 	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue04_16_03"); //... is after the last bit of my life savings. Please have mercy on a poor woman. Back when my husband was alive, he wouldn't have dared to do that. Oh, my poor husband...
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Cut it out. Where's the gold?",DIA_Gritta_WantsMoney_WhereMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Continue...",DIA_Gritta_WantsMoney_Continue01);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Gold?",DIA_Gritta_WantsMoney_WhereMoney);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Weiter...",DIA_Gritta_WantsMoney_Continue01);
 };
 FUNC VOID DIA_Gritta_WantsMoney_WhereMoney ()
 {
@@ -152,9 +152,9 @@ FUNC VOID DIA_Gritta_WantsMoney_WhereMoney ()
 	AI_Output (self ,other,"DIA_Gritta_WantsMoney_WhereMoney_16_01"); //(defiantly) But I don't have the gold, I'm only a poor widow!
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Fork over the dough, or I'll slug you one!",DIA_Gritta_WantsMoney_BeatUp);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Guess we'll just have to sell your stuff...",DIA_Gritta_WantsMoney_EnoughStuff);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"I'm going to pay the sum for you.",DIA_Gritta_WantsMoney_IWillPay);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Her mit der Kohle, sonst verpasse ich dir eine.",DIA_Gritta_WantsMoney_BeatUp);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Dann verkaufen wir halt deine Klamotten...",DIA_Gritta_WantsMoney_EnoughStuff);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Ich werde die Summe für dich bezahlen.",DIA_Gritta_WantsMoney_IWillPay);
 };
 FUNC VOID DIA_Gritta_WantsMoney_EnoughStuff ()
 {
@@ -314,7 +314,7 @@ INSTANCE DIA_Gritta_Perm3U4U5(C_INFO)
 	condition	= DIA_Gritta_Perm3U4U5_Condition;
 	information	= DIA_Gritta_Perm3U4U5_Info;
 	permanent	= TRUE;
-	description = "How's it going?";
+	description = "Wie läuft's denn so?";
 };                       
 FUNC INT DIA_Gritta_Perm3U4U5_Condition()
 {
@@ -333,9 +333,9 @@ FUNC VOID DIA_Gritta_Perm3U4U5_Info()
 			
 			Info_ClearChoices (DIA_Gritta_Perm3U4U5);
 			Info_AddChoice (DIA_Gritta_Perm3U4U5,DIALOG_BACK,DIA_Gritta_Perm3U4U5_BACK);
-			Info_AddChoice (DIA_Gritta_Perm3U4U5,"That's war for you, these things happen.",DIA_Gritta_Perm3U4U5_War);
-			Info_AddChoice (DIA_Gritta_Perm3U4U5,"It'll be all right.",DIA_Gritta_Perm3U4U5_TurnsGood);
-			Info_AddChoice (DIA_Gritta_Perm3U4U5,"What have you heard?",DIA_Gritta_Perm3U4U5_Rumors);
+			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Es ist Krieg, da passieren solche Dinge.",DIA_Gritta_Perm3U4U5_War);
+			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Das wird schon wieder.",DIA_Gritta_Perm3U4U5_TurnsGood);
+			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Was hast du gehört?",DIA_Gritta_Perm3U4U5_Rumors);
 		}
 		else
 		{

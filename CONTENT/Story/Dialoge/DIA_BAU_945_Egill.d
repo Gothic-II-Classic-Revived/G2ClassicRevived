@@ -32,7 +32,7 @@ instance DIA_Egill_HALLO		(C_INFO)
 	condition	 = 	DIA_Egill_HALLO_Condition;
 	information	 = 	DIA_Egill_HALLO_Info;
 
-	description	 = 	"What's up?";
+	description	 = 	"Wie steht's?";
 };
 
 func int DIA_Egill_HALLO_Condition ()
@@ -42,15 +42,15 @@ func int DIA_Egill_HALLO_Condition ()
 
 func void DIA_Egill_HALLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Egill_HALLO_15_00"); //What's up?
-	AI_Output			(self, other, "DIA_Egill_HALLO_08_01"); //It's been a long time since we've seen a stranger on our land who didn't want to skin us.
-	AI_Output			(self, other, "DIA_Egill_HALLO_08_02"); //I hope I'm not wrong about you.
-	AI_Output			(self, other, "DIA_Egill_HALLO_08_03"); //I'm Egill.
+	AI_Output			(other, self, "DIA_Egill_HALLO_15_00"); //Wie steht's?
+	AI_Output			(self, other, "DIA_Egill_HALLO_08_01"); //Schon lange keinen Fremden mehr auf unserem Land gesehen, der uns nicht gleich die Haut abziehen will.
+	AI_Output			(self, other, "DIA_Egill_HALLO_08_02"); //Ich hoffe, ich habe mich jetzt nicht bei dir getäuscht.
+	AI_Output			(self, other, "DIA_Egill_HALLO_08_03"); //Ich bin Egill.
 	
 	if (Hlp_IsValidNpc (Ehnim))
 		&& (!C_NpcIsDown (Ehnim))
 		{
-			AI_Output			(self, other, "DIA_Egill_HALLO_08_04"); //And the strange bird over there is my brother Ehnim.
+			AI_Output			(self, other, "DIA_Egill_HALLO_08_04"); //Und der komische Vogel dort drüben ist mein Bruder Ehnim.
 		};
 };
 
@@ -65,7 +65,7 @@ instance DIA_Egill_FELDARBEIT		(C_INFO)
 	condition	 = 	DIA_Egill_FELDARBEIT_Condition;
 	information	 = 	DIA_Egill_FELDARBEIT_Info;
 
-	description	 = 	"How's the field work going?";
+	description	 = 	"Wie läuft die Feldarbeit?";
 };
 
 func int DIA_Egill_FELDARBEIT_Condition ()
@@ -78,8 +78,8 @@ func int DIA_Egill_FELDARBEIT_Condition ()
 
 func void DIA_Egill_FELDARBEIT_Info ()
 {
-	AI_Output			(other, self, "DIA_Egill_FELDARBEIT_15_00"); //How's the field work going?
-	AI_Output			(self, other, "DIA_Egill_FELDARBEIT_08_01"); //Great. If those miserable field raiders weren't constantly destroying our harvest...
+	AI_Output			(other, self, "DIA_Egill_FELDARBEIT_15_00"); //Wie läuft die Feldarbeit?
+	AI_Output			(self, other, "DIA_Egill_FELDARBEIT_08_01"); //Bestens. Wenn diese elenden Feldräuber nicht ständig unsere Ernte vernichten würden ...
 
 };
 
@@ -94,7 +94,7 @@ instance DIA_Egill_FELDRAEUBER		(C_INFO)
 	condition	 = 	DIA_Egill_FELDRAEUBER_Condition;
 	information	 = 	DIA_Egill_FELDRAEUBER_Info;
 
-	description	 = 	"Why don't you do anything about the field raiders?";
+	description	 = 	"Warum unternimmst du nichts gegen die Feldräuber?";
 };
 
 func int DIA_Egill_FELDRAEUBER_Condition ()
@@ -107,9 +107,9 @@ func int DIA_Egill_FELDRAEUBER_Condition ()
 
 func void DIA_Egill_FELDRAEUBER_Info ()
 {
-	AI_Output			(other, self, "DIA_Egill_FELDRAEUBER_15_00"); //Why don't you do anything about the field raiders?
-	AI_Output			(self, other, "DIA_Egill_FELDRAEUBER_08_01"); //You're joking. Since I've been on this farm, I've killed so many of the beasts that I've lost count.
-	AI_Output			(self, other, "DIA_Egill_FELDRAEUBER_08_02"); //But alas, new ones keep coming.
+	AI_Output			(other, self, "DIA_Egill_FELDRAEUBER_15_00"); //Warum unternimmst du nichts gegen die Feldräuber?
+	AI_Output			(self, other, "DIA_Egill_FELDRAEUBER_08_01"); //Du machst mir Spaß. Seit ich hier auf diesem Hof bin, habe ich schon unzählige dieser Viecher erledigt.
+	AI_Output			(self, other, "DIA_Egill_FELDRAEUBER_08_02"); //Es kommen aber leider immer wieder neue.
 };
 
 
@@ -123,7 +123,7 @@ instance DIA_Egill_STREIT2		(C_INFO)
 	condition	 = 	DIA_Egill_STREIT2_Condition;
 	information	 = 	DIA_Egill_STREIT2_Info;
 
-	description	 = 	"Your brother tells a similar story.";
+	description	 = 	"Dein Bruder erzählt etwas Ähnliches.";
 };
 
 func int DIA_Egill_STREIT2_Condition ()
@@ -144,11 +144,11 @@ func int DIA_Egill_STREIT2_Condition ()
 
 func void DIA_Egill_STREIT2_Info ()
 {
-	AI_Output			(other, self, "DIA_Egill_STREIT2_15_00"); //Your brother tells a similar story.
-	AI_Output			(self, other, "DIA_Egill_STREIT2_08_01"); //(slyly) Aha. What exactly does he say?
-	AI_Output			(other, self, "DIA_Egill_STREIT2_15_02"); //That he has also done away with plenty of field raiders.
-	AI_Output			(self, other, "DIA_Egill_STREIT2_08_03"); //What? That loser can't even find his way home by himself.
-	AI_Output			(self, other, "DIA_Egill_STREIT2_08_04"); //Tell him he shouldn't brag like that.
+	AI_Output			(other, self, "DIA_Egill_STREIT2_15_00"); //Dein Bruder erzählt etwas Ähnliches.
+	AI_Output			(self, other, "DIA_Egill_STREIT2_08_01"); //(lauernd) Aha. Was denn genau?
+	AI_Output			(other, self, "DIA_Egill_STREIT2_15_02"); //Dass er auch schon viele Feldräuber zur Strecke gebracht hat.
+	AI_Output			(self, other, "DIA_Egill_STREIT2_08_03"); //Was? Der Blindgänger findet doch noch nicht mal alleine nach Hause.
+	AI_Output			(self, other, "DIA_Egill_STREIT2_08_04"); //Sag ihm, er soll mal nicht so aufschneiden.
 
 	AI_StopProcessInfos (self);
 };
@@ -165,7 +165,7 @@ instance DIA_Egill_STREIT4		(C_INFO)
 	condition	 = 	DIA_Egill_STREIT4_Condition;
 	information	 = 	DIA_Egill_STREIT4_Info;
 
-	description	 = 	"Ehnim is a bit irritated about this thing.";
+	description	 = 	"Ehnim ist wegen der Geschichte ein wenig gereizt.";
 };
 
 func int DIA_Egill_STREIT4_Condition ()
@@ -185,8 +185,8 @@ func int DIA_Egill_STREIT4_Condition ()
 
 func void DIA_Egill_STREIT4_Info ()
 {
-	AI_Output			(other, self, "DIA_Egill_STREIT4_15_00"); //Ehnim is a bit irritated about this thing.
-	AI_Output			(self, other, "DIA_Egill_STREIT4_08_01"); //He shouldn't puff himself up so much, else I'll tear his head off. Tell him that.
+	AI_Output			(other, self, "DIA_Egill_STREIT4_15_00"); //Ehnim ist wegen der Geschichte ein wenig gereizt.
+	AI_Output			(self, other, "DIA_Egill_STREIT4_08_01"); //Er soll sich nicht so aufblasen, sonst reiß ich ihm den Kopf ab. Sag ihm das.
 
 	AI_StopProcessInfos (self);
 };
@@ -217,7 +217,7 @@ func int DIA_Egill_PERMKAP1_Condition ()
 
 func void DIA_Egill_PERMKAP1_Info ()
 {
-	AI_Output			(self, other, "DIA_Egill_PERMKAP1_08_00"); //Haven't you done enough damage? I think you should go now.
+	AI_Output			(self, other, "DIA_Egill_PERMKAP1_08_00"); //Hast du nicht genug Schaden angerichtet? Ich finde, du solltest jetzt gehen.
 
 	AI_StopProcessInfos (self);
 };

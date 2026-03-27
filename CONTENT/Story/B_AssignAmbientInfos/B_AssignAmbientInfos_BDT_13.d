@@ -42,7 +42,7 @@ FUNC INT DIA_BDT_13_STANDARD_Condition()
 
 FUNC void B_Verschwinde_Stimme13 ()
 {
-	AI_Output (self,other,"DIA_BDT_13_STANDARD_13_01"); //Beat it!
+	AI_Output (self,other,"DIA_BDT_13_STANDARD_13_01"); //Zisch ab!
 };
 
 FUNC VOID DIA_BDT_13_STANDARD_Info()
@@ -52,7 +52,7 @@ FUNC VOID DIA_BDT_13_STANDARD_Info()
 	
 	if (randy == 0)
 	{
-		AI_Output (self,other,"DIA_BDT_13_STANDARD_13_00"); //What are you gawking at like an idiot!
+		AI_Output (self,other,"DIA_BDT_13_STANDARD_13_00"); //Was glotzt du denn so dämlich!
 	};
 	if (randy == 1)
 	{
@@ -60,7 +60,7 @@ FUNC VOID DIA_BDT_13_STANDARD_Info()
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_BDT_13_STANDARD_13_02"); //Just leave me alone, you bum.
+		AI_Output (self,other,"DIA_BDT_13_STANDARD_13_02"); //Mach mich bloß nicht an, du Penner!
 	};
 	
 	AI_StopProcessInfos	(self);

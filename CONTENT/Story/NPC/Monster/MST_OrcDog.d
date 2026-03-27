@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_OrcDog(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Orc Dog";
+	name							=	"Orc-Hund";
 	guild							=	GIL_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCDOG;
 

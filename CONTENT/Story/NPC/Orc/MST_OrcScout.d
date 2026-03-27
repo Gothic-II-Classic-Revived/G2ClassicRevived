@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_OrcScout(C_Npc)			
 {
 	//----- Monster -----
-	name							=	"Orc Scout";
+	name							=	"Orc Späher";
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCWARRIOR;
 	voice							=	18;
@@ -107,7 +107,7 @@ INSTANCE OrcScout_Sit (Mst_Default_OrcScout)
 // ------ Ork vor Stadt ------
 INSTANCE OrcScout_Harad (Mst_Default_OrcScout)
 {
-	name							=	"Orc Scout";
+	name							=	"Orc Späher";
 
 	//----- Attributes ----
 	B_SetMonsterAttributesForLevel(self, 20);

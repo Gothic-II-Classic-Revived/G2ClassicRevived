@@ -41,7 +41,7 @@ const int	REV_Change_ITAM_Prot_Total_01			=	15;
 
 INSTANCE ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 {
-	name 				=	"Amulet of Oak Skin";
+	name 				=	"Amulett der Eichenhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -79,7 +79,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_ARROW_01()
 
 INSTANCE ITAM_REVIVED_PROT_MELEE_01(C_Item)
 {
-	name 				=	"Armor Amulet";
+	name 				=	"Harnischamulett";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -120,7 +120,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_MELEE_01()
 
 INSTANCE ITAM_REVIVED_PROT_MELEE_02(C_Item)
 {
-	name 				=	"Protective Amulet";
+	name 				=	"Schutzamulett";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -137,7 +137,7 @@ INSTANCE ITAM_REVIVED_PROT_MELEE_02(C_Item)
 	visual_skin 		=	0;
 
 	description			= 	name;
-	TEXT[1]				=	"It says NEK on the back.";
+	TEXT[1]				=	"der Name NEK ist auf der Rückseite eingraviert";
 	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITAM_Prot_Melee_02;
 	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITAM_Prot_Melee_02;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -162,7 +162,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_MELEE_02()
 
 INSTANCE ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 {
-	name 				=	"Amulet of Stone Skin";
+	name 				=	"Amulett der Steinhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -207,7 +207,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_WEAPON_01()
 
 INSTANCE ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 {
-	name 				=	"Amulet of Spiritual Power";
+	name 				=	"Amulett der Geisteskraft";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -246,7 +246,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_MAGIC_01()
 
 INSTANCE ITAM_REVIVED_PROT_FIRE_01(C_Item)
 {
-	name 				=	"Amulet of Flames";
+	name 				=	"Amulett der Flammen";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -284,7 +284,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_FIRE_01()
 
 INSTANCE ITAM_REVIVED_PROT_FIRE_02(C_Item)
 {
-	name 				=	"Orc Talisman";
+	name 				=	"orkischer Talisman";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -323,7 +323,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_FIRE_02()
 
 INSTANCE ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 {
-	name 				=	"Amulet of Purification";
+	name 				=	"Amulett der Läuterung";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -365,7 +365,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_MAGIC_FIRE_01()
 
 INSTANCE ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 {
-	name 				=	"Amulet of Ore Skin";
+	name 				=	"Amulett der Erzhaut";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -418,7 +418,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_TOTAL_01()
 
 INSTANCE ITAM_REVIVED_HP_01(C_Item)
 {
-	name 			=	"Amulet of Life Force";
+	name 			=	"Amulett der Lebenskraft";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -470,7 +470,7 @@ INSTANCE ITAM_REVIVED_HP_01(C_Item)
 
 INSTANCE ITAM_REVIVED_MP_01(C_Item)
 {
-	name 			=	"Amulet of Magic";
+	name 			=	"Amulett der Magie";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -513,7 +513,7 @@ INSTANCE ITAM_REVIVED_MP_01(C_Item)
 
 INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 {
-	name 			=	"Amulet of Enlightenment";
+	name 			=	"Amulett der Erleuchtung";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -573,7 +573,7 @@ INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 
 INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 {
-	name 			=	"Amulet of Agility";
+	name 			=	"Amulett der Wendigkeit";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -614,7 +614,7 @@ INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 
 INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 {
-	name 			=	"Amulet of Dexterity";
+	name 			=	"Amulett der Geschicklichkeit";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -655,7 +655,7 @@ INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 
 INSTANCE ITAM_REVIVED_STR_01(C_Item)
 {
-	name 			=	"Amulet of Power";
+	name 			=	"Amulett der Kraft";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -695,7 +695,7 @@ INSTANCE ITAM_REVIVED_STR_01(C_Item)
 
 INSTANCE ITAM_REVIVED_STR_02(C_Item)
 {
-	name 			=	"Amulet of Strength";
+	name 			=	"Amulett der Stärke";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -737,7 +737,7 @@ INSTANCE ITAM_REVIVED_STR_02(C_Item)
 
 INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 {
-	name 			=	"Amulet of Might";
+	name 			=	"Amulett der Macht";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -785,7 +785,7 @@ INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 
 INSTANCE ITAM_REVIVED_PSI(C_Item)
 {
-	name 			=	"Sign of the Brotherhood";
+	name 			=	"Zeichen der Bruderschaft";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -810,7 +810,7 @@ INSTANCE ITAM_REVIVED_PSI(C_Item)
 
 INSTANCE ITAM_REVIVED_KDW(C_Item)
 {
-	name 			=	"Messenger's amulet of the Magicians of Water";
+	name 			=	"Botenamulett der Wassermagier";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -835,12 +835,12 @@ INSTANCE ITAM_REVIVED_KDW(C_Item)
 /* 
 	Schwarz wie die Seele
 	Schwarz wie die Nacht
-	Schwarz wie das B�se
+	Schwarz wie das Bse
 	Schwarz verheisst Macht
 */
 INSTANCE ITAM_REVIVED_DEMON(C_Item)
 {
-	name 			=	"Amulet of Summoning";
+	name 			=	"Beschwörungsamulett";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;

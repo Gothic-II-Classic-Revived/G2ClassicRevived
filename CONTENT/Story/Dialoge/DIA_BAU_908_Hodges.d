@@ -56,10 +56,10 @@ func int DIA_Hodges_HALLO_Condition ()
 
 func void DIA_Hodges_HALLO_Info ()
 {
-	AI_Output (other, self, "DIA_Hodges_HALLO_15_00"); //Hello, I'm new here.
-	AI_Output (self, other, "DIA_Hodges_HALLO_03_01"); //Don't take this the wrong way, but I'm really not in the mood for conversation - I'm totally wrecked.
-	AI_Output (other, self, "DIA_Hodges_HALLO_15_02"); //You're awfully busy, huh?
-	AI_Output (self, other, "DIA_Hodges_HALLO_03_03"); //You can say that again. Bennet makes so many weapons that I can hardly keep up with the polishing.
+	AI_Output (other, self, "DIA_Hodges_HALLO_15_00"); //Hallo, ich bin neu hier.
+	AI_Output (self, other, "DIA_Hodges_HALLO_03_01"); //Nimm's mir nicht übel, aber ich hab nicht viel Lust mich zu unterhalten - bin ziemlich im Arsch.
+	AI_Output (other, self, "DIA_Hodges_HALLO_15_02"); //Schwer beschäftigt, was?
+	AI_Output (self, other, "DIA_Hodges_HALLO_03_03"); //Kann man wohl sagen. Bennet macht so viele Waffen, dass ich mit dem Schleifen kaum nachkomme.
 };
 
 // ************************************************************
@@ -72,7 +72,7 @@ instance DIA_Hodges_TellAboutFarm	(C_INFO)
 	condition	 = 	DIA_Hodges_TellAboutFarm_Condition;
 	information	 = 	DIA_Hodges_TellAboutFarm_Info;
 	permanent 	 = 	FALSE;
-	description	 = 	"What can you tell me about the farm?";
+	description	 = 	"Was kannst du mir über den Hof erzählen?";
 };
 
 func int DIA_Hodges_TellAboutFarm_Condition ()
@@ -86,16 +86,16 @@ func int DIA_Hodges_TellAboutFarm_Condition ()
 
 func void DIA_Hodges_TellAboutFarm_Info ()
 {	
-	AI_Output (other,self ,"DIA_Hodges_TellAboutFarm_15_00"); //What can you tell me about the farm?
-	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_01"); //This is Onar's farm.
-	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_02"); //That big building is his house. He vacated a wing for the mercenaries.
-	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_03"); //We farmers have had to bunk in the barn ever since.
-	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_04"); //(hastily) But it's all right with me, it's good that we have people who guard the farm.
+	AI_Output (other,self ,"DIA_Hodges_TellAboutFarm_15_00"); //Was kannst du mir über den Hof erzählen?
+	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_01"); //Das hier ist Onars Hof.
+	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_02"); //Das große Haus ist sein Wohnhaus. Er hat einen Flügel freigemacht für die Söldner.
+	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_03"); //Seitdem müssen wir Bauern in der Scheune pennen.
+	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_04"); //(hastig) Aber mir soll's recht sein, ist schon gut, dass wir jetzt Leute haben, die auf den Hof aufpassen.
 	
 	if (Npc_GetDistToWP (self, "NW_BIGFARM_PATH_04_1B") < 500)
 	{
-		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_05"); //The building here is the kitchen.
-		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_07"); //Maybe you'll be lucky and Thekla will have something for you to eat.
+		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_05"); //Das Haus hier ist die Küche.
+		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_07"); //Vielleicht hast du Glück und Thekla hat was zu essen für dich.
 	};
 };
 
@@ -109,7 +109,7 @@ instance DIA_Hodges_AboutSld	(C_INFO)
 	condition	 = 	DIA_Hodges_AboutSld_Condition;
 	information	 = 	DIA_Hodges_AboutSld_Info;
 	permanent 	 = 	FALSE;
-	description	 = 	"What about the mercenaries?";
+	description	 = 	"Was ist mit den Söldnern?";
 };
 
 func int DIA_Hodges_AboutSld_Condition ()
@@ -125,11 +125,11 @@ func int DIA_Hodges_AboutSld_Condition ()
 
 func void DIA_Hodges_AboutSld_Info ()
 {	
-	AI_Output (other,self ,"DIA_Hodges_AboutSld_15_00"); //What about the mercenaries?
-	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_01"); //Onar hired them to keep the city militia off our backs.
-	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_02"); //But they also guard the farm, the sheep and us farmers.
-	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_03"); //So don't even think about stealing anything or rummaging around in somebody's chest.
-	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_04"); //They're just waiting for a chance to knock you down.
+	AI_Output (other,self ,"DIA_Hodges_AboutSld_15_00"); //Was ist mit den Söldnern?
+	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_01"); //Onar hat sie angeheuert, damit sie uns die Milizen aus der Stadt vom Hals halten.
+	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_02"); //Aber sie passen auch auf den Hof, die Schafe und uns Bauern auf.
+	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_03"); //Also lass dir bloß nicht einfallen, was zu klauen oder in irgendwelchen Truhen rumzukramen.
+	AI_Output (self ,other,"DIA_Hodges_AboutSld_03_04"); //Die warten nur auf 'ne Gelegenheit, dich umzuhauen.
 };
 
 // ************************************************************
@@ -142,7 +142,7 @@ instance DIA_Hodges_TRADE	(C_INFO)
 	condition	= DIA_Hodges_TRADE_Condition;
 	information	= DIA_Hodges_TRADE_Info;
 	permanent 	= TRUE;
-	description	= "Can I buy weapons from you?";
+	description	= "Kann ich bei dir Waffen kaufen?";
 	trade		= TRUE;
 };
 
@@ -156,8 +156,8 @@ func int DIA_Hodges_TRADE_Condition ()
 
 func void DIA_Hodges_TRADE_Info ()
 {	
-	AI_Output (other, self ,"DIA_Hodges_TRADE_15_00"); //Can I buy weapons from you?
-	AI_Output (self, other, "DIA_Hodges_TRADE_03_01"); //I don't have much. We take almost all the swords and axes into Onar's house.
+	AI_Output (other, self ,"DIA_Hodges_TRADE_15_00"); //Kann ich bei dir Waffen kaufen?
+	AI_Output (self, other, "DIA_Hodges_TRADE_03_01"); //Ich hab nicht viel. Die Schwerter und Äxte bringen wir fast alle in Onars Haus.
 	
 	Npc_RemoveInvItems (self,ItMiSwordblade,Npc_HasItems (self,ItMiSwordblade));
 };
@@ -237,7 +237,7 @@ instance DIA_Hodges_DontWork		(C_INFO)
 	condition	 = 	DIA_Hodges_DontWork_Condition;
 	information	 = 	DIA_Hodges_DontWork_Info;
 	permanent 	 = 	FALSE;
-	description	 = 	"Why aren't you working?";
+	description	 = 	"Warum arbeitest du nicht?";
 };
 
 func int DIA_Hodges_DontWork_Condition ()
@@ -252,14 +252,14 @@ func int DIA_Hodges_DontWork_Condition ()
 
 func void DIA_Hodges_DontWork_Info ()
 {	
-	AI_Output (other,self ,"DIA_Hodges_DontWork_15_00"); //Why aren't you working?
-	AI_Output (self ,other,"DIA_Hodges_DontWork_03_01"); //Haven't you heard yet? The paladins have arrested Bennet.
+	AI_Output (other,self ,"DIA_Hodges_DontWork_15_00"); //Warum arbeitest du nicht?
+	AI_Output (self ,other,"DIA_Hodges_DontWork_03_01"); //Hast du es noch nicht gehört? Die Paladine haben Bennet verhaftet.
 
 	MIS_RescueBennet = LOG_RUNNING;
 	
 	Log_CreateTopic (TOPIC_RESCUEBENNET, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_RESCUEBENNET, LOG_RUNNING);
-	B_LogEntry (TOPIC_RESCUEBENNET,"Bennet the smith has been arrested by the paladins in the city."); 
+	B_LogEntry (TOPIC_RESCUEBENNET,"Der Schmied Bennet ist in der Stadt von den Paaldinen verhaftet worden."); 
 
 };
 
@@ -273,7 +273,7 @@ instance DIA_Hodges_WhatHappened		(C_INFO)
 	condition	 = 	DIA_Hodges_WhatHappened_Condition;
 	information	 = 	DIA_Hodges_WhatHappened_Info;
 	permanent 	 = 	FALSE;
-	description	 = 	"What happened?";
+	description	 = 	"Was ist geschehen?";
 };
 
 func int DIA_Hodges_WhatHappened_Condition ()
@@ -287,11 +287,11 @@ func int DIA_Hodges_WhatHappened_Condition ()
 
 func void DIA_Hodges_WhatHappened_Info ()
 {	
-	AI_Output (other,self ,"DIA_Hodges_WhatHappened_15_00"); //What happened?
-	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_01"); //Well, we were in the city to shop, when all of a sudden we heard a scream. Someone yelled: There they are, get them!
-	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_02"); //Boy, was I scared! I took to my heels and ran like the demons were after me.
-	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_03"); //Bennet was right behind me. I don't know what happened, but when I got outside the city, he had disappeared.
-	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_04"); //I must have lost him in the city.
+	AI_Output (other,self ,"DIA_Hodges_WhatHappened_15_00"); //Was ist geschehen?
+	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_01"); //Na ja, wir waren in der Stadt, um einzukaufen, auf einmal haben wir einen Schrei gehört. Jemand rief: Da sind sie, packt sie!
+	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_02"); //Junge, hatte ich einen Schiss, ich hab die Beine in die Hand genommen und bin gerannt, als ob die Dämonen hinter mir her wären.
+	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_03"); //Bennet war direkt hinter mir, ich weiß gar nicht, was passiert ist, aber als ich vor der Stadt war, war Bennet verschwunden.
+	AI_Output (self ,other,"DIA_Hodges_WhatHappened_03_04"); //Ich hab ihn wohl noch in der Stadt verloren.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -304,7 +304,7 @@ instance DIA_Hodges_BennetsCrime			(C_INFO)
 	condition	 = 	DIA_Hodges_BennetsCrime_Condition;
 	information	 = 	DIA_Hodges_BennetsCrime_Info;
 	permanent 	 = 	FALSE;
-	description	 = 	"So why was Bennet arrested?";
+	description	 = 	"Weswegen wurde Bennet denn verhaftet?";
 };
 
 func int DIA_Hodges_BennetsCrime_Condition ()
@@ -318,19 +318,19 @@ func int DIA_Hodges_BennetsCrime_Condition ()
 
 func void DIA_Hodges_BennetsCrime_Info ()
 {	
-	AI_Output (other,self ,"DIA_Hodges_BennetsCrime_15_00"); //So why was Bennet arrested?
-	AI_Output (self ,other,"DIA_Hodges_BennetsCrime_03_01"); //Murder! Bennet is supposed to have murdered a paladin. What nonsense. I was with him the whole time.
-	AI_Output (other,self ,"DIA_Hodges_BennetsCrime_15_02"); //So why don't you go to town and explain the whole thing?
-	AI_Output (self ,other,"DIA_Hodges_BennetsCrime_03_03"); //They'd stick me in the slammer as his accomplice. Naah, certainly not in the current situation.
+	AI_Output (other,self ,"DIA_Hodges_BennetsCrime_15_00"); //Weswegen wurde Bennet denn verhaftet?
+	AI_Output (self ,other,"DIA_Hodges_BennetsCrime_03_01"); //Mord! Bennet soll einen der Paladine ermordet haben. So ein Unsinn. Ich war doch bei ihm.
+	AI_Output (other,self ,"DIA_Hodges_BennetsCrime_15_02"); //Warum gehst du nicht in die Stadt und klärst das Ganze auf?
+	AI_Output (self ,other,"DIA_Hodges_BennetsCrime_03_03"); //Die stecken mich doch direkt in den Bau, als Komplize. Nee, schon gar nicht in der jetzigen Situation.
 	AI_Output (other,self ,"DIA_Hodges_BennetsCrime_15_04"); //Situation?
-	AI_Output (self ,other,"DIA_Hodges_BennetsCrime_03_05"); //You know, Onar and the city, that's bound to come to a bad end.
+	AI_Output (self ,other,"DIA_Hodges_BennetsCrime_03_05"); //Du weißt schon, Onar und die Stadt, das musste ja ein böses Ende nehmen.
 
-	B_LogEntry (TOPIC_RESCUEBENNET,"They say Bennet murdered a paladin. His apprentice Hodges says he's innocent, but he daren't enter the city."); 
+	B_LogEntry (TOPIC_RESCUEBENNET,"Bennet soll einen der Paladine ermordet haben. Hodges, sein Gehilfe, bezeugt seine Unschuld, traut sich aber nicht in die Stadt."); 
 };
 
 
 ///////////////////////////////////////////////////////////////////////
-//	Wie reagieren die S�ldner?
+//	Wie reagieren die Sldner?
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Hodges_BennetAndSLD			(C_INFO)
 {
@@ -339,7 +339,7 @@ instance DIA_Hodges_BennetAndSLD			(C_INFO)
 	condition	 = 	DIA_Hodges_BennetAndSLD_Condition;
 	information	 = 	DIA_Hodges_BennetAndSLD_Info;
 	permanent 	 = 	FALSE;
-	description	 = 	"How did the mercenaries here on the farm react?";
+	description	 = 	"Wie reagieren die Söldner hier auf dem Hof?";
 };
 
 func int DIA_Hodges_BennetAndSLD_Condition ()
@@ -353,11 +353,11 @@ func int DIA_Hodges_BennetAndSLD_Condition ()
 
 func void DIA_Hodges_BennetAndSLD_Info ()
 {	
-	AI_Output (other,self ,"DIA_Hodges_BennetAndSLD_15_00"); //How did the mercenaries here on the farm react?
-	AI_Output (self ,other,"DIA_Hodges_BennetAndSLD_03_01"); //Naturally, I don't know exactly what they're planning, but some of them are really pissed off.
-	AI_Output (other,self ,"DIA_Hodges_BennetAndSLD_15_02"); //I can understand that.
-	AI_Output (self ,other,"DIA_Hodges_BennetAndSLD_03_03"); //If it were up to them, they'd rather attack the city today than tomorrow to get Bennet out.
-	AI_Output (self ,other,"DIA_Hodges_BennetAndSLD_03_04"); //Talk to Lee, maybe there's something you can do.
+	AI_Output (other,self ,"DIA_Hodges_BennetAndSLD_15_00"); //Wie reagieren die Söldner hier auf dem Hof?
+	AI_Output (self ,other,"DIA_Hodges_BennetAndSLD_03_01"); //Was die vorhaben, weiß ich natürlich nicht genau, aber einige sind wirklich stinksauer.
+	AI_Output (other,self ,"DIA_Hodges_BennetAndSLD_15_02"); //Kann ich verstehen.
+	AI_Output (self ,other,"DIA_Hodges_BennetAndSLD_03_03"); //Wenn es nach denen geht, würden sie lieber heute als morgen die Stadt angreifen, um Bennet da raus zu holen.
+	AI_Output (self ,other,"DIA_Hodges_BennetAndSLD_03_04"); //Sprich mal mit Lee, vielleicht kannst du ja was unternehmen.
 };
 //##################################################
 //##

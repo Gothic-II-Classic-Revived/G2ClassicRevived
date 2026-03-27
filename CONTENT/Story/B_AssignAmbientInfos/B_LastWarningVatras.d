@@ -4,18 +4,18 @@
 
 func void B_LastWarningVatras ()
 {
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_00"); //What have you done, wretch? 
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_01"); //We in the Order of Water have warned you repeatedly against becoming ensnared by evil.
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_02"); //However, it has come to my attention that you have left the path of the all-preserving balance.
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_03"); //You have murdered and plundered your way across the land and are guilty of serious crimes.
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_04"); //Numerous innocent people have been carried off by YOUR hand.
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_05"); //You are now allied with the powers of darkness.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_00"); //Was hast du getan, Elender? 
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_01"); //Wir vom Orden des Wassers haben dich mehrmals davor gewarnt, dem Bösen zu verfallen.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_02"); //Doch mir ist Ohren gekommen, dass du den Pfad des alles erhaltenen Gleichgewichts verlassen hast.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_03"); //Du bist mordend und plünderns durch die Lande gezogen und hast dich schwerer Verbrechen schuldig gemacht.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_04"); //Zahlreiche unschuldige Menschen sind durch DEINE Hand dahingerafft worden.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_05"); //Du stehst nun mit den Mächten der Finsternis im Bunde.
 };
 
 func void B_VatrasPissedOff ()
 {
-	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_00"); //Henceforth, you can no longer count on our support. 
-	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_01"); //Begone. To me you are now an outcast.
+	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_00"); //Von nun an kannst du nicht mehr mit meiner Unterstützung zu rechnen. 
+	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_01"); //Geh weg. Du bist jetzt ein Ausgestoßener für mich.
 	
 	if (Vatras_IsOnBoard == LOG_SUCCESS)
 	{
@@ -27,5 +27,5 @@ func void B_VatrasPissedOff ()
 	VatrasPissedOffForever = TRUE;
 
 	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"PRAY"); 
+	Npc_ExchangeRoutine (self,"Beten"); 
 };

@@ -20,42 +20,42 @@ FUNC VOID Use_Bookstand_Kreise_01_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "THE FIRST CIRCLE"					);
+					Doc_PrintLine	( nDocID,  0, "DER ERSTE KREIS"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
-					Doc_PrintLines	( nDocID,  0, "The runes of the 1st Circle and the ingredients required to create them.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des ersten Kreises und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Light");
-					Doc_PrintLine	( nDocID,  0, "Gold Coin");
+					Doc_PrintLine	( nDocID,  0, "Licht");
+					Doc_PrintLine	( nDocID,  0, "Goldmünze");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Fire Arrow");
-					Doc_PrintLine	( nDocID,  0, "Sulfur");
+					Doc_PrintLine	( nDocID,  0, "Feuerpfeil");
+					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Small Lightning");
-					Doc_PrintLine	( nDocID,  0, "Rock Crystal");
+					Doc_PrintLine	( nDocID,  0, "Blitz");
+					Doc_PrintLine	( nDocID,  0, "Bergkristall");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Goblin Skeleton");
-					Doc_PrintLine	( nDocID,  0, "Goblin's Bone");
+					Doc_PrintLine	( nDocID,  0, "Goblin Skelett");
+					Doc_PrintLine	( nDocID,  0, "Knochen eines Goblins");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Heal Light Wounds");
-					Doc_PrintLine	( nDocID,  0, "Healing Plant");
+					Doc_PrintLine	( nDocID,  0, "leichte Wunden heilen");
+					Doc_PrintLine	( nDocID,  0, "Heilpflanze");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Runemaking1 == FALSE)
@@ -82,44 +82,44 @@ FUNC VOID Use_Bookstand_Kreise_02_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "THE SECOND CIRCLE"					);
+					Doc_PrintLine	( nDocID,  0, "DER ZWEITE KREIS"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
-					Doc_PrintLines	( nDocID,  0, "The runes of the 2nd Circle and the ingredients required to create them.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des zweiten Kreises und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Fireball");
-					Doc_PrintLine	( nDocID,  0, "Pitch");
+					Doc_PrintLine	( nDocID,  0, "Feuerball");
+					Doc_PrintLine	( nDocID,  0, "Pech");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
-					Doc_PrintLine	( nDocID,  0, "Ice Arrow");
-					Doc_PrintLine	( nDocID,  0, "Glacier Quartz");
+					Doc_PrintLine	( nDocID,  0, "Eispfeil");
+					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
-					Doc_PrintLine	( nDocID,  0, "Summon Wolf");
-					Doc_PrintLine	( nDocID,  0, "Wolf Skin");
+					Doc_PrintLine	( nDocID,  0, "Wolf rufen");
+					Doc_PrintLine	( nDocID,  0, "Wolfsfell");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Wind Fist");
-					Doc_PrintLine	( nDocID,  0, "Coal");
+					Doc_PrintLine	( nDocID,  0, "Windfaust");
+					Doc_PrintLine	( nDocID,  0, "Kohle");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Sleep");
-					Doc_PrintLine	( nDocID,  0, "Swampweed");
+					Doc_PrintLine	( nDocID,  0, "Schlaf.");
+					Doc_PrintLine	( nDocID,  0, "Sumpfkraut");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Runemaking2 == FALSE)
@@ -147,52 +147,52 @@ FUNC VOID Use_Bookstand_Kreise_03_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "THE THIRD CIRCLE"					);
+					Doc_PrintLine	( nDocID,  0, "DER DRITTE KREIS"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLines	( nDocID,  0, "The runes of the 3rd Circle and the ingredients required to create them.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des dritten Kreises und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
 					
-					Doc_PrintLine	( nDocID,  0, "Heal Medium Wounds");
-					Doc_PrintLine	( nDocID,  0, "Healing Herb");
+					Doc_PrintLine	( nDocID,  0, "mittlere Wunden heilen");
+					Doc_PrintLine	( nDocID,  0, "Heilkraut");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
-					Doc_PrintLine	( nDocID,  0, "Small Fire Storm");
-					Doc_PrintLine	( nDocID,  0, "Pitch, Sulfur");
+					Doc_PrintLine	( nDocID,  0, "Kleiner Feuersturm");
+					Doc_PrintLine	( nDocID,  0, "Pech, Schwefel");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Create Skeleton");
-					Doc_PrintLine	( nDocID,  0, "Skeleton's Bone");
+					Doc_PrintLine	( nDocID,  0, "Skelett erschaffen");
+					Doc_PrintLine	( nDocID,  0, "Knochen eines Skeletts");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Fear");
-					Doc_PrintLine	( nDocID,  0, "Black Pearl");
+					Doc_PrintLine	( nDocID,  0, "Angst");
+					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Ice Block");
-					Doc_PrintLine	( nDocID,  0, "Glacier Quartz");
-					Doc_PrintLine	( nDocID,  0, "Aquamarine");
+					Doc_PrintLine	( nDocID,  0, "Eisblock");
+					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
+					Doc_PrintLine	( nDocID,  0, "Aquamarin");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Ball Lightning");
-					Doc_PrintLine	( nDocID,  0, "Rock Crystal");
-					Doc_PrintLine	( nDocID,  0, "Sulfur");
+					Doc_PrintLine	( nDocID,  0, "Kugelblitz");
+					Doc_PrintLine	( nDocID,  0, "Bergkristall");
+					Doc_PrintLine	( nDocID,  0, "Schwefel");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Fireball");
+					Doc_PrintLine	( nDocID,  0, "Feuerball");
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-					Doc_PrintLine	( nDocID,  0, "Pitch, Sulfur");
+					Doc_PrintLine	( nDocID,  0, "Pech, Schwefel");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Runemaking3 == FALSE)
@@ -220,29 +220,29 @@ FUNC VOID Use_Bookstand_Kreise_04_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "THE FOURTH CIRCLE"					);
+					Doc_PrintLine	( nDocID,  0, "DER VIERTE KREIS"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLines	( nDocID,  0, "The runes of the 4th Circle and the ingredients required to create them.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des vierten Kreises und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Large Fireball");
-					Doc_PrintLine	( nDocID,  0, "Sulfur");
-					Doc_PrintLine	( nDocID,  0, "Pitch");
+					Doc_PrintLine	( nDocID,  0, "Grosser Feuerball");
+					Doc_PrintLine	( nDocID,  0, "Schwefel");
+					Doc_PrintLine	( nDocID,  0, "Pech");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Lightning");
-					Doc_PrintLine	( nDocID,  0, "Rock Crystal");
-					Doc_PrintLine	( nDocID,  0, "Glacier Quartz");
+					Doc_PrintLine	( nDocID,  0, "Blitzschlag");
+					Doc_PrintLine	( nDocID,  0, "Bergkristall");
+					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
 					Doc_PrintLine	( nDocID,  0, "");				
 					
-					Doc_PrintLine	( nDocID,  0, "Awaken Golem");
-					Doc_PrintLine	( nDocID,  0, "Heart of a Stone Golem");
+					Doc_PrintLine	( nDocID,  0, "Golem erwecken");
+					Doc_PrintLine	( nDocID,  0, "Herz eines Steingolems");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Destroy Undead");
-					Doc_PrintLine	( nDocID,  0, "Holy Water");
+					Doc_PrintLine	( nDocID,  0, "Untote vernichten");
+					Doc_PrintLine	( nDocID,  0, "Geweihtes Wasser");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
@@ -253,11 +253,11 @@ FUNC VOID Use_Bookstand_Kreise_04_S1()
 					
 					
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Runemaking4 == FALSE)
@@ -285,41 +285,41 @@ FUNC VOID Use_Bookstand_Kreise_05_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "THE FIFTH CIRCLE"					);
+					Doc_PrintLine	( nDocID,  0, "DER FÜNFTE KREIS"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLines	( nDocID,  0, "The runes of the 5th Circle and the ingredients required to create them.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des fünften Kreises und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Ice Wave");
-					Doc_PrintLine	( nDocID,  0, "Glacier Quartz");
-					Doc_PrintLine	( nDocID,  0, "Aquamarine");
+					Doc_PrintLine	( nDocID,  0, "Eiswelle");
+					Doc_PrintLine	( nDocID,  0, "Gletscher Quartz");
+					Doc_PrintLine	( nDocID,  0, "Aquamarin");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
-					Doc_PrintLine	( nDocID,  0, "Large Fire Storm");
-					Doc_PrintLine	( nDocID,  0, "Sulfur");
-					Doc_PrintLine	( nDocID,  0, "Tongue of Fire");
+					Doc_PrintLine	( nDocID,  0, "Grosser Feuersturm");
+					Doc_PrintLine	( nDocID,  0, "Schwefel");
+					Doc_PrintLine	( nDocID,  0, "Flammenzunge");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Summon Demon");
-					Doc_PrintLine	( nDocID,  0, "Heart of a Demon");
+					Doc_PrintLine	( nDocID,  0, "Dämon beschwören");
+					Doc_PrintLine	( nDocID,  0, "Herz eines Dämonen");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Heal Heavy Wounds");
-					Doc_PrintLine	( nDocID,  0, "Healing Root");
+					Doc_PrintLine	( nDocID,  0, "Schwere Wunden heilen");
+					Doc_PrintLine	( nDocID,  0, "Heilwurzel");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Runemaking5 == FALSE)
@@ -347,34 +347,34 @@ FUNC VOID Use_Bookstand_Kreise_06_S1()
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
-					Doc_PrintLine	( nDocID,  0, "THE SIXTH CIRCLE"					);
+					Doc_PrintLine	( nDocID,  0, "DER SECHSTE KREIS"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLines	( nDocID,  0, "The runes of the 6th Circle and the ingredients required to create them.");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des sechsten Kreises und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
-					Doc_PrintLine	( nDocID,  0, "Fire Rain");
-					Doc_PrintLine	( nDocID,  0, "Pitch");
-					Doc_PrintLine	( nDocID,  0, "Sulfur");
-					Doc_PrintLine	( nDocID,  0, "Tongue of Fire");
+					Doc_PrintLine	( nDocID,  0, "Feuerregen");
+					Doc_PrintLine	( nDocID,  0, "Pech");
+					Doc_PrintLine	( nDocID,  0, "Schwefel");
+					Doc_PrintLine	( nDocID,  0, "Flammenzunge");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Breath of Death");
-					Doc_PrintLine	( nDocID,  0, "Coal");
-					Doc_PrintLine	( nDocID,  0, "Black Pearl");
+					Doc_PrintLine	( nDocID,  0, "Todeshauch");
+					Doc_PrintLine	( nDocID,  0, "Kohle");
+					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Wave of Death");
-					Doc_PrintLine	( nDocID,  0, "Skeleton's Bone");
-					Doc_PrintLine	( nDocID,  0, "Black Pearl");
+					Doc_PrintLine	( nDocID,  0, "Todeswelle");
+					Doc_PrintLine	( nDocID,  0, "Knochen eines Skeletts");
+					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
 					Doc_PrintLine	( nDocID,  0, "");
 					
-					Doc_PrintLine	( nDocID,  0, "Army of Darkness");
-					Doc_PrintLine	( nDocID,  0, "Skeleton's Bone");
-					Doc_PrintLine	( nDocID,  0, "Black Pearl");
-					Doc_PrintLine	( nDocID,  0, "Heart of a Stone Golem");
-					Doc_PrintLine	( nDocID,  0,  "Heart of a Demon");
+					Doc_PrintLine	( nDocID,  0, "Armee der Finsternis");
+					Doc_PrintLine	( nDocID,  0, "Knochen eines Skeletts");
+					Doc_PrintLine	( nDocID,  0, "Schwarze Perle");
+					Doc_PrintLine	( nDocID,  0, "Herz eines Steingolems");
+					Doc_PrintLine	( nDocID,  0,  "Herz eines Dämonen");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					
@@ -384,17 +384,17 @@ FUNC VOID Use_Bookstand_Kreise_06_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
-					Doc_PrintLine	( nDocID,  1, "Shrink Monster");
-					Doc_PrintLine	( nDocID,  1, "Goblin's Bone");
-					Doc_PrintLine	( nDocID,  1, "Troll Tusk");
+					Doc_PrintLine	( nDocID,  1, "Monster Schrumpfen");
+					Doc_PrintLine	( nDocID,  1, "Knochen eines Goblins");
+					Doc_PrintLine	( nDocID,  1, "Trollhauer");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 			
-					Doc_PrintLines	( nDocID,  1, "To create a rune you always require ONE of the ingredients listed."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "The user must know the formula for the spell and he must have a blank runestone and a spell scroll for the desired spell."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Runemaking6 == FALSE)
@@ -424,27 +424,27 @@ FUNC VOID UseItWr_Book_Circle_01()
 
 				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-				Doc_PrintLine	( nDocID,  0,"The First Circle");
+				Doc_PrintLine	( nDocID,  0,"Der erste Kreis");
 				Doc_PrintLine	( nDocID,  0,"---------------");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLines	( nDocID,  0,"When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use. ");
+				Doc_PrintLines	( nDocID,  0,"Als die Götter den Menschen die Fähigkeit zur Magie schenkten, schenkten sie ihnen auch das Wissen magische Runen herzustellen. Die Diener der Götter haben die ehrenvolle Aufgabe übernommen, diese Artefakte göttlicher Macht zu erschaffen und zu benutzen, wobei der Kreis des Magiers bestimmt, welche Zauber er in der Lage ist zu verstehen und anzuwenden.");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Light");
+				Doc_PrintLine	( nDocID,  1,"Licht");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"Innos' first gift to mankind. A shining ball appears over the magician.");
+				Doc_PrintLines	( nDocID,  1,"Das erste Geschenk Innos an die Menschen.Eine hell strahlende Kugel wird über dem Magier erzeugt.");
 				Doc_PrintLine	( nDocID,  1,  "");
 				Doc_PrintLine	( nDocID,  1,  "" );
-				Doc_PrintLine	( nDocID,  1,"Ice Bolt");
+				Doc_PrintLine	( nDocID,  1,"Eispfeil");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"A missile of magic energy.");
+				Doc_PrintLines	( nDocID,  1,"Ein Geschoss aus magischer Energie.");
 				Doc_PrintLine	( nDocID,  1,  "");
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Fire Bolt");
+				Doc_PrintLine	( nDocID,  1,"Feuerpfeil");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"A missile of magic Fire.");
+				Doc_PrintLines	( nDocID,  1,"Ein Geschoss aus magischem Feuer.");
 				Doc_PrintLine	( nDocID,  1,  "");
 
 				Doc_Show		( nDocID );
@@ -467,26 +467,26 @@ FUNC VOID UseItWr_Book_Circle_02()
 					
 				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-				Doc_PrintLine	( nDocID,  0,"The Second Circle");
+				Doc_PrintLine	( nDocID,  0,"Der zweite Kreis");
 				Doc_PrintLine	( nDocID,  0,"---------------");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLines	( nDocID,  0,"All magic originates from the magic powers of the user. The user is called a magician.");
+				Doc_PrintLines	( nDocID,  0,"Alle Zauber werden durch die magische Energie des Anwenders ausgelöst.Der Anwender wird als Magier bezeichnet.");
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLines	( nDocID,  0,"Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
+				Doc_PrintLines	( nDocID,  0,"Jede Aktivierung eines Zaubers kostet den Magier einen Teil seiner Kraft. diese Kraft wird als Mana bezeichnet.");
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
 					
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Healing");
+				Doc_PrintLine	( nDocID,  1,"Heilung");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"Adanos saw that the humans died and that it was the will of Beliar that it should be that way. And he spoke: I will not oppose the will of Beliar, but I shall give mankind the power of healing."); 
+				Doc_PrintLines	( nDocID,  1,"Adanos sah, das die Menschen starben und das es der Wille Beliars war.Und er sprach:Stelle ich mich auch nicht gegen den Willen Beliars,gebe ich den Menschen jedoch die Macht der Heilung."); 
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLines	( nDocID,  1,"This spell has the power of healing the magician.");
+				Doc_PrintLines	( nDocID,  1,"Dieser Zauber birgt die Macht, den Magier zu heilen.");
 				Doc_PrintLine	( nDocID,  1,"");
 				Doc_PrintLine	( nDocID,  1,  "");
 				Doc_PrintLine	( nDocID,  1, "");
@@ -512,32 +512,32 @@ FUNC VOID UseItWr_Book_Circle_03()
 
 				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-				Doc_PrintLine	( nDocID,  0,"The Third Circle");
+				Doc_PrintLine	( nDocID,  0,"Der dritte Kreis");
 				Doc_PrintLine	( nDocID,  0,"---------------");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLines	( nDocID,  0,"Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
+				Doc_PrintLines	( nDocID,  0,"Manche Zauber können mit einer bestimmten größeren Anzahl von magischer Energie gespeist werden, diese werden auch Aufladungszauber genannt.");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLines	( nDocID,  0,"Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
+				Doc_PrintLines	( nDocID,  0,"Andere Zauber werden aufrechterhalten, solange der Magier sein Mana in dieses Spruch einfliessen lässt. Solche Zauber heissen Investierungszauber.");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Fireball");
+				Doc_PrintLine	( nDocID,  1,"Feuerball");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"Innos' second gift to the children of Fire. A ball of fire, which burns its victims.");
+				Doc_PrintLines	( nDocID,  1,"Das zweite Geschenk Innos an die Kinder des Feuers. Ein Ball aus Feuer, der sein Opfer verbrennt");
 				Doc_PrintLine	( nDocID,  1,"");
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Ice Block");
+				Doc_PrintLine	( nDocID,  1,"Eisblock");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"The victim is enclosed in a block of ice. A spell from the temple of the Magicians of Water.");
+				Doc_PrintLines	( nDocID,  1,"Das Opfer wird in einen Eisblock eingefroren. Ein Zauber aus dem Tempel der Wassermagier");
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Ball Lightning");
+				Doc_PrintLine	( nDocID,  1,"Kugelblitz");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"A ball of magic power.");
+				Doc_PrintLines	( nDocID,  1,"Eine Kugel, geschaffen aus magischer Energie.");
 				Doc_PrintLine	( nDocID,  1,  "");
 
 				Doc_Show		( nDocID );
@@ -560,33 +560,33 @@ FUNC VOID UseItWr_Book_Circle_04()
 
 				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-				Doc_PrintLine	( nDocID,  0,"The Fourth Circle");
+				Doc_PrintLine	( nDocID,  0,"Der vierte Kreis");
 				Doc_PrintLine	( nDocID,  0,"---------------");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLine	( nDocID,  0,"The Magic");
-				Doc_PrintLine	( nDocID,  0,"of Teleportation");
+				Doc_PrintLine	( nDocID,  0,"Die Magie");
+				Doc_PrintLine	( nDocID,  0,"der Teleportation");
 				Doc_PrintLine	( nDocID,  0,"---------------");
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLines	( nDocID,  0,"The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
+				Doc_PrintLines	( nDocID,  0,"Das besondere an diesen magischen Formeln ist, das sie, obwohl als Runen geschaffen,von jedem der magische Energie in sich trägt gesprochen werden können.Die Magie die diese Formeln umgibt, kann sofort aktiviert werden. Es gibt keine Einschränkungen für Teleportationszauber.");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 
-				Doc_PrintLine	( nDocID,  1,"Storm of Fire");
+				Doc_PrintLine	( nDocID,  1,"Feuersturm");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"Like the fireball, this spell affects one foe, but then leaps to other foes as well.");
+				Doc_PrintLines	( nDocID,  1,"Ähnlich dem Feuerball wirkt dieser Zauber auf einen Gegner, springt von dort aus jedoch auf weitere Gegner über.");
 				Doc_PrintLine	( nDocID,  1,"");
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Chain Lightning");
+				Doc_PrintLine	( nDocID,  1,"Blitz");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"The spell is leaping to more targets, the longer it is working. The power of lighning is hard to control. Thus, the caster himself may become a target.");
+				Doc_PrintLines	( nDocID,  1,"Je länger der Zauber wirkt, desto mehr Ziele erfasst er. Die Kraft des Blitzes ist schwer zu kontrollieren. Daher kann der Zaubernde selbst zum Ziel werden.");
 				Doc_PrintLine	( nDocID,  1,  "");
 				Doc_PrintLine	( nDocID,  1, "");	
-				Doc_PrintLine	( nDocID,  1,"Death to the Undead");
+				Doc_PrintLine	( nDocID,  1,"Untote vernichten");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"This spell banishes undead creatures of darkness.");	
+				Doc_PrintLines	( nDocID,  1,"Die Geschöpfe der Finsternis werden mit diesem Zauber verbannt.");	
 				Doc_PrintLine	( nDocID,  1, "");
 					
 				Doc_Show		( nDocID );
@@ -609,22 +609,22 @@ FUNC VOID UseItWr_Book_Circle_05()
 
 				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-				Doc_PrintLine	( nDocID,  0,"The Fifth Circle");
+				Doc_PrintLine	( nDocID,  0,"Der fünfte Kreis");
 				Doc_PrintLine	( nDocID,  0,"---------------");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLine	( nDocID,  0,"Rain of Fire");
+				Doc_PrintLine	( nDocID,  0,"Feuerregen");
 				Doc_PrintLine	( nDocID,  0,"---------------");
-				Doc_PrintLines	( nDocID,  0,"The power of divine Fire hits every creature within range of the magician.");
+				Doc_PrintLines	( nDocID,  0,"Die Macht des göttlichen Feuers trifft jedes Lebewesen im Wirkungsbreich des Magiers.");
 				Doc_PrintLine	( nDocID,  0, "");					
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Wave of Ice");
+				Doc_PrintLine	( nDocID,  1,"Eiswelle");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"A magic Wave of Ice extends over any foes and freezes them for a short period of time. During this period, the victims are paralyzed and damaged. ");
-				Doc_PrintLines	( nDocID,  1,"A spell from the temple of the Magicians of Water.");
+				Doc_PrintLines	( nDocID,  1,"Ein Feld aus magischem Eis erstreckt sich über alle Gegner und friert diese für einen kurzen Zeitraum ein. Während dieser Zeit sind die Opfer bewegungsunfähig und erleiden Schaden.");
+				Doc_PrintLines	( nDocID,  1,"Ein Zauber aus dem Tempel der Wassermagier.");
 				Doc_PrintLine	( nDocID,  1, "");
 
 				Doc_Show		( nDocID );
@@ -647,25 +647,25 @@ FUNC VOID UseItWr_Book_Circle_06()
 
   				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
   				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
-				Doc_PrintLine	( nDocID,  0,"The Sixth Circle");
+				Doc_PrintLine	( nDocID,  0,"Der sechste Kreis");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");
-				Doc_PrintLine	( nDocID,  0,"Breath of Death");
+				Doc_PrintLine	( nDocID,  0,"Todeshauch");
 				Doc_PrintLine	( nDocID,  0,"---------------");
-				Doc_PrintLines	( nDocID,  0,"Beliar's breath. A cloud of destructive air, which may kill any being instantly.");
+				Doc_PrintLines	( nDocID,  0,"Der Atem Beliars. Eine Wolke aus Lebenverschlingendem Nichts, die jedes Wesen augenblicklich töten kann.");
 				Doc_PrintLine	( nDocID,  0, "");
 				Doc_PrintLine	( nDocID,  0, "");					
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
-				Doc_PrintLine	( nDocID,  1,"Ring of Death");
+				Doc_PrintLine	( nDocID,  1,"Todesring");
 				Doc_PrintLine	( nDocID,  1,"---------------");
-				Doc_PrintLines	( nDocID,  1,"There are hardly any records about the rune carrying the powers of URIZIEL.");	
-				Doc_PrintLines	( nDocID,  1,"It is only known that it has Beliar's powers.");
+				Doc_PrintLines	( nDocID,  1,"Nicht viel ist überliefert über die Rune mit der Macht von URIZIEL");	
+				Doc_PrintLines	( nDocID,  1,"Es ist nur soviel bekannt, als das sie Beliars Mächte in sich birgt.");
 				Doc_PrintLine	( nDocID,  1, "");
 			
 				Doc_Show		( nDocID );

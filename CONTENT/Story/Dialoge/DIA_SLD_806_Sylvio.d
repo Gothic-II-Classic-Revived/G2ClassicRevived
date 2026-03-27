@@ -31,7 +31,7 @@ instance DIA_Sylvio_Hallo		(C_INFO)
 	condition	= DIA_Sylvio_Hallo_Condition;
 	information	= DIA_Sylvio_Hallo_Info;
 	permanent	= TRUE;
-	description	= "What's up?";
+	description	= "Wie steht's?";
 };
 
 func int DIA_Sylvio_Hallo_Condition ()
@@ -41,8 +41,8 @@ func int DIA_Sylvio_Hallo_Condition ()
 
 func void DIA_Sylvio_Hallo_Info ()
 {
-	AI_Output (other, self, "DIA_Sylvio_Hallo_15_00"); //How's it going?
-	AI_Output (self, other, "DIA_Sylvio_Hallo_09_01"); //Have I given you permission to address me?
+	AI_Output (other, self, "DIA_Sylvio_Hallo_15_00"); //Wie läuft's denn so?
+	AI_Output (self, other, "DIA_Sylvio_Hallo_09_01"); //Habe ich dir erlaubt, mich anzusprechen?
 	
 	Sylvio_angequatscht = Sylvio_angequatscht + 1;
 	AI_StopProcessInfos (self);
@@ -58,7 +58,7 @@ instance DIA_Sylvio_Thekla		(C_INFO)
 	condition	= DIA_Sylvio_Thekla_Condition;
 	information	= DIA_Sylvio_Thekla_Info;
 	permanent 	= FALSE;
-	description	= "Thekla has a problem with you.";
+	description	= "Thekla hat ein Problem mit dir.";
 };
 
 func int DIA_Sylvio_Thekla_Condition ()
@@ -71,10 +71,10 @@ func int DIA_Sylvio_Thekla_Condition ()
 
 func void DIA_Sylvio_Thekla_Info ()
 {
-	AI_Output (other, self, "DIA_Sylvio_Thekla_15_00"); //Thekla has a problem with you.
-	AI_Output (self, other, "DIA_Sylvio_Thekla_09_01"); //So? What is the dear lady's problem? And why doesn't she come herself?
-	AI_Output (other, self, "DIA_Sylvio_Thekla_15_02"); //You know that damn well...
-	AI_Output (self, other, "DIA_Sylvio_Thekla_09_03"); //(cynically friendly) Why don't you go discuss that with my friend Bullco for a while?
+	AI_Output (other, self, "DIA_Sylvio_Thekla_15_00"); //Thekla hat ein Problem mit dir.
+	AI_Output (self, other, "DIA_Sylvio_Thekla_09_01"); //So? Was hat die gute Frau denn? Und warum kommt sie nicht selbst?
+	AI_Output (other, self, "DIA_Sylvio_Thekla_15_02"); //Das weißt du verdammt gut.
+	AI_Output (self, other, "DIA_Sylvio_Thekla_09_03"); //(zynisch freundlich) Warum unterhältst du dich nicht ein bisschen mit meinem Freund Bullco darüber?
 
 	Sylvio_angequatscht = Sylvio_angequatscht + 1;
 	AI_StopProcessInfos (self);
@@ -90,7 +90,7 @@ instance DIA_Sylvio_Gossip		(C_INFO)
 	condition	= DIA_Sylvio_Gossip_Condition;
 	information	= DIA_Sylvio_Gossip_Info;
 	permanent	= FALSE;
-	description	= "A lot of people talk about you...";
+	description	= "Ziemlich viele Leute reden über dich ...";
 };
 
 func int DIA_Sylvio_Gossip_Condition ()
@@ -100,8 +100,8 @@ func int DIA_Sylvio_Gossip_Condition ()
 
 func void DIA_Sylvio_Gossip_Info ()
 {
-	AI_Output (other, self, "DIA_Sylvio_Gossip_15_00"); //A lot of people talk about you...
-	AI_Output (self, other, "DIA_Sylvio_Gossip_09_01"); //A lot of people talk too much.
+	AI_Output (other, self, "DIA_Sylvio_Gossip_15_00"); //Ziemlich viele Leute reden über dich ...
+	AI_Output (self, other, "DIA_Sylvio_Gossip_09_01"); //Ziemlich viele Leute reden zuviel.
 	
 	Sylvio_angequatscht = Sylvio_angequatscht + 1;
 	AI_StopProcessInfos (self);
@@ -117,7 +117,7 @@ instance DIA_Sylvio_AboutLee (C_INFO)
 	condition	= DIA_Sylvio_AboutLee_Condition;
 	information	= DIA_Sylvio_AboutLee_Info;
 	permanent	= FALSE;
-	description	= "What do you think of Lee?";
+	description	= "Was denkst du über Lee?";
 };
 
 func int DIA_Sylvio_AboutLee_Condition ()
@@ -127,9 +127,9 @@ func int DIA_Sylvio_AboutLee_Condition ()
 
 func void DIA_Sylvio_AboutLee_Info ()
 {
-	AI_Output (other, self, "DIA_Sylvio_AboutLee_15_00"); //What do you think of Lee?
-	AI_Output (self, other, "DIA_Sylvio_AboutLee_09_01"); //(lightly ironic) Oh, he's a good fighter. I wouldn't ever want to pick a fight with him.
-	AI_Output (self, other, "DIA_Sylvio_AboutLee_09_02"); //(cold) Unless, of course, it couldn't be avoided.
+	AI_Output (other, self, "DIA_Sylvio_AboutLee_15_00"); //Was denkst du über Lee?
+	AI_Output (self, other, "DIA_Sylvio_AboutLee_09_01"); //(leicht ironisch) Oh, er ist ein guter Kämpfer. Ich würde mich nie mit ihm anlegen wollen.
+	AI_Output (self, other, "DIA_Sylvio_AboutLee_09_02"); //(kalt) Außer natürlich, es lässt sich nicht vermeiden.
 	
 	Sylvio_angequatscht = Sylvio_angequatscht + 1;
 	AI_StopProcessInfos (self);
@@ -167,9 +167,9 @@ func int DIA_Sylvio_MenDefeated_Condition ()
 
 func void DIA_Sylvio_MenDefeated_Info ()
 {
-	AI_Output (self, other, "DIA_Sylvio_MenDefeated_09_00"); //It has come to my attention that you have it in for my boys!
-	AI_Output (self, other, "DIA_Sylvio_MenDefeated_09_01"); //And as far as I know, you're one of Lee's prot�g�s.
-	AI_Output (self, other, "DIA_Sylvio_MenDefeated_09_02"); //I'm warning you! A few things are going to be different around here soon, and we'll talk about this again then!
+	AI_Output (self, other, "DIA_Sylvio_MenDefeated_09_00"); //Mir ist zu Ohren gekommen, du hast es auf meine Jungs abgesehen!
+	AI_Output (self, other, "DIA_Sylvio_MenDefeated_09_01"); //Und soweit ich weiß, bist du einer von Lees Schützlingen.
+	AI_Output (self, other, "DIA_Sylvio_MenDefeated_09_02"); //Ich warne dich! Bald werden sich hier einige Dinge ändern, und dann werden wir uns noch mal über die Sache unterhalten!
 	
 	Sylvio_MenDefeated = TRUE;
 	
@@ -186,7 +186,7 @@ instance DIA_Sylvio_Asshole (C_INFO)
 	condition	= DIA_Sylvio_Asshole_Condition;
 	information	= DIA_Sylvio_Asshole_Info;
 	permanent	= FALSE;
-	description	= "Hey, asshole...";
+	description	= "Hey, Arschloch ...";
 };
 
 func int DIA_Sylvio_Asshole_Condition ()
@@ -199,9 +199,9 @@ func int DIA_Sylvio_Asshole_Condition ()
 
 func void DIA_Sylvio_Asshole_Info ()
 {
-	AI_Output (other, self, "DIA_Sylvio_Asshole_15_00"); //Hey, asshole...
-	AI_Output (self, other, "DIA_Sylvio_Asshole_09_01"); //You don't actually think I'd get involved in a duel with you?
-	AI_Output (self, other, "DIA_Sylvio_Asshole_09_02"); //Go crawl back under your rock.
+	AI_Output (other, self, "DIA_Sylvio_Asshole_15_00"); //Hey, Arschloch ...
+	AI_Output (self, other, "DIA_Sylvio_Asshole_09_01"); //Du glaubst doch nicht etwa, dass ich mich mit dir auf ein Duell einlasse?
+	AI_Output (self, other, "DIA_Sylvio_Asshole_09_02"); //Kriech wieder unter deinen Stein.
 	
 	Sylvio_angequatscht = Sylvio_angequatscht + 1;
 	

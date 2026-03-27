@@ -96,7 +96,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_ORC_SWORD_03 (C_Item)
 {	
-	name 				=	"Scale Blade";
+	name 				=	"Schuppenklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -126,7 +126,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_03 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_01 (C_Item)
 {	
-	name 				=	"Clefter of Worlds";
+	name 				=	"Weltenspalter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -151,7 +151,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_02 (C_Item)
 {	
-	name 				=	"Lightbringer";
+	name 				=	"Lichtbringer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -176,7 +176,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_03 (C_Item)
 {	
-	name 				=	"Blade of Time";
+	name 				=	"Zeitenklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -201,7 +201,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_04 (C_Item)
 {	
-	name 				=	"Demon Strike";
+	name 				=	"Dämonenstreich";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -226,7 +226,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_05 (C_Item)
 {	
-	name 				=	"Banishing Blade";
+	name 				=	"Verbannungsklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	

@@ -92,9 +92,9 @@ INSTANCE UndeadWolf	(Mst_Default_Wolf)
 
 INSTANCE BlackWolf	(Mst_Default_Warg)
 {
-	name							=	"Black Wolf";
+	name							=	"Schwarzer Wolf";
 	level							=	 10;		
-	//für Inventory
+	//fr Inventory
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	30;
@@ -123,7 +123,7 @@ INSTANCE BlackWolf	(Mst_Default_Warg)
 
 INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 {
-	name							=	"Summoned Wolf";
+	name							=	"Beschworener Wolf";
 	guild							=	GIL_SUMMONED_WOLF;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_WOLF;
 	level							=	0; //10
@@ -159,7 +159,7 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 INSTANCE WolfJuvenile	(Mst_Default_Wolf)
 {
 	level							=	3;
-	name							=	"Juvenile Wolf";
+	name							=	"Junger Wolf";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	15;
 	attribute	[ATR_DEXTERITY]		=	15;
@@ -185,13 +185,13 @@ INSTANCE WolfJuvenile	(Mst_Default_Wolf)
 
 
 //************
-//	Missions Wölfe für Pepe: YWolf    	
+//	Missions Wlfe fr Pepe: YWolf    	
 //************
 
 
 INSTANCE PEPES_WolfJuvenile1	(Mst_Default_Wolf)
 {
-	name							=	"Young Wolf";
+	name							=	"Junger Wolf";
 	level							=	3;
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	10;
@@ -216,7 +216,7 @@ INSTANCE PEPES_WolfJuvenile1	(Mst_Default_Wolf)
 INSTANCE PEPES_WolfJuvenile2	(Mst_Default_Wolf)
 {
 	level							=	3;
-	name							=	"Young Wolf";
+	name							=	"Junger Wolf";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	10;
 	attribute	[ATR_DEXTERITY]		=	10;
@@ -240,7 +240,7 @@ INSTANCE PEPES_WolfJuvenile2	(Mst_Default_Wolf)
 INSTANCE PEPES_WolfJuvenile3	(Mst_Default_Wolf)
 {
 	level							=	3;
-	name							=	"Young Wolf";
+	name							=	"Junger Wolf";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	10;
 	attribute	[ATR_DEXTERITY]		=	10;
@@ -264,7 +264,7 @@ INSTANCE PEPES_WolfJuvenile3	(Mst_Default_Wolf)
 INSTANCE PEPES_WolfJuvenile4	(Mst_Default_Wolf)
 {
 	level							=	3;
-	name							=	"Young Wolf";
+	name							=	"Junger Wolf";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	10;
 	attribute	[ATR_DEXTERITY]		=	10;

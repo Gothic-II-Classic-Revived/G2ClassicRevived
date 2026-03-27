@@ -32,7 +32,7 @@ INSTANCE DIA_Wambo_PICKPOCKET (C_INFO)
 	condition	= DIA_Wambo_PICKPOCKET_Condition;
 	information	= DIA_Wambo_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be risky to steal his key)";
+	description = "(Es wäre gewagt seinen Schlüssel zu stehlen)";
 };                       
 
 FUNC INT DIA_Wambo_PICKPOCKET_Condition()
@@ -84,7 +84,7 @@ INSTANCE DIA_Wambo_Job(C_INFO)
 	condition	= DIA_Wambo_Job_Condition;
 	information	= DIA_Wambo_Job_Info;
 	permanent	= FALSE;
-	description = "What are you doing here?";
+	description = "Was machst du hier?";
 };                       
 
 FUNC INT DIA_Wambo_Job_Condition()
@@ -108,7 +108,7 @@ INSTANCE DIA_Wambo_Situation(C_INFO)
 	condition	= DIA_Wambo_Situation_Condition;
 	information	= DIA_Wambo_Situation_Info;
 	permanent	= TRUE;
-	description = "How are things?";
+	description = "Wie sieht's aus?";
 };                       
 
 FUNC INT DIA_Wambo_Situation_Condition()
@@ -134,7 +134,7 @@ INSTANCE DIA_Wambo_Ramirez(C_INFO)
 	condition	= DIA_Wambo_Ramirez_Condition;
 	information	= DIA_Wambo_Ramirez_Info;
 	permanent	= FALSE;
-	description = "I come from our mutual friend Ramirez.";
+	description = "Ich komme von unserem gemeinsamen Freund Ramirez.";
 };                       
 
 FUNC INT DIA_Wambo_Ramirez_Condition()
@@ -164,7 +164,7 @@ INSTANCE DIA_Wambo_Deal(C_INFO)
 	condition	= DIA_Wambo_Deal_Condition;
 	information	= DIA_Wambo_Deal_Info;
 	permanent	= TRUE;
-	description = "(Pay 250 gold)";
+	description = "(250 Gold zahlen)";
 };                       
 //-----------------------------------
 var int DIA_Wambo_Deal_permanent;

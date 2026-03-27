@@ -302,7 +302,7 @@ const int	REV_Value_1H_Sword_Ore_05			=	5000;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_SWORD_OLD_01 (C_Item)
 {	
-	name 				=	"Rusty Sword";
+	name 				=	"Rostiges Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -327,7 +327,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_OLD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_OLD_02 (C_Item)
 {	
-	name 				=	"Old Sword";
+	name 				=	"Altes Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -352,7 +352,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_OLD_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_01 (C_Item)
 {	
-	name 				=	"Short Sword";
+	name 				=	"Kurzschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -377,7 +377,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_02 (C_Item)
 {	
-	name 				=	"Farmer's Defense";
+	name 				=	"Bauernwehr";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -402,7 +402,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_03 (C_Item)
 {	
-	name 				=	"Lurker's Bite";
+	name 				=	"Lurkerbiß";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -427,7 +427,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_04 (C_Item)
 {	
-	name 				=	"Thorn of Wounds";
+	name 				=	"Wundendorn";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -452,7 +452,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_05 (C_Item)
 {	
-	name 				=	"Digger's Discipline";
+	name 				=	"Buddlerzucht";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -477,7 +477,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SHORT_05 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_01 (C_Item)
 {	
-	name 				=	"Crude Sword";
+	name 				=	"grobes Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -502,7 +502,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_02 (C_Item)
 {	
-	name 				=	"Judgment Sword";
+	name 				=	"Richtschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -527,7 +527,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_03 (C_Item)
 {	
-	name 				=	"Guard's Sword";
+	name 				=	"Gardeschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -552,7 +552,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_04 (C_Item)
 {	
-	name 				=	"Battle Sword";
+	name 				=	"Kampfschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -577,7 +577,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_05 (C_Item)
 {	
-	name 				=	"War Sword";
+	name 				=	"Kriegsschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -602,7 +602,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_05 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_06 (C_Item)
 {	
-	name 				=	"Light Guard's Sword";
+	name 				=	"Leichtes Gardeschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -627,7 +627,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_06 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_LONG_01 (C_Item)
 {	
-	name 				=	"Longsword";
+	name 				=	"Langschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -652,7 +652,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_LONG_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_LONG_02 (C_Item)
 {	
-	name 				=	"Sword of Fear";
+	name 				=	"Furchtbringer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -677,7 +677,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_LONG_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_LONG_03 (C_Item)
 {	
-	name 				=	"Sword of Hate";
+	name 				=	"Hassbringer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -702,7 +702,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_LONG_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_LONG_04 (C_Item)
 {	
-	name 				=	"Sword of Victory";
+	name 				=	"Siegbringer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -727,7 +727,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_LONG_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_LONG_05 (C_Item)
 {	
-	name 				=	"Sword of Death";
+	name 				=	"Todbringer";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -752,7 +752,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_LONG_05 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_01 (C_Item)
 {	
-	name 				=	"Broadsword";
+	name 				=	"Breitschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -777,7 +777,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_02 (C_Item)
 {	
-	name 				=	"Warrior's Verdict";
+	name 				=	"Kriegerurteil";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -802,7 +802,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_03 (C_Item)
 {	
-	name 				=	"Storm Whisper";
+	name 				=	"Sturmgeflüster";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -827,7 +827,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_04 (C_Item)
 {	
-	name 				=	"Guard's Hand";
+	name 				=	"Gardistenhand";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -852,7 +852,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BROAD_04 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_01 (C_Item)
 {	
-	name 				=	"Rusty Bastard Sword";
+	name 				=	"Rostiges Bastardschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -877,7 +877,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_02 (C_Item)
 {	
-	name 				=	"Butcher";
+	name 				=	"Schlachter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -902,7 +902,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_03 (C_Item)
 {	
-	name 				=	"Executor";
+	name 				=	"Vollstrecker";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -927,7 +927,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_04 (C_Item)
 {	
-	name 				=	"Berserker's Word";
+	name 				=	"Berserkerwort";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -957,7 +957,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_04 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_01 (C_Item) 
 {	
-	name 				=	"Paladin's Sword";
+	name 				=	"Paladinschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -981,7 +981,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_01 (C_Item)
 };
 INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_02 (C_Item) 
 {	
-	name 				=	"Paladin's Sword";
+	name 				=	"Paladinschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1005,7 +1005,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_02 (C_Item)
 };
 INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_03 (C_Item) 
 {	
-	name 				=	"Paladin's Sword";
+	name 				=	"Paladinschwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1030,7 +1030,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_DEMONSLAYER (C_Item) 
 {	
-	name 				=	"Demonslayer";
+	name 				=	"Dämonentöter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1054,7 +1054,7 @@ INSTANCE ITMW_REVIVED_1H_DEMONSLAYER (C_Item)
 };
 INSTANCE ITMW_REVIVED_1H_DEMONSLAYER_02 (C_Item) 
 {	
-	name 				=	"Demonslayer";
+	name 				=	"Dämonentöter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1132,7 +1132,7 @@ INSTANCE ITMW_REVIVED_1H_URIZIEL_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_BANDIT_01 (C_Item)
 {	
-	name 				=	"Bandits' Rapier";
+	name 				=	"Degen der Banditen";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1157,7 +1157,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BANDIT_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_BANDIT_02 (C_Item)
 {	
-	name 				=	"Master Sword";
+	name 				=	"Meisterdegen";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1182,7 +1182,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BANDIT_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_HACKER_01 (C_Item)
 {	
-	name 				=	"Old machete";
+	name 				=	"Alte Machete";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1232,7 +1232,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_HACKER_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_PIRATE_01 (C_Item)
 {	
-	name 				=	"Pirate's Cutlass";
+	name 				=	"Piratensäbel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1287,7 +1287,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PIRATE_02 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_SWORD_ALRIK (C_Item)
 {	
-	name 				=	"Alrik's Sword"; //"Jackal's Sword";
+	name 				=	"Alrik´s Schwert"; //"Jackal's Sword";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_MISSION|ITEM_SWD;	
@@ -1317,7 +1317,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_ALRIK (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_SCAR (C_Item)
 {
-	name 				=	"Usurer's Sword";
+	name 				=	"Usurers Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1344,7 +1344,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SCAR (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_ARTO (C_Item)
 {
-	name 				=	"Arto's Sword";
+	name 				=	"Artos Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1371,7 +1371,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_ARTO (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_RAVEN (C_Item)
 {
-	name 				=	"Raven's Right";
+	name 				=	"Rabenrecht";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1398,7 +1398,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_RAVEN (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_CORNELIUS (C_Item)
 {
-	name 				=	"Paw's Punch";
+	name 				=	"Prankenhieb";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1425,7 +1425,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_CORNELIUS (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_WHISTLER (C_Item)
 {
-	name 				=	"Whistler's Sword";
+	name 				=	"Whistlers Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1452,7 +1452,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_WHISTLER (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_KALOM (C_Item)
 {
-	name 				=	"Kalom's Sword";
+	name 				=	"Kaloms Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1479,7 +1479,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_KALOM (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_VALENTINO (C_Item)
 {
-	name 				=	"Valentino's Sword";
+	name 				=	"Valentinos Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1506,7 +1506,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_VALENTINO (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_CASSIA (C_Item)
 {	
-	name 				=	"Cassia's Sword";
+	name 				=	"Cassias Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	

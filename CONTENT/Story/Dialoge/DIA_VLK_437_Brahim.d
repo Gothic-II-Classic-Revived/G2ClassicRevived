@@ -6,7 +6,7 @@ FUNC VOID B_BrahimNewMaps ()
 {
 	if (Brahim_ShowedMaps == TRUE)
 	{
-		AI_Output			(self, other, "B_BrahimNewMaps_07_00"); //Come back again later. I'm sure to have something new for you then.
+		AI_Output			(self, other, "B_BrahimNewMaps_07_00"); //Komm später noch mal wieder. Dann habe ich sicher wieder etwas neues für dich.
 	};
 };
 INSTANCE DIA_Brahim_EXIT   (C_INFO)
@@ -78,7 +78,7 @@ instance DIA_Brahim_GREET		(C_INFO)
 	condition	 = 	DIA_Brahim_GREET_Condition;
 	information	 = 	DIA_Brahim_GREET_Info;
 	permanent	 =  FALSE;
-	description	 = 	"What are you doing here?";
+	description	 = 	"Was machst du hier?";
 };
 func int DIA_Brahim_GREET_Condition ()
 {
@@ -86,13 +86,13 @@ func int DIA_Brahim_GREET_Condition ()
 };
 func void DIA_Brahim_GREET_Info ()
 {
-	AI_Output (other, self, "DIA_Brahim_GREET_15_00"); //What are you doing here?
-	AI_Output (self, other, "DIA_Brahim_GREET_07_01"); //My name is Brahim. I draw maps, and sell them.
-	AI_Output (self, other, "DIA_Brahim_GREET_07_02"); //Since you're new here, maybe you could use a map of the city.
-	AI_Output (self, other, "DIA_Brahim_GREET_07_03"); //It's quite affordable - and very useful until you know your way around.
+	AI_Output (other, self, "DIA_Brahim_GREET_15_00"); //Was machst du hier?
+	AI_Output (self, other, "DIA_Brahim_GREET_07_01"); //Mein Name ist Brahim. Ich zeichne und verkaufe Karten.
+	AI_Output (self, other, "DIA_Brahim_GREET_07_02"); //Da du hier neu bist, kannst du vielleicht eine Karte der Stadt gebrauchen.
+	AI_Output (self, other, "DIA_Brahim_GREET_07_03"); //Sie ist sehr günstig - und bis du dich eingewöhnt hast, äußerst nützlich.
 	
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-	B_LogEntry (Topic_CityTrader,"Brahim draws and sells maps near the harbor.");
+	B_LogEntry (Topic_CityTrader,"Brahim zeichnet und verkauft Karten am Hafen.");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -132,7 +132,7 @@ instance DIA_Brahim_BUY		(C_INFO)
 	information	 = 	DIA_Brahim_BUY_Info;
 	permanent 	 =  TRUE;
 	trade 		 =  TRUE;
-	description	 = 	"Show me your maps.";
+	description	 = 	"Zeig mir deine Karten";
 };
 
 func int DIA_Brahim_BUY_Condition ()
@@ -226,9 +226,9 @@ FUNC VOID DIA_Brahim_Kap3_First_EXIT_Info()
 	AI_Output (self, other,"DIA_Brahim_Kap3_First_EXIT_07_03"); //I know your kind. You go for any chance of finding riches.
 	Info_ClearChoices (DIA_Brahim_Kap3_First_EXIT);
 	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,DIALOG_BACK,DIA_Brahim_Kap3_First_EXIT_BACK);
-	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,"Where did you get that document?",DIA_Brahim_Kap3_First_EXIT_WhereGetIt);
-	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,"What kind of document is that?",DIA_Brahim_Kap3_First_EXIT_Content);
-	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,"Why don't you keep it for yourself?",DIA_Brahim_Kap3_First_EXIT_KeepIt);
+	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,"Wo hast du das Schriftstück her?",DIA_Brahim_Kap3_First_EXIT_WhereGetIt);
+	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,"Was ist das für ein Schriftstück?",DIA_Brahim_Kap3_First_EXIT_Content);
+	Info_AddChoice (DIA_Brahim_Kap3_First_EXIT,"Wieso behälst du es nicht selbst?",DIA_Brahim_Kap3_First_EXIT_KeepIt);
 };
 
 FUNC VOID DIA_Brahim_Kap3_First_EXIT_BACK ()

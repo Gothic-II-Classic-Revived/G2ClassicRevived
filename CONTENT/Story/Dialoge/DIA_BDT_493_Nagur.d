@@ -81,12 +81,12 @@ FUNC VOID DIA_Nagur_Hallo_Info()
 {
 	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
-		AI_Output (self, other, "DIA_Nagur_Hallo_08_00");//Hey, I haven't got time to chat with you. Talk to Kardif if you want information.
+		AI_Output (self, other, "DIA_Nagur_Hallo_08_00");//Hey, ich habe keine Zeit mit dir zu plaudern. Sprich mit Kardif, wenn du Informationen willst.
 		AI_StopProcessInfos (self);
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Nagur_Hallo_08_01");//Man, just leave me alone, okay?
+		AI_Output (self, other, "DIA_Nagur_Hallo_08_01");//Mann, lass mich einfach in Ruhe, okay?
 		AI_StopProcessInfos (self);
 	};
 };
@@ -110,11 +110,11 @@ FUNC VOID DIA_Nagur_Hallo_Info()
 		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_KDF_H) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_KDF_H) == FALSE)
 		{
-			AI_Output (self ,other,"DIA_Nagur_Add_08_02"); //And don't think I don't recognize you just because you're wearing different togs!
+			AI_Output (self ,other,"DIA_Nagur_Add_08_02"); //Und glaub ja, nicht, daß ich dich nicht erkenne, nur weil du andere Klamotten anhast!
 		};
 		
-		AI_Output (self ,other,"DIA_Nagur_Add_08_03"); //(conspiratorially) You're about to stick your nose into things that are none of your business!
-		AI_Output (self ,other,"DIA_Nagur_Add_08_04"); //Get lost!
+		AI_Output (self ,other,"DIA_Nagur_Add_08_03"); //(verschwörerisch) Du bist dabei, dich in Angelegenheiten einzumischen, die dich nichts angehen!
+		AI_Output (self ,other,"DIA_Nagur_Add_08_04"); //Verpiß dich!
 		
 		MIS_Nagur_Bote = LOG_SUCCESS; //HACK: Attila kommt bei 3* Success oder 1* suckt --> nur noch die anderen beiden Missionen sind Trigger
 		NagurHack = TRUE;
@@ -128,7 +128,7 @@ INSTANCE DIA_Nagur_Job   (C_INFO)
 	condition   = DIA_Nagur_Job_Condition;
 	information = DIA_Nagur_Job_Info;
 	permanent   = FALSE;
-	description = "Kardif says you may have a job for me.";
+	description = "Kardif meinte, du hättest einen Job für mich.";
 };
 FUNC INT DIA_Nagur_Job_Condition()
 {	
@@ -139,42 +139,42 @@ FUNC INT DIA_Nagur_Job_Condition()
 };
 FUNC VOID DIA_Nagur_Job_Info()
 {
-	AI_Output (other, self, "DIA_Nagur_Job_15_00");//Kardif says you may have a job for me.
+	AI_Output (other, self, "DIA_Nagur_Job_15_00");//Kardif meinte, du hättest einen Job für mich.
 	if (other.guild == GIL_NOV)
 	|| (other.guild == GIL_KDF)
 	{
-		AI_Output (self ,other,"DIA_Nagur_Add_08_00"); //There ARE no jobs for monastery folk down here at the harbor! (laughs)
+		AI_Output (self ,other,"DIA_Nagur_Add_08_00"); //Hier im Hafen GIBT es keine Jobs für Leute aus den Kloster (lacht)
 		B_Nagur_Abfertigen();
 	}
 	else if (other.guild == GIL_MIL)
 	|| 		(other.guild == GIL_PAL)
 	{
-		AI_Output (self ,other,"DIA_Nagur_Add_08_01"); //There ARE no jobs for the King's soldiers down here at the harbor.
+		AI_Output (self ,other,"DIA_Nagur_Add_08_01"); //Hier im Hafen GIBT es keine Jobs für Truppen des Königs.
 		B_Nagur_Abfertigen();
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Nagur_Job_08_01");//(appraising) Well, well, so you're looking for a special job. Okay, but we play by my rules, understood?
-		AI_Output (other, self, "DIA_Nagur_Job_15_02");//What does that mean?
-		AI_Output (self, other, "DIA_Nagur_Job_08_03");//That means you do what I say and you get a third of the profits.
-		AI_Output (self, other, "DIA_Nagur_Job_08_04");//If you don't like it, then there's no job.
+		AI_Output (self, other, "DIA_Nagur_Job_08_01");//(musternd) Soso, du suchst also einen speziellen Job. Okay, aber es läuft nach meinen Regeln, verstanden?
+		AI_Output (other, self, "DIA_Nagur_Job_15_02");//Was bedeutet das?
+		AI_Output (self, other, "DIA_Nagur_Job_08_03");//Das heißt, du tust das, was ich sage und kriegst ein Drittel vom Gewinn.
+		AI_Output (self, other, "DIA_Nagur_Job_08_04");//Wenn dir das nicht gefällt, dann gibt's auch keinen Job.
 	
 		Info_ClearChoices (DIA_Nagur_Job);
-		Info_AddChoice  (DIA_Nagur_Job,"We're business partners, so it's fifty-fifty. ",DIA_Nagur_Job_Halbe);
-		Info_AddChoice  (DIA_Nagur_Job,"All right, you're the boss.",DIA_Nagur_Job_Klar);
+		Info_AddChoice  (DIA_Nagur_Job,"Wir arbeiten zusammen, also machen wir auch halbe - halbe.",DIA_Nagur_Job_Halbe);
+		Info_AddChoice  (DIA_Nagur_Job,"Alles klar, du bist der Boss.",DIA_Nagur_Job_Klar);
 	};
 };
 FUNC VOID DIA_Nagur_Job_Klar()
 {
-	AI_Output (other, self, "DIA_Nagur_Job_Klar_15_00");//All right, you're the boss.
-	AI_Output (self, other, "DIA_Nagur_Job_Klar_08_01");//Good, then let me know when you're ready to rake in a heap of gold.
+	AI_Output (other, self, "DIA_Nagur_Job_Klar_15_00");//Alles klar, du bist der Boss.
+	AI_Output (self, other, "DIA_Nagur_Job_Klar_08_01");//Gut, dann sag mir Bescheid, wenn du bereit bist, einen Haufen Gold einzustreichen.
 	Nagur_Deal = 80;
 	Info_ClearChoices (DIA_Nagur_Job);
 };
 FUNC VOID DIA_Nagur_Job_Halbe()
 {
-	AI_Output (other, self, "DIA_Nagur_Job_Halbe_15_00");//We're business partners, so it's fifty-fifty.
-	AI_Output (self, other, "DIA_Nagur_Job_Halbe_08_01");//Okay, I thought I'd give it a shot. Of course we'll split our profits fairly.
+	AI_Output (other, self, "DIA_Nagur_Job_Halbe_15_00");//Wir arbeiten zusammen, also machen wir auch halbe - halbe.
+	AI_Output (self, other, "DIA_Nagur_Job_Halbe_08_01");//Okay, ich hab mir gedacht, ich probiere es einfach mal. Natürlich teilen wir unseren Gewinn gerecht.
 	Nagur_Deal = 120;
 	Info_ClearChoices (DIA_Nagur_Job);
 };
@@ -188,7 +188,7 @@ INSTANCE DIA_Nagur_Auftrag   (C_INFO)
 	condition   = DIA_Nagur_Auftrag_Condition;
 	information = DIA_Nagur_Auftrag_Info;
 	permanent   = FALSE;
-	description = "All right, what's your plan?";
+	description = "Okay, was ist dein Plan?";
 };
 
 FUNC INT DIA_Nagur_Auftrag_Condition()
@@ -201,53 +201,53 @@ FUNC INT DIA_Nagur_Auftrag_Condition()
 };
 FUNC VOID DIA_Nagur_Auftrag_Info()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftrag_15_00");//All right, what's your plan?
-	AI_Output (self, other, "DIA_Nagur_Auftrag_08_01");//You know the merchant Baltram, don't you? If not, it's time you talked to him.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_08_02");//This Baltram has a messenger who supplies him with goods from Akil's farm.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_08_03");//That is, he HAD a messenger, until I cut his throat. And now Baltram has to get a new one. And that will be you.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_08_04");//Your job is to get hired by Baltram and fetch the delivery from Akil.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_08_05");//You bring it to me and then I'll sell it to an interested customer. He'll fork over a tidy little sum for it.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_08_06");//And just don't try selling the stuff yourself. Have you got all that?
+	AI_Output (other, self, "DIA_Nagur_Auftrag_15_00");//Okay, was ist dein Plan?
+	AI_Output (self, other, "DIA_Nagur_Auftrag_08_01");//Du kennst doch den Händler Baltram, oder? Falls nicht, wird es Zeit, dass du mal mit ihm redest.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_08_02");//Dieser Baltram hat einen Boten, der ihn mit Waren von Akils Hof versorgt.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_08_03");//Das heißt, er hatte einen Boten, denn ich hab ihm die Kehle durchgeschnitten. Und Baltram muss jetzt einen neuen einstellen. Und das wirst du sein.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_08_04");//Dein Job ist es, dich von Baltram einstellen zu lassen und die Lieferung von Akil abzuholen.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_08_05");//Die bringst du mir und ich verkaufe sie dann an einen interessierten Kunden. Der lässt ein hübsches Sümmchen dafür springen.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_08_06");//Und versuche bloß nicht, den Kram selbst zu verkaufen. Hast du alles verstanden?
 	
 	Info_ClearChoices (DIA_Nagur_Auftrag);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"Well then, I'm all set (END)",DIA_Nagur_Auftrag_Okay);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"Where can I find Baltram?",DIA_Nagur_Auftrag_Baltram);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"When should I talk to Baltram?",DIA_Nagur_Auftrag_Wann);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"Where is Akil's farm?",DIA_Nagur_Auftrag_Akil);
-	Info_AddChoice    (DIA_Nagur_Auftrag,"How much will the profit be?",DIA_Nagur_Auftrag_Gewinn);
+	Info_AddChoice    (DIA_Nagur_Auftrag,"Alles klar, kann losgehen (ENDE)",DIA_Nagur_Auftrag_Okay);
+	Info_AddChoice    (DIA_Nagur_Auftrag,"Wo finde ich Baltram?",DIA_Nagur_Auftrag_Baltram);
+	Info_AddChoice    (DIA_Nagur_Auftrag,"Wann soll ich mit Baltram reden?",DIA_Nagur_Auftrag_Wann);
+	Info_AddChoice    (DIA_Nagur_Auftrag,"Wo ist Akil's Hof?",DIA_Nagur_Auftrag_Akil);
+	Info_AddChoice    (DIA_Nagur_Auftrag,"Wie hoch wird der Gewinn sein?",DIA_Nagur_Auftrag_Gewinn);
 
 };
 FUNC VOID DIA_Nagur_Auftrag_Akil()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftrag_Akil_15_00");//Where is Akil's farm?
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_01");//Leave the city by the east gate, that's directly on the marketplace.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_02");//If you follow the road to the right, you'll soon come to a few steps cut into the rock.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_03");//Go up there and you'll come to Akil's farm.
+	AI_Output (other, self, "DIA_Nagur_Auftrag_Akil_15_00");//Wo ist Akil's Hof?
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_01");//Verlasse die Stadt durch das östliche Tor, das direkt am Marktplatz ist.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_02");//Wenn du dem Weg nach rechts folgst, kommst du bald an ein paar Stufen, die in den Stein gehauen sind.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Akil_08_03");//Geh dort hinauf und du kommst zu Akils Hof.
 };
 FUNC VOID DIA_Nagur_Auftrag_Gewinn()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftrag_Gewinn_15_00");//How high will the profit be?
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Gewinn_08_01");//I can't say exactly. But I estimate about 400 gold pieces.
+	AI_Output (other, self, "DIA_Nagur_Auftrag_Gewinn_15_00");//Wie hoch wird der Gewinn sein?
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Gewinn_08_01");//Kann ich nicht genau sagen. Aber ich schätze mal 400 Goldstücke.
 };
 FUNC VOID DIA_Nagur_Auftrag_Baltram()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftrag_Baltram_15_00");//Where can I find Baltram?
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Baltram_08_01");//He has his stand in the marketplace.
+	AI_Output (other, self, "DIA_Nagur_Auftrag_Baltram_15_00");//Wo finde ich Baltram?
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Baltram_08_01");//Er hat seinen Stand am Marktplatz.
 };
 FUNC VOID DIA_Nagur_Auftrag_Wann()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftrag_Wann_15_00");//When should I talk to Baltram?
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Wann_08_01");//You can go right away. He should know by now that his messenger won't show up any more. (dirty laugh)
+	AI_Output (other, self, "DIA_Nagur_Auftrag_Wann_15_00");//Wann soll ich mit Baltram reden?
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Wann_08_01");//Du kannst sofort losgehen. Er sollte inzwischen wissen, dass sein Bote nicht mehr auftauchen wird. (lacht dreckig)
 };
 FUNC VOID DIA_Nagur_Auftrag_Okay()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftrag_Okay_15_00");//Well then, I'm all set.
-	AI_Output (self, other, "DIA_Nagur_Auftrag_Okay_08_01");//Good, then get on your way - but if you try to cheat me, you'll soon be every bit as dead as the messenger! Don't forget it!
+	AI_Output (other, self, "DIA_Nagur_Auftrag_Okay_15_00");//Alles klar, kann losgehen.
+	AI_Output (self, other, "DIA_Nagur_Auftrag_Okay_08_01");//Gut, dann mach dich auf den Weg - aber wenn du versuchst, mich reinzulegen, bist du bald so tot wie der Bote! Vergiss das nicht!
 	MIS_Nagur_Bote = LOG_RUNNING;
 	
 	Log_CreateTopic (TOPIC_Nagur,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Nagur,LOG_RUNNING);
-	B_LogEntry (TOPIC_Nagur,"I must get Baltram to take me on as his new errand-boy. Then I must collect the delivery from farmer Akil and bring it to Nagur.");
+	B_LogEntry (TOPIC_Nagur,"Ich soll mich von Baltram als neuen Boten einstellen lassen. Dann soll ich die Lieferung von Bauer Akil abholen und zu Nagur bringen.");
 	
 	AI_StopProcessInfos (self);
 };
@@ -261,7 +261,7 @@ INSTANCE DIA_Nagur_Success   (C_INFO)
 	condition   = DIA_Nagur_Success_Condition;
 	information = DIA_Nagur_Success_Info;
 	permanent   = FALSE;
-	description = "I brought the package.";
+	description = "Ich habe die Lieferung dabei.";
 };
 
 FUNC INT DIA_Nagur_Success_Condition()
@@ -275,10 +275,10 @@ FUNC INT DIA_Nagur_Success_Condition()
 };
 FUNC VOID DIA_Nagur_Success_Info()
 {
-	AI_Output (other, self, "DIA_Nagur_Success_15_00");//I brought the package.
-	AI_Output (self, other, "DIA_Nagur_Success_08_01");//Well done. I'll see to it that I sell it. Come back tomorrow.
+	AI_Output (other, self, "DIA_Nagur_Success_15_00");//Ich habe die Lieferung dabei.
+	AI_Output (self, other, "DIA_Nagur_Success_08_01");//Gut gemacht. Ich werde sehen, dass ich sie loswerde. Komm morgen wieder.
 	
-	B_LogEntry (TOPIC_Nagur,   "Nagur has got the delivery. He'll pay me my gold tomorrow.");
+	B_LogEntry (TOPIC_Nagur,   "Nagur hat die Lieferung bekommen. Morgen will er mir mein Gold für den Job zahlen.");
 	
 	AI_StopProcessInfos (self);
 	
@@ -298,7 +298,7 @@ INSTANCE DIA_Nagur_Deal   (C_INFO)
 	condition   = DIA_Nagur_Deal_Condition;
 	information = DIA_Nagur_Deal_Info;
 	permanent   = TRUE;
-	description = "Did you sell the wares, then?";
+	description = "Bist du die Ware losgeworden?";
 };
 //---------------------------------
 var int DIA_Nagur_Deal_permanent; 
@@ -315,16 +315,16 @@ FUNC INT DIA_Nagur_Deal_Condition()
 };
 FUNC VOID DIA_Nagur_Deal_Info()
 {
-	AI_Output (other, self, "DIA_Nagur_Deal_15_00");//Did you sell the wares, then?
+	AI_Output (other, self, "DIA_Nagur_Deal_15_00");//Bist du die Ware losgeworden?
 	
 	if (B_GetDayPlus() > NagurDay) 
 	{
-		AI_Output (self, other, "DIA_Nagur_Deal_08_01");//Yeah, but for less than I thought. I only got 300 gold pieces.
-		AI_Output (self, other, "DIA_Nagur_Deal_08_02");//Part of that goes to my employers...
-		AI_Output (self, other, "DIA_Nagur_Deal_08_03");//And Kardif gets his usual percentage - plus the gold for your commission.
-		AI_Output (self, other, "DIA_Nagur_Deal_08_04");//Which leaves a total of 240 gold pieces. We'll split those as agreed. Here's your part.
-		AI_Output (self, other, "DIA_Nagur_Deal_08_05");//You did good work. I've passed that on to my employers.
-		AI_Output (self, other, "DIA_Nagur_Deal_08_06");//What comes of that is out of my hands.
+		AI_Output (self, other, "DIA_Nagur_Deal_08_01");//Ja, aber für weniger als ich gedacht habe. Ich hab nur 300 Goldstücke bekommen.
+		AI_Output (self, other, "DIA_Nagur_Deal_08_02");//Davon geht noch ein Teil an meine Auftraggeber ...
+		AI_Output (self, other, "DIA_Nagur_Deal_08_03");//Und Kardif bekommt seinen üblichen Teil - plus das Gold für deine Vermittlung.
+		AI_Output (self, other, "DIA_Nagur_Deal_08_04");//Bleiben insgesamt noch 240 Goldstücke. Die teilen wir, wie wir abgemacht haben. Hier ist dein Anteil.
+		AI_Output (self, other, "DIA_Nagur_Deal_08_05");//Du hast gute Arbeit geleistet. Das habe ich mal so an meine Auftraggeber weitergegeben.
+		AI_Output (self, other, "DIA_Nagur_Deal_08_06");//Was allerdings daraus wird, liegt nicht in meiner Hand.
 		
 		B_GiveInvItems (self,other,ItMi_Gold,Nagur_Deal);
 		MIS_Nagur_Bote = LOG_SUCCESS;
@@ -336,7 +336,7 @@ FUNC VOID DIA_Nagur_Deal_Info()
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Nagur_Deal_08_07");//No, not yet. These things take their time. I want to get a good price, after all.
+		AI_Output (self, other, "DIA_Nagur_Deal_08_07");//Nein, bisher noch nicht. So was dauert seine Zeit, ich will ja schließlich einen guten Preis rausholen.
 	};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -349,7 +349,7 @@ INSTANCE DIA_Nagur_Auftraggeber   (C_INFO)
 	condition   = DIA_Nagur_Auftraggeber_Condition;
 	information = DIA_Nagur_Auftraggeber_Info;
 	permanent   = FALSE;
-	description = "Who are your employers?";
+	description = "Wer sind deine Auftraggeber?";
 };
 
 FUNC INT DIA_Nagur_Auftraggeber_Condition()
@@ -361,8 +361,8 @@ FUNC INT DIA_Nagur_Auftraggeber_Condition()
 };
 FUNC VOID DIA_Nagur_Auftraggeber_Info()
 {
-	AI_Output (other, self, "DIA_Nagur_Auftraggeber_15_00");//Who are your employers?
-	AI_Output (self, other, "DIA_Nagur_Auftraggeber_08_01");//You don't really think I'd tell you that, do you?
+	AI_Output (other, self, "DIA_Nagur_Auftraggeber_15_00");//Wer sind deine Auftraggeber?
+	AI_Output (self, other, "DIA_Nagur_Auftraggeber_08_01");//Du glaubst doch nicht wirklich, dass ich dir das erzähle, oder?
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info erneutes ansprechen
@@ -389,7 +389,7 @@ FUNC INT DIA_Nagur_Fazit_Condition()
 };
 FUNC VOID DIA_Nagur_Fazit_Info()
 {	
-	AI_Output (self, other, "DIA_Nagur_Fazit_08_00");//The job went well, but I don't talk about my employers. So stay cool.
+	AI_Output (self, other, "DIA_Nagur_Fazit_08_00");//Der Job ist gut gelaufen, aber über meine Auftraggeber spreche ich nicht. Also bleib ruhig.
 	AI_StopProcessInfos  (self);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -416,7 +416,7 @@ FUNC INT DIA_Nagur_Knast_Condition()
 };
 FUNC VOID DIA_Nagur_Knast_Info()
 {	
-	AI_Output (self, other, "DIA_Nagur_Knast_08_00");//You betrayed me! That was a big mistake - now piss off!
+	AI_Output (self, other, "DIA_Nagur_Knast_08_00");//Du hast mich verraten! Das war ein großer Fehler - jetzt verpiss dich!
 	AI_StopProcessInfos (self);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -429,7 +429,7 @@ INSTANCE DIA_Nagur_Sign   (C_INFO)
 	condition   = DIA_Nagur_Sign_Condition;
 	information = DIA_Nagur_Sign_Info;
 	permanent   = FALSE;
-	description	= "(Show thieves' signal)";
+	description	= "(Diebeszeichen zeigen)";
 };
 
 FUNC INT DIA_Nagur_Sign_Condition()
@@ -443,8 +443,8 @@ FUNC INT DIA_Nagur_Sign_Condition()
 FUNC VOID DIA_Nagur_Sign_Info()
 {	
 	AI_PlayAni (other,"T_YES");
-	AI_Output (self, other, "DIA_Nagur_Sign_08_00");//So you did it. Now you know who my employers are.
-	AI_Output (self, other, "DIA_Nagur_Sign_08_01");//Stick to what Cassia tells you - we don't care who you are otherwise - you're one of us, and that's all that counts.
+	AI_Output (self, other, "DIA_Nagur_Sign_08_00");//Du hast es also geschafft. Jetzt kennst du meine Auftraggeber.
+	AI_Output (self, other, "DIA_Nagur_Sign_08_01");//Halte dich an das, was Cassia dir sagt - uns ist es egal, wer du sonst bist - du bist einer von uns, und nur das zählt.
 	AI_StopProcessInfos (self);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -471,7 +471,7 @@ FUNC INT DIA_Nagur_Perm_Condition()
 };
 FUNC VOID DIA_Nagur_Perm_Info()
 {	
-	AI_Output (self, other, "DIA_Nagur_Perm_08_00");//Look for someone else, there's enough people running around. I don't have anything else for you.
+	AI_Output (self, other, "DIA_Nagur_Perm_08_00");//Such dir jemand anders, hier laufen genug Typen rum. Ich habe nichts mehr für dich.
 	AI_StopProcessInfos (self);
 };
 

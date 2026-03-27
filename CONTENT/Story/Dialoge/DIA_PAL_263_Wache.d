@@ -30,7 +30,7 @@ instance DIA_PAL_263_PERM		(C_INFO)
 	condition	 = 	DIA_PAL_263_PERM_Condition;
 	information	 = 	DIA_PAL_263_PERM_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Report, soldier!";
+	description	 = 	"Bericht, Soldat!";
 };
 
 func int DIA_PAL_263_PERM_Condition ()
@@ -43,10 +43,10 @@ func int DIA_PAL_263_PERM_Condition ()
 };
 func void DIA_PAL_263_PERM_Info ()
 {
-	AI_Output			(other, self, "DIA_PAL_263_PERM_15_00"); //Report, soldier!
-	AI_Output			(self, other, "DIA_PAL_263_PERM_04_01"); //Yes, sir! Holding position as ordered. No additional losses. Provisions getting short, the orcs are quiet.
-	AI_Output			(self, other, "DIA_PAL_263_PERM_04_02"); //The last dragon attack completely destroyed the outer wall. But since then, there haven't been any unusual events.
-	AI_Output			(other, self, "DIA_PAL_263_PERM_15_03"); //All right, carry on.
+	AI_Output			(other, self, "DIA_PAL_263_PERM_15_00"); //Bericht, Soldat!
+	AI_Output			(self, other, "DIA_PAL_263_PERM_04_01"); //Jawohl! Halten wie befohlen die Stellung. Keine weiteren Verluste. Nahrung wird knapper, die Orks verhalten sich ruhig.
+	AI_Output			(self, other, "DIA_PAL_263_PERM_04_02"); //Der letzte Drachenangriff hat den Außenwall nun komplett zerstört. Aber seitdem keine ungewöhnlichen Vorkommnisse.
+	AI_Output			(other, self, "DIA_PAL_263_PERM_15_03"); //Gut, weitermachen.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info PERM_OTH
@@ -58,7 +58,7 @@ instance DIA_PAL_263_PERM_OTH		(C_INFO)
 	condition	 = 	DIA_PAL_263_PERM_OTH_Condition;
 	information	 = 	DIA_PAL_263_PERM_OTH_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How are things?";
+	description	 = 	"Wie sieht's aus?";
 };
 
 func int DIA_PAL_263_PERM_OTH_Condition ()
@@ -71,8 +71,8 @@ func int DIA_PAL_263_PERM_OTH_Condition ()
 };
 func void DIA_PAL_263_PERM_OTH_Info ()
 {
-	AI_Output			(other, self, "DIA_PAL_263_PERM_OTH_15_00"); //How's the situation?
-	AI_Output			(self, other, "DIA_PAL_263_PERM_OTH_04_01"); //We have the situation under control. Don't concern yourself, civilian. Everything will turn out all right.
+	AI_Output			(other, self, "DIA_PAL_263_PERM_OTH_15_00"); //Wie ist die Lage?
+	AI_Output			(self, other, "DIA_PAL_263_PERM_OTH_04_01"); //Wir haben die Situation im Griff. Mach dir keine Sorgen, Zivilist. Alles wird gut.
 };
 
 

@@ -4,7 +4,7 @@
 
 INSTANCE ITKE_REVIVED_STONEFORTRESS (C_Item)
 {
-	name 				=	"Old Key";
+	name 				=	"Alter Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	
@@ -20,7 +20,7 @@ INSTANCE ITKE_REVIVED_STONEFORTRESS (C_Item)
 
 INSTANCE ITKE_REVIVED_XARDAS(C_Item)
 {
-	name 				=	"Xardas' Key";
+	name 				=	"Xardas Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -32,14 +32,14 @@ INSTANCE ITKE_REVIVED_XARDAS(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"A key to a chest";
-	TEXT[3]				=   "belonging to Xardas.";
+	TEXT[2]				=	"Ein Truhenschlüssel";
+	TEXT[3]				=   "von Xardas";
 	TEXT[5]				=   "A bit worn down, it's old.";
 };
 
 INSTANCE ITKE_REVIVED_GOMEZ (C_Item)
 {
-	name 				=	"Gomez's Key";
+	name 				=	"Gomez' Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	
@@ -59,7 +59,7 @@ INSTANCE ITKE_REVIVED_GOMEZ (C_Item)
 
 INSTANCE ITKE_REVIVED_GORDONRAMSAY (C_Item)
 {
-	name 				=	"Kitchen Key";
+	name 				=	"Küchenschlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	
@@ -69,6 +69,6 @@ INSTANCE ITKE_REVIVED_GORDONRAMSAY (C_Item)
 	visual 				=	"ItKe_Key_01.3ds";
 	material 			=	MAT_METAL;
 	description			= name;
-	TEXT[0]				= "Old key";
+	TEXT[0]				= "Alter Schlüssel";
 	TEXT[1]				= "with the initials G.R.";
 };

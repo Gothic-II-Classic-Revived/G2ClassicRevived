@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Wisp(C_Npc)
 {
 	//----- Monster -----
-	name							=	"Ghost Light";
+	name							=	"Irrlicht";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_WISP;
 	

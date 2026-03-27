@@ -27,42 +27,42 @@ func int B_TeachPlayerTalentTakeAnimalTrophy (var C_NPC slf, var C_NPC oth, var 
 	oth.lp = oth.lp - kosten;
 	
 	Log_CreateTopic (TOPIC_TalentAnimalTrophy,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"Now I can:");
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"Ich kann jetzt:");
 	
-	// ------ K�rperteil nehmen lernen ------
+	// ------ Krperteil nehmen lernen ------
 	
 	if (trophy == TROPHY_Teeth) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove teeth from dead animals.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Tieren die Zähne entfernen.");};
 	if (trophy == TROPHY_Claws) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove claws from dead animals.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Tieren die Krallen abnehmen.");};
 	if (trophy == TROPHY_Fur) 				{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] 				= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove fur from dead animals.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Tieren das Fell abziehen.");};
 	if (trophy == TROPHY_ReptileSkin) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ReptileSkin] 		= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove skin from reptiles.");}; //ADDON
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Reptilien häuten.");}; //ADDON
 	if (trophy == TROPHY_Heart) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove heart from dead golems and dead demons.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Golems und Dämonen ihr Herz entnehmen.");};
 	if (trophy == TROPHY_ShadowHorn) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] 		= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove horn from dead shadowbeasts.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Schattenläufern das Horn entfernen.");};
 	if (trophy == TROPHY_FireTongue) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] 		= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove tongue from dead fire lizards.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Feuerwaranen die Zunge enfernen.");};
 	if (trophy == TROPHY_BFWing) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove wings from dead bloodflys.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Entferne die Flügel von toten Blutfliegen.");};
 	if (trophy == TROPHY_BFSting) 			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove sting from dead bloodflys.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Entferne den Stachel von toten Blutfliegen.");};
 	if (trophy == TROPHY_Mandibles) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] 		= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove mandibles from dead animals.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Tieren ihre Greifzangen entfernen.");};
 	if (trophy == TROPHY_CrawlerPlate) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove plates from dead minecrawler.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Minecrawlern die Panzerplatten vom Körper lösen");};
 	if (trophy == TROPHY_DrgSnapperHorn)	{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove horn from dead dragon snapper.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Drachensnappern ihre Hörner entfernen.");};
 	if (trophy == TROPHY_DragonScale) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] 		= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"... remove dragon scales from the hide of dead dragons.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...Drachenschuppen vom Körper eines toten Drachen lösen.");};
 	if (trophy == TROPHY_DragonBlood)		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] 		= TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"... collect the blood from a dead dragon.");};
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...toten Drachen ihr Blut abzapfen.");};
 
 	PrintScreen			(PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
 	
-	// ------ bei jedem K�rperteil: TakeAnimalTrophy-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------
+	// ------ bei jedem Krperteil: TakeAnimalTrophy-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------
 	Npc_SetTalentSkill 	(oth, NPC_TALENT_TAKEANIMALTROPHY, 1);
 	return TRUE;
 };

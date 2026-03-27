@@ -43,17 +43,17 @@ func void DIA_Ritter_OUT_Info ()
 {
 	if (DIA_Ritter_OUT_NoPerm == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Ritter_OUT_06_00"); //You've come from Khorinis, haven't you? When all this is over, I shall return there.
+		AI_Output			(self, other, "DIA_Ritter_OUT_06_00"); //Du kommst aus Khorinis, nicht wahr? Wenn das alles hier vorbei ist, dann werde ich dorthin zurückgehen.
 		DIA_Ritter_OUT_NoPerm = TRUE;
 	};
 	
 	if (hero.guild == GIL_KDF)
 		{
-			AI_Output			(self, other, "DIA_Ritter_OUT_06_01"); //It's a great comfort having you on our side, Sir.
+			AI_Output			(self, other, "DIA_Ritter_OUT_06_01"); //Es ist sehr beruhigend, dich an unserer Seite zu haben, Meister.
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Ritter_OUT_06_02"); //We're going to make it. We'll bring the ore to Khorinis and let them celebrate us!
+			AI_Output			(self, other, "DIA_Ritter_OUT_06_02"); //Wir werden es schaffen. Wir bringen das Erz nach Khorinis und dort wird man uns feiern!
 		};
 };
 

@@ -46,7 +46,7 @@ func int DIA_Addon_Lares_HaltsMaul_Condition ()
 
 func void DIA_Addon_Lares_HaltsMaul_Info ()
 {
-	AI_Output	(self, other, "DIA_Addon_Lares_HaltsMaul_09_01"); //I'll see you later, down at the harbor.
+	AI_Output	(self, other, "DIA_Addon_Lares_HaltsMaul_09_01"); //Wir sehen uns später am Hafen.
 	AI_StopProcessInfos (self);
 };
 
@@ -104,56 +104,56 @@ func int DIA_Lares_HALLO_Condition ()
 };
 func void DIA_Lares_HALLO_Info ()
 {
-	AI_Output (self, other, "DIA_Lares_HALLO_09_00"); //I must be crazy, what are you doing here?
+	AI_Output (self, other, "DIA_Lares_HALLO_09_00"); //Ich werd verrückt, was machst du denn hier?
 	
 	if (Mil_310_schonmalreingelassen == FALSE)
 	&& (Mil_333_schonmalreingelassen == FALSE)
 	{
-		AI_Output (self, other, "DIA_Lares_HALLO_09_01"); //Did you SWIM here?
-		AI_Output (self, other, "DIA_Lares_HALLO_09_02"); //(laughs) That's one way to get past the guards at the city gate.
+		AI_Output (self, other, "DIA_Lares_HALLO_09_01"); //Bist du bis hierher GESCHWOMMEN?
+		AI_Output (self, other, "DIA_Lares_HALLO_09_02"); //(lacht) Das ist auch ein Weg, an den Stadttorwachen vorbeizukommen.
 		B_GivePlayerXP (500); //wer's schafft...	
 	};
 			
 	Info_ClearChoices 	(DIA_Lares_HALLO);
 	
-	Info_AddChoice 		(DIA_Lares_HALLO,"Have we met before?",DIA_Lares_HALLO_NO);
-	Info_AddChoice 		(DIA_Lares_HALLO,"Hey, Lares, you old scoundrel...",DIA_Lares_HALLO_YES);
+	Info_AddChoice 		(DIA_Lares_HALLO,"Sind wir uns schon mal begegnet?",DIA_Lares_HALLO_NO);
+	Info_AddChoice 		(DIA_Lares_HALLO,"Hey, Lares alter Gauner...",DIA_Lares_HALLO_YES);
 };
 FUNC VOID DIA_Lares_HALLO_NO()
 {
-	AI_Output (other, self, "DIA_Lares_HALLO_NO_15_00"); //Have we met before?
-	AI_Output (self, other, "DIA_Lares_HALLO_NO_09_01"); //Man, don't you remember me? I used to hang around in the New Camp.
-	AI_Output (self, other, "DIA_Lares_HALLO_NO_09_02"); //The list for the mine... Man, we had a lot of fun. Do you remember Lee?
+	AI_Output (other, self, "DIA_Lares_HALLO_NO_15_00"); //Sind wir uns schon mal begegnet?
+	AI_Output (self, other, "DIA_Lares_HALLO_NO_09_01"); //Mann, du kannst dich nicht mehr an mich erinnern?! Ich hab mich im Neuen Lager rumgetrieben.
+	AI_Output (self, other, "DIA_Lares_HALLO_NO_09_02"); //Die Liste für die Mine ... Mann, wir hatten echt 'ne Menge Spaß. Erinnerst du dich denn noch an Lee?
 	
 	Info_ClearChoices 	(DIA_Lares_HALLO);
 	
-	Info_AddChoice 		(DIA_Lares_HALLO,"Of course I remember Lee!",DIA_Lares_HALLO_LEE);
+	Info_AddChoice 		(DIA_Lares_HALLO,"Natürlich kenne ich Lee noch!",DIA_Lares_HALLO_LEE);
 	Info_AddChoice 		(DIA_Lares_HALLO,"Lee...?",DIA_Lares_HALLO_NOIDEA);
 };
 FUNC VOID DIA_Lares_HALLO_YES()
 {
-	AI_Output (other, self, "DIA_Lares_HALLO_YES_15_00"); //Hey, Lares, you old scoundrel, how did you get here?
-	AI_Output (self, other, "DIA_Lares_HALLO_YES_09_01"); //I was able to escape the Valley of Mines just in time, together with Lee and some of the other boys.
-	AI_Output (self, other, "DIA_Lares_HALLO_YES_09_02"); //You remember Lee, don't you?
+	AI_Output (other, self, "DIA_Lares_HALLO_YES_15_00"); //Hey, Lares, alter Gauner, wie bist du hier her gekommen?
+	AI_Output (self, other, "DIA_Lares_HALLO_YES_09_01"); //Ich konnte gerade noch rechtzeitig aus dem Minental fliehen, zusammen mit Lee und ein paar anderen Jungs.
+	AI_Output (self, other, "DIA_Lares_HALLO_YES_09_02"); //Du kannst dich doch noch an Lee erinnern, oder?
 	
 	Info_ClearChoices 	(DIA_Lares_HALLO);
 	
-	Info_AddChoice 		(DIA_Lares_HALLO,"Of course I remember Lee!",DIA_Lares_HALLO_LEE);
+	Info_AddChoice 		(DIA_Lares_HALLO,"Natürlich kenne ich Lee noch!",DIA_Lares_HALLO_LEE);
 	Info_AddChoice 		(DIA_Lares_HALLO,"Lee...?",DIA_Lares_HALLO_NOIDEA);
 };
 
 // ------------------------------	
 	func void B_Lares_AboutLee()
 	{
-		AI_Output (self, other, "B_Lares_AboutLee_09_00"); //I got out of the colony with him then. Just after the Barrier was destroyed.
-		AI_Output (self, other, "B_Lares_AboutLee_09_01"); //He and his boys are now on the farm of Onar the landowner.
-		AI_Output (self, other, "B_Lares_AboutLee_09_02"); //He made a deal with the farmer. He and his boys defend the farm, and Onar feeds them in return.
+		AI_Output (self, other, "B_Lares_AboutLee_09_00"); //Ich bin damals mit ihm aus der Kolonie abgehauen. Kurz nachdem die Barriere zerstört wurde.
+		AI_Output (self, other, "B_Lares_AboutLee_09_01"); //Er ist jetzt mit seinen Jungs auf dem Hof von Onar, dem Großbauern.
+		AI_Output (self, other, "B_Lares_AboutLee_09_02"); //Er hat einen Deal mit dem Bauern gemacht. Er und seine Jungs verteidigen den Hof und Onar füttert sie dafür durch.
 	};
 // ------------------------------	
 
 FUNC VOID DIA_Lares_HALLO_LEE()
 {
-	AI_Output (other, self, "DIA_Lares_HALLO_LEE_15_00"); //Of course I remember Lee!
+	AI_Output (other, self, "DIA_Lares_HALLO_LEE_15_00"); //Natürlich kenne ich Lee noch!
 	B_Lares_AboutLee();
 	
 	Info_ClearChoices 	(DIA_Lares_HALLO);
@@ -161,7 +161,7 @@ FUNC VOID DIA_Lares_HALLO_LEE()
 FUNC VOID DIA_Lares_HALLO_NOIDEA()
 {
 	AI_Output (other, self, "DIA_Lares_HALLO_NOIDEA_15_00"); //Lee...?
-	AI_Output (self, other, "DIA_Lares_HALLO_NOIDEA_09_01"); //You've been through a lot, huh? Lee was the leader of the mercenaries in the New Camp.
+	AI_Output (self, other, "DIA_Lares_HALLO_NOIDEA_09_01"); //Du hast wohl 'ne Menge mitgemacht, was? Lee war der Anführer der Söldner im Neuen Lager.
 	B_Lares_AboutLee();
 	
 	Info_ClearChoices 	(DIA_Lares_HALLO);
@@ -177,7 +177,7 @@ instance DIA_Addon_Lares_Teleportstation		(C_INFO)
 	condition	 = 	DIA_Addon_Lares_Teleportstation_Condition;
 	information	 = 	DIA_Addon_Lares_Teleportstation_Info;
 
-	description	 = 	"Have you ever used a teleporter stone?";
+	description	 = 	"Hast du schon mal einen Teleportstein benutzt?";
 };
 func int DIA_Addon_Lares_Teleportstation_Condition ()
 {
@@ -188,10 +188,10 @@ func int DIA_Addon_Lares_Teleportstation_Condition ()
 };
 func void DIA_Addon_Lares_Teleportstation_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Lares_Teleportstation_15_00"); //Have you ever used a teleporter stone?
-	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_01"); //No, but I've heard of them. The Water Mages aren't too sure about those things yet.
-	AI_Output	(other, self, "DIA_Addon_Lares_Teleportstation_15_02"); //I've given it a try.
-	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_03"); //(laughs) Of course you have. You're not afraid of anything, are you?	
+	AI_Output	(other, self, "DIA_Addon_Lares_Teleportstation_15_00"); //Hast du schon mal einen Teleportstein benutzt?
+	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_01"); //Nein, aber ich hörte davon. Die Wassermagier sind sich bei den Dingern noch nicht sicher.
+	AI_Output	(other, self, "DIA_Addon_Lares_Teleportstation_15_02"); //Ich hab's schon ausprobiert.
+	AI_Output	(self, other, "DIA_Addon_Lares_Teleportstation_09_03"); //(lacht) War ja klar. Du hast vor gar nichts Angst, was?	
 		B_GivePlayerXP (XP_Ambient);
 };
 
@@ -209,7 +209,7 @@ instance DIA_Addon_Lares_RangerHelp		(C_INFO)
 	condition	= DIA_Addon_Lares_RangerHelp_Condition;
 	information	= DIA_Addon_Lares_RangerHelp_Info;
 	permanent	= TRUE;
-	description	= "I need your help.";
+	description	= "Ich brauche deine Hilfe";
 };
 func int DIA_Addon_Lares_RangerHelp_Condition ()
 {
@@ -227,57 +227,57 @@ func int DIA_Addon_Lares_RangerHelp_Condition ()
 };
 func void DIA_Addon_Lares_RangerHelp_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Lares_RangerHelp_15_00"); //I need your help.
-	AI_Output	(self, other, "DIA_Addon_Lares_RangerHelp_09_01"); //And what exactly were you thinking of?
+	AI_Output	(other, self, "DIA_Addon_Lares_RangerHelp_15_00"); //Ich brauche deine Hilfe
+	AI_Output	(self, other, "DIA_Addon_Lares_RangerHelp_09_01"); //Und was genau schwebt dir da vor?
 	
 	Info_ClearChoices	(DIA_Addon_Lares_RangerHelp);
 	Info_AddChoice (DIA_Addon_Lares_RangerHelp, DIALOG_BACK, DIA_Addon_Lares_RangerHelp_nix );
 	
 	if (Npc_IsInState (Moe, ZS_Attack))
 	{
-		Info_AddChoice (DIA_Addon_Lares_RangerHelp, "That guy is pestering me!", DIA_Addon_Lares_RangerHelp_Moe);
+		Info_AddChoice (DIA_Addon_Lares_RangerHelp, "Dieser Typ da belästigt mich!", DIA_Addon_Lares_RangerHelp_Moe);
 	};
 		
 	if (DIA_Addon_Lares_RangerHelp_gilde_OneTime_Waffe == FALSE)
 	&& (Lares_RangerHelp == TRUE)
 	{
-		Info_AddChoice	(DIA_Addon_Lares_RangerHelp, "I need a better weapon.", DIA_Addon_Lares_RangerHelp_waffe );
+		Info_AddChoice	(DIA_Addon_Lares_RangerHelp, "Ich brauche eine bessere Waffe.", DIA_Addon_Lares_RangerHelp_waffe );
 	};
 
 	if (DIA_Addon_Lares_RangerHelp_gilde_OneTime_ruestung == FALSE)
 	&& (Lares_RangerHelp == TRUE)
 	{
-		Info_AddChoice	(DIA_Addon_Lares_RangerHelp, "What about some better armor?", DIA_Addon_Lares_RangerHelp_ruestung );
+		Info_AddChoice	(DIA_Addon_Lares_RangerHelp, "Wie sieht's mit 'ner besseren Rüstung aus?", DIA_Addon_Lares_RangerHelp_ruestung );
 	};
 
 	if (DIA_Addon_Lares_RangerHelp_gilde_OneTime_geld == FALSE)
 	&& (Lares_RangerHelp == TRUE)
 	{
-		Info_AddChoice	(DIA_Addon_Lares_RangerHelp, "I need some money.", DIA_Addon_Lares_RangerHelp_geld );
+		Info_AddChoice	(DIA_Addon_Lares_RangerHelp, "Ich brauche Geld.", DIA_Addon_Lares_RangerHelp_geld );
 	};
 };
 func void DIA_Addon_Lares_RangerHelp_ruestung ()
 {
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_ruestung_15_00"); //What about some better armor?
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_01"); //Mmh. Matteo sells armor. But he'll probably charge you an arm and a leg for it.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_02"); //There is a way you could get it cheaper, though, if you don't mind pulling a fast one on the militia...
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_ruestung_15_03"); //What do you mean?
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_04"); //There's a storage area next to Matteo's house. But all the merchandise has been confiscated by the militia.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_05"); //Go to Zuris at the marketplace and get yourself a sleeping spell. Then you send the guards off to dreamland.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_06"); //I'm sure you'll find some decent armor among Matteo's stock...
+	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_ruestung_15_00"); //Wie sieht's mit 'ner besseren Rüstung aus?
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_01"); //Mmh. Ich glaube, Matteo verkauft Rüstungen. Aber er will sicher 'ne Menge Geld dafür sehen.
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_02"); //Allerdings könntest du billiger rankommen, wenn du kein Problem damit hast, dich ein bisschen mit der Miliz anzulegen ...
+	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_ruestung_15_03"); //Wie meinst du das?
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_04"); //Neben Matteos Haus ist ein Lagerplatz. Aber die Waren wurden alle von der Miliz beschlagnahmt.
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_05"); //Geh zu Zuris am Marktplatz und besorg dir einen Schlafzauber. Damit legst du die Wache schlafen.
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_ruestung_09_06"); //Ich bin mir sicher, dass du in Matteos Lager eine brauchbare Rüstung finden wirst ...
 	DIA_Addon_Lares_RangerHelp_gilde_OneTime_ruestung = TRUE;
 };
 func void DIA_Addon_Lares_RangerHelp_waffe ()
 {
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_waffe_15_00"); //I need a better weapon.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_waffe_09_01"); //There's nothing I can do about that, I'm afraid. Have you tried the marketplace?
+	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_waffe_15_00"); //Ich brauche eine bessere Waffe.
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_waffe_09_01"); //Damit kann ich dir leider nicht dienen. Hast du es schon mal am Marktplatz versucht?
 	DIA_Addon_Lares_RangerHelp_gilde_OneTime_Waffe = TRUE;
 };
 func void DIA_Addon_Lares_RangerHelp_geld ()
 {
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_geld_15_00"); //I need some money.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_01"); //Don't we all? Sorry, but I have none to give you. But Lehmar the moneylender still owes me a favor.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_02"); //Go to him and borrow whatever money you need. I'll take care of the rest. You'll find Lehmar in the harbor district, where it borders on the lower part of town.
+	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_geld_15_00"); //Ich brauche Geld.
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_01"); //Das brauchen wir alle. Soll heißen, ich kann dir nichts geben. Aber Lehmar, der Geldverleiher, schuldet mir noch einen Gefallen.
+	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_geld_09_02"); //Geh zu ihm und leih dir das Geld, das du brauchst. Den Rest regle ich dann schon. Du findest Lehmar im Hafenviertel an der Grenze zur Unterstadt.
 	DIA_Addon_Lares_RangerHelp_gilde_OneTime_geld = TRUE;
 	RangerHelp_LehmarKohle = TRUE;
 	Info_ClearChoices	(DIA_Addon_Lares_RangerHelp);
@@ -291,8 +291,8 @@ func void DIA_Addon_Lares_RangerHelp_nix ()
 // ------------------------------------------------------------
 func void DIA_Addon_Lares_RangerHelp_Moe()
 {
-	AI_Output (other, self, "DIA_Addon_Lares_Moe_15_00"); //That guy is pestering me...
-	AI_Output (self, other, "DIA_Addon_Lares_Moe_09_01"); //Not for long...
+	AI_Output (other, self, "DIA_Addon_Lares_Moe_15_00"); //Dieser Typ da belästigt mich ...
+	AI_Output (self, other, "DIA_Addon_Lares_Moe_09_01"); //Das haben wir gleich ...
 	Info_ClearChoices (DIA_Addon_Lares_RangerHelp);
 	AI_StopProcessInfos (self);
 	other.aivar[AIV_INVINCIBLE] = FALSE;
@@ -326,7 +326,7 @@ instance DIA_Lares_AboutSld (C_INFO)
 	condition	 = 	DIA_Lares_AboutSld_Condition;
 	information	 = 	DIA_Lares_AboutSld_Info;
 	permanent    =  TRUE;
-	description	 = 	"Tell me more about Lee and his mercenaries...";
+	description	 = 	"Erzähl mir mehr über Lee und seine Söldner...";
 };
 func int DIA_Lares_AboutSld_Condition ()
 {	
@@ -338,13 +338,13 @@ func int DIA_Lares_AboutSld_Condition ()
 };
 func void DIA_Lares_AboutSld_Info ()
 {
-	AI_Output (other,self,  "DIA_ADDON_Lares_AboutSld_15_00"); //Tell me more about Lee and his mercenaries...
-	AI_Output (self, other, "DIA_ADDON_Lares_AboutSld_09_01"); //What do you want to know?
+	AI_Output (other,self,  "DIA_ADDON_Lares_AboutSld_15_00"); //Erzähl mir mehr über Lee und seine Söldner...
+	AI_Output (self, other, "DIA_ADDON_Lares_AboutSld_09_01"); //Was willst du wissen?
 	
 	Info_ClearChoices (DIA_Lares_AboutSld);
 	Info_AddChoice (DIA_Lares_AboutSld, DIALOG_BACK, DIA_Lares_AboutSld_BACK);
-	Info_AddChoice (DIA_Lares_AboutSld, "Why aren't YOU with Lee and his mercenaries?", DIA_Lares_AboutSld_WhyNotYou);
-	Info_AddChoice (DIA_Lares_AboutSld, "Tell me more about the mercenaries...", DIA_Lares_AboutSld_Sld);
+	Info_AddChoice (DIA_Lares_AboutSld, "Warum bist DU nicht bei Lee und seinen Söldnern?", DIA_Lares_AboutSld_WhyNotYou);
+	Info_AddChoice (DIA_Lares_AboutSld, "Erzähl mir mehr über die Söldner...", DIA_Lares_AboutSld_Sld);
 };
 func void DIA_Lares_AboutSld_BACK()
 {
@@ -352,58 +352,58 @@ func void DIA_Lares_AboutSld_BACK()
 };
 func void DIA_Lares_AboutSld_Sld()
 {	
-	AI_Output (other,self,  "DIA_Lares_AboutSld_15_00"); //Tell me more about the mercenaries.
-	AI_Output (self, other, "DIA_Lares_AboutSld_09_01"); //Well, if you're as tough as you were back then, you shouldn't have any problems with them.
-	AI_Output (self, other, "DIA_Lares_AboutSld_09_02"); //Most of them are ruffians and if you can't stand up to them, you won't get far.
-	AI_Output (self, other, "DIA_Lares_AboutSld_09_03"); //(laughs) If you're squeamish, you don't have a chance of landing with them...
+	AI_Output (other,self,  "DIA_Lares_AboutSld_15_00"); //Erzähl mir mehr über die Söldner.
+	AI_Output (self, other, "DIA_Lares_AboutSld_09_01"); //Also wenn du noch so 'n harter Junge bist wie damals, solltest du mit ihnen keine Probleme haben.
+	AI_Output (self, other, "DIA_Lares_AboutSld_09_02"); //Die meisten von ihnen sind Raufbolde und wer sich nicht durchsetzen kann, kommt auch nicht weit.
+	AI_Output (self, other, "DIA_Lares_AboutSld_09_03"); //(lacht) Wenn du zart besaitet bist, hast du keine Chance, bei ihnen zu landen ...
 };	
 func void DIA_Lares_AboutSld_WhyNotYou()
 {
-	AI_Output (other, self, "DIA_Lares_WhyInCity_15_00"); //Why aren't YOU with Lee and his mercenaries?
-	AI_Output (self, other, "DIA_Lares_WhyInCity_09_01"); //But I am! Just not on the farm.
-	AI_Output (self, other, "DIA_Lares_WhyInCity_09_02"); //You could say I'm our outpost in the city. We don't want the ship to sail without us.
-	AI_Output (self, other, "DIA_Lares_WhyInCity_09_03"); //Why did YOU come to the city?
+	AI_Output (other, self, "DIA_Lares_WhyInCity_15_00"); //Warum bist DU nicht bei Lee und seinen Söldnern?
+	AI_Output (self, other, "DIA_Lares_WhyInCity_09_01"); //Bin ich doch! Nur eben nicht auf dem Hof.
+	AI_Output (self, other, "DIA_Lares_WhyInCity_09_02"); //Ich bin sozusagen unser Vorposten in der Stadt. Wir wollen ja schließlich nicht, dass das Schiff ohne uns abfährt.
+	AI_Output (self, other, "DIA_Lares_WhyInCity_09_03"); //Warum bist DU in die Stadt gekommen?
 	Lares_WorkForLee = TRUE;
 	
-	Info_AddChoice (DIA_Lares_AboutSld, "I must talk to the paladins, by any means!", DIA_Lares_AboutSld_Paladine);
-	Info_AddChoice (DIA_Lares_AboutSld, "What ship were you talking about?", DIA_Lares_AboutSld_Schiff);
+	Info_AddChoice (DIA_Lares_AboutSld, "Ich muss unbedingt mit den Paladinen reden!", DIA_Lares_AboutSld_Paladine);
+	Info_AddChoice (DIA_Lares_AboutSld, "Von welchem Schiff hast du geredet?", DIA_Lares_AboutSld_Schiff);
 };
 func void DIA_Lares_AboutSld_Schiff()
 {	
-	AI_Output (other,self , "DIA_Lares_Schiff_15_00"); //What ship were you talking about?
-	AI_Output (self, other, "DIA_Lares_Schiff_09_01"); //It's on the open sea harbor, behind the cliffs. Lee and a few of his people really want to get away from here.
-	AI_Output (self, other, "DIA_Lares_Schiff_09_02"); //But that could take a while...
-	AI_Output (other,self , "DIA_Lares_Schiff_15_03"); //Why?
-	AI_Output (self, other, "DIA_Lares_Schiff_09_04"); //You'd better ask Lee about that, if you meet him... He's got plans.
+	AI_Output (other,self , "DIA_Lares_Schiff_15_00"); //Von welchem Schiff hast du geredet?
+	AI_Output (self, other, "DIA_Lares_Schiff_09_01"); //Es liegt am Hochseehafen, hinter den Felsen. Lee und ein paar von seinen Leuten wollen unbedingt hier weg.
+	AI_Output (self, other, "DIA_Lares_Schiff_09_02"); //Aber das kann noch dauern ...
+	AI_Output (other,self , "DIA_Lares_Schiff_15_03"); //Warum?
+	AI_Output (self, other, "DIA_Lares_Schiff_09_04"); //Das fragst du am besten Lee, wenn du ihn triffst ... Er hat Pläne...
 
-	Info_AddChoice (DIA_Lares_AboutSld, "How do I find the landowner's farm?", DIA_Lares_AboutSld_WayToOnar); 
+	Info_AddChoice (DIA_Lares_AboutSld, "Wie komme ich zum Hof des Großbauern?", DIA_Lares_AboutSld_WayToOnar); 
 };
 func void DIA_Lares_AboutSld_WayToOnar()
 {
-	AI_Output (other,self, "DIA_Lares_WegZumHof_15_00"); //How do I find the landowner's farm?
-	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_00"); //It's quite simple. You leave the seaport by the east gate, and then follow the path towards the east.
-	AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //I can take you there if you want. I've been hanging around here for way too long anyway.
-	AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //There's usually no militia here in the port, but I don't want to risk one of them becoming suspicious...
+	AI_Output (other,self, "DIA_Lares_WegZumHof_15_00"); //Wie komme ich zum Hof des Großbauern?
+	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_00"); //Es ist ganz einfach. Du gehst aus dem Osttor der Hafenstadt und dann immer auf dem Weg in Richtung Osten.
+	AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //Ich kann dich hinbringen, wenn du willst. Hab sowieso schon zu lange hier rumgehangen.
+	AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //Hier im Hafen gibt es zwar für gewöhnlich keine Miliz, aber ich muss ja nicht riskieren, dass einer von ihnen Verdacht schöpft ...
 	Lares_WayToOnar = TRUE;
 };	
 
 func void DIA_Lares_AboutSld_Paladine ()
 {
-	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //I must talk to the paladins, by all means!
-	AI_Output (self, other, "DIA_Lares_Paladine_09_01"); //What do you want from THEM?
-	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //They've got a powerful amulet, the Eye of Innos. I need to have it.
-	AI_Output (self, other, "DIA_Lares_Paladine_09_03"); //And you think they'll give it to you? You'll never get into the upper end of town.
+	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //Ich muss unbedingt mit den Paladinen reden!
+	AI_Output (self, other, "DIA_Lares_Paladine_09_01"); //Was willst du denn von DENEN?
+	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //Sie haben ein mächtiges Amulett, das Auge Innos'. Ich muss es haben.
+	AI_Output (self, other, "DIA_Lares_Paladine_09_03"); //Und du denkst, sie werden es dir geben? Du kommst ja nicht mal ins obere Viertel.
 	
-	AI_Output (other, self, "DIA_Lares_Paladine_15_04"); //I'll find a way somehow.
-	AI_Output (self, other, "DIA_Lares_Paladine_09_05"); //Sure, if you want to ingratiate yourself with the citizens or play errand boy for the militia...
+	AI_Output (other, self, "DIA_Lares_Paladine_15_04"); //Ich werde schon einen Weg finden.
+	AI_Output (self, other, "DIA_Lares_Paladine_09_05"); //Klar, wenn du dich bei den Bürgern einschmeicheln oder Laufbursche für die Miliz spielen willst ...
 	
-	AI_Output (other, self, "DIA_Lares_Alternative_15_00"); //Do I have a choice?
-	AI_Output (self, other, "DIA_Lares_Alternative_09_01"); //If I were you, I'd go to Onar's farm and talk to Lee.
-	AI_Output (self, other, "DIA_Lares_Alternative_09_02"); //I'm sure we'll find a way to get you into the upper end of town.
+	AI_Output (other, self, "DIA_Lares_Alternative_15_00"); //Hab' ich eine Alternative?
+	AI_Output (self, other, "DIA_Lares_Alternative_09_01"); //Wenn ich du wäre, würde ich zu Onars Hof gehen und mit Lee reden.
+	AI_Output (self, other, "DIA_Lares_Alternative_09_02"); //Ich bin mir sicher, wir finden einem Weg, dich ins obere Viertel zu bringen.
 
-	AI_Output (other, self, "DIA_Lares_WhyPalHere_15_00"); //Do you know why the paladins are here?
-	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_01"); //Nobody knows for sure... Lots of people think it's because of the orcs, but I think there's another reason.
-	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_02"); //It probably has something to do with the old penal colony.
+	AI_Output (other, self, "DIA_Lares_WhyPalHere_15_00"); //Weißt du, warum die Paladine hier sind?
+	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_01"); //Das weiß keiner so genau ... Viele denken, es wäre wegen der Orks, aber ich denke, es gibt einen anderen Grund.
+	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_02"); //Hat wahrscheinlich was mit der alten Strafkolonie zu tun.
 };
 
 // ************************************************************
@@ -419,7 +419,7 @@ instance DIA_Lares_GuildOfThieves (C_INFO)
 	condition	 = 	DIA_Lares_GuildOfThieves_Condition;
 	information	 = 	DIA_Lares_GuildOfThieves_Info;
 	permanent    =  FALSE;
-	description	 = 	"Do you know anything about a thieves' guild in town?";
+	description	 = 	"Weißt du etwas über eine Diebesgilde in der Stadt?";
 };
 func int DIA_Lares_GuildOfThieves_Condition ()
 {	
@@ -430,10 +430,10 @@ func int DIA_Lares_GuildOfThieves_Condition ()
 };
 func void DIA_Lares_GuildOfThieves_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_GuildOfThieves_15_00"); //Do you know anything about a thieves' guild in town?
-	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_01"); //The questions you ask...
-	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_02"); //Of course, there's a thieves' guild here. Just like in every big city.
-	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_03"); //And every petty pickpocket or fence is probably connected to it somehow.
+	AI_Output (other, self, "DIA_Lares_GuildOfThieves_15_00"); //Weißt du etwas über eine Diebesgilde in der Stadt?
+	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_01"); //Du kannst Fragen stellen ...
+	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_02"); //Natürlich gibt es eine Diebesgilde hier. Wie in jeder größeren Stadt.
+	AI_Output (self, other, "DIA_Lares_GuildOfThieves_09_03"); //Und jeder kleine Taschendieb oder Hehler hängt wahrscheinlich irgendwie mit drin.
 };	
 // ------------------------------------------------------------
 // Wo finden?
@@ -445,7 +445,7 @@ instance DIA_Lares_WhereGuildOfThieves (C_INFO)
 	condition	 = 	DIA_Lares_WhereGuildOfThieves_Condition;
 	information	 = 	DIA_Lares_WhereGuildOfThieves_Info;
 	permanent    =  FALSE;
-	description	 = 	"Do you know where I can find the thieves' guild?";
+	description	 = 	"Weißt du, wo ich die Diebesgilde finden kann?";
 };
 func int DIA_Lares_WhereGuildOfThieves_Condition ()
 {	
@@ -457,13 +457,13 @@ func int DIA_Lares_WhereGuildOfThieves_Condition ()
 };
 func void DIA_Lares_WhereGuildOfThieves_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_WhereGuildOfThieves_15_00"); //Do you know where I can find the thieves' guild?
-	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_01"); //(laughs) No offense, but even if I knew, I wouldn't tell you anything.
-	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_02"); //These people usually react VERY sensitively to things like that.
-	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_03"); //If you want to get involved with them, you should be very careful.
+	AI_Output (other, self, "DIA_Lares_WhereGuildOfThieves_15_00"); //Weißt du, wo ich die Diebesgilde finden kann?
+	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_01"); //(lacht) Nichts gegen dich, aber wenn ich es wüsste, würde ich es dir nicht sagen.
+	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_02"); //Diese Leute reagieren für gewöhnlich SEHR empfindlich auf so was.
+	AI_Output (self, other, "DIA_Lares_WhereGuildOfThieves_09_03"); //Wenn du dich mit ihnen einlassen willst, wäre ich sehr vorsichtig.
 };
 // ------------------------------------------------------------
-// Meersalz Schl�ssel
+// Meersalz Schlssel
 // ------------------------------------------------------------
 instance DIA_Lares_GotKey (C_INFO)
 {
@@ -472,7 +472,7 @@ instance DIA_Lares_GotKey (C_INFO)
 	condition	 = 	DIA_Lares_GotKey_Condition;
 	information	 = 	DIA_Lares_GotKey_Info;
 	permanent    =  FALSE;
-	description	 = 	"I've got this key here. It's been corroded by sea salt...";
+	description	 = 	"Ich habe hier diesen vom Meersalz zerfressenen Schlüssel ...";
 };
 func int DIA_Lares_GotKey_Condition ()
 {	
@@ -485,17 +485,17 @@ func int DIA_Lares_GotKey_Condition ()
 };
 func void DIA_Lares_GotKey_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_GotKey_15_00"); //I've got this key here. It's been corroded by sea salt...
-	AI_Output (self, other, "DIA_Lares_GotKey_09_01"); //So?
-	AI_Output (other, self, "DIA_Lares_GotKey_15_02"); //I think it will lead me to the hideout of the thieves' guild...
-	AI_Output (self, other, "DIA_Lares_GotKey_09_03"); //Well, it could be the key to the sewers.
+	AI_Output (other, self, "DIA_Lares_GotKey_15_00"); //Ich habe hier diesen vom Meersalz zerfressenen Schlüssel ...
+	AI_Output (self, other, "DIA_Lares_GotKey_09_01"); //Und?
+	AI_Output (other, self, "DIA_Lares_GotKey_15_02"); //Ich denke, er wird mich zum Versteck der Diebesgilde führen ...
+	AI_Output (self, other, "DIA_Lares_GotKey_09_03"); //Tja, es könnte der Schlüssel zur Kanalisation sein.
 
-	AI_Output (other, self, "DIA_Lares_Kanalisation_15_00"); //Where can I find the sewers?
-	AI_Output (self, other, "DIA_Lares_Kanalisation_09_01"); //What do I know... they usually empty into the ocean.
+	AI_Output (other, self, "DIA_Lares_Kanalisation_15_00"); //Wo finde ich die Kanalisation?
+	AI_Output (self, other, "DIA_Lares_Kanalisation_09_01"); //Was weiß ich ... sie endet für gewöhnlich im Meer.
 };
 
 // ************************************************************
-// 		  			Important f�r andere Gilden
+// 		  			Important fr andere Gilden
 // ************************************************************
 instance DIA_Lares_OtherGuild (C_INFO)
 {
@@ -521,37 +521,37 @@ func void DIA_Lares_OtherGuild_Info ()
 	{
 		if (other.guild == GIL_MIL)
 		{
-			AI_Output (self, other, "DIA_Lares_OtherGuild_09_00"); //You're in the militia now!
-			AI_Output (self, other, "DIA_Lares_OtherGuild_09_01"); //(laughs) I'm gonna laugh myself sick - a former convict in the militia...
+			AI_Output (self, other, "DIA_Lares_OtherGuild_09_00"); //Du bist jetzt bei der Miliz!
+			AI_Output (self, other, "DIA_Lares_OtherGuild_09_01"); //(lacht) Ich lach' mich tot - ein ehemaliger Sträfling bei der Miliz ...
 		}
 		else //GIL_PAL
 		{
-			AI_Output (self, other, "DIA_Lares_OtherGuild_09_02"); //So now you're one of the King's paladins!
+			AI_Output (self, other, "DIA_Lares_OtherGuild_09_02"); //Du bist jetzt also ein Paladin des Königs!
 		};
 	
-		AI_Output (self, other, "DIA_Lares_OtherGuild_09_03"); //(mischievously) Only you could pull something like that...
+		AI_Output (self, other, "DIA_Lares_OtherGuild_09_03"); //(verschmitzt) So was kannst auch nur du bringen ...
 	
 		if (Lares_WorkForLee == TRUE)
 		{
-			AI_Output (self, other, "DIA_Lares_OtherGuild_09_04"); //(concerned) You won't blow the whistle on me about working for Lee, will you?
-			AI_Output (other,self , "DIA_Lares_OtherGuild_15_05"); //But you know me...
+			AI_Output (self, other, "DIA_Lares_OtherGuild_09_04"); //(besorgt) Du wirst doch nicht verpfeifen, dass ich für Lee arbeite, oder?
+			AI_Output (other,self , "DIA_Lares_OtherGuild_15_05"); //Du kennst mich doch ...
 		};
 	};
 	
 	if (other.guild == GIL_KDF) 
 	|| (other.guild == GIL_NOV)
 	{
-		AI_Output (self, other, "DIA_Lares_OtherGuild_09_06"); //I don't get it. You entered the monastery. What's it like there?
-		AI_Output (other,self , "DIA_Lares_OtherGuild_15_07"); //Different.
-		AI_Output (self, other, "DIA_Lares_OtherGuild_09_08"); //I can imagine.
+		AI_Output (self, other, "DIA_Lares_OtherGuild_09_06"); //Ich fasse es nicht. Du bist ins Kloster gegangen. Wie ist es da?
+		AI_Output (other,self , "DIA_Lares_OtherGuild_15_07"); //Anders.
+		AI_Output (self, other, "DIA_Lares_OtherGuild_09_08"); //Kann ich mir denken.
 	};
 		
 	if (other.guild == GIL_SLD) 
 	|| (other.guild == GIL_DJG)
 	{
-		AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //I head you've been accepted.
+		AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //I heard you've been accepted.
 		//AI_Output (self, other, "DIA_Addon_Lares_OtherGuild_09_00"); //I heard that you have been accepted to join Lee.
-		AI_Output (self, other, "DIA_Lares_OtherGuild_09_10"); //Congratulations.
+		AI_Output (self, other, "DIA_Lares_OtherGuild_09_10"); //Gratuliere.
 	};
 };
 
@@ -566,7 +566,7 @@ instance DIA_Lares_GoNow (C_INFO)
 	condition	 = 	DIA_Lares_GoNow_Condition;
 	information	 = 	DIA_Lares_GoNow_Info;
 	permanent    =  TRUE;
-	description	 = 	"OK, let's go.";
+	description	 = 	"Okay, lass uns gehen.";
 };
 func int DIA_Lares_GoNow_Condition ()
 {	
@@ -579,14 +579,14 @@ func int DIA_Lares_GoNow_Condition ()
 };
 func void DIA_Lares_GoNow_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_GoNow_15_00"); //Okay, let's go.
-	AI_Output (self, other, "DIA_Addon_Lares_GoNow_09_04"); //Where?
-	AI_Output (other, self, "DIA_Addon_Lares_GoNow_Onar_15_00"); //To Onar's farm.
+	AI_Output (other, self, "DIA_Lares_GoNow_15_00"); //Okay, lass uns gehen.
+	AI_Output (self, other, "DIA_Addon_Lares_GoNow_09_04"); //Wohin?
+	AI_Output (other, self, "DIA_Addon_Lares_GoNow_Onar_15_00"); //Zu Onars Hof.
 	
 	LaresGuide_ZuOnar = TRUE;
 	Npc_ExchangeRoutine (self, "GUIDE");
 
- 	AI_Output (self, other, "DIA_Lares_GoNow_09_01"); //Then let's go...Follow me.
+ 	AI_Output (self, other, "DIA_Lares_GoNow_09_01"); //Dann wollen wir mal ... Folge mir.
 	AI_StopProcessInfos (self);
 	
 	Lares_Guide = Wld_GetDay();
@@ -624,9 +624,9 @@ func void DIA_Addon_Lares_OnarFarmGuide_Info ()
 	AI_UnequipArmor	(self);
 	AI_EquipArmor 	(self, ITAR_REVIVED_ORG_H);
 
-	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter_09_00"); //What's wrong? Are you still holding up?
+	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter_09_00"); //Was ist los? Geht's noch?
 	
-	AI_Output	(other, self, "DIA_Addon_Lares_PortalInterWEITER_15_01"); //(irritated) Yeah, yeah.
+	AI_Output	(other, self, "DIA_Addon_Lares_PortalInterWEITER_15_01"); //(genervt) Ja, ja.
 };
 
 // ************************************************************
@@ -653,16 +653,16 @@ func void DIA_Lares_GUIDE_Info ()
 {
 	if Lares_Guide > (Wld_GetDay()-2)
 	{
-		AI_Output (self, other, "DIA_Lares_GUIDE_09_00"); //So, here we are.
+		AI_Output (self, other, "DIA_Lares_GUIDE_09_00"); //So, wir sind da.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Lares_GUIDE_09_01"); //So there you are. I was beginning to think you'd been eaten by wolves.
+		AI_Output (self, other, "DIA_Lares_GUIDE_09_01"); //Kommst du auch noch? Ich dachte schon, du hättest dich von den Wölfen fressen lassen.
 	};
-	AI_Output (self, other, "DIA_Lares_GUIDE_09_02"); //So, the rest of the way you can manage alone. I have to get back to the city, I've got a few things to take care of...
-	AI_Output (self, other, "DIA_Lares_GUIDE_09_03"); //Just follow this road here, and remember - stand up for yourself and don't take any crap, and it'll be smooth sailing.
+	AI_Output (self, other, "DIA_Lares_GUIDE_09_02"); //So, den Rest des Weges wirst du alleine zurücklegen. Ich muss zurück in die Stadt, hab noch ein paar Sachen zu erledigen ...
+	AI_Output (self, other, "DIA_Lares_GUIDE_09_03"); //Folge einfach dem Weg hier, und denk daran - setz dich durch und lass dir nichts gefallen, dann läuft schon alles glatt.
 	
-	AI_Output (self, other, "DIA_Addon_Lares_HaltsMaul_09_01"); //I'll see you later, down at the harbor.
+	AI_Output (self, other, "DIA_Addon_Lares_HaltsMaul_09_01"); //Wir sehen uns später am Hafen.
 
 	AI_StopProcessInfos (self);
 	
@@ -671,7 +671,7 @@ func void DIA_Lares_GUIDE_Info ()
 	AI_UnequipArmor	(self);
 	AI_EquipArmor 	(self, ITAR_Vlk_L);
 	
-	Npc_ExchangeRoutine (self,"START");
+	Npc_ExchangeRoutine (self,"Start");
 	LaresGuide_ZuOnar = FALSE; //Joly: schluss mit Onar guide
 };
 
@@ -688,7 +688,7 @@ instance DIA_Lares_DEX		(C_INFO)
 	condition	 = 	DIA_Lares_DEX_Condition;
 	information	 = 	DIA_Lares_DEX_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"Can you teach me something?";
+	description	 = 	"Kannst du mir was beibringen?";
 };
 func int DIA_Lares_DEX_Condition ()
 {	
@@ -696,13 +696,13 @@ func int DIA_Lares_DEX_Condition ()
 };
 func void DIA_Lares_DEX_Info ()
 {
-	AI_Output (other, self, "DIA_Lares_DEX_15_00"); //Can you teach me something?
-	AI_Output (self, other, "DIA_Addon_Lares_DEX_Add_09_01"); //Sure. I can help you become stronger and more dexterous if you like.
+	AI_Output (other, self, "DIA_Lares_DEX_15_00"); //Kannst du mir was beibringen?
+	AI_Output (self, other, "DIA_Addon_Lares_DEX_Add_09_01"); //Klar. Wenn du willst, helfe ich dir, geschickter und stärker zu werden.
 
 	Lares_TeachDEX = TRUE;
 	
 	Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher,"Lares can help me become stronger and more dextrous.");
+	B_LogEntry (Topic_CityTeacher,"Lares kann mir dabei helfen, geschickter und stärker zu werden.");
 };
 // ------------------------------------------------------------
 // 			  				   TEACH 
@@ -717,7 +717,7 @@ instance DIA_Lares_TEACH		(C_INFO)
 	condition	 = 	DIA_Lares_TEACH_Condition;
 	information	 = 	DIA_Lares_TEACH_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Teach me something.";
+	description	 = 	"Bring mir was bei.";
 };
 func int DIA_Lares_TEACH_Condition ()
 {	
@@ -728,7 +728,7 @@ func int DIA_Lares_TEACH_Condition ()
 };
 func void DIA_Lares_TEACH_Info ()
 {
-	AI_Output (other,self ,"DIA_Addon_Lares_Teach_15_00"); //Teach me something.
+	AI_Output (other,self ,"DIA_Addon_Lares_Teach_15_00"); //Bring mir was bei.
 	
 	Lares_MerkeDEX = other.attribute[ATR_DEXTERITY];
 	Lares_MerkeSTR = other.attribute[ATR_STRENGTH];
@@ -744,11 +744,11 @@ func void DIA_Lares_TEACH_BACK()
 {
 	if (other.attribute[ATR_DEXTERITY] > Lares_MerkeDEX)
 	{
-		AI_Output (self, other, "DIA_Lares_TEACH_BACK_09_00"); //You've already gotten more dexterous.
+		AI_Output (self, other, "DIA_Lares_TEACH_BACK_09_00"); //Du hast schon etwas an Geschicklichkeit gewonnen.
 	};
 	if (other.attribute[ATR_STRENGTH] > Lares_MerkeSTR)
 	{
-		AI_Output (self, other, "DIA_Addon_Lares_TEACH_BACK_Add_09_00"); //(appraisingly). Good. Your strength has increased.
+		AI_Output (self, other, "DIA_Addon_Lares_TEACH_BACK_Add_09_00"); //(abschätzend) Gut. Deine Stärke hat zugenommen.
 	};
 	
 	Info_ClearChoices (DIA_Lares_TEACH);
@@ -869,7 +869,7 @@ INSTANCE DIA_Lares_AnyNews(C_INFO)
 	condition	= DIA_Lares_AnyNews_Condition;
 	information	= DIA_Lares_AnyNews_Info;
 	permanent	= TRUE;
-	description = "Any news?";
+	description = "Irgendwas Neues passiert?";
 };                       
 FUNC INT DIA_Lares_AnyNews_Condition()
 {
@@ -881,26 +881,26 @@ FUNC INT DIA_Lares_AnyNews_Condition()
 };
 FUNC VOID DIA_Lares_AnyNews_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_AnyNews_15_00"); //Any news?
+	AI_Output (other,self ,"DIA_Lares_AnyNews_15_00"); //Irgendwas Neues passiert?
 	if (MIS_RescueBennet == LOG_SUCCESS)
 	{
-		AI_Output (self ,other,"DIA_Lares_AnyNews_09_01"); //You're responsible for the best news yourself. They've let Bennet go again, he's back at the farm.
-		AI_Output (self ,other,"DIA_Lares_AnyNews_09_02"); //Go to him, I think he'd like to thank you himself.
+		AI_Output (self ,other,"DIA_Lares_AnyNews_09_01"); //Für die besten Nachrichten bist du ja selbst verantwortlich. Bennet haben sie wieder laufen lassen, er ist schon wieder auf dem Hof.
+		AI_Output (self ,other,"DIA_Lares_AnyNews_09_02"); //Geh mal hin, ich denke, er will sich auch noch selbst bei dir bedanken.
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Lares_AnyNews_09_03"); //You could say so. The paladins have arrested Bennet, our smith.
+		AI_Output (self ,other,"DIA_Lares_AnyNews_09_03"); //Das kann mal wohl sagen. Die Paladine haben Bennet, unseren Schmied, verhaftet.
 		
 		if (MIS_RescueBennet == LOG_RUNNING)
 		{
-			AI_Output (other,self ,"DIA_Lares_AnyNews_15_04"); //So I've heard. That's a bad business.
-			AI_Output (self ,other,"DIA_Lares_AnyNews_09_05"); //You can say that again.
+			AI_Output (other,self ,"DIA_Lares_AnyNews_15_04"); //Ich habe bereits davon gehört, schlimme Sache.
+			AI_Output (self ,other,"DIA_Lares_AnyNews_09_05"); //Das kann man wohl sagen.
 		}
 		else
 		{
-			AI_Output (other,self ,"DIA_Lares_AnyNews_15_06"); //How did that happen?
-			AI_Output (self ,other,"DIA_Lares_AnyNews_09_07"); //Bennet went to town to buy supplies. Well, he never came back.
-			AI_Output (self ,other,"DIA_Lares_AnyNews_09_08"); //If you want to learn more, you should ask Hodges, he was in the city with Bennet.
+			AI_Output (other,self ,"DIA_Lares_AnyNews_15_06"); //Wie ist das passiert?
+			AI_Output (self ,other,"DIA_Lares_AnyNews_09_07"); //Bennet war in der Stadt, um Vorräte einzukaufen. Na ja, er ist nicht zurückgekommen.
+			AI_Output (self ,other,"DIA_Lares_AnyNews_09_08"); //Wenn du Genaueres erfahren willst, frag am besten Hodges, er war mit Bennet in der Stadt.
 			
 			MIS_RescueBennet = LOG_RUNNING;
 		};
@@ -908,7 +908,7 @@ FUNC VOID DIA_Lares_AnyNews_Info()
 };
 
 // ************************************************************
-// 		Hast du was von Bennet geh�rt?			 
+// 		Hast du was von Bennet gehrt?			 
 // ************************************************************
 INSTANCE DIA_Lares_NewsAboutBennet(C_INFO)
 {
@@ -917,7 +917,7 @@ INSTANCE DIA_Lares_NewsAboutBennet(C_INFO)
 	condition	= DIA_Lares_NewsAboutBennet_Condition;
 	information	= DIA_Lares_NewsAboutBennet_Info;
 	permanent	= FALSE;
-	description = "Any news of Bennet?";
+	description = "Hast du was von Bennet gehört?";
 };                       
 FUNC INT DIA_Lares_NewsAboutBennet_Condition()
 {
@@ -928,11 +928,11 @@ FUNC INT DIA_Lares_NewsAboutBennet_Condition()
 };
 FUNC VOID DIA_Lares_NewsAboutBennet_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_NewsAboutBennet_15_00"); //Any news of Bennet?
-	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_01"); //They seem to have taken him to the barracks and tossed him into the dungeon.
-	AI_Output (other,self ,"DIA_Lares_NewsAboutBennet_15_02"); //How can we get him out of there?
-	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_03"); //I don't have any ideas so far. I can't get to his cell to talk to him.
-	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_04"); //All I can do is keep my ears open, but there isn't much to learn around here.
+	AI_Output (other,self ,"DIA_Lares_NewsAboutBennet_15_00"); //Hast du was von Bennet gehört?
+	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_01"); //Sie haben ihn anscheinend in die Kaserne gebracht und dort in den Kerker geschmissen.
+	AI_Output (other,self ,"DIA_Lares_NewsAboutBennet_15_02"); //Wie können wir ihn da rausholen?
+	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_03"); //Ich habe noch keine Idee, ich komme nicht bis zu seiner Zelle, um mit ihm zu reden.
+	AI_Output (self ,other,"DIA_Lares_NewsAboutBennet_09_04"); //Ich kann eigentlich nur die Ohren offen halten, aber hier erfährt man nichts.
 };
 
 //#################################
@@ -976,7 +976,7 @@ INSTANCE DIA_Lares_Kap4_PERM(C_INFO)
 	condition	= DIA_Lares_Kap4_PERM_Condition;
 	information	= DIA_Lares_Kap4_PERM_Info;
 	permanent	= TRUE;
-	description = "Why aren't you out hunting dragons?";
+	description = "Wieso bist du nicht auf der Drachenjagd?";
 };                       
 FUNC INT DIA_Lares_Kap4_PERM_Condition()
 {
@@ -1036,7 +1036,7 @@ instance DIA_Lares_KnowWhereEnemy		(C_INFO)
 	condition	 = 	DIA_Lares_KnowWhereEnemy_Condition;
 	information	 = 	DIA_Lares_KnowWhereEnemy_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Would you want to leave this island?";
+	description	 = 	"Hast du Lust, diese Insel zu verlassen?";
 };
 func int DIA_Lares_KnowWhereEnemy_Condition ()
 {	
@@ -1062,8 +1062,8 @@ func void DIA_Lares_KnowWhereEnemy_Info ()
 	else 
 	{
 		Info_ClearChoices (DIA_Lares_KnowWhereEnemy);
-		Info_AddChoice (DIA_Lares_KnowWhereEnemy,"I have no use for you.",DIA_Lares_KnowWhereEnemy_No);
-		Info_AddChoice (DIA_Lares_KnowWhereEnemy,"I knew I could rely on you.",DIA_Lares_KnowWhereEnemy_Yes);
+		Info_AddChoice (DIA_Lares_KnowWhereEnemy,"Ich kann dich nicht gebrauchen.",DIA_Lares_KnowWhereEnemy_No);
+		Info_AddChoice (DIA_Lares_KnowWhereEnemy,"Ich wusste, dass ich mich auf dich verlassen kann.",DIA_Lares_KnowWhereEnemy_Yes);
 	};
 };
 
@@ -1115,7 +1115,7 @@ instance DIA_Lares_LeaveMyShip		(C_INFO)
 	condition	 = 	DIA_Lares_LeaveMyShip_Condition;
 	information	 = 	DIA_Lares_LeaveMyShip_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"It's better if you don't come along.";
+	description	 = 	"Es ist besser, wenn du nicht mitkommst.";
 };
 func int DIA_Lares_LeaveMyShip_Condition ()
 {	
@@ -1144,7 +1144,7 @@ func void DIA_Lares_LeaveMyShip_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Ich habs mir �berlegt!
+//	Ich habs mir berlegt!
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Lares_StillNeedYou		(C_INFO)
 {
@@ -1153,7 +1153,7 @@ instance DIA_Lares_StillNeedYou		(C_INFO)
 	condition	 = 	DIA_Lares_StillNeedYou_Condition;
 	information	 = 	DIA_Lares_StillNeedYou_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Are you still interested in the voyage?";
+	description	 = 	"Hast du noch Interesse an der Überfahrt?";
 };
 func int DIA_Lares_StillNeedYou_Condition ()
 {	

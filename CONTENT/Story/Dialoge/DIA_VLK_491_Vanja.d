@@ -78,7 +78,7 @@ func int DIA_Vanja_STANDARD_Condition ()
 };
 func void DIA_Vanja_STANDARD_Info ()
 {
-	AI_Output			(self, other, "DIA_Vanja_STANDARD_17_00"); //I'm busy.
+	AI_Output			(self, other, "DIA_Vanja_STANDARD_17_00"); //Ich hab zu tun.
 	AI_StopProcessInfos (self);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -91,7 +91,7 @@ instance DIA_Vanja_DOPE		(C_INFO)
 	condition	 = 	DIA_Vanja_DOPE_Condition;
 	information	 = 	DIA_Vanja_DOPE_Info;
 	permanent	 =  FALSE;
-	description	 = 	"Where can I find myself some weed?";
+	description	 = 	"Wo kann ich mir Kraut besorgen?";
 };
 
 func int DIA_Vanja_DOPE_Condition ()
@@ -104,9 +104,9 @@ func int DIA_Vanja_DOPE_Condition ()
 };
 func void DIA_Vanja_DOPE_Info ()
 {
-	AI_Output (other, self, "DIA_Vanja_DOPE_15_00"); //Where can I find myself some weed?
-	AI_Output (self, other, "DIA_Vanja_DOPE_17_01"); //No idea. Better keep your fingers off of that stuff.
-	AI_Output (self, other, "DIA_Vanja_DOPE_17_02"); //Because, if you keep asking about it, you might burn them...
+	AI_Output (other, self, "DIA_Vanja_DOPE_15_00"); //Wo kann ich mir Kraut besorgen?
+	AI_Output (self, other, "DIA_Vanja_DOPE_17_01"); //Keine Ahnung. Du solltest besser die Finger von dem Zeug lassen.
+	AI_Output (self, other, "DIA_Vanja_DOPE_17_02"); //Denn wenn du weiter danach fragst, könntest du sie dir verbrennen ...
 };
 
 

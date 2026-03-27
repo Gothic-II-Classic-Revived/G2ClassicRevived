@@ -28,7 +28,7 @@ instance DIA_PAL_297_TRESPAS		(C_INFO)
 	condition	 = 	DIA_PAL_297_TRESPAS_Condition;
 	information	 = 	DIA_PAL_297_TRESPAS_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How's it going?";
+	description	 = 	"Wie läuft's denn so?";
 };
 func int DIA_PAL_297_TRESPAS_Condition ()
 {
@@ -36,15 +36,15 @@ func int DIA_PAL_297_TRESPAS_Condition ()
 };
 func void DIA_PAL_297_TRESPAS_Info ()
 {
-	AI_Output (other, self, "DIA_PAL_297_TRESPAS_15_00"); //How's it going?
+	AI_Output (other, self, "DIA_PAL_297_TRESPAS_15_00"); //Wie läuft's denn so?
 	
 	if (Kapitel == 1)
 	{
-		AI_Output (self, other, "DIA_PAL_297_TRESPAS_04_01"); //The area here is extremely dangerous, so you should turn back - we certainly don't want anything to happen to you.
+		AI_Output (self, other, "DIA_PAL_297_TRESPAS_04_01"); //Die Gegend hier ist ziemlich gefährlich, also kehr besser um - wir wollen ja nicht, dass dir was passiert.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_PAL_297_TRESPAS_04_02"); //It is very courageous of you to enter the valley. Just as long as you have enough healing potions with you.
+		AI_Output (self, other, "DIA_PAL_297_TRESPAS_04_02"); //Ziemlich wagemutig von dir, das Tal zu betreten. Hauptsache, du hast genug Heiltränke dabei.
 	};
 };
 
@@ -58,7 +58,7 @@ instance DIA_Addon_PAL_297_Rangerbandits		(C_INFO)
 	condition	 = 	DIA_Addon_PAL_297_Rangerbandits_Condition;
 	information	 = 	DIA_Addon_PAL_297_Rangerbandits_Info;
 
-	description	 = 	"Have any bandits passed by here lately?";
+	description	 = 	"Sind hier in letzter Zeit Banditen vorbei gekommen?";
 };
 
 func int DIA_Addon_PAL_297_Rangerbandits_Condition ()
@@ -71,9 +71,9 @@ func int DIA_Addon_PAL_297_Rangerbandits_Condition ()
 
 func void DIA_Addon_PAL_297_Rangerbandits_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_PAL_297_Rangerbandits_15_00"); //Have any bandits passed by here lately?
-	AI_Output	(self, other, "DIA_Addon_PAL_297_Rangerbandits_04_01"); //No idea what you're talking about. As long as we are on guard duty here, nobody passes. And certainly not any lousy bandits.
-	AI_Output	(self, other, "DIA_Addon_PAL_297_Rangerbandits_04_02"); //Ask those peasants back there. Maybe they've seen something.
+	AI_Output	(other, self, "DIA_Addon_PAL_297_Rangerbandits_15_00"); //Sind hier in letzter Zeit Banditen vorbei gekommen?
+	AI_Output	(self, other, "DIA_Addon_PAL_297_Rangerbandits_04_01"); //Keine Ahnung, wovon du da redest. Solange wir hier Wache stehen, kommt hier niemand vorbei. Schon gar nicht die lausigen Banditen.
+	AI_Output	(self, other, "DIA_Addon_PAL_297_Rangerbandits_04_02"); //Frag mal die Bauern dahinten. Vielleicht haben die was gesehen.
 };
  
 

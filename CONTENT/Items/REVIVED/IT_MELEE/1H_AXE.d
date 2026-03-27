@@ -68,7 +68,7 @@ const int	REV_Value_1H_Axe_Biff				=	290;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_AXE_OLD_01 (C_Item)
 {	
-	name 				=	"Withered Axe";
+	name 				=	"Verwitterte Axt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -93,7 +93,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_OLD_01 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_AXE_01 (C_Item)
 {	
-	name 				=	"Axe";
+	name 				=	"Axt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -118,7 +118,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_AXE_02 (C_Item)
 {	
-	name 				=	"Scullclefter";
+	name 				=	"Schädelspalter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -143,7 +143,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_AXE_03 (C_Item)
 {	
-	name 				=	"Bonebreaker";
+	name 				=	"Knochenbrecher";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -168,7 +168,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_03 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_AXE_GREAT_01 (C_Item)
 {	
-	name 				=	"Torturer's Axe";
+	name 				=	"Folteraxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -198,7 +198,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_GREAT_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_01 (C_Item)
 {	
-	name 				=	"Twinclaw";
+	name 				=	"Zwillingsklaue";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -223,7 +223,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_01 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_02 (C_Item)
 {	
-	name 				=	"Bloodfly Wing";
+	name 				=	"Blutfliegenflügel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -248,7 +248,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_03 (C_Item)
 {	
-	name 				=	"Heavy Hacker";
+	name 				=	"Schwerer Hacker";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -278,7 +278,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_HEAVY_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_AXE_ORE_01 (C_Item)
 {	
-	name 				=	"Ore Axe";
+	name 				=	"Erzaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -308,7 +308,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_ORE_01 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_1H_AXE_CORD (C_Item)
 {
-	name 				=	"Cord's Clefter";
+	name 				=	"Cords Spalter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -336,7 +336,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_CORD (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_AXE_LARES (C_Item)
 {
-	name 				=	"Lares' Axe";
+	name 				=	"Lares Axt";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;
@@ -364,7 +364,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_LARES (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_AXE_BIFF (C_Item)
 {
-	name 				=	"Biff's Axe"; //"Silas' Axe";
+	name 				=	"Biffs Axt"; //"Silas' Axe";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;

@@ -21,22 +21,22 @@ func int DIA_Akil_EXIT_Condition ()
 
 func void DIA_Akil_EXIT_Info ()
 {
-	AI_Output			(other, self, "DIA_Akil_EXIT_15_00"); //I've got to go.
+	AI_Output			(other, self, "DIA_Akil_EXIT_15_00"); //Ich muss gehen.
 
 	if (Akil_Sauer == TRUE)
 		{
-			AI_Output			(self, other, "DIA_Akil_EXIT_13_01"); //Don't let me stop you.
+			AI_Output			(self, other, "DIA_Akil_EXIT_13_01"); //Lass dich nicht aufhalten.
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Akil_EXIT_13_02"); //So long. I really wish I could have done more for you.
+			AI_Output			(self, other, "DIA_Akil_EXIT_13_02"); //Mach's gut. Ich wünschte wirklich, ich hätte mehr für dich tun können.
 		};
 		
 		AI_StopProcessInfos (self);
 };
 
 //////////////////////////////////////////////////////////////////////
-//	Info Hallo mit S�ldnern
+//	Info Hallo mit Sldnern
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Akil_Hallo	(C_INFO)
 {
@@ -45,7 +45,7 @@ instance DIA_Akil_Hallo	(C_INFO)
 	condition	 = 	DIA_Akil_Hallo_Condition;
 	information	 = 	DIA_Akil_Hallo_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Is there a problem?";
+	description	 = 	"Gibt's Schwierigkeiten?";
 };
 func int DIA_Akil_Hallo_Condition ()
 {
@@ -57,14 +57,14 @@ func int DIA_Akil_Hallo_Condition ()
 };
 func void DIA_Akil_Hallo_Info ()
 {
-	AI_Output  (other, self, "DIA_Akil_Hallo_15_00"); //Is there a problem?
-	AI_Output  (self, other, "DIA_Akil_Hallo_13_01"); //(sweating)... Eh... no, no... everything's fine. (nervous) It... would be better if you left now.
-	AI_Output  (other, self, "DIA_Akil_Hallo_15_02"); //Are you sure?
-	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //eh... yeah, yeah... everything's fine. You... eh... I... I can't talk to you now.
+	AI_Output  (other, self, "DIA_Akil_Hallo_15_00"); //Gibt's Schwierigkeiten?
+	AI_Output  (self, other, "DIA_Akil_Hallo_13_01"); //(schwitzt) ... äh ... nein nein ... es ist alles in Ordnung. (nervös) Es ... ist besser, wenn du jetzt gehst.
+	AI_Output  (other, self, "DIA_Akil_Hallo_15_02"); //Bist du sicher?
+	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //äh ... ja, ja ... es ist alles in Ordnung. Du ... äh ... ich ... Ich kann jetzt nicht mit dir reden.
 	
 	Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
-	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akil's farm is threatened by mercenaries."); 
+	B_LogEntry (TOPIC_AkilsSLDStillthere,"Akils Hof wird von Söldnern bedroht."); 
 
 	Akils_SLDStillthere = TRUE;
 	AI_StopProcessInfos (self);
@@ -94,7 +94,7 @@ func int DIA_Akil_Nichtjetzt_Condition ()
 };
 func void DIA_Akil_Nichtjetzt_Info ()
 {
-	AI_Output (self, other, "DIA_Akil_Nichtjetzt_13_00"); //Eh... not now, I can't talk to you now.
+	AI_Output (self, other, "DIA_Akil_Nichtjetzt_13_00"); //Äh ... nicht jetzt, ich kann jetzt nicht mit dir reden ...
 	AI_StopProcessInfos (self);
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -119,25 +119,25 @@ func int DIA_Akil_NachKampf_Condition ()
 };
 func void DIA_Akil_NachKampf_Info ()
 {
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_00"); //Thank Innos. I thought my time had run out.
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_01"); //My name is Akil. I farm this humble piece of land.
-	AI_Output (other, self, "DIA_Akil_NachKampf_15_02"); //Who were those people?
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_00"); //Innos sei Dank. Ich dachte schon, meine letzte Stunde hätte geschlagen.
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_01"); //Mein Name ist Akil. Ich bin der Bauer dieses bescheidenen Stück Landes hier.
+	AI_Output (other, self, "DIA_Akil_NachKampf_15_02"); //Was waren das für Kerle?
 
 		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-			AI_Output (self, other, "DIA_Akil_NachKampf_13_03"); //You ought to recognize them. Those were mercenaries from Onar's farm. Like you.
+			AI_Output (self, other, "DIA_Akil_NachKampf_13_03"); //Du solltest sie eigentlich kennen. Das waren Söldner von Onars Hof. Wie du.
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Akil_NachKampf_13_04"); //Those were mercenaries from Onar's farm. Those bastards don't know anything but plunder and murder.
+			AI_Output (self, other, "DIA_Akil_NachKampf_13_04"); //Das waren Söldner von Onars Hof. Was Anderes als plündern und morden kennen diese Bastarde nicht.
 		};
 		
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_05"); //I'd been fearing the worst...
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_06"); //(deep breath)... well, thank Innos it didn't come to that. Tell me what I can do for you.
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_05"); //Ich hatte schon das Schlimmste befürchtet ...
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_06"); //(atmet durch)... nun ich danke Innos, dass es nicht soweit gekommen ist. Sag mir, was ich für dich tun kann.
 	
 	Info_ClearChoices (DIA_Akil_NachKampf);
-	Info_AddChoice (DIA_Akil_NachKampf,"Nothing. Just as long as you got through this all right.",DIA_Akil_NachKampf_Ehre);
-	Info_AddChoice (DIA_Akil_NachKampf,"What about a few gold pieces?",DIA_Akil_NachKampf_Gold);
+	Info_AddChoice (DIA_Akil_NachKampf,"Nichts. Hauptsache, ihr habt die Sache gut überstanden.",DIA_Akil_NachKampf_Ehre);
+	Info_AddChoice (DIA_Akil_NachKampf,"Wie wär's mit ein paar Goldstücken?",DIA_Akil_NachKampf_Gold);
 	
 	Npc_ExchangeRoutine	(self,"Start"); 
 
@@ -164,17 +164,17 @@ func void DIA_Akil_NachKampf_Info ()
 };
 FUNC VOID DIA_Akil_NachKampf_Ehre()
 {
-	AI_Output (other, self, "DIA_Akil_NachKampf_Ehre_15_00"); //Nothing. Just as long as you got through this all right.
-	AI_Output (self, other, "DIA_Akil_NachKampf_Ehre_13_01"); //You're an exceptional fellow. May Innos guard you on your way.
+	AI_Output (other, self, "DIA_Akil_NachKampf_Ehre_15_00"); //Nichts. Hauptsache, ihr habt die Sache gut überstanden.
+	AI_Output (self, other, "DIA_Akil_NachKampf_Ehre_13_01"); //Du bist ein außergewöhnlicher Kerl. Möge Innos dich auf deinem Weg schützen.
 	
 	B_GivePlayerXP (XP_Akil_SLDWegVomHofEhre);
 	Info_ClearChoices (DIA_Akil_NachKampf);
 };
 FUNC VOID DIA_Akil_NachKampf_Gold()
 {
-	AI_Output (other, self, "DIA_Akil_NachKampf_Gold_15_00"); //What about a few gold pieces?
-	AI_Output (self, other, "DIA_Akil_NachKampf_Gold_13_01"); //I'm afraid I have to disappoint you - we're poor farmers. It's just enough to live on.
-	AI_Output (self, other, "DIA_Akil_NachKampf_Gold_13_02"); //All I can offer you is a meal. Go to Kati and let her take care of you.
+	AI_Output (other, self, "DIA_Akil_NachKampf_Gold_15_00"); //Wie wär's mit ein paar Goldstücken?
+	AI_Output (self, other, "DIA_Akil_NachKampf_Gold_13_01"); //Da muss ich dich leider enttäuschen - wir sind arme Bauern. Es reicht gerade zum Überleben.
+	AI_Output (self, other, "DIA_Akil_NachKampf_Gold_13_02"); //Alles, was ich dir anbieten kann, ist eine Mahlzeit. Geh zu Kati und lass dich von ihr versorgen.
 	
 	B_GivePlayerXP (XP_Akil_SLDWegVomHof);
 	Info_ClearChoices (DIA_Akil_NachKampf);
@@ -190,7 +190,7 @@ instance DIA_Akil_Soeldner		(C_INFO)
 	condition	 = 	DIA_Akil_Soeldner_Condition;
 	information	 = 	DIA_Akil_Soeldner_Info;
 	permanent    =  FALSE;
-	description	 = 	"What did the mercenaries want from you?";
+	description	 = 	"Was wollten die Söldner von dir?";
 };
 
 func int DIA_Akil_Soeldner_Condition ()
@@ -202,16 +202,16 @@ func int DIA_Akil_Soeldner_Condition ()
 };
 func void DIA_Akil_Soeldner_Info ()
 {
-	AI_Output (other, self, "DIA_Akil_Soeldner_15_00"); //What did the mercenaries want from you?
+	AI_Output (other, self, "DIA_Akil_Soeldner_15_00"); //Was wollten die Söldner von dir?
 
 	if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-				AI_Output (self, other, "DIA_Akil_Soeldner_13_01"); //You're pulling my leg. The mercenaries wanted to collect the rent.
+				AI_Output (self, other, "DIA_Akil_Soeldner_13_01"); //Willst du mich verarschen. Die Söldner wollten die Pacht eintreiben.
 		}
 	else
 		{
-				AI_Output (self, other, "DIA_Akil_Soeldner_13_02"); //You don't know that? Onar, the landowner, hired them. They guard his farm and collect the rent for him.
-				AI_Output (self, other, "DIA_Akil_Soeldner_13_03"); //That means they go from farm to farm and take whatever they want. And whoever can't pay gets a taste of their steel.
+				AI_Output (self, other, "DIA_Akil_Soeldner_13_02"); //Weißt du das nicht? Onar, der Großbauer, hat sie angeworben. Sie bewachen seinen Hof und treiben für ihn die Pacht ein.
+				AI_Output (self, other, "DIA_Akil_Soeldner_13_03"); //Das heißt, sie ziehen von Hof zu Hof und nehmen sich, was sie wollen. Und wer nicht zahlen kann, der kriegt ihren Stahl zu spüren.
 		};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -224,7 +224,7 @@ instance DIA_Akil_Lieferung		(C_INFO)
 	condition	 = 	DIA_Akil_Lieferung_Condition;
 	information	 = 	DIA_Akil_Lieferung_Info;
 	permanent	 =  FALSE; 	 
-	description	 = 	"Baltram sent me...";
+	description	 = 	"Ich komme von Baltram...";
 };
 
 func int DIA_Akil_Lieferung_Condition ()
@@ -237,14 +237,14 @@ func int DIA_Akil_Lieferung_Condition ()
 };
 func void DIA_Akil_Lieferung_Info ()
 {
-	AI_Output (other, self, "DIA_Akil_Lieferung_15_00"); //Baltram sent me. I'm supposed to pick up a shipment for him here.
-	AI_Output (self, other, "DIA_Akil_Lieferung_13_01"); //So you're his new messenger. Okay, I've already made up the package.
+	AI_Output (other, self, "DIA_Akil_Lieferung_15_00"); //Ich komme von Baltram. Ich soll hier eine Lieferung für ihn abholen.
+	AI_Output (self, other, "DIA_Akil_Lieferung_13_01"); //Dann bist du sein neuer Bote. Okay, ich habe das Paket schon fertig gemacht.
 	CreateInvItems 	(self, ItMi_BaltramPaket, 1 );
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
 	
-	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now...");
-	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
+	B_LogEntry (TOPIC_Baltram, "Die Lieferung habe ich. Ich könnte sie jetzt zu Baltram bringen...");
+	B_LogEntry (TOPIC_Nagur,   "Die Lieferung habe ich. Ich könnte sie jetzt zu Nagur bringen...");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -257,7 +257,7 @@ instance DIA_Akil_Gegend		(C_INFO)
 	condition	 = 	DIA_Akil_Gegend_Condition;
 	information	 = 	DIA_Akil_Gegend_Info;
 	permanent	 =  FALSE; 	 
-	description	 = 	"You know your way around this area...";
+	description	 = 	"Du kennst dich doch hier in der Gegend aus...";
 };
 
 func int DIA_Akil_Gegend_Condition ()
@@ -271,38 +271,38 @@ func int DIA_Akil_Gegend_Condition ()
 //-------------------------------
 func void DIA_Akil_Gegend_Info ()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //You know your way around this area...
-	AI_Output (self, other, "DIA_Akil_Gegend_13_01"); //Sure, what do you want to know?
+	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //Du kennst dich doch hier in der Gegend aus...
+	AI_Output (self, other, "DIA_Akil_Gegend_13_01"); //Na klar, was willst du wissen?
 
 	Info_AddChoice	(DIA_Akil_Gegend, DIALOG_BACK 		,DIA_Akil_Gegend_BACK);
-	Info_AddChoice	(DIA_Akil_Gegend, "What is that tavern to the east of here?", DIA_Akil_Gegend_Taverne );
-	Info_AddChoice	(DIA_Akil_Gegend, "What is there in the woods behind your farm?", DIA_Akil_Gegend_Wald );
-	Info_AddChoice	(DIA_Akil_Gegend, "Where can I find Onar's farm?", DIA_Akil_Gegend_Onar );
+	Info_AddChoice	(DIA_Akil_Gegend, "Was ist das für eine Taverne im Osten?", DIA_Akil_Gegend_Taverne );
+	Info_AddChoice	(DIA_Akil_Gegend, "Was finde ich in dem Wald hinter deinem Hof?", DIA_Akil_Gegend_Wald );
+	Info_AddChoice	(DIA_Akil_Gegend, "Wo finde ich den Hof von Onar?", DIA_Akil_Gegend_Onar );
 };
 
 FUNC VOID DIA_Akil_Gegend_BACK()
 {
-	AI_Output			(other, self, "DIA_Biff_HALLO_doof_15_00"); //Never mind.
+	AI_Output			(other, self, "DIA_Biff_HALLO_doof_15_00"); //Schon gut.
 	Info_ClearChoices (DIA_Akil_Gegend);
 };
 FUNC VOID DIA_Akil_Gegend_Onar()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_Onar_15_00"); //Where can I find Onar's farm?
-	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_01"); //Just go back down the stone steps and follow the road to the east.
-	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_02"); //At some point you come to a tavern. From there you go farther east until you come to the big fields. That's where the mercenaries hang out.
+	AI_Output (other, self, "DIA_Akil_Gegend_Onar_15_00"); //Wo finde ich den Hof von Onar?
+	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_01"); //Geh einfach wieder die Steinstufen runter und folge dem Weg weiter nach Osten.
+	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_02"); //Irgendwann kommt eine Taverne. Da gehst du weiter nach Osten bis du zu den großen Feldern kommst. Da lungern dann schon die Söldner rum.
 	AI_StopProcessInfos (self);
 };
 FUNC VOID DIA_Akil_Gegend_Wald()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_Wald_15_00"); //What is there in the woods behind your farm?
-	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_01"); //There's just a whole bunch of monsters back there - and the wolves are the least dangerous.
-	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_02"); //A few bandits are also said to have their caves there. Well - they've left my farm alone so far.
+	AI_Output (other, self, "DIA_Akil_Gegend_Wald_15_00"); //Was finde ich in dem Wald hinter deinem Hof?
+	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_01"); //Da gibt's nur jede Menge Monster - wobei die Wölfe noch die ungefährlichsten sind.
+	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_02"); //Angeblich sollen da auch ein paar Banditen ihre Höhle haben. Na - meinen Hof haben sie bis jetzt in Ruhe gelassen.
 	AI_StopProcessInfos (self);
 };
 FUNC VOID DIA_Akil_Gegend_Taverne ()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_Taverne_15_00"); //What is that tavern to the east of here?
-	AI_Output (self, other, "DIA_Akil_Gegend_Taverne_13_01"); //Ask Randolph. He knows more about it than I do. He's been there a few times.
+	AI_Output (other, self, "DIA_Akil_Gegend_Taverne_15_00"); //Was ist das für eine Taverne im Osten?
+	AI_Output (self, other, "DIA_Akil_Gegend_Taverne_13_01"); //Frag mal Randolph. Er weiß mehr darüber als ich. Er war schon ein paar mal dort.
 	AI_StopProcessInfos (self);
 };
 
@@ -317,7 +317,7 @@ instance DIA_Akil_Perm		(C_INFO)
 	information	 = 	DIA_Akil_Perm_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Did anything else happen?";
+	description	 = 	"Sonst noch irgendwas passiert?";
 };
 
 func int DIA_Akil_Perm_Condition ()
@@ -331,38 +331,38 @@ func int DIA_Akil_Perm_Condition ()
 
 func void DIA_Akil_Perm_Info ()
 {
-	AI_Output (other, self, "DIA_Akil_Perm_15_00"); //Did anything else happen?
+	AI_Output (other, self, "DIA_Akil_Perm_15_00"); //Sonst noch irgendwas passiert?
 
 	if (Kapitel == 3)
 	{
 		if (MIS_Akil_SchafDiebe == LOG_SUCCESS)
 		{
-			AI_Output (self, other, "DIA_Akil_Perm_13_01"); //No. I hope the sheep stay where they are right now.
+			AI_Output (self, other, "DIA_Akil_Perm_13_01"); //Nein. Ich hoffe, die Schafe bleiben jetzt da, wo sie sind.
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Akil_Perm_13_02"); //My sheep keep disappearing. Soon I won't be able to feed us anymore.
+			AI_Output (self, other, "DIA_Akil_Perm_13_02"); //Meine Schafe verschwinden ständig, bald kann ich uns nicht mehr ernähren.
 		};
 	}
 	else //Kapitel 4 & 5
 	{
 		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
-			AI_Output (self, other, "DIA_Akil_Perm_13_03"); //The orcs have shown up everywhere. Someone even mentioned their headquarters. Ask the farmer Lobart about that.
+			AI_Output (self, other, "DIA_Akil_Perm_13_03"); //Die Orks sind überall gesehen worden. Sie haben auch ein Hauptquartier, hat man mir erzählt. Frag mal den Bauern Lobart danach.
 
 		};
 
 		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-			AI_Output (self, other, "DIA_Akil_Perm_13_04"); //They've also spotted plenty of lizard people in this area. I wouldn't go into the caves if I were you.
+			AI_Output (self, other, "DIA_Akil_Perm_13_04"); //Es sollen hier in der Gegend viele Echsenmenschen gesehen worden sein. Ich würde an deiner Stelle nicht in die Höhlen gehen.
 
 		};
 
 		if (hero.guild == GIL_KDF)
 		{
-			AI_Output (self, other, "DIA_Akil_Perm_13_05"); //The black hoods are looking for you.
-			AI_Output (other, self, "DIA_Akil_Perm_15_06"); //Now there's a novel concept.
-			AI_Output (self, other, "DIA_Akil_Perm_13_07"); //All right. I just thought I'd mention it.
+			AI_Output (self, other, "DIA_Akil_Perm_13_05"); //Die schwarzen Kapuzenmänner suchen dich.
+			AI_Output (other, self, "DIA_Akil_Perm_15_06"); //Ach. Das ist ja ganz was Neues.
+			AI_Output (self, other, "DIA_Akil_Perm_13_07"); //Schon gut. Ich dachte, ich erwähne es mal.
 		};		
 	};
 };
@@ -410,7 +410,7 @@ instance DIA_Akil_SCHAFDIEB		(C_INFO)
 	condition	 = 	DIA_Akil_SCHAFDIEB_Condition;
 	information	 = 	DIA_Akil_SCHAFDIEB_Info;
 
-	description	 = 	"Is there any other news?";
+	description	 = 	"Gibt's sonst noch Neuigkeiten?";
 };
 
 func int DIA_Akil_SCHAFDIEB_Condition ()
@@ -423,39 +423,39 @@ func int DIA_Akil_SCHAFDIEB_Condition ()
 
 func void DIA_Akil_SCHAFDIEB_Info ()
 {
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_15_00"); //Is there any other news?
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_13_01"); //Someone keeps stealing my sheep lately. I haven't been able to sleep properly for nights.
+	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_15_00"); //Gibt's sonst noch Neuigkeiten?
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_13_01"); //In letzter Zeit werden mir ständig Schafe gestohlen. Ich hab schon einige Nächte nicht mehr vernünftig schlafen können.
 
 	Info_ClearChoices	(DIA_Akil_SCHAFDIEB);
-	Info_AddChoice	(DIA_Akil_SCHAFDIEB, "Not my problem.", DIA_Akil_SCHAFDIEB_nein );
-	Info_AddChoice	(DIA_Akil_SCHAFDIEB, "How many sheep are you missing?", DIA_Akil_SCHAFDIEB_wieviel );
-	Info_AddChoice	(DIA_Akil_SCHAFDIEB, "Who could have done that?", DIA_Akil_SCHAFDIEB_wer );
+	Info_AddChoice	(DIA_Akil_SCHAFDIEB, "Nicht mein Problem.", DIA_Akil_SCHAFDIEB_nein );
+	Info_AddChoice	(DIA_Akil_SCHAFDIEB, "Wieviele Schafe fehlen dir?", DIA_Akil_SCHAFDIEB_wieviel );
+	Info_AddChoice	(DIA_Akil_SCHAFDIEB, "Wer kann das getan haben?", DIA_Akil_SCHAFDIEB_wer );
 	MIS_Akil_SchafDiebe	= LOG_RUNNING;
 	Log_CreateTopic (TOPIC_AkilSchafDiebe, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_AkilSchafDiebe, LOG_RUNNING);
-	B_LogEntry (TOPIC_AkilSchafDiebe,"Akil's sheep keep getting stolen. He suspects that the bandits in the woodland cave nearby are behind it."); 
+	B_LogEntry (TOPIC_AkilSchafDiebe,"Akil werde ständig Schafe gestohlen. Er hat die Banditen in der nahegelgenen Waldhöhle in verdacht."); 
 };
 
 func void DIA_Akil_SCHAFDIEB_wer ()
 {
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_wer_15_00"); //Who could have done that?
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wer_13_01"); //I've got a hunch about that.
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wer_13_02"); //Some really nasty fellows have settled into the caves over in the forest.
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wer_13_03"); //I find it hard to believe that they're living on berries. I'm almost certain that's where my sheep are disappearing to.
+	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_wer_15_00"); //Wer kann das getan haben?
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wer_13_01"); //Ich habe da so einen Verdacht.
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wer_13_02"); //In der Höhle drüben im Wald haben sich recht üble Gesellen nieder gelassen.
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wer_13_03"); //Ich glaube kaum, dass sie sich nur von Waldbeeren ernähren. Ich bin fast sicher, dass sich meine Schafe dorthin verflüchtigen.
 	Info_ClearChoices	(DIA_Akil_SCHAFDIEB);
 };
 
 func void DIA_Akil_SCHAFDIEB_wieviel ()
 {
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_wieviel_15_00"); //How many sheep are you missing?
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wieviel_13_01"); //It must be at least three that have disappeared now.
+	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_wieviel_15_00"); //Wieviele Schafe fehlen dir?
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_wieviel_13_01"); //Es sind jetzt schon mindestens drei, die verschwunden sind.
 
 };
 
 func void DIA_Akil_SCHAFDIEB_nein ()
 {
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_nein_15_00"); //Not my problem.
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_nein_13_01"); //I understand. You have other things to worry about.
+	AI_Output			(other, self, "DIA_Akil_SCHAFDIEB_nein_15_00"); //Nicht mein Problem.
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEB_nein_13_01"); //Schon klar. Du hast sicher andere Sorgen.
 	Info_ClearChoices	(DIA_Akil_SCHAFDIEB);
 
 };
@@ -470,7 +470,7 @@ instance DIA_Akil_SCHAFDIEBEPLATT		(C_INFO)
 	condition	 = 	DIA_Akil_SCHAFDIEBEPLATT_Condition;
 	information	 = 	DIA_Akil_SCHAFDIEBEPLATT_Info;
 
-	description	 = 	"I found the sheep rustlers.";
+	description	 = 	"Ich habe die Schafdiebe gefunden.";
 };
 
 func int DIA_Akil_SCHAFDIEBEPLATT_Condition ()
@@ -487,23 +487,23 @@ func int DIA_Akil_SCHAFDIEBEPLATT_Condition ()
 
 func void DIA_Akil_SCHAFDIEBEPLATT_Info ()
 {
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_00"); //I found the sheep rustlers.
-	AI_Output			(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_01"); //You were right. Those fellows in the forest cave did it. They'll never steal sheep from you again.
+	AI_Output			(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_00"); //Ich habe die Schafdiebe gefunden.
+	AI_Output			(other, self, "DIA_Akil_SCHAFDIEBEPLATT_15_01"); //Du hattest Recht. Es waren die Kerle in der Waldhöhle. Sie werden dir keine Schafe mehr stehlen.
 
 	if 		((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 			{
-				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_02"); //Thank you, noble servant of Innos.
+				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_02"); //Ich danke dir, edler Diener Innos'.
 			}
 	else if (hero.guild == GIL_MIL)
 			{
-				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_03"); //Thanks. So the militia really does care about us small farmers.
+				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_03"); //Danke. Die Miliz kümmert sich also doch um uns kleine Bauern.
 			}
 	else 
 			{
-				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_04"); //Thanks. You sure are a strange mercenary. Not at all like the others I know.
+				AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_04"); //Danke. Du bist schon ein seltsamer Söldner. Ganz anders als die, die ich sonst kenne.
 			};
 		
-	AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_05"); //Take this as a small token of thanks for the selfless favor you did for me.
+	AI_Output			(self, other, "DIA_Akil_SCHAFDIEBEPLATT_13_05"); //Nimm dies als kleine Anerkennung von mir, für deinen selbstlosen Gefallen, den du mir erwiesen hast.
 
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					
@@ -521,7 +521,7 @@ instance DIA_Akil_AkilsSchaf		(C_INFO)
 	condition	 = 	DIA_Akil_AkilsSchaf_Condition;
 	information	 = 	DIA_Akil_AkilsSchaf_Info;
 
-	description	 = 	"I found the sheep rustlers.";
+	description	 = 	"Ich habe die Schafdiebe gefunden.";
 };
 
 func int DIA_Akil_AkilsSchaf_Condition ()
@@ -536,8 +536,8 @@ func int DIA_Akil_AkilsSchaf_Condition ()
 
 func void DIA_Akil_AkilsSchaf_Info ()
 {
-	AI_Output			(other, self, "DIA_Akil_AkilsSchaf_15_00"); //I found the sheep rustlers.
-	AI_Output			(self, other, "DIA_Akil_AkilsSchaf_13_01"); //Very good. Here's a few gold coins. I hope it's enough.
+	AI_Output			(other, self, "DIA_Akil_AkilsSchaf_15_00"); //Ich habe die Schafdiebe gefunden.
+	AI_Output			(self, other, "DIA_Akil_AkilsSchaf_13_01"); //Sehr gut. Hier hast du einige Goldmünzen. Ich hoffe, es ist genug.
 	
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					

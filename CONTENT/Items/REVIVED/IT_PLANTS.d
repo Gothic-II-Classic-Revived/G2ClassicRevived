@@ -9,7 +9,7 @@ const int	REV_Value_Riceplant		=	5;		const int	REV_Bonus_Riceplant		=	1;
 
 INSTANCE ITPL_REVIVED_BERRIES (C_Item)
 {	
-	name 				=	"Red berries";
+	name 				=	"Rote Beeren";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -19,7 +19,7 @@ INSTANCE ITPL_REVIVED_BERRIES (C_Item)
 	visual 				=	"REV_ITPL_BERRY_RED.3ds";
 	material 			=	MAT_LEATHER;
 	on_state [0]		=   UseBerrys;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
@@ -35,7 +35,7 @@ func void UseBerrys ()
 
 INSTANCE ITPL_REVIVED_GRAPES (C_Item)
 {	
-	name 				=	"Purple grapes";
+	name 				=	"Lila Trauben";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -44,7 +44,7 @@ INSTANCE ITPL_REVIVED_GRAPES (C_Item)
 
 	visual 				=	"REV_ITPL_WINEBERRY_PURPLE.3ds";
 	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Grapes;
@@ -62,7 +62,7 @@ func void UseWineberrys ()
 
 INSTANCE ITPL_REVIVED_RICEPLANT (C_Item)
 {	
-	name 				=	"Rice plant";
+	name 				=	"Reispflanze";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -72,7 +72,7 @@ INSTANCE ITPL_REVIVED_RICEPLANT (C_Item)
 	visual 				=	"ItPl_Weed.3ds";
 	material 			=	MAT_LEATHER;
 	on_state [0]		=   UseRiceplant;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Riceplant;

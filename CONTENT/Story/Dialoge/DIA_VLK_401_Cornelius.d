@@ -37,7 +37,7 @@ INSTANCE DIA_Cornelius_SeeMurder   (C_INFO)
 	condition   = DIA_Cornelius_SeeMurder_Condition;
 	information = DIA_Cornelius_SeeMurder_Info;
 	permanent   = FALSE;
-	description	= "You saw the murder of Lothar, didn't you?";
+	description	= "Du hast doch den Mord an Lothar beobachtet?";
 };
 
 FUNC INT DIA_Cornelius_SeeMurder_Condition()
@@ -58,7 +58,7 @@ FUNC VOID DIA_Cornelius_SeeMurder_Info()
 	AI_Output (self ,other,"DIA_Cornelius_WhatYouSee_13_01"); //(hectically) Really, I haven't got any time now.
 	AI_Output (self ,other,"DIA_Cornelius_WhatYouSee_13_02"); //(hectically) You need to go now, the office is closing.
 	
-	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius is refusing to speak to me."); 
+	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius weigert sich mir mir zu reden."); 
 	
 	AI_StopProcessInfos (self);
 };
@@ -73,7 +73,7 @@ INSTANCE DIA_Cornelius_Enough   (C_INFO)
 	condition   = DIA_Cornelius_Enough_Condition;
 	information = DIA_Cornelius_Enough_Info;
 	permanent   = FALSE;
-	description	= "Enough of that! What did you see?";
+	description	= "Jetzt reicht es! Was hast du gesehen?";
 };
 
 FUNC INT DIA_Cornelius_Enough_Condition()
@@ -106,7 +106,7 @@ INSTANCE DIA_Cornelius_DontBelieveYou   (C_INFO)
 	condition   = DIA_Cornelius_DontBelieveYou_Condition;
 	information = DIA_Cornelius_DontBelieveYou_Info;
 	permanent   = TRUE;
-	description	= "I don't believe you.";
+	description	= "Ich glaube dir nicht.";
 };
 
 FUNC INT DIA_Cornelius_DontBelieveYou_Condition()
@@ -125,8 +125,8 @@ FUNC VOID DIA_Cornelius_DontBelieveYou_Info()
 
 	Info_ClearChoices (DIA_Cornelius_DontBelieveYou);
 
-	Info_AddChoice (DIA_Cornelius_DontBelieveYou,"What is it you want?",DIA_Cornelius_DontBelieveYou_WhatYouWant);
-	Info_AddChoice (DIA_Cornelius_DontBelieveYou,"You hold your life dear, don't you?",DIA_Cornelius_DontBelieveYou_WantSurvive);
+	Info_AddChoice (DIA_Cornelius_DontBelieveYou,"Was verlangst du?",DIA_Cornelius_DontBelieveYou_WhatYouWant);
+	Info_AddChoice (DIA_Cornelius_DontBelieveYou,"Du willst doch weiterleben, oder?",DIA_Cornelius_DontBelieveYou_WantSurvive);
 };
 
 FUNC VOID DIA_Cornelius_DontBelieveYou_WhatYouWant ()
@@ -136,7 +136,7 @@ FUNC VOID DIA_Cornelius_DontBelieveYou_WhatYouWant ()
 	AI_Output (other,self ,"DIA_Cornelius_DontBelieveYou_WhatYouWant_15_02"); //How much?
 	AI_Output (self ,other,"DIA_Cornelius_DontBelieveYou_WhatYouWant_13_03"); //2000 gold pieces. Well, that could make me rethink the matter.
 	
-	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius would be prepared to speak to me for 2000 pieces of gold.");
+	B_LogEntry (TOPIC_RESCUEBENNET,"Für 2000 Goldstücke, wäre Cornelius bereit mit mir zu reden.");
 	
 	Cornelius_PayForProof = TRUE;
 	Info_ClearChoices (DIA_Cornelius_DontBelieveYou);
@@ -193,7 +193,7 @@ INSTANCE DIA_Cornelius_PayCornelius   (C_INFO)
 	condition   = DIA_Cornelius_PayCornelius_Condition;
 	information = DIA_Cornelius_PayCornelius_Info;
 	permanent   = TRUE;
-	description	= "Here's the gold.";
+	description	= "Hier ist das Gold.";
 };
 
 FUNC INT DIA_Cornelius_PayCornelius_Condition()
@@ -230,7 +230,7 @@ INSTANCE DIA_Cornelius_RealStory   (C_INFO)
 	condition   = DIA_Cornelius_RealStory_Condition;
 	information = DIA_Cornelius_RealStory_Info;
 	permanent   = TRUE;
-	description	= "So what really happened?";
+	description	= "Was ist wirklich passiert?";
 };
 
 FUNC INT DIA_Cornelius_RealStory_Condition()
@@ -257,7 +257,7 @@ FUNC VOID DIA_Cornelius_RealStory_Info()
 		B_GiveInvItems (self,other,ItWr_CorneliusTagebuch_Mis,1);
 	};
 	
-	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius lied. He was paid to get Bennet into jail. But he won't tell me who bribed him. He's trembling with fear.");
+	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius hat gelogen, man hat ihn bezahlt um Bennet in den Kanst zu bringen. Er will mir allerdings nicht verraten, wer ihn Bezahlt hat, er schlottert vor Angst.");
 	
 	CorneliusFlee = TRUE;
 	
@@ -306,7 +306,7 @@ INSTANCE DIA_Cornelius_PICKPOCKET (C_INFO)
 	condition	= DIA_Cornelius_PICKPOCKET_Condition;
 	information	= DIA_Cornelius_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be risky to steal his book)";
+	description = "(Es wäre gewagt sein Buch zu stehlen)";
 };                       
 
 FUNC INT DIA_Cornelius_PICKPOCKET_Condition()

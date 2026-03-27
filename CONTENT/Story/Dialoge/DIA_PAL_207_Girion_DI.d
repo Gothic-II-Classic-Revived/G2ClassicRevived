@@ -32,7 +32,7 @@ instance DIA_Girion_DI_Hallo		(C_INFO)
 	information	 = 	DIA_Girion_DI_Hallo_Info;
 	PERMANENT 	 =  TRUE;
 
-	description	 = 	"Everything all right?";
+	description	 = 	"Alles Klar?";
 };
 func int DIA_Girion_DI_Hallo_Condition ()
 {	
@@ -43,20 +43,20 @@ func int DIA_Girion_DI_Hallo_Condition ()
 };
 func void DIA_Girion_DI_Hallo_Info ()
 {
-	AI_Output			(other, self, "DIA_Girion_DI_Hallo_15_00"); //Everything all right?
+	AI_Output			(other, self, "DIA_Girion_DI_Hallo_15_00"); //Alles Klar?
 
 	if (ORkSturmDI == TRUE)
 		{
-			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_01"); //The orcs are truly brave to set themselves against me.
-			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_02"); //They really should know better than to challenge a paladin of the royal guard.
+			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_01"); //Die Orks haben wirklich Mut, sich mir entgegenzustellen.
+			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_02"); //Sie sollten es eigentlich besser wissen, einen Paladin der königlichen Garde herauszufordern.
 		}
 	else if (hero.guild == GIL_PAL)
 		{
-			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_03"); //I think so. Will you need long for your mission here on this cliff?
+			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_03"); //Ich denke schon. Brauchst noch lange für deine Mission hier auf diesem Felsen?
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_04"); //Don't treat me like an idiot. Do what must be done and then surrender the ship to me.
+			AI_Output			(self, other, "DIA_Girion_DI_Hallo_08_04"); //Behandle mich nicht wie einen Idioten. Erledige, was du erledigen musst, und dann übergibst du mir das Schiff.
 		};
 };
 
@@ -70,7 +70,7 @@ INSTANCE DIA_Girion_DI_Teach(C_INFO)
 	condition	= DIA_Girion_DI_Teach_Condition;
 	information	= DIA_Girion_DI_Teach_Info;
 	permanent	= TRUE;
-	description = "Train me, and we'll all be able to leave here faster!";
+	description = "Trainiere mich, desto schneller sind wir hier wieder weg.";
 };                       
 
 FUNC INT DIA_Girion_DI_Teach_Condition()
@@ -220,7 +220,7 @@ instance DIA_Girion_DI_OrcEliteRing		(C_INFO)
 	information	 = 	DIA_Girion_DI_OrcEliteRing_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"I have a ring from the orcish warlords.";
+	description	 = 	"Ich habe einen Ring der Orkischen Kriegsherren.";
 };
 
 func int DIA_Girion_DI_OrcEliteRing_Condition ()
@@ -245,8 +245,8 @@ func void DIA_Girion_DI_OrcEliteRing_Info ()
 	AI_Output			(self, other, "DIA_Girion_DI_OrcEliteRing_08_02"); //Give it to me. I shall deliver it to Lord Hagen.
 
 	Info_ClearChoices	(DIA_Girion_DI_OrcEliteRing);
-	Info_AddChoice	(DIA_Girion_DI_OrcEliteRing, "I'd rather keep it to myself.", DIA_Girion_DI_OrcEliteRing_behalten );
-	Info_AddChoice	(DIA_Girion_DI_OrcEliteRing, "Here, take it.", DIA_Girion_DI_OrcEliteRing_geben );
+	Info_AddChoice	(DIA_Girion_DI_OrcEliteRing, "Ich behalte ihn lieber für mich.", DIA_Girion_DI_OrcEliteRing_behalten );
+	Info_AddChoice	(DIA_Girion_DI_OrcEliteRing, "Hier, nimm.", DIA_Girion_DI_OrcEliteRing_geben );
 };
 func void DIA_Girion_DI_OrcEliteRing_geben ()
 {
@@ -275,7 +275,7 @@ instance DIA_Girion_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Girion_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 	
-	description = 	"We can cast off now.";
+	description = 	"Wir können jetzt mit dem Schiff ablegen.";
 };
 
 func int DIA_Girion_DI_UndeadDragonDead_Condition ()

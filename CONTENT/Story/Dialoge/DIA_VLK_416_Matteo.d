@@ -74,7 +74,7 @@ FUNC INT DIA_Matteo_Hallo_Condition()
 };
 FUNC VOID DIA_Matteo_Hallo_Info()
 {	
-	AI_Output (self, other, "DIA_Matteo_Hallo_09_00"); //What can I do for you?
+	AI_Output (self, other, "DIA_Matteo_Hallo_09_00"); //Was kann ich für dich tun?
 };
 
 // ************************************************************
@@ -87,7 +87,7 @@ INSTANCE DIA_Matteo_SellWhat(C_INFO)
 	condition	= DIA_Matteo_SellWhat_Condition;
 	information	= DIA_MAtteo_SellWhat_Info;
 	permanent	= FALSE;
-	description = "What are you selling?";
+	description = "Was verkaufst du?";
 };                       
 FUNC INT DIA_Matteo_SellWhat_Condition()
 {	
@@ -95,15 +95,15 @@ FUNC INT DIA_Matteo_SellWhat_Condition()
 };
 FUNC VOID DIA_Matteo_SellWhat_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_SellWhat_15_00"); //What are you selling?
-	AI_Output (self, other, "DIA_Matteo_SellWhat_09_01"); //I can offer you everything you need to survive in the wild. Weapons, torches, provisions... even armor.
-	AI_Output (self, other, "DIA_Matteo_SellWhat_09_02"); //I still have a special piece in stock.
-	AI_Output (self, other, "DIA_Matteo_SellWhat_09_03"); //Double hardened armor of snapper leather - still unused. Interested?
+	AI_Output (other, self, "DIA_Matteo_SellWhat_15_00"); //Was verkaufst du?
+	AI_Output (self, other, "DIA_Matteo_SellWhat_09_01"); //Ich kann dir alles anbieten, was du brauchst, um in der Wildnis zu überleben. Waffen, Fackeln, Proviant ... und sogar Rüstungen.
+	AI_Output (self, other, "DIA_Matteo_SellWhat_09_02"); //Ich habe da noch ein ganz besonderes Stück auf Lager.
+	AI_Output (self, other, "DIA_Matteo_SellWhat_09_03"); //Eine doppelt gehärtete Rüstung aus Snapperleder - noch ungetragen. Interessiert?
 	
 	if (Knows_Matteo == FALSE)
 	{
 		Log_CreateTopic (TOPIC_CityTrader, LOG_NOTE);
-		B_LogEntry (TOPIC_CityTrader,"Matteo's shop is at the south gate of the city. He sells equipment, weapons and supplies.");
+		B_LogEntry (TOPIC_CityTrader,"Matteo hat seinen Laden am Südtor der Stadt. Er handelt mit Ausrüstung, Waffen und Proviant.");
 		Knows_Matteo = TRUE;
 	};
 };
@@ -118,7 +118,7 @@ INSTANCE DIA_Matteo_TRADE (C_INFO)
 	condition	= DIA_Matteo_TRADE_Condition;
 	information	= DIA_Matteo_TRADE_Info;
 	permanent	= TRUE;
-	description = "Show me your wares.";
+	description = "Zeig mir deine Ware.";
 	Trade		= TRUE;
 };                       
 FUNC INT DIA_Matteo_TRADE_Condition()
@@ -134,22 +134,22 @@ var int Matteo_TradeNewsPermanent;
 FUNC VOID DIA_Matteo_TRADE_Info()
 {	
 	B_GiveTradeInv (self);
-	AI_Output (other,self ,"DIA_Matteo_TRADE_15_00"); //Show me your wares.
+	AI_Output (other,self ,"DIA_Matteo_TRADE_15_00"); //Zeig mir deine Ware.
 	if (Kapitel == 3)
 	&& (MIS_RescueBennet != LOG_SUCCESS)
 	&& (Matteo_TradeNewsPermanent == FALSE)
 	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
-		AI_Output (self,other,"DIA_Matteo_TRADE_09_01"); //Since the mercenaries did in the paladin Lothar, the paladins' inspections have gotten a lot tougher.
-		AI_Output (self,other,"DIA_Matteo_TRADE_09_02"); //I hope that will ease up once they've hanged the murderer.
+		AI_Output (self,other,"DIA_Matteo_TRADE_09_01"); //Seit die Söldner den Paladin Lothar umgebracht haben, sind die Kontrollen der Paladine noch schärfer geworden.
+		AI_Output (self,other,"DIA_Matteo_TRADE_09_02"); //Ich hoffe, dass sich das legen wird, sobald sie den Mörder gehängt haben.
 	
 		Matteo_TradeNewsPermanent = 1;
 	};
 	if (Kapitel == 5)
 	&& (Matteo_TradeNewsPermanent < 2)
 	{
-		AI_Output (self,other,"DIA_Matteo_TRADE_09_03"); //It looks like the paladins are really serious this time, they've even withdrawn their ship guards.
-		AI_Output (self,other,"DIA_Matteo_TRADE_09_04"); //It's a good thing you're refreshing your supplies again, who knows if the city will still be standing next week.
+		AI_Output (self,other,"DIA_Matteo_TRADE_09_03"); //Es scheint, dass die Paladine diesmal wirklich ernst machen wollen, sie haben sogar ihre Schiffswachen abgezogen.
+		AI_Output (self,other,"DIA_Matteo_TRADE_09_04"); //Es ist gut, dass du deine Vorräte noch mal auffrischst, wer weiß, ob die Stadt nächste Woche noch steht.
 	
 		Matteo_TradeNewsPermanent = 2;
 	};
@@ -170,7 +170,7 @@ instance DIA_Matteo_LEATHER		(C_INFO)
 	condition	 = 	DIA_Matteo_LEATHER_Condition;
 	information	 = 	DIA_Matteo_LEATHER_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Buy 'Heavy Leather Armor'. Protection: weapons 35, arrows 30, fire 15 (1600 gold)";
+	description	 = 	"Schwere Lederrüstung' kaufen. Schutz: Waffen 35, Pfeile 30, Feuer 15 (1600 Gold)";
 };
 
 func int DIA_Matteo_LEATHER_Condition ()
@@ -183,18 +183,18 @@ func int DIA_Matteo_LEATHER_Condition ()
 };
 func void DIA_Matteo_LEATHER_Info ()
 {
-	AI_Output (other, self, "DIA_Matteo_LEATHER_15_00"); //All right, give me the armor.
+	AI_Output (other, self, "DIA_Matteo_LEATHER_15_00"); //Okay, gib mir die Rüstung.
 	
 	if B_GiveInvItems (other, self, ItMi_Gold, 250)
 	{	
-		AI_Output (self, other, "DIA_Matteo_LEATHER_09_01"); //You'll love it. (grins)
+		AI_Output (self, other, "DIA_Matteo_LEATHER_09_01"); //Du wirst sie lieben. (grinst)
 
 		B_GiveInvItems 	(self, other, ItAr_Leather_L, 1);
 		Matteo_LeatherBought = TRUE;
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Matteo_LEATHER_09_02"); //The armor has its price - and it's worth it. So, come back when you have enough gold.
+		AI_Output (self, other, "DIA_Matteo_LEATHER_09_02"); //Die Rüstung hat ihren Preis - und den ist sie auch wert. Also, komm wieder, wenn du genug Gold hast.
 	};
 };
 
@@ -208,7 +208,7 @@ INSTANCE DIA_Matteo_Paladine(C_INFO)
 	condition	= DIA_Matteo_Paladine_Condition;
 	information	= DIA_MAtteo_Paladine_Info;
 	permanent	= FALSE;
-	description = "What do you know about paladins?";
+	description = "Was weißt du über Paladine?";
 };                       
 FUNC INT DIA_Matteo_Paladine_Condition()
 {	
@@ -219,13 +219,13 @@ FUNC INT DIA_Matteo_Paladine_Condition()
 };
 FUNC VOID DIA_Matteo_Paladine_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_Paladine_15_00"); //What do you know about paladins?
-	AI_Output (self, other, "DIA_Matteo_Paladine_09_01"); //Since these bastards have come to the city, I've had nothing but trouble.
-	AI_Output (self, other, "DIA_Matteo_Paladine_09_02"); //The last time I was headed for the upper end of town, the guards flat out stopped me and asked me what was my business there!
-	AI_Output (other, self, "DIA_Matteo_Paladine_15_03"); //And?
-	AI_Output (self, other, "DIA_Matteo_Paladine_09_04"); //Of course they let me in!
-	AI_Output (self, other, "DIA_Matteo_Paladine_09_05"); //I had my shop in the city when most of those pompous asses were still chasing pigs with wooden swords!
-	AI_Output (self, other, "DIA_Matteo_Paladine_09_06"); //And yesterday the bastards came and confiscated half of my goods!
+	AI_Output (other, self, "DIA_Matteo_Paladine_15_00"); //Was weißt du über Paladine?
+	AI_Output (self, other, "DIA_Matteo_Paladine_09_01"); //Seit die Kerle in der Stadt sind, hab ich nichts als Ärger!
+	AI_Output (self, other, "DIA_Matteo_Paladine_09_02"); //Als ich letztens ins obere Viertel wollte, halten mich doch glatt die Wachen auf und fragen mich, was ich da zu suchen habe!
+	AI_Output (other, self, "DIA_Matteo_Paladine_15_03"); //Und?
+	AI_Output (self, other, "DIA_Matteo_Paladine_09_04"); //Natürlich haben sie mich reingelassen!
+	AI_Output (self, other, "DIA_Matteo_Paladine_09_05"); //Ich hab meinen Laden schon in der Stadt gehabt, da haben die meisten von diesen Wichtigtuern noch mit Holzschwertern Schweine gejagt!
+	AI_Output (self, other, "DIA_Matteo_Paladine_09_06"); //Und gestern kommen die Mistkerle zu mir und beschlagnahmen die Hälfte meiner Ware!
 };
 
 // ************************************************************
@@ -238,7 +238,7 @@ INSTANCE DIA_Matteo_Confiscated(C_INFO)
 	condition	= DIA_Matteo_Confiscated_Condition;
 	information	= DIA_MAtteo_Confiscated_Info;
 	permanent	= FALSE;
-	description = "The paladins seized your goods?";
+	description = "Die Paladine haben deine Ware beschlagnahmt?";
 };                       
 FUNC INT DIA_Matteo_Confiscated_Condition()
 {	
@@ -250,10 +250,10 @@ FUNC INT DIA_Matteo_Confiscated_Condition()
 FUNC VOID DIA_Matteo_Confiscated_Info()
 {	
 
-	AI_Output (other, self, "DIA_Matteo_Confiscated_15_00"); //The paladins seized your goods?
-	AI_Output (self, other, "DIA_Matteo_Confiscated_09_01"); //Everything I had stored in the back yard.
-	AI_Output (self, other, "DIA_Matteo_Confiscated_09_02"); //They simply posted a guard in front of the entrance to the yard.
-	AI_Output (self, other, "DIA_Matteo_Confiscated_09_03"); //If I'm lucky, they won't take everything. At least they might leave the armor here.
+	AI_Output (other, self, "DIA_Matteo_Confiscated_15_00"); //Die Paladine haben deine Ware beschlagnahmt?
+	AI_Output (self, other, "DIA_Matteo_Confiscated_09_01"); //Alles, was ich bei mir im Hinterhof gelagert hatte.
+	AI_Output (self, other, "DIA_Matteo_Confiscated_09_02"); //Sie haben einfach eine Wache vorm Hofeingang platziert.
+	AI_Output (self, other, "DIA_Matteo_Confiscated_09_03"); //Wenn ich Glück habe, nehmen sie nicht alles mit. Zumindest die Rüstungen werden sie wohl da lassen.
 };
 
 // ************************************************************
@@ -266,7 +266,7 @@ INSTANCE DIA_Matteo_HelpMeToOV(C_INFO)
 	condition	= DIA_Matteo_HelpMeToOV_Condition;
 	information	= DIA_MAtteo_HelpMeToOV_Info;
 	permanent	= FALSE;
-	description = "Can you help me get into the upper quarter?";
+	description = "Kannst du mir helfen, ins obere Viertel zu kommen?";
 };                       
 FUNC INT DIA_Matteo_HelpMeToOV_Condition()
 {	
@@ -279,25 +279,25 @@ FUNC INT DIA_Matteo_HelpMeToOV_Condition()
 };
 FUNC VOID DIA_Matteo_HelpMeToOV_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_00"); //Can you help me get into the upper quarter?
-	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_01"); //(stunned) What? What are you going to do THERE?
-	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_02"); //I've got an important message...
-	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_03"); //Well, well...Have you tried getting past the guards?
+	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_00"); //Kannst du mir helfen, ins obere Viertel zu kommen?
+	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_01"); //(verblüfft) Was? Was willst du denn DA?
+	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_02"); //Ich habe eine wichtige Nachricht ...
+	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_03"); //So so ... Hast du schon versucht, an den Wachen vorbeizukommen?
 
 	if (Torwache_305.aivar[AIV_TalkedToPlayer] == TRUE)
 	{
-		AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_04"); //(bitter laugh) Oh man, forget it!
-		AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_05"); //(laughs) That's TYPICAL of those beggars!
+		AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_04"); //(lacht bitter) Oh Mann, vergiss es!
+		AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_05"); //(lacht) Das ist TYPISCH für die Penner!
 	}
 	else
 	{
-		AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_06"); //I don't see why I should even try.
-		AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_07"); //You're probably right.
+		AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_06"); //Ich glaube, den Versuch kann ich mir sparen.
+		AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_07"); //Da hast du vermutlich Recht.
 	};
 	
-	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_08"); //I don't know HOW important your message is - and it's none of my business.
-	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_09"); //But even if you told them that a ship full of orcs just anchored in the harbor, they'd send you away.
-	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_10"); //Because they have their ORDERS.
+	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_08"); //Ich weiß ja nicht WIE wichtig deine Nachricht ist - und es geht mich auch wohl nichts an.
+	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_09"); //Aber selbst, wenn du ihnen erzählen wolltest, dass im Hafen gerade ein Schiff voller Orks anlegt, würden sie dich wegschicken.
+	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_10"); //Weil sie ihre BEFEHLE haben.
 };
 
 // ************************************************************
@@ -306,11 +306,11 @@ FUNC VOID DIA_Matteo_HelpMeToOV_Info()
 
 func void B_Matteo_Preis()
 {
-	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_01"); //It seems to be really important to you.
-	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_02"); //(slyly) The question is: HOW important is it to you?
-	AI_Output (other, self, "DIA_Matteo_HelpMeNow_15_03"); //What are you getting at?
-	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_04"); //I can help you - after all, I am one of the most influential people here.
-	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_05"); //But it'll cost you.
+	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_01"); //Scheint dir ja echt wichtig zu sein.
+	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_02"); //(lauernd) Die Frage ist: WIE wichtig ist es dir?
+	AI_Output (other, self, "DIA_Matteo_HelpMeNow_15_03"); //Worauf willst du hinaus?
+	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_04"); //Ich kann dir schon helfen - immerhin bin ich einer der einflussreichsten Leute hier.
+	AI_Output (self, other, "DIA_Matteo_HelpMeNow_09_05"); //Aber das hat seinen Preis.
 };
 
 
@@ -321,7 +321,7 @@ INSTANCE DIA_Matteo_HelpMeNow(C_INFO)
 	condition	= DIA_Matteo_HelpMeNow_Condition;
 	information	= DIA_MAtteo_HelpMeNow_Info;
 	permanent	= FALSE;
-	description = "So can you help me get into the upper quarter?";
+	description = "Also, kannst du mir jetzt helfen, ins obere Viertel zu kommen?";
 };                       
 FUNC INT DIA_Matteo_HelpMeNow_Condition()
 {	
@@ -334,7 +334,7 @@ FUNC INT DIA_Matteo_HelpMeNow_Condition()
 };
 FUNC VOID DIA_Matteo_HelpMeNow_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_HelpMeNow_15_00"); //So can you help me get into the upper quarter?
+	AI_Output (other, self, "DIA_Matteo_HelpMeNow_15_00"); //Also, kannst du mir jetzt helfen, ins obere Viertel zu kommen?
 	B_Matteo_Preis();
 };
 
@@ -348,7 +348,7 @@ INSTANCE DIA_Matteo_LehrlingLater(C_INFO)
 	condition	= DIA_Matteo_LehrlingLater_Condition;
 	information	= DIA_MAtteo_LehrlingLater_Info;
 	permanent	= FALSE;
-	description = "Help me to become an apprentice to one of the masters.";
+	description = "Hilf mir, bei einem der Meister als Lehrling aufgenommen zu werden!";
 };                       
 FUNC INT DIA_Matteo_LehrlingLater_Condition()
 {	
@@ -360,7 +360,7 @@ FUNC INT DIA_Matteo_LehrlingLater_Condition()
 };
 func VOID DIA_Matteo_LehrlingLater_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_LehrlingLater_15_00"); //So can you help me get into the upper quarter?
+	AI_Output (other, self, "DIA_Matteo_LehrlingLater_15_00"); //Also, kannst du mir jetzt helfen, ins obere Viertel zu kommen?
 	B_Matteo_Preis();
 };
 	
@@ -374,7 +374,7 @@ INSTANCE DIA_Matteo_PriceOfHelp(C_INFO)
 	condition	= DIA_Matteo_PriceOfHelp_Condition;
 	information	= DIA_MAtteo_PriceOfHelp_Info;
 	permanent	= FALSE;
-	description = "What are you asking for your help?";
+	description = "Was verlangst du für deine Hilfe?";
 };                       
 FUNC INT DIA_Matteo_PriceOfHelp_Condition()
 {	
@@ -386,40 +386,40 @@ FUNC INT DIA_Matteo_PriceOfHelp_Condition()
 };
 FUNC VOID DIA_Matteo_PriceOfHelp_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_15_00"); //What are you asking for your help?
-	AI_Output (self, other, "DIA_Matteo_PriceOfHelp_09_01"); //100 gold pieces.
+	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_15_00"); //Was verlangst du für deine Hilfe?
+	AI_Output (self, other, "DIA_Matteo_PriceOfHelp_09_01"); //100 Goldstücke.
 	
 	Info_ClearChoices 	(DIA_Matteo_PriceOfHelp);
-	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "That's a whole damn lot...", DIA_Matteo_PriceOfHelp_Wow);
-	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "You shark!", DIA_Matteo_PriceOfHelp_Cutthroat);
+	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "Das ist aber eine verdammte Menge...", DIA_Matteo_PriceOfHelp_Wow);
+	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "Du Halsabschneider!", DIA_Matteo_PriceOfHelp_Cutthroat);
 };
 
 func void B_Matteo_RegDichAb()
 {
-	AI_Output (self, other, "B_Matteo_RegDichAb_09_00"); //Take it easy! It isn't YOUR gold I have in mind.
-	AI_Output (other, self, "B_Matteo_RegDichAb_15_01"); //But?
-	AI_Output (self, other, "B_Matteo_RegDichAb_09_02"); //In principle, it's MY gold.
-	AI_Output (self, other, "B_Matteo_RegDichAb_09_03"); //Gritta, the carpenter's niece, hasn't paid what she owes me in ages.
-	AI_Output (self, other, "B_Matteo_RegDichAb_09_04"); //But the little brat is constantly running around in new clothes - that means she has the money.
-	AI_Output (self, other, "B_Matteo_RegDichAb_09_05"); //I'd like to beat it out of her, but Master Thorben - the carpenter - is also a very influential man.
-	AI_Output (self, other, "B_Matteo_RegDichAb_09_06"); //Get me the money and I'll help you.
+	AI_Output (self, other, "B_Matteo_RegDichAb_09_00"); //Reg dich ab! Es ist ja nicht DEIN Gold, das ich im Sinn habe.
+	AI_Output (other, self, "B_Matteo_RegDichAb_15_01"); //Aber?
+	AI_Output (self, other, "B_Matteo_RegDichAb_09_02"); //Im Grunde ist es MEIN Gold.
+	AI_Output (self, other, "B_Matteo_RegDichAb_09_03"); //Gritta, die Nichte des Tischlers, hat seit Ewigkeiten ihre Schulden bei mir nicht bezahlt.
+	AI_Output (self, other, "B_Matteo_RegDichAb_09_04"); //Aber die kleine Göre rennt ständig in neuen Kleidern rum - das heißt, sie hat das Geld.
+	AI_Output (self, other, "B_Matteo_RegDichAb_09_05"); //Ich würde es ja aus ihr rausprügeln, aber Meister Thorben - der Tischler - ist auch ein sehr einflussreicher Mann.
+	AI_Output (self, other, "B_Matteo_RegDichAb_09_06"); //Beschaff mir das Geld und ich werde dir helfen.
 	
 	MIS_Matteo_Gold = LOG_RUNNING;
 	Log_CreateTopic (Topic_Matteo,LOG_MISSION);
 	Log_SetTopicStatus	(Topic_Matteo,LOG_RUNNING);
-	B_LogEntry (Topic_Matteo,"Carpenter Thorben's niece Gritta owes Matteo 100 pieces of gold. If I get them back for him, he'll help me to get into the upper quarter.");
+	B_LogEntry (Topic_Matteo,"Gritta, die Nichte des Tischlers Thorben, hat schuldet Matteo 100 Goldstücke. Wenn ich sie ihm wiederbeschaffe, hilft er mir, in's obere Veirtel zu kommen.");
 };
 
 func void DIA_Matteo_PriceOfHelp_Cutthroat()
 {
-	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_Cutthroat_15_00"); //You shark!
+	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_Cutthroat_15_00"); //Du Halsabschneider!
 	B_Matteo_RegDichAb();
 	Info_ClearChoices 	(DIA_Matteo_PriceOfHelp);
 };
 
 func void DIA_Matteo_PriceOfHelp_Wow()
 {
-	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_Wow_15_00"); //That's a whole damn lot...
+	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_Wow_15_00"); //Das ist aber eine verdammte Menge...
 	B_Matteo_RegDichAb();
 	Info_ClearChoices 	(DIA_Matteo_PriceOfHelp);
 };
@@ -434,7 +434,7 @@ INSTANCE DIA_Matteo_WoGritta(C_INFO)
 	condition	= DIA_Matteo_WoGritta_Condition;
 	information	= DIA_MAtteo_WoGritta_Info;
 	permanent	= FALSE;
-	description = "Where can I find this Gritta?";
+	description = "Wo finde ich diese Gritta?";
 };                       
 FUNC INT DIA_Matteo_WoGritta_Condition()
 {	
@@ -446,8 +446,8 @@ FUNC INT DIA_Matteo_WoGritta_Condition()
 };
 FUNC VOID DIA_Matteo_WoGritta_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_WoGritta_15_00"); //Where can I find this Gritta?
-	AI_Output (self, other, "DIA_Matteo_WoGritta_09_01"); //Like I said - she's the carpenter's niece - his house is down the street, the last house on the right before the smithy.
+	AI_Output (other, self, "DIA_Matteo_WoGritta_15_00"); //Wo finde ich diese Gritta?
+	AI_Output (self, other, "DIA_Matteo_WoGritta_09_01"); //Wie gesagt - sie ist die Nichte des Tischlers - sein Haus ist die Straße runter, das letzte Haus rechts vorm Schmied.
 };
 
 // ************************************************************
@@ -460,7 +460,7 @@ INSTANCE DIA_Matteo_GoldRunning(C_INFO)
 	condition	= DIA_Matteo_GoldRunning_Condition;
 	information	= DIA_MAtteo_GoldRunning_Info;
 	permanent	= TRUE;
-	description = "Here's your 100 gold pieces!";
+	description = "Hier hast du deine 100 Goldstücke!";
 };                       
 FUNC INT DIA_Matteo_GoldRunning_Condition()
 {	
@@ -472,14 +472,14 @@ FUNC INT DIA_Matteo_GoldRunning_Condition()
 };
 FUNC VOID DIA_Matteo_GoldRunning_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_GoldRunning_15_00"); //Here's your 100 gold pieces!
+	AI_Output (other, self, "DIA_Matteo_GoldRunning_15_00"); //Hier hast du deine 100 Goldstücke!
 	
 	//EXIT IF...
 	
 	if (Npc_IsDead(Gritta))
 	{
-		AI_Output (self, other, "DIA_Matteo_GoldRunning_09_01"); //That gold has Gritta's blood on it! I didn't say anything about you killing her!
-		AI_Output (self, other, "DIA_Matteo_GoldRunning_09_02"); //I don't want anything to do with this business. You can forget our deal! And never speak to me about it again!
+		AI_Output (self, other, "DIA_Matteo_GoldRunning_09_01"); //An dem Gold klebt Grittas Blut! Ich habe nichts davon gesagt, dass du sie umbringen sollst!
+		AI_Output (self, other, "DIA_Matteo_GoldRunning_09_02"); //Ich will nichts mit der Sache zu tun haben. Unsere Abmachung kannst du vergessen! Und sprich mich ja nie wieder darauf an!
 		MIS_Matteo_Gold = LOG_FAILED;
 		B_CheckLog();
 		AI_StopProcessInfos	(self);
@@ -492,15 +492,15 @@ FUNC VOID DIA_Matteo_GoldRunning_Info()
 	{
 		if (Npc_HasItems(Gritta, itmi_gold) < 100)
 		{
-			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_03"); //And? Did she cause any problems?
-			AI_Output (other, self, "DIA_Matteo_GoldRunning_15_04"); //None to speak of.
-			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_05"); //Good! You've held up your part of the deal.
+			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_03"); //Und? Hat sie Probleme gemacht?
+			AI_Output (other, self, "DIA_Matteo_GoldRunning_15_04"); //Keine nennenswerten.
+			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_05"); //Gut! Damit hast du deinen Teil der Abmachung gehalten.
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_06"); //You want to pay for her? Hm - I'd have preferred it if you'd squeezed it out of her!
-			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_07"); //Still - 100 gold pieces is 100 gold pieces.
-			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_08"); //You've held up your part of the deal.
+			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_06"); //Du willst also für sie bezahlen? Hm - lieber wär mir gewesen, du hättest es aus ihr rausgequetscht!
+			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_07"); //Wie auch immer - 100 Goldstücke sind 100 Goldstücke.
+			AI_Output (self, other, "DIA_Matteo_GoldRunning_09_08"); //Damit hast du deinen Teil der Abmachung gehalten.
 		};
 		
 		MIS_Matteo_Gold = LOG_SUCCESS;
@@ -508,7 +508,7 @@ FUNC VOID DIA_Matteo_GoldRunning_Info()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Matteo_GoldRunning_09_09"); //Counting isn't your strong suit, is it? You don't have 100 gold pieces.
+		AI_Output (self, other, "DIA_Matteo_GoldRunning_09_09"); //Zählen ist nicht deine Stärke, was? Du hast keine 100 Goldstücke.
 	};
 };
 
@@ -523,7 +523,7 @@ instance DIA_Matteo_Zustimmung(C_INFO)
 	condition	= DIA_Matteo_Zustimmung_Condition;
 	information	= DIA_MAtteo_Zustimmung_Info;
 	permanent	= TRUE;
-	description = "Help me to become an apprentice to one of the masters.";
+	description = "Hilf mir, bei einem der Meister als Lehrling aufgenommen zu werden!";
 };          
 var int   DIA_Matteo_Zustimmung_perm;          
 FUNC INT DIA_Matteo_Zustimmung_Condition()
@@ -538,20 +538,20 @@ FUNC INT DIA_Matteo_Zustimmung_Condition()
 };
 FUNC VOID DIA_Matteo_Zustimmung_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_Zustimmung_15_00"); //Help me sign on as an apprentice with one of the masters!
+	AI_Output (other, self, "DIA_Matteo_Zustimmung_15_00"); //Hilf mir, bei einem der Meister als Lehrling aufgenommen zu werden!
 	
 	if (MIS_Matteo_Gold == LOG_SUCCESS)
 	{
-		AI_Output (self, other, "DIA_Matteo_Zustimmung_09_01"); //Don't worry. I'll keep my part of the bargain.
-		AI_Output (self, other, "DIA_Matteo_Zustimmung_09_02"); //The other masters will only hear the best about you from me.
+		AI_Output (self, other, "DIA_Matteo_Zustimmung_09_01"); //Mach dir keine Sorgen. Ich werde mich an meinen Teil der Abmachung halten.
+		AI_Output (self, other, "DIA_Matteo_Zustimmung_09_02"); //Die anderen Meister werden von mir nur das Beste über dich zu hören bekommen.
 		
 		B_GivePlayerXP (XP_Zustimmung);
-		B_LogEntry (Topic_Lehrling,"Matteo will give his approval if I want to start as an apprentice somewhere.");
+		B_LogEntry (Topic_Lehrling,"Matteo gibt mir seine Zustimmung, wenn ich irgendwo als Lehrling anfangen will.");
 		DIA_Matteo_Zustimmung_perm = TRUE;
 	}
 	else //LOG_RUNNING
 	{
-		AI_Output (self, other, "DIA_Matteo_Zustimmung_09_03"); //One thing at a time. First fulfill your part of the deal and bring me the gold!
+		AI_Output (self, other, "DIA_Matteo_Zustimmung_09_03"); //Eins nach dem anderen. Erfülle du erst mal deinen Teil der Abmachung und bring mir das Gold!
 	};
 };
 
@@ -565,7 +565,7 @@ INSTANCE DIA_Matteo_HowCanYouHelp (C_INFO)
 	condition	= DIA_Matteo_HowCanYouHelp_Condition;
 	information	= DIA_MAtteo_HowCanYouHelp_Info;
 	permanent	= FALSE;
-	description = "How EXACTLY can you help me?";
+	description = "Wie GENAU kannst du mir helfen?";
 };                       
 FUNC INT DIA_Matteo_HowCanYouHelp_Condition()
 {	
@@ -578,16 +578,16 @@ FUNC INT DIA_Matteo_HowCanYouHelp_Condition()
 };
 FUNC VOID DIA_Matteo_HowCanYouHelp_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_HowCanYouHelp_15_00"); //How EXACTLY can you help me?
-	AI_Output (self, other, "DIA_Matteo_HowCanYouHelp_09_01"); //Quite simple. I'll use my influence to see to it that one of the master craftsmen here takes you on as an apprentice.
+	AI_Output (other, self, "DIA_Matteo_HowCanYouHelp_15_00"); //Wie GENAU kannst du mir helfen?
+	AI_Output (self, other, "DIA_Matteo_HowCanYouHelp_09_01"); //Ganz einfach. Ich werde meinen Einfluss dafür einsetzen, dass du bei einem der Handwerksmeister hier als Lehrling aufgenommen wirst.
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output (self, other, "DIA_Matteo_HowCanYouHelp_09_02"); //As such, you'll practically be a citizen of the city and can enter the upper quarter. Besides which, you'll earn something while you're at it.
+		AI_Output (self, other, "DIA_Matteo_HowCanYouHelp_09_02"); //Als solcher bist du praktisch Bürger der Stadt und kommst ins obere Viertel. Außerdem verdienst du noch was dabei.
 	};
 	
 	Log_CreateTopic(TOPIC_Lehrling,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Lehrling,LOG_RUNNING);
-	B_LogEntry (TOPIC_Lehrling,"Matteo can help me to be accepted as an apprentice by one of the master craftsmen.");
+	B_LogEntry (TOPIC_Lehrling,"Matteo kann sich dafür einsetzen, das ich bei einem Handwerksmeister als Lehrling aufgenommen werde.");
 };	
 
 // ************************************************************
@@ -600,7 +600,7 @@ INSTANCE DIA_Matteo_WoAlsLehrling (C_INFO)
 	condition	= DIA_Matteo_WoAlsLehrling_Condition;
 	information	= DIA_MAtteo_WoAlsLehrling_Info;
 	permanent	= FALSE;
-	description = "Where could I sign on as an apprentice, then?";
+	description = "Bei wem könnte ich denn als Lehrling anfangen?";
 };                       
 FUNC INT DIA_Matteo_WoAlsLehrling_Condition()
 {	
@@ -612,16 +612,16 @@ FUNC INT DIA_Matteo_WoAlsLehrling_Condition()
 };
 FUNC VOID DIA_Matteo_WoAlsLehrling_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_WoAlsLehrling_15_00"); //Where could I sign on as an apprentice, then?
-	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_01"); //Basically, with any master here on the main street.
-	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_02"); //That would be Harad the smith, Bosper the bowyer, Thorben the carpenter or Constantino the alchemist.
-	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_03"); //One of them is bound to take you on.
-	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_04"); //But it's important that the other masters agree. That's always been the custom here in Khorinis.
+	AI_Output (other, self, "DIA_Matteo_WoAlsLehrling_15_00"); //Bei wem könnte ich denn als Lehrling anfangen?
+	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_01"); //Im Grunde bei jedem der Meister hier an der Hauptstraße.
+	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_02"); //Da wäre Harad, der Schmied, Bosper, der Bogner, Thorben, der Tischler oder Constantino, der Alchemist.
+	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_03"); //Irgendwer wird dich schon nehmen.
+	AI_Output (self, other, "DIA_Matteo_WoAlsLehrling_09_04"); //Aber es ist wichtig, dass die anderen Meister zustimmen. Das ist seit jeher Brauch hier in Khorinis.
 	
 	Log_CreateTopic (Topic_Lehrling,LOG_MISSION);
 	Log_SetTopicStatus (Topic_Lehrling,LOG_RUNNING);
-	B_LogEntry (Topic_Lehrling,"I could start work as an apprentice for Bosper the bowmaker, Harad the smith, Thorben the carpenter or Constantino the alchemist.");
-	B_LogEntry (Topic_Lehrling,"Before I can become an apprentice, I have to get the approval of the other masters.");
+	B_LogEntry (Topic_Lehrling,"Als Lehrling könnte ich anfangen, bei: Bosper dem Bogner, Harad dem Schmied, Thorben dem Tischler oder Constantino dem Alchemisten.");
+	B_LogEntry (Topic_Lehrling,"Um als Lehrling aufgenommen zu werden, brauche ich auch die Zustimmung der anderen Meister.");
 };
 // ************************************************************
 // 			  				WieZustimmung 			E6
@@ -633,7 +633,7 @@ INSTANCE DIA_Matteo_WieZustimmung (C_INFO)
 	condition	= DIA_Matteo_WieZustimmung_Condition;
 	information	= DIA_MAtteo_WieZustimmung_Info;
 	permanent	= FALSE;
-	description = "How do I get the approval of the other masters?";
+	description = "Wie bekomme ich die Zustimmung der anderen Meister?";
 };                       
 FUNC INT DIA_Matteo_WieZustimmung_Condition()
 {	
@@ -645,11 +645,11 @@ FUNC INT DIA_Matteo_WieZustimmung_Condition()
 };
 FUNC VOID DIA_Matteo_WieZustimmung_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_WieZustimmung_15_00"); //How do I get the approval of the other masters?
-	AI_Output (self, other, "DIA_Matteo_WieZustimmung_09_01"); //You just have to convince them. Go and talk to them.
-	AI_Output (self, other, "DIA_Matteo_WieZustimmung_09_02"); //But if more than one of them is against you, you don't stand a chance! So behave yourself!
+	AI_Output (other, self, "DIA_Matteo_WieZustimmung_15_00"); //Wie bekomme ich die Zustimmung der anderen Meister?
+	AI_Output (self, other, "DIA_Matteo_WieZustimmung_09_01"); //Du musst sie einfach von dir überzeugen. Geh hin und rede mit ihnen.
+	AI_Output (self, other, "DIA_Matteo_WieZustimmung_09_02"); //Aber wenn mehr als einer von ihnen gegen dich ist, hast du keine Chance! Also benimm dich!
 	
-	B_LogEntry (Topic_Lehrling,"I can only get the masters' approval if I can prove myself to them.");
+	B_LogEntry (Topic_Lehrling,"Um die Zustimmung der anderen Meister zu bekommen, muss ich sie von mir überzeugen.");
 };	
 
 // ************************************************************
@@ -662,7 +662,7 @@ INSTANCE DIA_Matteo_WarumNichtBeiDir (C_INFO)
 	condition	= DIA_Matteo_WarumNichtBeiDir_Condition;
 	information	= DIA_MAtteo_WarumNichtBeiDir_Info;
 	permanent	= FALSE;
-	description = "Why don't YOU take me on as an apprentice?";
+	description = "Warum nimmst DU mich nicht als Lehrling auf?";
 };                       
 FUNC INT DIA_Matteo_WarumNichtBeiDir_Condition()
 {	
@@ -674,13 +674,13 @@ FUNC INT DIA_Matteo_WarumNichtBeiDir_Condition()
 };
 FUNC VOID DIA_Matteo_WarumNichtBeiDir_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_WarumNichtBeiDir_15_00"); //Why don't YOU take me on as an apprentice?
-	AI_Output (self, other, "DIA_Matteo_WarumNichtBeiDir_09_01"); //I would - but the other masters wouldn't agree.
-	AI_Output (self, other, "DIA_Matteo_WarumNichtBeiDir_09_02"); //I just recently took on another apprentice.
+	AI_Output (other, self, "DIA_Matteo_WarumNichtBeiDir_15_00"); //Warum nimmst DU mich nicht als Lehrling auf?
+	AI_Output (self, other, "DIA_Matteo_WarumNichtBeiDir_09_01"); //Würde ich - aber die anderen Meister würden nicht zustimmen.
+	AI_Output (self, other, "DIA_Matteo_WarumNichtBeiDir_09_02"); //Ich habe nämlich erst kürzlich einen anderen Lehrling aufgenommen.
 };	
 
 // ************************************************************
-// 			  				Andere M�glichkeie 			E5
+// 			  				Andere Mglichkeie 			E5
 // ************************************************************
 INSTANCE DIA_Matteo_OtherWay (C_INFO)
 {
@@ -689,7 +689,7 @@ INSTANCE DIA_Matteo_OtherWay (C_INFO)
 	condition	= DIA_Matteo_OtherWay_Condition;
 	information	= DIA_MAtteo_OtherWay_Info;
 	permanent	= FALSE;
-	description = "Is there another way to get into the upper quarter?";
+	description = "Gibt es noch einen anderen Weg, ins obere Viertel zu kommen?";
 };                       
 FUNC INT DIA_Matteo_OtherWay_Condition()
 {	
@@ -703,8 +703,8 @@ FUNC INT DIA_Matteo_OtherWay_Condition()
 };
 FUNC VOID DIA_Matteo_OtherWay_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_OtherWay_15_00"); //Is there another way to get into the upper quarter?
-	AI_Output (self, other, "DIA_Matteo_OtherWay_09_01"); //Perhaps... if I think of anything, I'll let you know.
+	AI_Output (other, self, "DIA_Matteo_OtherWay_15_00"); //Gibt es noch einen anderen Weg, ins obere Viertel zu kommen?
+	AI_Output (self, other, "DIA_Matteo_OtherWay_09_01"); //Vielleicht ... Wenn mir was einfällt, lasse ich es dich wissen.
 };	
 
 // ************************************************************
@@ -717,7 +717,7 @@ INSTANCE DIA_Matteo_Minenanteil (C_INFO)
 	condition	= DIA_Matteo_Minenanteil_Condition;
 	information	= DIA_MAtteo_Minenanteil_Info;
 
-	description = "You've got some mining shares among your wares.";
+	description = "Du hast Minenanteile in deinem Sortiment.";
 };   
                     
 FUNC INT DIA_Matteo_Minenanteil_Condition()
@@ -732,8 +732,8 @@ FUNC INT DIA_Matteo_Minenanteil_Condition()
 
 FUNC VOID DIA_Matteo_Minenanteil_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_Minenanteil_15_00"); //You've got some mining shares among your wares. Who sold them to you?
-	AI_Output (self, other, "DIA_Matteo_Minenanteil_09_01"); //(nervously) Mining shares? Oops. Where did they come from? No idea where I got them. Honestly, your honor.
+	AI_Output (other, self, "DIA_Matteo_Minenanteil_15_00"); //Du hast Minenanteile in deinem Sortiment. Wer hat sie dir verkauft?
+	AI_Output (self, other, "DIA_Matteo_Minenanteil_09_01"); //(nervös) Minenanteile? Ups. Wo kommen die denn her? Keine Ahnung, wie ich daran gekommen bin. Ehrlich nicht, Ehrwürdiger.
 	B_GivePlayerXP (XP_Ambient);
 };	
 

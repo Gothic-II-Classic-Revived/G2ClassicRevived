@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_SwampDrone(C_Npc)			
 {
 	//----- Monster -----
-	name							= "Swampgas Drone";
+	name							= "Sumpfgasdrone";
 	guild							= GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= ID_SWAMPDRONE;
 

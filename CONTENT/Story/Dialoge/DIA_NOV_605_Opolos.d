@@ -58,7 +58,7 @@ INSTANCE DIA_Opolos_Wurst(C_INFO)
 	condition	= DIA_Opolos_Wurst_Condition;
 	information	= DIA_Opolos_Wurst_Info;
 	permanent	= FALSE;
-	description = "I've got this mutton sausage here...";
+	description = "Ich hab hier diese Schafswurst...";
 };                       
 
 FUNC INT DIA_Opolos_Wurst_Condition()
@@ -98,7 +98,7 @@ INSTANCE DIA_Opolos_HowLong   (C_INFO)
 	condition   = DIA_Opolos_HowLong_Condition;
 	information = DIA_Opolos_HowLong_Info;
 	permanent   = FALSE;
-	description	= "How long have you been in the monastery?";
+	description	= "Wie lange bist du schon im Kloster?";
 };
 FUNC INT DIA_Opolos_HowLong_Condition()
 {
@@ -118,7 +118,7 @@ FUNC VOID DIA_Opolos_HowLong_Info()
 	MIS_HelpOpolos = LOG_RUNNING;
 	Log_CreateTopic (Topic_OpolosStudy,LOG_MISSION);
 	Log_SetTopicStatus (Topic_OpolosStudy,LOG_RUNNING);
-	B_LogEntry (Topic_OpolosStudy,"Opolos guards the sheep. He'd like to study the writings in the library.");
+	B_LogEntry (Topic_OpolosStudy,"Opolos hütet die Schafe. Er würde gerne die Shcriften in der Bibliothek studieren.");
 };
 //*********************************************************************
 //		Auf was muss ich hier im Kloster achten?
@@ -130,7 +130,7 @@ INSTANCE DIA_Opolos_Monastery   (C_INFO)
 	condition   = DIA_Opolos_Monastery_Condition;
 	information = DIA_Opolos_Monastery_Info;
 	permanent   = FALSE;
-	description	= "How shall I act here in the monastery?";
+	description	= "Auf was muss ich hier im Kloster achten?";
 };
 FUNC INT DIA_Opolos_Monastery_Condition()
 {	
@@ -157,7 +157,7 @@ INSTANCE DIA_Opolos_beibringen   (C_INFO)
 	condition   = DIA_Opolos_beibringen_Condition;
 	information = DIA_Opolos_beibringen_Info;
 	permanent   = FALSE;
-	description	= "Can you teach me something?";
+	description	= "Kannst du mir was beibringen?";
 };
 FUNC INT DIA_Opolos_beibringen_Condition()
 {	
@@ -179,7 +179,7 @@ FUNC VOID DIA_Opolos_beibringen_Info()
 	
 	Log_CreateTopic (Topic_OpolosRezept,LOG_MISSION);
 	Log_SetTopicStatus(Topic_OpolosRezept,LOG_RUNNING);
-	B_LogEntry (Topic_OpolosRezept,"Opolos wants to take a quick look at a recipe for brewing mana potions. Working for Neoras, I might be able to borrow it.");
+	B_LogEntry (Topic_OpolosRezept,"Opolos will einen kurzen Blick auf ein Rezept zur Herstellung von Manatränken werfen. Wenn ich für Neoars arbeite, kann ich mir das vielleicht ausleihen.");
 };
 //*********************************************************************
 // rezept
@@ -191,7 +191,7 @@ INSTANCE DIA_Opolos_rezept   (C_INFO)
 	condition   = DIA_Opolos_rezept_Condition;
 	information = DIA_Opolos_rezept_Info;
 	permanent   = TRUE;
-	description	= "About the recipe...";
+	description	= "Wegen des Rezepts...";
 };
 //-----------------------------------
 var int DIA_Opolos_rezept_permanent;
@@ -223,7 +223,7 @@ FUNC VOID DIA_Opolos_rezept_Info()
 		B_GivePlayerXP (XP_Ambient);
 		
 		Log_CreateTopic (Topic_KlosterTeacher,LOG_NOTE);
-		B_LogEntry (Topic_KlosterTeacher,"Opolos can help me to become stronger.");
+		B_LogEntry (Topic_KlosterTeacher,"Opolos kann mir dabei helfen, stärker zu werden.");
 
 	}
 	else if (MIS_NEORASRezept == LOG_SUCCESS)
@@ -237,7 +237,7 @@ FUNC VOID DIA_Opolos_rezept_Info()
 		Opolos_TeachSTR = TRUE;
 		
 		Log_CreateTopic (Topic_KlosterTeacher,LOG_NOTE);
-		B_LogEntry (Topic_KlosterTeacher,"Opolos can help me to become stronger.");
+		B_LogEntry (Topic_KlosterTeacher,"Opolos kann mir dabei helfen, stärker zu werden.");
 	}
 	else 
 	{
@@ -254,7 +254,7 @@ instance DIA_Opolos_TEACH_STR		(C_INFO)
 	condition	 = 	DIA_Opolos_TEACH_STR_Condition;
 	information	 = 	DIA_Opolos_TEACH_STR_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"I want to get stronger.";
+	description	 = 	"Ich will stärker werden.";
 };
 func int DIA_Opolos_TEACH_STR_Condition ()
 {	
@@ -311,7 +311,7 @@ INSTANCE DIA_Opolos_Agon   (C_INFO)
 	condition   = DIA_Opolos_Agon_Condition;
 	information = DIA_Opolos_Agon_Info;
 	permanent   = FALSE;
-	description	= "Who are Agon and Babo?";
+	description	= "Wer sind Agon und Babo?";
 };
 FUNC INT DIA_Opolos_Agon_Condition()
 {
@@ -340,7 +340,7 @@ instance DIA_Opolos_LIESEL		(C_INFO)
 	condition	 = 	DIA_Opolos_LIESEL_Condition;
 	information	 = 	DIA_Opolos_LIESEL_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Look here, I brought Betsy.";
+	description	 = 	"Ich habe die Liesel mitgebracht";
 };
 func int DIA_Opolos_LIESEL_Condition ()
 {	
@@ -388,7 +388,7 @@ INSTANCE DIA_Opolos_Biblothek   (C_INFO)
 	condition   = DIA_Opolos_Biblothek_Condition;
 	information = DIA_Opolos_Biblothek_Info;
 	permanent   = TRUE;
-	description	= "About the library...";
+	description	= "Wegen der Bibliothek...";
 };
 FUNC INT DIA_Opolos_Biblothek_Condition()
 {
@@ -417,7 +417,7 @@ FUNC VOID DIA_Opolos_Biblothek_Info()
 	AI_StopProcessInfos (self);
 };
 //*********************************************************************
-//		Sc hat Opolos das Studieren erm�glicht (Kap. 2)
+//		Sc hat Opolos das Studieren ermglicht (Kap. 2)
 //*********************************************************************
 INSTANCE DIA_Opolos_HelloAgain   (C_INFO)
 {
@@ -456,7 +456,7 @@ INSTANCE DIA_Opolos_HowIsIt   (C_INFO)
 	condition   = DIA_Opolos_HowIsIt_Condition;
 	information = DIA_Opolos_HowIsIt_Info;
 	permanent   = TRUE;
-	description	= "How's it going?";
+	description	= "Wie läuft's denn so?";
 };
 FUNC INT DIA_Opolos_HowIsIt_Condition()
 {
@@ -547,7 +547,7 @@ INSTANCE DIA_Opolos_Kap3_PERM   (C_INFO)
 	condition   = DIA_Opolos_Kap3_PERM_Condition;
 	information = DIA_Opolos_Kap3_PERM_Info;
 	permanent   = TRUE;
-	description = "How are the sheep?";
+	description = "Was machen die Schafe?";
 };
 FUNC INT DIA_Opolos_Kap3_PERM_Condition()
 {
@@ -565,12 +565,12 @@ FUNC VOID DIA_Opolos_Kap3_PERM_Info()
 
 	Info_ClearChoices (DIA_Opolos_Kap3_PERM);
 	Info_AddChoice (DIA_Opolos_Kap3_PERM,DIALOG_BACK,DIA_Opolos_Kap3_PERM_BACK);
-	Info_AddChoice (DIA_Opolos_Kap3_PERM,"There are dragons in the Valley of Mines.",DIA_Opolos_Kap3_PERM_DRAGONS);
-	Info_AddChoice (DIA_Opolos_Kap3_PERM,"Strangers in black robes roam the countryside.",DIA_Opolos_Kap3_PERM_DMT);
+	Info_AddChoice (DIA_Opolos_Kap3_PERM,"Im Minental gibt es Drachen.",DIA_Opolos_Kap3_PERM_DRAGONS);
+	Info_AddChoice (DIA_Opolos_Kap3_PERM,"Fremde in schwarzen Gewändern durchwandern das Land.",DIA_Opolos_Kap3_PERM_DMT);
 	
 	if (MIS_NOVIZENCHASE == LOG_RUNNING)
 	{
-		Info_AddChoice (DIA_Opolos_Kap3_PERM,"Pedro betrayed us.",DIA_Opolos_Kap3_PERM_PEDRO);
+		Info_AddChoice (DIA_Opolos_Kap3_PERM,"Pedro hat uns verraten.",DIA_Opolos_Kap3_PERM_PEDRO);
 	};
 };
 

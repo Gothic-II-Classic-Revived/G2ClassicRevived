@@ -12,7 +12,7 @@ CONST int BookXP1000	= 1000;
 const int LPMultiplier	= 1000;
 const int XPMultiplier	= 5;
 //---------------------------------------------------------------------------------------------------------------------------
-//		USEFUNC wird von allen LP Büchern benutzt 
+//		USEFUNC wird von allen LP Bchern benutzt 
 //---------------------------------------------------------------------------------------------------------------------------
 FUNC VOID UseLPBook(var int constanze)
 	{
@@ -32,7 +32,7 @@ FUNC VOID UseLPBook(var int constanze)
 		};
 	};
 //---------------------------------------------------------------------------------------------------------------------------
-//		USEFUNC wird von allen XP Büchern benutzt 
+//		USEFUNC wird von allen XP Bchern benutzt 
 //---------------------------------------------------------------------------------------------------------------------------
 FUNC VOID UseXPBook(var int constanze)
 	{
@@ -59,11 +59,11 @@ FUNC VOID UseXPBook(var int constanze)
 	
 */
 //---------------------------------------------------------------------------------------------------------------------------
-//				Xpunktbücher
+//				Xpunktbcher
 //---------------------------------------------------------------------------------------------------------------------------
 PROTOTYPE ItWr_Addon_XPBook (C_ITEM)
 {
-	name 					=	"Collected experiences";
+	name 					=	"Gesammelte Erfahrungen";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	ITEM_MISSION;
@@ -118,11 +118,11 @@ FUNC VOID UseBookXP1000()
 	UseXPBook(BookXP1000);
 };
 //---------------------------------------------------------------------------------------------------------------------------
-//				Lernpunktbücher
+//				Lernpunktbcher
 //---------------------------------------------------------------------------------------------------------------------------
 PROTOTYPE ItWr_Addon_LPBook (C_ITEM)
 {
-	name 					=	"Book of Knowledge";
+	name 					=	"Buch des Wissens";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	ITEM_MISSION;

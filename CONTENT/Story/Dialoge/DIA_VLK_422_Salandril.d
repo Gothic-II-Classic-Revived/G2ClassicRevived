@@ -34,7 +34,7 @@ INSTANCE DIA_Salandril_PICKPOCKET (C_INFO)
 	condition	= DIA_Salandril_PICKPOCKET_Condition;
 	information	= DIA_Salandril_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(It would be easy to steal his key)";
+	description = "(Es wäre einfach seinen Schlüssel zu stehlen)";
 };
 //----------------------------------------                       
 var int DIA_Salandril_PICKPOCKET_perm;
@@ -103,11 +103,11 @@ func int DIA_Salandril_Hallo_Condition ()
 };
 func void DIA_Salandril_Hallo_Info ()
 {
-	AI_Output (self, other, "DIA_Salandril_PERM_13_00"); //Welcome, traveler. Looking for a fine potion?
-	AI_Output (self, other, "DIA_Salandril_PERM_13_01"); //I have a large selection and reasonable prices. And my potions are much better than the stuff that Zuris sells.
+	AI_Output (self, other, "DIA_Salandril_PERM_13_00"); //Willkommen, Reisender. Suchst einen guten Trank?
+	AI_Output (self, other, "DIA_Salandril_PERM_13_01"); //Mein Angebot ist groß und meine Ware günstig. Und ich verkaufe weitaus bessere Tränke als dieser Zuris.
 	
 	Log_CreateTopic (TOPIC_CityTrader, LOG_NOTE);
-	B_LogEntry (TOPIC_CityTrader, "Salandril sells potions. His shop is in the upper quarter."); 
+	B_LogEntry (TOPIC_CityTrader, "Salandril handelt mit Tränken. Er hat seinen Laden im oberen Viertel."); 
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Trank
@@ -132,8 +132,8 @@ func int DIA_Salandril_Trank_Condition ()
 };
 func void DIA_Salandril_Trank_Info ()
 {
-	AI_Output (self, other, "DIA_Salandril_Trank_13_00"); //I've heard you were with the paladins in the Valley of Mines. I'm impressed.
-	AI_Output (self, other, "DIA_Salandril_Trank_13_01"); //You should take your time and browse my goods. Right now, I have a very special potion to offer.
+	AI_Output (self, other, "DIA_Salandril_Trank_13_00"); //Wie ich hörte, warst du bei den Paladinen im Minental. Ich bin beeindruckt.
+	AI_Output (self, other, "DIA_Salandril_Trank_13_01"); //Du solltest dir Zeit nehmen und meine Ware begutachten, ich habe gerade einen ganz besonderen Trank auf Lager.
 	
 	CreateInvItems (self,ITPO_REVIVED_BOOST_DEX_03,1);
 };
@@ -147,7 +147,7 @@ instance DIA_Salandril_Trade		(C_INFO)
 	condition	 = 	DIA_Salandril_Trade_Condition;
 	information	 = 	DIA_Salandril_Trade_Info;
 	permanent	 = 	TRUE;
-	description	 =  "Show me your wares.";
+	description	 =  "Zeig mir deine Ware.";
 	trade		 =  TRUE;
 };
 
@@ -161,11 +161,11 @@ func int DIA_Salandril_Trade_Condition ()
 func void DIA_Salandril_Trade_Info ()
 {
 	B_GiveTradeInv (self);
-	AI_Output (other, self, "DIA_Salandril_Trade_15_00"); //Show me your wares.
+	AI_Output (other, self, "DIA_Salandril_Trade_15_00"); //Zeig mir deine Ware.
 	
 	if (other.guild == GIL_KDF)
 	{
-		AI_Output (self, other, "DIA_Salandril_Trade_13_01"); //It's my pleasure, reverend brother.
+		AI_Output (self, other, "DIA_Salandril_Trade_13_01"); //Es ist mir eine Freude, Ehrwürdiger.
 		if (MIS_Serpentes_MinenAnteil_KDF == LOG_RUNNING)
 		{
 			SC_KnowsProspektorSalandril = TRUE;
@@ -173,7 +173,7 @@ func void DIA_Salandril_Trade_Info ()
 	};
 	if (other.guild == GIL_PAL)
 	{
-		AI_Output (self, other, "DIA_Salandril_Trade_13_02"); //It's my pleasure, noble warrior.
+		AI_Output (self, other, "DIA_Salandril_Trade_13_02"); //Es ist mir eine Ehre, edler Streiter.
 	};
 };
 
@@ -222,7 +222,7 @@ instance DIA_Salandril_KLOSTER		(C_INFO)
 	condition	 = 	DIA_Salandril_KLOSTER_Condition;
 	information	 = 	DIA_Salandril_KLOSTER_Info;
 
-	description	 = 	"You go to the monastery now to be judged.";
+	description	 = 	"Du gehst jetzt ins Kloster und lässt dich verurteilen.";
 };
 
 func int DIA_Salandril_KLOSTER_Condition ()
@@ -235,19 +235,19 @@ func int DIA_Salandril_KLOSTER_Condition ()
 
 func void DIA_Salandril_KLOSTER_Info ()
 {
-	AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_00"); //You go to the monastery now to be judged.
-	AI_Output			(self, other, "DIA_Salandril_KLOSTER_13_01"); //What? Have you gone off your rocker? Like hell I will. Those miserable magicians don't have the slightest proof against me.
+	AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_00"); //Du gehst jetzt ins Kloster und lässt dich verurteilen.
+	AI_Output			(self, other, "DIA_Salandril_KLOSTER_13_01"); //Was? Du bist ja wohl nicht mehr ganz frisch. Einen Dreck werde ich. Diese miesen Magier haben doch gar nichts gegen mich in der Hand.
 
 	if (hero.guild == GIL_KDF)
 	&& (SC_KnowsProspektorSalandril == TRUE)		
 	{
-		AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_02"); //And what about those fake ore mining shares you've huckstered all over the country? They bear your signature. You're guilty.
+		AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_02"); //Und was ist mit diesen gefälschten Erzminenanteilen, die du überall im Land verschachert hast? Es ist deine Unterschrift darauf. Du bist schuldig.
 	}
 	else
 	{
-		AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_03"); //I have my orders, and I'm going to carry them out. So either you go now, or I'll make you.
+		AI_Output			(other, self, "DIA_Salandril_KLOSTER_15_03"); //Ich habe einen Auftrag und den werde ich ausführen. Also, du gehst jetzt oder ich mach dir Beine.
 	};
-	AI_Output			(self, other, "DIA_Salandril_KLOSTER_13_04"); //What? I'll drag you through town by your collar like a filthy rag.
+	AI_Output			(self, other, "DIA_Salandril_KLOSTER_13_04"); //Was? Ich werde dich das Viertel herunter schleifen wie einen dreckigen Lumpen.
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);
 };
@@ -262,7 +262,7 @@ instance DIA_Salandril_GehinsKloster		(C_INFO)
 	condition	 = 	DIA_Salandril_GehinsKloster_Condition;
 	information	 = 	DIA_Salandril_GehinsKloster_Info;
 
-	description	 = 	"So are you going to the monastery now, or should I give you another...?";
+	description	 = 	"Gehst du jetzt ins Kloster oder soll ich dich noch mal ...?";
 };
 
 func int DIA_Salandril_GehinsKloster_Condition ()
@@ -277,8 +277,8 @@ func int DIA_Salandril_GehinsKloster_Condition ()
 
 func void DIA_Salandril_GehinsKloster_Info ()
 {
-	AI_Output			(other, self, "DIA_Salandril_GehinsKloster_15_00"); //So are you going to the monastery now, or should I give you another...?
-	AI_Output			(self, other, "DIA_Salandril_GehinsKloster_13_01"); //You'll live to regret to this. Yes, damnit, I'll go to that monastery, but don't you think you'll get away with this.
+	AI_Output			(other, self, "DIA_Salandril_GehinsKloster_15_00"); //Gehst du jetzt ins Kloster oder soll ich dich noch mal ...?
+	AI_Output			(self, other, "DIA_Salandril_GehinsKloster_13_01"); //Das wirst du noch bereuen. Ja, verdammt, ich geh ins Kloster, aber glaube nicht, dass du damit durchkommst.
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"KlosterUrteil");
 	MIS_Serpentes_BringSalandril_SLD = LOG_SUCCESS;

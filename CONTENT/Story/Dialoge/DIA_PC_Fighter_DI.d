@@ -33,7 +33,7 @@ INSTANCE DIA_Gorn_DI_Hallo (C_INFO)
 	information	= DIA_Gorn_DI_Hallo_Info;
 	permanent	 = 	TRUE;
 
-	description = "Everything ship-shape?";
+	description = "Alles im Lot?";
 };                       
 
 FUNC INT DIA_Gorn_DI_Hallo_Condition()
@@ -46,15 +46,15 @@ FUNC INT DIA_Gorn_DI_Hallo_Condition()
 
 FUNC VOID DIA_Gorn_DI_Hallo_Info()
 {	
-	AI_Output (other,self ,"DIA_Gorn_DI_Hallo_15_00"); //Everything ship-shape?
+	AI_Output (other,self ,"DIA_Gorn_DI_Hallo_15_00"); //Alles im Lot?
 
 	if (ORkSturmDI == FALSE)
 		{
-			AI_Output (self ,other,"DIA_Gorn_DI_Hallo_12_01"); //Up to now. Remember, I want to see some action.
+			AI_Output (self ,other,"DIA_Gorn_DI_Hallo_12_01"); //Bis jetzt noch. Denk daran, ich will was zu tun kriegen.
 		}
 	else
 		{
-			AI_Output (self ,other,"DIA_Gorn_DI_Hallo_12_02"); //Are there more orcs up there? Send them to me. I just got warmed up.
+			AI_Output (self ,other,"DIA_Gorn_DI_Hallo_12_02"); //Gibt es da oben noch mehr Orks? Schick sie zu mir. Ich bin gerade warm geworden.
 		};
 };
 
@@ -71,7 +71,7 @@ INSTANCE DIA_Gorn_DI_Teach(C_INFO)
 	information	= DIA_Gorn_DI_Teach_Info;
 	permanent	= TRUE;
 	
-	description = "I need training.";
+	description = "Ich brauche Training.";
 };                       
 
 FUNC INT DIA_Gorn_DI_Teach_Condition()
@@ -133,7 +133,7 @@ instance DIA_Gorn_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Gorn_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 	
-	description = 	"You stayed with the ship?";
+	description = 	"Du bist beim Schiff geblieben?";
 };
 
 func int DIA_Gorn_DI_UndeadDragonDead_Condition ()

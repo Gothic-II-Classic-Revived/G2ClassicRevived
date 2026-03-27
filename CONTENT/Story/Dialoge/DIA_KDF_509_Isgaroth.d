@@ -19,11 +19,11 @@ FUNC INT DIA_Isgaroth_EXIT_Condition()
 
 FUNC VOID DIA_Isgaroth_EXIT_Info()
 {
-	AI_Output	(self ,other,"DIA_Isgaroth_EXIT_01_00"); //May Innos watch over you always.
+	AI_Output	(self ,other,"DIA_Isgaroth_EXIT_01_00"); //Möge Innos allzeit über dich wachen.
 	AI_StopProcessInfos (self);
 };
 //****************************************************************************
-//	Begr�ssung
+//	Begrssung
 //****************************************************************************
 
 INSTANCE DIA_Isgaroth_Hello   (C_INFO)
@@ -56,7 +56,7 @@ INSTANCE DIA_Isgaroth_Segen   (C_INFO)
 	condition   = DIA_Isgaroth_Segen_Condition;
 	information = DIA_Isgaroth_Segen_Info;
 	permanent   = TRUE;
-	description	= "Bless me!";
+	description	= "Segne mich!";
 };
 FUNC INT DIA_Isgaroth_Segen_Condition()
 {
@@ -79,7 +79,7 @@ INSTANCE DIA_Isgaroth_Wolf   (C_INFO)
 	condition   = DIA_Isgaroth_Wolf_Condition;
 	information = DIA_Isgaroth_Wolf_Info;
 	permanent   = FALSE;
-	description	= "Sergio sent me...";
+	description	= "Sergio schickt mich...";
 };
 FUNC INT DIA_Isgaroth_Wolf_Condition()
 {	
@@ -96,7 +96,7 @@ FUNC VOID DIA_Isgaroth_Wolf_Info()
 	AI_Output (self ,other,"DIA_Isgaroth_Wolf_01_01"); //A dark wolf has been roaming the area recently. Track it down and kill it.
 
 	MIS_IsgarothWolf = LOG_RUNNING;
-	B_LogEntry (Topic_IsgarothWolf,"There's a dark wolf roaming around the shrine. I should find him and kill him.");
+	B_LogEntry (Topic_IsgarothWolf,"Am Schrein treibt sich ein dunkler Wolf herum. Ich soll ihn aufspüren und erlegen.");
 	
 };
 //********************************************************************************
@@ -109,7 +109,7 @@ INSTANCE DIA_Isgaroth_tot   (C_INFO)
 	condition   = DIA_Isgaroth_tot_Condition;
 	information = DIA_Isgaroth_tot_Info;
 	permanent   = TRUE;
-	description	= "I have killed the wolf.";
+	description	= "Ich habe den Wolf erlegt.";
 };
 FUNC INT DIA_Isgaroth_tot_Condition()
 {	
@@ -142,7 +142,7 @@ INSTANCE DIA_Isgaroth_Job   (C_INFO)
 	condition   = DIA_Isgaroth_Job_Condition;
 	information = DIA_Isgaroth_Job_Info;
 	permanent   = FALSE;
-	description	= "What are you doing here?";
+	description	= "Was machst du hier?";
 };
 FUNC INT DIA_Isgaroth_Job_Condition()
 {
@@ -160,7 +160,7 @@ FUNC VOID DIA_Isgaroth_Job_Info()
 	AI_Output (self ,other,"DIA_Isgaroth_Job_01_04"); //And for a small donation, you can get many useful things from me.
 	
 	Log_CreateTopic (Topic_KlosterTrader,LOG_NOTE);
-	B_LogEntry (Topic_KlosterTrader,"Master Isgaroth trades useful magic objects at the shrine in front of the monastery.");
+	B_LogEntry (Topic_KlosterTrader,"Meister Isgaroth handelt mit nützlichen, magischen Gegenständen, am Schrein vor dem Kloster.");
 };
 //****************************************************************************
 //	Trade
@@ -173,7 +173,7 @@ INSTANCE DIA_Isgaroth_Trade   (C_INFO)
 	information = DIA_Isgaroth_Trade_Info;
 	permanent   = TRUE;
 	trade		= TRUE;
-	description	= "Show me your wares.";
+	description	= "Zeig mir deine Ware.";
 };
 FUNC INT DIA_Isgaroth_Trade_Condition()
 {	
@@ -197,7 +197,7 @@ INSTANCE DIA_Isgaroth_Kloster   (C_INFO)
 	condition   = DIA_Isgaroth_Kloster_Condition;
 	information = DIA_Isgaroth_Kloster_Info;
 	permanent   = FALSE;
-	description	= "Where will this path take me?";
+	description	= "Wohin komme ich, wenn ich diesen Weg weitergehe?";
 };
 FUNC INT DIA_Isgaroth_Kloster_Condition()
 {	
@@ -219,7 +219,7 @@ FUNC VOID DIA_Isgaroth_Kloster_Info()
 		
 		Log_CreateTopic (Topic_Kloster,LOG_MISSION);
 		Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
-		B_LogEntry (Topic_Kloster,"To become a novice at the monastery of Innos, I need a sheep and 1000 pieces of gold.");
+		B_LogEntry (Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und 1000 Goldstücke.");
 	}
 	else 
 	{
@@ -239,7 +239,7 @@ INSTANCE DIA_Isgaroth_Vatras   (C_INFO)
 	condition   = DIA_Isgaroth_Vatras_Condition;
 	information = DIA_Isgaroth_Vatras_Info;
 	permanent   = TRUE;
-	description	= "I carry a message from Vatras.";
+	description	= "Ich habe eine Botschaft von Vatras.";
 };
 FUNC INT DIA_Isgaroth_Vatras_Condition()
 {

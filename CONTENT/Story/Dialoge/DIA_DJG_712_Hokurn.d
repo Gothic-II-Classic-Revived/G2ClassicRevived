@@ -51,13 +51,13 @@ FUNC VOID DIA_Hokurn_Hello_Info()
 	AI_Output (self ,other,"DIA_Hokurn_Hello_01_03"); //When I haven't had anything to drink for a while, my skull feels like it's going to explode at any moment.
 
 	Info_ClearChoices (DIA_Hokurn_Hello);
-	Info_AddChoice (DIA_Hokurn_Hello,"There's nothing I can give you.",DIA_Hokurn_Hello_No);
+	Info_AddChoice (DIA_Hokurn_Hello,"Ich versuch was zu besorgen.",DIA_Hokurn_Hello_No);
 	
 	IF(	(Npc_HasItems (other,ItFo_Beer) 	>=1)	
 	||	(Npc_HasItems (other,ItFo_Booze) 	>=1)	
 	||	(Npc_HasItems (other,ItFo_Wine) 	>=1))
 	{
-		Info_AddChoice (DIA_Hokurn_Hello,"Here, take this.",DIA_Hokurn_Hello_Yes);
+		Info_AddChoice (DIA_Hokurn_Hello,"Hier hast du was.",DIA_Hokurn_Hello_Yes);
 	};
 };
 
@@ -68,7 +68,7 @@ FUNC VOID DIA_Hokurn_Hello_No ()
 
 	Info_ClearChoices (DIA_Hokurn_Hello);
 	Info_AddChoice (DIA_Hokurn_Hello,DIALOG_ENDE,DIA_Hokurn_Hello_END);
-	Info_AddChoice (DIA_Hokurn_Hello,"One more thing...",DIA_Hokurn_Hello_ASK1);
+	Info_AddChoice (DIA_Hokurn_Hello,"Eine Sache noch...",DIA_Hokurn_Hello_ASK1);
 };
 
 FUNC VOID DIA_Hokurn_Hello_ASK1 ()
@@ -78,7 +78,7 @@ FUNC VOID DIA_Hokurn_Hello_ASK1 ()
 	
 	Info_ClearChoices (DIA_Hokurn_Hello);
 	Info_AddChoice (DIA_Hokurn_Hello,DIALOG_ENDE,DIA_Hokurn_Hello_END);
-	Info_AddChoice (DIA_Hokurn_Hello,"It's important.",DIA_Hokurn_Hello_ASK2);
+	Info_AddChoice (DIA_Hokurn_Hello,"Es ist wichtig.",DIA_Hokurn_Hello_ASK2);
 };
 
 FUNC VOID DIA_Hokurn_Hello_ASK2 ()
@@ -138,7 +138,7 @@ INSTANCE DIA_Hokurn_Drink   (C_INFO)
 	condition   = DIA_Hokurn_Drink_Condition;
 	information = DIA_Hokurn_Drink_Info;
 	permanent   = TRUE;
-	description = "I brought you something to drink.";
+	description = "Ich habe dir was zu Trinken mitgebracht.";
 };
 
 FUNC INT DIA_Hokurn_Drink_Condition()
@@ -188,7 +188,7 @@ INSTANCE DIA_Hokurn_Question   (C_INFO)
 	condition   = DIA_Hokurn_Question_Condition;
 	information = DIA_Hokurn_Question_Info;
 	permanent   = TRUE;
-	description = "I need some information.";
+	description = "Ich brauche Informationen.";
 };
 
 FUNC INT DIA_Hokurn_Question_Condition()
@@ -216,7 +216,7 @@ INSTANCE DIA_Hokurn_Learn   (C_INFO)
 	condition   = DIA_Hokurn_Learn_Condition;
 	information = DIA_Hokurn_Learn_Info;
 	permanent   = FALSE;
-	description = "I'm looking for someone who can teach me something.";
+	description = "Ich suche jemanden, der mir was beibringen kann.";
 };
 
 FUNC INT DIA_Hokurn_Learn_Condition()
@@ -234,10 +234,10 @@ FUNC VOID DIA_Hokurn_Learn_Info()
 	AI_Output (self ,other,"DIA_Hokurn_Learn_01_02"); //Since we're friends, I'll give you a special price. 300 gold pieces.
 
 	Info_ClearChoices (DIA_Hokurn_Learn);
-	Info_AddChoice	(DIA_Hokurn_Learn,"That's too expensive for me.",DIA_Hokurn_Learn_TooExpensive);
+	Info_AddChoice	(DIA_Hokurn_Learn,"Das ist mir zu teuer.",DIA_Hokurn_Learn_TooExpensive);
 	if (Npc_HasItems (other,ItMi_Gold) >= 300)
 	{
-		Info_AddChoice	(DIA_Hokurn_Learn,"All right, here's the money.",DIA_Hokurn_Learn_OK);
+		Info_AddChoice	(DIA_Hokurn_Learn,"In Ordnung, hier ist das Geld.",DIA_Hokurn_Learn_OK);
 	};	 
 };
 
@@ -268,7 +268,7 @@ INSTANCE DIA_Hokurn_PayTeacher   (C_INFO)
 	condition   = DIA_Hokurn_PayTeacher_Condition;
 	information = DIA_Hokurn_PayTeacher_Info;
 	permanent   = TRUE;
-	description = "Here's your money. I want to be trained.";
+	description = "Hier ist dein Geld. Ich will trainieren.";
 };
 
 FUNC INT DIA_Hokurn_PayTeacher_Condition()
@@ -300,7 +300,7 @@ INSTANCE DIA_Hokurn_DrinkAndLearn   (C_INFO)
 	condition   = DIA_Hokurn_DrinkAndLearn_Condition;
 	information = DIA_Hokurn_DrinkAndLearn_Info;
 	permanent   = TRUE;
-	description = "Here's something to drink for you.";
+	description = "Hier hast du was zu trinken.";
 };
 
 FUNC INT DIA_Hokurn_DrinkAndLearn_Condition()
@@ -351,7 +351,7 @@ INSTANCE DIA_Hokurn_Teach(C_INFO)
 	condition	= DIA_Hokurn_Teach_Condition;
 	information	= DIA_Hokurn_Teach_Info;
 	permanent	= TRUE;
-	description = "Let's start with the training.";
+	description = "Lass uns mit dem Training beginnen.";
 };                       
 
 FUNC INT DIA_Hokurn_Teach_Condition()
@@ -444,7 +444,7 @@ FUNC VOID DIA_Hokurn_Teach_1H_5 ()
 };
 
 //*********************************************************************
-//	Wieso h‰ngt ihr hier ¸berhaupt rum?
+//	Wieso hngt ihr hier berhaupt rum?
 //*********************************************************************
 INSTANCE DIA_Hokurn_StayHere   (C_INFO)
 {
@@ -453,7 +453,7 @@ INSTANCE DIA_Hokurn_StayHere   (C_INFO)
 	condition   = DIA_Hokurn_StayHere_Condition;
 	information = DIA_Hokurn_StayHere_Info;
 	permanent   = FALSE;
-	description = "What are you doing here anyway?";
+	description = "Was machst du denn hier?";
 };
 
 FUNC INT DIA_Hokurn_StayHere_Condition()
@@ -471,7 +471,7 @@ FUNC VOID DIA_Hokurn_StayHere_Info()
 	AI_Output (self ,other,"DIA_Hokurn_StayHere_01_02"); //And I don't care as long as I have enough to drink.
 	
 	/*
-	AI_Output (other,self ,"DIA_Addon_Hokurn_StayHere_15_00"); //Was wollt ihr hier ¸berhaupt?
+	AI_Output (other,self ,"DIA_Addon_Hokurn_StayHere_15_00"); //Was wollt ihr hier berhaupt?
 	AI_Output (self ,other,"DIA_Addon_Hokurn_StayHere_01_01"); //Keine Ahnung, was wir hier machen oder wann es los geht.
 	AI_Output (self ,other,"DIA_Addon_Hokurn_StayHere_01_02"); //Ist mir auch egal, solange ich genug zu trinken habe.
 	*/
@@ -488,7 +488,7 @@ INSTANCE DIA_Hokurn_WhereDragon   (C_INFO)
 	condition   = DIA_Hokurn_WhereDragon_Condition;
 	information = DIA_Hokurn_WhereDragon_Info;
 	permanent   = TRUE;
-	description = "Do you know where the dragons are then?";
+	description = "Wisst ihr denn, wo die Drachen sind?";
 };
 
 FUNC INT DIA_Hokurn_WhereDragon_Condition()
@@ -507,11 +507,11 @@ FUNC VOID DIA_Hokurn_WhereDragon_Info()
 	AI_Output (self ,other,"DIA_Hokurn_WhereDragon_01_01"); //What's in it for me, if I tell you?
 
 	Info_ClearChoices (DIA_Hokurn_WhereDragon);
-	Info_AddChoice (DIA_Hokurn_WhereDragon,"Nothing, I'm looking for them myself.",DIA_Hokurn_WhereDragon_FindMyself);
-	Info_AddChoice (DIA_Hokurn_WhereDragon,"I'd be willing to pay you for that information.",DIA_Hokurn_WhereDragon_Gold);
+	Info_AddChoice (DIA_Hokurn_WhereDragon,"Gar nichts, ich werde sie selber suchen.",DIA_Hokurn_WhereDragon_FindMyself);
+	Info_AddChoice (DIA_Hokurn_WhereDragon,"Ich k√∂nnte dir die Auskunft abkaufen.",DIA_Hokurn_WhereDragon_Gold);
 	if Npc_HasItems (other,ITFO_BOOZE) >=1
 	{
-		Info_AddChoice (DIA_Hokurn_WhereDragon,"I've still got a bottle of gin!",DIA_Hokurn_WhereDragon_Booze);	 
+		Info_AddChoice (DIA_Hokurn_WhereDragon,"Ich hab noch ne Flasche Wacholder.",DIA_Hokurn_WhereDragon_Booze);	 
 	};
 };
 
@@ -528,10 +528,10 @@ FUNC VOID DIA_Hokurn_WhereDragon_Gold ()
 	AI_Output (self ,other,"DIA_Hokurn_WhereDragon_Gold_01_01"); //Pay me? Hmm. I'll give you the information for 200 gold pieces.
 	
 	Info_ClearChoices (DIA_Hokurn_WhereDragon);
-	Info_AddChoice (DIA_Hokurn_WhereDragon,"Too much!",DIA_Hokurn_WhereDragon_TooMuch);
+	Info_AddChoice (DIA_Hokurn_WhereDragon,"Zu viel",DIA_Hokurn_WhereDragon_TooMuch);
 	if Npc_HasItems (other,ItMi_Gold) >=200
 	{
-		Info_AddChoice (DIA_Hokurn_WhereDragon,"Deal. Here's the money!",DIA_Hokurn_WhereDragon_OK);
+		Info_AddChoice (DIA_Hokurn_WhereDragon,"Einverstanden, hier ist da Geld.",DIA_Hokurn_WhereDragon_OK);
 	};
 };
 
@@ -573,7 +573,7 @@ INSTANCE DIA_Hokurn_Dragon   (C_INFO)
 	condition   = DIA_Hokurn_Dragon_Condition;
 	information = DIA_Hokurn_Dragon_Info;
 	permanent   = TRUE;
-	description = "All right, now, where are those dragons?";
+	description = "Also, wo sind jetzt die Drachen?";
 };
 
 FUNC INT DIA_Hokurn_Dragon_Condition()
@@ -602,7 +602,7 @@ INSTANCE DIA_Hokurn_AllDragonsDead   (C_INFO)
 	condition   = DIA_Hokurn_AllDragonsDead_Condition;
 	information = DIA_Hokurn_AllDragonsDead_Info;
 	permanent   = TRUE;
-	description	= "I've killed all the dragons.";
+	description	= "Ich hab alle Drachen get√∂tet.";
 				
 };
 

@@ -32,7 +32,7 @@ INSTANCE DIA_Bennet_DI_Hello (C_INFO)
 	information	= DIA_Bennet_DI_Hello_Info;
 	permanent	 = 	TRUE;
 
-	description = "Are you doing all right?";
+	description = "Kommst du zurecht?";
 };    
                    
 FUNC INT DIA_Bennet_DI_Hello_Condition()
@@ -45,15 +45,15 @@ FUNC INT DIA_Bennet_DI_Hello_Condition()
 
 FUNC VOID DIA_Bennet_DI_Hello_Info()
 {	
-	AI_Output	(other ,self,"DIA_Bennet_DI_Hello_15_00");	//Are you doing all right?
+	AI_Output	(other ,self,"DIA_Bennet_DI_Hello_15_00");	//Kommst du zurecht?
 
 	if (ORkSturmDI == FALSE)
 	{
-		AI_Output	(self ,other,"DIA_Bennet_DI_Hello_06_01");	//The smithy on the ship is a little on the rusty side. It's the sea salt that does it. It may be a little difficult to produce anything decent here. But apart from that...
+		AI_Output	(self ,other,"DIA_Bennet_DI_Hello_06_01");	//Die Schmiede auf dem Schiff ist schon ein bisschen eingerostet. Kommt vom Meersalz. Wird etwas schwieriger sein, hier etwas Gescheites hinzukriegen. Aber sonst ...
 	}
 	else
 	{
-		AI_Output	(self ,other,"DIA_Bennet_DI_Hello_06_02");	//Yes, provided the orcs don't come back.
+		AI_Output	(self ,other,"DIA_Bennet_DI_Hello_06_02");	//Wenn die Orks nicht wieder kommen, schon.
 	};
 };
   
@@ -69,7 +69,7 @@ instance DIA_Bennet_DI_TRADE		(C_INFO)
 	permanent	 = 	TRUE;
 	trade		 = 	TRUE;
 
-	description	 = 	"What weapons can you sell me?";
+	description	 = 	"Welche Waffen kannst du mir verkaufen?";
 };
 
 func int DIA_Bennet_DI_TRADE_Condition ()
@@ -82,9 +82,9 @@ func int DIA_Bennet_DI_TRADE_Condition ()
 
 func void DIA_Bennet_DI_TRADE_Info ()
 {
-	AI_Output			(other, self, "DIA_Bennet_DI_TRADE_15_00"); //What weapons can you sell me?
+	AI_Output			(other, self, "DIA_Bennet_DI_TRADE_15_00"); //Welche Waffen kannst du mir verkaufen?
 	B_GiveTradeInv (self);
-	AI_Output			(self, other, "DIA_Bennet_DI_TRADE_06_01"); //Only the best. You know that.
+	AI_Output			(self, other, "DIA_Bennet_DI_TRADE_06_01"); //Nur die besten. Das weißt du doch.
 };
   
 ///////////////////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ instance DIA_Bennet_DI_Smith		(C_INFO)
 	condition	 = 	DIA_Bennet_DI_Smith_Condition;
 	information	 = 	DIA_Bennet_DI_Smith_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Can you teach me your craft?";
+	description	 = 	"Kannst du mir deine Schmiedekunst beibringen?";
 };
 
 func int DIA_Bennet_DI_Smith_Condition ()
@@ -111,15 +111,15 @@ func int DIA_Bennet_DI_Smith_Condition ()
 
 func void DIA_Bennet_DI_Smith_Info ()
 {
-	AI_Output			(other, self, "DIA_Bennet_DI_Smith_15_00"); //Can you teach me your craft?
-	AI_Output			(self, other, "DIA_Bennet_DI_Smith_06_01"); //Depends on what you want to make.
+	AI_Output			(other, self, "DIA_Bennet_DI_Smith_15_00"); //Kannst du mir deine Schmiedekunst beibringen?
+	AI_Output			(self, other, "DIA_Bennet_DI_Smith_06_01"); //Kommt drauf an, was du machen willst.
 
 	Info_ClearChoices (DIA_Bennet_DI_Smith);
 	Info_AddChoice	    (DIA_Bennet_DI_Smith, DIALOG_BACK, DIA_Bennet_DI_Smith_BACK);
 	
 	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
 	{
-		Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString("Learn to forge"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,DIA_Bennet_DI_Smith_Common);
+		Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString("Schmieden lernen"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,DIA_Bennet_DI_Smith_Common);
 	};
 	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
 	{
@@ -220,7 +220,7 @@ INSTANCE DIA_Bennet_TeachSTR (C_INFO)
 	condition	= DIA_Bennet_TeachSTR_Condition;
 	information	= DIA_Bennet_TeachSTR_Info;
 	permanent	= TRUE;
-	description = "I want to get stronger.";
+	description = "Ich will stärker werden.";
 };                       
 
 FUNC INT DIA_Bennet_TeachSTR_Condition()
@@ -269,7 +269,7 @@ instance DIA_Bennet_DI_DragonEgg		(C_INFO)
 	condition	 = 	DIA_Bennet_DI_DragonEgg_Condition;
 	information	 = 	DIA_Bennet_DI_DragonEgg_Info;
 
-	description	 = 	"I've got a dragon egg here.";
+	description	 = 	"Ich habe hier ein Drachenei.";
 };
 
 func int DIA_Bennet_DI_DragonEgg_Condition ()
@@ -300,7 +300,7 @@ instance DIA_Bennet_DI_UndeadDragonDead		(C_INFO)
 	information	 = 	DIA_Bennet_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"We've done all we needed to do.";
+	description	 = 	"Wir haben hier alles erledigt.";
 };
 
 func int DIA_Bennet_DI_UndeadDragonDead_Condition ()

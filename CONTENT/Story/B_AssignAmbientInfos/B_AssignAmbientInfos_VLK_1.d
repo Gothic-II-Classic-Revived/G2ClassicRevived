@@ -29,7 +29,7 @@ INSTANCE DIA_VLK_1_JOIN(C_INFO)
 	condition	= DIA_VLK_1_JOIN_Condition;
 	information	= DIA_VLK_1_JOIN_Info;
 	permanent	= TRUE;
-	description = "How can I become a citizen of this town?";
+	description = "Wie kann ich Bürger dieser Stadt werden?";
 };                       
 
 FUNC INT DIA_VLK_1_JOIN_Condition()
@@ -43,8 +43,8 @@ FUNC INT DIA_VLK_1_JOIN_Condition()
 
 FUNC VOID DIA_VLK_1_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_1_JOIN_15_00"); //How can I become a citizen of this town?
-	AI_Output (self, other, "DIA_VLK_1_JOIN_01_01"); //Go look for a decent job! Everyone who has a set occupation in Khorinis counts as a citizen of the town.
+	AI_Output (other, self, "DIA_VLK_1_JOIN_15_00"); //Wie kann ich Bürger dieser Stadt werden?
+	AI_Output (self, other, "DIA_VLK_1_JOIN_01_01"); //Such dir 'ne ordentliche Arbeit! Jeder, der hier in Khorinis einer festen Beschäftigung nachgeht, zählt zu den Bürgern der Stadt.
 };
 
 // *************************************************************************
@@ -56,7 +56,7 @@ INSTANCE DIA_VLK_1_PEOPLE(C_INFO)
 	condition	= DIA_VLK_1_PEOPLE_Condition;
 	information	= DIA_VLK_1_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Who are the important figures around here?";
+	description = "Wer sind hier die wichtigen Persönlichkeiten?";
 };                       
 
 FUNC INT DIA_VLK_1_PEOPLE_Condition()
@@ -66,11 +66,11 @@ FUNC INT DIA_VLK_1_PEOPLE_Condition()
 
 FUNC VOID DIA_VLK_1_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_1_PEOPLE_15_00"); //Who are the important figures around here?
-	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_01"); //(laughs) Up until recently, it was the governor and the judge. But then the paladins came and took over the city.
-	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_02"); //Lord Hagen is their leader. He's the new governor, more or less.
-	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_03"); //Lord Andre is his right hand man. He leads the city guard and acts a judge as well.
-	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_04"); //Everyone in the city who is guilty of something has to answer to him.
+	AI_Output (other, self, "DIA_VLK_1_PEOPLE_15_00"); //Wer sind hier die wichtigen Persönlichkeiten?
+	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_01"); //(lacht) Bis vor kurzem waren das noch der Statthalter und der Richter. Aber dann kamen die Paladine, und die haben die Stadt übernommen.
+	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_02"); //Lord Hagen ist ihr Anführer. Er ist jetzt gewissermaßen der neue Statthalter.
+	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_03"); //Lord Andre ist seine rechte Hand. Er leitet die Stadtwache und ist auch gleichzeitig Richter.
+	AI_Output (self, other, "DIA_VLK_1_PEOPLE_01_04"); //Jeder, der sich hier in der Stadt etwas zu schulden kommen lässt, muss sich vor ihm verantworten.
 };
 
 // *************************************************************************
@@ -82,7 +82,7 @@ INSTANCE DIA_VLK_1_LOCATION(C_INFO)
 	condition	= DIA_VLK_1_LOCATION_Condition;
 	information	= DIA_VLK_1_LOCATION_Info;
 	permanent	= TRUE;
-	description = "What's interesting in this town?";
+	description = "Was gibt es interessantes in dieser Stadt?";
 };                       
 
 FUNC INT DIA_VLK_1_LOCATION_Condition()
@@ -92,10 +92,10 @@ FUNC INT DIA_VLK_1_LOCATION_Condition()
 
 FUNC VOID DIA_VLK_1_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_1_LOCATION_15_00"); //What's interesting in this town?
-	AI_Output (self, other, "DIA_VLK_1_LOCATION_01_01"); //You can buy almost everything you can imagine here. Either from the merchants in the marketplace, or in the lower part of the city.
-	AI_Output (self, other, "DIA_VLK_1_LOCATION_01_02"); //But almost everything that you can buy also costs a bit.
-	AI_Output (self, other, "DIA_VLK_1_LOCATION_01_03"); //If you don't have enough money, then maybe Lehmar the moneylender can help you. His house is at the beginning of the harbor district as you come from the lower part of town.
+	AI_Output (other, self, "DIA_VLK_1_LOCATION_15_00"); //Was gibt es interessantes in dieser Stadt?
+	AI_Output (self, other, "DIA_VLK_1_LOCATION_01_01"); //Hier kannst du fast alles kaufen, was du dir vorstellen kannst. Entweder bei den Händlern am Marktplatz oder in der Unterstadt.
+	AI_Output (self, other, "DIA_VLK_1_LOCATION_01_02"); //Aber fast alles, was du hier kaufen kannst, kostet auch ne Kleinigkeit.
+	AI_Output (self, other, "DIA_VLK_1_LOCATION_01_03"); //Wenn du nicht viel Geld hast, kann dir vielleicht Lehmar, der Geldverleiher, weiterhelfen. Sein Haus ist am Anfang des Hafenviertels, wenn du von der Unterstadt kommst.
 };
 
 // *************************************************************************
@@ -107,7 +107,7 @@ INSTANCE DIA_VLK_1_STANDARD(C_INFO)
 	condition	= DIA_VLK_1_STANDARD_Condition;
 	information	= DIA_VLK_1_STANDARD_Info;
 	permanent	= TRUE;
-	description = "What's new?";
+	description = "Was gibt's Neues?";
 };                       
 func INT DIA_VLK_1_STANDARD_Condition()
 {
@@ -115,31 +115,31 @@ func INT DIA_VLK_1_STANDARD_Condition()
 };
 FUNC VOID DIA_VLK_1_STANDARD_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_1_STANDARD_15_00"); //What's new?
+	AI_Output (other, self, "DIA_VLK_1_STANDARD_15_00"); //Was gibt's Neues?
 		
 	if (Kapitel == 1)
 	{
-		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_01"); //Since the collapse of the Barrier, open trade with the big farmer has abruptly stopped. Who knows what he's plotting. There's something fishy going on.
+		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_01"); //Der offene Handel mit dem Großbauern ist seit dem Fall der Barriere abrupt abgebrochen. Wer weiß, was der im Schilde führt. Ich traue dem Braten nicht.
 	};
 
 	if (Kapitel == 2)
 	{
-		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_02"); //Onar is going too far. He still isn't supplying the city. If the militia doesn't intervene soon, the other farmers will soon also do whatever they please.
+		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_02"); //Onar treibt es zu weit! Er beliefert die Stadt immer noch nicht. Wenn die Miliz nicht bald eingreift, machen auch die anderen Höfe bald, was sie wollen.
 	};
 
 	if (Kapitel == 3)
 	{
-		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_03"); //I've heard the bandits have joined forces with magicians. Powerful black magicians in black robes. I could swear that I saw one of them in the city last night.
+		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_03"); //Ich habe gehört, die Banditen sollen sich mit Magiern zusammengetan haben. Mächtige Schwarzmagier in schwarzen Kutten. Ich könnte schwören, dass ich letzte Nacht einen von ihnen in der Stadt gesehen habe.
 	};
 
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_04"); //I've heard that some of Onar's mercenaries have set out to kill the dragons. Now they're finally doing something useful!
+		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_04"); //Ich hab gehört, dass einige von Onars Söldnern losgezogen sind, um die Drachen zu töten. Jetzt machen die endlich mal was Nützliches!
 	};
 	
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_05"); //They say the dragons have been defeated! Lord Hagen is gathering his men to drive the rest of the creatures out of the Valley of Mines.
+		AI_Output (self,other,"DIA_VLK_1_STANDARD_01_05"); //Es heißt, die Drachen sind besiegt worden! Lord Hagen sammelt seine Männer, um auch die restlichen Kreaturen aus dem Minental zu vertreiben.
 	};
 };
 

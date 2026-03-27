@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Skeleton(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Skeleton";
+	name							=	"Skelett";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
 
@@ -85,7 +85,7 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 
 INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 {
-	name							=	"Summoned Skeleton";
+	name							=	"Beschworenes Skelett";
 	guild							=	GIL_SUMMONED_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
 	level							=	0; //30
@@ -118,7 +118,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	B_SetVisuals_Lesser_Skeleton();
 
 	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
-	EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schie�t beim Skelett in Zeitlupe...
+	EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schiet beim Skelett in Zeitlupe...
 };
 
 //**************
@@ -127,7 +127,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 
 INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 {
-	name							=	"Lower Skeleton";
+	name							=	"Niederes Skelett";
 	
 	level							=	15;
 
@@ -165,7 +165,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 
 INSTANCE Crypt_Skeleton_Room_01			(Mst_Default_Skeleton)
 {
-	name							=	"Crypt Guard";
+	name							=	"Krypta-Wächter";
 
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -177,7 +177,7 @@ INSTANCE Crypt_Skeleton_Room_01			(Mst_Default_Skeleton)
 
 INSTANCE Crypt_Skeleton_Room_02			(Mst_Default_Skeleton)
 {
-	name							=	"Crypt Guard";
+	name							=	"Krypta-Wächter";
 
 	aivar[AIV_EnemyOverride] = TRUE;
 	
@@ -189,7 +189,7 @@ INSTANCE Crypt_Skeleton_Room_02			(Mst_Default_Skeleton)
 
 INSTANCE Crypt_Skeleton_Room_03			(Mst_Default_Skeleton)
 {
-	name							=	"Crypt Guard";
+	name							=	"Krypta-Wächter";
 
 	aivar[AIV_EnemyOverride] = TRUE;
 	

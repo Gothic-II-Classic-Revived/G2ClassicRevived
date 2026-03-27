@@ -32,7 +32,7 @@ INSTANCE DIA_None_101_Mario_Job (C_INFO)
 	condition   = DIA_None_101_Mario_Job_Condition;
 	information = DIA_None_101_Mario_Job_Info;
 	permanent   = TRUE;
-	description	= "What are you doing here?";
+	description	= "Was machst du hier?";
 };
 
 FUNC INT DIA_None_101_Mario_Job_Condition()
@@ -82,7 +82,7 @@ FUNC VOID DIA_None_101_Mario_YouNeedMe_Info()
 	
 	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   
 	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 	
-	B_LogEntry (TOPIC_Crew,"Mario, a former marine, spoke to me in the harbor pub. He wants to come on the ship.");
+	B_LogEntry (TOPIC_Crew,"Mario, ein ehemaliger Marine, hat mich in der Hafenkneipe angesprochen. Er mÃ¶chte auf das Schiff kommen.");
 };
 
 //*********************************************************************
@@ -95,7 +95,7 @@ INSTANCE DIA_None_101_Mario_WhyNeedYou   (C_INFO)
 	condition   = DIA_None_101_Mario_WhyNeedYou_Condition;
 	information = DIA_None_101_Mario_WhyNeedYou_Info;
 	permanent   = FALSE;
-	description	= "Why would I take you along?";
+	description	= "Warum sollte ich dich mitnehmen?";
 };
 
 FUNC INT DIA_None_101_Mario_WhyNeedYou_Condition()
@@ -128,7 +128,7 @@ INSTANCE DIA_None_101_Mario_WhyHere   (C_INFO)
 	condition   = DIA_None_101_Mario_WhyHere_Condition;
 	information = DIA_None_101_Mario_WhyHere_Info;
 	permanent   = FALSE;
-	description	= "Why are you here, then?";
+	description	= "Wieso bist du dann hier?";
 };
 
 FUNC INT DIA_None_101_Mario_WhyHere_Condition()
@@ -157,7 +157,7 @@ INSTANCE DIA_None_101_Mario_Abilities   (C_INFO)
 	condition   = DIA_None_101_Mario_Abilities_Condition;
 	information = DIA_None_101_Mario_Abilities_Info;
 	permanent   = FALSE;
-	description	= "What can you do?";
+	description	= "Was kannst du?";
 };
 
 FUNC INT DIA_None_101_Mario_Abilities_Condition()
@@ -175,7 +175,7 @@ FUNC VOID DIA_None_101_Mario_Abilities_Info()
 	AI_Output (self ,other,"DIA_None_101_Mario_Abilities_07_01"); //I'm trained for boarding and close combat, plus I'm a passable shot with the ship's cannon.
 	AI_Output (self ,other,"DIA_None_101_Mario_Abilities_07_02"); //I bet there's a thing or two that I can teach you on the trip.
 
-	B_LogEntry (TOPIC_Crew,"Mario seems to be a dab hand at naval warfare. He may be able to teach me a thing or two.");
+	B_LogEntry (TOPIC_Crew,"Mario scheint ein fÃ¤higer Mann im Schiffskampf zu sein. Vielleicht kann ich bei ihm noch was lernen.");
 };
 
 //*********************************************************************
@@ -188,7 +188,7 @@ INSTANCE DIA_None_101_Mario_YourPrice   (C_INFO)
 	condition   = DIA_None_101_Mario_YourPrice_Condition;
 	information = DIA_None_101_Mario_YourPrice_Info;
 	permanent   = FALSE;
-	description	= "What are you asking?";
+	description	= "Was verlangst du?";
 };
 
 FUNC INT DIA_None_101_Mario_YourPrice_Condition()
@@ -208,7 +208,7 @@ FUNC VOID DIA_None_101_Mario_YourPrice_Info()
 };
 
 //*********************************************************************
-//	Die Reise kann gefährlich werden.
+//	Die Reise kann gefhrlich werden.
 //*********************************************************************
 INSTANCE DIA_None_101_Mario_CouldBeDangerous   (C_INFO)
 {
@@ -217,7 +217,7 @@ INSTANCE DIA_None_101_Mario_CouldBeDangerous   (C_INFO)
 	condition   = DIA_None_101_Mario_CouldBeDangerous_Condition;
 	information = DIA_None_101_Mario_CouldBeDangerous_Info;
 	permanent   = FALSE;
-	description	= "The journey may be perilous.";
+	description	= "Die Reise kann gefÃ¤hrlich werden.";
 };
 
 FUNC INT DIA_None_101_Mario_CouldBeDangerous_Condition()
@@ -247,7 +247,7 @@ INSTANCE DIA_None_101_Mario_DontNeedYou   (C_INFO)
 	condition   = DIA_None_101_Mario_DontNeedYou_Condition;
 	information = DIA_None_101_Mario_DontNeedYou_Info;
 	permanent   = FALSE;
-	description	= "I have no use for you.";
+	description	= "Ich kann dich nicht gebrauchen.";
 };
 
 FUNC INT DIA_None_101_Mario_DontNeedYou_Condition()
@@ -277,7 +277,7 @@ INSTANCE DIA_None_101_Mario_NeedGoodMen   (C_INFO)
 	condition   = DIA_None_101_Mario_NeedGoodMen_Condition;
 	information = DIA_None_101_Mario_NeedGoodMen_Info;
 	permanent   = FALSE;
-	description	= "I can always use good people.";
+	description	= "Gute Leute kann ich immer brauchen.";
 };
 
 FUNC INT DIA_None_101_Mario_NeedGoodMen_Condition()
@@ -319,7 +319,7 @@ instance DIA_Mario_LeaveMyShip		(C_INFO)
 	condition	 = 	DIA_Mario_LeaveMyShip_Condition;
 	information	 = 	DIA_Mario_LeaveMyShip_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"I can't use you after all!";
+	description	 = 	"Ich kann dich doch nicht gebrauchen!";
 };
 func int DIA_Mario_LeaveMyShip_Condition ()
 {	
@@ -341,7 +341,7 @@ func void DIA_Mario_LeaveMyShip_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Ich habs mir überlegt!
+//	Ich habs mir berlegt!
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Mario_StillNeedYou		(C_INFO)
 {
@@ -350,11 +350,11 @@ instance DIA_Mario_StillNeedYou		(C_INFO)
 	condition	 = 	DIA_Mario_StillNeedYou_Condition;
 	information	 = 	DIA_Mario_StillNeedYou_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"I can use you after all!";
+	description	 = 	"Ich kann dich doch gebrauchen!";
 };
 func int DIA_Mario_StillNeedYou_Condition ()
 {	
-	if((Mario_IsOnBOard == LOG_OBSOLETE)		//Hier brauch man natürlich nur eine variable abfragen
+	if((Mario_IsOnBOard == LOG_OBSOLETE)		//Hier brauch man natrlich nur eine variable abfragen
 	|| (Mario_IsOnBOard == LOG_FAILED))
 	&& (crewmember_count < Max_Crew)
 	{

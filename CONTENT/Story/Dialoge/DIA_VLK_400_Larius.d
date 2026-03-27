@@ -46,7 +46,7 @@ FUNC INT DIA_Larius_Hello_Condition()
 
 FUNC VOID DIA_Larius_Hello_Info()
 {	
-	AI_Output (self,other,"DIA_Larius_Hello_01_00"); //What's your business here? If you want something, make an appointment.
+	AI_Output (self,other,"DIA_Larius_Hello_01_00"); //Was hast du hier verloren? Wenn du was willst, lass dir einen Termin geben.
 
 };
 
@@ -61,7 +61,7 @@ INSTANCE DIA_Larius_WhoAreYou(C_INFO)
 	condition	= DIA_Larius_WhoAreYou_Condition;
 	information	= DIA_Larius_WhoAreYou_Info;
 	permanent	= FALSE;
-	description	= "Who are you?";
+	description	= "Wer bist du?";
 };                       
 
 FUNC INT DIA_Larius_WhoAreYou_Condition()
@@ -71,12 +71,12 @@ FUNC INT DIA_Larius_WhoAreYou_Condition()
 
 FUNC VOID DIA_Larius_WhoAreYou_Info()
 {	
-	AI_Output (other,self ,"DIA_Larius_WhoAreYou_15_00"); //Who are you?
-	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_01"); //I am Larius, the local governor.
-	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_02"); //Even if it may not seem so at the moment, I am the most powerful man in the city.
-	AI_Output (other,self ,"DIA_Larius_WhoAreYou_15_03"); //So you're in charge here?
-	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_04"); //I... well... at the moment my hands are tied.
-	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_05"); //That Lord Hagen is in command here, for as long as he is in the city at any rate.
+	AI_Output (other,self ,"DIA_Larius_WhoAreYou_15_00"); //Wer bist du?
+	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_01"); //Ich bin Larius, der hiesige Statthalter.
+	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_02"); //Auch wenn es im Moment nicht so aussehen mag, bin ich der mächtigste Mann dieser Stadt.
+	AI_Output (other,self ,"DIA_Larius_WhoAreYou_15_03"); //Dann bist du hier also verantwortlich?
+	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_04"); //Ich ... nun ... zurzeit sind mir die Hände gebunden.
+	AI_Output (self ,other,"DIA_Larius_WhoAreYou_01_05"); //Dieser Lord Hagen hat hier das Kommando, jedenfalls solange er noch in der Stadt ist.
 		
 };
 
@@ -91,7 +91,7 @@ INSTANCE DIA_Larius_Disturb(C_INFO)
 	condition	= DIA_Larius_Disturb_Condition;
 	information	= DIA_Larius_Disturb_Info;
 	permanent	= TRUE;
-	description	= "I didn't mean to intrude.";
+	description	= "Ich wollte nicht stören.";
 };                       
 
 FUNC INT DIA_Larius_Disturb_Condition()
@@ -101,8 +101,8 @@ FUNC INT DIA_Larius_Disturb_Condition()
 
 FUNC VOID DIA_Larius_Disturb_Info()
 {	
-	AI_Output (other,self ,"DIA_Larius_Disturb_15_00"); //I didn't mean to intrude.
-	AI_Output (self ,other,"DIA_Larius_Disturb_01_01"); //You have failed utterly at that. So go away!
+	AI_Output (other,self ,"DIA_Larius_Disturb_15_00"); //Ich wollte nicht stören.
+	AI_Output (self ,other,"DIA_Larius_Disturb_01_01"); //Das ist dir gründlich misslungen. Also verschwinde!
 };
 
 // ************************************************************
@@ -116,7 +116,7 @@ INSTANCE DIA_Larius_DieLage(C_INFO)
 	condition	= DIA_Larius_DieLage_Condition;
 	information	= DIA_Larius_DieLage_Info;
 	permanent	= TRUE;
-	description	= "What's up?";
+	description	= "Wie steht's?";
 };                       
 
 FUNC INT DIA_Larius_DieLage_Condition()
@@ -126,8 +126,8 @@ FUNC INT DIA_Larius_DieLage_Condition()
 
 FUNC VOID DIA_Larius_DieLage_Info()
 {	
-	AI_Output (other,self ,"DIA_Larius_DieLage_15_00"); //How's it going?
-	AI_Output (self ,other,"DIA_Larius_DieLage_01_01"); //What business is it of yours? As long as the paladins are in the city, Lord Hagen takes care of all the affairs that concern the city.
+	AI_Output (other,self ,"DIA_Larius_DieLage_15_00"); //Wie läuft's denn so?
+	AI_Output (self ,other,"DIA_Larius_DieLage_01_01"); //Was geht das dich an? Solange die Paladine in der Stadt sind, kümmert sich Lord Hagen um alle Belange, die die Stadt betreffen.
 };
 
 
@@ -142,7 +142,7 @@ INSTANCE DIA_Larius_Richterueberfall(C_INFO)
 	condition	= DIA_Larius_Richterueberfall_Condition;
 	information	= DIA_Larius_Richterueberfall_Info;
 
-	description	= "The judge hired some thugs to assault you.";
+	description	= "Der Richter hat dich von Banditen überfallen lassen.";
 };                       
 
 FUNC INT DIA_Larius_Richterueberfall_Condition()
@@ -155,17 +155,17 @@ FUNC INT DIA_Larius_Richterueberfall_Condition()
 
 FUNC VOID DIA_Larius_Richterueberfall_Info()
 {	
-	AI_Output (other,self ,"DIA_Larius_Richterueberfall_15_00"); //The judge hired some thugs to assault you. I can prove it.
-	AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_01"); //Don't talk such nonsense, or do you want me to have you put in chains?
+	AI_Output (other,self ,"DIA_Larius_Richterueberfall_15_00"); //Der Richter hat dich von Banditen überfallen lassen. Ich kann es beweisen.
+	AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_01"); //Erzähl nicht so einen Unsinn, oder willst du, dass ich dich in Ketten legen lasse?
 	if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
-			AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_02"); //Even if you are a warrior of Innos...
+			AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_02"); //Auch wenn du ein Streiter Innos' bist ...
 		};
 		if (hero.guild == GIL_KDF)
 		{
-			AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_03"); //Even if you are an ordained magician...
+			AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_03"); //Auch wenn du ein geweihter Magier bist ...
 		};
-	AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_04"); //My word still has weight in this city. Do not dare to sully the honorable name of the judge ever again!
+	AI_Output (self ,other,"DIA_Larius_Richterueberfall_01_04"); //Mein Wort hat noch immer Gewicht hier in dieser Stadt. Wage es nie wieder, den ehrenwerten Namen des Richters zu beschmutzen!
 	B_GivePlayerXP (XP_Ambient);
 	AI_StopProcessInfos (self);
 };

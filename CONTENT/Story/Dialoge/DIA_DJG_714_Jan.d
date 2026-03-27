@@ -63,7 +63,7 @@ INSTANCE DIA_JAN_Dragons (C_INFO)
 	condition	= DIA_Jan_Dragons_Condition;
 	information	= DIA_Jan_Dragons_Info;
 	permanent	= FALSE;
-	description	= "You forgot about the dragons!";
+	description	= "Du hast die Drachen vergessen!";
 };                       
 
 FUNC INT DIA_Jan_Dragons_Condition()
@@ -91,9 +91,9 @@ FUNC VOID DIA_Jan_Dragons_Info()
 		};
 
 		Info_ClearChoices (DIA_JAN_Dragons);
-		Info_AddChoice (DIA_JAN_Dragons,"I need to get going.",DIA_JAN_Dragons_ShitHappen);
-		Info_AddChoice (DIA_JAN_Dragons,"What's in it for me if I help you?",DIA_JAN_Dragons_Reward);
-		Info_AddChoice (DIA_JAN_Dragons,"I'll try to help you.",DIA_JAN_Dragons_HelpYou);
+		Info_AddChoice (DIA_JAN_Dragons,"Ich muß weiter.",DIA_JAN_Dragons_ShitHappen);
+		Info_AddChoice (DIA_JAN_Dragons,"Was krieg ich, wenn ich dir helfe?",DIA_JAN_Dragons_Reward);
+		Info_AddChoice (DIA_JAN_Dragons,"Ich werde versuche dir zu helfen.",DIA_JAN_Dragons_HelpYou);
 };
 
 FUNC VOID DIA_JAN_Dragons_HelpYou ()
@@ -106,7 +106,7 @@ FUNC VOID DIA_JAN_Dragons_HelpYou ()
 	
 	Log_CreateTopic (TOPIC_JanBecomesSmith, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_JanBecomesSmith, LOG_RUNNING);
-	B_LogEntry (TOPIC_JanBecomesSmith,"Jan, the Dragon Hunter in the castle in the Valley of Mines, wants to work at the smithy. But Parcival forbids it."); 
+	B_LogEntry (TOPIC_JanBecomesSmith,"Jan der Drachenjäger in der Burg im Minental will an der Schmiede arbeiten. Parcival hat es ihm allerdings verboten."); 
 
 
 	MIS_JanBecomesSmith = LOG_RUNNING;
@@ -143,7 +143,7 @@ INSTANCE DIA_JAN_Home (C_INFO)
 	condition	= DIA_Jan_Home_Condition;
 	information	= DIA_Jan_Home_Info;
 	permanent	= FALSE;
-	description	= "Where do you come from?";
+	description	= "Wo kommt ihr her?";
 };                       
 
 FUNC INT DIA_Jan_Home_Condition()
@@ -174,7 +174,7 @@ INSTANCE DIA_JAN_OldCamp (C_INFO)
 	condition	= DIA_Jan_OldCamp_Condition;
 	information	= DIA_Jan_OldCamp_Info;
 	permanent	= TRUE;
-	description	= "What happened in the castle?";
+	description	= "Was ist in der Burg alles passiert?";
 };                       
 
 FUNC INT DIA_Jan_OldCamp_Condition()
@@ -203,7 +203,7 @@ INSTANCE DIA_JAN_Parcival (C_INFO)
 	condition	= DIA_Jan_Parcival_Condition;
 	information	= DIA_Jan_Parcival_Info;
 	permanent	= FALSE;
-	description	= "I talked to Parcival.";
+	description	= "Ich hab mit Parcival geredet.";
 };                       
 
 FUNC INT DIA_Jan_Parcival_Condition()
@@ -245,7 +245,7 @@ INSTANCE DIA_JAN_JanIsSmith (C_INFO)
 	condition	= DIA_Jan_JanIsSmith_Condition;
 	information	= DIA_Jan_JanIsSmith_Info;
 	permanent	= FALSE;
-	description	= "Go get your hammer, there's work for you.";
+	description	= "Hol deinen Hammer, du hast Arbeit.";
 };                       
 
 FUNC INT DIA_Jan_JanIsSmith_Condition()
@@ -281,7 +281,7 @@ INSTANCE DIA_JAN_SellWeapons (C_INFO)
 	condition	= DIA_Jan_SellWeapons_Condition;
 	information	= DIA_Jan_SellWeapons_Info;
 	permanent	= FALSE;
-	description	= "Are you selling any weapons?";
+	description	= "Verkaufst du Waffen?";
 };                       
 
 FUNC INT DIA_Jan_SellWeapons_Condition()
@@ -324,7 +324,7 @@ INSTANCE Jan_Training_Talente (C_INFO)
 	condition	= Jan_Training_Talente_Condition;
 	information	= Jan_Training_Talente_Info;
 	permanent	= TRUE;
-	description	= "Teach me how to be a smith.";
+	description	= "Bring mir Schmieden bei.";
 };                       
 
 FUNC INT Jan_Training_Talente_Condition()
@@ -348,7 +348,7 @@ FUNC VOID Jan_Training_Talente_Info()
 	
 	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
 	{
-		Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Learn to forge"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,Jan_Training_Smith_Common);
+		Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Schmieden lernen"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,Jan_Training_Smith_Common);
 	};
 	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
 	{	
@@ -356,61 +356,61 @@ FUNC VOID Jan_Training_Talente_Info()
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Bastard Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05))		,Jan_Training_Smith_2h_5);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Bastardschwert (zweihändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05))		,Jan_Training_Smith_2h_5);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04))		,Jan_Training_Smith_2h_4);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Schwert (zweihändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04))		,Jan_Training_Smith_2h_4);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Broad Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03))		,Jan_Training_Smith_2h_3);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Breitschwert (zweihändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03))		,Jan_Training_Smith_2h_3);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Heavy Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02))		,Jan_Training_Smith_2h_2);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Schweres Schwert (zweihändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02))		,Jan_Training_Smith_2h_2);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Light Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01))		,Jan_Training_Smith_2h_1);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Leichtes Schwert (zweihändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01))		,Jan_Training_Smith_2h_1);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Bastard Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05))		,Jan_Training_Smith_1h_5);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Bastardschwert (einhändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05))		,Jan_Training_Smith_1h_5);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04))		,Jan_Training_Smith_1h_4);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Schwert (einhändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04))		,Jan_Training_Smith_1h_4);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Broad Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03))		,Jan_Training_Smith_1h_3);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Breitschwert (einhändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03))		,Jan_Training_Smith_1h_3);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Long Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02))		,Jan_Training_Smith_1h_2);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Langschwert (einhändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02))		,Jan_Training_Smith_1h_2);
 		};
 		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Short Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01))		,Jan_Training_Smith_1h_1);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Kurzes Schwert (einhändig)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01))		,Jan_Training_Smith_1h_1);
 		};
 	};
 };
@@ -483,7 +483,7 @@ INSTANCE DIA_JAN_SellArmor (C_INFO)
 	condition	= DIA_Jan_SellArmor_Condition;
 	information	= DIA_Jan_SellArmor_Info;
 	permanent	= TRUE;
-	description	= "Can I buy some armor from you?";
+	description	= "Kann ich bei dir eine Rüstung kaufen?";
 };                       
 
 FUNC INT DIA_Jan_SellArmor_Condition()
@@ -514,8 +514,8 @@ FUNC VOID DIA_Jan_SellArmor_Info()
 			AI_Output (self ,other,"DIA_Jan_SellArmor_10_03"); //If I had any, I'd sell it to you. Unfortunately, I don't have any.
 			
 			Info_ClearChoices (DIA_JAN_SellArmor);
-			Info_AddChoice (DIA_JAN_SellArmor,"I guess there's nothing to be done.",DIA_JAN_SellArmor_Sorry);
-			Info_AddChoice (DIA_JAN_SellArmor,"Can you make one for me, then?",DIA_JAN_SellArmor_BuildOne);
+			Info_AddChoice (DIA_JAN_SellArmor,"Da kann man wohl nichts machen.",DIA_JAN_SellArmor_Sorry);
+			Info_AddChoice (DIA_JAN_SellArmor,"Kannst du mir denn eine anfertigen?",DIA_JAN_SellArmor_BuildOne);
 		};	
 };
 
@@ -554,7 +554,7 @@ INSTANCE DIA_JAN_Dragonscales (C_INFO)
 	condition	= DIA_Jan_Dragonscales_Condition;
 	information	= DIA_Jan_Dragonscales_Info;
 	permanent	= TRUE;
-	description	= "I've got the dragon scales for you.";
+	description	= "Ich habe die Drachenschuppen für dich.";
 };                       
 
 FUNC INT DIA_Jan_Dragonscales_Condition()
@@ -609,7 +609,7 @@ INSTANCE DIA_JAN_ArmorReady (C_INFO)
 	condition	= DIA_Jan_ArmorReady_Condition;
 	information	= DIA_Jan_ArmorReady_Info;
 	permanent	= TRUE;
-	description	= "Is the armor ready?";
+	description	= "Ist die Rüstung fertig?";
 };                       
 
 FUNC INT DIA_Jan_ArmorReady_Condition()
@@ -656,7 +656,7 @@ instance DIA_Jan_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Jan_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Jan_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Demonhunter Armor (Protection: weapons 150, arrows 150) (12000 gold)"; //Wenn �ndern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	"Dämonenjägerrüstung (Schutz: Waffen 150, Pfeile 150) (12000 Gold)"; //Wenn �ndern, dann bitte auch in der Info-Instanz. s.u.
 };
 
 func int DIA_Jan_DJG_ARMOR_M_Condition ()
@@ -714,8 +714,8 @@ func void DIA_Jan_DJG_ARMOR_M_Info ()
 {	
 	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
 
-	Info_AddChoice (DIA_JAN_SellArmor,"Demonhunter Armor (Protection: weapons 150, arrows 150) (12000 gold)",DIA_JAN_DHT_Armor_Helmet);
-	Info_AddChoice (DIA_JAN_SellArmor,"Demonhunter Armor w/o helmet (Protection: weapons 150, arrows 150) (12000 gold)",DIA_JAN_DHT_Armor_NoHelmet);
+	Info_AddChoice (DIA_JAN_SellArmor,"Dämonenjägerrüstung (Schutz: Waffen 150, Pfeile 150) (12000 Gold)",DIA_JAN_DHT_Armor_Helmet);
+	Info_AddChoice (DIA_JAN_SellArmor,"Dämonenjägerrüstung ohne Helm (Schutz: Waffen 150, Pfeile 150) (12000 Gold)",DIA_JAN_DHT_Armor_NoHelmet);
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -728,7 +728,7 @@ instance DIA_Jan_DragonPlettBericht		(C_INFO)
 	condition	 = 	DIA_Jan_DragonPlettBericht_Condition;
 	information	 = 	DIA_Jan_DragonPlettBericht_Info;
 
-	description	 = 	"About the dragons...";
+	description	 = 	"Wegen der Drachen...";
 };
 
 var int DIA_Jan_DragonPlettBericht_NoPerm;
@@ -792,7 +792,7 @@ instance DIA_Jan_DragonBlood		(C_INFO)
 	information	 = 	DIA_Jan_DragonBlood_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"I've got some dragon blood for you.";
+	description	 = 	"Ich habe Drachenblut für dich.";
 };
 
 func int DIA_Jan_DragonBlood_Condition ()
@@ -815,8 +815,8 @@ func void DIA_Jan_DragonBlood_Info ()
 	Info_AddChoice	(DIA_Jan_DragonBlood, DIALOG_BACK, DIA_Jan_DragonBlood_BACK );
 	if ((Npc_HasItems (other,ItAt_DragonBlood)) >= 1)
 	{
-		Info_AddChoice	(DIA_Jan_DragonBlood, "(Everything)", DIA_Jan_DragonBlood_all );
-		Info_AddChoice	(DIA_Jan_DragonBlood, "(One phial)", DIA_Jan_DragonBlood_1 );
+		Info_AddChoice	(DIA_Jan_DragonBlood, "(Alles)", DIA_Jan_DragonBlood_all );
+		Info_AddChoice	(DIA_Jan_DragonBlood, "(Eine Phiole)", DIA_Jan_DragonBlood_1 );
 	};
 };
 func void DIA_Jan_DragonBlood_BACK ()
@@ -843,8 +843,8 @@ func void DIA_Jan_DragonBlood_1 ()
 	Info_AddChoice	(DIA_Jan_DragonBlood, DIALOG_BACK, DIA_Jan_DragonBlood_BACK );
 	if ((Npc_HasItems (other,ItAt_DragonBlood)) >= 1)
 	{
-		Info_AddChoice	(DIA_Jan_DragonBlood, "(Everything)", DIA_Jan_DragonBlood_all );
-		Info_AddChoice	(DIA_Jan_DragonBlood, "(One phial)", DIA_Jan_DragonBlood_1 );
+		Info_AddChoice	(DIA_Jan_DragonBlood, "(Alles)", DIA_Jan_DragonBlood_all );
+		Info_AddChoice	(DIA_Jan_DragonBlood, "(Eine Phiole)", DIA_Jan_DragonBlood_1 );
 	};
 	
 
@@ -874,8 +874,8 @@ func void DIA_Jan_DragonBlood_all ()
 	Info_AddChoice	(DIA_Jan_DragonBlood, DIALOG_BACK, DIA_Jan_DragonBlood_BACK );
 	if ((Npc_HasItems (other,ItAt_DragonBlood)) >= 1)
 	{
-		Info_AddChoice	(DIA_Jan_DragonBlood, "(Everything)", DIA_Jan_DragonBlood_all );
-		Info_AddChoice	(DIA_Jan_DragonBlood, "(One phial)", DIA_Jan_DragonBlood_1 );
+		Info_AddChoice	(DIA_Jan_DragonBlood, "(Alles)", DIA_Jan_DragonBlood_all );
+		Info_AddChoice	(DIA_Jan_DragonBlood, "(Eine Phiole)", DIA_Jan_DragonBlood_1 );
 	};
 
 	var string BloodText;
@@ -896,7 +896,7 @@ instance DIA_Jan_NACHOCGATEOPEN		(C_INFO)
 	information	 = 	DIA_Jan_NACHOCGATEOPEN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Everything all right?";
+	description	 = 	"Alles Klar?";
 };
 
 func int DIA_Jan_NACHOCGATEOPEN_Condition ()

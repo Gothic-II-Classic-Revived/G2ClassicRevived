@@ -20,7 +20,7 @@ prototype Mst_Default_Gobbo_Green (C_NPC)
 	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 
-	// ------ Damage Types ------						//entweder EIN damagetype oder mehrere damage[x], die dann addiert werden und getrennten Rüstungsabzug bekommen
+	// ------ Damage Types ------						//entweder EIN damagetype oder mehrere damage[x], die dann addiert werden und getrennten Rstungsabzug bekommen
 	damagetype 						=	DAM_EDGE;
 
 	// ------ Kampf-Taktik ------
@@ -62,7 +62,7 @@ INSTANCE Gobbo_Green (Mst_Default_Gobbo_Green)
 {
 	B_SetVisuals_Gobbo_Green();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_01); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
 
@@ -72,7 +72,7 @@ INSTANCE Gobbo_Green (Mst_Default_Gobbo_Green)
 
 INSTANCE YGobbo_Green (Mst_Default_Gobbo_Green)
 {
-	name							=	"Weaker Goblin";
+	name							=	"SchwÃ¤cherer Goblin";
 
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 3);
@@ -89,5 +89,5 @@ INSTANCE YGobbo_Green (Mst_Default_Gobbo_Green)
 
 	B_SetVisuals_Gobbo_Green();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_01); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
 };

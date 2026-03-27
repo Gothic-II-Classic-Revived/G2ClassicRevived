@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Bloodfly(C_Npc)			
 {
 	//----- Monster -----
-	name							=	"Bloodfly";
+	name							=	"Blutfliege";
 	guild							=	GIL_BLOODFLY;
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLOODFLY;
 
@@ -75,7 +75,7 @@ INSTANCE Bloodfly	(Mst_Default_Bloodfly)
 
 INSTANCE BloodflyJuvenile	(Mst_Default_Bloodfly)
 {
-	name							=	"Small Bloodfly";
+	name							=	"Kleine Blutfliege";
 
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 3);
@@ -95,7 +95,7 @@ INSTANCE BloodflyJuvenile	(Mst_Default_Bloodfly)
 };
 INSTANCE BloodflyJuvenileTEST	(Mst_Default_Bloodfly)
 {
-	name							=	"Small Bloodfly";
+	name							=	"Kleine Blutfliege";
 	
 	level							=	3;
 	

@@ -4,7 +4,7 @@
 
 PROTOTYPE Mst_Default_OrcBiter(C_Npc)			
 {
-	name							=	"Chomper";
+	name							=	"Beisser";
 	guild							=	GIL_SCAVENGER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCBITER;
 

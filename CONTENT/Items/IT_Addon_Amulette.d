@@ -76,7 +76,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 
-	description		=  "Franco's amulet";
+	description		=  "Franco's Amulett";
 
 	TEXT[2]			= NAME_Bonus_Str;
 	COUNT[2]		= STR_FRANCO;
@@ -138,7 +138,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Amulet of the healer";
+	description		=  "Amulett der Heiler";
 
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= HP_Amulett_Solo_Bonus;
@@ -203,7 +203,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Ring of the healers";
+	description		=  "Ring der Heiler";
 
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= HP_Ring_Solo_Bonus;
@@ -249,7 +249,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		//aktuelle Hitpoints werden nicht gesteigert. (Sonst Heilmaschine)
 	};
 //---------------------------------------------------------------------------------------------------------
-	INSTANCE  ItRi_Addon_Health_02 (C_Item)  //Höhle zum Canyon
+	INSTANCE  ItRi_Addon_Health_02 (C_Item)  //Hhle zum Canyon
 {
 	name 			=	NAME_Ring;
 
@@ -268,7 +268,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Ring of the healers";
+	description		=  "Ring der Heiler";
 
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= HP_Ring_Solo_Bonus;
@@ -336,7 +336,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Amulet of the priests";
+	description		=  "Amulett der Priester";
 
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= MA_Amulett_Solo_Bonus;
@@ -401,7 +401,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Ring of the priests";
+	description		=  "Ring der Priester";
 
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= MA_Ring_Solo_Bonus;
@@ -466,7 +466,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Ring of the priests";
+	description		=  "Ring der Priester";
 
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= MA_Ring_Solo_Bonus;
@@ -513,9 +513,9 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 		
 	};
 //------------------------------------------------------------------------------------------
-// Kumulatives Stärke Amulett (Maya) 
+// Kumulatives Strke Amulett (Maya) 
 //------------------------------------------------------------------------------------------
-	INSTANCE  ItAm_Addon_STR(C_Item)  //feuerwaranhöhle strand
+	INSTANCE  ItAm_Addon_STR(C_Item)  //feuerwaranhhle strand
 {
 	name 			=	NAME_Amulett;
 
@@ -534,7 +534,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Amulet of the warriors";
+	description		=  "Amulett der Krieger";
 
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= STR_Amulett_Solo_Bonus;
@@ -600,7 +600,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Ring of the warriors";
+	description		=  "Ring der Krieger";
 
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= STR_Ring_Solo_Bonus;
@@ -667,7 +667,7 @@ const int  STR_Amulett_Artefakt_Bonus	=   40; //wenn schon beide Ringe equipped 
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		=  "Ring of the warriors";
+	description		=  "Ring der Krieger";
 
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= STR_Ring_Solo_Bonus;

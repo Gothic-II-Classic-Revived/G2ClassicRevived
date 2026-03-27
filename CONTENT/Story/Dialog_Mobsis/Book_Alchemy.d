@@ -23,18 +23,18 @@ FUNC VOID Use_BookstandALCHEMY1_S1()
 
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Potions of Magic Power");
-					Doc_PrintLine	( nDocID,  0, "and Ingredients"						);
+					Doc_PrintLine	( nDocID,  0, "Tränke magischer Kraft");
+					Doc_PrintLine	( nDocID,  0, "und ihre Zutaten"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Mana Essence"						);
-					Doc_PrintLine	( nDocID,  0, "2 fire nettles"						);
+					Doc_PrintLine	( nDocID,  0, "Mana Essenz"						);
+					Doc_PrintLine	( nDocID,  0, "2 Feuernesseln"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Mana Extract"						);
-					Doc_PrintLine	( nDocID,  0, "2 fireweeds"						);
+					Doc_PrintLine	( nDocID,  0, "Mana Extrakt"						);
+					Doc_PrintLine	( nDocID,  0, "2 Feuerkräuter"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Mana Elixir"						);
-					Doc_PrintLine	( nDocID,  0, "2 fire roots"						);
+					Doc_PrintLine	( nDocID,  0, "Mana Elixier"						);
+					Doc_PrintLine	( nDocID,  0, "2 Feuerwurzeln"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					
 					
@@ -42,13 +42,13 @@ FUNC VOID Use_BookstandALCHEMY1_S1()
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "All work at the alchemist's bench requires a laboratory flask which is used up in the process."	); 
+					Doc_PrintLines	( nDocID,  1, "Jegliche Arbeit am Alchemietisch  erfordert eine Laborwasserflasche, die während des Prozesses verbraucht wird."	); 
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "To brew any healing potions or potions to strengthen magic power, you need a special ingredient and a plant:"			);
-					Doc_PrintLine	( nDocID,  1, "Meadow Knotweed"		);
+					Doc_PrintLines	( nDocID,  1, "Für das Brauen von Tränken der Heilung oder der Stärkung der magischen Kraft, benötigt der Anwender neben der speziellen Zutat immer eine Pflanze:"			);
+					Doc_PrintLine	( nDocID,  1, "Feldknöterich"		);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "To brew any potions that effect permanent changes to the body or spirit, you need a certain plant:"						);
-					Doc_PrintLines	( nDocID,  1, "King's Sorrel"		);
+					Doc_PrintLines	( nDocID,  1, "Für das Brauen von Tränken die permanente Veränderungen des Körpers oder Geistes bewirken, benötigt der Anwender immer eine Pflanze:"						);
+					Doc_PrintLines	( nDocID,  1, "Kronstöckl"		);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Alchemy1 == FALSE)
@@ -79,18 +79,18 @@ FUNC VOID Use_BookstandALCHEMY2_S1()
 
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Healing Potions");
-					Doc_PrintLine	( nDocID,  0, "and Ingredients"						);
+					Doc_PrintLine	( nDocID,  0, "Heiltränke");
+					Doc_PrintLine	( nDocID,  0, "und ihre Zutaten"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Essence of Healing"						);
-					Doc_PrintLine	( nDocID,  0, "2 healing plants"						);
+					Doc_PrintLine	( nDocID,  0, "Essenz heilender Kraft"						);
+					Doc_PrintLine	( nDocID,  0, "2 Heilpflanzen"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Extract of Healing"						);
-					Doc_PrintLine	( nDocID,  0, "2 healing herbs"						);
+					Doc_PrintLine	( nDocID,  0, "Extrakt heilender Kraft"						);
+					Doc_PrintLine	( nDocID,  0, "2 Heilkräuter"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Elixir of Healing"						);
-					Doc_PrintLine	( nDocID,  0, "2 healing roots"						);
+					Doc_PrintLine	( nDocID,  0, "Elixier heilender Kraft"						);
+					Doc_PrintLine	( nDocID,  0, "2 Heilwurzeln"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					
 					
@@ -98,13 +98,13 @@ FUNC VOID Use_BookstandALCHEMY2_S1()
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "All work at the alchemist's bench requires a laboratory flask which is used up in the process."	); 
+					Doc_PrintLines	( nDocID,  1, "Jegliche Arbeit am Alchemietisch  erfordert eine Laborwasserflasche, die während des Prozesses verbraucht wird."	); 
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "To brew any healing potions or potions to strengthen magic power, you need a special ingredient and a plant:"			);
-					Doc_PrintLine	( nDocID,  1, "Meadow Knotweed"		);
+					Doc_PrintLines	( nDocID,  1, "Für das Brauen von Tränken der Heilung oder der Stärkung der magischen Kraft, benötigt der Anwender neben der speziellen Zutat immer eine Pflanze:"			);
+					Doc_PrintLine	( nDocID,  1, "Feldknöterich"		);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "To brew any potions that effect permanent changes to the body or spirit, you need a certain plant:"						);
-					Doc_PrintLines	( nDocID,  1, "King's Sorrel"		);
+					Doc_PrintLines	( nDocID,  1, "Für das Brauen von Tränken die permanente Veränderungen des Körpers oder Geistes bewirken, benötigt der Anwender immer eine Pflanze:"						);
+					Doc_PrintLines	( nDocID,  1, "Kronstöckl"		);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Alchemy2 == FALSE)
@@ -134,32 +134,32 @@ FUNC VOID Use_BookstandALCHEMY3_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Potions for Permanent Changes");
-					Doc_PrintLine	( nDocID,  0, "and Ingredients"						);
+					Doc_PrintLines	( nDocID,  0, "Tränke permanenter Veränderungen");
+					Doc_PrintLine	( nDocID,  0, "und ihre Zutaten"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					
 					
-					Doc_PrintLine	( nDocID,  0, "Elixir of Dexterity"						);
-					Doc_PrintLine	( nDocID,  0, "1 goblin berry"						);
+					Doc_PrintLine	( nDocID,  0, "Elixier der Geschicklichkeit"						);
+					Doc_PrintLine	( nDocID,  0, "1 Goblin Beere"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Speed Potion"						);
-					Doc_PrintLines	( nDocID,  0, "1 snapperweed - This potion requires not king's sorrel, but meadow knotweed."						);
+					Doc_PrintLine	( nDocID,  0, "Trank der Geschwindigkeit"						);
+					Doc_PrintLines	( nDocID,  0, "1 Snapperkraut - dieser Trank benötigt keinen Kronstöckl, sondern Feldknöterich"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Elixir of Strength"						);
-					Doc_PrintLine	( nDocID,  0, "1 dragonroot"						);
+					Doc_PrintLine	( nDocID,  0, "Elixier der Stärke"						);
+					Doc_PrintLine	( nDocID,  0, "1 Drachenwurzel"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Elixir of Life"						);
-					Doc_PrintLine	( nDocID,  0, "1 healing root"						);
+					Doc_PrintLines	( nDocID,  0, "Elixier des Lebens"						);
+					Doc_PrintLine	( nDocID,  0, "1 Heilwurzel"						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Elixir of Spirit"						);
-					Doc_PrintLine	( nDocID,  0, "1 fire root"						);
+					Doc_PrintLines	( nDocID,  0, "Elixier des Geistes"						);
+					Doc_PrintLine	( nDocID,  0, "1 Feuerwurzel"						);
 					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Brewing these recipes is the highest art of alchemy. They all have the use of king's sorrel as an ingredient in common."); 
+					Doc_PrintLines	( nDocID,  1, "Das Brauen dieser Rezepturen ist die hohe Kunst der Alchemie. Ihnen allen ist zu eigen, dass sie einen Kronstöckl als Zutat verlangen."); 
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "The potion of speed is much simpler to create which is also due to the fact that you do not need king's sorrel."						);
+					Doc_PrintLines	( nDocID,  1, "Der Trank der Geschwindigkeit ist viel einfacher herzustellen, was auch daran liegt, das man keinen Kronstöckl benötigt."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					
 					
@@ -198,10 +198,10 @@ FUNC VOID Use_BookstandRevived_ALCHEMY1_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0,"");										
-					Doc_PrintLines	( nDocID,  0,"The Wine of Oblivion");
+					Doc_PrintLines	( nDocID,  0,"Der Wein des Vergessens");
 					Doc_PrintLine	( nDocID,  0,"--------------------");
 					Doc_PrintLine	( nDocID,  0,"");			
-					Doc_PrintLines	( nDocID,  0,"The best grapes for this wine are found high up on the slopes of Archolos. The art of allowing this wine to ripen to perfection lies in not disturbing it through any kind of movement. The grapes are blended with the common syos herb in front of the wine cellars.");
+					Doc_PrintLines	( nDocID,  0,"Hoch oben an den Hängen des Archolos, gibt es die besten Trauben, die man für diesen Wein finden kann. Die Kunst diesen Wein zu seiner Vollendung reifen zu lassen, besteht darin, ihn unter keinen Umständen jeglicher Bewegung auszusetzen. Die Trauben werden vor der Kellerei mit dem gemeinen Syos-kraut versetzt.");
 
 
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		); 
@@ -209,7 +209,7 @@ FUNC VOID Use_BookstandRevived_ALCHEMY1_S1()
 					Doc_PrintLines	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1,"");
-					Doc_PrintLines	( nDocID,  1,"Observe and marvel as the master turns the clear water of the well to wine. The people pay tribute to him and feast on his gift. The master punishes his lazy disciples by locking them in bottles. A fire is kindled and black snakes arise.");
+					Doc_PrintLines	( nDocID,  1,"Sehet und staunet, wenn der Magister klarstes Brunnenwasser zu vortrefflichen Wein verwandelt. Alle ihm huldigen und sich an seiner Gabe laben. Der Magister seine faulen Lehrlinge zur Strafe in Flaschen sperrt, Feuer sich auf wundersame Weise entzündet und schwarze Schlangen emporwachsen.");
 					
 					Doc_Show		( nDocID );
 					
@@ -240,16 +240,16 @@ FUNC VOID Use_BookstandRevived_ALCHEMY2_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0,"");										
-					Doc_PrintLines	( nDocID,  0,"The Balm of Vision:");
+					Doc_PrintLines	( nDocID,  0,"Das Balsam des Sehens:");
 					Doc_PrintLine	( nDocID,  0,"----------------");
 					Doc_PrintLine	( nDocID,  0,"");		
-					Doc_PrintLines	( nDocID,  0,"Cover the patient's eyes with bile. This secretion has a bitter taste. Placing this bitterness on the eye forces the patient to regard it, which makes him wise. He learns to see! Bitterness and wisdom are mutually exclusive opposites. They are each other's counterparts!");
+					Doc_PrintLines	( nDocID,  0,"Dazu wird ihm Galle auf die Augen gestrichen. Galle ist bitter im Geschmack. Wird dieses Bittere auf das Auge genommen, dh: schauen wir das Bittere an, so erwächst daraus Weisheit. Wir werden sehend! Bitterkeit und Weisheit schliessen einander aus. Sie sind Gegenpole!");
 
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1,"");
 					Doc_PrintLines	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1,"");
-					Doc_PrintLines	( nDocID,  1,"Tears, suffering and disappointment are bitter, but wisdom is the consoling influence of every kind of pain. Bitterness and wisdom are alternatives. Where there is bitterness, there is no room for wisdom, and where there is wisdom, there is no bitterness.");
+					Doc_PrintLines	( nDocID,  1,"Tränen, Leid und Enttäuschung sind bitter, die Weisheit aber ist die Trösterin in jedem seelischen Schmerz. Bitterkeit und Weisheit bilden eine Alternative. Wo Bitterkeit, da fehlt die Weisheit, und wo Weisheit, da gibt es keine Bitterkeit.");
 					
 					Doc_Show		( nDocID );
 					

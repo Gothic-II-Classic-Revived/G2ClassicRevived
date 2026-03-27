@@ -20,7 +20,7 @@ const int	Value_CoragonBeer		=	40;		const int	HP_CoragonBeer	=	3;		const int	Man
 
 const int	Value_Booze		=	12;		const int	HP_Booze		=	4;	const int	Mana_Booze		=	1;
 const int	Value_Wine		=	20;		const int	HP_Wine			=	2;	const int	Mana_Wine		=	1;
-const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte geändert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
+const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte gendert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
 
 
 
@@ -32,7 +32,7 @@ const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	
 
 INSTANCE ItFo_Apple (C_Item)
 {	
-	name 				=	"Apple";
+	name 				=	"Apfel";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -41,15 +41,15 @@ INSTANCE ItFo_Apple (C_Item)
 	
 	visual 				=	"ItFo_Apple.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"FOOD";
+	scemeName			=	"Nahrung";
 	on_state[0]			=	Use_Apple;
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
 	COUNT[1]			= 	HP_Apple;
 	
-	TEXT[3]				=    "A fresh apple,";
-	TEXT[4]				=    "firm and juicy.";
+	TEXT[3]				=    "Ein frischer Apfel";
+	TEXT[4]				=    "knackig und saftig";
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	Value_Apple;
 
@@ -83,7 +83,7 @@ INSTANCE ItFo_Apple (C_Item)
 
 INSTANCE ItFo_Cheese (C_Item)
 {	
-	name 				=	"Cheese";
+	name 				=	"KÃ¤se";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -109,7 +109,7 @@ INSTANCE ItFo_Cheese (C_Item)
 
 INSTANCE ItFo_Bacon (C_Item)
 {	
-	name 				=	"Bacon";
+	name 				=	"Schinken";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -136,7 +136,7 @@ INSTANCE ItFo_Bacon (C_Item)
 
 INSTANCE ItFo_Bread (C_Item)
 {	
-	name 				=	"Bread";
+	name 				=	"Brot";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -164,7 +164,7 @@ INSTANCE ItFo_Bread (C_Item)
 
 INSTANCE ItFo_Fish (C_Item)
 {	
-	name 				=	"Fish";
+	name 				=	"Fisch";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -192,7 +192,7 @@ INSTANCE ItFo_Fish (C_Item)
 
 INSTANCE ItFoMuttonRaw (C_Item)
 {	
-	name 				=	"Raw Meat";
+	name 				=	"rohes Fleisch";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -201,7 +201,7 @@ INSTANCE ItFoMuttonRaw (C_Item)
 	
 	visual 				=	"ItFoMuttonRaw.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"MEAT";
+	scemeName			=	"Fleisch.";
 	on_state[0]			=	Use_RawMeat;
 
 	description			= 	name;
@@ -224,7 +224,7 @@ INSTANCE ItFoMuttonRaw (C_Item)
 
 INSTANCE ItFoMutton (C_Item)	//kommt aus Bratpfannen-Mobsi !!!
 {	
-	name 				=	"Fried Meat";
+	name 				=	"Gebratenes Fleisch";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -233,7 +233,7 @@ INSTANCE ItFoMutton (C_Item)	//kommt aus Bratpfannen-Mobsi !!!
 	
 	visual 				=	"ItFoMutton.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"MEAT";
+	scemeName			=	"Fleisch.";
 	on_state[0]			=	Use_Meat;
 
 	description			= 	name;
@@ -252,7 +252,7 @@ INSTANCE ItFoMutton (C_Item)	//kommt aus Bratpfannen-Mobsi !!!
 
 INSTANCE ItFo_Stew (C_Item)
 {	
-	name 				=	"Stew";
+	name 				=	"Eintopf";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -261,7 +261,7 @@ INSTANCE ItFo_Stew (C_Item)
 	
 	visual 				=	"ItFo_Stew.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	Use_Stew;
 
 	description			= 	name;
@@ -279,7 +279,7 @@ INSTANCE ItFo_Stew (C_Item)
 
 INSTANCE ItFo_XPStew (C_Item)
 {	
-	name 				=	"Thekla's Stew";
+	name 				=	"Thekla's Eintopf";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -288,7 +288,7 @@ INSTANCE ItFo_XPStew (C_Item)
 	
 	visual 				=	"ItFo_Stew.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	Use_XPStew;
 
 	description			= 	name;
@@ -309,7 +309,7 @@ INSTANCE ItFo_XPStew (C_Item)
 
 INSTANCE ItFo_CoragonsBeer (C_Item)
 {	
-	name 				=	"Dark Paladin";
+	name 				=	"Dunkles Paladiner";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -325,7 +325,7 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_CoragonBeer;
 	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_CoragonBeer;
 	
-	TEXT[4]				= 	"Coragon's Special Beer";		
+	TEXT[4]				= 	"Coragons Spezial Bier";		
 	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_CoragonBeer;
 
 };
@@ -347,7 +347,7 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 
 INSTANCE ItFo_FishSoup (C_Item)
 {	
-	name 				=	"Fish Soup";
+	name 				=	"Fischsuppe";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -356,7 +356,7 @@ INSTANCE ItFo_FishSoup (C_Item)
 	
 	visual 				=	"ItFo_FishSoup.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"RICE";
+	scemeName			=	"Reis";
 	on_state[0]			=	Use_FishSoup;
 
 	description			= 	name;
@@ -375,7 +375,7 @@ INSTANCE ItFo_FishSoup (C_Item)
 
 INSTANCE ItFo_Sausage (C_Item)
 {	
-	name 				=	"Sausage";
+	name 				=	"Wurst";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -401,7 +401,7 @@ INSTANCE ItFo_Sausage (C_Item)
 
 INSTANCE ItFo_Honey (C_Item)
 {	
-	name 				=	"Honey";
+	name 				=	"Honig";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -432,7 +432,7 @@ INSTANCE ItFo_Honey (C_Item)
 
 INSTANCE ItFo_Water (C_Item)
 {	
-	name 				=	"Water";
+	name 				=	"Wasser";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -441,7 +441,7 @@ INSTANCE ItFo_Water (C_Item)
 	
 	visual 				=	"ItFo_Water.3ds";
 	material 			=	MAT_GLAS;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 	on_state[0]			=	Use_Water;
 
 	description			= 	name;
@@ -462,7 +462,7 @@ INSTANCE ItFo_Water (C_Item)
 
 INSTANCE ItFo_Beer (C_Item)
 {	
-	name 				=	"Beer";
+	name 				=	"Bier";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -490,7 +490,7 @@ INSTANCE ItFo_Beer (C_Item)
 
 INSTANCE ItFo_Booze (C_Item)
 {	
-	name 				=	"Gin";
+	name 				=	"Wacholder";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -499,7 +499,7 @@ INSTANCE ItFo_Booze (C_Item)
 	
 	visual 				=	"ItFo_Booze.3DS";
 	material 			=	MAT_GLAS;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 	on_state[0]			=	Use_Booze;
 
 	description			= 	name;
@@ -518,7 +518,7 @@ INSTANCE ItFo_Booze (C_Item)
 
 INSTANCE ItFo_Wine (C_Item)
 {	
-	name 				=	"Wine";
+	name 				=	"Wein";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -527,7 +527,7 @@ INSTANCE ItFo_Wine (C_Item)
 	
 	visual 				=	"ItFo_Wine.3DS";
 	material 			=	MAT_GLAS;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 	on_state[0]			=	Use_Wine;
 
 	description			= 	name;
@@ -546,7 +546,7 @@ INSTANCE ItFo_Wine (C_Item)
 
 INSTANCE ItFo_Milk (C_Item)
 {	
-	name 				=	"Milk";
+	name 				=	"Milch";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -555,7 +555,7 @@ INSTANCE ItFo_Milk (C_Item)
 	
 	visual 				=	"ItFo_Milk.3DS";
 	material 			=	MAT_GLAS;
-	scemeName			=	"POTION";
+	scemeName			=	"Trank";
 	on_state[0]			=	Use_Milk;
 
 	description			= 	name;

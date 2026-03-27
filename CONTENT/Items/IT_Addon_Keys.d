@@ -1,6 +1,6 @@
 INSTANCE ITKE_PORTALTEMPELWALKTHROUGH_ADDON (C_Item)
 {
-	name 				=	"Rusty Key";
+	name 				=	"verrosteter Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -12,8 +12,8 @@ INSTANCE ITKE_PORTALTEMPELWALKTHROUGH_ADDON (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"Fits the door of the";
-	TEXT[3]				=   "Teleporter stone in the portal temple";
+	TEXT[2]				=	"Passt zur Tür des";
+	TEXT[3]				=   "Teleportsteins im Portal-Tempel";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 //-----------------------------------------------------------------------
@@ -31,8 +31,8 @@ INSTANCE ITKE_Greg_ADDON_MIS (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"The key to the monastery's";
-	TEXT[3]				=   "Captain's hut";
+	TEXT[2]				=	"Der Schlüssel zur";
+	TEXT[3]				=   "Hütte von Kapitän";
 	TEXT[4]				=   "Greg";	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -49,10 +49,10 @@ INSTANCE ITKE_Addon_Tavern_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Lou's key";
+	description			= 	"Lou's Schlüssel";
 	
-	TEXT[2]				=	"Fits the tavern";
-	TEXT[3]				=   "in the bandit camp";
+	TEXT[2]				=	"Passt zur Kneipe";
+	TEXT[3]				=   "im Banditenlager";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -69,10 +69,10 @@ INSTANCE ITKE_Addon_Esteban_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Esteban's key";
+	description			= 	"Esteban's Schlüssel";
 	
-	TEXT[2]				=	"Fits the chest";
-	TEXT[3]				=   "in his hideout";
+	TEXT[2]				=	"Passt zu der Truhe";
+	TEXT[3]				=   "in seinem Versteck.";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -90,10 +90,10 @@ INSTANCE ITKE_ORLAN_TELEPORTSTATION (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Orlan's key";
+	description			= 	"Orlan's Schlüssel";
 	
-	TEXT[2]				=	"Fits the door of the cave";
-	TEXT[3]				=   "south of his tavern";
+	TEXT[2]				=	"Passt zur Tür der Höhle";
+	TEXT[3]				=   "südlich seiner Taverne";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -114,8 +114,8 @@ INSTANCE ITKE_CANYONLIBRARY_HIERARCHY_BOOKS_ADDON (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"from the orc shaman in the orc camp";
-	TEXT[3]				=   "in front of the Library of the Scholars";
+	TEXT[2]				=	"hatte der Orkschamaneim Orklager";
+	TEXT[3]				=   "vor der Bibliothek der Gelehrten";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -132,9 +132,9 @@ INSTANCE ITKE_ADDON_BUDDLER_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Chest Key";
+	description			= 	"Truhenschlüssel";
 	
-	TEXT[2]				=	"From the bandit camp";
+	TEXT[2]				=	"Aus dem Banditenlager";
 	TEXT[3]				=   "";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
@@ -152,9 +152,9 @@ INSTANCE ITKE_ADDON_SKINNER (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Chest Key";
+	description			= 	"Truhenschlüssel";
 	
-	TEXT[2]				=	"Skinner's key";
+	TEXT[2]				=	"Skinner's Schlüssel";
 	TEXT[3]				=   "";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
@@ -172,9 +172,9 @@ INSTANCE ITKE_Addon_Thorus (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Thorus' key";
+	description			= 	"Thorus Schlüssel";
 	
-	TEXT[2]				=	"Fits a chest";
+	TEXT[2]				=	"Passt zu einer Truhe";
 	TEXT[3]				=   "";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;

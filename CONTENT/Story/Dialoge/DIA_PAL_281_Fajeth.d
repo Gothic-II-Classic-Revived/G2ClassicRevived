@@ -37,11 +37,11 @@ FUNC VOID DIA_Fajeth_EXIT_Info()
 };
 
 /* 
-	Seit einiger Zeit suchen wir in diesem verfluchten Gebiet eine Stelle, die noch erzhaltiges Gestein enthält, 
-	nicht ständig von Orkpatroullien heimgesucht wird, wo die dauernden Drachenangriffe ausbleiben!
-	Wir sind völlig verdreckt und ausgehungert, haben unzählige Kämpfe ausgetragen 
-	und haben endlich hier den Funken einer Hoffnung gefunden bei diesem dreckigen Loch in der Erde dort drüben unseren praktisch unmöglichen Auftrag zu erledigen.
-	Und da kommt einer wie du daher und besitzt die Frechheit uns zu sagen, wir seien überfällig! Entweder bist du völlig verrückt oder einfach nur unverschämt!
+	Seit einiger Zeit suchen wir in diesem verfluchten Gebiet eine Stelle, die noch erzhaltiges Gestein enthlt, 
+	nicht stndig von Orkpatroullien heimgesucht wird, wo die dauernden Drachenangriffe ausbleiben!
+	Wir sind vllig verdreckt und ausgehungert, haben unzhlige Kmpfe ausgetragen 
+	und haben endlich hier den Funken einer Hoffnung gefunden bei diesem dreckigen Loch in der Erde dort drben unseren praktisch unmglichen Auftrag zu erledigen.
+	Und da kommt einer wie du daher und besitzt die Frechheit uns zu sagen, wir seien berfllig! Entweder bist du vllig verrckt oder einfach nur unverschmt!
 */
 ///////////////////////////////////////////////////////////////////////	
 //	Info First
@@ -105,8 +105,8 @@ func void DIA_Fajeth_Hallo_Info ()
 		AI_Output (self, other, "DIA_Fajeth_Hallo_12_07"); //It would certainly be helpful to us if you could use your Innos-given power for us.
 		
 		
-		Info_AddChoice 	  (DIA_Fajeth_Hallo,"What can I do for you?",DIA_Fajeth_Hallo_Tun);	
-		Info_AddChoice 	  (DIA_Fajeth_Hallo,"My mission is more urgent.",DIA_Fajeth_Hallo_KDFNein);	
+		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Was kann ich fÃ¼r dich tun?",DIA_Fajeth_Hallo_Tun);	
+		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Meine Mission hat Vorrang.",DIA_Fajeth_Hallo_KDFNein);	
 	}
 	else if (other.guild == GIL_MIL)
 	{
@@ -114,8 +114,8 @@ func void DIA_Fajeth_Hallo_Info ()
 		AI_Output (self, other, "DIA_Fajeth_Hallo_12_09"); //That includes the requisitioning of men. You are in the service of Innos - therefore you will follow my orders.
 		
 		
-		Info_AddChoice 	  (DIA_Fajeth_Hallo,"What can I do for you?",DIA_Fajeth_Hallo_Tun);	
-		Info_AddChoice 	  (DIA_Fajeth_Hallo,"I already have an order, from Garond.",DIA_Fajeth_Hallo_MILNein);	
+		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Was kann ich fÃ¼r dich tun?",DIA_Fajeth_Hallo_Tun);	
+		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Ich habe bereits einen Befehl, von Garond.",DIA_Fajeth_Hallo_MILNein);	
 	}
 	else //GIL_SLD
 	{
@@ -123,8 +123,8 @@ func void DIA_Fajeth_Hallo_Info ()
 		AI_Output (self, other, "DIA_Fajeth_Hallo_12_11"); //But before I send you back, you will carry out a mission for me.
 		
 		
-		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Everything has its price.",DIA_Fajeth_Hallo_SLDJa);	
-		Info_AddChoice 	  (DIA_Fajeth_Hallo,"No, I've got no time...",DIA_Fajeth_Hallo_SLDNein);	
+		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Alles hat seinen Preis.",DIA_Fajeth_Hallo_SLDJa);	
+		Info_AddChoice 	  (DIA_Fajeth_Hallo,"Nein, ich habe keine Zeit,...",DIA_Fajeth_Hallo_SLDNein);	
 	};
 }; 
 FUNC VOID DIA_Fajeth_Hallo_Tun () //Mission
@@ -156,7 +156,7 @@ FUNC VOID DIA_Fajeth_Hallo_Tun () //Mission
 	MIS_Fajeth_Kill_Snapper = LOG_RUNNING;
 	Log_CreateTopic (TOPIC_FajethKillSnapper,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_FajethKillSnapper,LOG_RUNNING);
-	B_LogEntry (TOPIC_FajethKillSnapper,"Fajeth has instructed me to hunt the snappers that have been roaming around the camp for days.");
+	B_LogEntry (TOPIC_FajethKillSnapper,"Fajeth hat mich beauftragt die Snapper zu jagen, die seit Tagen um das Lager streifen.");
 	
 	Info_ClearChoices (DIA_Fajeth_Hallo);
 	
@@ -185,8 +185,8 @@ FUNC VOID DIA_Fajeth_Hallo_SLDJa ()
 	AI_Output (self, other, "DIA_Fajeth_Hallo_SLDJa_12_03"); //Do we have an agreement?
 	Fajeth_Pay = TRUE;
 	Info_ClearChoices (DIA_Fajeth_Hallo);
-	Info_AddChoice 	  (DIA_Fajeth_Hallo,"What can I do for you?",DIA_Fajeth_Hallo_Tun);	
-	Info_AddChoice 	  (DIA_Fajeth_Hallo,"No, I've got no time...",DIA_Fajeth_Hallo_SLDNein);	
+	Info_AddChoice 	  (DIA_Fajeth_Hallo,"Was kann ich fÃ¼r dich tun?",DIA_Fajeth_Hallo_Tun);	
+	Info_AddChoice 	  (DIA_Fajeth_Hallo,"Nein, ich habe keine Zeit,...",DIA_Fajeth_Hallo_SLDNein);	
 };
 FUNC VOID DIA_Fajeth_Hallo_SLDNein ()
 {
@@ -206,7 +206,7 @@ instance DIA_Fajeth_Leader		(C_INFO)
 	condition	 = 	DIA_Fajeth_Leader_Condition;
 	information	 = 	DIA_Fajeth_Leader_Info;
 	permanent 	 =  FALSE;
-	description	 =  "I killed the leader of the pack.";
+	description	 =  "Ich habe den RudelfÃ¼hrer erlegt.";
 };
 func int DIA_Fajeth_Leader_Condition ()
 {
@@ -244,7 +244,7 @@ instance DIA_Fajeth_SNAPPER_KILLED		(C_INFO)
 	condition	 = 	DIA_Fajeth_SNAPPER_KILLED_Condition;
 	information	 = 	DIA_Fajeth_SNAPPER_KILLED_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"The snappers are done for.";
+	description	 = 	"Die Snapper sind erledigt.";
 };
 
 func int DIA_Fajeth_SNAPPER_KILLED_Condition ()
@@ -280,7 +280,7 @@ instance DIA_Fajeth_Running		(C_INFO)
 	condition	 = 	DIA_Fajeth_Running_Condition;
 	information	 = 	DIA_Fajeth_Running_Info;
 	permanent	 =  TRUE;
-	description  =  "How's the morale of your men?";
+	description  =  "Wie ist die Moral deiner MÃ¤nner?";
 };
 
 func int DIA_Fajeth_Running_Condition ()
@@ -306,7 +306,7 @@ instance DIA_Fajeth_BELOHNUNG		(C_INFO)
 	condition	 = 	DIA_Fajeth_BELOHNUNG_Condition;
 	information	 = 	DIA_Fajeth_BELOHNUNG_Info;
 	permanent	 =  FALSE;
-	description	 = 	"Tell me how much ore you have mined so far.";
+	description	 = 	"Sag mir, wieviel Erz ihr bisher gefÃ¶rdert habt.";
 };
 
 func int DIA_Fajeth_BELOHNUNG_Condition ()
@@ -329,7 +329,7 @@ func void DIA_Fajeth_BELOHNUNG_Info ()
 	
 	Fajeth_Ore = TRUE;
 	
-	B_LogEntry (TOPIC_ScoutMine,"Fajeth's scrapers have mined TWO crates of ore so far.");
+	B_LogEntry (TOPIC_ScoutMine,"Die SchÃ¼rfer von Fajeth haben bisher ZWEI Kisten Erz gefÃ¶rdert.");
 	
 	AI_StopProcessInfos (self);
 };
@@ -343,7 +343,7 @@ instance DIA_Fajeth_Perm2		(C_INFO)
 	condition	 = 	DIA_Fajeth_Perm2_Condition;
 	information	 = 	DIA_Fajeth_Perm2_Info;
 	permanent	 =  TRUE;
-	description  =  "How's the ore production going?";
+	description  =  "Wie lÃ¤uft die ErzfÃ¶rderung?";
 };
 
 func int DIA_Fajeth_Perm2_Condition ()
@@ -364,7 +364,7 @@ func void DIA_Fajeth_Perm2_Info ()
 //#####################################################################
 //##
 //##
-//##							KAPITEL 3 und höher
+//##							KAPITEL 3 und hher
 //##
 //##
 //#####################################################################
@@ -379,7 +379,7 @@ instance DIA_Fajeth_ERZABBAU		(C_INFO)
 	condition	 = 	DIA_Fajeth_ERZABBAU_Condition;
 	information	 = 	DIA_Fajeth_ERZABBAU_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How's the ore mining going?";
+	description	 = 	"Wie lÃ¤uft der Erzabbau?";
 };
 
 func int DIA_Fajeth_ERZABBAU_Condition ()

@@ -67,7 +67,7 @@ INSTANCE DIA_Babo_Anliegen   (C_INFO)
 	condition   = DIA_Babo_Anliegen_Condition;
 	information = DIA_Babo_Anliegen_Info;
 	permanent   = FALSE;
-	description	= "What request would that be?";
+	description	= "Was hast du für ein Anliegen?";
 };
 FUNC INT DIA_Babo_Anliegen_Condition()
 {
@@ -86,7 +86,7 @@ FUNC VOID DIA_Babo_Anliegen_Info()
 	
 	Log_CreateTopic (Topic_BaboTrain,LOG_MISSION);
 	Log_SetTopicStatus (Topic_BaboTrain,LOG_RUNNING);
-	B_LogEntry (Topic_BaboTrain,"If I can persuade the paladin Sergio to practice a bit of fighting with Babo, he'll train me to fight with two-handed weapons.");
+	B_LogEntry (Topic_BaboTrain,"Wenn ich den Paladin Sergio überrede, mit Babo ein paar Kampfübungen durchzuführen, trainiert er mich im zweihändigen Kampf.");
 	
 };
 //***********************************************************************
@@ -99,7 +99,7 @@ INSTANCE DIA_Babo_Sergio   (C_INFO)
 	condition   = DIA_Babo_Sergio_Condition;
 	information = DIA_Babo_Sergio_Info;
 	permanent   = FALSE;
-	description	= "I talked to Sergio.";
+	description	= "Ich habe mit Sergio gesprochen...";
 };
 FUNC INT DIA_Babo_Sergio_Condition()
 {
@@ -120,7 +120,7 @@ FUNC VOID DIA_Babo_Sergio_Info()
 	B_GivePlayerXP ((XP_Ambient)*2);
 	
 	Log_CreateTopic (Topic_KlosterTeacher,LOG_NOTE);
-	B_LogEntry (Topic_KlosterTeacher,"Babo can train me in two-handed combat.");
+	B_LogEntry (Topic_KlosterTeacher,"Babo kann mich im zweihändigen Kampf trainieren.");
 };
 //***************************************************************************************
 //			Ich will trainieren
@@ -132,7 +132,7 @@ INSTANCE DIA_Babo_Teach(C_INFO)
 	condition	= DIA_Babo_Teach_Condition;
 	information	= DIA_Babo_Teach_Info;
 	permanent	= TRUE;
-	description = "I'm ready for training.";
+	description = "Ich bin bereit für das Training.";
 };                       
 //----------------------------------
 var int DIA_Babo_Teach_permanent;
@@ -254,7 +254,7 @@ INSTANCE DIA_Babo_Wurst(C_INFO)
 	condition	= DIA_Babo_Wurst_Condition;
 	information	= DIA_Babo_Wurst_Info;
 	permanent	= FALSE;
-	description = "Here, have a sausage.";
+	description = "Hier, nimm eine Wurst.";
 };                       
 
 FUNC INT DIA_Babo_Wurst_Condition()
@@ -288,8 +288,8 @@ FUNC VOID DIA_Babo_Wurst_Info()
 	AI_PrintScreen	(NovizeText, -1, YPOS_GOLDGIVEN, FONT_ScreenSmall, 2);
 	
 	Info_ClearChoices (DIA_Babo_Wurst);
-	Info_AddChoice (DIA_Babo_Wurst,"All right, here, take another.",DIA_Babo_Wurst_JA);
-	Info_AddChoice (DIA_Babo_Wurst,"No, I won't do that.",DIA_Babo_Wurst_NEIN);
+	Info_AddChoice (DIA_Babo_Wurst,"Okay, hier nimm noch eine.",DIA_Babo_Wurst_JA);
+	Info_AddChoice (DIA_Babo_Wurst,"Nein das mache ich nicht.",DIA_Babo_Wurst_NEIN);
 };
 FUNC VOID DIA_Babo_Wurst_JA()
 {
@@ -318,7 +318,7 @@ INSTANCE DIA_Babo_YouAndAgon   (C_INFO)
 	condition   = DIA_Babo_YouAndAgon_Condition;
 	information = DIA_Babo_YouAndAgon_Info;
 	permanent   = FALSE;
-	description	= "What happened between you and Agon?";
+	description	= "Was ist zwischen dir und Agon passiert?";
 };
 
 FUNC INT DIA_Babo_YouAndAgon_Condition()
@@ -348,7 +348,7 @@ INSTANCE DIA_Babo_WhyDidAgon  (C_INFO)
 	condition   = DIA_Babo_WhyDidAgon_Condition;
 	information = DIA_Babo_WhyDidAgon_Info;
 	permanent   = FALSE;
-	description	= "Why did Agon do that?";
+	description	= "Warum hat Agon das getan?";
 };
 FUNC INT DIA_Babo_WhyDidAgon_Condition()
 {
@@ -373,7 +373,7 @@ INSTANCE DIA_Babo_PlantLore  (C_INFO)
 	condition   = DIA_Babo_PlantLore_Condition;
 	information = DIA_Babo_PlantLore_Info;
 	permanent   = FALSE;
-	description	= "You seem to know a thing or two about plants?";
+	description	= "Du hast wohl Ahnung von Pflanzen?";
 };
 FUNC INT DIA_Babo_PlantLore_Condition()
 {
@@ -392,7 +392,7 @@ FUNC VOID DIA_Babo_PlantLore_Info()
 	MIS_HelpBabo = LOG_RUNNING;
 	Log_CreateTopic (Topic_BaboGaertner,LOG_MISSION);
 	Log_SetTopicStatus (Topic_BaboGaertner,LOG_RUNNING);
-	B_LogEntry (Topic_BaboGaertner,"Babo would rather work in the herb garden than sweep the yard.");
+	B_LogEntry (Topic_BaboGaertner,"Babo würde lieber im Kräutergarten arbeiten, als den Hof zu fegen.");
 };
 //***********************************************************************
 //	Fegen
@@ -404,7 +404,7 @@ INSTANCE DIA_Babo_Fegen  (C_INFO)
 	condition   = DIA_Babo_Fegen_Condition;
 	information = DIA_Babo_Fegen_Info;
 	permanent   = FALSE;
-	description	= "I'm supposed to sweep the novices' chambers.";
+	description	= "Ich soll die Novizenkammern fegen.";
 };
 FUNC INT DIA_Babo_Fegen_Condition()
 {
@@ -420,7 +420,7 @@ FUNC VOID DIA_Babo_Fegen_Info()
 	AI_Output (self ,other,"DIA_Babo_Fegen_03_02"); //But I really need a 'Fist of Wind' spell scroll - you know, I got lucky and was allowed to read a book about it.
 	AI_Output (self ,other,"DIA_Babo_Fegen_03_03"); //And now, naturally, I want to try the spell. So, get me the spell scroll and I'll help you.
 	
-	B_LogEntry 	(Topic_ParlanFegen,"Babo will help me sweep the novices' chambers if I bring him a Fist of Wind spell scroll.");
+	B_LogEntry 	(Topic_ParlanFegen,"Babo hilft mir, die Novizenkammern zu fegen, wenn ich ihm eine Spruchrolle Windfaust bringe.");
 };
 //***********************************************************************
 //	Windfaust abgeben
@@ -432,7 +432,7 @@ INSTANCE DIA_Babo_Windfaust  (C_INFO)
 	condition   = DIA_Babo_Windfaust_Condition;
 	information = DIA_Babo_Windfaust_Info;
 	permanent   = TRUE;
-	description	= "About the spell scroll... (GIVE FIST OF WIND)";
+	description	= "Wegen der Spruchrolle...(WINDFAUST geben)";
 };
 //---------------------------------
 var int DIA_Babo_Windfaust_permanent;
@@ -462,7 +462,7 @@ FUNC VOID DIA_Babo_Windfaust_Info()
 		AI_StopProcessInfos (self);
 		Npc_ExchangeRoutine (self,"FEGEN");
 		
-		B_LogEntry 	(Topic_ParlanFegen,"Babo will help me sweep the novices' chambers now.");
+		B_LogEntry 	(Topic_ParlanFegen,"Babo hilft mir jetzt, die Novizenkammern zu fegen.");
 		
 	}
 	else
@@ -484,7 +484,7 @@ INSTANCE DIA_Babo_Life   (C_INFO)
 	condition   = DIA_Babo_Life_Condition;
 	information = DIA_Babo_Life_Info;
 	permanent   = TRUE;
-	description	= "How's life here in the monastery?";
+	description	= "Wie ist das Leben hier im Kloster?";
 };
 FUNC INT DIA_Babo_Life_Condition()
 {
@@ -507,7 +507,7 @@ FUNC VOID DIA_Babo_Life_Info()
 	};
 };
 //*********************************************************************
-//		Sc hat Babo den G�rtnerposten verschafft (Kap. 2)
+//		Sc hat Babo den Grtnerposten verschafft (Kap. 2)
 //*********************************************************************
 INSTANCE DIA_Babo_HowIsIt   (C_INFO)
 {
@@ -516,7 +516,7 @@ INSTANCE DIA_Babo_HowIsIt   (C_INFO)
 	condition   = DIA_Babo_HowIsIt_Condition;
 	information = DIA_Babo_HowIsIt_Info;
 	permanent   = TRUE;
-	description	= "How's it going?";
+	description	= "Wie läuft's denn so?";
 };
 FUNC INT DIA_Babo_HowIsIt_Condition()
 {
@@ -620,7 +620,7 @@ INSTANCE DIA_Babo_Kap3_Hello   (C_INFO)
 	condition   = DIA_Babo_Kap3_Hello_Condition;
 	information = DIA_Babo_Kap3_Hello_Info;
 	permanent   = FALSE;
-	description = "What are you doing here?";
+	description = "Was machst du hier?";
 };
 FUNC INT DIA_Babo_Kap3_Hello_Condition()
 {
@@ -654,7 +654,7 @@ INSTANCE DIA_Babo_Kap3_KeepTheFaith   (C_INFO)
 	condition   = DIA_Babo_Kap3_KeepTheFaith_Condition;
 	information = DIA_Babo_Kap3_KeepTheFaith_Info;
 	permanent   = FALSE;
-	description = "You must never lose faith.";
+	description = "Du darfst den Glauben niemals verlieren.";
 };
 FUNC INT DIA_Babo_Kap3_KeepTheFaith_Condition()
 {
@@ -676,7 +676,7 @@ FUNC VOID DIA_Babo_Kap3_KeepTheFaith_Info()
 };
 
 //*********************************************
-//	Das klingt aber nicht sehr gl�cklich.
+//	Das klingt aber nicht sehr glcklich.
 //*********************************************
 
 INSTANCE DIA_Babo_Kap3_Unhappy   (C_INFO)
@@ -686,7 +686,7 @@ INSTANCE DIA_Babo_Kap3_Unhappy   (C_INFO)
 	condition   = DIA_Babo_Kap3_Unhappy_Condition;
 	information = DIA_Babo_Kap3_Unhappy_Info;
 	permanent   = FALSE;
-	description = "That doesn't sound terribly happy.";
+	description = "Das klingt aber nicht sehr glücklich.";
 };
 FUNC INT DIA_Babo_Kap3_Unhappy_Condition()
 {
@@ -704,8 +704,8 @@ FUNC VOID DIA_Babo_Kap3_Unhappy_Info()
 	AI_Output (self ,other,"DIA_Babo_Kap3_Unhappy_03_02"); //Only... Oh, I don't want to complain.
 
 	Info_ClearChoices	(DIA_Babo_Kap3_Unhappy);
-	Info_AddChoice	(DIA_Babo_Kap3_Unhappy,"Stop whining then.",DIA_Babo_Kap3_Unhappy_Lament); 
-	Info_AddChoice	(DIA_Babo_Kap3_Unhappy,"Aw, come on, you can tell me.",DIA_Babo_Kap3_Unhappy_TellMe);
+	Info_AddChoice	(DIA_Babo_Kap3_Unhappy,"Dann hör auf zu jammern.",DIA_Babo_Kap3_Unhappy_Lament); 
+	Info_AddChoice	(DIA_Babo_Kap3_Unhappy,"Mir kannst du´s ruhig erzählen.",DIA_Babo_Kap3_Unhappy_TellMe);
 };
 
 	FUNC VOID DIA_Babo_Kap3_Unhappy_Lament ()
@@ -732,13 +732,13 @@ FUNC VOID DIA_Babo_Kap3_Unhappy_Info()
 		
 		Log_CreateTopic (Topic_BabosDocs,LOG_MISSION);
 		Log_SetTopicStatus (Topic_BabosDocs,LOG_RUNNING);
-		B_LogEntry (Topic_BabosDocs,"Igaraz is blackmailing the novice Babo about some documents.");
+		B_LogEntry (Topic_BabosDocs,"Der Novize Babo wird von Igaraz aufgrund einiger Dokumente erpresst.");
 		
 		Info_ClearChoices (DIA_Babo_Kap3_Unhappy);
-		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"I think that's a little too personal for me.",DIA_Babo_Kap3_Unhappy_Privat);
-		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"What are you supposed to do for him?",DIA_Babo_Kap3_Unhappy_ShouldDo);
-		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"What kind of documents are those?",DIA_Babo_Kap3_Unhappy_Documents); 
-		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Maybe I can help you.",DIA_Babo_Kap3_Unhappy_CanHelpYou);
+		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Das ist mir doch ein bisschen zu privat.",DIA_Babo_Kap3_Unhappy_Privat);
+		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Was sollst du für ihn tun?",DIA_Babo_Kap3_Unhappy_ShouldDo);
+		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Was sind das für Dokumente?",DIA_Babo_Kap3_Unhappy_Documents); 
+		Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Vielleicht kann ich dir helfen",DIA_Babo_Kap3_Unhappy_CanHelpYou);
 	};
 
 		FUNC VOID DIA_Babo_Kap3_Unhappy_Privat ()
@@ -777,8 +777,8 @@ FUNC VOID DIA_Babo_Kap3_Unhappy_Info()
 			AI_Output (self ,other,"DIA_Babo_Kap3_Unhappy_CanHelpYou_03_05"); //Of course, I don't have much money, but I could give you a spell scroll. I have a healing spell.
 			
 			Info_ClearChoices (DIA_Babo_Kap3_Unhappy);
-			Info_AddChoice (DIA_Babo_Kap3_Unhappy,"I'd rather stay away from that.",DIA_Babo_Kap3_Unhappy_No);
-			Info_AddChoice (DIA_Babo_Kap3_Unhappy,"I'll see what I can do.",DIA_Babo_Kap3_Unhappy_Yes);
+			Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Da lass ich lieber die Finger von.",DIA_Babo_Kap3_Unhappy_No);
+			Info_AddChoice (DIA_Babo_Kap3_Unhappy,"Werd' sehen was ich rausfinden kann.",DIA_Babo_Kap3_Unhappy_Yes);
 		};
 
 			FUNC VOID DIA_Babo_Kap3_Unhappy_No ()
@@ -810,7 +810,7 @@ INSTANCE DIA_Babo_Kap3_HaveYourDocs   (C_INFO)
 	condition   = DIA_Babo_Kap3_HaveYourDocs_Condition;
 	information = DIA_Babo_Kap3_HaveYourDocs_Info;
 	permanent   = FALSE;
-	description = "I've got your documents.";
+	description = "Ich hab deine Dokumente.";
 };
 FUNC INT DIA_Babo_Kap3_HaveYourDocs_Condition()
 {
@@ -830,14 +830,14 @@ FUNC VOID DIA_Babo_Kap3_HaveYourDocs_Info()
 	AI_Output (self ,other,"DIA_Babo_Kap3_HaveYourDocs_03_03"); //(nervously) Are they really mine? Are you sure? Show me.
 	
 	Info_ClearChoices (DIA_Babo_Kap3_HaveYourDocs);
-	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"I'm going to keep them a little while longer.",DIA_Babo_Kap3_HaveYourDocs_KeepThem);
+	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Ich werde sie noch eine Weile behalten.",DIA_Babo_Kap3_HaveYourDocs_KeepThem);
 	
 	if (BaboSDocsOpen == TRUE)
 	{
-		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Based on the bare facts, the price has gone up.",DIA_Babo_Kap3_HaveYourDocs_IWantMore);
+		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Aufgrund der nackten Tatsachen ist der Preis gestiegen.",DIA_Babo_Kap3_HaveYourDocs_IWantMore);
 	};
 	
-	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Here they are.",DIA_Babo_Kap3_HaveYourDocs_HereTheyAre);
+	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Hier sind sie.",DIA_Babo_Kap3_HaveYourDocs_HereTheyAre);
 };
 
 FUNC VOID DIA_Babo_Kap3_HaveYourDocs_KeepThem()
@@ -846,12 +846,12 @@ FUNC VOID DIA_Babo_Kap3_HaveYourDocs_KeepThem()
 	AI_Output (self ,other,"DIA_Babo_Kap3_HaveYourDocs_KeepThem_03_01"); //(stunned) What!? What is that supposed to mean? What are you planning?
 	
 	Info_ClearChoices (DIA_Babo_Kap3_HaveYourDocs);
-	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Just kidding.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_JustJoke);
-	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"That's my own business.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_MyConcern);
+	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"War nur ein Scherz.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_JustJoke);
+	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Das ist meine Sache.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_MyConcern);
 	
 	if (Igaraz_IsPartner == LOG_SUCCESS)
 	{
-		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Igaraz and I are partners.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_Partner);
+		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Igaraz und ich sind Partner.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_Partner);
 	};
 };
 
@@ -902,8 +902,8 @@ FUNC VOID DIA_Babo_Kap3_HaveYourDocs_KeepThem()
 		
 		Info_ClearChoices (DIA_Babo_Kap3_HaveYourDocs);
 		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,Dialog_Ende,DIA_Babo_Kap3_HaveYourDocs_End);
-		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Mind your language.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_Partner_KeepCalm);
-		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Haven't you got anything to do?",DIA_Babo_Kap3_HaveYourDocs_KeepThem_Partner_NothingToDo);
+		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Halt die Luft an.",DIA_Babo_Kap3_HaveYourDocs_KeepThem_Partner_KeepCalm);
+		Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Hast du nichts zu tun?",DIA_Babo_Kap3_HaveYourDocs_KeepThem_Partner_NothingToDo);
 	};
 	
 		FUNC VOID DIA_Babo_Kap3_HaveYourDocs_End ()
@@ -935,8 +935,8 @@ FUNC VOID DIA_Babo_Kap3_HaveYourDocs_IWantMore()
 	AI_Output (self ,other,"DIA_Babo_Kap3_HaveYourDocs_IWantMore_03_03"); //I can give you 121 gold coins, that's all I have.
 	
 	Info_ClearChoices (DIA_Babo_Kap3_HaveYourDocs);
-	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"That won't be enough.",DIA_Babo_Kap3_HaveYourDocs_IWantMore_NotEnough);
-	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Agreed.",DIA_Babo_Kap3_HaveYourDocs_IWantMore_ThatsEnough);
+	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Das wird nicht reichen.",DIA_Babo_Kap3_HaveYourDocs_IWantMore_NotEnough);
+	Info_AddChoice (DIA_Babo_Kap3_HaveYourDocs,"Einverstanden",DIA_Babo_Kap3_HaveYourDocs_IWantMore_ThatsEnough);
 };
 
 	FUNC VOID DIA_Babo_Kap3_HaveYourDocs_IWantMore_NotEnough()
@@ -1004,7 +1004,7 @@ INSTANCE DIA_Babo_Kap3_Perm   (C_INFO)
 	condition   = DIA_Babo_Kap3_Perm_Condition;
 	information = DIA_Babo_Kap3_Perm_Info;
 	permanent   = TRUE;
-	description = "Are you satisfied with your task?";
+	description = "Bist du zufrieden mit deiner Aufgabe?";
 };
 FUNC INT DIA_Babo_Kap3_Perm_Condition()
 {

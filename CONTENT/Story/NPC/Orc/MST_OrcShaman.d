@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_OrcShaman(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Orc Shaman";
+	name							=	"Ork Schamane";
 	guild							=	GIL_ORC;
 	aivar[AIV_MM_REAL_ID]			= 	ID_ORCSHAMAN;
 	voice							=	18;
@@ -103,7 +103,7 @@ INSTANCE OrcCity_Pray (Mst_Default_OrcShaman)
 
 INSTANCE OrcShaman_Sit_CanyonLibraryKey (Mst_Default_OrcShaman)
 {
-	name							=	"Leader of the Horde";
+	name							=	"Anführer der Horde";
 	// ------ visuals ------
 	B_SetVisuals_OrcShaman();
 	

@@ -2,8 +2,8 @@
 // Wert von Kram
 // ************************************************************************************************
 
-// Items für Objektbenutzung und Item-Interaktion...
-// z.B. Krautstampfer, Hammer, Kochlöffel, Laborflasche, Roheisen (Schmiede)
+// Items fr Objektbenutzung und Item-Interaktion...
+// z.B. Krautstampfer, Hammer, Kochlffel, Laborflasche, Roheisen (Schmiede)
 
 const int	Value_SwordBlade		= 10;
 const int	Value_SwordBladeHot		= 10;
@@ -66,7 +66,7 @@ const int   Value_InnosStatue		=  100;
 const int	Value_Sextant			= 1500;
 
 
-/*ursprüngliche Werte:
+/*ursprngliche Werte:
 const int	Value_SilverRing		 = 200;
 const int	Value_SilverNecklace	 = 100;
 const int	Value_SilverCandleHolder = 30 ;
@@ -94,13 +94,13 @@ const int	Value_Sextant			= 30  ;
 
 
 /*******************************************************************************************
-**	Items für Mobsi-Benutzung               					  		  				  **
+**	Items fr Mobsi-Benutzung               					  		  				  **
 *******************************************************************************************/
 // Krautstampfen
 
 INSTANCE ItMi_Stomper (C_Item)
 {
-	name 				=	"Weed Masher";
+	name 				=	"Krautstampfer";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags				=	ITEM_MULTI;
@@ -134,7 +134,7 @@ INSTANCE ItMi_RuneBlank (C_Item)
 
 INSTANCE ItMi_Pliers (C_Item)
 {
-	name 				=	"Mandible";
+	name 				=	"Zange";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags				=	ITEM_MULTI;
@@ -152,7 +152,7 @@ INSTANCE ItMi_Pliers (C_Item)
 // Labor Wasserflasche
 INSTANCE ItMi_Flask (C_Item)
 {
-	name 				=	"Lab Water Bottle";
+	name 				=	"Laborwasserflasche";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags				=	ITEM_MULTI;
@@ -188,10 +188,10 @@ INSTANCE ItMi_Hammer (C_Item)
 };
 
 /******************************************************************************************/
-// im Topf rühren
+// im Topf rhren
 INSTANCE ItMi_Scoop (C_Item)
 {
-	name 				=	"Spoon";
+	name 				=	"KochlÃ¶ffel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -207,11 +207,11 @@ INSTANCE ItMi_Scoop (C_Item)
 	COUNT[5]			= 	value;
 };
 /******************************************************************************************/
-//	Pfanne zum Braten (für  Lagerfeuer)
+//	Pfanne zum Braten (fr  Lagerfeuer)
 
 INSTANCE ItMi_Pan (C_Item)
 {
-	name 				=	"Pan";
+	name 				=	"Pfanne";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -227,11 +227,11 @@ INSTANCE ItMi_Pan (C_Item)
 	COUNT[5]			= 	value;
 };
 
-//Pfann für Herd
+//Pfann fr Herd
 
 INSTANCE ItMi_PanFull (C_Item)
 {
-	name 				=	"Pan";
+	name 				=	"Pfanne";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -247,11 +247,11 @@ INSTANCE ItMi_PanFull (C_Item)
 	COUNT[5]			= 	value;
 };
 /******************************************************************************************/
-//	Säge für Baumstamm
+//	Sge fr Baumstamm
 
 INSTANCE ItMi_Saw (C_Item)
 {
-	name 				=	"Saw";
+	name 				=	"SÃ¤ge";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -268,11 +268,11 @@ INSTANCE ItMi_Saw (C_Item)
 };	   	   
 
 /******************************************************************************************/
-//	Items für Schmiede	    					 								 		  **
+//	Items fr Schmiede	    					 								 		  **
 
 INSTANCE ItMiSwordraw (C_Item)
 {
-	name 				=	"Raw Steel";
+	name 				=	"Rohstahl";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -291,7 +291,7 @@ INSTANCE ItMiSwordraw (C_Item)
 /******************************************************************************************/
 INSTANCE ItMiSwordrawhot (C_Item)
 {
-	name 				=	"Red Hot Steel";
+	name 				=	"GlÃ¼hender Stahl";
 
 	mainflag 			=	ITEM_KAT_NONE; 
 	flags 				=	ITEM_MULTI;
@@ -310,7 +310,7 @@ INSTANCE ItMiSwordrawhot (C_Item)
 /******************************************************************************************/
 INSTANCE ItMiSwordbladehot (C_Item)
 {
-	name 				=	"Red Hot Blade";
+	name 				=	"GlÃ¼hende Klinge";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -350,14 +350,14 @@ INSTANCE ItMiSwordblade	(C_Item)
 
 
 /*******************************************************************************************
-**	Items für Item-Interaktionen (ohne Mobsi benutzbar)               		 		  	  **
+**	Items fr Item-Interaktionen (ohne Mobsi benutzbar)               		 		  	  **
 *******************************************************************************************/
 
 /******************************************************************************************/
 // Besen zum Fegen
 INSTANCE ItMi_Broom (C_Item)
 {
-	name 				=	"Broom";
+	name 				=	"Besen";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -367,7 +367,7 @@ INSTANCE ItMi_Broom (C_Item)
 	visual 				=	"ItMi_Broom.3DS";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"BROOM";
+	scemeName			=	"Besen";
 	on_state[0]			= 	Use_Broom;
 	description			= 	name;
 	
@@ -388,7 +388,7 @@ func void Use_Broom()
 // zum Rumklimpern
 INSTANCE ItMi_Lute (C_Item)
 {
-	name 				=	"Lute";
+	name 				=	"Laute";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -398,7 +398,7 @@ INSTANCE ItMi_Lute (C_Item)
 	visual 				=	"ItMi_Lute.3DS";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"LUTE";
+	scemeName			=	"Laute";
 	on_state[0]			= 	Use_Lute;
 	description			= 	name;
 	
@@ -412,10 +412,10 @@ func void Use_Lute()
 
 
 /******************************************************************************************/
-// Für Babe-Putzen
+// Fr Babe-Putzen
 INSTANCE ItMi_Brush(C_Item)
 {
-	name 				=	"Brush";
+	name 				=	"BÃ¼rste";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -424,7 +424,7 @@ INSTANCE ItMi_Brush(C_Item)
 
 	visual				=	"ItMi_Brush.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"BRUSH";
+	scemeName			=	"BÃ¼rste";
 	on_state[0]			= 	Use_Brush;
 
 	description			= 	name;
@@ -442,7 +442,7 @@ func void Use_Brush()
 /******************************************************************************************/
 INSTANCE ItMi_Joint(C_Item)
 {
-	name 				=	"A stalk of swampweed";
+	name 				=	"Ein Stengel Sumpfkraut";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -452,7 +452,7 @@ INSTANCE ItMi_Joint(C_Item)
 	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_LEATHER;
 
-	scemeName			=	"JOINT";
+	scemeName			=	"StÃ¤ngel";
 	on_state[0]			= 	Use_Joint;
 	description			= 	name;
 	
@@ -498,11 +498,11 @@ func void Use_Alarmhorn()
 
 */
 //*******************************
-//Päckchen
+//Pckchen
 //*******************************
 INSTANCE ItMi_Packet(C_Item)
 {
-	name 				=	"Packet";
+	name 				=	"PÃ¤ckchen";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;
@@ -525,7 +525,7 @@ FUNC VOID UsePacket ()
 
 INSTANCE ItMi_Pocket(C_Item)//steht drin, weil auch in Welt verteilt!!
 {
-	name 				=	"Leather Satchel";
+	name 				=	"Lederbeutel";
 
 	mainflag 			=	ITEM_KAT_NONE|ITEM_MULTI;
 	flags 				=	0;
@@ -537,8 +537,8 @@ INSTANCE ItMi_Pocket(C_Item)//steht drin, weil auch in Welt verteilt!!
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UsePocket;
 	description			= 	name;
-	TEXT[2]				= 	"A narrow bag,";
-	TEXT[3]				=   "not very heavy.";
+	TEXT[2]				= 	"Ein schmaler Beutel,";
+	TEXT[3]				=   "wiegt nicht viel";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 
@@ -551,11 +551,11 @@ FUNC VOID UsePocket ()
 };
 
 //******************************************************************************************
-//	Wertvolle Gegenstände
+//	Wertvolle Gegenstnde
 //******************************************************************************************
 INSTANCE ItMi_Nugget(C_Item)
 {
-	name 				=	"Lump of Ore";
+	name 				=	"Erzbrocken";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -603,7 +603,7 @@ INSTANCE ItMi_Gold (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_OldCoin (C_Item)
 {
-	name 				=	"Old Coin";
+	name 				=	"Alte MÃ¼nze";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;
@@ -625,7 +625,7 @@ INSTANCE ItMi_OldCoin (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_GoldCandleHolder (C_Item)
 {
-	name 				=	"Gold Candlestick";
+	name 				=	"Goldener KerzenstÃ¤nder";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -646,7 +646,7 @@ INSTANCE ItMi_GoldCandleHolder (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_GoldNecklace (C_Item)
 {
-	name 				=	"Gold Necklace";
+	name 				=	"Goldene Halskette";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI | ITEM_AMULET;
@@ -671,7 +671,7 @@ INSTANCE ItMi_GoldNecklace (C_Item)
 
 INSTANCE ItMi_SilverRing (C_Item)
 {
-	name 				=	"Silver Ring";
+	name 				=	"Silberner Ring";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_RING;
@@ -694,7 +694,7 @@ INSTANCE ItMi_SilverRing (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_SilverCup (C_Item)
 {
-	name 				=	"Silver Chalice";
+	name 				=	"Silberkelch";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -712,7 +712,7 @@ INSTANCE ItMi_SilverCup (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_SilverPlate (C_Item)
 {
-	name 				=	"Silver Plate";
+	name 				=	"Silberteller";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -730,7 +730,7 @@ INSTANCE ItMi_SilverPlate (C_Item)
 /******************************************************************************************/
 instance ItMi_GoldPlate (C_Item)
 {
-	name 				=	"Gold Plate";
+	name 				=	"Goldener Teller";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -748,7 +748,7 @@ instance ItMi_GoldPlate (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_GoldCup (C_Item)
 {
-	name 				=	"Gold Chalice";
+	name 				=	"Goldener Kelch";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -766,7 +766,7 @@ INSTANCE ItMi_GoldCup (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_BloodCup_MIS (C_Item)
 {
-	name 				=	"Blood Chalice";
+	name 				=	"Blutkelch";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI | ITEM_MISSION;
@@ -776,7 +776,7 @@ INSTANCE ItMi_BloodCup_MIS (C_Item)
 	visual 				=	"ItMi_GoldCup.3DS";
 	material 			=	MAT_METAL;
 
-	description			= 	"A Blood Chalice";
+	description			= 	"Ein Blutkelch";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
@@ -784,7 +784,7 @@ INSTANCE ItMi_BloodCup_MIS (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_GoldRing (C_Item)
 {
-	name 				=	"Gold Ring";
+	name 				=	"Goldener Ring";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_RING;
@@ -807,7 +807,7 @@ INSTANCE ItMi_GoldRing (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_SilverChalice (C_Item)
 {
-	name 				=	"Silver Dish";
+	name 				=	"Silberne Schale";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -823,7 +823,7 @@ INSTANCE ItMi_SilverChalice (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_JeweleryChest (C_Item)
 {
-	name 				=	"Jewel Casket";
+	name 				=	"Juwelen Schatulle";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -840,7 +840,7 @@ INSTANCE ItMi_JeweleryChest (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_GoldChalice (C_Item)
 {
-	name 				=	"Gold Dish";
+	name 				=	"Goldene Schale";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -857,7 +857,7 @@ INSTANCE ItMi_GoldChalice (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_GoldChest (C_Item)
 {
-	name 				=	"Casket";
+	name 				=	"Schatulle";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -874,7 +874,7 @@ INSTANCE ItMi_GoldChest (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_InnosStatue (C_Item)
 {
-	name 				=	"Statue of Innos";
+	name 				=	"Innos Statue";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -908,7 +908,7 @@ INSTANCE ItMi_Sextant (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_SilverCandleHolder (C_Item)
 {
-	name 				=	"Silver Candlestick";
+	name 				=	"Silberner KerzenstÃ¤nder";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -925,7 +925,7 @@ INSTANCE ItMi_SilverCandleHolder (C_Item)
 /******************************************************************************************/
 INSTANCE ItMi_SilverNecklace (C_Item)
 {
-	name 				=	"Silver Necklace";
+	name 				=	"Silberkette";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI| ITEM_AMULET;
@@ -944,7 +944,7 @@ INSTANCE ItMi_SilverNecklace (C_Item)
 //*****************************************************************************************
 INSTANCE ItMi_Sulfur (C_Item)
 {
-	name 				=	"Sulfur";
+	name 				=	"Schwefel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -964,7 +964,7 @@ INSTANCE ItMi_Sulfur (C_Item)
 
 INSTANCE ItMi_Quartz (C_Item)
 {
-	name 				=	"Glacier Quartz";
+	name 				=	"Gletscher Quartz";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -983,7 +983,7 @@ INSTANCE ItMi_Quartz (C_Item)
 
 INSTANCE ItMi_Pitch (C_Item)
 {
-	name 				=	"Pitch";
+	name 				=	"Pech";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1001,7 +1001,7 @@ INSTANCE ItMi_Pitch (C_Item)
 
 INSTANCE ItMi_Rockcrystal (C_Item)
 {
-	name 				=	"Rock Crystal";
+	name 				=	"Bergkristall";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1019,7 +1019,7 @@ INSTANCE ItMi_Rockcrystal (C_Item)
 
 INSTANCE ItMi_Aquamarine (C_Item)
 {
-	name 				=	"Aquamarine";
+	name 				=	"Aquamarin";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1040,7 +1040,7 @@ INSTANCE ItMi_Aquamarine (C_Item)
 
 INSTANCE ItMi_HolyWater (C_Item)
 {
-	name 				=	"Holy Water";
+	name 				=	"Geweihtes Wasser";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1058,7 +1058,7 @@ INSTANCE ItMi_HolyWater (C_Item)
 
 INSTANCE ItMi_Coal (C_Item)
 {
-	name 				=	"Coal";
+	name 				=	"Kohle";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1079,7 +1079,7 @@ INSTANCE ItMi_Coal (C_Item)
 
 INSTANCE ItMi_DarkPearl (C_Item)
 {
-	name 				=	"Black Pearl";
+	name 				=	"Schwarze Perle";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1098,11 +1098,11 @@ INSTANCE ItMi_DarkPearl (C_Item)
 };
 //-------------------------------------------------------------
 //					Tabak Sorten 
-//		 Apfeltabak (Basis für alle anderen)
+//		 Apfeltabak (Basis fr alle anderen)
 //-------------------------------------------------------------
 INSTANCE ItMi_ApfelTabak(C_Item)
 {
-	name 				=	"Apple tobacco";
+	name 				=	"Apfel Tabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1115,7 +1115,7 @@ INSTANCE ItMi_ApfelTabak(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[2]				=  "A bag of apple tobacco.";
+	TEXT[2]				=  "Ein Beutel voll Apfeltabak";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 //-------------------------------------------------------------
@@ -1123,7 +1123,7 @@ INSTANCE ItMi_ApfelTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_PilzTabak(C_Item)
 {
-	name 				=	"Mushroom tobacco";
+	name 				=	"Pilz Tabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1136,7 +1136,7 @@ INSTANCE ItMi_PilzTabak(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[2]				=  "Dark apple-mushroom tobacco";
+	TEXT[2]				=  "Dunkler Apfel - Pilz Tabak";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -1145,7 +1145,7 @@ INSTANCE ItMi_PilzTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_DoppelTabak(C_Item)
 {
-	name 				=	"Double Apple";
+	name 				=	"Doppelter Apfel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1158,7 +1158,7 @@ INSTANCE ItMi_DoppelTabak(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[2]				=  "Tastes a lot like apple ...";
+	TEXT[2]				=  "Schmeckt stark nach Apfel...";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -1167,7 +1167,7 @@ INSTANCE ItMi_DoppelTabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_Honigtabak(C_Item)
 {
-	name 				=	"Honey Tobacco";
+	name 				=	"Honig Tabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1180,7 +1180,7 @@ INSTANCE ItMi_Honigtabak(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[2]				=  "Sweet apple tobacco";
+	TEXT[2]				=  "SÃ¼ÃŸer Apfel Tabak";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 //-------------------------------------------------------------
@@ -1188,7 +1188,7 @@ INSTANCE ItMi_Honigtabak(C_Item)
 //-------------------------------------------------------------
 INSTANCE ItMi_SumpfTabak(C_Item)
 {
-	name 				=	"Herb tobacco";
+	name 				=	"Krautabak";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -1201,7 +1201,7 @@ INSTANCE ItMi_SumpfTabak(C_Item)
 	
 	description			= 	name;
 	
-	TEXT[2]				=  "Swampweed blend";
+	TEXT[2]				=  "Sumpfkraut Mischung";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };

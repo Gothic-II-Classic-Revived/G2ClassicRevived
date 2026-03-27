@@ -46,8 +46,8 @@ func int DIA_BilgotNW_HALLO_Condition ()
 };
 func void DIA_BilgotNW_HALLO_Info ()
 {
-	AI_Output	(other, self, "DIA_Balthasar_HALLO_15_00"); //How are things?
-	AI_Output	(self, hero, "DIA_Balthasar_PERMKAP1_05_01"); //I can't complain. Thanks for asking.
+	AI_Output	(other, self, "DIA_Balthasar_HALLO_15_00"); //Wie sieht's aus?
+	AI_Output	(self, hero, "DIA_Balthasar_PERMKAP1_05_01"); //Ich kann nicht klagen. Danke der Nachfrage.
 
 	B_GivePlayerXP (XP_Ambient);
 };

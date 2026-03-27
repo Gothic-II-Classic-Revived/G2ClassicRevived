@@ -76,7 +76,7 @@ INSTANCE Scavenger	(Mst_Default_Scavenger)
 
 INSTANCE ScavengerJuvenile	(Mst_Default_Scavenger)
 {
-	name							=	"Juvenile Scavenger";
+	name							=	"junger Scavenger";
 
 	//----- Attributes ----
 	B_SetMonsterAttributesForLevel(self, 4);

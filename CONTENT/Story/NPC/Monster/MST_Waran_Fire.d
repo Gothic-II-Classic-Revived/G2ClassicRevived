@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_FireWaran(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Fire Lizard";
+	name							=	"Feuerwaran";
 	guild							=	GIL_WARAN;
 	aivar[AIV_MM_REAL_ID]			= 	ID_FIREWARAN;
 

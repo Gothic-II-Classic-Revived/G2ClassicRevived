@@ -29,7 +29,7 @@ instance DIA_Parlaf_HALLO		(C_INFO)
 	nr		 	 = 	1;
 	condition	 = 	DIA_Parlaf_HALLO_Condition;
 	information	 = 	DIA_Parlaf_HALLO_Info;
-	description	 = 	"Hey, how are you?";
+	description	 = 	"Hey, wie geht's?";
 };
 
 func int DIA_Parlaf_HALLO_Condition ()
@@ -39,12 +39,12 @@ func int DIA_Parlaf_HALLO_Condition ()
 
 func void DIA_Parlaf_HALLO_Info ()
 {
-	AI_Output (other, self, "DIA_Parlaf_HALLO_15_00"); //Hey, how are you?
-	AI_Output (self, other, "DIA_Parlaf_HALLO_03_01"); //How do you think I'm doing? I spend the whole day at the grindstone, sharpening blades.
+	AI_Output (other, self, "DIA_Parlaf_HALLO_15_00"); //Hey, wie geht's?
+	AI_Output (self, other, "DIA_Parlaf_HALLO_03_01"); //Was glaubst du, wie es mir geht? Ich stehe den ganzen Tag am Schleifstein und bearbeite Klingen.
 	if ((Npc_IsDead(Engor))== FALSE)
 	{
-		AI_Output (self, other, "DIA_Parlaf_HALLO_03_02"); //And yesterday Engor shortened our rations again. If it goes on like this, we're all going to starve.
-		AI_Output (self, other, "DIA_Parlaf_HALLO_03_03"); //Or we'll all be killed by orcs. Not a pleasant prospect.
+		AI_Output (self, other, "DIA_Parlaf_HALLO_03_02"); //Und gestern hat Engor wieder unsere Rationen gekürzt. Wenn das so weitergeht, verhungern wir noch alle.
+		AI_Output (self, other, "DIA_Parlaf_HALLO_03_03"); //Oder wir werden von den Orks umgebracht. Keine angenehmen Aussichten.
 	};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -56,7 +56,7 @@ instance DIA_Parlaf_ENGOR		(C_INFO)
 	nr			 = 	2;
 	condition	 = 	DIA_Parlaf_ENGOR_Condition;
 	information	 = 	DIA_Parlaf_ENGOR_Info;
-	description	 = 	"Who is Engor?";
+	description	 = 	"Wer ist Engor?";
 };
 
 func int DIA_Parlaf_ENGOR_Condition ()
@@ -69,14 +69,14 @@ func int DIA_Parlaf_ENGOR_Condition ()
 };
 func void DIA_Parlaf_ENGOR_Info ()
 {
-	AI_Output (other, self, "DIA_Parlaf_ENGOR_15_00"); //Who is Engor?
-	AI_Output (self, other, "DIA_Parlaf_ENGOR_03_01"); //Engor manages the provisions and shares out the rations. And they get smaller every week.
-	AI_Output (self, other, "DIA_Parlaf_ENGOR_03_02"); //Sure, you can bargain with him, but only for cold, hard cash.
-	AI_Output (other, self, "DIA_Parlaf_ENGOR_15_03"); //And you can't afford that?
-	AI_Output (self, other, "DIA_Parlaf_ENGOR_03_04"); //The most I can get for the lousy pay we collect is a couple of turnips!
+	AI_Output (other, self, "DIA_Parlaf_ENGOR_15_00"); //Wer ist Engor?
+	AI_Output (self, other, "DIA_Parlaf_ENGOR_03_01"); //Engor verwaltet die Vorräte und teilt die Rationen ein. Und das wird wöchentlich weniger.
+	AI_Output (self, other, "DIA_Parlaf_ENGOR_03_02"); //Er lässt zwar mit sich handeln, aber nur gegen bare Münze.
+	AI_Output (other, self, "DIA_Parlaf_ENGOR_15_03"); //Und das kannst du dir nicht leisten?
+	AI_Output (self, other, "DIA_Parlaf_ENGOR_03_04"); //Für den geringen Sold, den wir kassieren, kriege ich höchstens ein paar Rüben!
 	
 	Log_CreateTopic (TOPIC_Trader_OC, LOG_NOTE);
-	Log_AddEntry(TOPIC_Trader_OC, "Engor manages the supplies at the castle and does a bit of business on the side.");     
+	Log_AddEntry(TOPIC_Trader_OC, "Engor verwaltet die Vorräte der Burg und macht nebenher Geschäfte.");     
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Wo Engor
@@ -88,7 +88,7 @@ instance DIA_Parlaf_Wo		(C_INFO)
 	condition	 = 	DIA_Parlaf_Wo_Condition;
 	information	 = 	DIA_Parlaf_Wo_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Where can I find this Engor?";
+	description	 = 	"Wo finde ich diesen Engor?";
 };
 
 func int DIA_Parlaf_Wo_Condition ()
@@ -101,8 +101,8 @@ func int DIA_Parlaf_Wo_Condition ()
 };
 func void DIA_Parlaf_Wo_Info ()
 {
-	AI_Output (other, self, "DIA_Parlaf_Wo_15_00"); //Where can I find this Engor?
-	AI_Output (self, other, "DIA_Parlaf_Wo_03_01"); //In the knights' house. Just go through the open entryway next to the smithy.
+	AI_Output (other, self, "DIA_Parlaf_Wo_15_00"); //Wo finde ich diesen Engor?
+	AI_Output (self, other, "DIA_Parlaf_Wo_03_01"); //Im Haus der Ritter. Geh einfach durch den offenen Eingang neben der Schmiede.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info HUNGRIG
@@ -114,7 +114,7 @@ instance DIA_Parlaf_HUNGRIG		(C_INFO)
 	condition	 = 	DIA_Parlaf_HUNGRIG_Condition;
 	information	 = 	DIA_Parlaf_HUNGRIG_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"What's new?";
+	description	 = 	"Was gibt's Neues?";
 };
 
 func int DIA_Parlaf_HUNGRIG_Condition ()
@@ -128,8 +128,8 @@ func int DIA_Parlaf_HUNGRIG_Condition ()
 };
 func void DIA_Parlaf_HUNGRIG_Info ()
 {
-	AI_Output (other, self, "DIA_Parlaf_HUNGRIG_15_00"); //What's up?
-	AI_Output (self, other, "DIA_Parlaf_HUNGRIG_03_01"); //That damned Engor should hand out more rations!
+	AI_Output (other, self, "DIA_Parlaf_HUNGRIG_15_00"); //Wie steht's?
+	AI_Output (self, other, "DIA_Parlaf_HUNGRIG_03_01"); //Dieser verdammte Engor soll mehr Rationen verteilen!
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info SATT
@@ -141,7 +141,7 @@ instance DIA_Parlaf_SATT		(C_INFO)
 	condition	 = 	DIA_Parlaf_SATT_Condition;
 	information	 = 	DIA_Parlaf_SATT_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"What's new?";
+	description	 = 	"Was gibt's Neues?";
 };
 
 func int DIA_Parlaf_SATT_Condition ()
@@ -155,17 +155,17 @@ func int DIA_Parlaf_SATT_Condition ()
 var int DIA_Parlaf_SATT_OneTime;
 func void DIA_Parlaf_SATT_Info ()
 {
-	AI_Output (other, self, "DIA_Parlaf_SATT_15_00"); //What's up?
+	AI_Output (other, self, "DIA_Parlaf_SATT_15_00"); //Wie steht's?
 	
 	if (DIA_Parlaf_SATT_OneTime == FALSE)
 	&& ((Npc_IsDead(Engor))== FALSE)
 	{
-		AI_Output (self, other, "DIA_Parlaf_SATT_03_01"); //Engor handed out a new ration of meat. Man, was that badly needed.
+		AI_Output (self, other, "DIA_Parlaf_SATT_03_01"); //Engor hat neue Rationen Fleisch verteilt. Mann, das war bitter nötig.
 		DIA_Parlaf_SATT_OneTime = TRUE;
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Parlaf_SATT_03_02"); //Your arrival is the only news that's really new.
+		AI_Output (self, other, "DIA_Parlaf_SATT_03_02"); //Deine Ankunft ist die einzig wirklich neue Nachricht.
 	};
 };
 

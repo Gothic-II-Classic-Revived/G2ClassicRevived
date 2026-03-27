@@ -31,7 +31,7 @@ instance DIA_Orlan_Wein		(C_INFO)
 	condition	 = 	DIA_Orlan_Wein_Condition;
 	information	 = 	DIA_Orlan_Wein_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"I'm bringing the wine from the monastery.";
+	description	 = 	"Ich bringe den Wein aus dem Kloster.";
 };
 func int DIA_Orlan_Wein_Condition ()
 {	
@@ -43,19 +43,19 @@ func int DIA_Orlan_Wein_Condition ()
 };
 func void DIA_Orlan_Wein_Info ()
 {
-	AI_Output (other, self, "DIA_Orlan_Wein_15_00"); //I'm bringing the wine from the monastery.
-	AI_Output (self, other, "DIA_Orlan_Wein_05_01"); //Excellent. That's what I've been waiting for.
-	AI_Output (self, other, "DIA_Orlan_Wein_05_02"); //I have already agreed on the price with Master Gorax. I'll give you the 100 gold coins straightaway.
+	AI_Output (other, self, "DIA_Orlan_Wein_15_00"); //Ich bringe den Wein aus dem Kloster.
+	AI_Output (self, other, "DIA_Orlan_Wein_05_01"); //Ausgezeichnet. Darauf habe ich schon gewartet.
+	AI_Output (self, other, "DIA_Orlan_Wein_05_02"); //Ich habe mit Meister Gorax den Preis schon ausgemacht. Ich gebe dir die 100 Goldmünzen direkt mit.
 	
 	Info_ClearChoices (DIA_Orlan_Wein);
 	
-	Info_AddChoice (DIA_Orlan_Wein,"All right, give me the gold, then.",DIA_Orlan_Wein_JA);
-	Info_AddChoice (DIA_Orlan_Wein,"Are you trying to pull a fast one? The price is 240 gold coins.",DIA_Orlan_Wein_NEIN);
+	Info_AddChoice (DIA_Orlan_Wein,"Okay, gib mir das Gold.",DIA_Orlan_Wein_JA);
+	Info_AddChoice (DIA_Orlan_Wein,"Willst du mich verarschen?",DIA_Orlan_Wein_NEIN);
 };
 FUNC VOID DIA_Orlan_Wein_JA()
 {
-	AI_Output (other, self, "DIA_Orlan_Wein_JA_15_00"); //All right, give me the gold, then.
-	AI_Output (self, other, "DIA_Orlan_Wein_JA_05_01"); //Here you go. It was a pleasure doing business with you.
+	AI_Output (other, self, "DIA_Orlan_Wein_JA_15_00"); //Okay, gib mir das Gold.
+	AI_Output (self, other, "DIA_Orlan_Wein_JA_05_01"); //Hier bitte. Es war mir eine Freude, mit dir Geschäfte zu machen.
 	
 	B_GiveInvItems (self, other, ItmI_Gold, 100);
 	B_GiveInvItems (other, self, ItFo_Wine, 12);
@@ -64,19 +64,19 @@ FUNC VOID DIA_Orlan_Wein_JA()
 };
 FUNC VOID DIA_Orlan_Wein_NEIN()
 {
-	AI_Output (other, self, "DIA_Orlan_Wein_NEIN_15_00"); //Are you trying to pull a fast one? The price is 240 gold coins.
-	AI_Output (self, other, "DIA_Orlan_Wein_NEIN_05_01"); //So, Gorax warned you, did he? All right, maybe the two of us can do a bit of business. Look - I'll give you 100 gold pieces for the wine.
-	AI_Output (self, other, "DIA_Orlan_Wein_NEIN_05_02"); //You tell Gorax that I pulled the wool over your eyes and you'll get FOUR spell scrolls from me.
+	AI_Output (other, self, "DIA_Orlan_Wein_NEIN_15_00"); //Willst du mich verarschen?
+	AI_Output (self, other, "DIA_Orlan_Wein_NEIN_05_01"); //So, Gorax hat dich wohl vorgewarnt, was? Gut, vielleicht kommen wir zwei ja ins Geschäft. Pass auf - ich gebe dir 100 Goldmünzen für den Wein.
+	AI_Output (self, other, "DIA_Orlan_Wein_NEIN_05_02"); //Du erzählst Gorax, dass ich dich über den Tisch gezogen habe und bekommst von mir VIER Spruchrollen.
 	
 	Info_ClearChoices (DIA_Orlan_Wein);
-	Info_AddChoice (DIA_Orlan_Wein,"Hey, just give me the 240 gold coins.",DIA_Orlan_Wein_Nie);
-	Info_AddChoice (DIA_Orlan_Wein,"All right, sounds fair enough. Give me those spell scrolls.",DIA_Orlan_Wein_Okay);
-	Info_AddChoice (DIA_Orlan_Wein,"What kind of spell scrolls are they?",DIA_Orlan_Wein_Was);
+	Info_AddChoice (DIA_Orlan_Wein,"Hey, gib mir einfach die 240 Goldmünzen.",DIA_Orlan_Wein_Nie);
+	Info_AddChoice (DIA_Orlan_Wein,"Okay, klingt gut. Gib mir die Spruchrollen.",DIA_Orlan_Wein_Okay);
+	Info_AddChoice (DIA_Orlan_Wein,"Was sind das für Spruchrollen?",DIA_Orlan_Wein_Was);
 };
 FUNC VOID DIA_Orlan_Wein_Nie()
 {
-	AI_Output (other, self, "DIA_Orlan_Wein_Nie_15_00"); //Hey, just give me the 240 gold coins.
-	AI_Output (self, other, "DIA_Orlan_Wein_Nie_05_01"); //You don't want to do business, eh? -sigh- All right, here's the gold.
+	AI_Output (other, self, "DIA_Orlan_Wein_Nie_15_00"); //Hey, gib mir einfach die 240 Goldmünzen.
+	AI_Output (self, other, "DIA_Orlan_Wein_Nie_05_01"); //Du willst kein Geschäft machen, was? -seufz- Na gut, hier ist das Gold.
 	
 	B_GiveInvItems (self, other, ItmI_Gold, 240);
 	B_GiveInvItems (other, self, ItFo_Wine, 12);
@@ -92,8 +92,8 @@ FUNC VOID DIA_Orlan_Wein_Okay()
 	
 	B_GiveInvItems (self, other, ItmI_Gold, 100);
 	
-	AI_Output (other, self, "DIA_Orlan_Wein_Okay_15_00"); //All right, sounds fair enough. Give me those spell scrolls.
-	AI_Output (self, other, "DIA_Orlan_Wein_Okay_05_01"); //Here are the spell scrolls and the gold.
+	AI_Output (other, self, "DIA_Orlan_Wein_Okay_15_00"); //Okay, klingt gut. Gib mir die Spruchrollen.
+	AI_Output (self, other, "DIA_Orlan_Wein_Okay_05_01"); //Hier sind die Spruchrollen und das Gold.
 	
 	B_GiveInvItems (other, self, ItFo_Wine, 12);
 	
@@ -106,8 +106,8 @@ FUNC VOID DIA_Orlan_Wein_Okay()
 };
 FUNC VOID DIA_Orlan_Wein_Was()
 {
-	AI_Output (other, self, "DIA_Orlan_Wein_Was_15_00"); //What kind of spell scrolls are they?
-	AI_Output (self, other, "DIA_Orlan_Wein_Was_05_01"); //No idea - I don't know anything about that. They're from a guest who... eh... forgot them here, yeah.
+	AI_Output (other, self, "DIA_Orlan_Wein_Was_15_00"); //Was sind das für Spruchrollen?
+	AI_Output (self, other, "DIA_Orlan_Wein_Was_05_01"); //Keine Ahnung - ich kenne mich nicht damit aus. Die sind von einem Gast, der ... äh ... hat sie hier vergessen, ja.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info WerBistDu
@@ -119,7 +119,7 @@ instance DIA_Orlan_WERBISTDU		(C_INFO)
 	condition	 = 	DIA_Orlan_WERBISTDU_Condition;
 	information	 = 	DIA_Orlan_WERBISTDU_Info;
 
-	description	 = 	"Who are you?";
+	description	 = 	"Wer bist du?";
 };
 
 func int DIA_Orlan_WERBISTDU_Condition ()
@@ -129,16 +129,16 @@ func int DIA_Orlan_WERBISTDU_Condition ()
 
 func void DIA_Orlan_WERBISTDU_Info ()
 {
-	AI_Output			(other, self, "DIA_Orlan_WERBISTDU_15_00"); //Who are you?
-	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_01"); //I'm Orlan, the keeper of this modest tavern.
-	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_02"); //What are you looking for, stranger? Maybe a decent sword, or a good piece of armor?
-	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_03"); //A good swig from the country stills, or just some information?
-	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_04"); //I can give you all that and more, if your coins ring.
+	AI_Output			(other, self, "DIA_Orlan_WERBISTDU_15_00"); //Wer bist du?
+	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_01"); //Ich bin Orlan, der Wirt dieser bescheidenen Schänke.
+	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_02"); //Was suchst du, Fremder? Vielleicht ein ordentliches Schwert oder einen guten Harnisch.
+	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_03"); //Einen guten Schluck aus den ländlichen Brennereien oder nur eine Information.
+	AI_Output			(self, other, "DIA_Orlan_WERBISTDU_05_04"); //Das kann ich dir alles geben und noch mehr, wenn deine Münze rollt.
 
 };
 
 //-----------------------------------------------------
-// BESSERE R�STUNG
+// BESSERE RSTUNG
 //-----------------------------------------------------
 
 instance DIA_Orlan_RUESTUNG		(C_INFO)
@@ -149,7 +149,7 @@ instance DIA_Orlan_RUESTUNG		(C_INFO)
 	information	 = 	DIA_Orlan_RUESTUNG_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"What kind of armor can you offer me?";
+	description	 = 	"Welche Rüstung kannst du mir anbieten?";
 };
 
 var int DIA_Orlan_RUESTUNG_noPerm;
@@ -168,23 +168,23 @@ func int DIA_Orlan_RUESTUNG_Condition ()
 
 func void DIA_Orlan_RUESTUNG_Info ()
 {
-	AI_Output			(other, self, "DIA_Orlan_RUESTUNG_15_00"); //What kind of armor can you offer me?
-	AI_Output			(self, other, "DIA_Orlan_RUESTUNG_05_01"); //I have here a very nice piece that is sure to please you.
+	AI_Output			(other, self, "DIA_Orlan_RUESTUNG_15_00"); //Welche Rüstung kannst du mir anbieten?
+	AI_Output			(self, other, "DIA_Orlan_RUESTUNG_05_01"); //Ich habe hier ein sehr schönes Stück, das dir sicher gefallen wird.
 
 	Info_ClearChoices		(DIA_Orlan_RUESTUNG);
 
-	Info_AddChoice			(DIA_Orlan_RUESTUNG, "I'll think about it."	,	DIA_Orlan_RUESTUNG_BACK);	
-	Info_AddChoice			(DIA_Orlan_RUESTUNG, "'Archer's Suit'. Protection: weapons 40, arrows 60, fire 10 (1800 gold)" , DIA_Orlan_RUESTUNG_Buy);	
+	Info_AddChoice			(DIA_Orlan_RUESTUNG, "Ich denke drüber nach."	,	DIA_Orlan_RUESTUNG_BACK);	
+	Info_AddChoice			(DIA_Orlan_RUESTUNG, "Bogenschützen-Rüstung'. Schutz: Waffen 40, Pfeile 60, Feuer 10 (1800 Gold)" , DIA_Orlan_RUESTUNG_Buy);	
 };  
 
 func void DIA_Orlan_RUESTUNG_Buy ()
 {
 	//AI_Output				(other, self,"DIA_Orlan_RUESTUNG_Buy_15_00"); //I'd like to buy the leather armor.
-	AI_Output				(other, self, "DIA_Orlan_HotelZimmer_ja_15_00"); //All right. Here's the dough.
+	AI_Output				(other, self, "DIA_Orlan_HotelZimmer_ja_15_00"); //In Ordnung. Hier hast du die Kohle.
 
 	if (B_GiveInvItems		(other, self, ITMI_GOLD, 1800))
 		{
-			AI_Output			(self, other,"DIA_Orlan_RUESTUNG_Buy_05_01"); //A wise decision.
+			AI_Output			(self, other,"DIA_Orlan_RUESTUNG_Buy_05_01"); //Eine gute Entscheidung.
 
 			CreateInvItems 		(self, ITAR_REVIVED_ARCHER, 1);
 			B_GiveInvItems		(self, other, ITAR_REVIVED_ARCHER, 1);
@@ -193,7 +193,7 @@ func void DIA_Orlan_RUESTUNG_Buy ()
 		}
 	else
 		{
-			AI_Output			(self, other,"DIA_Orlan_RUESTUNG_Buy_05_02"); //Sorry. Once you have the wherewithal, we can do business.
+			AI_Output			(self, other,"DIA_Orlan_RUESTUNG_Buy_05_02"); //Tut mir Leid. Erst wenn du das entsprechende Kleingeld hast, kommen wir ins Geschäft.
 		};
 
 	Info_ClearChoices		(DIA_Orlan_RUESTUNG);
@@ -201,8 +201,8 @@ func void DIA_Orlan_RUESTUNG_Buy ()
 
 func void DIA_Orlan_RUESTUNG_BACK ()
 {
-	AI_Output				(other, self,"DIA_Orlan_RUESTUNG_BACK_15_00"); //I'll think about it.
-	AI_Output				(self, other,"DIA_Orlan_RUESTUNG_BACK_05_01"); //As you like. But don't wait too long.
+	AI_Output				(other, self,"DIA_Orlan_RUESTUNG_BACK_15_00"); //Ich denke drüber nach.
+	AI_Output				(self, other,"DIA_Orlan_RUESTUNG_BACK_05_01"); //Wie du meinst. Aber warte damit nicht zu lange.
 
 	Info_ClearChoices		(DIA_Orlan_RUESTUNG);
 };
@@ -220,7 +220,7 @@ instance DIA_Orlan_TRADE		(C_INFO)
 	trade		 = 	TRUE;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Show me your wares.";
+	description	 = 	"Zeig mir deine Ware.";
 };
 
 func int DIA_Orlan_TRADE_Condition ()
@@ -233,20 +233,20 @@ func int DIA_Orlan_TRADE_Condition ()
 
 func void DIA_Orlan_TRADE_Info ()
 {
-	AI_Output			(other, self, "DIA_Orlan_TRADE_15_00"); //Show me your wares.
+	AI_Output			(other, self, "DIA_Orlan_TRADE_15_00"); //Zeig mir deine Ware.
 	B_GiveTradeInv (self);
 	
 		if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 			{
-				AI_Output			(self, other, "DIA_Orlan_TRADE_05_01"); //Of course. It is an honor for me to receive such an important guest.
+				AI_Output			(self, other, "DIA_Orlan_TRADE_05_01"); //Natürlich. Es ist mir eine Ehre, solch hohen Besuch zu bewirten.
 			}
 		else if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG) || (hero.guild == GIL_MIL))
 			{
-				AI_Output			(self, other, "DIA_Orlan_TRADE_05_02"); //Of course, sir.
+				AI_Output			(self, other, "DIA_Orlan_TRADE_05_02"); //Selbstverständlich, mein Herr.
 			}
 		else
 			{
-				AI_Output			(self, other, "DIA_Orlan_TRADE_05_03"); //If you can pay.
+				AI_Output			(self, other, "DIA_Orlan_TRADE_05_03"); //Wenn du bezahlen kannst.
 			};
 };
 
@@ -262,7 +262,7 @@ instance DIA_Orlan_HotelZimmer		(C_INFO)
 	information	 = 	DIA_Orlan_HotelZimmer_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"How much do you charge for a room?";
+	description	 = 	"Was kostet ein Zimmer bei dir?";
 };
 var int Orlan_SCGotHotelZimmer;
 var int Orlan_SCGotHotelZimmerDay;
@@ -277,20 +277,20 @@ func int DIA_Orlan_HotelZimmer_Condition ()
 
 func void DIA_Orlan_HotelZimmer_Info ()
 {
-	AI_Output			(other, self, "DIA_Orlan_HotelZimmer_15_00"); //How much do you charge for a room?
+	AI_Output			(other, self, "DIA_Orlan_HotelZimmer_15_00"); //Was kostet ein Zimmer bei dir?
 	
 	if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 		{
 			if (hero.guild == GIL_PAL)
 			{
-				AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_01"); //For a knight of the King, I always have a room available. Free of charge, of course.
+				AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_01"); //Für einen Ritter des Königs habe ich immer ein Zimmer frei. Unentgeltlich, versteht sich.
 			}
 			else
 			{
-				AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_02"); //I would never dare to take money from one of Innos' earthly representatives for my services .
+				AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_02"); //Ich würde es nie wagen, einem irdischen Vertreter Innos Geld für meine Dienste abzunehmen.
 			};
 			
-			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_03"); //Here's the key to the upper rooms. Pick one for yourself.
+			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_03"); //Hier hast du den Schlüssel für die oberen Zimmer. Such dir eins aus.
 			CreateInvItems (self, ITKE_ORLAN_HOTELZIMMER, 1);									
 			B_GiveInvItems (self, other, ITKE_ORLAN_HOTELZIMMER, 1);					
 			Orlan_SCGotHotelZimmer = TRUE;
@@ -298,19 +298,19 @@ func void DIA_Orlan_HotelZimmer_Info ()
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_04"); //Give me 50 gold coins for a week, and you can choose a room.
+			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_05_04"); //Gib mir 50 Goldmünzen für eine Woche und du kannst dir ein Zimmer aussuchen.
 		
 			Info_ClearChoices	(DIA_Orlan_HotelZimmer);
-			Info_AddChoice	(DIA_Orlan_HotelZimmer, "Damn expensive.", DIA_Orlan_HotelZimmer_nein );
-			Info_AddChoice	(DIA_Orlan_HotelZimmer, "All right. Here's the dough.", DIA_Orlan_HotelZimmer_ja );
+			Info_AddChoice	(DIA_Orlan_HotelZimmer, "Verdammt teuer.", DIA_Orlan_HotelZimmer_nein );
+			Info_AddChoice	(DIA_Orlan_HotelZimmer, "In Ordnung. Hier hast du die Kohle.", DIA_Orlan_HotelZimmer_ja );
 		};	
 };
 func void DIA_Orlan_HotelZimmer_ja ()
 {
 		if (B_GiveInvItems (other, self, ItMi_Gold,50))
 		{
-			AI_Output			(other, self, "DIA_Orlan_HotelZimmer_ja_15_00"); //All right. Here's the dough.
-			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_ja_05_01"); //Here's the key. The rooms are upstairs. But don't get everything dirty and pay your rent on time, understand?
+			AI_Output			(other, self, "DIA_Orlan_HotelZimmer_ja_15_00"); //In Ordnung. Hier hast du die Kohle.
+			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_ja_05_01"); //Hier ist der Schlüssel. Die Zimmer sind oben. Aber mach mir nicht alles dreckig und zahl deine Miete pünktlich, verstanden?
 			CreateInvItems (self, ITKE_ORLAN_HOTELZIMMER, 1);									
 			B_GiveInvItems (self, other, ITKE_ORLAN_HOTELZIMMER, 1);					
 			Orlan_SCGotHotelZimmerDay = Wld_GetDay(); 
@@ -318,15 +318,15 @@ func void DIA_Orlan_HotelZimmer_ja ()
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_ja_05_02"); //You don't have 50. Money first, then pleasure.
+			AI_Output			(self, other, "DIA_Orlan_HotelZimmer_ja_05_02"); //Du hast keine 50. Erst das Geld, dann das Vergnügen.
 		};
 	Info_ClearChoices	(DIA_Orlan_HotelZimmer);
 };
 
 func void DIA_Orlan_HotelZimmer_nein ()
 {
-	AI_Output			(other, self, "DIA_Orlan_HotelZimmer_nein_15_00"); //Damn expensive.
-	AI_Output			(self, other, "DIA_Orlan_HotelZimmer_nein_05_01"); //Then you'll have to look elsewhere, my friend.
+	AI_Output			(other, self, "DIA_Orlan_HotelZimmer_nein_15_00"); //Verdammt teuer.
+	AI_Output			(self, other, "DIA_Orlan_HotelZimmer_nein_05_01"); //Dann musst du es woanders versuchen, mein Freund.
 	Info_ClearChoices	(DIA_Orlan_HotelZimmer);
 };
 
@@ -385,33 +385,33 @@ func void DIA_Orlan_MieteFaellig_Info ()
 {
 	if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 	{
-		AI_Output	(self, other, "DIA_Orlan_MieteFaellig_05_00"); //(slimily) I am delighted with your distinguished visit. Stay as long as you like. It is an honor.
+		AI_Output	(self, other, "DIA_Orlan_MieteFaellig_05_00"); //(schleimig) Ich freue mich über deinen hohen Besuch. Bleib so lange, wie du willst. Es ist mir eine Ehre.
 		DIA_Orlan_MieteFaellig_NoMore = TRUE;
 	}
 	else
 	{
-		AI_Output	(self, other, "DIA_Orlan_MieteFaellig_05_01"); //When will I finally get my rent?
+		AI_Output	(self, other, "DIA_Orlan_MieteFaellig_05_01"); //Wann bekomme ich endlich meine Miete?
 	
 		Info_ClearChoices	(DIA_Orlan_MieteFaellig);
-		Info_AddChoice	(DIA_Orlan_MieteFaellig, "Forget it. I'm not paying any more.", DIA_Orlan_MieteFaellig_nein );
-		Info_AddChoice	(DIA_Orlan_MieteFaellig, "Here's your 50 gold coins.", DIA_Orlan_MieteFaellig_ja );
+		Info_AddChoice	(DIA_Orlan_MieteFaellig, "Vergiss es. Ich zahl dir nichts mehr.", DIA_Orlan_MieteFaellig_nein );
+		Info_AddChoice	(DIA_Orlan_MieteFaellig, "Hier sind deine 50 Goldmünzen.", DIA_Orlan_MieteFaellig_ja );
 	};
 };
 
 var int DIA_Orlan_MieteFaellig_OneTime;
 func void DIA_Orlan_MieteFaellig_ja ()
 {
-		AI_Output			(other, self, "DIA_Orlan_MieteFaellig_ja_15_00"); //Here's your 50 gold coins.
+		AI_Output			(other, self, "DIA_Orlan_MieteFaellig_ja_15_00"); //Hier sind deine 50 Goldmünzen.
 	
 		if (B_GiveInvItems (other, self, ItMi_Gold,50))
 		{
-			AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_01"); //Well, it's about time.
+			AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_01"); //Na, das wurde aber auch Zeit.
 
 			if (DIA_Orlan_MieteFaellig_OneTime == FALSE)
 			{
-				AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_02"); //Where are you hanging around all day?
-				AI_Output			(other, self, "DIA_Orlan_MieteFaellig_ja_15_03"); //You don't want to know.
-				AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_04"); //Mmh. Well, it's none of my business anyway.
+				AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_02"); //Wo treibst du dich eigentlich immer herum?
+				AI_Output			(other, self, "DIA_Orlan_MieteFaellig_ja_15_03"); //Das willst du nicht wissen.
+				AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_04"); //Mmh. Na ja, geht mich ja auch nichts an.
 				DIA_Orlan_MieteFaellig_OneTime = TRUE;
 			};
 			
@@ -420,7 +420,7 @@ func void DIA_Orlan_MieteFaellig_ja ()
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_05"); //Say, are you trying to trick me? You don't even have enough money to pay for that meal. I'll teach you, you...
+			AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_05"); //Sag mal, willst du mich verarschen? Du hast ja nicht mal genug Geld, um das Essen zu bezahlen. Dir werd ich helfen, du ...
 			AI_StopProcessInfos (self);
 			B_Attack (self, other, AR_NONE, 1);
 		};
@@ -428,8 +428,8 @@ func void DIA_Orlan_MieteFaellig_ja ()
 
 func void DIA_Orlan_MieteFaellig_nein ()
 {
-	AI_Output			(other, self, "DIA_Orlan_MieteFaellig_nein_15_00"); //Forget it. I'm not paying any more.
-	AI_Output			(self, other, "DIA_Orlan_MieteFaellig_nein_05_01"); //Well, I'll teach you, you miserable cheat.
+	AI_Output			(other, self, "DIA_Orlan_MieteFaellig_nein_15_00"); //Vergiss es. Ich zahl dir nichts mehr.
+	AI_Output			(self, other, "DIA_Orlan_MieteFaellig_nein_05_01"); //Na, dir werd ich helfen, du elender Zechpreller.
 	Orlan_AngriffWegenMiete = TRUE;
 	
 	Info_ClearChoices	(DIA_Orlan_MieteFaellig);
@@ -463,27 +463,27 @@ func int DIA_Orlan_WETTKAMPFLAEUFT_Condition ()
 
 func void DIA_Orlan_WETTKAMPFLAEUFT_Info ()
 {
-			AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_00"); //There you are, finally. I've been waiting for you.
-			AI_Output			(other, self, "DIA_Orlan_WETTKAMPFLAEUFT_15_01"); //What happened?
-			AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_02"); //The drinking contest is finally over.
-			AI_Output			(other, self, "DIA_Orlan_WETTKAMPFLAEUFT_15_03"); //Who won?
+			AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_00"); //Da bist du ja endlich. Ich hab schon auf dich gewartet.
+			AI_Output			(other, self, "DIA_Orlan_WETTKAMPFLAEUFT_15_01"); //Was ist geschehen?
+			AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_02"); //Das Wettsaufen ist endlich vorbei.
+			AI_Output			(other, self, "DIA_Orlan_WETTKAMPFLAEUFT_15_03"); //Wer hat gewonnen?
 	
 			if 	(
 				((Mob_HasItems	("CHEST_RUKHAR", ItFo_Booze)) == FALSE)
 				&& ((Mob_HasItems	("CHEST_RUKHAR", ItFo_Water)) == TRUE)
 				)
 					{
-						AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_04"); //This time Randolph has won. Rukhar must have been having a bad day.
+						AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_04"); //Diesmal hat Randolph gewonnen. Rukhar hat wohl einen schlechten Tag gehabt.
 					}
 				else
 				{
-					AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_05"); //Once again, Rukhar has gotten Randolph pickled. It was only to be expected.
+					AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_05"); //Rukhar hat Randolph wieder mal abgefüllt. War ja zu erwarten.
 					Rukhar_Won_Wettkampf = TRUE;
 				};
 			
 			if ((hero.guild != GIL_PAL) && (hero.guild != GIL_KDF))
 				{
-					AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_06"); //So, well, I hope that was the last time. I don't want that kind of to-do in my house ever again, remember that.
+					AI_Output			(self, other, "DIA_Orlan_WETTKAMPFLAEUFT_05_06"); //So, also., ich hoffe, dass das das letzte Mal war. Ich will so ein Theater nicht mehr in meinem Haus haben, merk dir das.
 				};
 			
 			B_GivePlayerXP (XP_Rukhar_WettkampfVorbei);	
@@ -534,9 +534,9 @@ func int DIA_Orlan_EINGEBROCKT_Condition ()
 
 func void DIA_Orlan_EINGEBROCKT_Info ()
 {
-			AI_Output	(self, other, "DIA_Orlan_EINGEBROCKT_05_00"); //That was a fine mess you got me into. Now I can play lookout for Rukhar again.
-			AI_Output	(other, self, "DIA_Orlan_EINGEBROCKT_15_01"); //Why?
-			AI_Output	(self, other, "DIA_Orlan_EINGEBROCKT_05_02"); //As long as he's holding his little contests in there, it's better if no outsider learns about it. It's not good for business, you see?
+			AI_Output	(self, other, "DIA_Orlan_EINGEBROCKT_05_00"); //Da hast du mir ja was Schönes eingebrockt. Jetzt kann ich wieder den Aufpasser für Rukhar spielen.
+			AI_Output	(other, self, "DIA_Orlan_EINGEBROCKT_15_01"); //Warum?
+			AI_Output	(self, other, "DIA_Orlan_EINGEBROCKT_05_02"); //Solange er darin seine Wetten abhält, sollte besser kein Außenstehender davon erfahren. Ist nicht gut fürs Geschäft, verstehst du?
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -549,7 +549,7 @@ instance DIA_Orlan_Perm		(C_INFO)
 	condition	 = 	DIA_Orlan_Perm_Condition;
 	information	 = 	DIA_Orlan_Perm_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"How's it going with your tavern?";
+	description	 = 	"Wie läuft deine Pinte?";
 };
 
 func int DIA_Orlan_Perm_Condition ()
@@ -562,17 +562,17 @@ func int DIA_Orlan_Perm_Condition ()
 
 func void DIA_Orlan_Perm_Info ()
 {
-	AI_Output (other, self, "DIA_Orlan_Perm_15_00"); //How's it going with your tavern?
+	AI_Output (other, self, "DIA_Orlan_Perm_15_00"); //Wie läuft deine Pinte?
 	
 	if (Kapitel <= 2)
 	{
-		AI_Output (self, other, "DIA_Orlan_Perm_05_01"); //Times have been better, you know?
-		AI_Output (self, other, "DIA_Orlan_Perm_05_02"); //People's purses aren't as open as they used to be.
+		AI_Output (self, other, "DIA_Orlan_Perm_05_01"); //Es gab schon bessere Zeiten, weißt du?
+		AI_Output (self, other, "DIA_Orlan_Perm_05_02"); //Der Geldbeutel hängt bei den Leuten nicht mehr so locker wie früher.
 	}
 	else if (Kapitel >= 3)
 	{
-		AI_Output (self, other, "DIA_Orlan_Perm_05_03"); //Hopefully these black magicians will move on soon, otherwise I can close the tavern.
-		AI_Output (self, other, "DIA_Orlan_Perm_05_04"); //Almost nobody dares to come here anymore.
+		AI_Output (self, other, "DIA_Orlan_Perm_05_03"); //Hoffentlich verziehen sich diese schwarzen Magier bald wieder, sonst kann ich die Taverne dicht machen.
+		AI_Output (self, other, "DIA_Orlan_Perm_05_04"); //Es traut sich ja fast keiner mehr hierher.
 	};
 };
 
@@ -586,7 +586,7 @@ INSTANCE DIA_Orlan_Minenanteil (C_INFO)
 	condition	= DIA_Orlan_Minenanteil_Condition;
 	information	= DIA_Orlan_Minenanteil_Info;
 
-	description = "You're selling mine shares?";
+	description = "Du verkaufst Minenanteile?";
 };   
                     
 FUNC INT DIA_Orlan_Minenanteil_Condition()
@@ -601,8 +601,8 @@ FUNC INT DIA_Orlan_Minenanteil_Condition()
 
 FUNC VOID DIA_Orlan_Minenanteil_Info()
 {	
-	AI_Output (other, self, "DIA_Orlan_Minenanteil_15_00"); //You're selling mine shares?
-	AI_Output (self, other, "DIA_Orlan_Minenanteil_05_01"); //Sure. You can get anything from me, if the price is right.
+	AI_Output (other, self, "DIA_Orlan_Minenanteil_15_00"); //Du verkaufst Minenanteile?
+	AI_Output (self, other, "DIA_Orlan_Minenanteil_05_01"); //Klar. Von mir kannst du alles bekommen, wenn der Preis stimmt.
 	B_GivePlayerXP (XP_Ambient);
 };	
 

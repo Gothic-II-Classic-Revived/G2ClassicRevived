@@ -59,7 +59,7 @@ func int DIA_Mil_325_Miliz_FirstWarn_Condition()
 func void DIA_Mil_325_Miliz_FirstWarn_Info()
 {
 	AI_Output (self, other,"DIA_Mil_325_Miliz_FirstWarn_12_00"); //HALT!
-	AI_Output (self, other,"DIA_Mil_325_Miliz_FirstWarn_12_01"); //No one may enter the store room.
+	AI_Output (self, other,"DIA_Mil_325_Miliz_FirstWarn_12_01"); //Das Warenlager darf nicht betreten werden.
 
 	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP(other,Mil_325_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status]	= GP_FirstWarnGiven;
@@ -92,7 +92,7 @@ FUNC INT DIA_Mil_325_Miliz_SecondWarn_Condition()
 
 func void DIA_Mil_325_Miliz_SecondWarn_Info()
 {
-	AI_Output (self, other,"DIA_Mil_325_Miliz_SecondWarn_12_00"); //Are you deaf? One step closer and I'll chop you to bits!
+	AI_Output (self, other,"DIA_Mil_325_Miliz_SecondWarn_12_00"); //Hörst du schlecht? Einen Schritt weiter und ich hack dich in Stücke!
 
 	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP (other,Mil_325_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status]	= GP_SecondWarnGiven;	
@@ -130,7 +130,7 @@ func void DIA_Mil_325_Miliz_Attack_Info()
 	other.aivar[AIV_LastDistToWP] 			= 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, other,"DIA_Mil_325_Miliz_Attack_12_00"); //That was a mistake!
+	AI_Output (self, other,"DIA_Mil_325_Miliz_Attack_12_00"); //Das war ein Fehler!
 	
 	AI_StopProcessInfos	(self);		
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 
@@ -148,7 +148,7 @@ INSTANCE DIA_Mil_325_Miliz_Pass (C_INFO)
 	condition	= DIA_Mil_325_Miliz_Pass_Condition;
 	information	= DIA_Mil_325_Miliz_Pass_Info;
 	permanent	= FALSE;
-	description	= "I belong to the royal army. I want to equip myself!";
+	description	= "Ich gehöre zur Armee des Königs. Ich will mich ausrüsten!";
 };                       
 
 FUNC INT DIA_Mil_325_Miliz_Pass_Condition()
@@ -162,18 +162,18 @@ FUNC INT DIA_Mil_325_Miliz_Pass_Condition()
 	
 func void DIA_Mil_325_Miliz_Pass_Info()
 {
-	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_15_00"); //I belong to the royal army. I want to equip myself!
-	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_12_01"); //Do you have an order for that?
+	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_15_00"); //Ich gehöre zur Armee des Königs. Ich will mich ausrüsten!
+	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_12_01"); //Hast du den Befehl dazu?
 	
 	Info_ClearChoices (DIA_Mil_325_Miliz_Pass);
-	Info_AddChoice (DIA_Mil_325_Miliz_Pass, "No.", DIA_Mil_325_Miliz_Pass_No);
-	Info_AddChoice (DIA_Mil_325_Miliz_Pass, "Sure.", DIA_Mil_325_Miliz_Pass_Yes);
+	Info_AddChoice (DIA_Mil_325_Miliz_Pass, "Nein.", DIA_Mil_325_Miliz_Pass_No);
+	Info_AddChoice (DIA_Mil_325_Miliz_Pass, "Ja.", DIA_Mil_325_Miliz_Pass_Yes);
 };
 
 func void DIA_Mil_325_Miliz_Pass_Yes()
 {
-	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_Yes_15_00"); //Sure.
-	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_Yes_12_01"); //Fine, you can go in!
+	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_Yes_15_00"); //Ja.
+	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_Yes_12_01"); //Gut, kannst reingehen!
 	self.aivar[AIV_PASSGATE] = TRUE;
 	Info_ClearChoices (DIA_Mil_325_Miliz_Pass);
 	AI_StopProcessInfos (self);
@@ -181,8 +181,8 @@ func void DIA_Mil_325_Miliz_Pass_Yes()
 
 func void DIA_Mil_325_Miliz_Pass_No()
 {
-	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_No_15_00"); //No.
-	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_No_12_01"); //Then get out of here.
+	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_No_15_00"); //Nein.
+	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_No_12_01"); //Dann mach, dass du wegkommst.
 	Info_ClearChoices (DIA_Mil_325_Miliz_Pass);
 	AI_StopProcessInfos (self);
 };
@@ -199,7 +199,7 @@ INSTANCE DIA_Mil_325_Miliz_PERM (C_INFO)
 	condition	= DIA_Mil_325_Miliz_PERM_Condition;
 	information	= DIA_Mil_325_Miliz_PERM_Info;
 	permanent	= TRUE;
-	description	= "Why can't anyone enter the storeroom?";
+	description	= "Warum darf das Lager nicht betreten werden?";
 };                       
 
 FUNC INT DIA_Mil_325_Miliz_PERM_Condition()
@@ -209,8 +209,8 @@ FUNC INT DIA_Mil_325_Miliz_PERM_Condition()
 	
 func void DIA_Mil_325_Miliz_PERM_Info()
 {
-	AI_Output (other, self,"DIA_Mil_325_Miliz_PERM_15_00"); //Why can't anyone enter the storeroom?
-	AI_Output (self, other,"DIA_Mil_325_Miliz_PERM_12_01"); //The honorable Lord Hagen has confiscated the goods for the king's army.
+	AI_Output (other, self,"DIA_Mil_325_Miliz_PERM_15_00"); //Warum darf das Lager nicht betreten werden?
+	AI_Output (self, other,"DIA_Mil_325_Miliz_PERM_12_01"); //Der ehrenwerte Lord Hagen hat die Ware für die Armee des Königs beschlagnahmt.
 };
 
 

@@ -69,7 +69,7 @@ func void B_SetVisuals_Panther()
 
 INSTANCE DemonPuma	(Mst_Default_Panther)
 {
-	name							=	"Demon Panther";
+	name							=	"Dämonenpanther";
 
 	B_SetVisuals_DemonPuma();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);

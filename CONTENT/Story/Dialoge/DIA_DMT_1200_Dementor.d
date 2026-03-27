@@ -26,7 +26,7 @@ FUNC VOID DIA_BridgeDementor_EXIT_Info()
 
 };	
 ///////////////////////////////////////////////////////////////////////
-//	Info BridgeDementor (steht an der Br�cke)
+//	Info BridgeDementor (steht an der Brcke)
 ///////////////////////////////////////////////////////////////////////
 instance DIA_BridgeDementor		(C_INFO)
 {
@@ -53,9 +53,9 @@ func void DIA_BridgeDementor_Info ()
 	Wld_PlayEffect("spellFX_Fear",  self, self, 0, 0, 0, FALSE );
 	AI_PlayAni (self,"T_PRACTICEMAGIC5");	
 	
-	AI_Output			(self ,other, "DIA_BridgeDementor_19_00"); //We knew that you would come!
-	AI_Output			(self ,other, "DIA_BridgeDementor_19_01"); //My Master shall triumph and bring the whole world under his dominion.
-	AI_Output			(self ,other, "DIA_BridgeDementor_19_02"); //You misguided fool! You had no idea who you were up against, and I shall punish you here and now!
+	AI_Output			(self ,other, "DIA_BridgeDementor_19_00"); //Wir wussten, dass du kommen wirst!
+	AI_Output			(self ,other, "DIA_BridgeDementor_19_01"); //Mein Meister wird triumphieren und die Herrschaft der Welt an sich reißen.
+	AI_Output			(self ,other, "DIA_BridgeDementor_19_02"); //Du törichter Narr, du hast nicht gewusst, mit wem du dich anlegst, und dafür werde ich dich hier und jetzt bestrafen!
 
 	Npc_SetRefuseTalk (self,30);	
 };

@@ -23,8 +23,8 @@ FUNC VOID DIA_Carl_EXIT_Info()
 ///////////////////////////////////////////////////////////////////////
 FUNC VOID B_CarlSayHallo ()
 {
-	AI_Output (self, other, "DIA_Carl_Hallo_05_00"); //It would seem that we have a few thieves in the city who steal stuff from the rich people.
-	AI_Output (self, other, "DIA_Carl_Hallo_05_01"); //The city guard recently turned the harbor district upside-down - but they didn't find anything.
+	AI_Output (self, other, "DIA_Carl_Hallo_05_00"); //Scheint nämlich so, als hätten wir ein paar Diebe in der Stadt, die den reichen Leuten ihren Krempel klauen.
+	AI_Output (self, other, "DIA_Carl_Hallo_05_01"); //Die Stadtwache hat letztens das ganze Hafenviertel auf den Kopf gestellt - aber sie haben nichts gefunden.
 	
 };
 // ************************************************************
@@ -85,26 +85,26 @@ FUNC INT DIA_Carl_Hallo_Condition()
 };
 FUNC VOID DIA_Carl_Hallo_Info()
 {
-	AI_Output (self, other, "DIA_Carl_Hallo_05_02"); //What led you into this poor area? What are looking for here?
+	AI_Output (self, other, "DIA_Carl_Hallo_05_02"); //Was führt dich in diese arme Gegend? Was suchst du hier?
 	
 	Info_ClearChoices (DIA_Carl_Hallo);
-	Info_AddChoice (DIA_Carl_Hallo,"I've lost my way.",DIA_Carl_Hallo_verlaufen);
-	Info_AddChoice (DIA_Carl_Hallo,"I'm just looking around a bit.",DIA_Carl_Hallo_umsehen);
+	Info_AddChoice (DIA_Carl_Hallo,"Ich habe mich verlaufen.",DIA_Carl_Hallo_verlaufen);
+	Info_AddChoice (DIA_Carl_Hallo,"Ich sehe mich nur mal um.",DIA_Carl_Hallo_umsehen);
 	
 	
 };
 FUNC VOID DIA_Carl_Hallo_verlaufen()
 {
-	AI_Output (other, self, "DIA_Carl_Hallo_verlaufen_15_00");//I've lost my way.
-	AI_Output (self, other, "DIA_Carl_Hallo_verlaufen_05_01");//Then watch out that you aren't robbed.
+	AI_Output (other, self, "DIA_Carl_Hallo_verlaufen_15_00");//Ich habe mich verlaufen.
+	AI_Output (self, other, "DIA_Carl_Hallo_verlaufen_05_01");//Dann pass auf, dass du nicht ausgeraubt wirst.
 	B_CarlSayHallo();
 	Info_ClearChoices (DIA_Carl_Hallo);
 	
 };
 FUNC VOID DIA_Carl_Hallo_umsehen()
 {
-	AI_Output (other, self, "DIA_Carl_Hallo_umsehen_15_00");//I'm just looking around a bit.
-	AI_Output (self, other, "DIA_Carl_Hallo_umsehen_05_01");//Aha. Then you had better not be caught looking around.
+	AI_Output (other, self, "DIA_Carl_Hallo_umsehen_15_00");//Ich sehe mich nur mal um.
+	AI_Output (self, other, "DIA_Carl_Hallo_umsehen_05_01");//Aha. Dann lass dich besser nicht beim Umsehen erwischen.
 	B_CarlSayHallo();
 	Info_ClearChoices (DIA_Carl_Hallo);
 };
@@ -118,7 +118,7 @@ INSTANCE DIA_Carl_Diebe   (C_INFO)
 	condition   = DIA_Carl_Diebe_Condition;
 	information = DIA_Carl_Diebe_Info;
 	permanent   = FALSE;
-	description	= "What do you know about the thieves?";
+	description	= "Was weißt du über die Diebe?";
 };
 
 FUNC INT DIA_Carl_Diebe_Condition()
@@ -127,10 +127,10 @@ FUNC INT DIA_Carl_Diebe_Condition()
 };
 FUNC VOID DIA_Carl_Diebe_Info()
 {
-	AI_Output (other, self, "DIA_Carl_Diebe_15_00");//What do you know about the thieves?
-	AI_Output (self, other, "DIA_Carl_Diebe_05_01");//Nothing. But all the citizens are scared and have become distrustful - particularly towards strangers.
-	AI_Output (self, other, "DIA_Carl_Diebe_05_02");//Don't get caught in strange houses - no one takes kindly to that.
-	AI_Output (self, other, "DIA_Carl_Diebe_05_03");//Yes, you have to protect yourself against thieves. A sturdy cudgel works best.
+	AI_Output (other, self, "DIA_Carl_Diebe_15_00");//Was weißt du über die Diebe?
+	AI_Output (self, other, "DIA_Carl_Diebe_05_01");//Nichts. Aber alle Bürger haben Angst und sind misstrauisch geworden - vor allem Fremden gegenüber.
+	AI_Output (self, other, "DIA_Carl_Diebe_05_02");//Lass dich nicht in fremden Häusern erwischen - darauf ist keiner gut zu sprechen.
+	AI_Output (self, other, "DIA_Carl_Diebe_05_03");//Ja, vor Dieben muss man sich schützen. Am besten mit einem dicken Knüppel.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Lernen
@@ -142,7 +142,7 @@ INSTANCE DIA_Carl_Lernen   (C_INFO)
 	condition   = DIA_Carl_Lernen_Condition;
 	information = DIA_Carl_Lernen_Info;
 	permanent   = FALSE;
-	description	= "Can you teach me something?";
+	description	= "Kannst du mir was beibringen?";
 };
 
 FUNC INT DIA_Carl_Lernen_Condition()
@@ -151,17 +151,17 @@ FUNC INT DIA_Carl_Lernen_Condition()
 };
 FUNC VOID DIA_Carl_Lernen_Info()
 {
-	AI_Output (other, self, "DIA_Carl_Lernen_15_00");//Can you teach me anything?
-	AI_Output (self, other, "DIA_Carl_Lernen_05_01");//Oh, I'm forging a few fittings and nails and repairing iron parts.
-	AI_Output (self, other, "DIA_Carl_Lernen_05_02");//But I don't know enough about forging weapons to be able to instruct you.
-	AI_Output (self, other, "DIA_Carl_Lernen_05_03");//If you want to learn that, then go see Harad. He sure knows how to forge weapons!
-	AI_Output (self, other, "DIA_Carl_Lernen_05_04");//But if you want to train your muscles a bit, I can help you with that.
+	AI_Output (other, self, "DIA_Carl_Lernen_15_00");//Kannst du mir was beibringen?
+	AI_Output (self, other, "DIA_Carl_Lernen_05_01");//Ach, ich schmiede hier ein paar Beschläge und Nägel und repariere Eisenteile.
+	AI_Output (self, other, "DIA_Carl_Lernen_05_02");//Aber vom Schmieden von Waffen verstehe ich nicht genug, um dich zu unterrichten.
+	AI_Output (self, other, "DIA_Carl_Lernen_05_03");//Wenn du das lernen willst, dann geh zu Harad. Ja, der kann Waffen schmieden!
+	AI_Output (self, other, "DIA_Carl_Lernen_05_04");//Aber wenn du ein bisschen deine Muskeln trainieren willst - dabei kann ich dir helfen.
 	
 	Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher,"Carl, the smith in the harbor district, can help me become stronger.");
+	B_LogEntry (Topic_CityTeacher,"Carl der Schmied im Hafenviertel, kann mir dabei helfen, stärker zu werden.");
 };
 ///////////////////////////////////////////////////////////////////////
-//	Info F�r's lernen bezahlen 
+//	Info Fr's lernen bezahlen 
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Carl_Wieviel   (C_INFO)
 {
@@ -170,7 +170,7 @@ INSTANCE DIA_Carl_Wieviel   (C_INFO)
 	condition   = DIA_Carl_Wieviel_Condition;
 	information = DIA_Carl_Wieviel_Info;
 	permanent   = FALSE;
-	description	= "How much do you charge for the training?";
+	description	= "Was willst du fürs Training haben?";
 };
 
 FUNC INT DIA_Carl_Wieviel_Condition()
@@ -182,16 +182,16 @@ FUNC INT DIA_Carl_Wieviel_Condition()
 };
 FUNC VOID DIA_Carl_Wieviel_Info()
 {
-	AI_Output (other, self, "DIA_Carl_Wieviel_15_00");//How much do you charge for the training?
+	AI_Output (other, self, "DIA_Carl_Wieviel_15_00");//Was willst du fürs Training haben?
 	
 	if Npc_KnowsInfo (other,DIA_Edda_Statue)
 	{
-		AI_Output (self, other, "DIA_Carl_Wieviel_05_01");//I heard what you did for Edda. I'll train you for nothing.
+		AI_Output (self, other, "DIA_Carl_Wieviel_05_01");//Ich hab gehört, was du für Edda getan hast. Ich trainiere dich umsonst.
 		Carl_TeachSTR = TRUE;
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Carl_Wieviel_05_02");//50 gold pieces and I'll help you to become stronger.
+		AI_Output (self, other, "DIA_Carl_Wieviel_05_02");//50 Goldstücke und ich helfe dir dabei, stärker zu werden.
 	};
 };
 ///////////////////////////////////////////////////////////////////////
@@ -204,7 +204,7 @@ INSTANCE DIA_Carl_bezahlen   (C_INFO)
 	condition   = DIA_Carl_bezahlen_Condition;
 	information = DIA_Carl_bezahlen_Info;
 	permanent   = TRUE;
-	description	= "I want to train with you (pay 50 gold).";
+	description	= "Ich will bei dir trainieren (50 Gold zahlen)";
 };
 FUNC INT DIA_Carl_bezahlen_Condition()
 {	
@@ -216,23 +216,23 @@ FUNC INT DIA_Carl_bezahlen_Condition()
 };
 FUNC VOID DIA_Carl_bezahlen_Info()
 {
-	AI_Output (other, self, "DIA_Carl_bezahlen_15_00");//I want to train with you.
+	AI_Output (other, self, "DIA_Carl_bezahlen_15_00");//Ich will bei dir trainieren.
 	
 	if Npc_KnowsInfo (other,DIA_Edda_Statue)
 	{
-		AI_Output (self, other, "DIA_Carl_bezahlen_05_01");//I heard what you did for Edda. I'll train you for nothing.
+		AI_Output (self, other, "DIA_Carl_bezahlen_05_01");//Ich hab gehört, was du für Edda getan hast. Ich trainiere dich umsonst.
 		Carl_TeachSTR = TRUE;
 	}
 	else 
 	{
 		if B_GiveInvItems (other, self, ItMi_Gold, 50)
 		{
-			AI_Output (self, other, "DIA_Carl_bezahlen_05_02");//Good, we can get started as soon as you're ready.
+			AI_Output (self, other, "DIA_Carl_bezahlen_05_02");//Gut, wir können anfangen, sobald du bereit bist.
 			Carl_TeachSTR = TRUE;
 		}
 		else 
 		{
-			AI_Output (self, other, "DIA_Carl_bezahlen_05_03");//Get the gold, then I'll train you.
+			AI_Output (self, other, "DIA_Carl_bezahlen_05_03");//Besorge dir das Gold, dann trainiere ich dich.
 		};
 	};
 };
@@ -247,7 +247,7 @@ INSTANCE DIA_Carl_Teach(C_INFO)
 	condition	= DIA_Carl_Teach_Condition;
 	information	= DIA_Carl_Teach_Info;
 	permanent	= TRUE;
-	description = "I want to become stronger.";
+	description = "Ich will stärker werden";
 };                       
 
 FUNC INT DIA_Carl_Teach_Condition()

@@ -77,7 +77,7 @@ func int DIA_Nadja_STANDARD_Condition ()
 };
 func void DIA_Nadja_STANDARD_Info ()
 {
-	AI_Output (self, other, "DIA_Nadja_STANDARD_16_00"); //Hey, I can't take care of you now, baby. Talk to Bromor if you want to have some fun.
+	AI_Output (self, other, "DIA_Nadja_STANDARD_16_00"); //Hey, ich kann mich jetzt nicht um dich kümmern, Süßer. Sprich mit Bromor, wenn du dich amüsieren willst.
 	
 	AI_StopProcessInfos (self);
 };
@@ -105,11 +105,11 @@ func int DIA_Nadja_Danach_Condition ()
 };
 func void DIA_Nadja_Danach_Info ()
 {
-	AI_Output (self, other, "DIA_Nadja_Danach_16_00"); //Come back to me the next time.
+	AI_Output (self, other, "DIA_Nadja_Danach_16_00"); //Komm das nächste Mal wieder zu mir, Süßer.
 	Nadja_Nacht = FALSE;
 		
 	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"START");
+	Npc_ExchangeRoutine (self,"Start");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info STANDARD
@@ -122,7 +122,7 @@ instance DIA_Nadja_hochgehen		(C_INFO)
 	information	 = 	DIA_Nadja_hochgehen_Info;
 	important	 = 	FALSE;
 	permanent	 = 	TRUE;
-	description	 =	"Let's go upstairs.";
+	description	 =	"Lass uns hochgehen.";
 };
 
 func int DIA_Nadja_hochgehen_Condition ()
@@ -134,8 +134,8 @@ func int DIA_Nadja_hochgehen_Condition ()
 };
 func void DIA_Nadja_hochgehen_Info ()
 {
-	AI_Output (other, self, "DIA_Nadja_hochgehen_15_00"); //Let's go upstairs.
-	AI_Output (self, other, "DIA_Nadja_hochgehen_16_01"); //Today's your lucky day, baby. Let's go.
+	AI_Output (other, self, "DIA_Nadja_hochgehen_15_00"); //Lass uns hochgehen.
+	AI_Output (self, other, "DIA_Nadja_hochgehen_16_01"); //Heute ist dein Glückstag, Süßer. Gehen wir.
 	
 	Bromor_Pay = 2;
 	AI_StopProcessInfos (self);
@@ -151,7 +151,7 @@ instance DIA_Nadja_Poppen	(C_INFO)
 	condition	 = 	DIA_Nadja_Poppen_Condition;
 	information	 = 	DIA_Nadja_Poppen_Info;
 	permanent	 = 	TRUE;
-	description  = "(Have fun)";
+	description  = "(Amüsieren)";
 };
 
 func int DIA_Nadja_Poppen_Condition ()
@@ -164,11 +164,11 @@ func int DIA_Nadja_Poppen_Condition ()
 };
 func void DIA_Nadja_Poppen_Info ()
 {
-	AI_Output (self, other, "DIA_Nadja_Poppen_16_00"); //The next couple of hours belong to us.
-	AI_Output (self, other, "DIA_Nadja_Poppen_16_01"); //It's time for you to relax. Lie back and enjoy.
+	AI_Output (self, other, "DIA_Nadja_Poppen_16_00"); //Die nächsten Stunden gehören nur uns.
+	AI_Output (self, other, "DIA_Nadja_Poppen_16_01"); //Es ist Zeit, dass du dich entspannst. Lehne dich zurück und genieße es.
 
 	Info_ClearChoices (DIA_Nadja_Poppen);
-	Info_AddChoice (DIA_Nadja_Poppen,"Okay...",DIA_Nadja_Poppen_Start);
+	Info_AddChoice (DIA_Nadja_Poppen,"Okay ...",DIA_Nadja_Poppen_Start);
 };
 FUNC VOID DIA_Nadja_Poppen_Start()
 {
@@ -206,7 +206,7 @@ instance DIA_Nadja_BUYHERB		(C_INFO)
 	condition	 = 	DIA_Nadja_BUYHERB_Condition;
 	information	 = 	DIA_Nadja_BUYHERB_Info;
 	permanent	 =	TRUE;
-	description	 = 	"Where can I buy weed here?";
+	description	 = 	"Wo kann ich hier Kraut kaufen?";
 };
 func int DIA_Nadja_BUYHERB_Condition ()
 {	
@@ -255,7 +255,7 @@ instance DIA_Nadja_WANT_HERB		(C_INFO)
 	condition	 = 	DIA_Nadja_WANT_HERB_Condition;
 	information	 = 	DIA_Nadja_WANT_HERB_Info;
 	permanent	 =  FALSE;
-	description	 = 	"Now tell me where I can buy weed (pay 50 gold).";
+	description	 = 	"Jetzt sag mir wo ich Kraut kaufen kann. (50 Gold zahlen)";
 };
 func int DIA_Nadja_WANT_HERB_Condition ()
 {	
