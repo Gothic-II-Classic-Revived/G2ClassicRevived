@@ -19,6 +19,17 @@ const int	REV_Condition_1H_Axe_03				=	90;
 const int	REV_Range_1H_Axe_03					=	70;
 const int	REV_Value_1H_Axe_03					=	500;
 //******************************************************************//
+const int	REV_Damage_1H_Axe_04				=	100;
+const int	REV_Condition_1H_Axe_04				=	90;
+const int	REV_Range_1H_Axe_04					=	90;
+const int	REV_Value_1H_Axe_04					=	600;
+//******************************************************************//
+const int	REV_Damage_1H_Axe_05				=	110;
+const int	REV_Condition_1H_Axe_05				=	105;
+const int	REV_Range_1H_Axe_05					=	80;
+const int	REV_Value_1H_Axe_05					=	700;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_1H_Axe_Great_01			=	110;
 const int	REV_Condition_1H_Axe_Great_01		=	110;
 const int	REV_Range_1H_Axe_Great_01			=	80;
@@ -158,6 +169,54 @@ INSTANCE ITMW_REVIVED_1H_AXE_03 (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_1H_Axe_03;
 	visual 				=	"ItMw_1H_Axe_03.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+INSTANCE ITMW_REVIVED_1H_AXE_04 (C_Item)
+{	
+	name 				=	"Bonebreaker";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_04;
+
+	damageTotal			= 	REV_Damage_1H_Axe_04;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_04;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_04;
+	visual 				=	"REV_1H_AXE_04.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+INSTANCE ITMW_REVIVED_1H_AXE_05 (C_Item)
+{	
+	name 				=	"Bonebreaker";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_1H_Axe_05;
+
+	damageTotal			= 	REV_Damage_1H_Axe_05;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_1H_Axe_05;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Axe_05;
+	visual 				=	"REV_1H_AXE_05.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;

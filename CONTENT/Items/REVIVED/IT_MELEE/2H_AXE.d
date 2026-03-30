@@ -342,7 +342,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_ORE_01 (C_Item)
 	name 				=	"Ore Axe";
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_AXE;	
+	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_WOOD;
 
 	value 				=	REV_Value_2H_Axe_Ore_01;

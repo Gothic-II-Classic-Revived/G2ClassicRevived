@@ -4,12 +4,12 @@ const int	REV_Range_1H_Warhammer_01			=	90;
 const int	REV_Value_1H_Warhammer_01			=	800;
 //******************************************************************//
 const int	REV_Damage_1H_Warhammer_02			=	110;
-const int	REV_Condition_1H_Warhammer_02		=	110;
+const int	REV_Condition_1H_Warhammer_02		=	100;
 const int	REV_Range_1H_Warhammer_02			=	90;
 const int	REV_Value_1H_Warhammer_02			=	1500;
 //******************************************************************//
 const int	REV_Damage_1H_Warhammer_03			=	120;
-const int	REV_Condition_1H_Warhammer_03		=	120;
+const int	REV_Condition_1H_Warhammer_03		=	100;
 const int	REV_Range_1H_Warhammer_03			=	90;
 const int	REV_Value_1H_Warhammer_03			=	3800;
 //******************************************************************//
@@ -20,12 +20,12 @@ const int	REV_Range_1H_Hammer_01				=	70;
 const int	REV_Value_1H_Hammer_01				=	1200;
 //******************************************************************//
 const int	REV_Damage_1H_Hammer_02				=	80;
-const int	REV_Condition_1H_Hammer_02			=	75;
+const int	REV_Condition_1H_Hammer_02			=	70;
 const int	REV_Range_1H_Hammer_02				=	100;
 const int	REV_Value_1H_Hammer_02				=	1900;
 //******************************************************************//
 const int	REV_Damage_1H_Hammer_03				=	100;
-const int	REV_Condition_1H_Hammer_03			=	90;
+const int	REV_Condition_1H_Hammer_03			=	85;
 const int	REV_Range_1H_Hammer_03				=	120;
 const int	REV_Value_1H_Hammer_03				=	2500;
 //******************************************************************//

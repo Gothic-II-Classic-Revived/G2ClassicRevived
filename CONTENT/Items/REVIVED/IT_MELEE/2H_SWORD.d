@@ -97,13 +97,13 @@ const int	REV_Condition_2H_Sword_Paladin_03	=	150;
 const int	REV_Range_2H_Sword_Paladin_03		=	130;
 const int	REV_Value_2H_Sword_Paladin_03		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Innos_01		=	90;
-const int	REV_Condition_2H_Sword_Innos_01		=	110;
+const int	REV_Damage_2H_Sword_Innos_01		=	100;
+const int	REV_Condition_2H_Sword_Innos_01		=	120;
 const int	REV_Range_2H_Sword_Innos_01			=	140;
-const int	REV_Value_2H_Sword_Innos_01			=	1000;
+const int	REV_Value_2H_Sword_Innos_01			=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Innos_02		=	180;
-const int	REV_Condition_2H_Sword_Innos_02		=	160;
+const int	REV_Condition_2H_Sword_Innos_02		=	120;
 const int	REV_Range_2H_Sword_Innos_02			=	140;
 const int	REV_Value_2H_Sword_Innos_02			=	5000;
 //******************************************************************//
@@ -112,7 +112,7 @@ const int	REV_Condition_2H_Demonslayer		=	160;
 const int	REV_Range_2H_Demonslayer			=	140;
 const int	REV_Value_2H_Demonslayer			=	5000;
 //******************************************************************//
-const int	REV_Damage_2H_Uriziel_01			=	30;
+const int	REV_Damage_2H_Uriziel_01			=	100;
 const int	REV_Condition_2H_Uriziel_01			=	140;
 const int	REV_Range_2H_Uriziel_01				=	120;
 const int	REV_Value_2H_Uriziel_01				=	5000;
@@ -130,7 +130,7 @@ const int	REV_Range_2H_Sword_Pirate_01		=	100;
 const int	REV_Value_2H_Sword_Pirate_01		=	3400;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Hacker_01		=	60;
+const int	REV_Damage_2H_Sword_Hacker_01		=	80;
 const int	REV_Condition_2H_Sword_Hacker_01	=	70;
 const int	REV_Range_2H_Sword_Hacker_01		=	105;
 const int	REV_Value_2H_Sword_Hacker_01		=	1500;
@@ -141,20 +141,20 @@ const int	REV_Range_2H_Sword_Hacker_02		=	105;
 const int	REV_Value_2H_Sword_Hacker_02		=	3500;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Thorus			=	0;
-const int	REV_Condition_2H_Sword_Thorus		=	0;
-const int	REV_Range_2H_Sword_Thorus			=	0;
-const int	REV_Value_2H_Sword_Thorus			=	0;
+const int	REV_Damage_2H_Sword_Thorus			=	120;
+const int	REV_Condition_2H_Sword_Thorus		=	100;
+const int	REV_Range_2H_Sword_Thorus			=	120;
+const int	REV_Value_2H_Sword_Thorus			=	3000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Angar			=	0;
-const int	REV_Condition_2H_Sword_Angar		=	0;
-const int	REV_Range_2H_Sword_Angar			=	0;
-const int	REV_Value_2H_Sword_Angar			=	0;
+const int	REV_Damage_2H_Sword_Angar			=	120;
+const int	REV_Condition_2H_Sword_Angar		=	100;
+const int	REV_Range_2H_Sword_Angar			=	120;
+const int	REV_Value_2H_Sword_Angar			=	3000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Rod				=	60;
 const int	REV_Condition_2H_Sword_Rod			=	40; 
 const int	REV_Range_2H_Sword_Rod				=	130;
-const int	REV_Value_2H_Sword_Rod				=	60;
+const int	REV_Value_2H_Sword_Rod				=	100;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Smith_01		=	105;
@@ -180,7 +180,7 @@ const int	REV_Value_2H_Sword_Smith_04			=	4000;
 const int	REV_Damage_2H_Sword_Smith_05		=	170;
 const int	REV_Condition_2H_Sword_Smith_05		=	150;
 const int	REV_Range_2H_Sword_Smith_05			=	130;
-const int	REV_Value_2H_Sword_Smith_05			=	3800;
+const int	REV_Value_2H_Sword_Smith_05			=	4800;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_01			=	120;
@@ -191,22 +191,22 @@ const int	REV_Value_2H_Sword_Ore_01			=	2800;
 const int	REV_Damage_2H_Sword_Ore_02			=	140;
 const int	REV_Condition_2H_Sword_Ore_02		=	120;
 const int	REV_Range_2H_Sword_Ore_02			=	140;
-const int	REV_Value_2H_Sword_Ore_02			=	400;
+const int	REV_Value_2H_Sword_Ore_02			=	4000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_03			=	160;
 const int	REV_Condition_2H_Sword_Ore_03		=	140;
 const int	REV_Range_2H_Sword_Ore_03			=	140;
-const int	REV_Value_2H_Sword_Ore_03			=	450;
+const int	REV_Value_2H_Sword_Ore_03			=	4500;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_04			=	200;
 const int	REV_Condition_2H_Sword_Ore_04		=	180;
 const int	REV_Range_2H_Sword_Ore_04			=	140;
-const int	REV_Value_2H_Sword_Ore_04			=	440;
+const int	REV_Value_2H_Sword_Ore_04			=	4400;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_05			=	200;
 const int	REV_Condition_2H_Sword_Ore_05		=	180;
 const int	REV_Range_2H_Sword_Ore_05			=	140;
-const int	REV_Value_2H_Sword_Ore_05			=	440;
+const int	REV_Value_2H_Sword_Ore_05			=	6400;
 
 
 
@@ -454,7 +454,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_04 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_04;
-	visual 				=	"REV_2H_SWORD_02.3DS";
+	visual 				=	"REV_2H_SWORD_03.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;

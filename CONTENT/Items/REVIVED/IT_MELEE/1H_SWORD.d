@@ -3,36 +3,36 @@ const int	REV_Condition_1H_Sword_Old_01		=	10;
 const int	REV_Range_1H_Sword_Old_01			=	70;
 const int	REV_Value_1H_Sword_Old_01			=	20;
 //******************************************************************//
-const int	REV_Damage_1H_Sword_Old_02			=	20;
+const int	REV_Damage_1H_Sword_Old_02			=	15;
 const int	REV_Condition_1H_Sword_Old_02		=	10;
 const int	REV_Range_1H_Sword_Old_02			=	70;
 const int	REV_Value_1H_Sword_Old_02			=	20;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_1H_Sword_Short_01		=	40;
-const int	REV_Condition_1H_Sword_Short_01		=	40;
+const int	REV_Damage_1H_Sword_Short_01		=	20;
+const int	REV_Condition_1H_Sword_Short_01		=	20;
 const int	REV_Range_1H_Sword_Short_01			=	70;
 const int	REV_Value_1H_Sword_Short_01			=	50;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Short_02		=	30;
 const int	REV_Condition_1H_Sword_Short_02		=	20;
 const int	REV_Range_1H_Sword_Short_02			=	70;
-const int	REV_Value_1H_Sword_Short_02			=	100;
+const int	REV_Value_1H_Sword_Short_02			=	75;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Short_03		=	40;
 const int	REV_Condition_1H_Sword_Short_03		=	25;
 const int	REV_Range_1H_Sword_Short_03			=	70;
-const int	REV_Value_1H_Sword_Short_03			=	120;
+const int	REV_Value_1H_Sword_Short_03			=	75;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Short_04		=	45;
 const int	REV_Condition_1H_Sword_Short_04		=	30;
 const int	REV_Range_1H_Sword_Short_04			=	70;
-const int	REV_Value_1H_Sword_Short_04			=	300;
+const int	REV_Value_1H_Sword_Short_04			=	100;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Short_05		=	50;
 const int	REV_Condition_1H_Sword_Short_05		=	25;
 const int	REV_Range_1H_Sword_Short_05			=	70;
-const int	REV_Value_1H_Sword_Short_05			=	200;
+const int	REV_Value_1H_Sword_Short_05			=	150;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_1H_Sword_01				=	40;
@@ -48,7 +48,7 @@ const int	REV_Value_1H_Sword_02				=	300;
 const int	REV_Damage_1H_Sword_03				=	55;
 const int	REV_Condition_1H_Sword_03			=	45;
 const int	REV_Range_1H_Sword_03				=	100;
-const int	REV_Value_1H_Sword_03				=	700;
+const int	REV_Value_1H_Sword_03				=	300;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_04				=	60;
 const int	REV_Condition_1H_Sword_04			=	50;
@@ -58,7 +58,7 @@ const int	REV_Value_1H_Sword_04				=	100;
 const int	REV_Damage_1H_Sword_05				=	100;
 const int	REV_Condition_1H_Sword_05			=	90;
 const int	REV_Range_1H_Sword_05				=	100;
-const int	REV_Value_1H_Sword_05				=	1000;
+const int	REV_Value_1H_Sword_05				=	750;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_06				=	50;
 const int	REV_Condition_1H_Sword_06			=	45;
@@ -92,20 +92,20 @@ const int	REV_Range_1H_Sword_Long_05			=	120;
 const int	REV_Value_1H_Sword_Long_05			=	1800;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_1H_Sword_Broad_01		=	80;
+const int	REV_Damage_1H_Sword_Broad_01		=	90;
 const int	REV_Condition_1H_Sword_Broad_01		=	70;
 const int	REV_Range_1H_Sword_Broad_01			=	130;
-const int	REV_Value_1H_Sword_Broad_01			=	350;
+const int	REV_Value_1H_Sword_Broad_01			=	1500;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Broad_02		=	120;
 const int	REV_Condition_1H_Sword_Broad_02		=	110;
 const int	REV_Range_1H_Sword_Broad_02			=	130;
-const int	REV_Value_1H_Sword_Broad_02			=	450;
+const int	REV_Value_1H_Sword_Broad_02			=	1500;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Broad_03		=	130;
 const int	REV_Condition_1H_Sword_Broad_03		=	125;
 const int	REV_Range_1H_Sword_Broad_03			=	130;
-const int	REV_Value_1H_Sword_Broad_03			=	850;
+const int	REV_Value_1H_Sword_Broad_03			=	2500;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_Broad_04		=	140;
 const int	REV_Condition_1H_Sword_Broad_04		=	130;
@@ -113,7 +113,7 @@ const int	REV_Range_1H_Sword_Broad_04			=	130;
 const int	REV_Value_1H_Sword_Broad_04			=	2000;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_1H_Sword_Bastard_01		=	60;
+const int	REV_Damage_1H_Sword_Bastard_01		=	100;
 const int	REV_Condition_1H_Sword_Bastard_01	=	95;
 const int	REV_Range_1H_Sword_Bastard_01		=	130;
 const int	REV_Value_1H_Sword_Bastard_01		=	1200;
@@ -149,12 +149,13 @@ const int	REV_Condition_1H_Sword_Paladin_03	=	80;
 const int	REV_Range_1H_Sword_Paladin_03		=	120;
 const int	REV_Value_1H_Sword_Paladin_03		=	2000;
 //******************************************************************//
+//******************************************************************//
 const int	REV_Damage_1H_Demonslayer			=	140;
 const int	REV_Condition_1H_Demonslayer		=	120;
 const int	REV_Range_1H_Demonslayer			=	110;
 const int	REV_Value_1H_Demonslayer			=	2800;
 //******************************************************************//
-const int	REV_Damage_1H_Uriziel_01			=	30;
+const int	REV_Damage_1H_Uriziel_01			=	100;
 const int	REV_Condition_1H_Uriziel_01			=	140;
 const int	REV_Range_1H_Uriziel_01				=	120;
 const int	REV_Value_1H_Uriziel_01				=	4000;
