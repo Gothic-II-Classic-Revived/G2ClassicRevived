@@ -34,10 +34,10 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		CreateInvItems (slf, ItSc_SumDemon, 1); 
 		
 		// ------ Armbrüste -------
-		CreateInvItems (slf, ItRw_Crossbow_L_01, 1);
-		CreateInvItems (slf, ItRw_Crossbow_L_02, 1);  
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_LIGHT_01, 1);
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_LIGHT_02, 1);  
 		
-		CreateInvItems (slf, ItRw_Crossbow_H_01, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_03, 1); 
 
 		CreateInvItems (slf, ITWR_REVIVED_RECIPE_OLDSTEW, 1); 
 		
@@ -64,7 +64,7 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Quartz, 2);
 		CreateInvItems (slf, ItKE_Lockpick,6); 
 		
-		CreateInvItems (slf, ItRw_Crossbow_M_01, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_01, 1); 
 		
 		Engor_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -86,7 +86,7 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  70);
 		CreateInvItems (slf, ItKE_Lockpick,6);
 		
-		CreateInvItems (slf, ItRw_Crossbow_M_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_02, 1); 
 
 		Engor_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -107,7 +107,7 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt,  110);
 		CreateInvItems (slf, ItKE_Lockpick,12);
 		
-		CreateInvItems (slf, ItRw_Crossbow_H_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_HEAVY_01, 1); 
 
 		Engor_ItemsGiven_Chapter_4 = TRUE;
 	};

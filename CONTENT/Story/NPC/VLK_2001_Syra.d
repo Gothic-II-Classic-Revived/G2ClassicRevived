@@ -16,7 +16,7 @@ instance VLK_2001_Syra (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	//EquipItem			(self, ITMW_REVIVED_1H_DAGGER_01);
-	//EquipItem			(self, ItRw_Crossbow_L_01);
+	//EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

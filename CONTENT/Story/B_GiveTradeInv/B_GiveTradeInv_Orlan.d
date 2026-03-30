@@ -29,7 +29,7 @@ FUNC VOID B_GiveTradeInv_Orlan (var C_NPC slf)
 		CreateInvItems (slf, ItMw_Schlachtaxt, 1);
 		
 		CreateInvItems (slf, ItMw_Barbarenstreitaxt, 1);
-		CreateInvItems (slf, ItRw_Bow_L_01, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_01, 1); 
 		
 		// ------ Ringe / Amulette ------
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 

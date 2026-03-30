@@ -297,7 +297,7 @@ INSTANCE DIA_Jesper_Bogen   (C_INFO)
 
 FUNC INT DIA_Jesper_Bogen_Condition()
 {	
-	if (Npc_HasItems (other, ItRw_Bow_L_03_MIS) < 1)
+	if (Npc_HasItems (other, ITRW_REVIVED_BOW_BOSPER) < 1)
 	&& (MIS_Bosper_Bogen == LOG_RUNNING)
 	&& (Join_Thiefs == TRUE)
 	{

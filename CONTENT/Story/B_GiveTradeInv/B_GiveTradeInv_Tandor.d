@@ -27,14 +27,14 @@ FUNC VOID B_GiveTradeInv_Tandor (var C_NPC slf)
 		CreateInvItems (slf, ItMw_Schlachtaxt, 1); 
 		CreateInvItems (slf, ItMw_Drachenschneide, 1);
 		
-		CreateInvItems (slf, ItRw_Bow_M_03, 1);
-		CreateInvItems (slf, ItRw_Crossbow_M_02, 1);
-		CreateInvItems (slf, ItRw_Bow_H_02, 1); 
-		CreateInvItems (slf, ItRw_Crossbow_H_01, 1); 	
-		CreateInvItems (slf, ItRw_Bow_L_03, 1);
-		CreateInvItems (slf, ItRw_Bow_L_04, 1);
-		CreateInvItems (slf, ItRw_Bow_M_02, 1);
-		CreateInvItems (slf, ItRw_Crossbow_M_01, 1);
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_03, 1);
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_02, 1);
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_06, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_03, 1); 	
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_04, 1);
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_05, 1);
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_02, 1);
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_01, 1);
 		
 		CreateInvItems (slf, ITAM_REVIVED_PROT_TOTAL_01,  1);
 		

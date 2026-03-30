@@ -526,7 +526,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_SCAVENGER13_SPAWN01");
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_SCAVENGER13_SPAWN01");
 
-		Wld_InsertItem 	(ItRw_Bow_H_02,"FP_OW_ITEM_11");
+		Wld_InsertItem 	(ITRW_REVIVED_BOW_WAR_01,"FP_OW_ITEM_11");
 		
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_07_19");
 		

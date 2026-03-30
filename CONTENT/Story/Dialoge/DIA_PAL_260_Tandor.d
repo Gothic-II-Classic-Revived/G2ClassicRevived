@@ -166,7 +166,7 @@ FUNC VOID DIA_Tandor_Equipment_Bow()
 {
 	AI_Output (other, self, "DIA_Tandor_Equipment_Bow_15_00"); //Bow.
 	AI_Output (self, other, "DIA_Tandor_Equipment_Bow_08_01"); //This hunting bow is exactly right for you. And I'll give you some arrows, too.
-	B_GiveInvItems (self,other,ItRw_Bow_L_03 ,1);
+	B_GiveInvItems (self,other,ITRW_REVIVED_BOW_SMALL_03 ,1);
 	B_GiveInvItems (self,other, ItRw_Arrow,50);
 	Info_ClearChoices (DIA_Tandor_Equipment);
 };
@@ -174,7 +174,7 @@ FUNC VOID DIA_Tandor_Equipment_Crossbow()
 {
 	AI_Output (other, self, "DIA_Tandor_Equipment_Crossbow_15_00"); //Crossbow.
 	AI_Output (self, other, "DIA_Tandor_Equipment_Crossbow_08_01"); //Then take this light crossbow. You can also get bolts from me.
-	B_GiveInvItems (self,other, ItRw_Crossbow_L_02,1);
+	B_GiveInvItems (self,other, ITRW_REVIVED_CROSSBOW_LIGHT_02,1);
 	B_GiveInvItems (self,other, ItRw_Bolt,50);
 	Info_ClearChoices (DIA_Tandor_Equipment);
 };

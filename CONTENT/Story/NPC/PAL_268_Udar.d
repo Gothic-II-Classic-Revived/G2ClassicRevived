@@ -17,7 +17,7 @@ instance PAL_268_Udar  (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
-	EquipItem (self, ItRw_Crossbow_H_01);
+	EquipItem (self, ITRW_REVIVED_CROSSBOW_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
