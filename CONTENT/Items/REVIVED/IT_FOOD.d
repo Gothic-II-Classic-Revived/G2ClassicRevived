@@ -27,7 +27,7 @@ const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
 const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	8;
 
 const int	REV_Value_MeatStew			=	 30;	const int	REV_HP_MeatStew			=	50;
-const int	REV_Value_FishSoup			=	 10;	const int	REV_HP_FishSoup			=	20;
+const int	REV_Value_FishSoup			=	 30;	const int	REV_HP_FishSoup			=	50;
 const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	10;
 const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	8;
 const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	15;
@@ -669,7 +669,7 @@ INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 
 	value 				=	REV_Value_MeatStew;
 
-	visual 				=	"ItFo_Stew.3ds"; 
+	visual 				=	"REV_ITFO_MEATSTEW.3ds"; 
 	material 			=	MAT_LEATHER;
 	scemeName			=	"RICE";
 	on_state[0]			=	UseSuperMeatSoup;
@@ -682,6 +682,32 @@ INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 	FUNC VOID UseSuperMeatSoup()
 	{
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatStew);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
+{	
+	name 				=	"Full Fish Stew";
+	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_FishSoup;
+
+	visual 				=	"REV_ITFO_FISHSOUP.3ds"; 
+	material 			=	MAT_LEATHER;
+	scemeName			=	"RICE";
+	on_state[0]			=	UseSuperFishSoup;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_FishSoup;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseSuperFishSoup()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_FishSoup);
 	};
 
 /******************************************************************************************/
