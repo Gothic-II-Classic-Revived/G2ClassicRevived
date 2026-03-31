@@ -178,7 +178,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_03 (C_Item)
 };
 INSTANCE ITMW_REVIVED_1H_AXE_04 (C_Item)
 {	
-	name 				=	"Bonebreaker";
+	name 				=	"Arm-eater";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -202,7 +202,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_04 (C_Item)
 };
 INSTANCE ITMW_REVIVED_1H_AXE_05 (C_Item)
 {	
-	name 				=	"Bonebreaker";
+	name 				=	"Loop Breaker";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	
@@ -224,6 +224,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_05 (C_Item)
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
+//******************************************************************//
 //******************************************************************//
 INSTANCE ITMW_REVIVED_1H_AXE_GREAT_01 (C_Item)
 {	
