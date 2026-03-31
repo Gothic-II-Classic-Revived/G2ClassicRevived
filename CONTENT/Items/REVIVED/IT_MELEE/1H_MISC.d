@@ -400,7 +400,7 @@ INSTANCE ITMW_REVIVED_1H_DAGGER_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_SWORD_07 (C_Item)
 {	
-	name 				=	"sword";
+	name 				=	"Schwert";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	

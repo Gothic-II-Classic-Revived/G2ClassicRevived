@@ -234,7 +234,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_05 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_BOW_LONG_01 (C_Item)
 {
-	name 				=	"Longbow";
+	name 				=	"Langbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;

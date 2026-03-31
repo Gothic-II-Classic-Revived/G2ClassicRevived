@@ -269,7 +269,7 @@ INSTANCE ItRw_Bow_M_02 (C_Item)
 
 INSTANCE ItRw_Bow_M_03 (C_Item)
 {
-	name 				=	"Longbow";
+	name 				=	"Langbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;

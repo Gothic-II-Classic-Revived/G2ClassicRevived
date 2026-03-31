@@ -357,7 +357,7 @@ INSTANCE ItMw_Sense (C_Item)
 // *****************************************************
 INSTANCE ItMw_1h_Vlk_Sword (C_Item)
 {	
-	name 				=	"sword";  
+	name 				=	"Degen";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	

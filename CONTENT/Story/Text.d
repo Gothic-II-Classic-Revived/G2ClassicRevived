@@ -808,7 +808,7 @@ const string NAME_ADDON_PRAYIDOL_GIVEMANA				= "Ich werde beten und 10 Mana opfe
 // *************************************************************
 // NAMEN FÜR Produktionsitems
 // *************************************************************
-const string NAME_ItMw_1H_Common_01	 = "sword"; //(40/30)
+const string NAME_ItMw_1H_Common_01	 = "Schwert"; //(40/30)
 const string NAME_ItMw_1H_Special_01 = "Erz-Langschwert";
 const string NAME_ItMw_2H_Special_01 = "Erz-Zweihänder";
 const string NAME_ItMw_1H_Special_02 = "Erz-Bastardschwert";
