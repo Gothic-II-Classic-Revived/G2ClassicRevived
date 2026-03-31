@@ -20,17 +20,17 @@ const int	REV_Value_OldBeer			=	 6;		const int	REV_HP_OldBeer			=	3;
 const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;
 
 const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	5;
-const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	20;
-const int	REV_Value_MageWine			=	50;		const int	REV_HP_MageWine			=	30;
-const int	REV_Value_MonsterDrink		=	30;		const int	REV_HP_MonsterDrink		=	30;		const int	REV_Time_MonsterDrink	=	10000;
+const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	10;
+const int	REV_Value_MageWine			=	50;		const int	REV_HP_MageWine			=	15;
+const int	REV_Value_MonsterDrink		=	30;		const int	REV_HP_MonsterDrink		=	15;		const int	REV_Time_MonsterDrink	=	10000;
 const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
 const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	8;
 
-const int	REV_Value_MeatStew			=	 30;	const int	REV_HP_MeatStew			=	50;
-const int	REV_Value_FishSoup			=	 30;	const int	REV_HP_FishSoup			=	50;
-const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	10;
-const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	8;
-const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	15;
+const int	REV_Value_MeatStew			=	 30;	const int	REV_HP_MeatStew			=	25;
+const int	REV_Value_FishSoup			=	 30;	const int	REV_HP_FishSoup			=	25;
+const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	15;
+const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	10;
+const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	20;
 const int	REV_Value_Rice				=	 5;		const int	REV_HP_Rice				=	5;
 const int	REV_Value_Marmalade			=	25;		const int	REV_HP_Marmalade		=	20;
 const int	REV_Value_FruitSalad		=	20;		const int	REV_HP_FruitSalad		=	15;
@@ -509,13 +509,13 @@ INSTANCE ITFO_REVIVED_TURNIPBOOZE (C_Item)
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_TurnipBooze;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_TurnipBooze;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseTurnipBooze()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_TurnipBooze);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_TurnipBooze);
 	};
 
 /******************************************************************************************/
@@ -535,13 +535,13 @@ INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_VinoBooze;
+	TEXT[1]				= NAME_Percentage_Mana;			COUNT[1]	= REV_HP_VinoBooze;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseVinoBooze()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_VinoBooze);
+		REV_ChangeStatPercent (ATR_MANA,	REV_HP_VinoBooze);
 	};
 
 /******************************************************************************************/
@@ -561,14 +561,14 @@ INSTANCE ITFO_REVIVED_MAGEWINE (C_Item)
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_BonusHPMP;				COUNT[1]	= REV_HP_MageWine;
+	TEXT[1]				= NAME_PercentageHPMP;			COUNT[1]	= REV_HP_MageWine;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMageWine()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MageWine);
-		Npc_ChangeAttribute	(self,	ATR_MANA,		REV_HP_MageWine);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_MageWine);
+		REV_ChangeStatPercent (ATR_MANA,		REV_HP_MageWine);
 	};
 
 /******************************************************************************************/
@@ -588,14 +588,14 @@ INSTANCE ITFO_REVIVED_MONSTERDRINK (C_Item)
 	scemeName			=	"POTIONFAST";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MonsterDrink;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_MonsterDrink;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMonsterDrink()
 	{
 		B_Say_Overlay (hero, hero , "$COUGH");
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MonsterDrink);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_MonsterDrink);
 		Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", REV_Time_MonsterDrink);
 	};
 
@@ -616,13 +616,13 @@ INSTANCE ITFO_REVIVED_RICEBOOZE (C_Item)
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_RiceSchnapps;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseRiceBooze()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_RiceSchnapps);
 	};
 
 /******************************************************************************************/
@@ -642,13 +642,13 @@ INSTANCE ITFO_REVIVED_MEAD (C_Item)
 	scemeName			=	"POTION";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Mead;
+	TEXT[1]				= NAME_Percentage_Mana;			COUNT[1]	= REV_HP_Mead;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMead()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Mead);
+		REV_ChangeStatPercent (ATR_MANA,	REV_HP_Mead);
 	};
 
 
@@ -675,13 +675,13 @@ INSTANCE ITFO_REVIVED_MEATSTEW (C_Item)
 	on_state[0]			=	UseSuperMeatSoup;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatStew;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_MeatStew;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseSuperMeatSoup()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatStew);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_MeatStew);
 	};
 
 /******************************************************************************************/
@@ -701,13 +701,13 @@ INSTANCE ITFO_REVIVED_FISHSOUP (C_Item)
 	on_state[0]			=	UseSuperFishSoup;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_FishSoup;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_FishSoup;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseSuperFishSoup()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_FishSoup);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_FishSoup);
 	};
 
 /******************************************************************************************/
@@ -727,7 +727,7 @@ INSTANCE ITFO_REVIVED_FISHXPSOUP (C_Item)
 	on_state[0]			=	UseEddaFishSoup;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_FishSoup;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_FishSoup;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -755,13 +755,13 @@ INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
 	on_state[0]			=	UseMeatbugragout;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatbugRagout;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_MeatbugRagout;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMeatbugragout()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatbugRagout);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_MeatbugRagout);
 	};
 
 /******************************************************************************************/
@@ -781,13 +781,13 @@ INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
 	on_state[0]			=	UseSoup;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RootSoup;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_RootSoup;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseSoup()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RootSoup);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_RootSoup);
 	};
 
 /******************************************************************************************/
@@ -807,13 +807,14 @@ INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)
 	scemeName			=	"RICE";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= REV_HP_CrawlerSoup;
+	TEXT[1]				= NAME_BonusHPMP;				COUNT[1]	= REV_HP_CrawlerSoup;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;                                                    
 };
 
 	FUNC VOID UseCrawlersoup()
 	{
-		Npc_ChangeAttribute	(self,	ATR_MANA,	REV_HP_CrawlerSoup);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_CrawlerSoup);
+		REV_ChangeStatPercent (ATR_MANA,		REV_HP_CrawlerSoup);
 	};
 
 
@@ -834,13 +835,13 @@ INSTANCE ITFO_REVIVED_RICE (C_Item)
 	on_state[0]			=	UseRice;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Rice;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_Rice;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseRice()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Rice);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_Rice);
 	};
 
 
@@ -862,13 +863,13 @@ INSTANCE ITFO_REVIVED_MARMALADE (C_Item)
 	on_state[0]			=	UseMarmalade;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= REV_HP_Marmalade;
-	TEXT[5]				= 	NAME_Value;		COUNT[5]	= value;
+	TEXT[1]				= 	NAME_Percentage_HP;			COUNT[1]	= REV_HP_Marmalade;
+	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseMarmalade()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Marmalade);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_Marmalade);
 	};
 
 
@@ -889,13 +890,13 @@ INSTANCE ITFO_REVIVED_FRUITSALAD (C_Item)
 	on_state[0]			=	UseFruitSalad;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= REV_HP_FruitSalad;
-	TEXT[5]				= 	NAME_Value;		COUNT[5]	= value;
+	TEXT[1]				= 	NAME_Percentage_HP;			COUNT[1]	= REV_HP_FruitSalad;
+	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseFruitSalad()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_FruitSalad);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_FruitSalad);
 	};
 
 
@@ -916,11 +917,11 @@ INSTANCE ITFO_REVIVED_OLDSTEW (C_Item)
 	on_state[0]			=	UseOldstew;
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_OldStew;
+	TEXT[1]				= NAME_Percentage_HP;			COUNT[1]	= REV_HP_OldStew;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 	FUNC VOID UseOldstew()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_OldStew);
+		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_OldStew);
 	};

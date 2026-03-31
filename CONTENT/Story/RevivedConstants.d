@@ -143,6 +143,10 @@ const string NAME_RaiseWeaponSkill		=	"Melee Weapon Talent Bonus";
 
 const string NAME_BonusHPMP				=	"Hitpoints and Mana bonus";
 
+const string NAME_PercentageHPMP		=	"Hitpoints and Mana percentage";
+const string NAME_Percentage_HP			=	"Hitpoint percentage";
+const string NAME_Percentage_Mana		=	"Mana percentage";
+
 const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
 
 const string PRINT_GotFood				=	"Package was filled with food";

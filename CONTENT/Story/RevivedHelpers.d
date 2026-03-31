@@ -24,3 +24,31 @@ func string REV_BuildTradeString (var int itemInstance)
 	
 	return concatText;
 };
+
+func void REV_ChangeStatPercent (var int recover, var int recoverPercent)
+{
+	var int amountMax;
+	var int amountDelta;
+
+	if(recover == ATR_HITPOINTS)
+	{
+		amountMax = hero.attribute[ATR_HITPOINTS_MAX];
+	}
+	else if(recover == ATR_MANA)
+	{
+		amountMax = hero.attribute[ATR_MANA_MAX];
+	};
+	amountDelta = (amountMax * recoverPercent) / 100;
+
+	if ((amountDelta == 0) && (recoverPercent > 0))
+	{
+		amountDelta = 1;
+	};
+
+	if ((amountDelta == 0) && (recoverPercent < 0))
+	{
+		amountDelta = -1;
+	};
+
+	Npc_ChangeAttribute (hero, recover, amountDelta);
+};
