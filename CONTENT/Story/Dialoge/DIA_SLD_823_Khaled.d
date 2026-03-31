@@ -50,7 +50,7 @@ func void DIA_Khaled_Hallo_Info ()
 	AI_Output (other, self, "DIA_Khaled_Hallo_15_00"); //Alles klar bei dir?
 	if (Npc_KnowsInfo (other, DIA_Lee_WannaJoin))
 	{
-		AI_Output (self, other, "DIA_Khaled_Hallo_11_01"); //So - du willst also bei uns mitmachen? Hast du Ã¼berhaupt schon eine vernÃ¼nftige Waffe?
+		AI_Output (self, other, "DIA_Khaled_Hallo_11_01"); //So - du willst also bei uns mitmachen? Hast du überhaupt schon eine vernünftige Waffe?
 		Khaled_weiter = TRUE;
 		Log_CreateTopic (Topic_SoldierTrader,LOG_NOTE);
 		B_LogEntry (Topic_SoldierTrader,"Khaled handelt mit Waffen.");
@@ -116,7 +116,7 @@ func int DIA_Khaled_WannaJoin_Condition ()
 func void DIA_Khaled_WannaJoin_Info ()
 {
 	AI_Output (other, self, "DIA_Khaled_WannaJoin_15_00"); //Hast du was dagegen, wenn ich bei euch mitmache?
-	AI_Output (self, other, "DIA_Khaled_WannaJoin_11_01"); //Wenn du die Probe bestanden hast, werde ich fÃ¼r dich stimmen.
+	AI_Output (self, other, "DIA_Khaled_WannaJoin_11_01"); //Wenn du die Probe bestanden hast, werde ich für dich stimmen.
 	if (MIS_Torlof_HolPachtVonSekob == LOG_SUCCESS)
 	|| (MIS_Torlof_BengarMilizKlatschen == LOG_SUCCESS)
 	{
@@ -135,7 +135,7 @@ instance DIA_Khaled_Woher		(C_INFO)
 	condition	= DIA_Khaled_Woher_Condition;
 	information	= DIA_Khaled_Woher_Info;
 	permanent	= FALSE;
-	description	= "Wie bist du zu den SÃ¶ldnern gekommen?";
+	description	= "Wie bist du zu den Söldnern gekommen?";
 };
 
 func int DIA_Khaled_Woher_Condition ()
@@ -148,8 +148,8 @@ func int DIA_Khaled_Woher_Condition ()
 
 func void DIA_Khaled_Woher_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_Woher_15_00"); //Wie bist du zu den SÃ¶ldnern gekommen?
-	AI_Output (self, other, "DIA_Khaled_Woher_11_01"); //Ich bin mit Sylvio aus dem SÃ¼den gekommen. Wir waren in einer SÃ¶ldnerarmee, die gegen die Orks gekÃ¤mpft hat.
+	AI_Output (other, self, "DIA_Khaled_Woher_15_00"); //Wie bist du zu den Söldnern gekommen?
+	AI_Output (self, other, "DIA_Khaled_Woher_11_01"); //Ich bin mit Sylvio aus dem Süden gekommen. Wir waren in einer Söldnerarmee, die gegen die Orks gekämpft hat.
 };
 
 // ************************************************************
@@ -162,7 +162,7 @@ instance DIA_Khaled_AboutSylvio		(C_INFO)
 	condition	= DIA_Khaled_AboutSylvio_Condition;
 	information	= DIA_Khaled_AboutSylvio_Info;
 	permanent	= FALSE;
-	description	= "Was denkst du Ã¼ber Sylvio?";
+	description	= "Was denkst du über Sylvio?";
 };
 
 func int DIA_Khaled_AboutSylvio_Condition ()
@@ -175,8 +175,8 @@ func int DIA_Khaled_AboutSylvio_Condition ()
 
 func void DIA_Khaled_AboutSylvio_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_AboutSylvio_15_00"); //Was denkst du Ã¼ber Sylvio?
-	AI_Output (self, other, "DIA_Khaled_AboutSylvio_11_01"); //Der Typ ist gefÃ¤hrlich! Und viele der SÃ¶ldner, die mit ihm hierher gekommen sind, hÃ¶ren auf ihn. Leg dich besser nicht mit ihm an.
+	AI_Output (other, self, "DIA_Khaled_AboutSylvio_15_00"); //Was denkst du über Sylvio?
+	AI_Output (self, other, "DIA_Khaled_AboutSylvio_11_01"); //Der Typ ist gefährlich! Und viele der Söldner, die mit ihm hierher gekommen sind, hören auf ihn. Leg dich besser nicht mit ihm an.
 };
 
 // ************************************************************
@@ -189,7 +189,7 @@ instance DIA_Khaled_AboutLee		(C_INFO)
 	condition	= DIA_Khaled_AboutLee_Condition;
 	information	= DIA_Khaled_AboutLee_Info;
 	permanent	= FALSE;
-	description	= "Was denkst du Ã¼ber Lee?";
+	description	= "Was denkst du über Lee?";
 };
 
 func int DIA_Khaled_AboutLee_Condition ()
@@ -202,11 +202,11 @@ func int DIA_Khaled_AboutLee_Condition ()
 
 func void DIA_Khaled_AboutLee_Info ()
 {
-	AI_Output (other, self, "DIA_Khaled_AboutLee_15_00"); //Was denkst du Ã¼ber Lee?
+	AI_Output (other, self, "DIA_Khaled_AboutLee_15_00"); //Was denkst du über Lee?
 	AI_Output (self, other, "DIA_Khaled_AboutLee_11_01"); //Ich glaube, das einzige, was Lee wirklich interessiert, ist, von dieser Insel runterzukommen.
 	AI_Output (self, other, "DIA_Khaled_AboutLee_11_02"); //Er will aufs Festland. Hat da wohl noch 'ne Rechnung offen ...
-	AI_Output (self, other, "DIA_Khaled_AboutLee_11_03"); //Jedenfalls versteht er sein Handwerk um LÃ¤ngen besser, als Sylvio das jemals kÃ¶nnte.
-	AI_Output (self, other, "DIA_Khaled_AboutLee_11_04"); //AuÃŸerdem ist er ein guter AnfÃ¼hrer. Die meiste Zeit kann man hier machen, was man will.
+	AI_Output (self, other, "DIA_Khaled_AboutLee_11_03"); //Jedenfalls versteht er sein Handwerk um Längen besser, als Sylvio das jemals könnte.
+	AI_Output (self, other, "DIA_Khaled_AboutLee_11_04"); //Außerdem ist er ein guter Anführer. Die meiste Zeit kann man hier machen, was man will.
 };
 
 

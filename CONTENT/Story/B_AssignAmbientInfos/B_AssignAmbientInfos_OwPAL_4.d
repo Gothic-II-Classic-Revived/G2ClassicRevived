@@ -51,11 +51,11 @@ FUNC VOID DIA_OWPAL_4_STANDARD_Info()
 	};
 	if (randy == 1)
 	{
-		AI_Output (self,other,"DIA_OWPAL_4_STANDARD_04_01"); //Wir werden hier so lange ausharren, wie Innos sein Licht Ã¼ber uns hÃ¤lt.
+		AI_Output (self,other,"DIA_OWPAL_4_STANDARD_04_01"); //Wir werden hier so lange ausharren, wie Innos sein Licht über uns hält.
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_OWPAL_4_STANDARD_04_02"); //Mit Innos' Hilfe werden wir die bÃ¶sen Kreaturen von hier fernhalten.
+		AI_Output (self,other,"DIA_OWPAL_4_STANDARD_04_02"); //Mit Innos' Hilfe werden wir die bösen Kreaturen von hier fernhalten.
 	};
 	
 	AI_StopProcessInfos	(self);

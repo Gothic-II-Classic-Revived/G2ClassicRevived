@@ -5,7 +5,7 @@
 prototype Mst_Addon_Stoneguardian	(C_NPC)
 {
 	//----- Monster ----
-	name							= "Steinw√§chter";
+	name							= "Steinw‰chter";
 	guild							= GIL_STONEGUARDIAN;
 	aivar[AIV_MM_REAL_ID]			= ID_STONEGUARDIAN;
 	
@@ -56,7 +56,7 @@ func void B_SetVisuals_Stoneguardian()
 };
 
 //**************************************************************
-//	Beschworener Steinwchter	
+//	Beschworener Steinw‰chter	
 //**************************************************************
 
 INSTANCE Summoned_Guardian	(Mst_Addon_Stoneguardian)
@@ -88,7 +88,7 @@ INSTANCE Summoned_Guardian	(Mst_Addon_Stoneguardian)
 };
 
 //**************************************************************
-//	Steinwchter	
+//	Steinw‰chter	
 //**************************************************************
 
 
@@ -117,7 +117,7 @@ INSTANCE Stoneguardian_MineDead4	(Mst_Addon_Stoneguardian)
 	B_SetVisuals_Stoneguardian ();
 };
 //**************************************************************
-//	Steinwchter	
+//	Steinw‰chter	
 //**************************************************************
 
 INSTANCE Stoneguardian_Dead1	(Mst_Addon_Stoneguardian)
@@ -141,7 +141,7 @@ INSTANCE Stoneguardian_MerdarionsSchluessel	(Mst_Addon_Stoneguardian)
 };
 
 //**************************************************************
-//	OrnamentSteinwchter	
+//	OrnamentSteinw‰chter	
 //**************************************************************
 
 INSTANCE Stoneguardian_Ornament	(Mst_Addon_Stoneguardian)
@@ -151,7 +151,7 @@ INSTANCE Stoneguardian_Ornament	(Mst_Addon_Stoneguardian)
 };
 
 //**************************************************************
-//	im Gebude der Heiler	
+//	im Geb‰ude der Heiler	
 //**************************************************************
 
 INSTANCE Stoneguardian_Heiler	(Mst_Addon_Stoneguardian)
@@ -190,7 +190,7 @@ INSTANCE Stoneguardian_Sani06(Mst_Addon_Stoneguardian)
 	aivar[AIV_EnemyOverride] = TRUE;
 };
 //**************************************************************
-//	im Gebude der Heiler	
+//	im Geb‰ude der Heiler	
 //**************************************************************
 
 INSTANCE Stoneguardian_NailedPortalADW1	(Mst_Addon_Stoneguardian)

@@ -16,7 +16,7 @@ INSTANCE ItWr_SaturasFirstMessage_Addon_Sealed	(C_Item)
 	on_state[0]			=   Use_SaturasFirstMessage_Sealed;
 	scemeName			=	"MAPSEALED";
 	description			= 	name;
-	TEXT[2]				=   "Diese Botschaft wurde sorgfÃ¤ltig versiegelt.";
+	TEXT[2]				=   "Diese Botschaft wurde sorgfältig versiegelt.";
 
 };
 var int Use_SaturasFirstMessage_OneTime;
@@ -30,13 +30,13 @@ func void Use_SaturasFirstMessage ()
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   	);  
 					Doc_PrintLine	( nDocID,  0, "Werter Vatras,"					);
 					Doc_PrintLines	( nDocID,  0, "Wir sind bis zum Portal vorgedrungen. Du hattest recht."					);
-					Doc_PrintLines	( nDocID,  0, "Es scheint tatsÃ¤chlich so, als seien sie Adanos-glÃ¤ubige gewesen. Ich bitte dich, das anhand meiner Aufzeichnungen nochmal zu prÃ¼fen."					);
-					Doc_PrintLines	( nDocID,  0, "Wir haben schon seit Tagen keines dieser seltsamen Wesen aus Stein ausmachen kÃ¶nnen."					);
-					Doc_PrintLines	( nDocID,  0, "Trotzdem bebt die Erde immer noch aus nicht erkennbaren GrÃ¼nden."					);
-					Doc_PrintLines	( nDocID,  0, "Ich vermute, dass uns das Studium bald mehr AufklÃ¤rung darÃ¼ber bescheren wird."					);
-					Doc_PrintLines	( nDocID,  0, "Das Ornament, das wir gefunden haben, hat eine weitaus wichtigere Bedeutung, als wir zuerst angenommen haben. Es scheint ein wichtiges SchlÃ¼sselartefakt zu sein. Ist aber leider nicht vollstÃ¤ndig. Wir mÃ¼ssen es noch weiter studieren."					);
-					Doc_PrintLines	( nDocID,  0, "Entsende eines unserer Kinder vom 'Ring des Wassers', um es uns zurÃ¼ck zu bringen. Wenn es geht, schicke nicht Cavalorn."					);
-					Doc_PrintLines	( nDocID,  0, "Ich habe ihn damit beauftragt, dir diesen Brief zu Ã¼berbringen. Ich denke, damit hat er erst einmal genug getan."					);
+					Doc_PrintLines	( nDocID,  0, "Es scheint tatsächlich so, als seien sie Adanos-gläubige gewesen. Ich bitte dich, das anhand meiner Aufzeichnungen nochmal zu prüfen."					);
+					Doc_PrintLines	( nDocID,  0, "Wir haben schon seit Tagen keines dieser seltsamen Wesen aus Stein ausmachen können."					);
+					Doc_PrintLines	( nDocID,  0, "Trotzdem bebt die Erde immer noch aus nicht erkennbaren Gründen."					);
+					Doc_PrintLines	( nDocID,  0, "Ich vermute, dass uns das Studium bald mehr Aufklärung darüber bescheren wird."					);
+					Doc_PrintLines	( nDocID,  0, "Das Ornament, das wir gefunden haben, hat eine weitaus wichtigere Bedeutung, als wir zuerst angenommen haben. Es scheint ein wichtiges Schlüsselartefakt zu sein. Ist aber leider nicht vollständig. Wir müssen es noch weiter studieren."					);
+					Doc_PrintLines	( nDocID,  0, "Entsende eines unserer Kinder vom 'Ring des Wassers', um es uns zurück zu bringen. Wenn es geht, schicke nicht Cavalorn."					);
+					Doc_PrintLines	( nDocID,  0, "I have assigned him to deliver this letter to you. I think that is enough for him to do. "					);
 					Doc_PrintLines	( nDocID,  0, "Ich hoffe, dass wir das Richtige tun."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Saturas"					);
@@ -47,7 +47,7 @@ func void Use_SaturasFirstMessage ()
 		{
 			Log_CreateTopic (TOPIC_Addon_KDW, LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_Addon_KDW, LOG_RUNNING);
-			B_LogEntry (TOPIC_Addon_KDW,"Einem Banditen nahm ich eine Nachricht ab, die Cavalorn dem Wassermagier Vatras Ã¼bergeben sollte. Jetzt ist es meine Aufgabe."); 
+			B_LogEntry (TOPIC_Addon_KDW,"Einem Banditen nahm ich eine Nachricht ab, die Cavalorn dem Wassermagier Vatras übergeben sollte. Jetzt ist es meine Aufgabe."); 
 			Use_SaturasFirstMessage_OneTime = TRUE;
 		};
 
@@ -62,7 +62,7 @@ func void Use_SaturasFirstMessage ()
 		{
 			Log_CreateTopic (TOPIC_Addon_RingOfWater, LOG_MISSION);
 			Log_SetTopicStatus(TOPIC_Addon_RingOfWater, LOG_RUNNING);
-			Log_AddEntry (TOPIC_Addon_RingOfWater,"Cavalorn gehÃ¶rt zum 'Ring des Wassers'."); 
+			Log_AddEntry (TOPIC_Addon_RingOfWater,"Cavalorn gehört zum 'Ring des Wassers'."); 
 		};
 	
 		SC_KnowsRanger = TRUE;
@@ -76,12 +76,12 @@ func void Use_SaturasFirstMessage_Sealed ()
 
 //****************************************************************************
 //				Cavalorn's Brief an Vatras von Saturas
-//				Das Siegel wurde geffnet		
+//				Das Siegel wurde geöffnet		
 //			---------------------------------------------
 //****************************************************************************
 INSTANCE ItWr_SaturasFirstMessage_Addon	(C_Item)
 {
-	name 				=	"GeÃ¶ffnete Botschaft";
+	name 				=	"Geöffnete Botschaft";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
@@ -91,14 +91,14 @@ INSTANCE ItWr_SaturasFirstMessage_Addon	(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_SaturasFirstMessage;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	description			= 	name;
 	TEXT[2]				=   "Saturas` Brief an Vatras";
 };
 
 
 //****************************************************************************
-//				Portalschlsselbruchstck
+//				Portalschlüsselbruchstück
 //			---------------------------------------------
 //****************************************************************************
 
@@ -116,7 +116,7 @@ INSTANCE  ItMi_Ornament_Addon (C_ITEM)
 
 	description			= 	name;
 
-	TEXT	[0]			=	"BruchstÃ¼ck eines grossen Ornamentrings";
+	TEXT	[0]			=	"Bruchstück eines grossen Ornamentrings";
 
 	INV_ZBIAS			= 	INVCAM_ENTF_MISC5_STANDARD;
 };
@@ -135,7 +135,7 @@ INSTANCE  ItMi_Ornament_Addon_Vatras (C_ITEM) //Joly:  gibt Vatras dem SC um ihn
 
 	description			= 	name;
 
-	TEXT	[0]			=	"BruchstÃ¼ck eines grossen Ornamentrings";
+	TEXT	[0]			=	"Bruchstück eines grossen Ornamentrings";
 
 	INV_ZBIAS			= 	INVCAM_ENTF_MISC5_STANDARD;
 };
@@ -158,7 +158,7 @@ instance ItWr_Map_NewWorld_Ornaments_Addon (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_Map_NewWorld_Ornaments;
 
 	description	= name;
@@ -204,7 +204,7 @@ instance ItWr_Map_NewWorld_Dexter (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_Map_NewWorld_Dexter;
 
 	description	= name;
@@ -296,18 +296,18 @@ FUNC VOID UnEquip_ItRi_Ranger_Addon ()
 //Lares Ring
 INSTANCE ItRi_Ranger_Lares_Addon (Rangerring_Prototype)
 {
-	TEXT[1]					= "Dieser Ring gehÃ¶rt Lares";
+	TEXT[1]					= "Dieser Ring gehört Lares";
 };
 
 //PCs Ring
 INSTANCE ItRi_Ranger_Addon (Rangerring_Prototype)
 {
-	TEXT[1]					= "Dieser Ring gehÃ¶rt mir";
+	TEXT[1]					= "Dieser Ring gehört mir";
 };
 //Lance Ring
 INSTANCE ItRi_LanceRing (Rangerring_Prototype)
 {
-	TEXT[1]					= "Dieser Ring gehÃ¶rt Lance";
+	TEXT[1]					= "Dieser Ring gehört Lance";
 };
 
 
@@ -329,12 +329,12 @@ INSTANCE ItMi_PortalRing_Addon (C_Item)
 	visual 				=	"ItMi_PortalRing_01.3DS"; 
 	material 			=	MAT_STONE;
 
-	description			= 	"Dieser Ring Ã¶ffnet das Portal";
+	description			= 	"Dieser Ring öffnet das Portal";
 	INV_ZBIAS			= 	INVCAM_ENTF_MISC3_STANDARD;
 };
 
 //**********************************************************************************
-//	Empfehlungsschreiben fr Andre, Miliz zu werden (von Martin)
+//	Empfehlungsschreiben für Andre, Miliz zu werden (von Martin)
 //----------------------------------------------------------------------------------
 
 INSTANCE ItWr_Martin_MilizEmpfehlung_Addon		(C_Item)
@@ -349,8 +349,8 @@ INSTANCE ItWr_Martin_MilizEmpfehlung_Addon		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_MartinMilizEmpfehlung_Addon;
-	scemeName			=	"Karte";
-	description			=  	"Empfehlungsschreiben fÃ¼r Lord Andre";
+	scemeName			=	"MAP";
+	description			=  	"Empfehlungsschreiben für Lord Andre";
 	
 	TEXT[2]				= 	"dieses Schreiben soll mir helfen bei";
 	TEXT[3]				= 	"der Miliz aufgenommen zu werden";
@@ -372,12 +372,12 @@ func void Use_MartinMilizEmpfehlung_Addon ()
 					Doc_PrintLine	(nDocID,  0, ""													);
 					Doc_PrintLines	(nDocID,  0, "Geehrter Lord Andre"								);
 					Doc_PrintLines	(nDocID,  0, ""													);
-					Doc_PrintLines	(nDocID,  0, "Mit diesem Schreiben Ã¼bermittle ich euch einen neuen Rekruten fÃ¼r unsere Miliz.");
-					Doc_PrintLines	(nDocID,  0, "Er hat sich bei mir schon durch einige schwierige und standesgemÃ¤sse Dienste verdient gemacht.");
-					Doc_PrintLines	(nDocID,  0, "Ich bin mir sicher, dass er sich sehr gut eignet um den KÃ¶nig und das Wohl der BÃ¼rger dieser Stadt zu schÃ¼tzen.");
-					Doc_PrintLine	(nDocID,  0, "Innos schÃ¼tze den KÃ¶nig"							);
+					Doc_PrintLines	(nDocID,  0, "Mit diesem Schreiben übermittle ich euch einen neuen Rekruten für unsere Miliz.");
+					Doc_PrintLines	(nDocID,  0, "Er hat sich bei mir schon durch einige schwierige und standesgemässe Dienste verdient gemacht.");
+					Doc_PrintLines	(nDocID,  0, "Ich bin mir sicher, dass er sich sehr gut eignet um den König und das Wohl der Bürger dieser Stadt zu schützen.");
+					Doc_PrintLine	(nDocID,  0, "Innos schütze den König"							);
 					Doc_PrintLine	(nDocID,  0, ""													);
-					Doc_PrintLine	(nDocID,  0, "Proviantmeister Martin"						);
+					Doc_PrintLine	(nDocID,  0, "     Provisions Master Martin"						);
 					Doc_Show		(nDocID);
 		
 };
@@ -399,7 +399,7 @@ INSTANCE ItWr_RavensKidnapperMission_Addon		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_RavensKidnapperMission_Addon;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	description			=  	name;
 	
 	TEXT[2]				= 	"Ich habe dieses Schreiben";
@@ -415,7 +415,7 @@ func void Use_RavensKidnapperMission_Addon ()
  	{
 	 	Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-		B_LogEntry (TOPIC_Addon_WhoStolePeople,"Jetzt habe ich es schriftlich. Raven, der ehemalige Erzbaron steckt hinter den EntfÃ¼hrungen der BÃ¼rger von Khorinis. Raven hat sein Versteck irgendwo hinter den Bergen im Berge im Nordosten von Khorinis. Vatras sollte sich dieses SchrftstÃ¼ck mal ansehen."); 
+		B_LogEntry (TOPIC_Addon_WhoStolePeople,"Jetzt habe ich es schriftlich. Raven, der ehemalige Erzbaron steckt hinter den Entführungen der Bürger von Khorinis. Raven hat sein Versteck irgendwo hinter den Bergen im Berge im Nordosten von Khorinis. Vatras sollte sich dieses Schrftstück mal ansehen."); 
 		Use_RavensKidnapperMission_Addon_OneTime = TRUE;
 	};
 
@@ -430,20 +430,20 @@ func void Use_RavensKidnapperMission_Addon ()
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);
 				Doc_PrintLines	(nDocID,  0, "Dexter, du Mistkerl!");
 				Doc_PrintLine	(nDocID,  0, ""														);
-				Doc_PrintLines	(nDocID,  0, "Als ich noch Erzbaron war, warst du nicht so unzuverlÃ¤ssig.");
-				Doc_PrintLines	(nDocID,  0, "Wenn du es nicht schaffst, noch mehr BÃ¼rger aus der Stadt zu entfÃ¼hren und zu mir zu entsenden, dann werden wir bald ein handfestes Problem mit den Jungs in unserem Versteck haben.");
-				Doc_PrintLines	(nDocID,  0, "Ich brauche hier mehr Sklaven, sonst starten die Jungs hier noch eine Revolte. Und was das heiÃŸt, muss ich dir nicht sagen, oder?");
-				Doc_PrintLines	(nDocID,  0, "Ich stehe kurz davor in den Tempel hinein zu gelangen. Da kann ich mir StÃ¶rungen dieser Art nicht leisten.");
+				Doc_PrintLines	(nDocID,  0, "Als ich noch Erzbaron war, warst du nicht so unzuverlässig.");
+				Doc_PrintLines	(nDocID,  0, "Wenn du es nicht schaffst, noch mehr Bürger aus der Stadt zu entführen und zu mir zu entsenden, dann werden wir bald ein handfestes Problem mit den Jungs in unserem Versteck haben.");
+				Doc_PrintLines	(nDocID,  0, "Ich brauche hier mehr Sklaven, sonst starten die Jungs hier noch eine Revolte. Und was das heißt, muss ich dir nicht sagen, oder?");
+				Doc_PrintLines	(nDocID,  0, "Ich stehe kurz davor in den Tempel hinein zu gelangen. Da kann ich mir Störungen dieser Art nicht leisten.");
 				Doc_PrintLines	(nDocID,  0, "Und noch ein Problem:"								);
-				Doc_PrintLines	(nDocID,  0, "Auf kurz oder lang mÃ¼ssen wir einen Weg Ã¼ber die hohen Berge im Nordosten von Khorinis finden. Die Piraten machen die Ãœberfahrten sicher nicht mehr lange mit, wenn wir sie nicht mehr dafÃ¼r bezahlen.");
+				Doc_PrintLines	(nDocID,  0, "Auf kurz oder lang müssen wir einen Weg über die hohen Berge im Nordosten von Khorinis finden. Die Piraten machen die Überfahrten sicher nicht mehr lange mit, wenn wir sie nicht mehr dafür bezahlen.");
 				Doc_PrintLine	(nDocID,  0, ""														);
-				Doc_PrintLine	(nDocID,  0, "Raven"											);
+				Doc_PrintLine	(nDocID,  0, "     Raven"											);
 				Doc_Show		(nDocID);
 		
 };
 
 //**********************************************************************************
-//	Empfehlungsschreiben fr Pedro, ins Kloster eingelassen zu werden.
+//	Empfehlungsschreiben für Pedro, ins Kloster eingelassen zu werden.
 //----------------------------------------------------------------------------------
 
 INSTANCE ItWr_Vatras_KDFEmpfehlung_Addon		(C_Item)
@@ -458,7 +458,7 @@ INSTANCE ItWr_Vatras_KDFEmpfehlung_Addon		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_VatrasKDFEmpfehlung_Addon;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	description			=  	"Vatras Empfehlungsschreiben";
 	
 	TEXT[2]				= 	"dieses Schreiben soll mir helfen ohne";
@@ -480,11 +480,11 @@ func void Use_VatrasKDFEmpfehlung_Addon ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "BrÃ¼der des Feuers");
+					Doc_PrintLines	( nDocID,  0, "Brüder des Feuers");
 					Doc_PrintLines	( nDocID,  0, "");					
 					Doc_PrintLines	( nDocID,  0, "Mir wurde soeben zugetragen, dass es einen Tribut erfordert, in eure Gefilde eingelassen zu werden.");
-					Doc_PrintLines	( nDocID,  0, "Ich Ã¼bermittle mit diesem Schreiben eine glÃ¤ubigen Mann, der Novize in euren Reihen werden will."					);
-					//Doc_PrintLine	( nDocID,  0, "Ich hoffe, dass ich nicht persnlich erscheinen muss ihm den Einlass ");
+					Doc_PrintLines	( nDocID,  0, "Ich übermittle mit diesem Schreiben eine gläubigen Mann, der Novize in euren Reihen werden will."					);
+					//Doc_PrintLine	( nDocID,  0, "Ich hoffe, dass ich nicht persönlich erscheinen muss ihm den Einlass ");
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Vatras");
 					Doc_Show		( nDocID );				
@@ -526,7 +526,7 @@ INSTANCE ItWr_LuciasLoveLetter_Addon		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_LuciasLoveLetter_Addon;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	description			=  	name;
 	
 };
@@ -550,10 +550,10 @@ func void Use_LuciasLoveLetter_Addon ()
 					Doc_PrintLines	( nDocID,  0, "Liebster Elvrich");
 					Doc_PrintLines	( nDocID,  0, "");					
 					Doc_PrintLines	( nDocID,  0, "Mir fehlen die Worte um zu beschreiben, wie leid es mir tut.");
-					Doc_PrintLines	( nDocID,  0, "Ich weiÃŸ, dass du es nicht verstehen wirst, aber ich bin zu dem Schluss gekommen, dass es besser fÃ¼r uns beide ist, wenn du dir ein anstÃ¤ndigeres MÃ¤dchen als mich suchst."					);
-					Doc_PrintLines	( nDocID,  0, "Von dort, wo ich jetzt hin gehe, werde ich nicht mehr zurÃ¼ck kehren. Vergiss mich. Eine Dirne wie ich ist nichts fÃ¼r so einen aufrechten Kerl, wie du einer bist. Leb' wohl.");
+					Doc_PrintLines	( nDocID,  0, "Ich weiß, dass du es nicht verstehen wirst, aber ich bin zu dem Schluss gekommen, dass es besser für uns beide ist, wenn du dir ein anständigeres Mädchen als mich suchst."					);
+					Doc_PrintLines	( nDocID,  0, "Von dort, wo ich jetzt hin gehe, werde ich nicht mehr zurück kehren. Vergiss mich. Eine Dirne wie ich ist nichts für so einen aufrechten Kerl, wie du einer bist. Leb' wohl.");
 					Doc_PrintLine	( nDocID,  0, ""					);
-					Doc_PrintLine	( nDocID,  0, "Lucia");
+					Doc_PrintLine	( nDocID,  0, "     Lucia");
 					Doc_Show		( nDocID );				
 };
 
@@ -612,8 +612,8 @@ INSTANCE ItMi_Rake (C_Item)
 	on_state[1]			= 	Use_Rake;
 	description			= 	name;
 	
-	//TEXT[3]				=   "(Lsst sich bei geffnetem Inventar benutzen)";
-	//TEXT[4]				=   "('Aktionstaste' + 'Pfeil- Vorne' gedrckt halten)";
+	//TEXT[3]				=   "(Lässt sich bei geöffnetem Inventar benutzen)";
+	//TEXT[4]				=   "('Aktionstaste' + 'Pfeil- Vorne' gedrückt halten)";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			= 	value;
@@ -627,7 +627,7 @@ func void Use_Rake()
 };
 
 /******************************************************************************************/
-INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Hndlergildenring
+INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Händlergildenring
 {
 	name 					=	"Gildenring";
 
@@ -643,7 +643,7 @@ INSTANCE ItRi_Addon_BanditTrader(C_Item)	//Hndlergildenring
 
 	description				= 	"Gravierter Ring";
 	
-	TEXT[2]					= 	"der Ãœbersee-HÃ¤ndlergilde Araxos";
+	TEXT[2]					= 	"der Übersee-Händlergilde Araxos";
 	
 	TEXT[5]					= NAME_Value;
 	COUNT[5]				= value;
@@ -669,7 +669,7 @@ INSTANCE ItWr_Addon_BanditTrader		(C_Item)
 	visual 				=	"ItWr_Scroll_02.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_ItWr_Addon_BanditTrader;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	description			=  	name;
 	
 	TEXT[2]				= 	"Dieses Schreiben habe ich bei";
@@ -696,7 +696,7 @@ func void Use_ItWr_Addon_BanditTrader ()
 					Doc_PrintLines	( nDocID,  0, "15 Flaschen Wein"					);
 					Doc_PrintLines	( nDocID,  0, ""					);
 					Doc_PrintLines	( nDocID,  0, "Das war das letzte Mal."					);
-					Doc_PrintLines	( nDocID,  0, "Die Sache wird mir langsam zu heiÃŸ"					);
+					Doc_PrintLines	( nDocID,  0, "Die Sache wird mir langsam zu heiß"					);
 					Doc_PrintLines	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "FERNANDO");
 					Doc_Show		( nDocID );				
@@ -704,7 +704,7 @@ func void Use_ItWr_Addon_BanditTrader ()
 	if (MIS_Vatras_FindTheBanditTrader != 0)
 	&& (Use_ItWr_Addon_BanditTrader_OneTime == FALSE)
 	{
-		B_LogEntry (TOPIC_Addon_BanditTrader,"Ich habe ein SchriftstÃ¼ck gefunden, das beweisen kann, dass Fernando der WaffenhÃ¤ndler ist, den ich suche."); 
+		B_LogEntry (TOPIC_Addon_BanditTrader,"Ich habe ein Schriftstück gefunden, das beweisen kann, dass Fernando der Waffenhändler ist, den ich suche."); 
 		Use_ItWr_Addon_BanditTrader_OneTime = TRUE;
 	};
 };
@@ -727,7 +727,7 @@ INSTANCE ItWr_Vatras2Saturas_FindRaven	(C_Item)
 	on_state[0]			=   Use_Vatras2Saturas_FindRaven_Sealed;
 	scemeName			=	"MAPSEALED";
 	description			= 	name;
-	TEXT[2]				=   "Vatras Schreiben fÃ¼r Saturas";
+	TEXT[2]				=   "Vatras Schreiben für Saturas";
 
 };
 func void Use_Vatras2Saturas_FindRaven ()
@@ -740,11 +740,11 @@ func void Use_Vatras2Saturas_FindRaven ()
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   	);  
 					Doc_PrintLine	( nDocID,  0, "Werter Saturas"					);
 					Doc_PrintLines	( nDocID,  0, ""					);
-					Doc_PrintLines	( nDocID,  0, "Ich hoffe, ihr seid schon bald am Ziel. Unsere Situation hier in der Stadt scheint sich zur Zeit etwas zu entspannen. Aber ich fÃ¼rchte, die Ruhe trÃ¼gt. Ihr solltet euch beeilen. Ich brauche euch hier."					);
-					Doc_PrintLines	( nDocID,  0, "Ich habe deine Aufzeichnungen studiert und kann deinen Verdacht bestÃ¤tigen. Die Schriftzeichen deuten tatsÃ¤chlich auf eine AdanosglÃ¤ubige Kultur hin. Seid also vorsichtig und lasst euch nicht von falschen Propheten blenden."					);
-					Doc_PrintLines	( nDocID,  0, "Die vermissten BÃ¼rger von Khorinis wurden von dem ehemaligen Erzbaron Raven in die Region verschleppt, in die das Portal offensichtlich fÃ¼hren wird."					);
-					Doc_PrintLines	( nDocID,  0, "Noch eines: Ich habe euch Hilfe entsendet. Der Ãœberbringer dieser Nachricht ist etwas ganz besonderes. Er hat so einen bemerkenswerten Glanz in seinen Augen. Ich bin mir nicht sicher, aber es kÃ¶nnte ER sein, auch wenn wir ihn uns anders vorgestellt haben."					);
-					Doc_PrintLines	( nDocID,  0, "PrÃ¼fe ihn. Ich denke, ich habe recht."					);
+					Doc_PrintLines	( nDocID,  0, "Ich hoffe, ihr seid schon bald am Ziel. Unsere Situation hier in der Stadt scheint sich zur Zeit etwas zu entspannen. Aber ich fürchte, die Ruhe trügt. Ihr solltet euch beeilen. Ich brauche euch hier."					);
+					Doc_PrintLines	( nDocID,  0, "Ich habe deine Aufzeichnungen studiert und kann deinen Verdacht bestätigen. Die Schriftzeichen deuten tatsächlich auf eine Adanosgläubige Kultur hin. Seid also vorsichtig und lasst euch nicht von falschen Propheten blenden."					);
+					Doc_PrintLines	( nDocID,  0, "Die vermissten Bürger von Khorinis wurden von dem ehemaligen Erzbaron Raven in die Region verschleppt, in die das Portal offensichtlich führen wird."					);
+					Doc_PrintLines	( nDocID,  0, "Noch eines: Ich habe euch Hilfe entsendet. Der Überbringer dieser Nachricht ist etwas ganz besonderes. Er hat so einen bemerkenswerten Glanz in seinen Augen. Ich bin mir nicht sicher, aber es könnte ER sein, auch wenn wir ihn uns anders vorgestellt haben."					);
+					Doc_PrintLines	( nDocID,  0, "Prüfe ihn. Ich denke, ich habe recht."					);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Vatras"					);
 					Doc_Show		( nDocID );
@@ -759,7 +759,7 @@ func void Use_Vatras2Saturas_FindRaven_Sealed ()
 }; 
 INSTANCE ItWr_Vatras2Saturas_FindRaven_opened	(C_Item)
 {
-	name 				=	"GeÃ¶ffnete Botschaft";
+	name 				=	"Geöffnete Botschaft";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	ITEM_MISSION;
@@ -769,9 +769,9 @@ INSTANCE ItWr_Vatras2Saturas_FindRaven_opened	(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   Use_Vatras2Saturas_FindRaven;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	description			= 	name;
-	TEXT[2]				=   "Vatras Schreiben fÃ¼r Saturas";
+	TEXT[2]				=   "Vatras Schreiben für Saturas";
 };
 
 //------------------------------------------------------------------------------------------
@@ -854,7 +854,7 @@ INSTANCE ItFo_Addon_Krokofleisch_Mission (C_Item)
 	
 	visual 				=	"ItFoMuttonRaw.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Fleisch.";
+	scemeName			=	"MEAT";
 	
 	description			= 	name;
 	TEXT[1]				=	"Riecht irgendwie fischig!";
@@ -927,7 +927,7 @@ INSTANCE ItMi_Focus (C_Item)
 
 };
 //---------------------------------------------------------------------------
-//				Stahl Paket fr Huno
+//				Stahl Paket für Huno
 //---------------------------------------------------------------------------
 INSTANCE ItMi_Addon_Steel_Paket(C_Item)
 {
@@ -944,7 +944,7 @@ INSTANCE ItMi_Addon_Steel_Paket(C_Item)
 	
 	description			= 	name;
 	TEXT[2]				= 	"Diese Paket ist WIRKLICH schwer";
-	TEXT[3]				=	"Es enthÃ¤lt einen dicken Stahlklumpen";
+	TEXT[3]				=	"Es enthält einen dicken Stahlklumpen";
 	
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	value;
@@ -967,7 +967,7 @@ instance ItWr_StonePlateCommon_Addon (C_Item)
 	
 	material 			=	 MAT_LEATHER;
 	on_state[0]			=    Use_StonePlateCommon;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	
 	inv_rotx			=  - 90;
 	inv_roty			=   0;
@@ -996,7 +996,7 @@ func void Use_StonePlateCommon ()
 		Doc_PrintLine	( nDocID,  0, "");
 		Doc_PrintLines	( nDocID,  0, "Die Kaste der Krieger hatte den Zorn unseres Gottes heraufbeschworen.");	
 		Doc_PrintLine	( nDocID,  0, "");
-		Doc_PrintLines	( nDocID,  0, "RHADEMES, der Nachfolger QUAHODRONS, wurde gebannt. Aber seine bÃ¶se Macht erreichte uns selbst vom Ort seiner Verbannung noch.");
+		Doc_PrintLines	( nDocID,  0, "RHADEMES, der Nachfolger QUAHODRONS, wurde gebannt. Aber seine böse Macht erreichte uns selbst vom Ort seiner Verbannung noch.");
 		Doc_PrintLine	( nDocID,  0, "");
 		Doc_PrintLines	( nDocID,  0, "Wir waren machtlos dagegen.");
 		Doc_PrintLine	( nDocID,  0, "");
@@ -1042,7 +1042,7 @@ INSTANCE ItMi_Addon_Stone_01(C_Item) //Esteban und Thorus  //Joly:Die Banditen b
 	
 	material 			=	 MAT_STONE;
 	on_state[0]			=    Use_Addon_Stone_01;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1069,7 +1069,7 @@ FUNC VOID Use_Addon_Stone_01()
 	Doc_PrintLine	( nDocID,  0, "");
 	if (PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_1] == TRUE)
 	{
-		Doc_PrintLines	( nDocID,  0, "Wir, die letzten drei AnfÃ¼hrer des Rates der FÃ¼nf, haben die Kammern des Tempels mit Fallen versehen und den Eingang versteckt, auf das das Schwert nie wieder das Tageslicht erblicke.");
+		Doc_PrintLines	( nDocID,  0, "Wir, die letzten drei Anführer des Rates der Fünf, haben die Kammern des Tempels mit Fallen versehen und den Eingang versteckt, auf das das Schwert nie wieder das Tageslicht erblicke.");
 	}
 	else
 	{
@@ -1082,7 +1082,7 @@ FUNC VOID Use_Addon_Stone_01()
 //---------------------------------------------------------------------------
 //		Steintafel 5		
 //---------------------------------------------------------------------------
-INSTANCE ItMi_Addon_Stone_05(C_Item) //Valley - Totenwchter
+INSTANCE ItMi_Addon_Stone_05(C_Item) //Valley - Totenwächter
 {
 	name 				=	"Gelbe Steintafel"; 
 
@@ -1095,7 +1095,7 @@ INSTANCE ItMi_Addon_Stone_05(C_Item) //Valley - Totenwchter
 	
 	material 			=	 MAT_STONE;
 	on_state[0]			=    Use_Addon_Stone_05;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1121,7 +1121,7 @@ FUNC VOID Use_Addon_Stone_05()
 	Doc_PrintLine	( nDocID,  0, "");
 	if (PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_1] == TRUE)
 	{
-		Doc_PrintLines	( nDocID,  0, "Ich, der sich gegen den EntschluÃŸ der Drei gestellt hatte, erbaute die erste Falle. Und nur ich kenne die richtige Pforte.");
+		Doc_PrintLines	( nDocID,  0, "Ich, der sich gegen den Entschluß der Drei gestellt hatte, erbaute die erste Falle. Und nur ich kenne die richtige Pforte.");
 	}
 	else
 	{
@@ -1147,7 +1147,7 @@ INSTANCE ItMi_Addon_Stone_03(C_Item) //Valley - Priester
 	
 	material 			=	 MAT_STONE;
 	on_state[0]			=    Use_Addon_Stone_03;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	
 	inv_rotx			=  - 90;
 	inv_roty			=   0;
@@ -1190,7 +1190,7 @@ FUNC VOID Use_Addon_Stone_03()
 //---------------------------------------------------------------------------
 INSTANCE ItMi_Addon_Stone_04(C_Item)  //DAS DING AUS DEM SENAT /SUMPF  //Joly: Haus der Heiler
 {
-	name 				=	"GrÃ¼ne Steintafel"; 
+	name 				=	"Grüne Steintafel"; 
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;
@@ -1201,7 +1201,7 @@ INSTANCE ItMi_Addon_Stone_04(C_Item)  //DAS DING AUS DEM SENAT /SUMPF  //Joly: H
 	
 	material 			=	 MAT_STONE;
 	on_state[0]			=    Use_Addon_Stone_04;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	
 	inv_rotx			=  - 90;
 	inv_roty			=   0;
@@ -1211,7 +1211,7 @@ INSTANCE ItMi_Addon_Stone_04(C_Item)  //DAS DING AUS DEM SENAT /SUMPF  //Joly: H
 	effect				=	"SPELLFX_WEAKGLIMMER";
 	
 	description			= 	name;
-	TEXT[2]				= 	"Eine grÃ¼ne Steintafel";
+	TEXT[2]				= 	"Eine grüne Steintafel";
 	TEXT[3]				=	"";
 };
 //---------------------------------------------------------------------------
@@ -1227,7 +1227,7 @@ FUNC VOID Use_Addon_Stone_04()
 	Doc_PrintLine	( nDocID,  0, "");
 	if (PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_1] == TRUE)
 	{
-		Doc_PrintLines	( nDocID,  0, "Die dritte Falle wurde von QUARHODRON erbaut, und nur er weiÃŸ, wie man die Pforte Ã¶ffnet.");
+		Doc_PrintLines	( nDocID,  0, "Die dritte Falle wurde von QUARHODRON erbaut, und nur er weiß, wie man die Pforte öffnet.");
 	}
 	else
 	{
@@ -1253,7 +1253,7 @@ INSTANCE ItMi_Addon_Stone_02(C_Item) //Bibliothek der Erbauer.
 	
 	material 			=	 MAT_STONE;
 	on_state[0]			=    Use_Addon_Stone_02;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	
 	inv_rotx			=  - 90;
 	inv_roty			=   0;
@@ -1279,11 +1279,11 @@ FUNC VOID Use_Addon_Stone_02()
 	Doc_PrintLine	( nDocID,  0, "");
 	if (PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_1] == TRUE)
 	{
-		Doc_PrintLines	( nDocID,  0, "QUARHODRON war es auch, der mit der Hilfe von KHARDIMON das Ã¤uÃŸere Tor zum Tempel versiegelte. Keiner von beiden hat das Ritual Ã¼berlebt.");
+		Doc_PrintLines	( nDocID,  0, "QUARHODRON war es auch, der mit der Hilfe von KHARDIMON das äußere Tor zum Tempel versiegelte. Keiner von beiden hat das Ritual überlebt.");
 		Doc_PrintLine	( nDocID,  0, "");
-		Doc_PrintLines	( nDocID,  0, "Nur ich blieb zurÃ¼ck, um von den Ereignissen zu erzÃ¤hlen.");
+		Doc_PrintLines	( nDocID,  0, "Nur ich blieb zurück, um von den Ereignissen zu erzählen.");
 		Doc_PrintLine	( nDocID,  0, "");
-		Doc_PrintLines	( nDocID,  0, "Ich hoffe, daÃŸ RHADEMES fÃ¼r alle Zeiten im Tempel verrottet!");
+		Doc_PrintLines	( nDocID,  0, "Ich hoffe, daß RHADEMES für alle Zeiten im Tempel verrottet!");
 	}
 	else
 	{
@@ -1375,7 +1375,7 @@ INSTANCE ITWR_Addon_FrancisAbrechnung_Mis (C_ITEM)
 	visual 					=	"ItWr_Book_02_05.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	NAME;
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -1404,21 +1404,21 @@ INSTANCE ITWR_Addon_FrancisAbrechnung_Mis (C_ITEM)
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "Mannschaft : 9840");
 					Doc_PrintLine	( nDocID,  0, "Offiziere   : 2500");
-					Doc_PrintLine	( nDocID,  0, "KapitÃ¤n    : 1000");
+					Doc_PrintLine	( nDocID,  0, "Kapitän    : 1000");
 					Doc_PrintLine	( nDocID,  0, "-----------------------"	);
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "eigener Anteil: 2220");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0, "FernhÃ¤ndler 'Miriam'"	);
+					Doc_PrintLine	( nDocID,  0, "Fernhändler 'Miriam'"	);
 					Doc_PrintLine	( nDocID,  0, ""					);
 					Doc_PrintLine	( nDocID,  0, "Beute gesamt: 4890 Gold");
 					Doc_PrintLine	( nDocID,  0, "-----------------------"	);
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "Mannschaft : 2390");
 					Doc_PrintLine	( nDocID,  0, "Offiziere   : 500");
-					Doc_PrintLine	( nDocID,  0, "KapitÃ¤n    : 500");
+					Doc_PrintLine	( nDocID,  0, "Kapitän    : 500");
 					Doc_PrintLine	( nDocID,  0, "----------------------"	);
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "eigener Anteil: 1000");
@@ -1426,7 +1426,7 @@ INSTANCE ITWR_Addon_FrancisAbrechnung_Mis (C_ITEM)
 	
 
 					//2.Seite
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Rnder des TGAs aus, links,oben,rechts,unten)
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
  					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, "Handelsschiff 'Nico'"	);
@@ -1437,7 +1437,7 @@ INSTANCE ITWR_Addon_FrancisAbrechnung_Mis (C_ITEM)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "Mannschaft : 5610");
 					Doc_PrintLine	( nDocID,  1, "Offiziere   : 1500");
-					Doc_PrintLine	( nDocID,  1, "KapitÃ¤n    : 1000");
+					Doc_PrintLine	( nDocID,  1, "Kapitän    : 1000");
 					Doc_PrintLine	( nDocID,  1, "----------------------"	);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "eigener Anteil: 1860");
@@ -1450,7 +1450,7 @@ INSTANCE ITWR_Addon_FrancisAbrechnung_Mis (C_ITEM)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "Mannschaft : 4400");
 					Doc_PrintLine	( nDocID,  1, "Offiziere   : 750");
-					Doc_PrintLine	( nDocID,  1, "KapitÃ¤n    : 1000");
+					Doc_PrintLine	( nDocID,  1, "Kapitän    : 1000");
 					Doc_PrintLine	( nDocID,  1, "----------------------"	);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "eigener Anteil: 1701");
@@ -1480,7 +1480,7 @@ INSTANCE ITWR_Addon_GregsLogbuch_Mis (C_ITEM)
 	visual 					=	"ItWr_Book_01.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Logbuch von Greg";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -1501,26 +1501,26 @@ INSTANCE ITWR_Addon_GregsLogbuch_Mis (C_ITEM)
 
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 					Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
-					Doc_PrintLines	( nDocID,  0, "Ich kann diesen Strand nicht mehr sehen. Ãœberall Sand. Ich kann schon gar nicht mehr richtig schlafen, weil es Ã¼berall juckt. Wird Zeit, dass Raven das Gold fÃ¼r die Gefangen rÃ¼berschiebt und wir wieder in See stechen kÃ¶nnen. Werde wohl mal ein ernstes Wort mit dem Aufgeblasen Fatzke sprechen mÃ¼ssen.");
+					Doc_PrintLines	( nDocID,  0, "Ich kann diesen Strand nicht mehr sehen. Überall Sand. Ich kann schon gar nicht mehr richtig schlafen, weil es überall juckt. Wird Zeit, dass Raven das Gold für die Gefangen rüberschiebt und wir wieder in See stechen können. Werde wohl mal ein ernstes Wort mit dem Aufgeblasen Fatzke sprechen müssen.");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Was erlaubt sich dieses Arsch? Hat mich von seinen stinkenden Schergen am Tor abwimmeln lassen. Der wird mich noch kennenlernen! Seinen Speichellecker Bloodwyn werde ich eigenhÃ¤ndig zu Fischfutter verarbeiten"	);
+					Doc_PrintLines	( nDocID,  0, "Was erlaubt sich dieses Arsch? Hat mich von seinen stinkenden Schergen am Tor abwimmeln lassen. Der wird mich noch kennenlernen! Seinen Speichellecker Bloodwyn werde ich eigenhändig zu Fischfutter verarbeiten"	);
 					Doc_PrintLines	( nDocID,  0, "Wenn er nicht bald zahlt, werde ich andere Seiten aufziehen.");
 					
 
 					//2.Seite
-					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Rnder des TGAs aus, links,oben,rechts,unten)
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 					Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
-					Doc_PrintLines	( nDocID,  1, "Die Banditen werden langsam aufsÃ¤ssig. Die letzte Lieferung haben sie immer noch nicht bezahlt. Wir haben einfach zu wenig Informationen. Ich muss rausfinden, was Raven hier will."	);
+					Doc_PrintLines	( nDocID,  1, "Die Banditen werden langsam aufsässig. Die letzte Lieferung haben sie immer noch nicht bezahlt. Wir haben einfach zu wenig Informationen. Ich muss rausfinden, was Raven hier will."	);
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  1, "Ich werde mit dem GroÃŸteil der Mannschaft zum Festland fahren und das Erz in Sicherheit bringen. Francis bleibt mit ein paar Leuten hier und befestigt das Lager."	);
-					Doc_PrintLines	( nDocID,  1, "Damit die Zeit nicht ungenutzt verstreicht, habe ich Bones die RÃ¼stung gegeben. Er wird fÃ¼r mich ins Banditenlager schleichen und dort rausfinden, was Raven vorhat.");
+					Doc_PrintLines	( nDocID,  1, "Ich werde mit dem Großteil der Mannschaft zum Festland fahren und das Erz in Sicherheit bringen. Francis bleibt mit ein paar Leuten hier und befestigt das Lager."	);
+					Doc_PrintLines	( nDocID,  1, "Damit die Zeit nicht ungenutzt verstreicht, habe ich Bones die Rüstung gegeben. Er wird für mich ins Banditenlager schleichen und dort rausfinden, was Raven vorhat.");
 					
 					Greg_GaveArmorToBones = TRUE;
 					
 					Doc_Show		( nDocID );
 };
 //-----------------------------------------------------------------------
-//Bloodwyns Truhenschlssel - Schwere Garderstung
+//Bloodwyns Truhenschlüssel - Schwere Garderüstung
 //-----------------------------------------------------------------------
 INSTANCE ITKE_Addon_Bloodwyn_01 (C_Item)
 {
@@ -1534,7 +1534,7 @@ INSTANCE ITKE_Addon_Bloodwyn_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Bloodwyn's SchlÃ¼ssel";
+	description			= 	"Bloodwyn's Schlüssel";
 	
 	TEXT[2]				=	"Passt zu einer Truhe";
 	TEXT[3]				=   "";
@@ -1542,7 +1542,7 @@ INSTANCE ITKE_Addon_Bloodwyn_01 (C_Item)
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
 //-----------------------------------------------------------------------
-//Heiler Truhenschlssel - 
+//Heiler Truhenschlüssel - 
 //-----------------------------------------------------------------------
 INSTANCE ITKE_Addon_Heiler (C_Item)
 {
@@ -1556,10 +1556,10 @@ INSTANCE ITKE_Addon_Heiler (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"SchlÃ¼ssel eines SteinwÃ¤chters";
+	description			= 	"Schlüssel eines Steinwächters";
 	
 	TEXT[2]				=	"Passt zu einer Truhe";
-	TEXT[3]				=   "In einem seltsamen alten GebÃ¤ude im Sumpf";
+	TEXT[3]				=   "In einem seltsamen alten Gebäude im Sumpf";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -1577,10 +1577,10 @@ INSTANCE  ItMi_TempelTorKey (C_ITEM)
 
 	visual 				=	"ItMi_StonePlate_Read_06.3ds";	 
 	material 			=	MAT_STONE;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	on_state[0]			=	Use_TempelTorKey;
 
-	TEXT[2]		= "Der SchlÃ¼ssel zum Tempel Adanos.";
+	TEXT[2]		= "Der Schlüssel zum Tempel Adanos.";
 
 };
 func void Use_TempelTorKey ()
@@ -1598,7 +1598,7 @@ func void Use_TempelTorKey ()
 					Doc_PrintLine	( nDocID,  0, ""					);
 					//Doc_PrintLines	( nDocID,  0, "  Eligam Shameris"					); 
 				
-					Doc_PrintLine	( nDocID,  0, "Jhehedra Akhantar"					); 
+					Doc_PrintLine	( nDocID,  0, "  Jhehedra Akhantar"					); 
  
  					Doc_Show		( nDocID ); 
 };
@@ -1638,7 +1638,7 @@ instance ItWR_Addon_TreasureMap (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_TreasureMap;
 
 	description	= name;
@@ -1681,7 +1681,7 @@ INSTANCE ItMi_Addon_GregsTreasureBottle_MIS	(C_Item)
 	on_state[0]			=   Use_GregsBottle;
 	scemeName			=	"MAPSEALED";
 	description			= 	name;
-	TEXT[2]				=   "In der Flasche befindet sich ein StÃ¼ck Papier";
+	TEXT[2]				=   "In der Flasche befindet sich ein Stück Papier";
 
 };
 func void Use_GregsBottle ()

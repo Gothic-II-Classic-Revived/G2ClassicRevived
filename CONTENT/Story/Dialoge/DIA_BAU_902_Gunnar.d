@@ -43,15 +43,15 @@ FUNC VOID DIA_Gunnar_Hallo_Info()
 	AI_Output (other, self, "DIA_Gunnar_Hallo_15_00"); //Wie steht's?
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output (self, other, "DIA_Gunnar_Hallo_10_01"); //Seit Onar verlauten lieÃŸ, dass er SÃ¶ldner anheuert, quillt der Hof fast Ã¼ber vor lauter GalgenvÃ¶geln.
-		AI_Output (self, other, "DIA_Gunnar_Hallo_10_02"); //Das ganze Gesindel, das sich vorher nicht aus den WÃ¤ldern getraut hat, ist jetzt hier.
-		AI_Output (self, other, "DIA_Gunnar_Hallo_10_03"); //Die Kerle kamen echt von Ã¼berall her ...
+		AI_Output (self, other, "DIA_Gunnar_Hallo_10_01"); //Seit Onar verlauten ließ, dass er Söldner anheuert, quillt der Hof fast über vor lauter Galgenvögeln.
+		AI_Output (self, other, "DIA_Gunnar_Hallo_10_02"); //Das ganze Gesindel, das sich vorher nicht aus den Wäldern getraut hat, ist jetzt hier.
+		AI_Output (self, other, "DIA_Gunnar_Hallo_10_03"); //Die Kerle kamen echt von überall her ...
 	};
 	
 	if (other.guild == GIL_SLD)
 	|| (other.guild == GIL_DJG)
 	{
-		AI_Output (self, other, "DIA_Gunnar_Hallo_10_04"); //Du bist jetzt auch einer von den SÃ¶ldnern, hm?
+		AI_Output (self, other, "DIA_Gunnar_Hallo_10_04"); //Du bist jetzt auch einer von den Söldnern, hm?
 	};	
 	
 	if (other.guild == GIL_NOV)
@@ -79,7 +79,7 @@ INSTANCE DIA_Gunnar_Everywhere   (C_INFO)
 	condition   = DIA_Gunnar_Everywhere_Condition;
 	information = DIA_Gunnar_Everywhere_Info;
 	permanent   = TRUE;
-	description = "Die SÃ¶ldner kamen von Ã¼berall her?";
+	description = "Die Söldner kamen von überall her?";
 };
 FUNC INT DIA_Gunnar_Everywhere_Condition()
 {
@@ -90,14 +90,14 @@ FUNC INT DIA_Gunnar_Everywhere_Condition()
 };
 FUNC VOID DIA_Gunnar_Everywhere_Info()
 {
-	AI_Output (other, self, "DIA_Gunnar_Everywhere_15_00"); //Die SÃ¶ldner kamen von Ã¼berall her?
-	AI_Output (self, other, "DIA_Gunnar_Everywhere_10_01"); //Ein GroÃŸteil kam aus der Strafkolonie.
-	AI_Output (self, other, "DIA_Gunnar_Everywhere_10_02"); //Eine weitere Gruppe von SÃ¶ldnern kam aus dem SÃ¼den, sie haben dort wohl Orks gejagt.
-	AI_Output (self, other, "DIA_Gunnar_Everywhere_10_03"); //Und ich wette, es sind auch mittlerweile ein paar Banditen aus den Bergen hier und lassen sich durchfÃ¼ttern!
+	AI_Output (other, self, "DIA_Gunnar_Everywhere_15_00"); //Die Söldner kamen von überall her?
+	AI_Output (self, other, "DIA_Gunnar_Everywhere_10_01"); //Ein Großteil kam aus der Strafkolonie.
+	AI_Output (self, other, "DIA_Gunnar_Everywhere_10_02"); //Eine weitere Gruppe von Söldnern kam aus dem Süden, sie haben dort wohl Orks gejagt.
+	AI_Output (self, other, "DIA_Gunnar_Everywhere_10_03"); //Und ich wette, es sind auch mittlerweile ein paar Banditen aus den Bergen hier und lassen sich durchfüttern!
 };
 
 // ************************************************************
-// 			  			Aud dem Sden
+// 			  			Aud dem Süden
 // ************************************************************
 INSTANCE DIA_Gunnar_South (C_INFO)
 {
@@ -106,7 +106,7 @@ INSTANCE DIA_Gunnar_South (C_INFO)
 	condition   = DIA_Gunnar_South_Condition;
 	information = DIA_Gunnar_South_Info;
 	permanent   = TRUE;
-	description = "Was weiÃŸt du von den SÃ¶ldnern aus dem SÃ¼den?";
+	description = "Was weißt du von den Söldnern aus dem Süden?";
 };
 FUNC INT DIA_Gunnar_South_Condition()
 {
@@ -117,9 +117,9 @@ FUNC INT DIA_Gunnar_South_Condition()
 };
 FUNC VOID DIA_Gunnar_South_Info()
 {
-	AI_Output (other, self, "DIA_Gunnar_South_15_00"); //Was weiÃŸt du von den SÃ¶ldnern aus dem SÃ¼den?
-	AI_Output (self, other, "DIA_Gunnar_South_10_01"); //Nicht viel. Die haben da wohl Orks gejagt, soviel ich weiÃŸ.
-	AI_Output (self, other, "DIA_Gunnar_South_10_02"); //Sylvio ist ihr Boss. Zu ihm gehÃ¶ren Bullco, Sentenza, Raoul und noch ein paar andere ...
+	AI_Output (other, self, "DIA_Gunnar_South_15_00"); //Was weißt du von den Söldnern aus dem Süden?
+	AI_Output (self, other, "DIA_Gunnar_South_10_01"); //Nicht viel. Die haben da wohl Orks gejagt, soviel ich weiß.
+	AI_Output (self, other, "DIA_Gunnar_South_10_02"); //Sylvio ist ihr Boss. Zu ihm gehören Bullco, Sentenza, Raoul und noch ein paar andere ...
 };
 
 // ************************************************************
@@ -144,7 +144,7 @@ FUNC INT DIA_Gunnar_Colony_Condition()
 FUNC VOID DIA_Gunnar_Colony_Info()
 {
 	AI_Output (other, self, "DIA_Gunnar_Colony_15_00"); //Wer kam alles aus der Kolonie?
-	AI_Output (self, other, "DIA_Gunnar_Colony_10_01"); //Lee und seine Leute. Torlof, Cord, Jarvis, Wolf und wie sie alle heiÃŸen.
+	AI_Output (self, other, "DIA_Gunnar_Colony_10_01"); //Lee und seine Leute. Torlof, Cord, Jarvis, Wolf und wie sie alle heißen.
 };
 
 // ************************************************************
@@ -170,9 +170,9 @@ FUNC VOID DIA_Gunnar_Bandits_Info()
 {
 	AI_Output (other, self, "DIA_Gunnar_Bandits_15_00"); //Von welchen Banditen hast du geredet?
 	AI_Output (self, other, "DIA_Gunnar_Bandits_10_01"); //Das war nur so'n Spruch. Bin mir da nicht so sicher.
-	AI_Output (self, other, "DIA_Gunnar_Bandits_10_02"); //Im SÃ¼den des Tals gibt es Berge mit verlassenen Minen. Da oben verstecken sich einige Banditen.
-	AI_Output (self, other, "DIA_Gunnar_Bandits_10_03"); //Es sind auch StrÃ¤flinge aus der Kolonie, genau wie die meisten SÃ¶ldner auf dem Hof hier.
-	AI_Output (self, other, "DIA_Gunnar_Bandits_10_04"); //Nur mit dem Unterschied, dass sie noch schlimmerer Abschaum sind. Die bringen jeden um, der sich in ihre NÃ¤he traut.
+	AI_Output (self, other, "DIA_Gunnar_Bandits_10_02"); //Im Süden des Tals gibt es Berge mit verlassenen Minen. Da oben verstecken sich einige Banditen.
+	AI_Output (self, other, "DIA_Gunnar_Bandits_10_03"); //Es sind auch Sträflinge aus der Kolonie, genau wie die meisten Söldner auf dem Hof hier.
+	AI_Output (self, other, "DIA_Gunnar_Bandits_10_04"); //Nur mit dem Unterschied, dass sie noch schlimmerer Abschaum sind. Die bringen jeden um, der sich in ihre Nähe traut.
 };
 
 

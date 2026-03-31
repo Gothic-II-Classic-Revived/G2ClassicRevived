@@ -47,13 +47,13 @@ func void DIA_Vatras_DI_HEAL_Info ()
 	
 	if hero.attribute [ATR_HITPOINTS] < hero.attribute[ATR_HITPOINTS_MAX]
 	{
-		AI_Output			(self, other, "DIA_Vatras_DI_HEAL_05_01"); //(andÃ¤chtig) Adanos segne diesen KÃ¶rper. Er wird es sein, der das Gleichgewicht der Welt wiederherstellen wird.
+		AI_Output			(self, other, "DIA_Vatras_DI_HEAL_05_01"); //(andächtig) Adanos segne diesen Körper. Er wird es sein, der das Gleichgewicht der Welt wiederherstellen wird.
 		hero.attribute [ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 		PrintScreen (PRINT_FullyHealed, - 1, - 1, FONT_Screen, 2);   
 	}
 	else 
 	{	
-		AI_Output			(self, other, "DIA_Vatras_DI_HEAL_05_02"); //Dein KÃ¶rper ist zurzeit unversehrt.
+		AI_Output			(self, other, "DIA_Vatras_DI_HEAL_05_02"); //Dein Körper ist zurzeit unversehrt.
 	};	
 };
  
@@ -124,19 +124,19 @@ func void DIA_Vatras_DI_OBSESSION_Info ()
 		
 			if (Npc_HasItems (self,ItPo_HealObsession_MIS))
 			{
-				AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_01"); //Nimm diesen Trank der ErlÃ¶sung. Pyrokar hat mir auf mein GeheiÃŸ einige der heilenden Elixiere mitgegeben.
-				AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_02"); //Doch denke immer daran: Meine MÃ¶glichkeiten, dir die AlbtrÃ¤ume zu nehmen, sind sehr begrenzt.
+				AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_01"); //Nimm diesen Trank der Erlösung. Pyrokar hat mir auf mein Geheiß einige der heilenden Elixiere mitgegeben.
+				AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_02"); //Doch denke immer daran: Meine Möglichkeiten, dir die Albträume zu nehmen, sind sehr begrenzt.
 				B_GiveInvItems (self, other, ItPo_HealObsession_MIS, 1);
 				Got_HealObsession_Day = Wld_GetDay(); 
 			}
 			else
 			{
-				AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_03"); //Pyrokars VorrÃ¤te sind erschÃ¶pft. Es tut mir sehr Leid, mein Freund. Ich kann dir nicht mehr helfen.
+				AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_03"); //Pyrokars Vorräte sind erschöpft. Es tut mir sehr Leid, mein Freund. Ich kann dir nicht mehr helfen.
 			};
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_04"); //Ich gehe das Risiko nicht ein, dir noch eine Phiole nach so kurzer Zeit zu geben. Komm spÃ¤ter wieder, mein Freund.
+			AI_Output			(self, other, "DIA_Vatras_DI_OBSESSION_05_04"); //Ich gehe das Risiko nicht ein, dir noch eine Phiole nach so kurzer Zeit zu geben. Komm später wieder, mein Freund.
 		};
 };
 
@@ -184,7 +184,7 @@ instance DIA_Vatras_DI_PEDROTOT		(C_INFO)
 	condition	 = 	DIA_Vatras_DI_PEDROTOT_Condition;
 	information	 = 	DIA_Vatras_DI_PEDROTOT_Info;
 
-	description	 = 	"Ich habe den VerrÃ¤ter Pedro gefunden.";
+	description	 = 	"Ich habe den Verräter Pedro gefunden.";
 };
 
 func int DIA_Vatras_DI_PEDROTOT_Condition ()
@@ -198,27 +198,27 @@ func int DIA_Vatras_DI_PEDROTOT_Condition ()
 var int DIA_Vatras_DI_PEDROTOT_VatrasSucked;
 func void DIA_Vatras_DI_PEDROTOT_Info ()
 {
-	AI_Output			(other, self, "DIA_Vatras_DI_PEDROTOT_15_00"); //Ich habe den VerrÃ¤ter Pedro gefunden.
+	AI_Output			(other, self, "DIA_Vatras_DI_PEDROTOT_15_00"); //Ich habe den Verräter Pedro gefunden.
 	B_GivePlayerXP (XP_Ambient);
 	
 	if (MIS_Gorax_KillPedro == LOG_SUCCESS)
 	&& (Npc_IsDead(Pedro_DI)) 
 	{
 		AI_Output			(other, self, "DIA_Vatras_DI_PEDROTOT_15_01"); //Er ist tot.
-		AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_02"); //Ich bin maÃŸlos enttÃ¤uscht. Das hÃ¤tte ich nicht von dir gedacht.
+		AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_02"); //Ich bin maßlos enttäuscht. Das hätte ich nicht von dir gedacht.
 		AI_Output			(other, self, "DIA_Vatras_DI_PEDROTOT_15_03"); //Wie meinst du das?
-		AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_04"); //Ich kenne dein widerliches Abkommen mit Serpentes. Ich bin zutiefst erschÃ¼ttert, dass ich zu guter letzt doch Unrecht haben musste.
+		AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_04"); //Ich kenne dein widerliches Abkommen mit Serpentes. Ich bin zutiefst erschüttert, dass ich zu guter letzt doch Unrecht haben musste.
 		DIA_Vatras_DI_PEDROTOT_VatrasSucked = TRUE;
 		AI_StopProcessInfos (self);
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_05"); //Dann bringe ihn hierher aufs Schiff. Wir werden ihn der Gerichtsbarkeit von Khorinis Ã¼berantworten.
+		AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_05"); //Dann bringe ihn hierher aufs Schiff. Wir werden ihn der Gerichtsbarkeit von Khorinis überantworten.
 
 		if (Npc_IsDead(Pedro_DI)) 
 		{
-			AI_Output			(other, self, "DIA_Vatras_DI_PEDROTOT_15_06"); //DafÃ¼r dÃ¼rfte es zu spÃ¤t sein. Er ist tot.
-			AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_07"); //(Ã¼berrascht) Oh. Das ist sehr bedauerlich. Ich werde fÃ¼r seine arme Seele beten.
+			AI_Output			(other, self, "DIA_Vatras_DI_PEDROTOT_15_06"); //Dafür dürfte es zu spät sein. Er ist tot.
+			AI_Output			(self, other, "DIA_Vatras_DI_PEDROTOT_05_07"); //(überrascht) Oh. Das ist sehr bedauerlich. Ich werde für seine arme Seele beten.
 		}
 		else
 		{
@@ -254,7 +254,7 @@ func int DIA_Vatras_DI_VatrasSucked_Condition ()
 
 func void DIA_Vatras_DI_VatrasSucked_Info ()
 {
-	AI_Output			(self, other, "DIA_Vatras_DI_VatrasSucked_05_00"); //Geh mir aus den Augen, du MÃ¶rder. Von mir hast du keinerlei Hilfe mehr zu erwarten.
+	AI_Output			(self, other, "DIA_Vatras_DI_VatrasSucked_05_00"); //Geh mir aus den Augen, du Mörder. Von mir hast du keinerlei Hilfe mehr zu erwarten.
 	AI_StopProcessInfos (self);
 };
 
@@ -269,7 +269,7 @@ INSTANCE DIA_Vatras_DI_Talente (C_INFO)
 	information		= DIA_Vatras_DI_Talente_Info;
 	permanent		= TRUE;
 
-	description		= "Lehre mich deine FÃ¤higkeiten."; 
+	description		= "Lehre mich deine Fähigkeiten."; 
 };
 
 FUNC INT DIA_Vatras_DI_Talente_Condition()
@@ -281,8 +281,8 @@ FUNC INT DIA_Vatras_DI_Talente_Condition()
 };
 FUNC VOID DIA_Vatras_DI_Talente_Info ()
 {	
-	AI_Output			(other, self, "DIA_Vatras_DI_Talente_15_00"); //Teach me your abilities.
-	AI_Output			(self, other, "DIA_Vatras_DI_Talente_05_01"); //I shall do what is in my power.
+	AI_Output			(other, self, "DIA_Vatras_DI_Talente_15_00"); //Lehre mich deine Fähigkeiten.
+	AI_Output			(self, other, "DIA_Vatras_DI_Talente_05_01"); //Ich werde tun, was in meiner Macht steht.
 	
 	Info_ClearChoices (DIA_Vatras_DI_Talente);
 	Info_AddChoice	  (DIA_Vatras_DI_Talente, DIALOG_BACK, DIA_Vatras_DI_Talente_BACK);
@@ -291,7 +291,7 @@ FUNC VOID DIA_Vatras_DI_Talente_Info ()
 	{
 		Info_AddChoice	  (DIA_Vatras_DI_Talente, "Magische Kreise", DIA_Vatras_DI_Talente_CIRCLES);
 	};
-	Info_AddChoice	  (DIA_Vatras_DI_Talente, "Alchemie - Die Kunst der TrÃ¤nke", DIA_Vatras_DI_Talente_ALCHIMIE);
+	Info_AddChoice	  (DIA_Vatras_DI_Talente, "Alchemie - Die Kunst der Tränke", DIA_Vatras_DI_Talente_ALCHIMIE);
 };
 
 //**********************************************************
@@ -405,14 +405,14 @@ FUNC VOID DIA_Vatras_DI_Talente_Circle_4()
 };
 FUNC VOID DIA_Vatras_DI_Talente_Circle_5()
 {
-	AI_Output			(self, other, "DIA_Vatras_DI_Talente_Circle_5_05_00"); //You are now a magician of the fifth Circle. Use the magic spells you have learned prudently.
+	AI_Output			(self, other, "DIA_Vatras_DI_Talente_Circle_5_05_00"); //Du bist nun Magier des 5. Kreises. Setze deine erlernten Zaubersprüche immer mit Bedacht ein.
 	Info_ClearChoices (DIA_Vatras_DI_Talente);
 	B_TeachMagicCircle (self, other, 5);
 };
 FUNC VOID DIA_Vatras_DI_Talente_Circle_6()
 {
-	AI_Output			(self, other, "DIA_Vatras_DI_Talente_Circle_6_05_00"); //You now have access to the highest knowledge of magic.
-	AI_Output			(self, other, "DIA_Vatras_DI_Talente_Circle_6_05_01"); //Be guided by reason and control your human weaknesses. They can cloud your sight.
+	AI_Output			(self, other, "DIA_Vatras_DI_Talente_Circle_6_05_00"); //Du hast nun Zugang zum obersten Wissen der Magie.
+	AI_Output			(self, other, "DIA_Vatras_DI_Talente_Circle_6_05_01"); //Lass dich nur von der Vernunft leiten und beherrsche deine menschlichen Schwächen. Sie können deinen Blick trüben.
 	Info_ClearChoices (DIA_Vatras_DI_Talente);
 	B_TeachMagicCircle (self, other, 6);
 };
@@ -485,16 +485,16 @@ func int DIA_Vatras_DI_DementorObsessionBook_Condition ()
 var int DIA_Vatras_DI_DementorObsessionBook_OneTime;
 func void DIA_Vatras_DI_DementorObsessionBook_Info ()
 {
-	AI_Output			(other, self, "DIA_Vatras_DI_DementorObsessionBook_15_00"); //I've got an Almanac of the Possessed here
+	AI_Output			(other, self, "DIA_Vatras_DI_DementorObsessionBook_15_00"); //Ich habe hier einen Almanach der Besessenen.
 	if (DIA_Vatras_DI_DementorObsessionBook_OneTime == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Vatras_DI_DementorObsessionBook_05_01"); //Hm. I think it would be best if I take it to Pyrokar in the monastery, if we get away from here again.
+		AI_Output			(self, other, "DIA_Vatras_DI_DementorObsessionBook_05_01"); //Hm. Ich denke, es ist das Beste, wenn ich es ins Kloster zu Pyrokar bringe, wenn wir hier wieder weg kommen.
 		
 		DIA_Vatras_DI_DementorObsessionBook_OneTime = TRUE;
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Vatras_DI_DementorObsessionBook_05_02"); //Do you have more of them? Bring me all that you can find.
+		AI_Output			(self, other, "DIA_Vatras_DI_DementorObsessionBook_05_02"); //Du hast noch mehr davon? Bringe mir ruhig alle, die du finden kannst.
 	};
 	B_GiveInvItems (other, self, ITWR_DementorObsessionBook_MIS,1);
 	B_GivePlayerXP (XP_Ambient);
@@ -524,37 +524,37 @@ func int DIA_Vatras_DI_UndeadDragonDead_Condition ()
 var int DIA_Vatras_DI_UndeadDragonDead_OneTime;
 func void DIA_Vatras_DI_UndeadDragonDead_Info ()
 {
-	AI_Output			(other, self, "DIA_Vatras_DI_UndeadDragonDead_15_00"); //I did it.
+	AI_Output			(other, self, "DIA_Vatras_DI_UndeadDragonDead_15_00"); //Ich habe es geschafft.
 
 	if (DIA_Vatras_DI_UndeadDragonDead_OneTime == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Vatras_DI_UndeadDragonDead_05_01"); //I know, I can feel it.
-		AI_Output			(self, other, "DIA_Vatras_DI_UndeadDragonDead_05_02"); //You have dealt a blow to Beliar which will keep him busy for some time.
+		AI_Output			(self, other, "DIA_Vatras_DI_UndeadDragonDead_05_01"); //Ich weiß, ich spüre es.
+		AI_Output			(self, other, "DIA_Vatras_DI_UndeadDragonDead_05_02"); //Du hast Beliar einen Schlag versetzt, der ihn noch einige Zeit beschäftigen wird.
 	
 		if (hero.guild == GIL_DJG)
 		{
-			AI_Output (other, self, "DIA_Vatras_DI_UndeadDragonDead_15_03"); //Can I retire now, or do you magicians have another skeleton in the closet which needs to be driven from this world?
+			AI_Output (other, self, "DIA_Vatras_DI_UndeadDragonDead_15_03"); //Kann ich mich jetzt zur Ruhe setzen oder habt ihr Magier noch eine Leiche im Keller, die von dieser Welt vertrieben werden muss?
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Vatras_DI_UndeadDragonDead_05_04"); //But bear in mind that this was only an episode in the eternal battle between Good and Evil.
+			AI_Output (self, other, "DIA_Vatras_DI_UndeadDragonDead_05_04"); //Doch bedenke, dass dies nur eine Episode des ewigen Kampfes zwischen Gut und Böse war.
 		};
 		
-		AI_Output			(self, other, "DIA_Vatras_DI_UndeadDragonDead_05_05"); //Evil always finds a way to enter this world. The war will never end.
+		AI_Output			(self, other, "DIA_Vatras_DI_UndeadDragonDead_05_05"); //Das Böse findet immer einen Weg, auf diese Welt zu kommen. Der Krieg wird niemals enden.
 		
 		if (hero.guild == GIL_PAL)
 		{
-			AI_Output (self, other, "DIA_Vatras_DI_UndeadDragonDead_05_06"); //As a warrior for the good cause you should know that.
+			AI_Output (self, other, "DIA_Vatras_DI_UndeadDragonDead_05_06"); //Als Kämpfer für das Gute solltest du das eigentlich wissen.
 		};
 			
-		AI_Output (self, other, "DIA_Vatras_Add_05_15"); //Only Adanos alone stands between the warring gods in order to preserve the balance!
-		AI_Output (other, self, "DIA_Vatras_Add_15_16"); //He should have helped me instead.
-		AI_Output (self, other, "DIA_Vatras_Add_05_17"); //(mischievously) But he did - of that you can be certain.
+		AI_Output (self, other, "DIA_Vatras_Add_05_15"); //Nur Adanos allein steht zwischen den streitenden Göttern, um das Gleichgewicht zu erhalten!
+		AI_Output (other, self, "DIA_Vatras_Add_15_16"); //Er hätte mir mal lieber helfen sollen.
+		AI_Output (self, other, "DIA_Vatras_Add_05_17"); //Das hat er - dessen kannst du dir sicher sein...
 					
 		DIA_Vatras_DI_UndeadDragonDead_OneTime = TRUE;
 	};	
 
-	AI_Output (self, other, "DIA_Vatras_DI_UndeadDragonDead_05_09"); //Tell the captain that he should weigh anchor as soon as possible. The momentary peace may be deceptive.
+	AI_Output (self, other, "DIA_Vatras_DI_UndeadDragonDead_05_09"); //Sag´ nun dem Kapitän, dass er so schnell wie möglich ablegen soll. Die momentane Ruhe kann trügen.
 };
  
 ///////////////////////////////////////////////////////////////////////

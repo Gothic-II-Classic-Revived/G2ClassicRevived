@@ -1,5 +1,5 @@
 // ************************************************************************************************
-// Wert von Tiertrophen
+// Wert von Tiertroph‰en
 // ************************************************************************************************
 
 //Addon
@@ -136,7 +136,7 @@ INSTANCE ItAt_WolfFur (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_BugMandibles (C_Item)
 {
-	name 				=	"Feldr√§uberzangen";
+	name 				=	"Feldr‰uberzangen";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -196,7 +196,7 @@ INSTANCE ItAt_LurkerClaw (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_Teeth (C_Item)
 {
-	name 				=	"Z√§hne";
+	name 				=	"Z‰hne";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -225,13 +225,13 @@ INSTANCE ItAt_CrawlerMandibles (C_Item)
 
 	visual 				=	"ItAt_CrawlerMandibles.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Mandibles;
 	
 	description			= 	name;
 	
-	TEXT[0]				= 	"Die Zangen k√∂nnen aufgebrochen,";
-	TEXT[1]				= 	"und das Sekret darin geschl√ºrft werden.";
+	TEXT[0]				= 	"Die Zangen kˆnnen aufgebrochen,";
+	TEXT[1]				= 	"und das Sekret darin geschl¸rft werden.";
 	TEXT[2]				= 	"Es regeniert die magische Kraft.";
 	TEXT[3]				= 	"Verliert mit der Zeit seine Wirkung.";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
@@ -253,7 +253,7 @@ FUNC VOID Use_Mandibles()
 /******************************************************************************************/
 INSTANCE ItAt_Wing (C_Item)
 {
-	name 				=	"Fl√ºgel";
+	name 				=	"Fl¸gel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -279,7 +279,7 @@ INSTANCE ItAt_Sting (C_Item)
 	flags 				=	ITEM_MULTI;
 
 	value 				=	Value_Sting;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	
 	on_state[0]			=	Use_Sting;
 	
@@ -289,7 +289,7 @@ INSTANCE ItAt_Sting (C_Item)
 	description			= 	name;
 	TEXT[0]				= 	"";
 	TEXT[1]				= 	"Der Stachel";
-	TEXT[2]				= 	"enth√§lt ein giftiges Sekret";
+	TEXT[2]				= 	"enth‰lt ein giftiges Sekret";
 	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -423,7 +423,7 @@ INSTANCE ItAt_CrawlerPlate (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_ShadowFur (C_Item)
 {
-	name 				=	"Fell eines Schattenl√§ufers";
+	name 				=	"Fell eines Schattenl‰ufers";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -523,7 +523,7 @@ INSTANCE ItAt_WaranFiretongue (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_ShadowHorn (C_Item)
 {
-	name 				=	"Horn eines Schattenl√§ufers";
+	name 				=	"Horn eines Schattenl‰ufers";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -543,7 +543,7 @@ INSTANCE ItAt_ShadowHorn (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_SharkTeeth (C_Item)
 {
-	name 				=	"Sumpfhaiz√§hne";
+	name 				=	"Sumpfhaiz‰hne";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -691,7 +691,7 @@ INSTANCE ItAt_SkeletonBone (C_Item)
 /******************************************************************************************/
 INSTANCE ItAt_DemonHeart (C_Item)
 {
-	name 				=	"Herz eines D√§monen";
+	name 				=	"Herz eines D‰monen";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -710,7 +710,7 @@ INSTANCE ItAt_DemonHeart (C_Item)
 };
 
 //**************************************************************************
-//					Drachentrophen		
+//					Drachentroph‰en		
 //**************************************************************************
 INSTANCE ItAt_UndeadDragonSoulStone (C_Item)
 {

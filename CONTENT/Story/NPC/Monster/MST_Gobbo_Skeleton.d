@@ -61,7 +61,7 @@ INSTANCE Gobbo_Skeleton	(Mst_Default_Gobbo_Skeleton)
 {
 	B_SetVisuals_Gobbo_Skeleton();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
 
@@ -83,17 +83,17 @@ INSTANCE Summoned_Gobbo_Skeleton (Mst_Default_Gobbo_Skeleton)
 	
 	B_SetVisuals_Gobbo_Skeleton();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
 
 //************************************
-//	Gobbo_Skeleton im OW Dmonenturm	
+//	Gobbo_Skeleton im OW Dämonenturm	
 //************************************
 INSTANCE Gobbo_SkeletonOWDemonTower	(Mst_Default_Gobbo_Skeleton)
 {
 	B_SetVisuals_Gobbo_Skeleton();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 	

@@ -39,7 +39,7 @@ const int LOG_ITEM_LIST_WIDTH	= 4500;
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_ACT(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Current\nQuests";
+	text[0]		=	"Aktuelle\nMissionen";
 	posx		=	LOG_ITEM_X1;
 	posy		=   	1500;
 	dimx 		= 	LOG_ITEM_DX1;
@@ -53,7 +53,7 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_ACT(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_OLD(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Completed\nMissions";
+	text[0]		=	"Erfüllte\nMissionen";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	2500;
@@ -69,7 +69,7 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_OLD(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"Failed\nMissions";
+	text[0]		=	"Gescheiterte\nMissionen";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	3500;
@@ -85,7 +85,7 @@ INSTANCE MENU_ITEM_SEL_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_SEL_LOG(C_MENU_ITEM_DEF)
 {
-	text[0]		=	"General\nInformation";
+	text[0]		=	"Allgemeine\nInfos";
 	
 	posx		=	LOG_ITEM_X1;
 	posy		=   	4500;
@@ -177,7 +177,7 @@ instance MENU_ITEM_LIST_LOG(C_MENU_ITEM_DEF)
 	flags		=	flags|IT_CHROMAKEYED|IT_TRANSPARENT|IT_EFFECTS_NEXT;	
 	flags		= 	flags & ~IT_SELECTABLE;
 	flags		= 	flags & ~IT_TXT_CENTER;		
-	userString[0]	=	"LOG";
+	userString[0]	=	"Log";
 	
 	frameSizeX	= 	250;
 	frameSizeY	= 	0;
@@ -208,7 +208,7 @@ INSTANCE MENU_ITEM_CONTENT_VIEWER(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_DAY_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]		= 	"Day:";
+	text[0]		= 	"Tag";
 	posx 		= 	1800; // see dimx of MENU_ITEM_DAY!!
 	posy		= 	6000;
 	fontName	=	LOG_FONT_DATETIME;
@@ -217,7 +217,7 @@ INSTANCE MENU_ITEM_DAY_TITLE(C_MENU_ITEM_DEF)
 
 INSTANCE MENU_ITEM_TIME_TITLE(C_MENU_ITEM_DEF)
 {
-	text[0]		= 	"Time:";
+	text[0]		= 	"Zeit:";
 	posx 		= 	1500;
 	posy		= 	6300;
 	fontName	=	LOG_FONT_DATETIME;

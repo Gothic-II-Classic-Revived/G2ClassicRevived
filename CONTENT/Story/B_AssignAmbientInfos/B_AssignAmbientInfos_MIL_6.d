@@ -29,7 +29,7 @@ INSTANCE DIA_MIL_6_JOIN(C_INFO)
 	condition	= DIA_MIL_6_JOIN_Condition;
 	information	= DIA_MIL_6_JOIN_Info;
 	permanent	= TRUE;
-	description = "Was mu√ü ich tun, um mich der Miliz anzuschlie√üen?";
+	description = "Was muﬂ ich tun, um mich der Miliz anzuschlieﬂen?";
 };                       
 
 FUNC INT DIA_MIL_6_JOIN_Condition()
@@ -42,8 +42,8 @@ FUNC INT DIA_MIL_6_JOIN_Condition()
 
 FUNC VOID DIA_MIL_6_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_JOIN_15_00"); //Was mu√ü ich tun, um mich der Miliz anzuschlie√üen?
-	AI_Output (self, other, "DIA_MIL_6_JOIN_06_01"); //Geh zu Lord Andre und rede mit ihm. Seit die Paladine in der Stadt sind, hat er das Kommando √ºber die ganze Miliz.
+	AI_Output (other, self, "DIA_MIL_6_JOIN_15_00"); //Was muﬂ ich tun, um mich der Miliz anzuschlieﬂen?
+	AI_Output (self, other, "DIA_MIL_6_JOIN_06_01"); //Geh zu Lord Andre und rede mit ihm. Seit die Paladine in der Stadt sind, hat er das Kommando ¸ber die ganze Miliz.
 	if (C_NpcIsInQuarter (self) != Q_KASERNE)
 	{
 		AI_Output (self, other, "DIA_MIL_6_JOIN_06_02"); //Du findest ihn in der Kaserne. Dort ist er eigentlich immer anzutreffen.
@@ -59,7 +59,7 @@ INSTANCE DIA_MIL_6_PEOPLE(C_INFO)
 	condition	= DIA_MIL_6_PEOPLE_Condition;
 	information	= DIA_MIL_6_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Erz√§hl mir etwas √ºber die Paladine.";
+	description = "Erz‰hl mir etwas ¸ber die Paladine.";
 };                       
 
 FUNC INT DIA_MIL_6_PEOPLE_Condition()
@@ -72,10 +72,10 @@ FUNC INT DIA_MIL_6_PEOPLE_Condition()
 
 FUNC VOID DIA_MIL_6_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_PEOPLE_15_00"); //Erz√§hl mir etwas √ºber die Paladine.
-	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_01"); //Seit die Paladine in Khorinis angekommen sind, haben sie sich ins obere Viertel zur√ºckgezogen.
-	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_02"); //Sie lassen niemanden mehr da rein. Au√üer die B√ºrger der Stadt und die Miliz nat√ºrlich.
-	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_03"); //Es gibt auch noch einige Paladine am Hafen, die das Schiff bewachen. Aber die sind alles andere als gespr√§chig.
+	AI_Output (other, self, "DIA_MIL_6_PEOPLE_15_00"); //Erz‰hl mir etwas ¸ber die Paladine.
+	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_01"); //Seit die Paladine in Khorinis angekommen sind, haben sie sich ins obere Viertel zur¸ckgezogen.
+	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_02"); //Sie lassen niemanden mehr da rein. Auﬂer die B¸rger der Stadt und die Miliz nat¸rlich.
+	AI_Output (self, other, "DIA_MIL_6_PEOPLE_06_03"); //Es gibt auch noch einige Paladine am Hafen, die das Schiff bewachen. Aber die sind alles andere als gespr‰chig.
 };
 
 // *************************************************************************
@@ -87,7 +87,7 @@ INSTANCE DIA_MIL_6_LOCATION(C_INFO)
 	condition	= DIA_MIL_6_LOCATION_Condition;
 	information	= DIA_MIL_6_LOCATION_Info;
 	permanent	= TRUE;
-	description = "Was gibt es √ºber diese Stadt zu wissen?";
+	description = "Was gibt es ¸ber diese Stadt zu wissen?";
 };                       
 
 FUNC INT DIA_MIL_6_LOCATION_Condition()
@@ -97,11 +97,11 @@ FUNC INT DIA_MIL_6_LOCATION_Condition()
 
 FUNC VOID DIA_MIL_6_LOCATION_Info()
 {	
-	AI_Output (other, self, "DIA_MIL_6_LOCATION_15_00"); //Was gibt es √ºber diese Stadt zu wissen?
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_01"); //Die Paladine haben jetzt die Kontrolle √ºber die ganze Stadt. Die gesamte Miliz untersteht ihnen.
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_02"); //Der Kommandant der Miliz ist Lord Andre, er √ºbt auch gleichzeitig das Amt des Richters aus.
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_03"); //Wenn du jemals mit dem Gesetz in Konflikt geraten solltest, wirst du dich vor ihm rechtfertigen m√ºssen.
-	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_04"); //Aber er ist recht gn√§dig, nach allem, was man h√∂rt. Die meisten F√§lle l√§sst er mit einer Geldstrafe davonkommen.
+	AI_Output (other, self, "DIA_MIL_6_LOCATION_15_00"); //Was gibt es ¸ber diese Stadt zu wissen?
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_01"); //Die Paladine haben jetzt die Kontrolle ¸ber die ganze Stadt. Die gesamte Miliz untersteht ihnen.
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_02"); //Der Kommandant der Miliz ist Lord Andre, er ¸bt auch gleichzeitig das Amt des Richters aus.
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_03"); //Wenn du jemals mit dem Gesetz in Konflikt geraten solltest, wirst du dich vor ihm rechtfertigen m¸ssen.
+	AI_Output (self, other, "DIA_MIL_6_LOCATION_06_04"); //Aber er ist recht gn‰dig, nach allem, was man hˆrt. Die meisten F‰lle l‰sst er mit einer Geldstrafe davonkommen.
 	
 };
 
@@ -127,29 +127,29 @@ FUNC VOID DIA_MIL_6_STANDARD_Info()
 	if (Kapitel == 1)
 	{
 		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_01"); //In letzter Zeit kommt immer mehr Gesindel in die Stadt.
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_02"); //Die Diebst√§hle h√§ufen sich und Lord Andre vermutet, dass eine Bande dahinter steckt.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_02"); //Die Diebst‰hle h‰ufen sich und Lord Andre vermutet, dass eine Bande dahinter steckt.
 		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_03"); //Wir haben vor kurzem das gesamte Hafenviertel auf den Kopf gestellt, aber gefunden haben wir noch nichts.
 	};
 
 	if (Kapitel == 2)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_04"); //Das Problem mit den Banditen bekommen wir langsam in den Griff, so wie's aussieht. Die √úberf√§lle sind in letzter Zeit stark zur√ºckgegangen.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_04"); //Das Problem mit den Banditen bekommen wir langsam in den Griff, so wie's aussieht. Die ‹berf‰lle sind in letzter Zeit stark zur¸ckgegangen.
 	};
 
 	if (Kapitel == 3)
 	{
 		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_05"); //Es wird immer schlimmer mit dem Gesindel, das in die Stadt kommt. Letzte Nacht habe ich einen Mann in schwarzer Robe durch das obere Viertel verfolgt.
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_06"); //Ich bin mir sicher, der f√ºhrte was im Schilde. Aber als ich ihm um das Haus des Statthalters folgte, war er einfach verschwunden. Merkw√ºrdige Gestalt ...
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_06"); //Ich bin mir sicher, der f¸hrte was im Schilde. Aber als ich ihm um das Haus des Statthalters folgte, war er einfach verschwunden. Merkw¸rdige Gestalt ...
 	};
 
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_07"); //Es hei√üt, Lord Hagen hat S√∂ldner angeheuert, um gegen die Drachen zu k√§mpfen. Mir soll's recht sein, ich h√§tte keine Lust, gegen einen Drachen anzutreten.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_07"); //Es heiﬂt, Lord Hagen hat Sˆldner angeheuert, um gegen die Drachen zu k‰mpfen. Mir soll's recht sein, ich h‰tte keine Lust, gegen einen Drachen anzutreten.
 	};
 	
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_08"); //Es hei√üt, die Drachen sind besiegt worden! Lord Hagen sammelt seine M√§nner, um auch die restlichen Kreaturen aus dem Minental zu vertreiben.
+		AI_Output (self,other,"DIA_MIL_6_STANDARD_06_08"); //Es heiﬂt, die Drachen sind besiegt worden! Lord Hagen sammelt seine M‰nner, um auch die restlichen Kreaturen aus dem Minental zu vertreiben.
 	};
 };
 

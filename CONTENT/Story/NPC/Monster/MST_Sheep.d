@@ -88,7 +88,7 @@ INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 {
 	name						= "Liesel";
 	
-	aivar[AIV_ToughGuy] = TRUE; //Liesel knn gettet werden, ohne da jemand sich anpit!
+	aivar[AIV_ToughGuy] = TRUE; //Liesel knn getötet werden, ohne daß jemand sich anpißt!
 		
 	B_SetVisuals_Sheep();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);

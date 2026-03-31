@@ -137,7 +137,7 @@ INSTANCE ITAM_REVIVED_PROT_MELEE_02(C_Item)
 	visual_skin 		=	0;
 
 	description			= 	name;
-	TEXT[1]				=	"der Name NEK ist auf der RÃ¼ckseite eingraviert";
+	TEXT[1]				=	"der Name NEK ist auf der Rückseite eingraviert";
 	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITAM_Prot_Melee_02;
 	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITAM_Prot_Melee_02;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -323,7 +323,7 @@ FUNC VOID UnEquip_REV_ITAM_PROT_FIRE_02()
 
 INSTANCE ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 {
-	name 				=	"Amulett der LÃ¤uterung";
+	name 				=	"Amulett der Läuterung";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_AMULET;
@@ -695,7 +695,7 @@ INSTANCE ITAM_REVIVED_STR_01(C_Item)
 
 INSTANCE ITAM_REVIVED_STR_02(C_Item)
 {
-	name 			=	"Amulett der StÃ¤rke";
+	name 			=	"Amulett der Stärke";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -835,12 +835,12 @@ INSTANCE ITAM_REVIVED_KDW(C_Item)
 /* 
 	Schwarz wie die Seele
 	Schwarz wie die Nacht
-	Schwarz wie das Bse
+	Schwarz wie das Böse
 	Schwarz verheisst Macht
 */
 INSTANCE ITAM_REVIVED_DEMON(C_Item)
 {
-	name 			=	"BeschwÃ¶rungsamulett";
+	name 			=	"Beschwörungsamulett";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET;
@@ -854,10 +854,10 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 	on_equip		=	Equip_REV_Beschworungsamulett;
 	on_unequip		=	UnEquip_REV_Beschworungsamulett;
 	description		= name;
-	TEXT[1]			= "Black haunts the Soul";
-	TEXT[2]			= "Black shrouds the Night";
-	TEXT[3]			= "Black corrupts the Heart";
-	TEXT[4] 		= "Black bestows Power";
+	TEXT[1]			= "Schwarz umhüllt die Seele";
+	TEXT[2]			= "Schwarz hüllt die Nacht ein";
+	TEXT[3]			= "Schwarz verdirbt das Herz";
+	TEXT[4] 		= "Schwarz verleiht Macht";
 	
 	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
 	INV_ROTZ				= INVCAM_Z_RING_STANDARD;

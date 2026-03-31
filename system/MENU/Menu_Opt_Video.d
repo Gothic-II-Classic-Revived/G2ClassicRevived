@@ -32,7 +32,7 @@ INSTANCE MENU_OPT_VIDEO(C_MENU_DEF)
 
 INSTANCE MENUITEM_VID_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		=	"VIDEO SETTINGS";
+	text[0]		=	"VIDEO EINSTELLUNGEN";
 	type		=	MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		=	0;		posy		=	MENU_TITLE_Y;
@@ -50,8 +50,8 @@ INSTANCE MENUITEM_VID_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_VID_DEVICE(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Graphic card";
-	text[1]		=	"You need to restart to make changes take effect."; // Kommentar
+	text[0]		=	"Grafikkarte";
+	text[1]		=	"Eine Änderung wirkt sich erst beim Neustart aus!"; // Kommentar
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*0;
@@ -87,8 +87,8 @@ INSTANCE MENUITEM_VID_DEVICE_CHOICE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_VID_RESOLUTION(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Resolution";
-	text[1]		= "Select desired resolution and PRESS RETURN."; // Kommentar
+	text[0]		= "Auflösung";
+	text[1]		= "Gewählte Auflösung durch RETURN bestätigen."; // Kommentar
 	
 	// Position und Dimension	
 	posx		= 1000;		posy		= MENU_START_Y + MENU_DY*1;
@@ -124,8 +124,8 @@ INSTANCE MENUITEM_VID_RESOLUTION_CHOICE(C_MENU_ITEM_DEF)
 instance MENUITEM_VID_BRIGHTNESS(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Brightness";
-	text[1]		= "Brightness"; // Kommentar
+	text[0]		= "Helligkeit";
+	text[1]		= "Helligkeit"; // Kommentar
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*3;
@@ -159,8 +159,8 @@ INSTANCE MENUITEM_VID_BRIGHTNESS_SLIDER(C_MENU_ITEM_DEF)
 instance MENUITEM_VID_CONTRAST(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Contrast";
-	text[1]		= "Contrast"; // Kommentar
+	text[0]		= "Kontrast";
+	text[1]		= "Kontrast"; // Kommentar
 	
 	// Position und Dimension	
 	posx		=	1000;	posy		=	MENU_START_Y + MENU_DY*4;
@@ -227,7 +227,7 @@ INSTANCE MENUITEM_VID_GAMMA_SLIDER(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_VID_BACK(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"BACK";
+	text[0]		=	"ZURÜCK";
 	// Position und Dimension	
 	posx		=	1000;		posy		=	MENU_BACK_Y;
 	dimx		=	6192;		dimy		=	MENU_DY;

@@ -1,6 +1,6 @@
 INSTANCE REVIVED_POCKET_WHITE(C_Item)
 {
-	name = "Wei√üe Tasche";
+	name = "Weiﬂe Tasche";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;

@@ -22,7 +22,7 @@ FUNC VOID DIA_GornNW_nach_DJG_KAP5_EXIT_Info()
 };
 
 // ************************************************************
-// 	  	  Ich habe alle Drachen gettet. (Perm Kap 5)
+// 	  	  Ich habe alle Drachen getötet. (Perm Kap 5)
 // ************************************************************
 
 INSTANCE DIA_GornNW_nach_DJG_AllDragonsDead(C_INFO)
@@ -60,7 +60,7 @@ instance DIA_GornNW_nach_DJG_KnowWhereEnemy		(C_INFO)
 	condition	 = 	DIA_GornNW_nach_DJG_KnowWhereEnemy_Condition;
 	information	 = 	DIA_GornNW_nach_DJG_KnowWhereEnemy_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Ich kÃ¶nnte dich und deine Axt gebrauchen.";
+	description	 = 	"Ich könnte dich und deine Axt gebrauchen.";
 };
 func int DIA_GornNW_nach_DJG_KnowWhereEnemy_Condition ()
 {	
@@ -72,25 +72,25 @@ func int DIA_GornNW_nach_DJG_KnowWhereEnemy_Condition ()
 };
 func void DIA_GornNW_nach_DJG_KnowWhereEnemy_Info ()
 {
-	AI_Output			(other, self, "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_00"); //Ich kÃ¶nnte dich und deine Axt gebrauchen.
-	AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_01"); //Na. Das wundert mich nicht. Was kann ich fÃ¼r dich tun?
-	AI_Output			(other, self, "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_02"); //WÃ¼rdest du mit mir zu einer Insel segeln und dem Feind in den Arsch treten?
+	AI_Output			(other, self, "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_00"); //Ich könnte dich und deine Axt gebrauchen.
+	AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_01"); //Na. Das wundert mich nicht. Was kann ich für dich tun?
+	AI_Output			(other, self, "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_02"); //Würdest du mit mir zu einer Insel segeln und dem Feind in den Arsch treten?
 	AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_03"); //(Lacht) Klar. Sofort. Sag mir nur, was ich tun muss.
 	
 	Log_CreateTopic (TOPIC_Crew, LOG_MISSION);   
 	Log_SetTopicStatus(TOPIC_Crew, LOG_RUNNING); 
-	B_LogEntry (TOPIC_Crew,"Gorn war sofort Feuer und Flamme als ich ihm von der Insel erzÃ¤hlt habe. Wenn ich eine Axt brauche, sollte ich ihn mitnehmen.");
+	B_LogEntry (TOPIC_Crew,"Gorn war sofort Feuer und Flamme als ich ihm von der Insel erzählt habe. Wenn ich eine Axt brauche, sollte ich ihn mitnehmen.");
 		
 	if (crewmember_count >= Max_Crew)
 	{
-		AI_Output			(other,self , "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_04"); //Im Moment ist meine Mannschaft schon komplett, aber ich werde darÃ¼ber nachdenken, dich noch mit an Bord zu holen.
-		AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_05"); //Wenn jemand anders wegen mir wieder aus deiner Mannschaft fliegt, dann nimm den SchwÃ¤chsten von ihnen.
+		AI_Output			(other,self , "DIA_GornNW_nach_DJG_KnowWhereEnemy_15_04"); //Im Moment ist meine Mannschaft schon komplett, aber ich werde darüber nachdenken, dich noch mit an Bord zu holen.
+		AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_05"); //Wenn jemand anders wegen mir wieder aus deiner Mannschaft fliegt, dann nimm den Schwächsten von ihnen.
 		AI_Output			(self, other, "DIA_GornNW_nach_DJG_KnowWhereEnemy_12_06"); //In diesen rauen Zeiten brauchst jeden Mann, der anpacken kann.
 	}
 	else 
 	{
 		Info_ClearChoices (DIA_GornNW_nach_DJG_KnowWhereEnemy);
-		Info_AddChoice (DIA_GornNW_nach_DJG_KnowWhereEnemy,"Ich sag bescheid, wennÂ´s los geht.",DIA_GornNW_nach_DJG_KnowWhereEnemy_No);
+		Info_AddChoice (DIA_GornNW_nach_DJG_KnowWhereEnemy,"Ich sag bescheid, wenn´s los geht.",DIA_GornNW_nach_DJG_KnowWhereEnemy_No);
 		Info_AddChoice (DIA_GornNW_nach_DJG_KnowWhereEnemy,"Komm zu mir an Bord.",DIA_GornNW_nach_DJG_KnowWhereEnemy_Yes);
 	};
 };
@@ -120,7 +120,7 @@ FUNC VOID DIA_GornNW_nach_DJG_KnowWhereEnemy_Yes ()
 
 FUNC VOID DIA_GornNW_nach_DJG_KnowWhereEnemy_No ()
 {
-	AI_Output (other,self ,"DIA_GornNW_nach_DJG_KnowWhereEnemy_No_15_00"); //Ich sag bescheid, wennÂ´s los geht.
+	AI_Output (other,self ,"DIA_GornNW_nach_DJG_KnowWhereEnemy_No_15_00"); //Ich sag bescheid, wenn´s los geht.
 	AI_Output (self ,other,"DIA_GornNW_nach_DJG_KnowWhereEnemy_No_12_01"); //In Ordnung.
 
 	Gorn_IsOnBoard	 = LOG_OBSOLETE;
@@ -159,7 +159,7 @@ func void DIA_GornNW_nach_DJG_LeaveMyShip_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Ich habs mir berlegt!
+//	Ich habs mir überlegt!
 ///////////////////////////////////////////////////////////////////////
 instance DIA_GornNW_nach_DJG_StillNeedYou		(C_INFO)
 {
@@ -168,7 +168,7 @@ instance DIA_GornNW_nach_DJG_StillNeedYou		(C_INFO)
 	condition	 = 	DIA_GornNW_nach_DJG_StillNeedYou_Condition;
 	information	 = 	DIA_GornNW_nach_DJG_StillNeedYou_Info;
 	PERMANENT 	 =  TRUE;
-	description	 = 	"Komm zurÃ¼ck. Ich brauche dich.";
+	description	 = 	"Komm zurück. Ich brauche dich.";
 };
 
 func int DIA_GornNW_nach_DJG_StillNeedYou_Condition ()
@@ -183,8 +183,8 @@ func int DIA_GornNW_nach_DJG_StillNeedYou_Condition ()
 
 func void DIA_GornNW_nach_DJG_StillNeedYou_Info ()
 {
-	AI_Output	(other, self, "DIA_GornNW_nach_DJG_StillNeedYou_15_00"); //Komm zurÃ¼ck. Ich brauche dich.
-	AI_Output	(self, other, "DIA_GornNW_nach_DJG_StillNeedYou_12_01"); //Na also. Und ich dachte schon, du willst mich hier vergammeln lassen, wÃ¤hrend du den ganzen SpaÃŸ hast. Bis spÃ¤ter.
+	AI_Output	(other, self, "DIA_GornNW_nach_DJG_StillNeedYou_15_00"); //Komm zurück. Ich brauche dich.
+	AI_Output	(self, other, "DIA_GornNW_nach_DJG_StillNeedYou_12_01"); //Na also. Und ich dachte schon, du willst mich hier vergammeln lassen, während du den ganzen Spaß hast. Bis später.
 		
 	self.flags 		 = NPC_FLAG_IMMORTAL;
 	Gorn_IsOnBoard	 = LOG_SUCCESS;

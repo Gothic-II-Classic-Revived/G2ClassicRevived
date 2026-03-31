@@ -16,10 +16,10 @@ FUNC VOID B_GiveTradeInv_Rosi (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt, 30); 
 	
 		// ------ Waffen ------	
-		CreateInvItems (slf, ItRw_Bow_L_01, 1); 
-		CreateInvItems (slf, ItRw_Bow_L_04, 1); 
-		CreateInvItems (slf, ItRw_Bow_H_01, 1); 
-		CreateInvItems (slf, ItRw_Crossbow_M_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_05, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_05, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_02, 1); 
 
 		Rosi_ItemsGiven_Chapter_1 = TRUE;
 	};

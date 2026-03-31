@@ -24,7 +24,7 @@ FUNC VOID	Change_FH_Visual()
 	if  (FH_SkinTexture < 0)
 		{
 			FH_SkinTexture = 0;
-			PrintScreen	("MINUS-Gesichter gibt es nicht!!!!!!!!!!!" , -1, -1, "FONT_OLD_10_WHITE.TGA", 2);		
+			PrintScreen	("MINUS-Gesichter gibt´s nicht!!!!!!!!!!!" , -1, -1, "FONT_OLD_10_WHITE.TGA", 2);		
 		};
 		
 	B_SetNpcVisual 		(self, SEX, FH_HeadMesh, FH_SkinTexture, BodyTex_N, NO_ARMOR);		
@@ -78,7 +78,7 @@ INSTANCE DIA_FH_NextFace (C_INFO)
 	condition		= DIA_FH_NextFace_Condition;
 	information		= DIA_FH_NextFace_Info;
 	permanent		= 1;
-	description		= "NÃ¤chstes Gesicht";
+	description		= "Nächstes Gesicht";
 };                       
 
 FUNC INT DIA_FH_NextFace_Condition()
@@ -103,7 +103,7 @@ INSTANCE DIA_FH_NextFace10 (C_INFO)
 	condition		= DIA_FH_NextFace10_Condition;
 	information		= DIA_FH_NextFace10_Info;
 	permanent		= 1;
-	description		= "NÃ¤chstes Gesicht 10 Schritte";
+	description		= "Nächstes Gesicht 10 Schritte";
 };                       
 
 FUNC INT DIA_FH_NextFace10_Condition()
@@ -151,7 +151,7 @@ INSTANCE DIA_FH_PreviousFace10 (C_INFO)
 	condition		= DIA_FH_PreviousFace10_Condition;
 	information		= DIA_FH_PreviousFace10_Info;
 	permanent		= 1;
-	description		= "Vorheriges Gesicht 10 Schritte";
+	description		= "Previous Face 10 step ";
 };                       
 
 FUNC INT DIA_FH_PreviousFace10_Condition()
@@ -175,7 +175,7 @@ INSTANCE DIA_FH_ResetFace (C_INFO)
 	condition		= DIA_FH_ResetFace_Condition;
 	information		= DIA_FH_ResetFace_Info;
 	permanent		= 1;
-	description		= "Gesicht zurÃ¼cksetzen";
+	description		= "Gesicht zurücksetzen";
 };                       
 
 FUNC INT DIA_FH_ResetFace_Condition()
@@ -281,7 +281,7 @@ INSTANCE DIA_FH_Choose_HeadMesh (C_INFO)
 	condition		= DIA_FH_Choose_HeadMesh_Condition;
 	information		= DIA_FH_Choose_HeadMesh_Info;
 	permanent		= 1;
-	description		= "Kopf-Mesh auswÃ¤hlen";
+	description		= "Kopf-Mesh auswählen";
 };                       
 
 FUNC INT DIA_FH_Choose_HeadMesh_Condition()
@@ -293,7 +293,7 @@ FUNC VOID DIA_FH_Choose_HeadMesh_Info()
 {	
 	Info_ClearChoices	(DIA_FH_Choose_HeadMesh);
 
-	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "ZURÃœCK" 				, DIA_FH_Choose_HeadMesh_7);
+	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "ZURÜCK" 				, DIA_FH_Choose_HeadMesh_7);
 	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "Hum_Head_Psionic" 	, DIA_FH_Choose_HeadMesh_6);
 	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "Hum_Head_Thief" 		, DIA_FH_Choose_HeadMesh_5);
 	Info_AddChoice		(DIA_FH_Choose_HeadMesh, "Hum_Head_Bald" 		, DIA_FH_Choose_HeadMesh_4);

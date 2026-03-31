@@ -1,6 +1,6 @@
 FUNC INT B_GoldMob_Bestimmung()
 {
-	//bin ich mobsi X und habe ich noch Gold brig?
+	//bin ich mobsi X und habe ich noch Gold übrig?
 	if Hlp_StrCmp (Npc_GetNearestWP (self), "ADW_MINE_PICK_01") && (GoldMob_01_Amount_MAX > GoldMob_01_Amount)
 	{
 		GoldMob_01_Amount = (GoldMob_01_Amount +1);
@@ -233,7 +233,7 @@ FUNC VOID PC_Goldhacken_Addon_Hour_Info()
 	};
 };
 //*******************************************************
-//	Goldhacken Trmmerschlag
+//	Goldhacken Trümmerschlag
 //*******************************************************
 INSTANCE PC_Goldhacken_Addon_TSchlag (C_Info)
 {
@@ -242,7 +242,7 @@ INSTANCE PC_Goldhacken_Addon_TSchlag (C_Info)
 	condition		= PC_Goldhacken_Addon_TSchlag_Condition;
 	information		= PC_Goldhacken_Addon_TSchlag_Info;
 	permanent		= TRUE;
-	description		= "TrÃ¼mmerschlag ansetzen."; 
+	description		= "Trümmerschlag ansetzen."; 
 };
 
 FUNC INT PC_Goldhacken_Addon_TSchlag_Condition ()
@@ -302,7 +302,7 @@ INSTANCE PC_Goldhacken_Addon_Chance (C_Info)
 	condition		= PC_Goldhacken_Addon_Chance_Condition;
 	information		= PC_Goldhacken_Addon_Chance_Info;
 	permanent		= TRUE;
-	description		= "(Eigene FÃ¤higkeit prÃ¼fen)"; 
+	description		= "(Eigene Fähigkeit prüfen)"; 
 };
 
 FUNC INT PC_Goldhacken_Addon_Chance_Condition ()
@@ -319,15 +319,15 @@ FUNC VOID PC_Goldhacken_Addon_Chance_Info()
 	
 	if (Hero_HackChance < 20) 
 	{
-		ConcatText = ConcatStrings ("Blutiger AnfÃ¤nger (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("blutiger Anfänger (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 40) 
 	{
-		ConcatText = ConcatStrings ("Ganz passabler GoldschÃ¼rfer (" , IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("ganz passabler Schürfer (" , IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 55) 
 	{
-		ConcatText = ConcatStrings ("Erfahrener GoldschÃ¼rfer (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("erfahrener Goldschürfer (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 75) 
 	{

@@ -20,7 +20,7 @@ INSTANCE MENU_LEAVE_GAME(C_MENU_DEF)
 
 INSTANCE MENUITEM_LEAVE_GAME_HEADLINE(C_MENU_ITEM_DEF) 
 {
-	text[0]		= "Do you really want to Quit?";   		
+	text[0]		= "Gothic II verlassen?";   		
 	type		= MENU_ITEM_TEXT;
 	// Position und Dimension	
 	posx		=    0;		posy		= 3400;
@@ -33,8 +33,8 @@ INSTANCE MENUITEM_LEAVE_GAME_HEADLINE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_LEAVE_GAME_YES(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Yes.";
-	text[1]		= "Yes, I'll be back!"; // Kommentar
+	text[0]		= "Ja.";
+	text[1]		= "Ja, ich möchte Gothic II verlassen."; // Kommentar
 	
 	// Position und Dimension	
 	posx		=    0;		posy		= 4400;	
@@ -49,8 +49,8 @@ INSTANCE MENUITEM_LEAVE_GAME_YES(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_LEAVE_GAME_NO(C_MENU_ITEM_DEF)
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "No.";
-	text[1]		= "No, I want to resume playing."; // Kommentar
+	text[0]		= "Nein.";
+	text[1]		= "Nein, ich möchte weiterspielen."; // Kommentar
 	
 	// Position und Dimension	
 	posx		=    0;		posy		= 5000;	

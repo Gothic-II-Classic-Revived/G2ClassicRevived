@@ -39,12 +39,12 @@ FUNC INT DIA_Dexter_Hallo_Condition()
 };
 FUNC VOID DIA_Dexter_Hallo_Info()
 {
-	AI_Output (self, other, "DIA_Dexter_Hallo_09_00");//Sieh an, wer da ist. Der gro√üe Befreier. Na du Held - was suchst du hier?
+	AI_Output (self, other, "DIA_Dexter_Hallo_09_00");//Sieh an, wer da ist. Der groﬂe Befreier. Na du Held - was suchst du hier?
 	//AI_Output (other, self, "DIA_Dexter_Hallo_15_01");//I'm looking for a few answers.
 	
 	if (MIS_Steckbriefe == LOG_RUNNING)//ADDON
 	{
-		AI_Output (other, self, "DIA_Dexter_Hallo_15_02");//Irgendjemand verteilt Zettel mit meinem Gesicht drauf. Irgendjemand meint, dass du das w√§rst.
+		AI_Output (other, self, "DIA_Dexter_Hallo_15_02");//Irgendjemand verteilt Zettel mit meinem Gesicht drauf. Irgendjemand meint, dass du das w‰rst.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_03");//Irgendjemand redet zuviel.
 		
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_04");//Aber du hast Recht. Ich habe die Steckbriefe verteilt. Und siehe da, du bist hier.
@@ -56,14 +56,14 @@ FUNC VOID DIA_Dexter_Hallo_Info()
 	{
 		//ADDON>
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_00");//Ich hatte nicht damit gerechnet, dass du freiwillig hierher kommst.
-		AI_Output (other, self, "DIA_Addon_Dexter_Hallo_15_01");//Was soll das hei√üen?
-		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_02");//Das soll hei√üen, dass ich dich hab suchen lassen. Noch keinen von meinen Steckbriefen gesehen?
+		AI_Output (other, self, "DIA_Addon_Dexter_Hallo_15_01");//Was soll das heiﬂen?
+		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_02");//Das soll heiﬂen, dass ich dich hab suchen lassen. Noch keinen von meinen Steckbriefen gesehen?
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_03");//DEINE Visage ist da drauf. Ja ... du bist ein begehrter Mann. Hast du das nicht gewusst?
 		//ADDON<
 	};
 
 	AI_Output (other, self, "DIA_Addon_Dexter_Hallo_15_05");//Was willst du denn von mir?
-	AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_06");//Ich? Gar nichts. Aber mein Boss, der ist ganz hei√ü drauf, dich zu t√∂ten.
+	AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_06");//Ich? Gar nichts. Aber mein Boss, der ist ganz heiﬂ drauf, dich zu tˆten.
 	AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_07");//Deswegen soll ich dich finden und deinen Kopf zu ihm bringen.
 };
 
@@ -91,14 +91,14 @@ func int DIA_Addon_Dexter_Boss_Condition ()
 func void DIA_Addon_Dexter_Boss_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Dexter_Boss_15_00"); //Dein Boss? Wer soll das sein?
-	AI_Output	(self, other, "DIA_Addon_Dexter_Boss_09_01"); //(lacht) Das m√∂chtest du gerne wissen, was? Ja, das kann ich mir vorstellen.
+	AI_Output	(self, other, "DIA_Addon_Dexter_Boss_09_01"); //(lacht) Das mˆchtest du gerne wissen, was? Ja, das kann ich mir vorstellen.
 	//AI_Output	(self, other, "DIA_Addon_Dexter_Boss_09_02"); //(serious) I don't see any reason why I should tell you.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_04");//Aber es stimmt. Ich habe meinen Jungs die Steckbriefe gegeben. Ich hatte keine andere Wahl.
 		AI_Output (self, other, "DIA_Dexter_Hallo_09_05");//Als ich versuchte, aus dem Minental zu entfliehen, entdeckten mich die Soldaten und trieben mich in eine Falle.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_06");//Ich dachte, ich w√§re erledigt, aber dann tauchte pl√∂tzlich diese ‚Ä¶ Gestalt aus der Dunkelheit auf.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_07");//Er trug eine schwarze Robe mit Kapuze und eine Maske √ºberm Gesicht. Und er sprach mit einer Stimme, die alles andere als menschlich war.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_08");//Aber er bot mir seine Hilfe an. Er brachte mich aus dem Tal und bot mir eintausend Goldst√ºcke f√ºr deinen Kopf.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_09");//Hey, was h√§tte ich denn tun sollen? Wenn ich ihn abgewiesen h√§tte, h√§tte er mich umgebracht.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_06");//Ich dachte, ich w‰re erledigt, aber dann tauchte plˆtzlich diese Ö Gestalt aus der Dunkelheit auf.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_07");//Er trug eine schwarze Robe mit Kapuze und eine Maske ¸berm Gesicht. Und er sprach mit einer Stimme, die alles andere als menschlich war.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_08");//Aber er bot mir seine Hilfe an. Er brachte mich aus dem Tal und bot mir eintausend Goldst¸cke f¸r deinen Kopf.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_09");//Hey, was h‰tte ich denn tun sollen? Wenn ich ihn abgewiesen h‰tte, h‰tte er mich umgebracht.
 
 		B_LogEntry (Topic_Bandits,"Dexter hat die Steckbriefe verteilt. Typen mit schwarzen Kapuzen hatten ihm das befohlen.");
 };
@@ -133,7 +133,7 @@ FUNC VOID DIA_Dexter_Wo_Info()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Dexter_Wo_09_02");//Der Typ ist hier! Und er ist nicht allein. Da ist eine ganze Horde dieser Jungs unterwegs, √ºberall! Und sie suchen dich.
+		AI_Output (self, other, "DIA_Dexter_Wo_09_02");//Der Typ ist hier! Und er ist nicht allein. Da ist eine ganze Horde dieser Jungs unterwegs, ¸berall! Und sie suchen dich.
 		
 		Wld_InsertNpc		(CastlemineDMT01, "FP_STAND_DEMENTOR_DEXTER_001");
 		Wld_InsertNpc		(CastlemineDMT02, "FP_STAND_DEMENTOR_DEXTER_002");
@@ -165,7 +165,7 @@ FUNC INT DIA_Dexter_Glaube_Condition()
 FUNC VOID DIA_Dexter_Glaube_Info()
 {
 	AI_Output (other, self, "DIA_Dexter_Glaube_15_00");//Ich glaube dir kein Wort.
-	AI_Output (self, other, "DIA_Dexter_Glaube_09_01");//Hey, es ist wahr. Ich schw√∂re beim Grab meiner Mutter!
+	AI_Output (self, other, "DIA_Dexter_Glaube_09_01");//Hey, es ist wahr. Ich schwˆre beim Grab meiner Mutter!
 };
 
 // ************************************************************
@@ -190,9 +190,9 @@ FUNC INT DIA_Dexter_Vor_Condition()
 FUNC VOID DIA_Dexter_Vor_Info()
 {
 	AI_Output (other, self, "DIA_Dexter_Vor_15_00");//Und was hast du jetzt vor?
-	AI_Output (self, other, "DIA_Dexter_Vor_09_01");//Ja. Aber du hast uns alle befreit. Deshalb gebe ich dir noch eine Chance. Hau ab - verschwinde, mach dich unsichtbar. Geh und lauf mir nie wieder √ºbern Weg.
-	AI_Output (self, other, "DIA_Addon_Dexter_Vor_09_02");//(droht) Es ist besser f√ºr dich, wenn du jetzt gehst.
-	AI_Output (self, other, "DIA_Dexter_Vor_09_02");//L√§sst du dich hier noch mal blicken, werde nicht z√∂gern, dich zu t√∂ten.
+	AI_Output (self, other, "DIA_Dexter_Vor_09_01");//Ja. Aber du hast uns alle befreit. Deshalb gebe ich dir noch eine Chance. Hau ab - verschwinde, mach dich unsichtbar. Geh und lauf mir nie wieder ¸bern Weg.
+	AI_Output (self, other, "DIA_Addon_Dexter_Vor_09_02");//(droht) Es ist besser f¸r dich, wenn du jetzt gehst.
+	AI_Output (self, other, "DIA_Dexter_Vor_09_02");//L‰sst du dich hier noch mal blicken, werde nicht zˆgern, dich zu tˆten.
 	Dexter_NoMoreSmallTalk = TRUE;
 	AI_StopProcessInfos (self);
 };
@@ -225,7 +225,7 @@ FUNC VOID DIA_Dexter_Kill_Info()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Dexter_Kill_09_01");//Oh Mann, du w√§rst hier besser nicht aufgetaucht. Du bist der falsche Mann am falschen Ort.
+		AI_Output (self, other, "DIA_Dexter_Kill_09_01");//Oh Mann, du w‰rst hier besser nicht aufgetaucht. Du bist der falsche Mann am falschen Ort.
 	};
 	
 	MIS_Steckbriefe = LOG_OBSOLETE;

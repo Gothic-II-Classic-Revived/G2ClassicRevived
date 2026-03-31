@@ -62,7 +62,7 @@ INSTANCE Gobbo_Black (Mst_Default_Gobbo_Black)
 {
 	B_SetVisuals_Gobbo_Black();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_02); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_02); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
 
 // ***********
@@ -72,5 +72,5 @@ INSTANCE Gobbo_DaronsStatuenKlauer (Mst_Default_Gobbo_Black)
 {
 	B_SetVisuals_Gobbo_Black();
 	CreateInvItems (self, ItMi_LostInnosStatue_Daron, 1);									
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_02); //Waffe ist nur Optik - Schaden wird NUR ber STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_CLUB_02); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };

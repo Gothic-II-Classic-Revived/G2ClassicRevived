@@ -103,7 +103,7 @@ INSTANCE OrcCity_Pray (Mst_Default_OrcShaman)
 
 INSTANCE OrcShaman_Sit_CanyonLibraryKey (Mst_Default_OrcShaman)
 {
-	name							=	"AnfÃ¼hrer der Horde";
+	name							=	"Anführer der Horde";
 	// ------ visuals ------
 	B_SetVisuals_OrcShaman();
 	

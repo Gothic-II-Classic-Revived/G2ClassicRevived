@@ -49,9 +49,9 @@ func void DIA_Ehnim_HALLO_Info ()
 		&& (!C_NpcIsDown (Egill))
 		)
 			{
-				AI_Output			(self, other, "DIA_Ehnim_HALLO_12_02"); //Und die halbe Portion da dr√ºben ist mein Bruder Egill.
+				AI_Output			(self, other, "DIA_Ehnim_HALLO_12_02"); //Und die halbe Portion da dr¸ben ist mein Bruder Egill.
 			};
-	AI_Output			(self, other, "DIA_Ehnim_HALLO_12_03"); //Wir arbeiten schon seit einigen Jahren f√ºr Akil hier auf dem Hof.
+	AI_Output			(self, other, "DIA_Ehnim_HALLO_12_03"); //Wir arbeiten schon seit einigen Jahren f¸r Akil hier auf dem Hof.
 
 };
 
@@ -66,7 +66,7 @@ instance DIA_Ehnim_FELDARBEIT		(C_INFO)
 	condition	 = 	DIA_Ehnim_FELDARBEIT_Condition;
 	information	 = 	DIA_Ehnim_FELDARBEIT_Info;
 
-	description	 = 	"Wie l√§uft die Feldarbeit?";
+	description	 = 	"Wie l‰uft die Feldarbeit?";
 };
 
 func int DIA_Ehnim_FELDARBEIT_Condition ()
@@ -79,9 +79,9 @@ func int DIA_Ehnim_FELDARBEIT_Condition ()
 
 func void DIA_Ehnim_FELDARBEIT_Info ()
 {
-	AI_Output			(other, self, "DIA_Ehnim_FELDARBEIT_15_00"); //Wie l√§uft die Feldarbeit?
+	AI_Output			(other, self, "DIA_Ehnim_FELDARBEIT_15_00"); //Wie l‰uft die Feldarbeit?
 	AI_Output			(self, other, "DIA_Ehnim_FELDARBEIT_12_01"); //Willst du mithelfen? Da hinten steht noch eine Hake. Schnapp sie dir und dann ab aufs Feld.
-	AI_Output			(self, other, "DIA_Ehnim_FELDARBEIT_12_02"); //Du musst nur aufpassen, dass die Feldr√§uber dich nicht √ºberraschen. Die rei√üen dir mit einem Bissen glatt den Arm ab.
+	AI_Output			(self, other, "DIA_Ehnim_FELDARBEIT_12_02"); //Du musst nur aufpassen, dass die Feldr‰uber dich nicht ¸berraschen. Die reiﬂen dir mit einem Bissen glatt den Arm ab.
 
 };
 
@@ -95,7 +95,7 @@ instance DIA_Ehnim_FELDRAEUBER		(C_INFO)
 	condition	 = 	DIA_Ehnim_FELDRAEUBER_Condition;
 	information	 = 	DIA_Ehnim_FELDRAEUBER_Info;
 
-	description	 = 	"Warum unternimmst du nichts gegen die Feldr√§uber?";
+	description	 = 	"Warum unternimmst du nichts gegen die Feldr‰uber?";
 };
 
 func int DIA_Ehnim_FELDRAEUBER_Condition ()
@@ -108,8 +108,8 @@ func int DIA_Ehnim_FELDRAEUBER_Condition ()
 
 func void DIA_Ehnim_FELDRAEUBER_Info ()
 {
-	AI_Output			(other, self, "DIA_Ehnim_FELDRAEUBER_15_00"); //Warum unternimmst du nichts gegen die Feldr√§uber?
-	AI_Output			(self, other, "DIA_Ehnim_FELDRAEUBER_12_01"); //Ich hab schon viele von ihnen erschlagen, ich kann sie gar nicht mehr z√§hlen. Das Dumme ist nur, sie kommen immer wieder.
+	AI_Output			(other, self, "DIA_Ehnim_FELDRAEUBER_15_00"); //Warum unternimmst du nichts gegen die Feldr‰uber?
+	AI_Output			(self, other, "DIA_Ehnim_FELDRAEUBER_12_01"); //Ich hab schon viele von ihnen erschlagen, ich kann sie gar nicht mehr z‰hlen. Das Dumme ist nur, sie kommen immer wieder.
 
 };
 
@@ -123,7 +123,7 @@ instance DIA_Ehnim_STREIT1		(C_INFO)
 	condition	 = 	DIA_Ehnim_STREIT1_Condition;
 	information	 = 	DIA_Ehnim_STREIT1_Info;
 
-	description	 = 	"Dein Bruder hat das Gleiche erz√§hlt.";
+	description	 = 	"Dein Bruder hat das Gleiche erz‰hlt.";
 };
 
 func int DIA_Ehnim_STREIT1_Condition ()
@@ -148,9 +148,9 @@ func int DIA_Ehnim_STREIT1_Condition ()
 
 func void DIA_Ehnim_STREIT1_Info ()
 {
-	AI_Output			(other, self, "DIA_Ehnim_STREIT1_15_00"); //Dein Bruder hat das Gleiche erz√§hlt.
-	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_01"); //Was denn? Der Dr√ºckeberger? Der ist doch immer gleich verschwunden, wenn die Biester auf unser Land kommen.
-	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_02"); //Er sollte besser nicht so einen Unsinn erz√§hlen.
+	AI_Output			(other, self, "DIA_Ehnim_STREIT1_15_00"); //Dein Bruder hat das Gleiche erz‰hlt.
+	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_01"); //Was denn? Der Dr¸ckeberger? Der ist doch immer gleich verschwunden, wenn die Biester auf unser Land kommen.
+	AI_Output			(self, other, "DIA_Ehnim_STREIT1_12_02"); //Er sollte besser nicht so einen Unsinn erz‰hlen.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -163,7 +163,7 @@ instance DIA_Ehnim_STREIT3		(C_INFO)
 	condition	 = 	DIA_Ehnim_STREIT3_Condition;
 	information	 = 	DIA_Ehnim_STREIT3_Info;
 
-	description	 = 	"Dein Bruder h√§lt dich f√ºr einen Aufschneider.";
+	description	 = 	"Dein Bruder h‰lt dich f¸r einen Aufschneider.";
 };
 
 func int DIA_Ehnim_STREIT3_Condition ()
@@ -183,9 +183,9 @@ func int DIA_Ehnim_STREIT3_Condition ()
 
 func void DIA_Ehnim_STREIT3_Info ()
 {
-	AI_Output			(other, self, "DIA_Ehnim_STREIT3_15_00"); //Dein Bruder h√§lt dich f√ºr einen Aufschneider.
-	AI_Output			(self, other, "DIA_Ehnim_STREIT3_12_01"); //Was? Er wagt es tats√§chlich, so was zu sagen?
-	AI_Output			(self, other, "DIA_Ehnim_STREIT3_12_02"); //Er soll blo√ü aufpassen, dass ich ihm nicht das Fell √ºber die Ohren zieh.
+	AI_Output			(other, self, "DIA_Ehnim_STREIT3_15_00"); //Dein Bruder h‰lt dich f¸r einen Aufschneider.
+	AI_Output			(self, other, "DIA_Ehnim_STREIT3_12_01"); //Was? Er wagt es tats‰chlich, so was zu sagen?
+	AI_Output			(self, other, "DIA_Ehnim_STREIT3_12_02"); //Er soll bloﬂ aufpassen, dass ich ihm nicht das Fell ¸ber die Ohren zieh.
 	AI_Output			(self, other, "DIA_Ehnim_STREIT3_12_03"); //Geh hin und sagt ihm das.
 	AI_StopProcessInfos (self);
 };
@@ -226,7 +226,7 @@ func void DIA_Ehnim_STREIT5_Info ()
 {
 	AI_Output			(other, self, "DIA_Ehnim_STREIT5_15_00"); //Ich finde, ihr beide solltet euch wieder entspannen.
 	AI_Output			(self, other, "DIA_Ehnim_STREIT5_12_01"); //Der Dreckskerl gibt nicht nach, hab ich recht?
-	AI_Output			(self, other, "DIA_Ehnim_STREIT5_12_02"); //Ich werde ihm die Ged√§rme rausrei√üen. Sag ihm das.
+	AI_Output			(self, other, "DIA_Ehnim_STREIT5_12_02"); //Ich werde ihm die Ged‰rme rausreiﬂen. Sag ihm das.
 
 	Info_ClearChoices	(DIA_Ehnim_STREIT5);
 
@@ -253,7 +253,7 @@ func void DIA_Ehnim_STREIT5_Attack ()
 func void DIA_Ehnim_STREIT5_gehen ()
 {
 	AI_Output			(other, self, "DIA_Ehnim_STREIT5_gehen_15_00"); //Macht doch, was ihr wollt. Ich gehe.
-	AI_Output			(self ,other, "DIA_Ehnim_STREIT5_gehen_12_01"); //Ja, verdr√ºck dich ruhig.
+	AI_Output			(self ,other, "DIA_Ehnim_STREIT5_gehen_12_01"); //Ja, verdr¸ck dich ruhig.
 	
 	AI_StopProcessInfos (self);
 };
@@ -285,7 +285,7 @@ func int DIA_Ehnim_PERMKAP1_Condition ()
 
 func void DIA_Ehnim_PERMKAP1_Info ()
 {
-	AI_Output			(self, other, "DIA_Ehnim_PERMKAP1_12_00"); //Willst du noch mehr √Ñrger anzetteln? Ich glaube, es ist besser, wenn du jetzt gehst.
+	AI_Output			(self, other, "DIA_Ehnim_PERMKAP1_12_00"); //Willst du noch mehr ƒrger anzetteln? Ich glaube, es ist besser, wenn du jetzt gehst.
 
 	AI_StopProcessInfos (self);
 };
@@ -317,13 +317,13 @@ func void DIA_Ehnim_MoleRatFett_Info ()
 {
 	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_12_00"); //Du bist ja immer noch da.
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_15_01"); //Offensichtlich. Immer noch sauer?
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_12_02"); //Ach was, Schwamm dr√ºber. Sag mal, warst du in letzter Zeit mal auf Lobarts Hof?
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_12_02"); //Ach was, Schwamm dr¸ber. Sag mal, warst du in letzter Zeit mal auf Lobarts Hof?
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_15_03"); //Kann sein. Warum?
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_12_04"); //Ach, nichts Wichtiges. Ich wollte nur mal wieder mit Vino √ºber seine Brennerei sprechen.
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_12_04"); //Ach, nichts Wichtiges. Ich wollte nur mal wieder mit Vino ¸ber seine Brennerei sprechen.
 	
 	Info_ClearChoices	(DIA_Ehnim_MoleRatFett);
 	Info_AddChoice	(DIA_Ehnim_MoleRatFett, "Ich hab jetzt keine Zeit.", DIA_Ehnim_MoleRatFett_nein );
-	Info_AddChoice	(DIA_Ehnim_MoleRatFett, "Was f√ºr eine Brennerei?", DIA_Ehnim_MoleRatFett_was );
+	Info_AddChoice	(DIA_Ehnim_MoleRatFett, "Was f¸r eine Brennerei?", DIA_Ehnim_MoleRatFett_was );
 
 	if (Npc_IsDead(Vino))
 	{
@@ -340,10 +340,10 @@ func void DIA_Ehnim_MoleRatFett_tot ()
 
 func void DIA_Ehnim_MoleRatFett_was ()
 {
-	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_15_00"); //Was f√ºr eine Brennerei?
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_12_01"); //Ach. Das h√§tte ich jetzt besser nicht sagen sollen. Vino war immer sehr eigen mit seinem kleinen Geheimnis.
+	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_15_00"); //Was f¸r eine Brennerei?
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_12_01"); //Ach. Das h‰tte ich jetzt besser nicht sagen sollen. Vino war immer sehr eigen mit seinem kleinen Geheimnis.
 	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_12_02"); //Egal, jetzt ist es mir eh rausgerutscht. In dem Wald dahinten hat Vino eine geheime Schnapsbrennerei eingerichtet.
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_12_03"); //Vor einiger Zeit bat er mich, ihm ein Schmiermittel f√ºr seine mechanische Gittert√ºr zu besorgen.
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_12_03"); //Vor einiger Zeit bat er mich, ihm ein Schmiermittel f¸r seine mechanische Gittert¸r zu besorgen.
 	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_12_04"); //In der letzten Zeit hat es viel geregnet und da ist ihm das Ding zugerostet. Die Winde klemmt jetzt und man kommt nicht mehr hinein. So ein Schlammassel.
 
 	Log_CreateTopic (TOPIC_FoundVinosKellerei, LOG_MISSION);
@@ -357,16 +357,16 @@ func void DIA_Ehnim_MoleRatFett_was_Fett ()
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_Fett_15_00"); //Und? Hast du das Schmiermittel?
 	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_12_01"); //Ja, klar. Das beste, was es gibt. Moleratfett. Ein Teufelszeug, sag ich dir. Es wird sogar zum Schmieren von Bordkanonen verwendet.
 	
-	Info_AddChoice	(DIA_Ehnim_MoleRatFett, "Verkauf¬¥ mir das Fett.", DIA_Ehnim_MoleRatFett_was_Fett_habenwill );
+	Info_AddChoice	(DIA_Ehnim_MoleRatFett, "Verkauf¥ mir das Fett.", DIA_Ehnim_MoleRatFett_was_Fett_habenwill );
 
 };
 var int Ehnim_MoleRatFettOffer;
 func void DIA_Ehnim_MoleRatFett_was_Fett_habenwill ()
 {
-	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_15_00"); //Verkauf¬¥ mir das Fett.
+	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_15_00"); //Verkauf¥ mir das Fett.
 	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_12_01"); //Das wird aber nicht billig, Kollege. Es ist verdammt selten in diesem Teil des Landes.
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_15_02"); //Wie viel?
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_12_03"); //Mmh. 100 Goldm√ºnzen?
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_12_03"); //Mmh. 100 Goldm¸nzen?
 	Ehnim_MoleRatFettOffer = 100;
 
 	Info_ClearChoices	(DIA_Ehnim_MoleRatFett);
@@ -407,7 +407,7 @@ func void DIA_Ehnim_MoleRatFett_was_Fett_habenwill_ja ()
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_ja_12_05"); //Na, das habe ich gerne. Erst gro√ü auf die Kacke hauen und dann hast du das Geld nicht mal. Hau blo√ü ab.
+			AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_ja_12_05"); //Na, das habe ich gerne. Erst groﬂ auf die Kacke hauen und dann hast du das Geld nicht mal. Hau bloﬂ ab.
 		};
 	AI_StopProcessInfos (self);
 };
@@ -415,7 +415,7 @@ func void DIA_Ehnim_MoleRatFett_was_Fett_habenwill_ja ()
 func void DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel ()
 {
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_15_00"); //Das ist zuviel.
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_12_01"); //Ok, ok. Dann eben 70 Goldm√ºnzen. Das ist aber mein letztes Angebot.
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_12_01"); //Ok, ok. Dann eben 70 Goldm¸nzen. Das ist aber mein letztes Angebot.
 	Ehnim_MoleRatFettOffer = 70;
 
 	Info_ClearChoices	(DIA_Ehnim_MoleRatFett);
@@ -426,14 +426,14 @@ func void DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel ()
 func void DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_immernoch ()
 {
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_was_immernoch_15_00"); //Das ist immer noch zuviel.
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_immernoch_12_01"); //(ver√§rgert) Dann eben nicht. Sch√∂nen Tag noch.
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_was_immernoch_12_01"); //(ver‰rgert) Dann eben nicht. Schˆnen Tag noch.
 	AI_StopProcessInfos (self);
 };
 
 func void DIA_Ehnim_MoleRatFett_nein ()
 {
 	AI_Output			(other, self, "DIA_Ehnim_MoleRatFett_nein_15_00"); //Ich hab jetzt keine Zeit.
-	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_nein_12_01"); //Lass dich blo√ü nicht aufhalten, Mann.
+	AI_Output			(self, other, "DIA_Ehnim_MoleRatFett_nein_12_01"); //Lass dich bloﬂ nicht aufhalten, Mann.
 	AI_StopProcessInfos (self);
 };
 

@@ -131,7 +131,7 @@ func void DIA_KDF_507_Talamon_Attack_Info()
 	other.aivar[AIV_LastDistToWP] 			= 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;	//wird auch in ZS_Attack resettet
 	
-	AI_StopProcessInfos	(self);							//dem Spieler sofort wieder die Kontrolle zurckgeben
+	AI_StopProcessInfos	(self);							//dem Spieler sofort wieder die Kontrolle zurückgeben
 	
 	B_Attack (self, other, AR_GuardStopsIntruder, 1);
 };
@@ -263,7 +263,7 @@ FUNC VOID DIA_Talamon_KAP5_Stop_Info()
 {
 	AI_Output (self, other,"DIA_Talamon_KAP5_Stop_04_00"); //Es ist dir nicht gestattet, weiter zu gehen. Kehr um!
 	AI_Output (other,self ,"DIA_Talamon_KAP5_Stop_15_01"); //Pyrokar sagt, dass ich das Buch von Xardas untersuchen darf.
-	AI_Output (self, other,"DIA_Talamon_KAP5_Stop_04_02"); //So, sagt er das. In Ordnung, du darfst eintreten. Das Buch, das du suchst, liegt dort drÃ¼ben auf dem Alchemietisch.
+	AI_Output (self, other,"DIA_Talamon_KAP5_Stop_04_02"); //So, sagt er das. In Ordnung, du darfst eintreten. Das Buch, das du suchst, liegt dort drüben auf dem Alchemietisch.
 
 	B_LogEntry (TOPIC_BuchHallenVonIrdorath,"Talamon bewarte Xardas Buch auf einem Alchemietisch im Keller auf."); 
 };
@@ -278,7 +278,7 @@ INSTANCE DIA_Talamon_FoundSecretDoor   (C_INFO)
 	condition   = DIA_Talamon_FoundSecretDoor_Condition;
 	information = DIA_Talamon_FoundSecretDoor_Info;
 	permanent   = FALSE;
-	description = "Ich habe eine GeheimtÃ¼r gefunden.";
+	description = "Ich habe eine Geheimtür gefunden.";
 };
 
 FUNC INT DIA_Talamon_FoundSecretDoor_Condition()
@@ -291,11 +291,11 @@ FUNC INT DIA_Talamon_FoundSecretDoor_Condition()
 
 FUNC VOID DIA_Talamon_FoundSecretDoor_Info()
 {
-	AI_Output (other,self ,"DIA_Talamon_FoundSecretDoor_15_00"); //Ich habe eine GeheimtÃ¼r gefunden.
-	AI_Output (self ,other,"DIA_Talamon_FoundSecretDoor_04_01"); //(Ã¼berrascht) Was? Wo?
-	AI_Output (other,self ,"DIA_Talamon_FoundSecretDoor_15_02"); //Hinter einem BÃ¼cherregal.
+	AI_Output (other,self ,"DIA_Talamon_FoundSecretDoor_15_00"); //Ich habe eine Geheimtür gefunden.
+	AI_Output (self ,other,"DIA_Talamon_FoundSecretDoor_04_01"); //(überrascht) Was? Wo?
+	AI_Output (other,self ,"DIA_Talamon_FoundSecretDoor_15_02"); //Hinter einem Bücherregal.
 	AI_Output (self ,other,"DIA_Talamon_FoundSecretDoor_04_03"); //Was ist dahinter?
-	AI_Output (other,self ,"DIA_Talamon_FoundSecretDoor_15_04"); //Es sieht aus wie ein altes KellergewÃ¶lbe.
+	AI_Output (other,self ,"DIA_Talamon_FoundSecretDoor_15_04"); //Es sieht aus wie ein altes Kellergewölbe.
 	AI_Output (self ,other,"DIA_Talamon_FoundSecretDoor_04_05"); //Das ist eine wichtige Neuigkeit, ich werde sofort Pyrokar davon unterrichten.
 	AI_Output (self ,other,"DIA_Talamon_FoundSecretDoor_04_06"); //Du musst derweil rausfinden, was in diesem Keller ist.
 	
@@ -312,7 +312,7 @@ INSTANCE DIA_Talamon_ScoutSecretLibrary   (C_INFO)
 	condition   = DIA_Talamon_ScoutSecretLibrary_Condition;
 	information = DIA_Talamon_ScoutSecretLibrary_Info;
 	permanent   = TRUE;
-	description = "Ich war im GewÃ¶lbe.";
+	description = "Ich war im Gewölbe.";
 };
 
 FUNC INT DIA_Talamon_ScoutSecretLibrary_Condition()
@@ -326,14 +326,14 @@ FUNC INT DIA_Talamon_ScoutSecretLibrary_Condition()
 
 FUNC VOID DIA_Talamon_ScoutSecretLibrary_Info()
 {
-	AI_Output (other,self ,"DIA_Talamon_ScoutSecretLibrary_15_00"); //Ich war im GewÃ¶lbe.
+	AI_Output (other,self ,"DIA_Talamon_ScoutSecretLibrary_15_00"); //Ich war im Gewölbe.
 	AI_Output (self ,other,"DIA_Talamon_ScoutSecretLibrary_04_01"); //Und was hast du gefunden?
 	
 	if (Npc_IsDead (SecretLibrarySkeleton))
 	{
-		AI_Output (other,self ,"DIA_Talamon_ScoutSecretLibrary_15_02"); //Dort unten war ein Skelettkrieger, der eine TÃ¼r bewacht. Ich habe ihn getÃ¶tet.
+		AI_Output (other,self ,"DIA_Talamon_ScoutSecretLibrary_15_02"); //Dort unten war ein Skelettkrieger, der eine Tür bewacht. Ich habe ihn getötet.
 		AI_Output (self ,other,"DIA_Talamon_ScoutSecretLibrary_04_03"); //Gut gemacht.
-		AI_Output (self ,other,"DIA_Talamon_ScoutSecretLibrary_04_04"); //Wir werden uns mit dem GewÃ¶lbe beschÃ¤ftigen, wenn wir das BÃ¶se besiegt haben.
+		AI_Output (self ,other,"DIA_Talamon_ScoutSecretLibrary_04_04"); //Wir werden uns mit dem Gewölbe beschäftigen, wenn wir das Böse besiegt haben.
 	
 		MIS_ScoutLibrary = LOG_SUCCESS;
 		B_GivePlayerXP (XP_ScoutSecretLibrary);

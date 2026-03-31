@@ -44,7 +44,7 @@ INSTANCE ItPl_Weed(C_Item)
 	material 			=	MAT_LEATHER;
 
 	on_state[0]			=	Use_Beet;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -56,7 +56,7 @@ INSTANCE ItPl_Weed(C_Item)
 
 INSTANCE ItPl_Beet (C_Item)
 {	
-	name 				=	"FeldrÃ¼be";
+	name 				=	"Feldrübe";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -66,7 +66,7 @@ INSTANCE ItPl_Beet (C_Item)
 	visual 				=	"ItPl_Beet.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Beet;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -94,7 +94,7 @@ INSTANCE ItPl_SwampHerb(C_Item)
 	visual 				=	"ItPl_SwampHerb.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_SwampHerb;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -123,7 +123,7 @@ INSTANCE ItPl_Mana_Herb_01(C_Item)
 	visual 				=	"REV_ITPL_MANAPLANT_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mana_Herb_01;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -151,7 +151,7 @@ INSTANCE ItPl_Mana_Herb_02(C_Item)
 	visual 				=	"REV_ITPL_MANAPLANT_02.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mana_Herb_02;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -179,7 +179,7 @@ INSTANCE ItPl_Mana_Herb_03(C_Item)
 	visual 				=	"REV_ITPL_MANAPLANT_03.3ds";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mana_Herb_03;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -208,7 +208,7 @@ INSTANCE ItPl_Health_Herb_01(C_Item)
 
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Health_Herb_01;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -237,7 +237,7 @@ INSTANCE ItPl_Health_Herb_02(C_Item)
 
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Health_Herb_02;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
@@ -265,7 +265,7 @@ INSTANCE ItPl_Health_Herb_03(C_Item)
 
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Health_Herb_03;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Health_Herb_03;
@@ -290,7 +290,7 @@ INSTANCE ItPl_Dex_Herb_01(C_Item)
 	visual 				=	"ItPl_Dex_Herb_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Dex_Herb_01;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -318,7 +318,7 @@ INSTANCE ItPl_Strength_Herb_01(C_Item)
 	visual 				=	"ItPl_Strength_Herb_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Strength_Herb_01;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 
@@ -348,7 +348,7 @@ INSTANCE ItPl_Speed_Herb_01(C_Item)
 	visual 				=	"REV_ITPL_SPEEDPLANT.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Speed_Herb_01;      
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	TEXT[3]				= 	NAME_Sec_Duration;		
     COUNT[3]			= 	Speed_Boost /1000;   
@@ -380,7 +380,7 @@ INSTANCE ItPl_Mushroom_01(C_Item)
 	visual 				=	"ItPl_Mushroom_01.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mushroom_01;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	
@@ -430,7 +430,7 @@ INSTANCE ItPl_Mushroom_02(C_Item)
 	visual 				=	"ItPl_Mushroom_02.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Mushroom_02;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
@@ -479,7 +479,7 @@ INSTANCE ItPl_Blueplant(C_Item)
 	visual 				=	"ItPl_Blueplant.3DS";
 	material 			=	MAT_LEATHER;
 	on_state[0]			=	Use_Blueplant;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		
@@ -508,7 +508,7 @@ INSTANCE ItPl_Forestberry (C_Item)
 	
 	visual 				=	"ItPl_Forestberry.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Forestberry;
 
 	description			= 	name;
@@ -537,7 +537,7 @@ INSTANCE ItPl_Planeberry (C_Item)
 	
 	visual 				=	"ItPl_Planeberry.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Planeberry;
 
 	description			= 	name;
@@ -558,13 +558,13 @@ INSTANCE ItPl_Planeberry (C_Item)
 
 
 //******************************************************************************************
-//		Pflanze zum brauen von temporren und permanten Trnken
+//		Pflanze zum brauen von temporären und permanten Tränken
 //******************************************************************************************
 
 
 INSTANCE ItPl_Temp_Herb(C_Item)
 {	
-	name 				=	"FeldknÃ¶terich";
+	name 				=	"Feldknöterich";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;	
@@ -573,7 +573,7 @@ INSTANCE ItPl_Temp_Herb(C_Item)
 
 	visual 				=	"REV_ITPL_TEMPPLANT.3ds";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Temp_Herb;
 
 	description			= 	name;
@@ -592,7 +592,7 @@ INSTANCE ItPl_Temp_Herb(C_Item)
 
 INSTANCE ItPl_Perm_Herb(C_Item)
 {	
-	name 				=	"KronstÃ¶ckl";
+	name 				=	"Kronstöckl";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;	
@@ -601,7 +601,7 @@ INSTANCE ItPl_Perm_Herb(C_Item)
 
 	visual 				=	"REV_ITPL_PERMPLANT.3ds";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Perm_Herb;
 
 	description			= 	name;

@@ -78,8 +78,8 @@ FUNC INT DIA_Gritta_Hello_Condition()
 };
 FUNC VOID DIA_Gritta_Hello_Info()
 {	
-	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //Was willst du, Fremder? Wenn du gekommen bist, um zu betteln, muss ich dich enttÃ¤uschen, ich bin eine arme Witwe.
-	AI_Output (self ,other,"DIA_Gritta_Hello_16_01"); //Mein Name ist Gritta. Seit mein Mann tot ist, kÃ¼mmere ich mich um den Haushalt von meinem Onkel Thorben.
+	AI_Output (self ,other,"DIA_Gritta_Hello_16_00"); //Was willst du, Fremder? Wenn du gekommen bist, um zu betteln, muss ich dich enttäuschen, ich bin eine arme Witwe.
+	AI_Output (self ,other,"DIA_Gritta_Hello_16_01"); //Mein Name ist Gritta. Seit mein Mann tot ist, kümmere ich mich um den Haushalt von meinem Onkel Thorben.
 };
 //*************************************************************
 //			Matteo will sein Geld
@@ -106,10 +106,10 @@ var int Gritta_Threatened;
 //------------------------------------
 FUNC VOID DIA_Gritta_WantsMoney_Info()
 {	
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_15_00"); //Matteo sent me. You still owe him some gold.
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_16_01"); //He wants his money? What for? The goods he delivered were flawed, bad fabric and bad seams.
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_15_00"); //Ich komme von Matteo, du schuldest ihm noch Gold.
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_16_01"); //Er will sein Geld? Wofür denn? Er hat mir fehlerhafte Ware geliefert, schlechter Stoff und schlechte Nähte.
 	AI_Output (self ,other,"DIA_Gritta_WantsMoney_16_02"); //And did you look at the colors? Those are not the colors I ordered. That's fraud, it is!
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_16_03"); //Let me tell you, back when my husband was alive, he wouldn't have dared to do that. Oh, my poor husband...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_16_03"); //Ich sage dir, damals als mein Mann noch lebte, hätte er sich das nicht getraut. Oh, mein armer Mann ...
 
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Geld?",DIA_Gritta_WantsMoney_WhereMoney);
@@ -117,9 +117,9 @@ FUNC VOID DIA_Gritta_WantsMoney_Info()
 };
 FUNC VOID DIA_Gritta_WantsMoney_Continue01 ()
 {
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_continue01_16_00"); //... such a good man he was. Handsome, hard-working, a gentleman of the old school. We had it all, wealth, happiness...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue01_16_01"); //... sometimes we were even invited to high society events. The festivities, all the beautiful clothes and hairdos...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue01_16_02"); //... the fine dining and civilized conversations. Everything was better back then. No one would have dared to humiliate the heart of a poor widow with such...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_continue01_16_00"); //... was war er doch für ein guter Kerl. Gutaussehend, fleißig, ein Kavalier der alten Schule. Wir hatten alles, Vermögen, Glück ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue01_16_01"); //... manchmal wurden wir sogar eingeladen zu der feinen Gesellschaft. Das waren Feste, all die schönen Kleider und Frisuren ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue01_16_02"); //...das feine Essen und kultivierte Unterhaltungen. Damals war alles besser. Da hat sich niemand getraut mit so lächerlichen Forderungen das Herz einer armen Witwe ...
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Geld?",DIA_Gritta_WantsMoney_WhereMoney);
@@ -127,9 +127,9 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue01 ()
 };
 FUNC VOID DIA_Gritta_WantsMoney_Continue02 ()
 {
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_continue02_16_00"); //... ridiculous claims. Whatever shall I do? My pension is barely enough to make ends meet, and times are getting even rougher. One sees it everywhere...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue02_16_01"); //... people must scrimp and save. It's been weeks since the last ship came to town. My husband was the captain of a merchant ship - actually, he even owned the ship...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue02_16_02"); //... from his long journeys, he always brought me presents - exquisite fabrics from the mainland, precious spices from the southern countries...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_continue02_16_00"); //... zu beschämen. Was soll ich denn machen? Die Rente reicht ja kaum zum Leben und die Zeiten werden auch nicht besser. Das sieht man doch jetzt überall ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue02_16_01"); //... die Leute müssen sparen. Es ist schon seit Wochen kein Schiff mehr in die Stadt gekommen. Mein Mann war Handelschiffkapitän, ja nicht nur Kapitän, das Schiff gehörte ihm ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue02_16_02"); //... von seinen langen Reisen brachte er immer ein Geschenk für mich mit, kostbare Stoffe vom Festland, erlesene Gewürze aus den südlichen Ländern ...
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Geld?",DIA_Gritta_WantsMoney_WhereMoney);
@@ -137,10 +137,10 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue02 ()
 };
 FUNC VOID DIA_Gritta_WantsMoney_Continue03 ()
 {
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_continue03_16_00"); //... most people haven't even heard of these things. But then, one day I got the tidings that the Gritta had sunk - that was the name of the ship, my husband called it that out of...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue03_16_01"); //... love for me. I wept and prayed that my husband had survived the disaster, every day I hoped to hear from him, but all my longing was in vain...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue04_16_02"); //... may Innos have mercy on his soul. May he rest in peace. Since that time I have been living under these modest circumstances, and now this soulless, callous Matteo...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue04_16_03"); //... is after the last bit of my life savings. Please have mercy on a poor woman. Back when my husband was alive, he wouldn't have dared to do that. Oh, my poor husband...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_continue03_16_00"); //... die meisten Leute kennen so etwas gar nicht. Doch dann eines Tages erreichte mich die Botschaft vom Untergang der Gritta, so hieß das Schiff, mein Mann hatte das Schiff aus ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue03_16_01"); //... Liebe zu mir so genannt. Ich habe geweint und gefleht, dass mein Mann das Unglück überlebt hat, jeden Tag erhoffte ich, Nachricht von ihm zu bekommen, doch meine Sehnsucht blieb unerfüllt.
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue04_16_02"); //... Innos möge seiner Seele gnädig sein. Möge er in Frieden ruhen. Seit dieser Zeit lebe ich nun in diesen bescheidenen Verhältnissen und das letzte bisschen von meinen Ersparnissen ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_Continue04_16_03"); //... will mir jetzt dieser Seelenverkäufer Matteo abnehmen. Hab doch Erbarmen mit einer armen Frau. Damals, als mein Mann noch lebte, hätte er sich das nicht getraut. Oh, mein armer Mann ...
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Schluss jetzt, wo ist das Gold?",DIA_Gritta_WantsMoney_WhereMoney);
@@ -148,21 +148,21 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue03 ()
 };
 FUNC VOID DIA_Gritta_WantsMoney_WhereMoney ()
 {
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_WhereMoney_15_00"); //Cut it out. Where's the gold?
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_WhereMoney_16_01"); //(defiantly) But I don't have the gold, I'm only a poor widow!
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_WhereMoney_15_00"); //Schluss jetzt, wo ist das Gold?
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_WhereMoney_16_01"); //(trotzig) Aber ich habe das Gold nicht, ich bin nur eine arme Witwe!
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Her mit der Kohle, sonst verpasse ich dir eine.",DIA_Gritta_WantsMoney_BeatUp);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Dann verkaufen wir halt deine Klamotten...",DIA_Gritta_WantsMoney_EnoughStuff);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Ich werde die Summe fÃ¼r dich bezahlen.",DIA_Gritta_WantsMoney_IWillPay);
+	Info_AddChoice (DIA_Gritta_WantsMoney,"Ich werde die Summe für dich bezahlen.",DIA_Gritta_WantsMoney_IWillPay);
 };
 FUNC VOID DIA_Gritta_WantsMoney_EnoughStuff ()
 {
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_EnoughStuff_15_00"); //Then we'll simply sell a few of your togs. I'm sure you've still got a bunch of stuff in your closet...
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_EnoughStuff_16_01"); //How dare you, uncouth lout! All right, here, take the gold.
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_EnoughStuff_15_00"); //Dann verkaufen wir halt ein paar von deinen Klamotten. Du hast doch bestimmt noch einen Haufen Zeug im Schrank ...
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_EnoughStuff_16_01"); //Untersteh dich, du Rüpel! Ist ja schon gut, hier ist das Gold.
 	B_GiveInvItems (self,other,ItMi_Gold, 100); 
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_EnoughStuff_15_02"); //(grins) See, that wasn't so hard.
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_EnoughStuff_16_03"); //(tartly) And now will you please leave my house.
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_EnoughStuff_15_02"); //(grinst) Na also, geht doch.
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_EnoughStuff_16_03"); //(säuerlich) Verlasse jetzt bitte mein Haus.
 	
 	Gritta_GoldGiven = TRUE;
 	
@@ -170,18 +170,18 @@ FUNC VOID DIA_Gritta_WantsMoney_EnoughStuff ()
 };
 func VOID DIA_Gritta_WantsMoney_IWillPay ()
 {
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_IWillPay_15_00"); //I'm going to pay the sum for you.
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_IWillPay_16_01"); //You would do that for me? Oh, I knew you weren't a greedy bastard like that Matteo!
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_IWillPay_15_02"); //Yeah, yeah, never mind.
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_IWillPay_16_03"); //Come back once you've taken care of that - I want to show you my gratitude.
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_IWillPay_15_00"); //Ich werde die Summe für dich bezahlen.
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_IWillPay_16_01"); //Das würdest du für mich tun? Ich wusste, dass du kein raffgieriger Hund bist, wie dieser Matteo!
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_IWillPay_15_02"); //Jaja, schon gut.
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_IWillPay_16_03"); //Komm wieder, wenn du das erledigt hast - ich möchte mich noch erkenntlich zeigen.
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	
 	Gritta_WantPay = TRUE;
 };
 FUNC VOID DIA_Gritta_WantsMoney_BeatUp ()
 {
-	AI_Output (other,self ,"DIA_Gritta_WantsMoney_BeatUp_15_00"); //(menacing) Fork over the dough, or I'll slug you one!
-	AI_Output (self ,other,"DIA_Gritta_WantsMoney_BeatUp_16_01"); //(defiantly) You're nothing but a common thug. Go ahead, draw your weapon, and I'll call the guards!
+	AI_Output (other,self ,"DIA_Gritta_WantsMoney_BeatUp_15_00"); //(drohend) Her mit der Kohle, sonst verpasse ich dir eine!
+	AI_Output (self ,other,"DIA_Gritta_WantsMoney_BeatUp_16_01"); //(trotzig) Du bist ein gemeiner Schläger. Los, nur zu, wenn du deine Waffe ziehst, rufe ich die Wachen!
 	
 	Gritta_Threatened = TRUE;
 	
@@ -212,10 +212,10 @@ func int DIA_Gritta_WINE_Condition ()
 };
 func void DIA_Gritta_WINE_Info ()
 {
-	AI_Output (self, other, "DIA_Gritta_WINE_16_00"); //It was very noble of you to pay for me. I want to show you my gratitude.
-	AI_Output (self, other, "DIA_Gritta_WINE_16_01"); //Here's a bottle of wine which my husband, may Innos rest his soul, brought back from the southern islands.
-	AI_Output (self, other, "DIA_Gritta_WINE_16_02"); //Also, I'm going to spread the news around. At last there's somebody in town whose virtue...
-	AI_Output (other, self, "DIA_Gritta_WINE_15_03"); //Yeah, yeah, never mind.
+	AI_Output (self, other, "DIA_Gritta_WINE_16_00"); //Dass du für mich bezahlt hast, war sehr nobel von dir. Ich möchte mich bei dir bedanken.
+	AI_Output (self, other, "DIA_Gritta_WINE_16_01"); //Diese Flasche Wein hat mein Mann, Innos habe ihn selig, von den südlichen Inseln mitgebracht. Ich hoffe, du magst ihn.
+	AI_Output (self, other, "DIA_Gritta_WINE_16_02"); //Außerdem werde ich das weitererzählen. Endlich ist mal jemand in der Stadt, der tugendhaft ...
+	AI_Output (other, self, "DIA_Gritta_WINE_15_03"); //Jaja, schon gut.
 
 	B_GivePlayerXP 		(XP_PayForGritta);
 	B_GiveInvItems 		(self, other, Itfo_Wine, 1);
@@ -248,21 +248,21 @@ func void DIA_Gritta_PERM_Info ()
 	if (Npc_KnowsInfo (other, DIA_Gritta_WINE))
 	&& (Npc_HasItems (self, itmi_gold) >= 100)
 	{
-		AI_Output (self, other, "DIA_Gritta_PERM_16_00"); //As long as there are men like you in this town, I still have the hope that everything will turn out well.
+		AI_Output (self, other, "DIA_Gritta_PERM_16_00"); //Solange es Männer wie dich in dieser Stadt gibt, habe ich Hoffnung, dass sich alles zum Guten wenden wird.
 	}
 	else if (Gritta_WantPay == TRUE)
 	&&		(Npc_HasItems (self, itmi_gold) >= 100)
 	{
-		AI_Output (self, other, "DIA_Gritta_PERM_16_01"); //Come back when the matter with Matteo is settled.
+		AI_Output (self, other, "DIA_Gritta_PERM_16_01"); //Komm wieder, wenn die Sache mit Matteo erledigt ist.
 	}
 	else if (Gritta_Threatened == TRUE)
 	&&		(Npc_HasItems (self, itmi_gold) >= 100)
 	{
-		AI_Output (self, other, "DIA_Gritta_PERM_16_02"); //Why are you staring like an idiot? You won't dare to attack me anyway!
+		AI_Output (self, other, "DIA_Gritta_PERM_16_02"); //Was glotzt du denn so dämlich? Du traust dich ja doch nicht, mich anzugreifen!
 	}
 	else //Gritta_GoldGiven oder niedergeschlagen
 	{
-		AI_Output (self, other, "DIA_Gritta_PERM_16_03"); //What else do you want? You've got my gold! Go away!
+		AI_Output (self, other, "DIA_Gritta_PERM_16_03"); //Was willst du noch? Du hast mein Gold! Geh!
 	};
 	
 	AI_StopProcessInfos (self); 
@@ -314,7 +314,7 @@ INSTANCE DIA_Gritta_Perm3U4U5(C_INFO)
 	condition	= DIA_Gritta_Perm3U4U5_Condition;
 	information	= DIA_Gritta_Perm3U4U5_Info;
 	permanent	= TRUE;
-	description = "Wie lÃ¤uft's denn so?";
+	description = "Wie läuft's denn so?";
 };                       
 FUNC INT DIA_Gritta_Perm3U4U5_Condition()
 {
@@ -322,36 +322,36 @@ FUNC INT DIA_Gritta_Perm3U4U5_Condition()
 };
 FUNC VOID DIA_Gritta_Perm3U4U5_Info()
 {	
-	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_15_00"); //How's it going?
+	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_15_00"); //Wie läuft's denn so?
 	
 	if (Kapitel == 3)
 	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet != LOG_SUCCESS)
 		{
-			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_01"); //Everything's going to the dogs here. Wherever you look, there's crime and violence. Just imagine, they even murdered one of the paladins.
+			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_01"); //Hier geht doch alles vor die Hunde. Überall, wo man hinschaut, sieht man Verbrechen und Gewalt. Stell dir vor, man hat sogar einen der Paladine umgebracht.
 			
 			Info_ClearChoices (DIA_Gritta_Perm3U4U5);
 			Info_AddChoice (DIA_Gritta_Perm3U4U5,DIALOG_BACK,DIA_Gritta_Perm3U4U5_BACK);
 			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Es ist Krieg, da passieren solche Dinge.",DIA_Gritta_Perm3U4U5_War);
 			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Das wird schon wieder.",DIA_Gritta_Perm3U4U5_TurnsGood);
-			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Was hast du gehÃ¶rt?",DIA_Gritta_Perm3U4U5_Rumors);
+			Info_AddChoice (DIA_Gritta_Perm3U4U5,"Was hast du gehört?",DIA_Gritta_Perm3U4U5_Rumors);
 		}
 		else
 		{
-			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_02"); //Oh, I'm so thrilled, Lord Hagen has set the mercenary free.
-			AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_15_03"); //And how would that affect you?
-			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_04"); //Just think about it. Do you believe the mercenaries would have stood by and watched one of their comrades get hanged?
-			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_05"); //They would have tried to free him, and there would have been lots of bloodshed. I can only thank Innos.
+			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_02"); //Ich bin ja so froh, Lord Hagen hat den Söldner freigesprochen.
+			AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_15_03"); //Und was hast du damit zu tun?
+			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_04"); //Denk doch mal nach. Glaubst du, die Söldner hätten zugesehen, wie einer ihrer Kameraden gehängt wird?
+			AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_05"); //Sie hätten versucht, ihn zu befreien, und dann hätte es ein großes Blutvergießen gegeben. Ich kann Innos nur danken.
 		};	
 	}
 	else if (Kapitel == 5)	
 	{
-		AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_06"); //The paladins are getting ready, and it looks like they're going to move out soon.
+		AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_06"); //Die Paladine machen sich bereit und es sieht so aus, als ob die in Kürze ausrücken.
 	}
 	else 
 	{
-		AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_07"); //Same as always, but I don't want to complain.
+		AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_16_07"); //Wie immer, aber ich will mich nicht beklagen.
 	};
 };
 
@@ -362,15 +362,15 @@ FUNC VOID DIA_Gritta_Perm3U4U5_BACK ()
 
 FUNC VOID DIA_Gritta_Perm3U4U5_War ()
 {
-	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_War_15_00"); //That's war for you, these things happen.
-	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_War_16_01"); //Yes, there's this horrible war on top of it all. Everybody suffers and wonders how they are going to manage.
-	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_War_16_02"); //Sometimes I ask myself what we have done to deserve such a punishment from Innos.
+	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_War_15_00"); //Es ist Krieg, da passieren solche Dinge.
+	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_War_16_01"); //Das kommt dazu, dieser schreckliche Krieg. Alle leiden und müssen sehen, wie sie zurecht kommen.
+	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_War_16_02"); //Manchmal frage ich mich, was wir getan haben, dass Innos uns so straft.
 };
 
 FUNC VOID DIA_Gritta_Perm3U4U5_TurnsGood ()
 {
-	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_TurnsGood_15_00"); //It'll be all right.
-	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_TurnsGood_16_01"); //You're trying to cheer me up - that's nice.
+	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_TurnsGood_15_00"); //Das wird schon wieder.
+	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_TurnsGood_16_01"); //Das ist nett, dass du mich aufmuntern möchtest.
 	
 	if (GrittaXP_Once == FALSE)
 	{
@@ -381,9 +381,9 @@ FUNC VOID DIA_Gritta_Perm3U4U5_TurnsGood ()
 
 FUNC VOID DIA_Gritta_Perm3U4U5_Rumors ()
 {
-	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_Rumors_15_00"); //What have you heard?
-	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_Rumors_16_01"); //Only what they're telling each other in the street.
-	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_Rumors_16_02"); //I've heard that they already caught the murderer, but I can't tell you if that is true.
+	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_Rumors_15_00"); //Was hast du gehört?
+	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_Rumors_16_01"); //Nur das, was man sich auf der Straße erzählt.
+	AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_Rumors_16_02"); //Angeblich hat man den Mörder schon gefasst, aber ob das stimmt, kann ich dir nicht sagen.
 };
 
 

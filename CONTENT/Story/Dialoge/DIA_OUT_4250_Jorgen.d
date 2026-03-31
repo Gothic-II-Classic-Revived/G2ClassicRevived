@@ -90,22 +90,22 @@ FUNC INT DIA_Jorgen_Hallo_Condition()
 
 FUNC VOID DIA_Jorgen_Hallo_Info()
 {
-	AI_Output (self ,other,"DIA_Jorgen_Hallo_07_00"); //Hey, you!
+	AI_Output (self ,other,"DIA_Jorgen_Hallo_07_00"); //Hey du!
 
 	if ((hero.guild == GIL_NOV) || (hero.guild == GIL_KDF))
 	{
-		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_01"); //I see you belong to the magicians' monastery.
-		AI_Output (other,self ,"DIA_Jorgen_Hallo_15_02"); //Yes, why?
-		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_03"); //Can you use another worker there?
+		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_01"); //Ich sehe, du gehörst zum Magierkloster.
+		AI_Output (other,self ,"DIA_Jorgen_Hallo_15_02"); //Ja, warum?
+		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_03"); //Könnt ihr noch eine Arbeitskraft gebrauchen?
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_04"); //Hey you, ever been to the monastery?
-		AI_Output (other,self ,"DIA_Jorgen_Hallo_15_05"); //Maybe, why?
-		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_06"); //Are they still taking on people?
+		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_04"); //Hey du, warst du schon mal im Kloster?
+		AI_Output (other,self ,"DIA_Jorgen_Hallo_15_05"); //Kann sein, wieso?
+		AI_Output (self ,other,"DIA_Jorgen_Hallo_07_06"); //Nehmen die noch Leute?
 	};
 
-	AI_Output (self ,other,"DIA_Jorgen_Hallo_07_07"); //I wouldn't know where else to turn.
+	AI_Output (self ,other,"DIA_Jorgen_Hallo_07_07"); //Ich weiß sonst nicht, wo ich bleiben soll.
 }; 
 
 //*********************************************************************
@@ -133,10 +133,10 @@ FUNC INT DIA_Jorgen_Novice_Condition()
 
 FUNC VOID DIA_Jorgen_Novice_Info()
 {
-	AI_Output (other,self ,"DIA_Jorgen_Novice_15_00"); //Have you seen a novice walk past?
-	AI_Output (self ,other,"DIA_Jorgen_Novice_07_01"); //Yeah, sure, he went thataway.
+	AI_Output (other,self ,"DIA_Jorgen_Novice_15_00"); //Hast du einen Novizen vorbeikommen sehen?
+	AI_Output (self ,other,"DIA_Jorgen_Novice_07_01"); //Ja klar, er ist da lang.
 	AI_PointAt	(self,"NW_TROLLAREA_NOVCHASE_01");
-	AI_Output (self,other,"DIA_Jorgen_Novice_07_02"); //He jumped into the water off the bridge and swam like a shark was after him.
+	AI_Output (self,other,"DIA_Jorgen_Novice_07_02"); //Er ist von der Brücke ins Wasser gesprungen und geschwommen, als wenn ein Hai hinter ihm her wäre.
 	AI_StopPointAt(self);
 }; 
 
@@ -166,10 +166,10 @@ FUNC INT DIA_Jorgen_Milten_Condition()
 
 FUNC VOID DIA_Jorgen_Milten_Info()
 {
-	AI_Output (other,self ,"DIA_Jorgen_Milten_15_00"); //If you're headed for the monastery, you should talk to Milten. He'll surely be able to help you.
-	AI_Output (self ,other,"DIA_Jorgen_Milten_07_01"); //What do you think, would they let me in there at all?
-	AI_Output (other,self ,"DIA_Jorgen_Milten_15_02"); //Perhaps. But the way you look, I can hardly imagine you in a novice's robe.
-	AI_Output (self ,other,"DIA_Jorgen_Milten_07_03"); //Enough of that nonsense - novice's robe indeed. It's the grub I'm after, or I'll be forced to eat the bark off the trees next.
+	AI_Output (other,self ,"DIA_Jorgen_Milten_15_00"); //Wenn du ins Kloster willst, solltest du mit Milten reden. Er wird dir sicher weiterhelfen.
+	AI_Output (self ,other,"DIA_Jorgen_Milten_07_01"); //Was meinst du, lassen die mich da überhaupt rein?
+	AI_Output (other,self ,"DIA_Jorgen_Milten_15_02"); //Vielleicht. Aber so wie du aussiehst, kann ich dich mir nur schwer in einer Novizenrobe vorstellen.
+	AI_Output (self ,other,"DIA_Jorgen_Milten_07_03"); //Quatsch keinen Unfug. Novizenrobe. Ich brauch was zwischen die Kiemen, sonst beiß ich noch in die nächste Baumrinde.
 }; 
 
 //*********************************************************************
@@ -196,12 +196,12 @@ FUNC INT DIA_Jorgen_Home_Condition()
 
 FUNC VOID DIA_Jorgen_Home_Info()
 {
-	AI_Output (other,self ,"DIA_Jorgen_Home_15_00"); //Where do you come from?
-	AI_Output (self ,other,"DIA_Jorgen_Home_07_01"); //I used to be captain of a big whaler, my boy. The sea is my home.
-	AI_Output (self ,other,"DIA_Jorgen_Home_07_02"); //My ship, the good old Magdalena, was sunk by pirates a few months ago, and now I'm stranded here.
-	AI_Output (self ,other,"DIA_Jorgen_Home_07_03"); //All I ever wanted was to go back to sea, but since I've come here, not one schooner has called at this accursed port.
-	AI_Output (self ,other,"DIA_Jorgen_Home_07_04"); //The only ship which is anchored in Khorinis is that blasted war galley of the King, and they don't take on anyone.
-	AI_Output (self ,other,"DIA_Jorgen_Home_07_05"); //So what else can I do? There's no work for me in town. I've tried everything.
+	AI_Output (other,self ,"DIA_Jorgen_Home_15_00"); //Wo kommt ihr her?
+	AI_Output (self ,other,"DIA_Jorgen_Home_07_01"); //Ich war Kapitän eines großen Walfängers, mein Junge. Die See ist mein Zuhause.
+	AI_Output (self ,other,"DIA_Jorgen_Home_07_02"); //Mein Schiff, die gute alte Magdalena, ist vor einigen Monden von Piraten versenkt worden und nun bin ich hier gestrandet.
+	AI_Output (self ,other,"DIA_Jorgen_Home_07_03"); //Ich wünschte mir nichts mehr, als wieder in See stechen zu können, doch seit ich hier bin, hat in dem verfluchten Hafen kein Schoner mehr angelegt.
+	AI_Output (self ,other,"DIA_Jorgen_Home_07_04"); //Das einzige Schiff, was in Khorinis vor Anker liegt, ist die verfluchte Kriegsgaleere des Königs, und die nehmen keine Leute.
+	AI_Output (self ,other,"DIA_Jorgen_Home_07_05"); //Was bleibt mir denn noch? In der Stadt gibt es keine Arbeit für mich. Ich lasse nichts unversucht.
 	
 }; 
 
@@ -215,7 +215,7 @@ INSTANCE DIA_Jorgen_BeCarefull   (C_INFO)
 	condition   = DIA_Jorgen_BeCarefull_Condition;
 	information = DIA_Jorgen_BeCarefull_Info;
 	permanent   = TRUE;
-	description	= "Besser, du verschwindest von der StraÃŸe.";
+	description	= "Besser, du verschwindest von der Straße.";
 };
 
 FUNC INT DIA_Jorgen_BeCarefull_Condition()
@@ -229,8 +229,8 @@ FUNC INT DIA_Jorgen_BeCarefull_Condition()
 
 FUNC VOID DIA_Jorgen_BeCarefull_Info()
 {
-	AI_Output (other,self ,"DIA_Jorgen_BeCarefull_15_00"); //You had better get off the road.
-	AI_Output (self ,other,"DIA_Jorgen_BeCarefull_07_01"); //Don't worry. I've already noticed that the wilderness out here has become damned dangerous in the last couple of days.
+	AI_Output (other,self ,"DIA_Jorgen_BeCarefull_15_00"); //Besser, du verschwindest von der Straße.
+	AI_Output (self ,other,"DIA_Jorgen_BeCarefull_07_01"); //Mach dir keine Sorgen. Ich hab schon gemerkt, dass die Wildnis hier draußen in den letzten paar Tagen verdammt gefährlich geworden ist.
 }; 
 
 //#####################################################################
@@ -290,22 +290,22 @@ func int DIA_Jorgen_NEUHIER_Condition ()
 
 func void DIA_Jorgen_NEUHIER_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_NEUHIER_15_00"); //How's life in the monastery?
+	AI_Output			(other, self, "DIA_Jorgen_NEUHIER_15_00"); //Wie lebt sich's im Kloster?
 	
-	AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_01"); //I'm going out of my mind here!
+	AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_01"); //Ich werd hier noch bekloppt!
 
 	if (Npc_KnowsInfo(other, DIA_Jorgen_Milten))
 	{
-		AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_02"); //But anyway, thanks for the hint. Milten was indeed able to help me get a place here.
+		AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_02"); //Aber trotzdem, danke für den Tipp. Milten konnte mir tatsächlich helfen, hier unter zu kommen.
 		B_GivePlayerXP (XP_Ambient);
 	};
 
 	if (hero.guild != GIL_KDF)
 	{
-		AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_03"); //I feel really stupid among those ever-nagging do-gooders.
+		AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_03"); //Ich komme mir ganz schön dämlich vor bei diesen ewig meckernden Weltverbesserern.
 	};
 
-	AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_04"); //Well. What's a body to do? Before I starve in town, I'd rather do what the novices tell me to.
+	AI_Output			(self, other, "DIA_Jorgen_NEUHIER_07_04"); //Tja. Was willst du machen? Bevor ich in der Stadt verhungere, mach ich lieber, was die Novizen von mir verlangen.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -335,15 +335,15 @@ func int DIA_Jorgen_PERM4_Condition ()
 var int DIA_Jorgen_PERM4_OneTime;
 func void DIA_Jorgen_PERM4_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_PERM4_15_00"); //You'll be all right, I think.
+	AI_Output			(other, self, "DIA_Jorgen_PERM4_15_00"); //Du kommst schon zurecht, denke ich.
 	if (DIA_Jorgen_PERM4_OneTime == FALSE)
 	&& (hero.guild != GIL_KDF)
 	{
-		AI_Output			(self, other, "DIA_Jorgen_PERM4_07_01"); //Just imagine - I'm expected to weed their garden. If this carries on much longer, I'll go bonkers.
+		AI_Output			(self, other, "DIA_Jorgen_PERM4_07_01"); //Stell dir vor, ich soll hier Unkraut jäten. Wenn das so weiter geht, dreh ich noch durch.
 		DIA_Jorgen_PERM4_OneTime = TRUE;
 	};
 	
-	AI_Output			(self, other, "DIA_Jorgen_PERM4_07_02"); //What I need is some good old planks beneath my feet.
+	AI_Output			(self, other, "DIA_Jorgen_PERM4_07_02"); //Ich brauche endlich wieder Planken unter meinen Füßen.
 };
 
 //#####################################################################
@@ -390,7 +390,7 @@ instance DIA_Jorgen_BEMYCAPTAIN		(C_INFO)
 	information	 = 	DIA_Jorgen_BEMYCAPTAIN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich kÃ¶nnte dir vielleicht einen Job als KapitÃ¤n anbieten.";
+	description	 = 	"Ich könnte dir vielleicht einen Job als Kapitän anbieten.";
 };
 
 func int DIA_Jorgen_BEMYCAPTAIN_Condition ()
@@ -407,19 +407,19 @@ func int DIA_Jorgen_BEMYCAPTAIN_Condition ()
 var int DIA_Jorgen_BEMYCAPTAIN_OneTime;
 func void DIA_Jorgen_BEMYCAPTAIN_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN_15_00"); //Maybe I could offer you a job as a captain.
+	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN_15_00"); //Ich könnte dir vielleicht einen Job als Kapitän anbieten.
 	if (DIA_Jorgen_BEMYCAPTAIN_OneTime == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_01"); //You're not having me on, mate? If what you say is really true, I'm definitely in on it.
-		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_02"); //Errh... there's only a minor problem. I ate those novices out of half their larder.
-		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_03"); //They're hopping mad, those fellows. I don't think that head magician will let me leave here just like that.
+		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_01"); //Du willst mich doch wohl nicht verkohlen, mein Junge? Also, wenn das wahr ist, dann bin ich doch sofort dabei.
+		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_02"); //Ärrh. Es gibt da nur ein kleines Problem. Ich habe den Novizen hier die halbe Vorratskammer weggefressen.
+		AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_03"); //Sind ganz schön sauer, die Jungs. Glaube nicht, dass mich der oberste Magier hier einfach wieder so gehen lässt.
 		DIA_Jorgen_BEMYCAPTAIN_OneTime = TRUE;
 	};
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_04"); //First, I have to work off my debt with Pyrokar. I'm sorry.
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN_07_04"); //Ich muss erst meine Zeche bei Pyrokar abarbeiten. Tut mir Leid.
 	
 	Log_CreateTopic (TOPIC_Captain, LOG_MISSION);                                                                                                                                                                                                                                            
 	Log_SetTopicStatus(TOPIC_Captain, LOG_RUNNING);                                                                                                                                                                                                                                          
-    B_LogEntry (TOPIC_Captain,"Jorgen wÃ¤re bereit als KapitÃ¤n fÃ¼r die Ãœberfahrst zu fungieren, allerdings muss ich ihn erst freikaufen. Er hat Schulden beim Kloster.");
+    B_LogEntry (TOPIC_Captain,"Jorgen wäre bereit als Kapitän für die Überfahrst zu fungieren, allerdings muss ich ihn erst freikaufen. Er hat Schulden beim Kloster.");
 
 };
 
@@ -446,18 +446,18 @@ func int DIA_Jorgen_BEMYCAPTAIN2_Condition ()
 
 func void DIA_Jorgen_BEMYCAPTAIN2_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN2_15_00"); //I took care of your bill. You're free.
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_01"); //Really? How did you manage that?
-	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN2_15_02"); //You don't want to know.
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_03"); //Oh well. Not that I really care. Thanks a million, again.
+	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN2_15_00"); //Die Sache mit deiner Zeche habe ich geregelt. Du bist frei.
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_01"); //Wirklich. Wie hast du das angestellt?
+	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN2_15_02"); //Das willst du nicht wissen.
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_03"); //Na schön. Soll mir auch egal sein. Besten Dank, noch mal.
 
 	if (SCGotCaptain == FALSE)
 	{
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_04"); //Now what about your offer? Can I still sign on with you?
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_04"); //Was ist mit deinem Angebot. Kann ich noch bei dir anheuern?
 	}
 	else
 	{
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_05"); //Great. And now we're out of here!
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN2_07_05"); //So. Und jetzt nichts wie raus hier.
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"RausAusKloster");
 	};
@@ -473,7 +473,7 @@ instance DIA_Jorgen_BEMYCAPTAIN3		(C_INFO)
 	condition	 = 	DIA_Jorgen_BEMYCAPTAIN3_Condition;
 	information	 = 	DIA_Jorgen_BEMYCAPTAIN3_Info;
 
-	description	 = 	"Sei mein KapitÃ¤n.";
+	description	 = 	"Sei mein Kapitän.";
 };
 
 func int DIA_Jorgen_BEMYCAPTAIN3_Condition ()
@@ -487,11 +487,11 @@ func int DIA_Jorgen_BEMYCAPTAIN3_Condition ()
 
 func void DIA_Jorgen_BEMYCAPTAIN3_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN3_15_00"); //Be my captain.
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN3_07_01"); //I feel honored, but do you even have a ship and a crew?
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN3_07_02"); //I should say, we'll need five men at least.
-	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN3_15_03"); //Good. I'll see what I can do. Wait for me at the harbor.
-	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN3_07_04"); //Aye, aye, sir.
+	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN3_15_00"); //Sei mein Kapitän.
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN3_07_01"); //Ich fühle mich geehrt, aber hast du denn überhaupt schon ein Schiff und eine Mannschaft?
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN3_07_02"); //Ich sag mal, fünf Mann sollten es schon sein.
+	AI_Output			(other, self, "DIA_Jorgen_BEMYCAPTAIN3_15_03"); //Gut. Ich werde sehen, was ich tun kann. Warte im Hafen auf mich.
+	AI_Output			(self, other, "DIA_Jorgen_BEMYCAPTAIN3_07_04"); //Aye, Aye, Sir.
 	AI_StopProcessInfos (self);
 	SCGotCaptain = TRUE;
 	JorgenIsCaptain = TRUE;
@@ -511,7 +511,7 @@ instance DIA_Jorgen_LOSFAHREN		(C_INFO)
 	information	 = 	DIA_Jorgen_LOSFAHREN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Bist du bereit, mich zur Insel Ã¼berzusetzen?";
+	description	 = 	"Bist du bereit, mich zur Insel überzusetzen?";
 };
 
 func int DIA_Jorgen_LOSFAHREN_Condition ()
@@ -525,21 +525,21 @@ func int DIA_Jorgen_LOSFAHREN_Condition ()
 
 func void DIA_Jorgen_LOSFAHREN_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_LOSFAHREN_15_00"); //Are you ready to take me over to the island?
+	AI_Output			(other, self, "DIA_Jorgen_LOSFAHREN_15_00"); //Bist du bereit, mich zur Insel überzusetzen?
 
 	if ((B_CaptainConditions (self)) == TRUE)
 	{
-	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_01"); //But certainly. Give me that chart.
-	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_02"); //Great. Then hoist the sails, and we're out of here.
-	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_03"); //You had better check your gear first. Once we're at sea, there will be no way back.
-	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_04"); //When you've done that, you should get some sleep. There's a bed made up for you in the captain's quarters. Good night.
+	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_01"); //Aber klar doch. Her mit der Karte.
+	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_02"); //Gut. Dann hoch die Segel und nichts wie weg hier.
+	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_03"); //Überprüf vorher noch mal deine Ausrüstung. Wenn wir erstmal auf See sind, gibt es keinen Weg mehr zurück.
+	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_04"); //Wenn du das gemacht hast, dann leg dich erst mal schlafen. In der Kapitänskajüte steht ein Bett für dich bereit. Gute Nacht.
 	AI_StopProcessInfos (self);
 	B_CaptainCallsAllOnBoard (self);
 	}
 	else
 	{
-	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_05"); //You need a ship, a crew of at least five men, and a nautical chart which I can use to navigate.
-	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_06"); //We're not going to set sail until I see you've got everything you need.
+	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_05"); //Du brauchst ein Schiff, eine mindestens fünf Mann starke Mannschaft und eine Seekarte, nach der ich navigieren kann.
+	AI_Output			(self, other, "DIA_Jorgen_LOSFAHREN_07_06"); //Erst, wenn ich sehe, dass du alles zusammen hast, werden wir in See stechen.
 	AI_StopProcessInfos (self);
 	};
 };
@@ -570,12 +570,12 @@ func int DIA_Jorgen_PERM5_NOTCAPTAIN_Condition ()
 var int DIA_Jorgen_PERM5_NOTCAPTAIN_XPGiven;
 func void DIA_Jorgen_PERM5_NOTCAPTAIN_Info ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_PERM5_NOTCAPTAIN_15_00"); //How are you?
+	AI_Output			(other, self, "DIA_Jorgen_PERM5_NOTCAPTAIN_15_00"); //Wie steht's?
 
 	if 	(Npc_GetDistToWP(self,"NW_BIGFARM_KITCHEN_OUT_06")<1000)  
 	{
-	AI_Output			(self, other, "DIA_Jorgen_PERM5_NOTCAPTAIN_07_01"); //Fine. This is not a bad place.
-	AI_Output			(self, other, "DIA_Jorgen_PERM5_NOTCAPTAIN_07_02"); //They still give me idiotic assignments, such as herding sheep, but they're not half as narrow-minded here as they were at the monastery.
+	AI_Output			(self, other, "DIA_Jorgen_PERM5_NOTCAPTAIN_07_01"); //Gut. Hier lässt sich's aushalten.
+	AI_Output			(self, other, "DIA_Jorgen_PERM5_NOTCAPTAIN_07_02"); //Ich muss hier zwar auch schwachsinnige Arbeiten wie Schafe hüten, verrichten, aber es ist bei weitem nicht so spießig wie im Kloster.
 
 		if (DIA_Jorgen_PERM5_NOTCAPTAIN_XPGiven == FALSE)
 		{
@@ -586,7 +586,7 @@ func void DIA_Jorgen_PERM5_NOTCAPTAIN_Info ()
 	}
 	else
 	{
-	AI_Output			(self, other, "DIA_Jorgen_PERM5_NOTCAPTAIN_07_03"); //I'll have to find another place to stay. Let's see where the winds shall blow me next.
+	AI_Output			(self, other, "DIA_Jorgen_PERM5_NOTCAPTAIN_07_03"); //Ich muss mir jetzt eine andere Bleibe suchen. Mal sehen, wohin es mich verschlägt.
 
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"RausAusKloster");

@@ -38,13 +38,13 @@ func int DIA_PAL_262_GREET_Condition ()
 func void DIA_PAL_262_GREET_Info ()
 {
 	AI_Output (self, other, "DIA_PAL_262_GREET_10_00"); //Halt - wer bist du?
-	AI_Output (other, self, "DIA_PAL_262_GREET_15_01"); //Viel wichtiger ist die Frage, wo ich herkomme. Ich bin Ã¼ber den Pass gekommen.
+	AI_Output (other, self, "DIA_PAL_262_GREET_15_01"); //Viel wichtiger ist die Frage, wo ich herkomme. Ich bin über den Pass gekommen.
 	AI_Output (other, self, "DIA_PAL_262_GREET_15_02"); //Also willst du mich jetzt aufhalten oder kann ich rein?
 	AI_Output (self, other, "DIA_PAL_262_GREET_10_03"); //Konnte ich ja nicht wissen. Klar kannst du rein.
 
 	/*
 	AI_Output (self, other, "DIA_Addon_PAL_262_GREET_10_00"); //Halt - wer bist du?
-	AI_Output (other, self, "DIA_Addon_PAL_262_GREET_15_01"); //Viel wichtiger ist die Frage, wo ich herkomme. Ich bin ber den Pass gekommen.
+	AI_Output (other, self, "DIA_Addon_PAL_262_GREET_15_01"); //Viel wichtiger ist die Frage, wo ich herkomme. Ich bin über den Pass gekommen.
 	AI_Output (other, self, "DIA_Addon_PAL_262_GREET_15_02"); //Also willst du mich jetzt aufhalten oder kann ich rein?
 	AI_Output (self, other, "DIA_Addon_PAL_262_GREET_10_03"); //Konnte ich ja nicht wissen. Klar kannst du rein.
 	*/
@@ -76,11 +76,11 @@ func void DIA_Wache_PERM_Info ()
 	/* obskur
 	AI_Output (other, self, "DIA_Wache_PERM_15_00"); //Wer hat hier das Sagen?
 	AI_Output (self, other, "DIA_Wache_PERM_10_01"); //Unser Kommandant Garond und seine beiden Berater, die Paladine Oric und Parcival.
-	AI_Output (self, other, "DIA_Wache_PERM_10_02"); //Geh einfach rein. Tagsber halten sie sich im Thronsaal im Erdgeschoss auf.
+	AI_Output (self, other, "DIA_Wache_PERM_10_02"); //Geh einfach rein. Tagsüber halten sie sich im Thronsaal im Erdgeschoss auf.
 	*/
-	AI_Output (other, self, "DIA_Addon_Wache_PERM_15_00"); //Who's in charge here?
-	AI_Output (self, other, "DIA_Addon_Wache_PERM_10_01"); //Our commander Garond and his two advisors, the paladins Oric and Parcival.
-	AI_Output (self, other, "DIA_Addon_Wache_PERM_10_02"); //Just walk on in. During the day, you can find them in the throne room on the ground floor.
+	AI_Output (other, self, "DIA_Addon_Wache_PERM_15_00"); //Wer hat hier was zu Sagen?
+	AI_Output (self, other, "DIA_Addon_Wache_PERM_10_01"); //Unser Kommandant Garond und seine beiden Berater, die Paladine Oric und Parcival.
+	AI_Output (self, other, "DIA_Addon_Wache_PERM_10_02"); //Geh einfach rein. Tagsüber halten sie sich im Thronsaal im Erdgeschoss auf.
 };
 
 

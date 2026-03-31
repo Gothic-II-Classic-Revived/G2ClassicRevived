@@ -45,15 +45,15 @@ FUNC INT DIA_Jorgen_DI_Hallo_Condition()
 
 FUNC VOID DIA_Jorgen_DI_Hallo_Info()
 {
-	AI_Output (other,self ,"DIA_Jorgen_DI_Hallo_15_00"); //Everything all right?
+	AI_Output (other,self ,"DIA_Jorgen_DI_Hallo_15_00"); //Alles Klar?
 
 	if (ORkSturmDI == FALSE)
 	{
-		AI_Output (self ,other,"DIA_Jorgen_DI_Hallo_07_01"); //Sure enough - just as long as all those monsters stay away from us...
+		AI_Output (self ,other,"DIA_Jorgen_DI_Hallo_07_01"); //Klar doch. Wenn uns die ganzen Ungetüme hier in Ruhe lassen ...
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Jorgen_DI_Hallo_07_02"); //We're not going to survive another orc attack like that. So hurry up - we need to get out of here.
+		AI_Output (self ,other,"DIA_Jorgen_DI_Hallo_07_02"); //Noch so einen Orkangriff werden wir nicht überleben. Also mach schnell, dass wir hier wieder weg können.
 		B_StartOtherRoutine	(Jorgen_DI,"Start");
 	};
 	AI_StopProcessInfos (self);
@@ -83,18 +83,18 @@ func int DIA_Jorgen_DI_UndeadDragonDead_Condition ()
 };
 func void DIA_Jorgen_DI_UndeadDragonDead_Info ()
 {
-	AI_Output			(other ,self, "DIA_Jorgen_DI_UndeadDragonDead_15_00"); //The enemy is dead.
-	AI_Output			(self ,other, "DIA_Jorgen_DI_UndeadDragonDead_07_01"); //That's good news. Is that all we needed to do on this island?
+	AI_Output			(other ,self, "DIA_Jorgen_DI_UndeadDragonDead_15_00"); //Der Feind ist tot.
+	AI_Output			(self ,other, "DIA_Jorgen_DI_UndeadDragonDead_07_01"); //Das sind gute Nachrichten. Haben wir jetzt alles erledigt hier auf den Insel?
 
 	Info_ClearChoices	(DIA_Jorgen_DI_UndeadDragonDead);
 	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "Einen Moment noch.", DIA_Jorgen_DI_UndeadDragonDead_moment );
-	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "Ja. SchluÃŸ jetzt. Lass uns aufbrechen.", DIA_Jorgen_DI_UndeadDragonDead_over );
+	Info_AddChoice	(DIA_Jorgen_DI_UndeadDragonDead, "Ja. Schluß jetzt. Lass uns aufbrechen.", DIA_Jorgen_DI_UndeadDragonDead_over );
 	
 };
 func void DIA_Jorgen_DI_UndeadDragonDead_moment ()
 {
-	AI_Output			(other, self, "DIA_Jorgen_DI_UndeadDragonDead_moment_15_00"); //One more minute. I've still got to take care of something.
-	AI_Output			(self, other, "DIA_Jorgen_DI_UndeadDragonDead_moment_07_01"); //All right. But hurry.
+	AI_Output			(other, self, "DIA_Jorgen_DI_UndeadDragonDead_moment_15_00"); //Einen Moment noch. Ich hab noch etwas zu erledigen.
+	AI_Output			(self, other, "DIA_Jorgen_DI_UndeadDragonDead_moment_07_01"); //Gut. Aber beeil dich.
 	AI_StopProcessInfos (self);
 };
 

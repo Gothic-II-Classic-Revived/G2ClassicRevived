@@ -45,15 +45,15 @@ FUNC INT DIA_Torlof_DI_Hallo_Condition()
 
 FUNC VOID DIA_Torlof_DI_Hallo_Info()
 {
-	AI_Output (other,self ,"DIA_Torlof_DI_Hallo_15_00"); //Everything quiet?
+	AI_Output (other,self ,"DIA_Torlof_DI_Hallo_15_00"); //Alles ruhig?
 
 	if (ORkSturmDI == FALSE)
 	{
-		AI_Output (self ,other,"DIA_Torlof_DI_Hallo_01_01"); //So far. But that could change in an instant. Watch your back.
+		AI_Output (self ,other,"DIA_Torlof_DI_Hallo_01_01"); //Bisher noch. Aber das kann sich hier schlagartig ändern. Pass auf deinen Rücken auf.
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Torlof_DI_Hallo_01_02"); //If those miserable orcs stay where they are, I don't see a problem.
+		AI_Output (self ,other,"DIA_Torlof_DI_Hallo_01_02"); //Wenn diese elenden Orks bloß bleiben, wo sie sind, sehe ich kein Problem.
 		B_StartOtherRoutine	(Torlof_DI,"Start");
 	};
 	AI_StopProcessInfos (self);
@@ -70,7 +70,7 @@ INSTANCE DIA_Torlof_DI_Teach (C_INFO)
 	condition	= DIA_Torlof_DI_Teach_Condition;
 	information	= DIA_Torlof_DI_Teach_Info;
 	permanent	= TRUE;
-	description = "Ich will meine FÃ¤higkeiten verbessern!";
+	description = "Ich will meine Fähigkeiten verbessern!";
 };                       
 
 FUNC INT DIA_Torlof_DI_Teach_Condition()
@@ -83,7 +83,7 @@ FUNC INT DIA_Torlof_DI_Teach_Condition()
  
 FUNC VOID DIA_Torlof_DI_Teach_Info()
 {	
-	AI_Output (other,self ,"DIA_Torlof_DI_Teach_15_00"); //I want to improve my abilities!
+	AI_Output (other,self ,"DIA_Torlof_DI_Teach_15_00"); //Ich will meine Fähigkeiten verbessern!
 	
 	Info_ClearChoices (DIA_Torlof_DI_Teach); 
 	Info_AddChoice		(DIA_Torlof_DI_Teach, DIALOG_BACK, DIA_Torlof_DI_Teach_Back);
@@ -168,8 +168,8 @@ func int DIA_Torlof_DI_UndeadDragonDead_Condition ()
 };
 func void DIA_Torlof_DI_UndeadDragonDead_Info ()
 {
-	AI_Output			(other ,self, "DIA_Torlof_DI_UndeadDragonDead_15_00"); //I've eliminated the enemy.
-	AI_Output			(self ,other, "DIA_Torlof_DI_UndeadDragonDead_01_01"); //I didn't expect anything else. How's it look? Can we finally leave now?
+	AI_Output			(other ,self, "DIA_Torlof_DI_UndeadDragonDead_15_00"); //Ich habe den Feind eliminiert.
+	AI_Output			(self ,other, "DIA_Torlof_DI_UndeadDragonDead_01_01"); //Ich habe auch nichts anderes erwartet. Wie sieht's aus? Können wir jetzt endlich abhauen?
 
 	Info_ClearChoices	(DIA_Torlof_DI_UndeadDragonDead);
 	Info_AddChoice	(DIA_Torlof_DI_UndeadDragonDead, "Ich brauche noch einen Moment.", DIA_Torlof_DI_UndeadDragonDead_moment );
@@ -178,8 +178,8 @@ func void DIA_Torlof_DI_UndeadDragonDead_Info ()
 };
 func void DIA_Torlof_DI_UndeadDragonDead_moment ()
 {
-	AI_Output			(other, self, "DIA_Torlof_DI_UndeadDragonDead_moment_15_00"); //I'll need another minute or two.
-	AI_Output			(self, other, "DIA_Torlof_DI_UndeadDragonDead_moment_01_01"); //Hurry up!
+	AI_Output			(other, self, "DIA_Torlof_DI_UndeadDragonDead_moment_15_00"); //Ich brauche noch einen Moment.
+	AI_Output			(self, other, "DIA_Torlof_DI_UndeadDragonDead_moment_01_01"); //Mach schnell!
 	AI_StopProcessInfos (self);
 };
 

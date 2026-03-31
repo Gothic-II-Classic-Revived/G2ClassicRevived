@@ -26,9 +26,9 @@ FUNC int ZS_Pick_Ore_Loop ()
 {
 	// ------ Erz Picken ------
 	if (!C_BodyStateContains(self, BS_MOBINTERACT_INTERRUPT))
-	&& (Wld_IsMobAvailable(self,"Erz"))
+	&& (Wld_IsMobAvailable(self,"ORE"))
 	{
-		AI_UseMob (self, "Erz", 1);		
+		AI_UseMob (self, "ORE", 1);		
 	};
 	
 	return LOOP_CONTINUE;
@@ -36,7 +36,7 @@ FUNC int ZS_Pick_Ore_Loop ()
 
 FUNC VOID ZS_Pick_Ore_End ()
 {
-	AI_UseMob (self, "Erz", -1);
+	AI_UseMob (self, "ORE", -1);
 };
 
 

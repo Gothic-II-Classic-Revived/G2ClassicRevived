@@ -75,6 +75,6 @@ FUNC VOID DIA_GornNW_WhatNext_Info()
 	AI_Output (other,self ,"DIA_GornNW_Add_15_05"); //Was willst du jetzt machen?
 	AI_Output (self ,other,"DIA_GornNW_Add_12_06"); //Ich denke, ich werde mir erst mal den Bauch vollschlagen.
 	AI_Output (other,self ,"DIA_GornNW_Add_15_07"); //Und weiter?
-	AI_Output (self ,other,"DIA_GornNW_Add_12_08"); //Mal sehen... Vielleicht geh ich in die Minenkolonie zurÃ¼ck.
-	AI_Output (self ,other,"DIA_GornNW_Add_12_09"); //Jemand sollte ein Auge auf die Orks werfen - sonst stehen sie plÃ¶tzlich ohne Warnung alle hier vor der TÃ¼r.
+	AI_Output (self ,other,"DIA_GornNW_Add_12_08"); //Mal sehen... Vielleicht geh ich in die Minenkolonie zurück.
+	AI_Output (self ,other,"DIA_GornNW_Add_12_09"); //Jemand sollte ein Auge auf die Orks werfen - sonst stehen sie plötzlich ohne Warnung alle hier vor der Tür.
 };

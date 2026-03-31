@@ -1,7 +1,7 @@
 instance BDT_1024_MalethsBandit (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "BanditenanfÃ¼hrer"; 
+	name 		= "Banditenanführer"; 
 	guild 		= GIL_BDT;
 	id 			= 1024;
 	voice 		= 13;

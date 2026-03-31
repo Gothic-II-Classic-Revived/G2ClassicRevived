@@ -67,24 +67,24 @@ FUNC VOID DIA_Hagen_PMSchulden_Info()
 		
 		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_01"); //Du nimmst die Gesetze der Stadt nicht ernst, was?
-		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_02"); //Die Liste deiner Straftaten ist lÃ¤nger geworden.
+		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_02"); //Die Liste deiner Straftaten ist länger geworden.
 		if (Hagen_Schulden < 1000)
 		{
 			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_03"); //Und sag mir nicht, du wusstest das nicht!
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_04"); //Du wirst die HÃ¶chststrafe bezahlen.
+			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_04"); //Du wirst die Höchststrafe bezahlen.
 			B_Say_Gold (self, other, Hagen_Schulden);
 		};
 	}
 	else if (B_GetGreatestPetzCrime(self) < Hagen_LastPetzCrime)
 	{
-		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_05"); //Nun, wie es scheint, hat sich die Situation geÃ¤ndert.
+		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_05"); //Nun, wie es scheint, hat sich die Situation geändert.
 		
 		if (Hagen_LastPetzCrime == CRIME_MURDER)
 		{
-			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_06"); //Es gibt keinen Zeugen mehr fÃ¼r deinen Mord!
+			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_06"); //Es gibt keinen Zeugen mehr für deinen Mord!
 		};
 		
 		if (Hagen_LastPetzCrime == CRIME_THEFT)
@@ -96,16 +96,16 @@ FUNC VOID DIA_Hagen_PMSchulden_Info()
 		if (Hagen_LastPetzCrime == CRIME_ATTACK)
 		|| ( (Hagen_LastPetzCrime > CRIME_ATTACK) && (B_GetGreatestPetzCrime(self) < CRIME_ATTACK) )
 		{
-			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_08"); //FÃ¼r deine SchlÃ¤gerei findet sich kein Zeuge mehr.
+			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_08"); //Für deine Schlägerei findet sich kein Zeuge mehr.
 		};
 		
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
-			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_09"); //SÃ¤mtliche Anklagen gegen dich sind nicht mehr haltbar.
+			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_09"); //Sämtliche Anklagen gegen dich sind nicht mehr haltbar.
 		};
 		
-		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_10"); //Ich weiÃŸ ja nicht, was da in der Stadt gelaufen ist - und ich will es auch gar nicht wissen.
-		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_11"); //Sorge einfach dafÃ¼r, dass du hier keinen Ã„rger bekommst.
+		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_10"); //Ich weiß ja nicht, was da in der Stadt gelaufen ist - und ich will es auch gar nicht wissen.
+		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_11"); //Sorge einfach dafür, dass du hier keinen Ärger bekommst.
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
@@ -118,7 +118,7 @@ FUNC VOID DIA_Hagen_PMSchulden_Info()
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_14"); //Deine Strafe wirst du trotzdem in voller HÃ¶he zahlen.
+			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_14"); //Deine Strafe wirst du trotzdem in voller Höhe zahlen.
 			B_Say_Gold (self, other, Hagen_Schulden);
 			AI_Output (self, other, "DIA_Hagen_PMSchulden_04_15"); //Also, willst du bezahlen?
 		};
@@ -178,26 +178,26 @@ FUNC INT DIA_Hagen_PETZMASTER_Condition()
 };
 FUNC VOID DIA_Hagen_PETZMASTER_Info()
 {
-	Hagen_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime hher ist...
+	Hagen_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
 	
 	// ------ SC hat mit Hagen noch nicht gesprochen ------
 	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_00"); //Dein Ruf eilt dir voraus. Du hast gegen die Gesetze der Stadt verstoÃŸen.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_00"); //Dein Ruf eilt dir voraus. Du hast gegen die Gesetze der Stadt verstoßen.
 	};
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
 	{
 		B_SetAttitude (self, ATT_ANGRY);
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_01"); //Du hast dir ganz schÃ¶n was eingebrockt.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_01"); //Du hast dir ganz schön was eingebrockt.
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_02"); //Mord ist ein schweres Vergehen!
 		Hagen_Schulden = (B_GetTotalPetzCounter(self) * 50); 		//Anzahl der Zeugen * 50
-		Hagen_Schulden = Hagen_Schulden + 500;						//PLUS Mrder-Malus
+		Hagen_Schulden = Hagen_Schulden + 500;						//PLUS Mörder-Malus
 		if ((PETZCOUNTER_City_Theft + PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
 		{
 			AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_03"); //Abgesehen von deinen anderen Straftaten.
 		};
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_04"); //Die Wachen haben Befehl, jeden MÃ¶rder auf der Stelle zu richten.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_04"); //Die Wachen haben Befehl, jeden Mörder auf der Stelle zu richten.
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_05"); //Niemand will, dass hier in der Stadt gemordet wird. Aber du kannst deine Reue zeigen, indem du deine Strafe zahlst.
 
 	};
@@ -207,33 +207,33 @@ FUNC VOID DIA_Hagen_PETZMASTER_Info()
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_06"); //Du bist des Diebstahls angeklagt!
 		if ((PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
 		{
-			AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_07"); //Abgesehen von den anderen Dingen, die ich gehÃ¶rt habe.
+			AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_07"); //Abgesehen von den anderen Dingen, die ich gehört habe.
 		};
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_08"); //Das ist ein VerstoÃŸ gegen die Gesetze der Stadt. Du wirst eine Strafe dafÃ¼r zahlen.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_08"); //Das ist ein Verstoß gegen die Gesetze der Stadt. Du wirst eine Strafe dafür zahlen.
 		
 		Hagen_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_09"); //Du bist in eine SchlÃ¤gerei verwickelt gewesen. Damit hast du gegen die Gesetze gehandelt.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_09"); //Du bist in eine Schlägerei verwickelt gewesen. Damit hast du gegen die Gesetze gehandelt.
 		
 		if (PETZCOUNTER_City_Sheepkiller > 0)
 		{
 			AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_10"); //Und was sollte das mit den Schafen?
 		};
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_11"); //Ein VerstoÃŸ gegen die Gesetze der Stadt - ist ein VerstoÃŸ gegen die Gesetze Innos'.
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_12"); //Also wirst du dafÃ¼r bezahlen.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_11"); //Ein Verstoß gegen die Gesetze der Stadt - ist ein Verstoß gegen die Gesetze Innos'.
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_12"); //Also wirst du dafür bezahlen.
 		
 		Hagen_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
 	
-	// ------ Schaf gettet (nahezu uninteressant - in der City gibt es keine Schafe) ------
+	// ------ Schaf getötet (nahezu uninteressant - in der City gibt es keine Schafe) ------
 	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
 	{
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_13"); //Du hast dich an unseren Schafen vergriffen - das wollte ich erst gar nicht glauben.
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_14"); //Warum muss ich mich mit solchen Lappalien beschÃ¤ftigen?
-		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_15"); //Du wirst eine EntschÃ¤digung zahlen mÃ¼ssen!
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_14"); //Warum muss ich mich mit solchen Lappalien beschäftigen?
+		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_15"); //Du wirst eine Entschädigung zahlen müssen!
 		
 		Hagen_Schulden = 100;
 	};
@@ -260,7 +260,7 @@ func void DIA_Hagen_PETZMASTER_PayNow()
 	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
 		B_SetAttitude (self, ATT_NEUTRAL);
 	};
-	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayNow_04_01"); //Gut! Ich werde dafÃ¼r sorgen, dass es jeder in der Stadt erfÃ¤hrt - damit wÃ¤re dein Ruf einigermaÃŸen wiederhergestellt.
+	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayNow_04_01"); //Gut! Ich werde dafür sorgen, dass es jeder in der Stadt erfährt - damit wäre dein Ruf einigermaßen wiederhergestellt.
 
 	B_GrantAbsolution (LOC_CITY);
 	
@@ -275,8 +275,8 @@ func void DIA_Hagen_PETZMASTER_PayNow()
 func void DIA_Hagen_PETZMASTER_PayLater()
 {
 	AI_Output (other, self, "DIA_Hagen_PETZMASTER_PayLater_15_00"); //Ich habe nicht genug Gold!
-	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_01"); //Dann sieh zu, dass du das Gold so schnell wie mÃ¶glich beschaffst.
-	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_02"); //Und ich warne dich: Wenn du dir noch was zu schulden kommen lÃ¤sst, wird die Sache noch schlimmer fÃ¼r dich!
+	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_01"); //Dann sieh zu, dass du das Gold so schnell wie möglich beschaffst.
+	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayLater_04_02"); //Und ich warne dich: Wenn du dir noch was zu schulden kommen lässt, wird die Sache noch schlimmer für dich!
 	
 	Hagen_LastPetzCounter 	= B_GetTotalPetzCounter(self);
 	Hagen_LastPetzCrime		= B_GetGreatestPetzCrime(self);
@@ -306,16 +306,16 @@ func int DIA_Lord_Hagen_Hallo_Condition ()
 };
 func void DIA_Lord_Hagen_Hallo_Info ()
 {
-	AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_00"); //Ich habe schon von dir gehÃ¶rt.
+	AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_00"); //Ich habe schon von dir gehört.
 	if (Npc_KnowsInfo (other, DIA_Lothar_EyeInnos))
 	|| (Andre_EyeInnos == TRUE)
 	{
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_03"); //Lothar hat mir berichtet, daÃŸ du mich sprechen willst.
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_03"); //Lothar hat mir berichtet, daß du mich sprechen willst.
 		AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_01"); //Du bist der Fremde, der das Auge Innos' gefordert hat.
 	};
 	
 	AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_02"); //Ich bin Lord Hagen.
-	AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_03"); //Paladin des KÃ¶nigs, Streiter unseres Herrn Innos und oberster Befehlshaber von Khorinis.
+	AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_03"); //Paladin des Königs, Streiter unseres Herrn Innos und oberster Befehlshaber von Khorinis.
 	AI_Output (self, other, "DIA_Lord_Hagen_Hallo_04_04"); //Ich habe viel zu tun. Also verschwende nicht meine Zeit, sondern sag mir, warum du hier bist.
 };
 
@@ -329,7 +329,7 @@ INSTANCE DIA_Lord_Hagen_Frieden (C_INFO)
 	condition	 = 	DIA_Lord_Hagen_Frieden_Condition;
 	information	 = 	DIA_Lord_Hagen_Frieden_Info;
 	permanent	 = 	FALSE;
-	description	 =  "Ich bringe ein Friedensangebot der SÃ¶ldner!";
+	description	 =  "Ich bringe ein Friedensangebot der Söldner!";
 };
 func int DIA_Lord_Hagen_Frieden_Condition ()
 {	
@@ -341,20 +341,20 @@ func int DIA_Lord_Hagen_Frieden_Condition ()
 };
 func void DIA_Lord_Hagen_Frieden_Info ()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Frieden_15_00"); //Ich bringe ein Friedensangebot der SÃ¶ldner!
+	AI_Output (other, self, "DIA_Lord_Hagen_Frieden_15_00"); //Ich bringe ein Friedensangebot der Söldner!
 	B_GiveInvItems (other, self, itwr_Passage_MIS, 1);
 	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_01"); //(brummig) Hm - zeig' her!
 	B_UseFakeScroll ();
-	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_02"); //Ich kenne General Lee. Ich kenne auch die UmstÃ¤nde, unter denen er damals zur Strafarbeit in der Kolonie verurteilt wurde.
-	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_03"); //Ich halte ihn fÃ¼r einen ehrenhaften Mann. Ich bin bereit, ihm Absolution zu erteilen - nur ihm!
-	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_04"); //FÃ¼r seine MÃ¤nner gilt das nicht. Die meisten von ihnen sind ehrlose Halsabschneider und haben ihre Strafe verdient!
+	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_02"); //Ich kenne General Lee. Ich kenne auch die Umstände, unter denen er damals zur Strafarbeit in der Kolonie verurteilt wurde.
+	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_03"); //Ich halte ihn für einen ehrenhaften Mann. Ich bin bereit, ihm Absolution zu erteilen - nur ihm!
+	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_04"); //Für seine Männer gilt das nicht. Die meisten von ihnen sind ehrlose Halsabschneider und haben ihre Strafe verdient!
 	AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_05"); //Ihnen werde ich garantiert keine Absolution erteilen. Richte ihm das aus.
 	Hagen_FriedenAbgelehnt = TRUE;
 	if (!Npc_KnowsInfo (other, DIA_Lord_Hagen_Armee))
 	{
 		AI_Output (self, other, "DIA_Lord_Hagen_Frieden_04_06"); //War das alles?
 	};
-	B_LogEntry (Topic_Frieden,"Lord Hagen ist breit, Lee Aboslution zu erteilen. Aber keinem anderen der SÃ¶ldner."); 
+	B_LogEntry (Topic_Frieden,"Lord Hagen ist breit, Lee Aboslution zu erteilen. Aber keinem anderen der Söldner."); 
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -367,7 +367,7 @@ INSTANCE DIA_Lord_Hagen_Armee (C_INFO)
 	condition	 = 	DIA_Lord_Hagen_Armee_Condition;
 	information	 = 	DIA_Lord_Hagen_Armee_Info;
 	permanent	 = 	FALSE;
-	description	 =  "Die Armeen des BÃ¶sen versammeln sich ganz in unserer NÃ¤he.";
+	description	 =  "Die Armeen des Bösen versammeln sich ganz in unserer Nähe.";
 };
 func int DIA_Lord_Hagen_Armee_Condition ()
 {	
@@ -379,20 +379,20 @@ func int DIA_Lord_Hagen_Armee_Condition ()
 };
 func void DIA_Lord_Hagen_Armee_Info ()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Armee_15_00"); //Die Armeen des BÃ¶sen versammeln sich ganz in unserer NÃ¤he.
+	AI_Output (other, self, "DIA_Lord_Hagen_Armee_15_00"); //Die Armeen des Bösen versammeln sich ganz in unserer Nähe.
 	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_01"); //Im Minental? Wir haben eine Expedition dorthin entsandt. Wir kennen ebenfalls Berichte, die besagen, dass der Pass dorthin von Orks besetzt ist.
-	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_02"); //Aber von einer Armee des BÃ¶sen ist bisher nichts zu mir vorgedrungen.
+	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_02"); //Aber von einer Armee des Bösen ist bisher nichts zu mir vorgedrungen.
 	if (Npc_KnowsInfo (other, DIA_Lord_Hagen_Frieden))
 	{
-		AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_03"); //Ist das nur ein Trick, der mich glauben lassen soll, es wÃ¤re nÃ¶tig, eine Allianz mit den SÃ¶ldnern einzugehen?
+		AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_03"); //Ist das nur ein Trick, der mich glauben lassen soll, es wäre nötig, eine Allianz mit den Söldnern einzugehen?
 		AI_Output (other, self, "DIA_Lord_Hagen_Armee_15_04"); //Nein.
 	};
-	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_05"); //(skeptisch) Was fÃ¼r eine Armee soll das sein?
+	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_05"); //(skeptisch) Was für eine Armee soll das sein?
 	AI_Output (other, self, "DIA_Lord_Hagen_Armee_15_06"); //Es sind Drachen, die Scharen von Dienerkreaturen um sich versammeln.
 	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_07"); //Drachen? Laut der alten Schriften ist es viele Jahrhunderte her, dass Drachen das letzte Mal gesichtet wurden.
 	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_08"); //Sag mir - warum sollte ich deinen Worten Glauben schenken?
 	AI_Output (other, self, "DIA_Lord_Hagen_Armee_15_09"); //Die Frage ist doch nicht, ob du mir glauben kannst. Die Frage ist, kannst du es dir leisten, mir NICHT zu glauben, wenn ich die Wahrheit sage.
-	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_10"); //Solange ich keinen Beweis habe, kann ich mir nicht leisten, noch mehr MÃ¤nner dorthin zu schicken.
+	AI_Output (self, other, "DIA_Lord_Hagen_Armee_04_10"); //Solange ich keinen Beweis habe, kann ich mir nicht leisten, noch mehr Männer dorthin zu schicken.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -422,11 +422,11 @@ func void DIA_Lord_Hagen_Proof_Info ()
 	IF (hero.guild != GIL_NONE)
 	&& (hero.guild != GIL_NOV)
 	{
-		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_01"); //Genau. Ãœberquere den Pass und mache dich auf den Weg ins Minental. Suche dort nach der Expedition - und wenn du sie gefunden hast, sprich mit Kommandant Garond.
-		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_02"); //Wenn jemand weiÃŸ, wie die Situation vor Ort ist, dann er.
-		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_03"); //Falls sich deine Worte bestÃ¤tigen, dann bin ich bereit, dir zu helfen.
-		AI_Output (other, self, "DIA_Lord_Hagen_Proof_15_04"); //Das heiÃŸt, du wirst mir das Auge Innos' aushÃ¤ndigen?
-		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_05"); //Das Auge Innos' ... gut. Bring mir den Beweis, dann sorge ich dafÃ¼r, dass es dir gestattet wird, das Amulett anzulegen.
+		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_01"); //Genau. Überquere den Pass und mache dich auf den Weg ins Minental. Suche dort nach der Expedition - und wenn du sie gefunden hast, sprich mit Kommandant Garond.
+		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_02"); //Wenn jemand weiß, wie die Situation vor Ort ist, dann er.
+		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_03"); //Falls sich deine Worte bestätigen, dann bin ich bereit, dir zu helfen.
+		AI_Output (other, self, "DIA_Lord_Hagen_Proof_15_04"); //Das heißt, du wirst mir das Auge Innos' aushändigen?
+		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_05"); //Das Auge Innos' ... gut. Bring mir den Beweis, dann sorge ich dafür, dass es dir gestattet wird, das Amulett anzulegen.
 		AI_Output (other, self, "DIA_Lord_Hagen_Proof_15_06"); //Dann kann ich sagen, ich habe dein Wort in dieser Sache?
 		AI_Output (self, other, "DIA_Lord_Hagen_Proof_04_07"); //Das kannst du - denn du hast es.
 		Hagen_BringProof = TRUE;
@@ -454,7 +454,7 @@ INSTANCE DIA_Lord_Hagen_Auge (C_INFO)
 	condition	 = 	DIA_Lord_Hagen_Auge_Condition;
 	information	 = 	DIA_Lord_Hagen_Auge_Info;
 	permanent	 = 	FALSE;
-	description	 =  "Was weiÃŸt du Ã¼ber das Auge Innos'?";
+	description	 =  "Was weißt du über das Auge Innos'?";
 };
 func int DIA_Lord_Hagen_Auge_Condition ()
 {	
@@ -462,14 +462,14 @@ func int DIA_Lord_Hagen_Auge_Condition ()
 };
 func void DIA_Lord_Hagen_Auge_Info ()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Auge_15_00"); //Was weiÃŸt du Ã¼ber das Auge Innos'?
-	AI_Output (self, other, "DIA_Lord_Hagen_Auge_04_01"); //Es ist ein gÃ¶ttliches Artefakt. (nachdenklich) In den alten Prophezeiungen wird es im Zusammenhang mit Drachen erwÃ¤hnt.
-	AI_Output (self, other, "DIA_Lord_Hagen_Auge_04_02"); //Doch die Schriften sagen auch, dass nur ein ErwÃ¤hlter Innos' es tragen kann.
+	AI_Output (other, self, "DIA_Lord_Hagen_Auge_15_00"); //Was weißt du über das Auge Innos'?
+	AI_Output (self, other, "DIA_Lord_Hagen_Auge_04_01"); //Es ist ein göttliches Artefakt. (nachdenklich) In den alten Prophezeiungen wird es im Zusammenhang mit Drachen erwähnt.
+	AI_Output (self, other, "DIA_Lord_Hagen_Auge_04_02"); //Doch die Schriften sagen auch, dass nur ein Erwählter Innos' es tragen kann.
 	
 	if (other.guild == GIL_KDF)
 	{
-		AI_Output (other, self, "DIA_Lord_Hagen_Auge_15_03"); //Ich BIN ein ErwÃ¤hlter Innos'!
-		AI_Output (self, other, "DIA_Lord_Hagen_Auge_04_04"); //Dann wird es dir vielleicht mÃ¶glich sein, das Amulett anzulegen.
+		AI_Output (other, self, "DIA_Lord_Hagen_Auge_15_03"); //Ich BIN ein Erwählter Innos'!
+		AI_Output (self, other, "DIA_Lord_Hagen_Auge_04_04"); //Dann wird es dir vielleicht möglich sein, das Amulett anzulegen.
 	};
 };
 
@@ -483,7 +483,7 @@ INSTANCE DIA_Lord_Hagen_Pass (C_INFO)
 	condition	 = 	DIA_Lord_Hagen_Pass_Condition;
 	information	 = 	DIA_Lord_Hagen_Pass_Info;
 	permanent	 = 	FALSE;
-	description	 =  "Wie soll ich Ã¼ber den Pass kommen?";
+	description	 =  "Wie soll ich über den Pass kommen?";
 };
 func int DIA_Lord_Hagen_Pass_Condition ()
 {	
@@ -495,9 +495,9 @@ func int DIA_Lord_Hagen_Pass_Condition ()
 };
 func void DIA_Lord_Hagen_Pass_Info ()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Pass_15_00"); //Wie soll ich Ã¼ber den Pass kommen?
-	AI_Output (self, other, "DIA_Lord_Hagen_Pass_04_01"); //Ich gebe dir den SchlÃ¼ssel fÃ¼r das Tor am Pass. Doch du wirst deinen Weg durch die Reihen der Orks finden mÃ¼ssen.
-	AI_Output (self, other, "DIA_Lord_Hagen_Pass_04_02"); //MÃ¶ge Innos dich schÃ¼tzen.
+	AI_Output (other, self, "DIA_Lord_Hagen_Pass_15_00"); //Wie soll ich über den Pass kommen?
+	AI_Output (self, other, "DIA_Lord_Hagen_Pass_04_01"); //Ich gebe dir den Schlüssel für das Tor am Pass. Doch du wirst deinen Weg durch die Reihen der Orks finden müssen.
+	AI_Output (self, other, "DIA_Lord_Hagen_Pass_04_02"); //Möge Innos dich schützen.
 		
 	AI_StopProcessInfos (self);
 	MIS_OLDWORLD = LOG_RUNNING;
@@ -507,14 +507,14 @@ func void DIA_Lord_Hagen_Pass_Info ()
 	
 	Log_CreateTopic (Topic_MISOLDWORLD,LOG_MISSION);
 	Log_SetTopicStatus (Topic_MISOLDWORLD,LOG_RUNNING);
-	B_LogEntry (Topic_MISOLDWORLD,"Lord Hagen will, dass ich ihm Beweise fÃ¼r die Armee des BÃ¶sen bringe. Ich werde in's Minental aufbrechen und dort mit Komandant Garond sprechen.");
+	B_LogEntry (Topic_MISOLDWORLD,"Lord Hagen will, dass ich ihm Beweise für die Armee des Bösen bringe. Ich werde in's Minental aufbrechen und dort mit Komandant Garond sprechen.");
 	
 	if (Fernando_ImKnast == FALSE)
 	{
 		B_StartOtherRoutine (Fernando,"WAIT"); 
 	};
 	
-	Wld_InsertNpc (BDT_1020_Wegelagerer, "NW_TROLLAREA_PATH_47");	//Joly: //ADDON strt dann nicht mehr
+	Wld_InsertNpc (BDT_1020_Wegelagerer, "NW_TROLLAREA_PATH_47");	//Joly: //ADDON stört dann nicht mehr
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -540,7 +540,7 @@ func int DIA_Lord_Hagen_Khorinis_Condition ()
 func void DIA_Lord_Hagen_Khorinis_Info ()
 {
 	AI_Output (other, self, "DIA_Lord_Hagen_Khorinis_15_00"); //Warum seid ihr nach Khorinis gekommen?
-	AI_Output (self, other, "DIA_Lord_Hagen_Khorinis_04_01"); //Wir sind in wichtiger Mission fÃ¼r das KÃ¶nigreich unterwegs. Unser Befehl kommt direkt von KÃ¶nig Rhobar.
+	AI_Output (self, other, "DIA_Lord_Hagen_Khorinis_04_01"); //Wir sind in wichtiger Mission für das Königreich unterwegs. Unser Befehl kommt direkt von König Rhobar.
 	AI_Output (self, other, "DIA_Lord_Hagen_Khorinis_04_02"); //Ich sagte dir, dass wir eine Expedition ins Minental geschickt haben. Sie ist der Grund unserer Anwesenheit.
 };
 
@@ -554,7 +554,7 @@ INSTANCE DIA_Lord_Hagen_Minental (C_INFO)
 	condition	 = 	DIA_Lord_Hagen_Minental_Condition;
 	information	 = 	DIA_Lord_Hagen_Minental_Info;
 	permanent	 = 	TRUE;
-	description	 =  "Was machen deine MÃ¤nner im Minental?";
+	description	 =  "Was machen deine Männer im Minental?";
 };
 func int DIA_Lord_Hagen_Minental_Condition ()
 {	
@@ -566,7 +566,7 @@ func int DIA_Lord_Hagen_Minental_Condition ()
 };
 func void DIA_Lord_Hagen_Minental_Info ()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Minental_15_00"); //Was machen deine MÃ¤nner im Minental?
+	AI_Output (other, self, "DIA_Lord_Hagen_Minental_15_00"); //Was machen deine Männer im Minental?
 
 	if (Hagen_BringProof == FALSE)
 	{
@@ -580,15 +580,15 @@ func void DIA_Lord_Hagen_Minental_Info ()
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_03"); //Na schÃ¶n, da du ohnehin dorthin gehen wirst, kann ich es dir ebenso gut verraten.
+			AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_03"); //Na schön, da du ohnehin dorthin gehen wirst, kann ich es dir ebenso gut verraten.
 		};
-		AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_04"); //Der Grund dafÃ¼r ist das magische Erz. Es ist von kriegsentscheidender Wichtigkeit.
-		AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_05"); //Ohne genÃ¼gend Waffen aus magischem Erz hat die Armee des KÃ¶nigs nicht die geringste Chance gegen die Elitekrieger der Orks.
+		AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_04"); //Der Grund dafür ist das magische Erz. Es ist von kriegsentscheidender Wichtigkeit.
+		AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_05"); //Ohne genügend Waffen aus magischem Erz hat die Armee des Königs nicht die geringste Chance gegen die Elitekrieger der Orks.
 		if (other.guild != GIL_SLD)
 		{
 			AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_06"); //Und die Erzminen hier auf der Insel sind die letzten, zu denen wir noch Zugang haben.
 		};
-		AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_07"); //Sobald unser Schiff voll mit Erz beladen ist, werden wir aufs Festland zurÃ¼ckkehren.
+		AI_Output (self, other, "DIA_Lord_Hagen_Minental_04_07"); //Sobald unser Schiff voll mit Erz beladen ist, werden wir aufs Festland zurückkehren.
 		KnowsPaladins_Ore = TRUE;
 		
 		AI_Output (other, self, "DIA_Lord_Hagen_Minental_15_08"); //Dann steht der Krieg mit den Orks schlecht?
@@ -624,7 +624,7 @@ func void DIA_Hagen_CanTeach_Info ()
 	AI_Output (self, other, "DIA_Hagen_CanTeach_04_01"); //So? Du hast einen gefunden.
 	
 	LordHagen_Teach2H = TRUE;
-	B_LogEntry (TOPIC_CityTeacher,"Lord Hagen kann mich im Kampf mit ZweihÃ¤ndern unterweisen.");
+	B_LogEntry (TOPIC_CityTeacher,"Lord Hagen kann mich im Kampf mit Zweihändern unterweisen.");
 };
 //**************************************
 //			Ich will trainieren
@@ -652,7 +652,7 @@ FUNC INT DIA_Hagen_Teach_Condition()
  
 FUNC VOID DIA_Hagen_Teach_Info()
 {	
-	AI_Output (other,self ,"DIA_Hagen_Teach_15_00"); //Let us begin.
+	AI_Output (other,self ,"DIA_Hagen_Teach_15_00"); //Lass uns beginnen.
 	
 	Info_ClearChoices 	(DIA_Hagen_Teach);
 	Info_AddChoice 		(DIA_Hagen_Teach,	DIALOG_BACK		,DIA_Hagen_Teach_Back);
@@ -664,8 +664,8 @@ FUNC VOID DIA_Hagen_Teach_Back ()
 {
 	if (other.HitChance[NPC_TALENT_2H] >= 100)
 	{
-		AI_Output (self,other,"DIA_Hagen_Teach_04_00"); //You are now a worthy swordmaster. I can teach you no more.
-		AI_Output (self,other,"DIA_Hagen_Teach_04_01"); //May your future deeds be guided by the wisdom of a swordmaster.
+		AI_Output (self,other,"DIA_Hagen_Teach_04_00"); //Du bist jetzt ein würdiger Schwertmeister. Ich kann dir nichts mehr beibringen.
+		AI_Output (self,other,"DIA_Hagen_Teach_04_01"); //Mögen deine zukünftigen Taten von der Weisheit eines Schwertmeisters gelenkt werden.
 		DIA_Hagen_Teach_permanent = TRUE;
 	};
 	Info_ClearChoices (DIA_Hagen_Teach);
@@ -721,13 +721,13 @@ FUNC INT DIA_Lord_Hagen_Knight_Condition ()
 
 FUNC VOID DIA_Lord_Hagen_Knight_Info ()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_Knight_15_00"); //I want to take up service with the order.
+	AI_Output			(other, self, "DIA_Lord_Hagen_Knight_15_00"); //Ich will mich in den Dienst des Ordens stellen.
 	
 	if (MIS_RescueBennet == LOG_SUCCESS)
 	{
-		AI_Output			(self, other, "DIA_Lord_Hagen_Knight_04_01"); //Good, you have proven that you have the courage, the skill and the knowledge to serve Innos.
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_02"); //Your deeds bear witness to a pure heart.
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_03"); //If it is your wish, then I shall bid you welcome to our order.
+		AI_Output			(self, other, "DIA_Lord_Hagen_Knight_04_01"); //Gut, du hast bewiesen, dass du den Mut, das Können und das Gewissen hast, Innos zu dienen.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_02"); //Deine Taten sind Zeugnis deines reinen Herzen.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_03"); //Wenn es dein Wunsch ist, dann werde ich dich in unserem Orden willkommen heißen.
 		
 		Info_ClearChoices (DIA_Lord_Hagen_Knight);
 		Info_AddChoice (DIA_Lord_Hagen_Knight,"Ich bin mir noch nicht sicher.",DIA_Lord_Hagen_Knight_No);
@@ -735,9 +735,9 @@ FUNC VOID DIA_Lord_Hagen_Knight_Info ()
 	}
 	else
 	{
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_04"); //To be a warrior of Innos means to devote yourself entirely to the cause of Innos.
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_05"); //Only the noblest and bravest warriors are accepted into our order.
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_06"); //If you are truly determined to become a paladin, you must prove that you are worthy.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_04"); //Ein Kämpfer Innos' zu sein bedeutet, sich ganz und gar in die Sache Innos' zu stellen.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_05"); //Nur die edelsten und mutigsten Recken werden in unserem Orden aufgenommen.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Knight_04_06"); //Wenn du wirklich die Absicht hast, ein Paladin zu werden, musst du beweisen, dass du würdig bist.
 	};
 	
 	Hagen_GaveInfoKnight = TRUE;	
@@ -745,21 +745,21 @@ FUNC VOID DIA_Lord_Hagen_Knight_Info ()
 
 FUNC VOID DIA_Lord_Hagen_Knight_No ()
 {
-	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_No_15_00"); //I'm not quite sure yet.
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_No_04_01"); //Then go and free your heart of doubt. Return when you are prepared.
+	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_No_15_00"); //Ich bin mir noch nicht sicher.
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_No_04_01"); //Dann gehe und befreie dein Herz von den Zweifeln. Kehre zurück, wenn du bereit bist.
 
 	Info_ClearChoices (DIA_Lord_Hagen_Knight);
 };
 
 FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 {
-	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_Yes_15_00"); //I am ready!
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_01"); //(serious) Then so shall it be!
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_02"); //(serious) Many men have taken this path and given their lives in the name of Innos.
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_03"); //(serious) Do you swear that your deeds will honor their deaths and proclaim the fame of Innos?
-	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_Yes_15_04"); //I swear!
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_05"); //Then, from now on, you are a member of our fellowship.
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_06"); //I hereby appoint you a warrior of Innos.
+	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_Yes_15_00"); //Ich bin bereit!
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_01"); //(ernst) Dann soll es so sein!
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_02"); //(ernst) Viele Männer sind diesen Weg gegangen und haben im Namen Innos ihr Leben gelassen.
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_03"); //(ernst )Schwörst du ihren Tod durch deine Taten zu ehren und Innos' Ruhm zu verkünden?
+	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_Yes_15_04"); //Ich schwöre!
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_05"); //Dann sollst du von nun an Mitglied sein in unserer Gemeinschaft.
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_06"); //Hiermit ernenne ich dich zu einem Streiter Innos'.
 	//AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_07"); //I give to you the weapons and armor of a knight. Bear them with pride, knight!
 
 	CreateInvItems (self,ITAR_REVIVED_PAL_M,1);
@@ -779,14 +779,14 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 	AI_UnequipArmor (other);
 	AI_EquipArmor 	(other,ITAR_REVIVED_PAL_M);
 
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_08"); //Henceforth, by virtue of your rank, you shall have access to the monastery.
+	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_08"); //Von nun an hast du Kraft deines Ranges Zugang zum Kloster.
 
 	if ((Npc_IsDead(Albrecht))== FALSE)
 	{
-		AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_09"); //Albrecht will teach you our magic, just go and talk to him.
+		AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_09"); //Den Gebrauch unserer Magie wird dich Albrecht lehren, sprich am Besten einfach mit ihm.
 	};
 	
-	AI_Output (self ,other,"DIA_Lord_Hagen_Add_04_02"); //And, of course, our quarters in the upper end of the city are now open to you.
+	AI_Output (self ,other,"DIA_Lord_Hagen_Add_04_02"); //Und selbstverständlich stehen dir nun auch unsere Quartiere in der Oberstadt zur Verfügung.
 
 	hero.guild = GIL_PAL;
 	Npc_SetTrueGuild (other, GIL_PAL);
@@ -796,7 +796,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 
 
 //***********************************************
-//	Wie kann ich mich wrdig erweisen
+//	Wie kann ich mich würdig erweisen
 //***********************************************
 
 INSTANCE DIA_Lord_Hagen_WhatProof		(C_INFO)
@@ -806,7 +806,7 @@ INSTANCE DIA_Lord_Hagen_WhatProof		(C_INFO)
 	condition	 = 	DIA_Lord_Hagen_WhatProof_Condition;
 	information	 = 	DIA_Lord_Hagen_WhatProof_Info;
 	permanent	 = 	FALSE; 
-	description	 = 	"Wie kann ich mich wÃ¼rdig erweisen?";
+	description	 = 	"Wie kann ich mich würdig erweisen?";
 };
 
 FUNC INT DIA_Lord_Hagen_WhatProof_Condition ()
@@ -820,15 +820,15 @@ FUNC INT DIA_Lord_Hagen_WhatProof_Condition ()
 
 FUNC VOID DIA_Lord_Hagen_WhatProof_Info ()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_WhatProof_15_00"); //How can I prove myself worthy?
-	AI_Output			(self, other, "DIA_Lord_Hagen_WhatProof_04_01"); //Your deeds will show whether you are worthy.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_02"); //We fight for freedom and justice in the name of Innos.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_03"); //We fight against Beliar and his henchmen, who want to destroy the just order of Innos.
-	AI_Output			(other, self, "DIA_Lord_Hagen_WhatProof_15_04"); //I understand.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_05"); //You understand nothing at all! Our honor is our life and our life is Innos.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_06"); //A paladin goes to battle praising Innos, and many of us have lost their lives on the altar of the eternal strife between Good and Evil.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_07"); //Every single one of us has committed himself to this tradition. If we fail, we tarnish the deeds of our fallen comrades.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_08"); //Only he who truly understands this is worthy of being a paladin.
+	AI_Output			(other, self, "DIA_Lord_Hagen_WhatProof_15_00"); //Wie kann ich mich würdig erweisen?
+	AI_Output			(self, other, "DIA_Lord_Hagen_WhatProof_04_01"); //Deine Taten werden zeigen, ob du würdig bist.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_02"); //In Innos Namen kämpfen wir für Freiheit und Gerechtigkeit.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_03"); //Wir kämpfen gegen Beliar und seine Schergen, die Innos' gerechte Ordnung zerstören wollen.
+	AI_Output			(other, self, "DIA_Lord_Hagen_WhatProof_15_04"); //Ich verstehe.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_05"); //Gar nichts verstehst du! Unsere Ehre ist unser Leben und unser Leben ist Innos.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_06"); //Ein Paladin zieht Innos preisend in die Schlacht und viele von uns haben ihr Leben auf dem Altar des ewigen Streits zwischen Gut und Böse gelassen.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_07"); //Dieser Tradition hat sich jeder einzelne von uns verpflichtet. Wenn wir scheitern, beflecken wir die Taten unser gefallen Kameraden.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_WhatProof_04_08"); //Nur wer dies wirklich versteht, ist würdig, ein Paladin zu sein.
 };
 
 
@@ -891,21 +891,21 @@ FUNC INT DIA_Lord_Hagen_KAP3U4_PERM_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_KAP3U4_PERM_Info()
 {	
-	AI_Output (other,self ,"DIA_Lord_Hagen_KAP3U4_PERM_15_00"); //How's the situation?
+	AI_Output (other,self ,"DIA_Lord_Hagen_KAP3U4_PERM_15_00"); //Wie ist die Lage?
 	
 	if (MIS_OLDWORLD == LOG_SUCCESS)
 	{
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_04"); //I must find a way to rescue this expedition.
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_05"); //We must do something against the dragons.
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_04"); //Ich muß einen Weg finden, diese Expedition zu retten.
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_05"); //Wir müssen etwas gegen die Drachen unternehmen.
 		if (Hagen_KnowsEyeKaputt == FALSE)
 		{
-			AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_06"); //(to himself) Perhaps the Eye of Innos can save us all now...
+			AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_06"); //(zu sich) Vielleicht kann das Auge Innos uns jetzt alle retten...
 		};
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Lord_Hagen_KAP3U4_PERM_04_01"); //I shall go mad here. I am a soldier, not a bureaucrat.
-		AI_Output (self ,other,"DIA_Lord_Hagen_KAP3U4_PERM_04_02"); //With all this paperwork that I must do, I barely remember what my sword feels like in my hand.
+		AI_Output (self ,other,"DIA_Lord_Hagen_KAP3U4_PERM_04_01"); //Ich werde hier noch verrückt, ich bin Soldat, kein Bürokrat.
+		AI_Output (self ,other,"DIA_Lord_Hagen_KAP3U4_PERM_04_02"); //Bei dem ganzen Papierkram, den ich erledigen muss, weiß ich noch nicht mal mehr, wie sich mein Schwert anfühlt.
 	};
 };
 
@@ -934,9 +934,9 @@ FUNC INT DIA_Lord_Hagen_EyeBroken_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_EyeBroken_Info()
 {	
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_07"); //I have the Eye - it is broken.
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_08"); //WHAT? By Innos! What have you done? We need the Eye!
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_09"); //Speak to Pyrokar! There must be a way to put it back together.
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_07"); //Ich habe das Auge - es ist zerbrochen.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_08"); //WAS? Bei Innos! Was hast du getan? Wir brauchen das Auge!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_09"); //Sprich mit Pyrokar! Es muß einen Weg geben, es wieder zusammenzufügen!
 	Hagen_KnowsEyeKaputt = TRUE;
 };
 
@@ -964,20 +964,20 @@ func int DIA_Lord_Hagen_BACKINTOWN_Condition ()
 };
 func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 {
-	AI_Output	(other, self, "DIA_Lord_Hagen_BACKINTOWN_15_00"); //I bring you news from Garond. Here, he gave me these lines for you.
+	AI_Output	(other, self, "DIA_Lord_Hagen_BACKINTOWN_15_00"); //Ich bringe dir Nachricht von Garond. Hier, diese Zeilen hat er mir mitgegeben.
 	B_GiveInvItems 	(other, self,ItWr_PaladinLetter_MIS,1);
 	B_UseFakeScroll 	();  
-	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_01"); //Our situation is worse than I had feared. But report to me on the situation in the Valley of Mines.
-	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_02"); //The paladins are holed up in the castle in the Valley of mines, surrounded by orcs.
-	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_03"); //There were many casualties in the prospecting operations, and there's barely any ore left.
-	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_04"); //Well, I should say that, without any help, the lads are lost. That's how it looks.
-	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_05"); //I shall find a way to rescue this expedition. You have done much for us. Innos will thank you...
-	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_06"); //I'm not all that interested in his gratitude. I want his eye.
-	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_07"); //Yes, of course. I stand by my word. Take this letter. It will open the monastery gates to you.
-	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_08"); //Speak with Pyrokar, the highest Fire Magician, and show him this authorization. He will grant you access to the Eye of Innos.
+	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_01"); //Unsere Lage ist schlimmer, als ich befürchtet habe. Doch berichte du mir von der Situation im Minental.
+	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_02"); //Die Paladine haben sich in der Burg des Minentals verschanzt und sind von Orks umzingelt.
+	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_03"); //Die Schürferei hat viele Opfer gefordert und es gibt kaum noch Erz.
+	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_04"); //Tja, ich würde sagen, ohne Hilfe sind die Jungs verloren. So sieht's aus.
+	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_05"); //Ich werde einen Weg finden, diese Expedition zu retten. Du hast viel für uns getan. Innos wird dir danken ...
+	AI_Output (other, self, "DIA_Lord_Hagen_BACKINTOWN_15_06"); //Ich bin weniger an seinem Dank interessiert als an seinem Auge.
+	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_07"); //Ja, natürlich. Ich stehe zu meinem Wort. Nimm diesen Brief. Er wird dir die Klostertore öffnen.
+	AI_Output (self, other, "DIA_Lord_Hagen_BACKINTOWN_04_08"); //Sprich mit Pyrokar, dem obersten Feuermagier, und zeige ihm diese Ermächtigung. Er wird dir den Zugang zum Auge Innos' gewähren.
 	
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_00"); //One more thing, before you go...
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_01"); //Take this rune as a token of my gratitude. It will take you safely back to the city whenever you want.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_00"); //Eines noch, bevor du gehst...
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_01"); //Nimm diese Rune zum Dank von mir. Sie wird dich sicher zurück in die Stadt bringen, wann immer du willst.
 	B_GiveInvItems (self, other, ItRu_TeleportSeaport, 1);
 	
 	
@@ -986,13 +986,13 @@ func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 	MIS_InnosEyeStolen = TRUE;
 	MIS_OLDWORLD = LOG_SUCCESS;
 	
-	B_LogEntry (TOPIC_INNOSEYE,"Lord Hagen hat mir ein Schreiben mitgegeben. Damit wird mir Meister Pyrokar im Kloster das Auge Innos Ã¼berreichen.");
+	B_LogEntry (TOPIC_INNOSEYE,"Lord Hagen hat mir ein Schreiben mitgegeben. Damit wird mir Meister Pyrokar im Kloster das Auge Innos überreichen.");
 
 			B_StartOtherRoutine (Pedro,"Tot"); 
 				if (Npc_IsDead (MiltenNW))	//Wichtig, damit Milten vor dem Kloster steht!!!!!
 				{ 
 					Wld_InsertNpc (PC_MAGE_NW ,"NW_MONASTERY_ENTRY_01");
-					B_StartOtherRoutine (MiltenNW,"Start");		//zur Sicherheit
+					B_StartOtherRoutine (MiltenNW,"START");		//zur Sicherheit
 				};		
 	
 			TEXT_Innoseye_Setting	=	TEXT_Innoseye_Setting_Broken; 
@@ -1015,7 +1015,7 @@ INSTANCE DIA_Lord_Hagen_RescueBennet		(C_INFO)
 	condition	 = 	DIA_Lord_Hagen_RescueBennet_Condition;
 	information	 = 	DIA_Lord_Hagen_RescueBennet_Info;
 	permanent	 = 	TRUE; 
-	description	 = 	"Ich muss mit dir Ã¼ber Bennet reden.";
+	description	 = 	"Ich muss mit dir über Bennet reden.";
 };
 
 FUNC INT DIA_Lord_Hagen_RescueBennet_Condition ()
@@ -1029,17 +1029,17 @@ FUNC INT DIA_Lord_Hagen_RescueBennet_Condition ()
 
 FUNC VOID DIA_Lord_Hagen_RescueBennet_Info ()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_15_00"); //I need to talk to you about Bennet.
+	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_15_00"); //Ich muss mit dir über Bennet reden.
 	
 	if (Hagen_einmalBennet == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_04_01"); //But that's the mercenary who murdered one of my men.
+		AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_04_01"); //Das ist doch dieser Söldner, der einen meiner Männer ermordet hat.
 		Hagen_einmalBennet = TRUE;
 	};
 	
 	Info_ClearChoices  (DIA_Lord_Hagen_RescueBennet);
 	Info_AddChoice (DIA_Lord_Hagen_RescueBennet,DIALOG_BACK,DIA_Lord_Hagen_RescueBennet_Back);
-	Info_AddChoice (DIA_Lord_Hagen_RescueBennet,"Wieso bist du dir so sicher, das Bennet der MÃ¶rder ist?",DIA_Lord_Hagen_RescueBennet_WhySure);
+	Info_AddChoice (DIA_Lord_Hagen_RescueBennet,"Wieso bist du dir so sicher, das Bennet der Mörder ist?",DIA_Lord_Hagen_RescueBennet_WhySure);
 	/*
 	if (RescueBennet_KnowsWitness == TRUE)
 	{
@@ -1052,15 +1052,15 @@ FUNC VOID DIA_Lord_Hagen_RescueBennet_Info ()
 	&& (MIS_RitualInnosEyeRepair == LOG_RUNNING)
 	&& (Hagen_KnowsEyeKaputt == TRUE)
 	{
-		Info_AddChoice (DIA_Lord_Hagen_RescueBennet,"Bennet kÃ¶nnte uns helfen, das Auge Innos wieder zu reparieren.",DIA_Lord_Hagen_RescueBennet_Hilfe);
+		Info_AddChoice (DIA_Lord_Hagen_RescueBennet,"Bennet könnte uns helfen, das Auge Innos wieder zu reparieren.",DIA_Lord_Hagen_RescueBennet_Hilfe);
 	};
 };
 
 func void DIA_Lord_Hagen_RescueBennet_Hilfe()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_16"); //Bennet could help us to repair the Eye of Innos.
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_17"); //Even if he could summon down the power of Innos himself to earth...
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_18"); //He has murdered a paladin. He will be executed for that!
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_16"); //Bennet könnte uns helfen, das Auge Innos wieder zu reparieren.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_17"); //Und wenn er die Macht Innos selbst auf die Erde herabbringen könnte.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_18"); //Er hat einen Mord an einem Paladin begangen. Dafür wird er hingerichtet werden!
 };
 
 FUNC VOID DIA_Lord_Hagen_RescueBennet_Back()
@@ -1070,16 +1070,16 @@ FUNC VOID DIA_Lord_Hagen_RescueBennet_Back()
 
 FUNC VOID DIA_Lord_Hagen_RescueBennet_WhySure()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_WhySure_15_00"); //How come you're so sure that Bennet is the killer?
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_WhySure_04_01"); //We have a witness.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_WhySure_04_02"); //As you see, there is no doubt about the mercenary's guilt.
+	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_WhySure_15_00"); //Wieso bist du dir so sicher, das Bennet der Mörder ist?
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_WhySure_04_01"); //Wir haben einen Zeugen.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_WhySure_04_02"); //Wie du siehst, gibt es keinen Zweifel an der Schuld des Söldners.
 	//neu zusammengefasst M.F.
-	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Witness_15_00"); //Who is that witness?
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_01"); //Cornelius, the governor's secretary, saw the murder.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_02"); //His description fits Bennet, no doubt about that. As far as I am concerned, that settles the matter.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_03"); //The mercenary will hang for treason.
+	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Witness_15_00"); //Wer ist der Zeuge?
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_01"); //Cornelius, der Sekretär des Statthalters, hat den Mord gesehen.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_02"); //Seine Beschreibung trifft zweifelsfrei auf Bennet zu. Damit ist die Sache für mich erledigt.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_03"); //Der Söldner wird wegen Landesverrats hängen.
 
-	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius, der SekretÃ¤r des Stadthalters, ist also der Zeuge. Er behauptet, den Mord beobachtet zu haben."); 
+	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius, der Sekretär des Stadthalters, ist also der Zeuge. Er behauptet, den Mord beobachtet zu haben."); 
 
 	RecueBennet_KnowsCornelius = TRUE;
 	//RescueBennet_KnowsWitness = TRUE; 
@@ -1088,22 +1088,22 @@ FUNC VOID DIA_Lord_Hagen_RescueBennet_WhySure()
 FUNC VOID DIA_Lord_Hagen_RescueBennet_Witness()
 {
 	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Witness_15_00"); //Wer ist der Zeuge?
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_01"); //Cornelius, der Sekretr des Statthalters, hat den Mord gesehen.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_02"); //Seine Beschreibung trifft zweifelsfrei auf Bennet zu. Damit ist die Sache fr mich erledigt.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_03"); //Der Sldner wird wegen Landesverrats hngen.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_01"); //Cornelius, der Sekretär des Statthalters, hat den Mord gesehen.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_02"); //Seine Beschreibung trifft zweifelsfrei auf Bennet zu. Damit ist die Sache für mich erledigt.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Witness_04_03"); //Der Söldner wird wegen Landesverrats hängen.
 
-	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius, der Sekretr des Stadthalters, ist also der Zeuge. Er behauptet, den Mord beobachtet zu haben."); 
+	B_LogEntry (TOPIC_RESCUEBENNET,"Cornelius, der Sekretär des Stadthalters, ist also der Zeuge. Er behauptet, den Mord beobachtet zu haben."); 
 
 	RecueBennet_KnowsCornelius = TRUE;
 };
 */
 FUNC VOID DIA_Lord_Hagen_RescueBennet_Innoscent()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Innoscent_15_00"); //I believe that Bennet is innocent.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Innoscent_04_01"); //The evidence is clear. He is guilty.
-	AI_Output			(other,self , "DIA_Lord_Hagen_RescueBennet_Innoscent_15_02"); //So what if the proof is wrong?
-	AI_Output			(self ,other, "DIA_Lord_Hagen_RescueBennet_Innoscent_04_03"); //Be careful what you say. You raise some serious accusations.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_RescueBennet_Innoscent_04_04"); //If you cannot present me with evidence that the witness lied, then you had best hold your tongue.
+	AI_Output			(other, self, "DIA_Lord_Hagen_RescueBennet_Innoscent_15_00"); //Ich glaube, Bennet ist unschuldig.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RescueBennet_Innoscent_04_01"); //Die Beweise sind eindeutig. Er ist schuldig.
+	AI_Output			(other,self , "DIA_Lord_Hagen_RescueBennet_Innoscent_15_02"); //Was ist, wenn die Beweise nicht stimmen?
+	AI_Output			(self ,other, "DIA_Lord_Hagen_RescueBennet_Innoscent_04_03"); //Sei vorsichtig, was du sagst. Du erhebst schwere Anschuldigungen.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_RescueBennet_Innoscent_04_04"); //Wenn du mir keine Beweise vorlegen kannst, dass der Zeuge lügt, dann solltest du lieber deinen Mund halten.
 };
 
 
@@ -1133,28 +1133,28 @@ FUNC INT DIA_Lord_Hagen_Cornelius_Condition ()
 
 FUNC VOID DIA_Lord_Hagen_Cornelius_Info ()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_Cornelius_15_00"); //Cornelius lied.
-	AI_Output			(self, other, "DIA_Lord_Hagen_Cornelius_04_01"); //How do you know that?
-	AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_02"); //Here, I've got his diary. Everything's in there.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_03"); //(furious) That slimy little criminal!
-	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_04"); //In view of the new evidence, there is nothing else I can do.
-	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_05"); //By virtue of the office granted me by king and church, I declare...
-	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_06"); //... that the prisoner Bennet is exonerated of all charges and is thereby a free man.
+	AI_Output			(other, self, "DIA_Lord_Hagen_Cornelius_15_00"); //Cornelius hat gelogen.
+	AI_Output			(self, other, "DIA_Lord_Hagen_Cornelius_04_01"); //Woher weißt du das?
+	AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_02"); //Hier, ich habe sein Tagebuch. Dort steht alles drin.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_03"); //(erbost) Dieser kleine schleimige Verbrecher!
+	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_04"); //Angesichts der neuen Beweise bleibt mir wohl nichts anderes übrig.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_05"); //Kraft meines vom König und der Kirche verliehenen Amtes verfüge ich, ...
+	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_06"); //... dass der Gefangene Bennet von allen Anschuldigungen entlastet und somit ein freier Mann ist.
 	
-	B_StartOtherRoutine (Bennet,"Start");
-	B_StartOtherRoutine (Hodges,"Start");
+	B_StartOtherRoutine (Bennet,"START");
+	B_StartOtherRoutine (Hodges,"START");
 	
-	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_07"); //Cornelius is to be taken into immediate custody for perjury.
+	AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_07"); //Cornelius ist wegen Falschaussage unverzüglich in Gewahrsam zu nehmen.
 	
 	if (Npc_IsDead (Cornelius) == TRUE)
 	{
-		AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_08"); //Save yourself the trouble. Cornelius is dead.
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_09"); //Then he has already received his just punishment. Well done.
+		AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_08"); //Das kannst du dir sparen, Cornelius ist tot.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_09"); //Dann hat er seine gerechte Strafe schon bekommen. Gut gemacht.
 	}
 	else if (CorneliusFlee == TRUE)
 	{
-		AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_10"); //He's made himself scarce.
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_11"); //Sooner or later, he will turn up. Then we shall arrest him.
+		AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_10"); //Er hat sich aus dem Staub gemacht.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_11"); //Früher oder später wird er hier auftauchen. Dann werden wir ihn verhaften.
 		B_StartOtherRoutine (Cornelius,"FLED");
 	}
 	else 
@@ -1169,7 +1169,7 @@ FUNC VOID DIA_Lord_Hagen_Cornelius_Info ()
 	
 	if (hero.guild == GIL_MIL)
 	{
-		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_12"); //Your deeds would redound to the honor of one of our own.
+		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_12"); //Deine Taten würden einem der Unserigen zu Ehre gereichen.
 	};
 };
 //--------Hier endet der gesamte Befreie den Schmied Klumpatsch-------------
@@ -1202,15 +1202,15 @@ FUNC INT DIA_Lord_Hagen_AugeAmStart_Condition ()
 
 FUNC VOID DIA_Lord_Hagen_AugeAmStart_Info ()
 {
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_10"); //I carry the Eye!
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_11"); //(reverently) You bear the Eye!
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_10"); //Ich trage das Auge bei mir!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_11"); //(ehrfürchtig) Du trägst das Auge!
 	if (Hagen_KnowsEyeKaputt == TRUE)
 	{
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_12"); //And you have put it back together!
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_12"); //Und du hast es wieder zusammengefügt!
 	};
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_13"); //Then you are a Chosen of Innos!
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_14"); //I shall set out and kill all the dragons in the Valley of Mines!
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_15"); //Go with Innos and destroy Evil with his power!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_13"); //Dann bist du ein Erwählter Innos!
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_14"); //Ich werde losziehen und alle Drachen im Minental töten!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_15"); //Geh mit Innos und vernichte das Böse mit seiner Macht!
 };
 
 
@@ -1261,7 +1261,7 @@ instance DIA_Lord_Hagen_ANTIPALADINE(C_INFO)
 	information	 = 	DIA_Lord_Hagen_ANTIPALADINE_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Die ElitekÃ¤mpfer der Orks greifen das Land an.";
+	description	 = 	"Die Elitekämpfer der Orks greifen das Land an.";
 };
 
 func int DIA_Lord_Hagen_ANTIPALADINE_Condition ()
@@ -1277,43 +1277,43 @@ var int Hagen_SawOrcRing;
 
 func void DIA_Lord_Hagen_ANTIPALADINE_Info ()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_00"); //The orcs' elite warriors are attacking the land.
+	AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_00"); //Die Elitekämpfer der Orks greifen das Land an.
 
 	Log_CreateTopic (TOPIC_OrcElite, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_OrcElite, LOG_RUNNING);
-	B_LogEntry (TOPIC_OrcElite,"Ich habe Lord Hagen von den heranrÃ¼ckenden Horden der orkischen Kriegsherren berichtet."); 
+	B_LogEntry (TOPIC_OrcElite,"Ich habe Lord Hagen von den heranrückenden Horden der orkischen Kriegsherren berichtet."); 
 
 	if (TalkedTo_AntiPaladin == TRUE)
 	&& (MIS_KillOrkOberst == 0)
 		{
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_01"); //What makes you say that?
-			AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_02"); //I talked to one of them. Your name was mentioned.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_01"); //Wie kommst du darauf?
+			AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_02"); //Ich habe mit einem von ihnen gesprochen. Dein Name ist dabei gefallen.
 		};
 
-		AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_03"); //Nonsense. My people have not reported a massive invasion of orcs so far.
-		AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_04"); //Perhaps some of their scouts got lost in the nearby woods.
+		AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_03"); //Unsinn. Meine Leute haben mir bisher von keinem massiveren Übergriff der Orks berichtet.
+		AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_04"); //Vielleicht haben sich einige ihrer Späher in den näher gelegenen Wäldern verirrt.
 
 	if (Npc_HasItems (other,ItRi_OrcEliteRing))
 		{
-			AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_05"); //Those were no scouts. I took this ring from one of them.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_06"); //Show me.
+			AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_05"); //Das waren keine Späher. Ich habe einem von ihnen diesen Ring hier abgenommen.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_06"); //Zeig mal her.
 			B_GiveInvItems 		(other, self, ItRi_OrcEliteRing,1);
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_07"); //Mmh. That is certainly disturbing.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_08"); //That is a sign of their strength. So the orcs have left their palisades and are fighting on the open field.
-			AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_09"); //I haven't seen a whole lot so far. Mainly their warlords, and only a few fighters.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_10"); //So? Then they must be plotting something else. That is rather unlike orcs that their leaders should leave their protective palisades by themselves.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_11"); //It would be a good opportunity, however, to deliver them a telling blow.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_12"); //If they lose their leaders, their morale will sink as well.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_13"); //You have a new assignment, knight. Go and kill the orc leaders you can find here in the area.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_14"); //Bring me their rings. That will be a tough blow to the orcs.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_07"); //Mmh. Das ist allerdings sehr beunruhigend.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_08"); //Das ist das Zeichen ihrer Stärke. Die Orks haben also ihre Palisaden verlassen und kämpfen nun auf offenem Feld.
+			AI_Output			(other, self, "DIA_Lord_Hagen_ANTIPALADINE_15_09"); //Ich habe erst relativ wenige gesehen. Hauptsächlich ihre Heerführer und nur einige Krieger.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_10"); //So? Dann hecken sie etwas anderes aus. Das passt nicht zu den Orks, dass die Anführer alleine ihre Schutzpalisaden verlassen.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_11"); //Es wäre aber eine gute Gelegenheit, ihnen einen empfindlichen Schlag zu versetzen.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_12"); //Wenn sie ihre Führer verlieren, wird auch ihre Kampfmoral sinken.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_13"); //Du hast einen neuen Auftrag, Ritter. Geh und töte die Anführer, die du hier in der Gegend finden kannst.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_14"); //Bringe mir ihre Ringe. Das wird die Orks auf eine harte Probe stellen.
 			
 			B_LogEntry (TOPIC_OrcElite,"Ich konnte Hagen einen Ring der orkischen Kriegsherren als Beweis ihrer Anwesenheit bringen. Ich soll ihm alle bringen, die ich auftreiben kann."); 
 	
 			if (Npc_IsDead(Ingmar)==FALSE)
 			&& (MIS_KillOrkOberst == 0)
 			{
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_15"); //Ask Ingmar about this. He can give you a few tactical hints for fighting the orc leaders.
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_16"); //The orcs' elite warriors are his specialty. He has often had to deal with them.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_15"); //Frag Ingmar danach. Er kann dir einige taktische Tipps geben, was die Anführer der Orks angeht.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_16"); //Die Elitekrieger der Orks sind sein Spezialgebiet. Er hatte schon öfter mit ihnen zu tun.
 			B_LogEntry (TOPIC_OrcElite,"Die Elitekrieger der Orks ist Ingmars Spezialgebiet"); 
 			};
 			
@@ -1325,11 +1325,11 @@ func void DIA_Lord_Hagen_ANTIPALADINE_Info ()
 		{
 			if  (MIS_KillOrkOberst == LOG_SUCCESS)
 			{
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_17"); //Your word alone that you have killed the chief warlord of the orcs is not enough for me.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_17"); //Deine Aussage allein, dass du den obersten Kriegsherr der Orks getötet hast, reicht mir nicht.
 			};
-			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_18"); //I need more tangible evidence if I am to respond to this.
+			AI_Output			(self, other, "DIA_Lord_Hagen_ANTIPALADINE_04_18"); //Ich brauche schon ein paar handfestere Indizien, wenn ich darauf reagieren soll.
 		
-			B_LogEntry (TOPIC_OrcElite,"Hagen will mir aber nicht so recht Glauben schenken. Er verlangt einen Beweis dafÃ¼r, dass die Eltekrieger die zivilisierten Landschaften angreifen. HÃ¤tte mich auch gewundert, wenn nicht."); 
+			B_LogEntry (TOPIC_OrcElite,"Hagen will mir aber nicht so recht Glauben schenken. Er verlangt einen Beweis dafür, dass die Eltekrieger die zivilisierten Landschaften angreifen. Hätte mich auch gewundert, wenn nicht."); 
 		};
 };
 
@@ -1344,7 +1344,7 @@ instance DIA_Lord_Hagen_RINGEBRINGEN		(C_INFO)
 	information	 = 	DIA_Lord_Hagen_RINGEBRINGEN_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich habe noch etwas Ã¼ber die HeerfÃ¼hrer der Orks zu berichten.";
+	description	 = 	"Ich habe noch etwas über die Heerführer der Orks zu berichten.";
 };
 
 func int DIA_Lord_Hagen_RINGEBRINGEN_Condition ()
@@ -1361,29 +1361,29 @@ var int OrkRingCounter;
 
 func void DIA_Lord_Hagen_RINGEBRINGEN_Info ()
 {
-	AI_Output			(other, self, "DIA_Lord_Hagen_RINGEBRINGEN_15_00"); //There's something else I have to report about the orcish warlords.
-	AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_01"); //Then tell me.
+	AI_Output			(other, self, "DIA_Lord_Hagen_RINGEBRINGEN_15_00"); //Ich habe noch etwas über die Heerführer der Orks zu berichten.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_01"); //Dann lass mal hören.
 
 	var int Ringcount;
 	var int XP_PAL_OrcRings;
 	var int OrcRingGeld;
 	var int HagensRingOffer;
 
-	HagensRingOffer = 150; //Joly: Geld fr einen Orkring
+	HagensRingOffer = 150; //Joly: Geld für einen Orkring
 
 	Ringcount = Npc_HasItems(other, ItRi_OrcEliteRing);
 
 
 	if (Ringcount == 1)
 		{
-			AI_Output		(other, self, "DIA_Lord_Hagen_RINGEBRINGEN_15_02"); //I can give you another orc ring.
+			AI_Output		(other, self, "DIA_Lord_Hagen_RINGEBRINGEN_15_02"); //Ich kann dir einen weiteren Orkring geben.
 			B_GivePlayerXP (XP_PAL_OrcRing);
 			B_GiveInvItems (other, self, ItRi_OrcEliteRing,1);
 			OrkRingCounter = OrkRingCounter + 1;
 		}
 		else
 		{
-			AI_Output		(other, self, "DIA_Lord_Hagen_RINGEBRINGEN_15_03"); //I can give you some more orc rings.
+			AI_Output		(other, self, "DIA_Lord_Hagen_RINGEBRINGEN_15_03"); //Ich kann dir einige weitere Orkringe geben.
 
 			B_GiveInvItems (other, self, ItRi_OrcEliteRing,  Ringcount);
 
@@ -1393,24 +1393,24 @@ func void DIA_Lord_Hagen_RINGEBRINGEN_Info ()
 			B_GivePlayerXP (XP_PAL_OrcRings);
 		};
 
-	AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_04"); //I am proud of you. Carry on!
+	AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_04"); //Ich bin stolz auf dich. Weiter so!
 
 	if (OrkRingCounter <= 10)
 	{
-		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_05"); //There may still be a few of them out there.
+		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_05"); //Es dürften noch einige von ihnen da draußen sein.
 	}
 	else if	(OrkRingCounter <= 20)
 	{
-		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_06"); //Soon we shall have forced them to their knees.
+		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_06"); //Bald werden wir sie in die Knie gezwungen haben.
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_07"); //I would be amazed if you still found very many of them.
-		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_08"); //You are welcome to keep bringing me their rings, but I think the orcs have gotten the message now.
+		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_07"); //Würde mich wundern, wenn du noch sehr viele von ihnen finden wirst.
+		AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_08"); //Bring mir ruhig weiter ihre Ringe, aber ich denke, die Botschaft haben die Orks jetzt verstanden.
 		TOPIC_END_OrcElite = TRUE;
 	};
 
-	AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_09"); //Here. Let me give you some gold towards your equipment.
+	AI_Output			(self, other, "DIA_Lord_Hagen_RINGEBRINGEN_04_09"); //Hier. Ich gebe dir etwas Gold für deine Ausrüstung.
 
 	OrcRingGeld	= (Ringcount * HagensRingOffer);	
 
@@ -1473,17 +1473,17 @@ FUNC INT DIA_Lord_Hagen_AllDragonsDead_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_AllDragonsDead_Info()
 {	
-	AI_Output (other,self ,"DIA_Lord_Hagen_AllDragonsDead_15_00"); //The dragons are dead.
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_19"); //I knew that Innos would give you the strength to defeat the dragons!
-	AI_Output (self ,other,"DIA_Lord_Hagen_AllDragonsDead_04_02"); //Where is the ore?
-	AI_Output (other,self ,"DIA_Lord_Hagen_AllDragonsDead_15_03"); //The orcs are still besieging the castle in the Valley of Mines. Garond stands no chance of leaving the castle before the siege is ended.
+	AI_Output (other,self ,"DIA_Lord_Hagen_AllDragonsDead_15_00"); //Die Drachen sind tot.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_19"); //Ich wußte, daß Innos dir die Kraft geben würde, die Drachen zu besiegen!
+	AI_Output (self ,other,"DIA_Lord_Hagen_AllDragonsDead_04_02"); //Wo ist das Erz?
+	AI_Output (other,self ,"DIA_Lord_Hagen_AllDragonsDead_15_03"); //Die Orks belagern immer noch die Burg im Minental. Bis die Belagerung nicht beendet ist, hat Garond keine Chance, die Burg zu verlassen.
 	
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_20"); //(furious) Damnit!
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_21"); //If Garond isn't capable of handling the situation, then I shall have to see to it myself.
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_22"); //A few orcs won't stop me! Not me!
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_23"); //I have already informed my men. We are preparing for departure.
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_24"); //We shall ALL go. I shall leave only a minimal guard on the ship.
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_25"); //That should be enough then to finally put an end to the orcs!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_20"); //(wütend) Verdammt noch mal!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_21"); //Wenn Garond nicht fähig ist, der Lage Herr zu werden, muss ich mich eben selbst darum kümmern.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_22"); //Die paar Orks halten mich nicht auf! Mich nicht!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_23"); //Ich habe meinen Männern bereits Bescheid gegeben. Wir bereiten uns auf den Abmarsch vor.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_24"); //Wir werden ALLE gehen. Ich lasse nur eine minimale Wache am Schiff zurück.
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_25"); //Das sollte dann wohl reichen, um den Orks endgültig den Garaus zu machen!
 
 	MIS_SCVisitShip = LOG_RUNNING;
 	AI_StopProcessInfos (self);
@@ -1514,21 +1514,21 @@ FUNC INT DIA_Lord_Hagen_NeedShip_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_NeedShip_Info()
 {	
-	AI_Output (other,self ,"DIA_Lord_Hagen_NeedShip_15_00"); //I need a ship.
+	AI_Output (other,self ,"DIA_Lord_Hagen_NeedShip_15_00"); //Ich brauche ein Schiff.
 
 	if (hero.guild == GIL_PAL)
 	{
-		AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_01"); //So do a lot of people, soldier.
+		AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_01"); //Das brauchen viele, Soldat.
 	}
 	else if (hero.guild == GIL_KDF)
 	{
-		AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_02"); //(laughs) I hear that almost every day, reverend. But...
+		AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_02"); //(lacht) Das höre ich fast jeden Tag, Ehrwürdiger. Aber ...
 	};
 
-	AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_03"); //You do not even have a captain, to say nothing of a crew.
-	AI_Output (other,self ,"DIA_Lord_Hagen_NeedShip_15_04"); //What about the ship in the harbor?
-	AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_05"); //It belongs to me, and that's that. We shall transport the ore with this ship.
-	AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_06"); //Once that is done, then you can ask me again.
+	AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_03"); //Du hast ja noch nicht einmal einen Kapitän, geschweige denn eine Mannschaft.
+	AI_Output (other,self ,"DIA_Lord_Hagen_NeedShip_15_04"); //Was ist mit dem Schiff im Hafen?
+	AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_05"); //Das gehört mir, und das bleibt auch so. Mit diesem Schiff werden wir das Erz abtransportieren.
+	AI_Output (self ,other,"DIA_Lord_Hagen_NeedShip_04_06"); //Wenn das erledigt ist, dann kannst du mich ja noch mal fragen.
 };
 
 
@@ -1543,7 +1543,7 @@ INSTANCE DIA_Lord_Hagen_GateOpen (C_INFO)
 	condition	= DIA_Lord_Hagen_GateOpen_Condition;
 	information	= DIA_Lord_Hagen_GateOpen_Info;
 	permanent	= FALSE;
-	description = "Die Orks haben die Burg im Minental gestÃ¼rmt!";
+	description = "Die Orks haben die Burg im Minental gestürmt!";
 };                       
 FUNC INT DIA_Lord_Hagen_GateOpen_Condition()
 {
@@ -1555,10 +1555,10 @@ FUNC INT DIA_Lord_Hagen_GateOpen_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_GateOpen_Info()
 {	
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_29"); //The orcs have stormed the castle in the Valley of Mines!
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_30"); //By Innos! What exactly happened there?
-	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_31"); //Somehow the gate must have opened...
-	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_32"); //Somehow?! How is that possible... There must have been a traitor in the castle!
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_29"); //Die Orks haben die Burg im Minental gestürmt!
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_30"); //Bei Innos! Was genau ist da geschehen?
+	AI_Output (other, self, "DIA_Lord_Hagen_Add_15_31"); //Irgendwie hat sich wohl das Tor geöffnet...
+	AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_32"); //Irgendwie?! Wie ist das möglich... Es muß einen Verräter in der Burg gegeben haben!
 };
 
 // ************************************************************
@@ -1583,14 +1583,14 @@ FUNC INT DIA_Lord_Hagen_Perm5_Condition()
 };
 FUNC VOID DIA_Lord_Hagen_Perm5_Info()
 {	
-	AI_Output (other,self, "DIA_Lord_Hagen_Add_15_33"); //What are you waiting for?
+	AI_Output (other,self, "DIA_Lord_Hagen_Add_15_33"); //Worauf wartest du?
 	if (MIS_OCGateOpen == FALSE)
 	{
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_26"); //We are still waiting for our equipment and provisions. Then we set off!
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_26"); //Wir warten noch auf unsere Ausrüstung und Verpflegung. Dann brechen wir auf!
 	}
 	else
 	{
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_27"); //Now that the castle has been stormed, we need even more provisions.
-		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_28"); //But that will not delay our departure for long.
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_27"); //Jetzt, wo die Burg gestürmt wurde, brauchen wir um so mehr Vorräte.
+		AI_Output (self ,other, "DIA_Lord_Hagen_Add_04_28"); //Aber unser Aufbruch wird sich dadurch nicht lange verzögern.
 	};
 };

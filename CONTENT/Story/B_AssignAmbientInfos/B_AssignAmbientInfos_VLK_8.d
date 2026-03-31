@@ -29,7 +29,7 @@ INSTANCE DIA_VLK_8_JOIN(C_INFO)
 	condition	= DIA_VLK_8_JOIN_Condition;
 	information	= DIA_VLK_8_JOIN_Info;
 	permanent	= TRUE;
-	description = "Ich will B√ºrger dieser Stadt werden!";
+	description = "Ich will B¸rger dieser Stadt werden!";
 };                       
 
 FUNC INT DIA_VLK_8_JOIN_Condition()
@@ -43,11 +43,11 @@ FUNC INT DIA_VLK_8_JOIN_Condition()
 
 FUNC VOID DIA_VLK_8_JOIN_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_8_JOIN_15_00"); //Ich will B√ºrger dieser Stadt werden!
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_01"); //Und warum erz√§hlst du mir das? Geh zu einem der Handwerksmeister in der Unterstadt. Vielleicht hast du Gl√ºck und sie suchen noch einen Lehrling.
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_02"); //Ansonsten m√ºsstest du zum Statthalter gehen und dich als B√ºrger eintragen lassen.
+	AI_Output (other, self, "DIA_VLK_8_JOIN_15_00"); //Ich will B¸rger dieser Stadt werden!
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_01"); //Und warum erz‰hlst du mir das? Geh zu einem der Handwerksmeister in der Unterstadt. Vielleicht hast du Gl¸ck und sie suchen noch einen Lehrling.
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_02"); //Ansonsten m¸sstest du zum Statthalter gehen und dich als B¸rger eintragen lassen.
 	AI_Output (self, other, "DIA_VLK_8_JOIN_08_03"); //Aber das kannst du zurzeit vergessen. Der Statthalter hat nichts mehr zu sagen, seit die Paladine da sind.
-	AI_Output (self, other, "DIA_VLK_8_JOIN_08_04"); //Und ihr Anf√ºhrer, Lord Hagen, nimmt sich f√ºr solche Dinge garantiert keine Zeit.
+	AI_Output (self, other, "DIA_VLK_8_JOIN_08_04"); //Und ihr Anf¸hrer, Lord Hagen, nimmt sich f¸r solche Dinge garantiert keine Zeit.
 };
 
 // *************************************************************************
@@ -59,7 +59,7 @@ INSTANCE DIA_VLK_8_PEOPLE(C_INFO)
 	condition	= DIA_VLK_8_PEOPLE_Condition;
 	information	= DIA_VLK_8_PEOPLE_Info;
 	permanent	= TRUE;
-	description = "Wer sind die wichtigsten B√ºrger dieser Stadt?";
+	description = "Wer sind die wichtigsten B¸rger dieser Stadt?";
 };                       
 
 FUNC INT DIA_VLK_8_PEOPLE_Condition()
@@ -69,7 +69,7 @@ FUNC INT DIA_VLK_8_PEOPLE_Condition()
 
 FUNC VOID DIA_VLK_8_PEOPLE_Info()
 {	
-	AI_Output (other, self, "DIA_VLK_8_PEOPLE_15_00"); //Wer sind die wichtigsten B√ºrger dieser Stadt?
+	AI_Output (other, self, "DIA_VLK_8_PEOPLE_15_00"); //Wer sind die wichtigsten B¸rger dieser Stadt?
 	AI_Output (self, other, "DIA_VLK_8_PEOPLE_08_01"); //Wenn man mal von den Paladinen absieht ... die Handwerksmeister aus der Unterstadt. Sie sind alle sehr hoch angesehen.
 };
 
@@ -93,9 +93,9 @@ FUNC INT DIA_VLK_8_LOCATION_Condition()
 FUNC VOID DIA_VLK_8_LOCATION_Info()
 {	
 	AI_Output (other, self, "DIA_VLK_8_LOCATION_15_00"); //Was gibt hier Interessantes zu sehen?
-	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_01"); //Das gro√üe Schiff, mit dem die Paladine gekommen sind, liegt am Hafen. Es ist ein Riesenkahn! Den musst du dir mal ansehen.
-	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_02"); //Allerdings kann ich mir nicht vorstellen, dass sie dich da drauf lassen. Die Paladine h√ºten das Schiff wie ihren Augapfel.
-	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_03"); //Kein Wunder. Ist ja auch der einzige seet√ºchtige Kahn, der hier weit und breit vor Anker liegt.
+	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_01"); //Das groﬂe Schiff, mit dem die Paladine gekommen sind, liegt am Hafen. Es ist ein Riesenkahn! Den musst du dir mal ansehen.
+	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_02"); //Allerdings kann ich mir nicht vorstellen, dass sie dich da drauf lassen. Die Paladine h¸ten das Schiff wie ihren Augapfel.
+	AI_Output (self, other, "DIA_VLK_8_LOCATION_08_03"); //Kein Wunder. Ist ja auch der einzige seet¸chtige Kahn, der hier weit und breit vor Anker liegt.
 };
 
 // *************************************************************************
@@ -124,25 +124,25 @@ FUNC VOID DIA_VLK_8_STANDARD_Info()
 	
 	if (Kapitel == 2)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_01"); //Jeder wartet darauf, dass die Paladine verk√ºnden, warum sie eigentlich hier sind. Ich vermute, es ist wegen der Orks. Sie greifen bestimmt bald an!
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_02"); //Die Paladine m√∂gen zwar den Segen Innos' haben, aber wenn hier die Orkhorden auflaufen, sind wir geliefert.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_01"); //Jeder wartet darauf, dass die Paladine verk¸nden, warum sie eigentlich hier sind. Ich vermute, es ist wegen der Orks. Sie greifen bestimmt bald an!
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_02"); //Die Paladine mˆgen zwar den Segen Innos' haben, aber wenn hier die Orkhorden auflaufen, sind wir geliefert.
 	};
 	
 	if (Kapitel == 3)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_03"); //Es hei√üt, die Paladine sind nur hier, um alles Erz von dieser Insel zu holen. F√ºr den Krieg auf dem Festland, hei√üt es.
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_04"); //Wei√üt du, was das hei√üt? Es ist dem K√∂nig egal, ob wir hier alle verrecken, wenn die Orks angreifen.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_03"); //Es heiﬂt, die Paladine sind nur hier, um alles Erz von dieser Insel zu holen. F¸r den Krieg auf dem Festland, heiﬂt es.
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_04"); //Weiﬂt du, was das heiﬂt? Es ist dem Kˆnig egal, ob wir hier alle verrecken, wenn die Orks angreifen.
 		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_05"); //Ich werde zusehen, dass ich mit aufs Schiff komme, wenn die Paladine ablegen.
 	};
 
 	if (Kapitel == 4)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_06"); //Es hei√üt, die Orks reiten auf Drachen hierher, die so gro√ü sind wie die halbe Stadt! Wir haben keine Chance!
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_06"); //Es heiﬂt, die Orks reiten auf Drachen hierher, die so groﬂ sind wie die halbe Stadt! Wir haben keine Chance!
 	};
 	
 	if (Kapitel >= 5)
 	{
-		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_07"); //Die Leute erz√§hlen sich, die Drachen w√§ren besiegt worden. Ob das stimmt?
+		AI_Output (self,other,"DIA_VLK_8_STANDARD_08_07"); //Die Leute erz‰hlen sich, die Drachen w‰ren besiegt worden. Ob das stimmt?
 	};
 };
 

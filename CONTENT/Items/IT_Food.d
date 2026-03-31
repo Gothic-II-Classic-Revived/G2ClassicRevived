@@ -20,7 +20,7 @@ const int	Value_CoragonBeer		=	40;		const int	HP_CoragonBeer	=	3;		const int	Man
 
 const int	Value_Booze		=	12;		const int	HP_Booze		=	4;	const int	Mana_Booze		=	1;
 const int	Value_Wine		=	20;		const int	HP_Wine			=	2;	const int	Mana_Wine		=	1;
-const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte gendert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
+const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte geändert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
 
 
 
@@ -41,7 +41,7 @@ INSTANCE ItFo_Apple (C_Item)
 	
 	visual 				=	"ItFo_Apple.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 	on_state[0]			=	Use_Apple;
 
 	description			= 	name;
@@ -83,7 +83,7 @@ INSTANCE ItFo_Apple (C_Item)
 
 INSTANCE ItFo_Cheese (C_Item)
 {	
-	name 				=	"KÃ¤se";
+	name 				=	"Käse";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -201,7 +201,7 @@ INSTANCE ItFoMuttonRaw (C_Item)
 	
 	visual 				=	"ItFoMuttonRaw.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Fleisch.";
+	scemeName			=	"MEAT";
 	on_state[0]			=	Use_RawMeat;
 
 	description			= 	name;
@@ -233,7 +233,7 @@ INSTANCE ItFoMutton (C_Item)	//kommt aus Bratpfannen-Mobsi !!!
 	
 	visual 				=	"ItFoMutton.3DS";
 	material 			=	MAT_LEATHER;
-	scemeName			=	"Fleisch.";
+	scemeName			=	"MEAT";
 	on_state[0]			=	Use_Meat;
 
 	description			= 	name;
@@ -261,7 +261,7 @@ INSTANCE ItFo_Stew (C_Item)
 	
 	visual 				=	"ItFo_Stew.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"Reis";
+	scemeName			=	"RICE";
 	on_state[0]			=	Use_Stew;
 
 	description			= 	name;
@@ -288,7 +288,7 @@ INSTANCE ItFo_XPStew (C_Item)
 	
 	visual 				=	"ItFo_Stew.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"Reis";
+	scemeName			=	"RICE";
 	on_state[0]			=	Use_XPStew;
 
 	description			= 	name;
@@ -356,7 +356,7 @@ INSTANCE ItFo_FishSoup (C_Item)
 	
 	visual 				=	"ItFo_FishSoup.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"Reis";
+	scemeName			=	"RICE";
 	on_state[0]			=	Use_FishSoup;
 
 	description			= 	name;
@@ -441,7 +441,7 @@ INSTANCE ItFo_Water (C_Item)
 	
 	visual 				=	"ItFo_Water.3ds";
 	material 			=	MAT_GLAS;
-	scemeName			=	"Trank";
+	scemeName			=	"POTION";
 	on_state[0]			=	Use_Water;
 
 	description			= 	name;
@@ -499,7 +499,7 @@ INSTANCE ItFo_Booze (C_Item)
 	
 	visual 				=	"ItFo_Booze.3DS";
 	material 			=	MAT_GLAS;
-	scemeName			=	"Trank";
+	scemeName			=	"POTION";
 	on_state[0]			=	Use_Booze;
 
 	description			= 	name;
@@ -527,7 +527,7 @@ INSTANCE ItFo_Wine (C_Item)
 	
 	visual 				=	"ItFo_Wine.3DS";
 	material 			=	MAT_GLAS;
-	scemeName			=	"Trank";
+	scemeName			=	"POTION";
 	on_state[0]			=	Use_Wine;
 
 	description			= 	name;
@@ -555,7 +555,7 @@ INSTANCE ItFo_Milk (C_Item)
 	
 	visual 				=	"ItFo_Milk.3DS";
 	material 			=	MAT_GLAS;
-	scemeName			=	"Trank";
+	scemeName			=	"POTION";
 	on_state[0]			=	Use_Milk;
 
 	description			= 	name;

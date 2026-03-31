@@ -50,7 +50,7 @@ func void DIA_Rosi_HALLO_Info ()
 	if ((hero.guild != GIL_MIL))
 	{
 		AI_Output			(self, other, "DIA_Rosi_HALLO_17_02"); //Normalerweise sind es immer irgendwelche Halsabschneider aus den Bergen oder diese schrecklichen Milizsoldaten aus der Stadt.
-		AI_Output			(self, other, "DIA_Rosi_HALLO_17_03"); //Die suchen unseren Hof in letzter Zeit immer hÃ¤ufiger heim. Aber du siehst mir nicht aus, als ob du einer von ihnen wÃ¤rst, oder?
+		AI_Output			(self, other, "DIA_Rosi_HALLO_17_03"); //Die suchen unseren Hof in letzter Zeit immer häufiger heim. Aber du siehst mir nicht aus, als ob du einer von ihnen wärst, oder?
 	};
 };
 
@@ -84,13 +84,13 @@ func void DIA_Rosi_WASMACHSTDU_Info ()
 	if (Npc_IsDead(Sekob)== FALSE)
 	{
 	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_01"); //Das frage ich mich auch die letzten Jahre. Mein Mann Sekob hat es sich mittlerweile mit jedem in der Umgebung verscherzt.
-	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_02"); //Ãœberall hat er Schulden. Deswegen stiehlt er das Gut aus Onars BestÃ¤nden und verkauft es an die Stadt.
-	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_03"); //Mit diesen miesen GeschÃ¤ften hat er sich schon ein VermÃ¶gen ergaunert.
-	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_04"); //AuÃŸerdem schleift er unsere Feldarbeiter, bis ihnen das Kreuz bricht. Der wird von seinen eigenen Leuten nur noch Menschenschinder genannt.
-	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_05"); //Besonders stolz ist man darauf nicht, die Frau von Sekob zu sein, das kannst du mir glauben. Manchmal wÃ¼nsche ich mir die Barriere zurÃ¼ck.
+	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_02"); //Überall hat er Schulden. Deswegen stiehlt er das Gut aus Onars Beständen und verkauft es an die Stadt.
+	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_03"); //Mit diesen miesen Geschäften hat er sich schon ein Vermögen ergaunert.
+	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_04"); //Außerdem schleift er unsere Feldarbeiter, bis ihnen das Kreuz bricht. Der wird von seinen eigenen Leuten nur noch Menschenschinder genannt.
+	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_05"); //Besonders stolz ist man darauf nicht, die Frau von Sekob zu sein, das kannst du mir glauben. Manchmal wünsche ich mir die Barriere zurück.
 	};
 
-	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_06"); //Willst du etwas zu essen kaufen oder vielleicht etwas fÃ¼r die Jagd in den WÃ¤ldern?
+	AI_Output			(self, other, "DIA_Rosi_WASMACHSTDU_17_06"); //Willst du etwas zu essen kaufen oder vielleicht etwas für die Jagd in den Wäldern?
 	Log_CreateTopic (Topic_OutTrader,LOG_NOTE);
 	B_LogEntry (Topic_OutTrader,"Rosi handelt mit verschiedenen Waren, auf dem Hof von Sekob.");
 };
@@ -182,8 +182,8 @@ func int DIA_Rosi_DuInBarriere_Condition ()
 func void DIA_Rosi_DuInBarriere_Info ()
 {
 	AI_Output			(other, self, "DIA_Rosi_DuInBarriere_15_00"); //Bist du jemals bei der Barriere gewesen?
-	AI_Output			(self, other, "DIA_Rosi_DuInBarriere_17_01"); //Nein. Wir haben immer nur davon gehÃ¶rt. Bengar, der Bauer auf dem Weidenplateau, kann dir sicherlich mehr darÃ¼ber erzÃ¤hlen.
-	AI_Output			(self, other, "DIA_Rosi_DuInBarriere_17_02"); //Sein Hof befindet sich ganz in der NÃ¤he des Passes zum Minental.
+	AI_Output			(self, other, "DIA_Rosi_DuInBarriere_17_01"); //Nein. Wir haben immer nur davon gehört. Bengar, der Bauer auf dem Weidenplateau, kann dir sicherlich mehr darüber erzählen.
+	AI_Output			(self, other, "DIA_Rosi_DuInBarriere_17_02"); //Sein Hof befindet sich ganz in der Nähe des Passes zum Minental.
 
 };
 
@@ -213,8 +213,8 @@ func int DIA_Rosi_BENGAR_Condition ()
 func void DIA_Rosi_BENGAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Rosi_BENGAR_15_00"); //Wie komme ich zu Bengars Hof?
-	AI_Output			(self, other, "DIA_Rosi_BENGAR_17_01"); //Sprich mal mit Balthasar. Das ist unser Schafhirte. Manchmal fÃ¼hrt er seine Tiere auf Bengars Weide dort oben.
-	AI_Output			(self, other, "DIA_Rosi_BENGAR_17_02"); //Er kann dir sicher erklÃ¤ren, wie man dort hinkommt.
+	AI_Output			(self, other, "DIA_Rosi_BENGAR_17_01"); //Sprich mal mit Balthasar. Das ist unser Schafhirte. Manchmal führt er seine Tiere auf Bengars Weide dort oben.
+	AI_Output			(self, other, "DIA_Rosi_BENGAR_17_02"); //Er kann dir sicher erklären, wie man dort hinkommt.
 		
 };
 
@@ -229,7 +229,7 @@ instance DIA_Rosi_Miliz		(C_INFO)
 	condition	 = 	DIA_Rosi_Miliz_Condition;
 	information	 = 	DIA_Rosi_Miliz_Info;
 
-	description	 = 	"Warum greift euch die Miliz hier auf den HÃ¶fen an?";
+	description	 = 	"Warum greift euch die Miliz hier auf den Höfen an?";
 };
 
 func int DIA_Rosi_Miliz_Condition ()
@@ -243,9 +243,9 @@ func int DIA_Rosi_Miliz_Condition ()
 
 func void DIA_Rosi_Miliz_Info ()
 {
-	AI_Output			(other, self, "DIA_Rosi_Miliz_15_00"); //Warum greift euch die Miliz hier auf den HÃ¶fen an?
-	AI_Output			(self, other, "DIA_Rosi_Miliz_17_01"); //Weil niemand da ist, der sie daran hindert, uns Bauern einfach zu Ã¼berfallen, statt uns unsere Waren abzukaufen.
-	AI_Output			(self, other, "DIA_Rosi_Miliz_17_02"); //Der KÃ¶nig ist weit weg und wir mÃ¼ssen uns eben damit abfinden, unter Onar zu arbeiten und zu hoffen, dass Onar uns zur Seite steht, wenn's brennt.
+	AI_Output			(other, self, "DIA_Rosi_Miliz_15_00"); //Warum greift euch die Miliz hier auf den Höfen an?
+	AI_Output			(self, other, "DIA_Rosi_Miliz_17_01"); //Weil niemand da ist, der sie daran hindert, uns Bauern einfach zu überfallen, statt uns unsere Waren abzukaufen.
+	AI_Output			(self, other, "DIA_Rosi_Miliz_17_02"); //Der König ist weit weg und wir müssen uns eben damit abfinden, unter Onar zu arbeiten und zu hoffen, dass Onar uns zur Seite steht, wenn's brennt.
 };
 
 
@@ -274,9 +274,9 @@ func void DIA_Rosi_ONAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Rosi_ONAR_15_00"); //Wie sieht die Hilfe von Onar aus?
 	AI_Output			(self, other, "DIA_Rosi_ONAR_17_01"); //Manchmal werden wir vorgewarnt, wenn wieder einige der Milizen auf eigene Rechnung hierher kommen, um sich an uns zu bereichern.
-	AI_Output			(self, other, "DIA_Rosi_ONAR_17_02"); //Dann wird jemand zum alten GroÃŸbauern geschickt, um ihn um Hilfe zu bitten.
-	AI_Output			(self, other, "DIA_Rosi_ONAR_17_03"); //Dann dauert's meist nicht lange, bis die SÃ¶ldner, die er dafÃ¼r bezahlt, hier sind und die Milizen verjagen.
-	AI_Output			(self, other, "DIA_Rosi_ONAR_17_04"); //Aber unterm Strich sind die SÃ¶ldner auch nicht viel besser.
+	AI_Output			(self, other, "DIA_Rosi_ONAR_17_02"); //Dann wird jemand zum alten Großbauern geschickt, um ihn um Hilfe zu bitten.
+	AI_Output			(self, other, "DIA_Rosi_ONAR_17_03"); //Dann dauert's meist nicht lange, bis die Söldner, die er dafür bezahlt, hier sind und die Milizen verjagen.
+	AI_Output			(self, other, "DIA_Rosi_ONAR_17_04"); //Aber unterm Strich sind die Söldner auch nicht viel besser.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -312,7 +312,7 @@ func void DIA_Rosi_PERMKAP1_Info ()
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Rosi_PERMKAP1_17_02"); //Pass auf dich auf und lass dich nicht Ã¤rgern.
+			AI_Output			(self, other, "DIA_Rosi_PERMKAP1_17_02"); //Pass auf dich auf und lass dich nicht ärgern.
 		};
 	AI_StopProcessInfos (self);
 };
@@ -445,9 +445,9 @@ func int DIA_Rosi_FLEEFROMSEKOB_Condition ()
 func void DIA_Rosi_FLEEFROMSEKOB_Info ()
 {
 	AI_Output			(other, self, "DIA_Rosi_FLEEFROMSEKOB_15_00"); //Was machst du hier in der Wildnis?
-	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_01"); //Es war nicht mehr zum Aushalten auf Sekobs Hof. Sekob ist stÃ¤ndig vÃ¶llig ausgerastet.
-	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_02"); //Man konnte sich nachher Ã¼berhaupt nicht mehr mit ihm unterhalten. Ewig dieses GebrÃ¼lle.
-	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_03"); //Ich muss hier weg, weiÃŸ aber nicht wohin.
+	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_01"); //Es war nicht mehr zum Aushalten auf Sekobs Hof. Sekob ist ständig völlig ausgerastet.
+	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_02"); //Man konnte sich nachher überhaupt nicht mehr mit ihm unterhalten. Ewig dieses Gebrülle.
+	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_03"); //Ich muss hier weg, weiß aber nicht wohin.
 	AI_Output			(self, other, "DIA_Rosi_FLEEFROMSEKOB_17_04"); //Interesse an einem kleinen Handel?
 	B_GivePlayerXP (XP_Ambient);
 	RosiFoundKap5 = TRUE;
@@ -489,7 +489,7 @@ func void DIA_Rosi_HILFE_Info ()
 
 		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
-			AI_Output			(other, self, "DIA_Rosi_HILFE_15_02"); //Ich bring dich zum Hof des GroÃŸbauern.
+			AI_Output			(other, self, "DIA_Rosi_HILFE_15_02"); //Ich bring dich zum Hof des Großbauern.
 		};
 
 		if (hero.guild == GIL_KDF)
@@ -497,7 +497,7 @@ func void DIA_Rosi_HILFE_Info ()
 			AI_Output			(other, self, "DIA_Rosi_HILFE_15_03"); //Komm mit ins Kloster. Sie werden dich dort aufnehmen.
 		};	
 		
-		AI_Output			(self, other, "DIA_Rosi_HILFE_17_04"); //Das werde ich dir nie vergessen. Ich werde es dir natÃ¼rlich bezahlen.
+		AI_Output			(self, other, "DIA_Rosi_HILFE_17_04"); //Das werde ich dir nie vergessen. Ich werde es dir natürlich bezahlen.
 
 			if (Npc_IsDead(Till))
 			{
@@ -528,7 +528,7 @@ func void DIA_Rosi_HILFE_Info ()
 		};	
 		Log_CreateTopic (TOPIC_RosisFlucht, LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_RosisFlucht, LOG_RUNNING);
-		B_LogEntry (TOPIC_RosisFlucht,"Rosi hat es auf Sekobs Hof nicht mehr ausgehalten und weiÃŸ nun nicht, wo sie bleiben soll. Ich werde sie aus der Wildnis fÃ¼hren."); 
+		B_LogEntry (TOPIC_RosisFlucht,"Rosi hat es auf Sekobs Hof nicht mehr ausgehalten und weiß nun nicht, wo sie bleiben soll. Ich werde sie aus der Wildnis führen."); 
 		MIS_RosisFlucht = LOG_RUNNING;
 };
 
@@ -563,7 +563,7 @@ func int DIA_Rosi_ANGEKOMMEN_Condition ()
 func void DIA_Rosi_ANGEKOMMEN_Info ()
 {
 	AI_Output			(self, other, "DIA_Rosi_ANGEKOMMEN_17_00"); //Nun komme ich alleine zurecht.
-	AI_Output			(self, other, "DIA_Rosi_ANGEKOMMEN_17_01"); //Ich danke dir. Was hÃ¤tte ich bloÃŸ ohne dich gemacht?
+	AI_Output			(self, other, "DIA_Rosi_ANGEKOMMEN_17_01"); //Ich danke dir. Was hätte ich bloß ohne dich gemacht?
 
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Till.aivar[AIV_PARTYMEMBER] = FALSE;
@@ -649,7 +649,7 @@ instance DIA_Rosi_MinenAnteil		(C_INFO)
 	condition	 = 	DIA_Rosi_MinenAnteil_Condition;
 	information	 = 	DIA_Rosi_MinenAnteil_Info;
 
-	description	 = 	"SchÃ¤mst du dich nicht, illegale Minenanteile zu verkaufen?";
+	description	 = 	"Schämst du dich nicht, illegale Minenanteile zu verkaufen?";
 };
 
 func int DIA_Rosi_MinenAnteil_Condition ()
@@ -664,8 +664,8 @@ func int DIA_Rosi_MinenAnteil_Condition ()
 
 func void DIA_Rosi_MinenAnteil_Info ()
 {
-	AI_Output (other, self, "DIA_Rosi_Minenanteil_15_00"); //SchÃ¤mst du dich nicht, illegale Minenanteile zu verkaufen?
-	AI_Output (self, other, "DIA_Rosi_Minenanteil_17_01"); //Nein. Ich muss auch leben und auÃŸerdem habe ich sie nicht in den Umlauf gebracht.
+	AI_Output (other, self, "DIA_Rosi_Minenanteil_15_00"); //Schämst du dich nicht, illegale Minenanteile zu verkaufen?
+	AI_Output (self, other, "DIA_Rosi_Minenanteil_17_01"); //Nein. Ich muss auch leben und außerdem habe ich sie nicht in den Umlauf gebracht.
 	B_GivePlayerXP (XP_Ambient);
 };
 

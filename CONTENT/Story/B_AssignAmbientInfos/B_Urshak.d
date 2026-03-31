@@ -45,9 +45,9 @@ func int DIA_Urshak_HALLO_Condition ()
 
 func void DIA_Urshak_HALLO_Info ()
 {
-	AI_Output			(self, other, "DIA_Urshak_HALLO_18_00"); //(aggressively) KHROTOK JABARTH!!!
-	AI_Output			(self, other, "DIA_Urshak_HALLO_18_01"); //Wait! Me know you. You friend human with soft voice.
-	AI_Output			(self, other, "DIA_Urshak_HALLO_18_02"); //Friend kill evil demon KRUSHAK.
+	AI_Output			(self, other, "DIA_Urshak_HALLO_18_00"); //(agressiv) KHROTOK JABARTH!!!
+	AI_Output			(self, other, "DIA_Urshak_HALLO_18_01"); //Warte! Ich dich wieder erkennen. Du Freund Mensch mit weicher Stimme.
+	AI_Output			(self, other, "DIA_Urshak_HALLO_18_02"); //Freund töten bösen Dämon KRUSHAK.
 	
 	B_GivePlayerXP (XP_UrshakFound);
 	
@@ -61,17 +61,17 @@ func void DIA_Urshak_HALLO_Info ()
 };
 func void DIA_Urshak_HALLO_wer ()
 {
-	AI_Output			(other, self, "DIA_Urshak_HALLO_wer_15_00"); //A talking orc?
-	AI_Output			(self, other, "DIA_Urshak_HALLO_wer_18_01"); //You forget Ur-Shak? That make me sad.
-	AI_Output			(self, other, "DIA_Urshak_HALLO_wer_18_02"); //Ur-Shak help friend many days before get ULU-MULU for going my village. So orcs respect friend and friend not die by hand of orcs.
-	AI_Output			(self, other, "DIA_Urshak_HALLO_wer_18_03"); //Friend then go deep orc temple and banish evil demon. Many days before. You no remember?
+	AI_Output			(other, self, "DIA_Urshak_HALLO_wer_15_00"); //Ein sprechender Ork?
+	AI_Output			(self, other, "DIA_Urshak_HALLO_wer_18_01"); //Du vergessen Ur-Shak? Machen traurig mich.
+	AI_Output			(self, other, "DIA_Urshak_HALLO_wer_18_02"); //Ur-Shak helfen Freund viele Tage vorher zu bekommen ULU-MULU für Gehen in mein Dorf. So Orks respektieren Freund und Freund nicht sterben durch Hand von Orks.
+	AI_Output			(self, other, "DIA_Urshak_HALLO_wer_18_03"); //Freund dann gehen in tiefen Orktempel und verbannen bösen Dämon. Viele Tage vorher. Du nicht mehr wissen?
 
 };
 
 func void DIA_Urshak_HALLO_freund ()
 {
-	AI_Output			(other, self, "DIA_Urshak_HALLO_freund_15_00"); //You picked a funny time to cross my path. I almost killed you. What are you doing here?
-	AI_Output			(self, other, "DIA_Urshak_HALLO_freund_18_01"); //Ur-Shak look over land and see what become of land and my people.
+	AI_Output			(other, self, "DIA_Urshak_HALLO_freund_15_00"); //Du hast dir einen merkwürdigen Zeitpunkt ausgesucht, mir über den Weg zu laufen. Fast hätte ich dich getötet. Was machst du hier?
+	AI_Output			(self, other, "DIA_Urshak_HALLO_freund_18_01"); //Ur-Shak schauen über Land und sehen, was aus Land und mein Volk geworden.
 	Info_ClearChoices	(DIA_Urshak_HALLO);
 };
 
@@ -101,11 +101,11 @@ func int DIA_Urshak_WASMACHENORKS_Condition ()
 
 func void DIA_Urshak_WASMACHENORKS_Info ()
 {
-	AI_Output			(other, self, "DIA_Urshak_WASMACHENORKS_15_00"); //Why are the orcs attacking the humans?
-	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_01"); //Ur-Shak always tell orc people that humans no evil and many good friends there.
-	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_02"); //But shaman no listen Ur-Shak. Ur-Shak still in disfavor with people.
-	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_03"); //So Ur-Shak no hear exactly what big plan of war against humans.
-	B_LogEntry (TOPIC_Urshak,"Er hat es immer noch nicht geschafft, sich bei seinem Volk GehÃ¶r zu verschaffen. Er ist immer noch ein Ausgestossener."); 
+	AI_Output			(other, self, "DIA_Urshak_WASMACHENORKS_15_00"); //Warum greifen die Orks die Menschen an?
+	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_01"); //Ur-Shak immer sagen zu Volk der Orks, dass Menschen nicht böse und geben viele gute Freunde dort.
+	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_02"); //Aber Schamane nicht hören auf Ur-Shak. Ur-Shak immer noch in Ungnade bei meinem Volk.
+	AI_Output			(self, other, "DIA_Urshak_WASMACHENORKS_18_03"); //So Ur-Shak auch nicht genau wissen, was ist großer Plan von Krieg gegen Menschen.
+	B_LogEntry (TOPIC_Urshak,"Er hat es immer noch nicht geschafft, sich bei seinem Volk Gehör zu verschaffen. Er ist immer noch ein Ausgestossener."); 
 };
 
 
@@ -133,8 +133,8 @@ func int DIA_Urshak_SOVIELE_Condition ()
 
 func void DIA_Urshak_SOVIELE_Info ()
 {
-	AI_Output			(other, self, "DIA_Urshak_SOVIELE_15_00"); //Why are there suddenly so many of you?
-	AI_Output			(self, other, "DIA_Urshak_SOVIELE_18_01"); //Orcs come from mountains, but others come with ships and make big fence.
+	AI_Output			(other, self, "DIA_Urshak_SOVIELE_15_00"); //Warum seid ihr auf einmal so viele?
+	AI_Output			(self, other, "DIA_Urshak_SOVIELE_18_01"); //Orks kommen aus den Bergen. Andere aber kamen mit Schiff und machten großen Zaun.
 };
 
 
@@ -162,9 +162,9 @@ func int DIA_Urshak_ZAUN_Condition ()
 
 func void DIA_Urshak_ZAUN_Info ()
 {
-	AI_Output			(other, self, "DIA_Urshak_ZAUN_15_00"); //What is hidden behind the long orc fence in the east?
-	AI_Output			(self, other, "DIA_Urshak_ZAUN_18_01"); //Orcs always make big fence and home camp for war.
-	AI_Output			(self, other, "DIA_Urshak_ZAUN_18_02"); //Fence good for war. Hide strength of army and protect orcs.
+	AI_Output			(other, self, "DIA_Urshak_ZAUN_15_00"); //Was verbirgt sich hinter dem langen Orkzaun im Osten?
+	AI_Output			(self, other, "DIA_Urshak_ZAUN_18_01"); //Orks immer errichten großen Zaun und Heimatlager für Krieg.
+	AI_Output			(self, other, "DIA_Urshak_ZAUN_18_02"); //Zaun gut für Krieg. Verbergen Stärke von Orkarmee und dienen als Schutz.
 };
 
 
@@ -193,12 +193,12 @@ func int DIA_Urshak_WASHASTDUVOR_Condition ()
 
 func void DIA_Urshak_WASHASTDUVOR_Info ()
 {
-	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_15_00"); //What are you planning to do now?
-	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_18_01"); //Ur-Shak wait for orc scouts bring Ur-Shak to Hosh-Pak.
-	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_15_02"); //Who is Hosh-Pak?
-	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_18_03"); //Be very great shaman. Have great influence on warriors and make big plans for orcs.
+	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_15_00"); //Was hast du jetzt vor?
+	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_18_01"); //Ur-Shak warten auf Orkspähtrupp, zu bringen Ur-Shak zu Hosh-Pak.
+	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_15_02"); //Wer ist Hosh-Pak?
+	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_18_03"); //Seien sehr große Schamane. Haben großen Einfuss auf Krieger und machen große Pläne für Orks.
 
-	B_LogEntry (TOPIC_Urshak,"Ur-Shaks Plan sieht vor, sich mit dem Orkshamanen Hosh-Pak zu treffen, damit er Ur-Shak wieder seinen alten Platz im Rat der Shamane zurÃ¼ck gibt."); 
+	B_LogEntry (TOPIC_Urshak,"Ur-Shaks Plan sieht vor, sich mit dem Orkshamanen Hosh-Pak zu treffen, damit er Ur-Shak wieder seinen alten Platz im Rat der Shamane zurück gibt."); 
 
 	Info_ClearChoices	(DIA_Urshak_WASHASTDUVOR);
 
@@ -208,17 +208,17 @@ func void DIA_Urshak_WASHASTDUVOR_Info ()
 };
 func void DIA_Urshak_WASHASTDUVOR_hoshpak ()
 {
-	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_hoshpak_15_00"); //Why don't you go to him, then?
-	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_hoshpak_18_01"); //Ur-Shak try and try get again honor and old place in council of shamans.
-	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_hoshpak_18_02"); //But till now, Hosh-Pak no listen Ur-Shak. Orcs kill Ur-Shak if see him without scouts. Ur-Shak must talk Hosh-Pak.
-	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_hoshpak_18_03"); //Maybe lucky today.
+	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_hoshpak_15_00"); //Warum gehst du nicht zu Ihm?
+	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_hoshpak_18_01"); //Ur-Shak immer wieder versuchen zu bekommen wieder Würde und alten Platz im Rat der Schamane.
+	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_hoshpak_18_02"); //Aber bis heute Hosh-Pak nicht erhören Ur-Shak. Orks töten Ur-Shak, wenn sehen ohne Spähtrupp. Ur-Shak müssen sprechen mit Hosh-Pak.
+	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_hoshpak_18_03"); //Vielleicht haben Glück heute.
 	
 };
 
 func void DIA_Urshak_WASHASTDUVOR_ ()
 {
-	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_Urshak_15_00"); //Where can I find this Hosh-Pak?
-	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_Urshak_18_01"); //Have place where can see orc warriors over fortress by big volcano, so Hosh-Pak can control warriors.
+	AI_Output			(other, self, "DIA_Urshak_WASHASTDUVOR_Urshak_15_00"); //Wo finde ich diesen Hosh-Pak?
+	AI_Output			(self, other, "DIA_Urshak_WASHASTDUVOR_Urshak_18_01"); //Haben Aussichtsplatz über Burg bei großen Vulkan. So Hosh-Pak kann kontrollieren Orkkrieger.
 
 };
 
@@ -254,13 +254,13 @@ func int DIA_Urshak_HOSHPAKDEAD_Condition ()
 
 func void DIA_Urshak_HOSHPAKDEAD_Info ()
 {
-	AI_Output			(other, self, "DIA_Urshak_HOSHPAKDEAD_15_00"); //Hosh-Pak is dead.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_01"); //Hosh-Pak dead? RUSHTASOK!
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_02"); //My heart carry heavy load. Ur-Shak never forget great orc make Ur-Shak shaman.
-	AI_Output			(other, self, "DIA_Urshak_HOSHPAKDEAD_15_03"); //I understand. Hosh-Pak was your mentor.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_04"); //Ur-Shak now must carry burden of grief, must give Hosh-Pak last rites. Ur-Shak must go.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_05"); //Friend better go over pass. Too dangerous here.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_06"); //Ur-Shak sad if friend human also die.
+	AI_Output			(other, self, "DIA_Urshak_HOSHPAKDEAD_15_00"); //Hosh-Pak ist tot.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_01"); //Hosh-Pak tot? RUSHTASOK!
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_02"); //Mein Herz tragen schwere Last. Ur-Shak niemals vergessen großer Ork gegeben Ur-Shak Würde von Schamane.
+	AI_Output			(other, self, "DIA_Urshak_HOSHPAKDEAD_15_03"); //Ich verstehe. Hosh-Pak war dein Mentor.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_04"); //Ur-Shak muss nun tragen Bürde der Trauer und bringen Hosh-Pak letzte Ehre. Ur-Shak müssen gehen.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_05"); //Freund besser gehen über Pass. Hier zu gefährlich.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKDEAD_18_06"); //Ur-Shak traurig, wenn Freundmensch auch sterben.
 
 	B_LogEntry (TOPIC_Urshak,"Hosh-Pak ist tot. Mein Orkfreund hat sich auf den Weg zu Hosh-Paks Zelten gemacht. Er trauert um seinen Mentor. Ich sollte ihn ziehen lassen."); 
 
@@ -297,7 +297,7 @@ func int DIA_Urshak_GEH_Condition ()
 
 func void DIA_Urshak_GEH_Info ()
 {
-	AI_Output			(self, other, "DIA_Urshak_GEH_18_00"); //Friend better go over pass now.
+	AI_Output			(self, other, "DIA_Urshak_GEH_18_00"); //Freund besser gehen jetzt über Pass.
 	Npc_SetRefuseTalk (self,10);
 	AI_StopProcessInfos (self);
 };
@@ -326,16 +326,16 @@ func int DIA_Urshak_HOSHPAKRACHE_Condition ()
 
 func void DIA_Urshak_HOSHPAKRACHE_Info ()
 {
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_00"); //(aggressively) KHROTOK ! I learn you there when Hosh-Pak killed. You make big mistake, stranger.
-	AI_Output			(other, self, "DIA_Urshak_HOSHPAKRACHE_15_01"); //I see you have taken his place here. You've been stringing me along.
-	AI_Output			(other, self, "DIA_Urshak_HOSHPAKRACHE_15_02"); //Your position with your people is higher than you wanted to admit. Now you're nothing but a tool of evil yourself.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_03"); //Stranger right. Ur-Shak filled only with hate and vengeance now.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_04"); //Ur-Shak see big mistake trust evil human. Ur-Shak regret call human friend and help not get killed.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_05"); //Stranger finally leave valley and go over pass. Ur-Shak no can kill stranger now. Honor of shamans command Ur-Shak no kill.
-	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_06"); //Next time we meet we enemies. You better go now.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_00"); //(agressiv) KHROTOK! Ich erfahren du dabei als Hosh-Pak getötet. Du begehen großer Fehler, Fremder.
+	AI_Output			(other, self, "DIA_Urshak_HOSHPAKRACHE_15_01"); //Ich sehe, du hast hier seinen Platz eingenommen. Du hast mir nur was vorgemacht.
+	AI_Output			(other, self, "DIA_Urshak_HOSHPAKRACHE_15_02"); //Deine Stellung bei deinem Volk ist höher als du zugeben wolltest. Du bist jetzt auch nichts anderes mehr als ein Werkzeug des Bösen.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_03"); //Fremder haben Recht. Ur-Shak nur noch erfüllt von Hass und Rache.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_04"); //Ur-Shak erkennen großen Fehler zu vertrauen bösen Menschen. Zu nennen Freund und helfen nicht zu werden getötet Ur-Shak zutiefst bedauern.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_05"); //Fremder endlich verlassen Tal und gehen über Pass. Urshak Fremder nicht können töten jetzt. Ehre der Schamanen Ur-Shak befehlen so zu handeln.
+	AI_Output			(self, other, "DIA_Urshak_HOSHPAKRACHE_18_06"); //Bei nächster Begegnung wir Feinde sein werden. Du besser jetzt gehen.
 	AI_StopProcessInfos (self);
 	URSHAK_SUCKED = TRUE;
-	B_LogEntry (TOPIC_Urshak,"Urshak gehÃ¶rt wieder dem Rat der Orkshamane an. Er steht jetzt auf der feindlichen Seite und ist ein wenig gereizt. Ich sollte ihm besser aus dem Weg gehen, bis ich die Geschichte mit den Orks geregelt habe. Bis dahin wird er sich wieder beruhigt haben."); 
+	B_LogEntry (TOPIC_Urshak,"Urshak gehört wieder dem Rat der Orkshamane an. Er steht jetzt auf der feindlichen Seite und ist ein wenig gereizt. Ich sollte ihm besser aus dem Weg gehen, bis ich die Geschichte mit den Orks geregelt habe. Bis dahin wird er sich wieder beruhigt haben."); 
 	B_GivePlayerXP (XP_UrshakBecomesShaman);
 };
 
@@ -363,7 +363,7 @@ func int DIA_Urshak_KEINEWAHL_Condition ()
 
 func void DIA_Urshak_KEINEWAHL_Info ()
 {
-	AI_Output			(self, other, "DIA_Urshak_KEINEWAHL_18_00"); //You go. Me no talk to stranger.
+	AI_Output			(self, other, "DIA_Urshak_KEINEWAHL_18_00"); //Du gehen. Ich nicht mehr mit Fremder reden.
 	AI_StopProcessInfos (self);
 	URSHAK_SUCKED = TRUE;
 };

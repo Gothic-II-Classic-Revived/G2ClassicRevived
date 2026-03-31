@@ -480,7 +480,7 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGICFIRE_01()
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_02(C_ITEM)
 {
-	name 				=	"Ring der L√§uterung";
+	name 				=	"Ring der L‰uterung";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -651,7 +651,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_01()
 
 INSTANCE ITRI_REVIVED_HP_02(C_Item)
 {
-	name 				=	"Gro√üer Ring des Lebens";
+	name 				=	"Groﬂer Ring des Lebens";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -737,7 +737,7 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_01()
 
 INSTANCE ITRI_REVIVED_MP_02(C_Item)
 {
-	name 				=	"Gro√üer Ring der Magie";
+	name 				=	"Groﬂer Ring der Magie";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
@@ -945,7 +945,7 @@ FUNC VOID UnEquip_REV_ITRI_Staerkering()
 
 INSTANCE ITRI_REVIVED_STR_02(C_Item)
 {
-	name 					=	"Ring der St√§rke";
+	name 					=	"Ring der St‰rke";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;

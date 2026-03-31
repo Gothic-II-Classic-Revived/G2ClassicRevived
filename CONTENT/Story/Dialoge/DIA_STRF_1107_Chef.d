@@ -40,8 +40,8 @@ func int DIA_STRF_1107_FINGER_Condition ()
 };
 func void DIA_STRF_1107_FINGER_Info ()
 {
-	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_00"); //Finger weg von meinen TÃ¶pfen! Niemand geht an meine TÃ¶pfe, verstanden?!
-	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_01"); //Ich bin hier fÃ¼r das Essen verantwortlich und das bedeutet, dass niemand hier irgendwas zu suchen hat! Ich hoffe, das war deutlich!
+	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_00"); //Finger weg von meinen Töpfen! Niemand geht an meine Töpfe, verstanden?!
+	AI_Output (self, other, "DIA_STRF_1107_FINGER_01_01"); //Ich bin hier für das Essen verantwortlich und das bedeutet, dass niemand hier irgendwas zu suchen hat! Ich hoffe, das war deutlich!
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info COOK
@@ -64,9 +64,9 @@ func int DIA_STRF_1107_COOK_Condition ()
 func void DIA_STRF_1107_COOK_Info ()
 {
 	AI_Output (other, self, "DIA_STRF_1107_COOK_15_00"); //Wer hat ausgerechnet dich zum Koch gemacht?
-	AI_Output (self, other, "DIA_STRF_1107_COOK_01_01"); //Das war Kommandant Garond, denn vor meiner Zeit als Gefangener war ich Koch im WÃ¼tenden Eber.
+	AI_Output (self, other, "DIA_STRF_1107_COOK_01_01"); //Das war Kommandant Garond, denn vor meiner Zeit als Gefangener war ich Koch im Wütenden Eber.
 	AI_Output (other, self, "DIA_STRF_1107_COOK_15_02"); //Und warum haben sie dich eingebuchtet?
-	AI_Output (self, other, "DIA_STRF_1107_COOK_01_03"); //Es gab da ein MissverstÃ¤ndnis zwischen einem Gast, einem Hackebeil und mir.
+	AI_Output (self, other, "DIA_STRF_1107_COOK_01_03"); //Es gab da ein Missverständnis zwischen einem Gast, einem Hackebeil und mir.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info PERM

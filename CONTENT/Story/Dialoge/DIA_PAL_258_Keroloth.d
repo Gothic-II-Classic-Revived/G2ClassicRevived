@@ -48,8 +48,8 @@ FUNC INT DIA_Keroloth_HELLO_Condition()
  
 FUNC VOID DIA_Keroloth_HELLO_Info()
 {	
-	AI_Output	(other ,self,"DIA_Keroloth_HELLO_15_00"); //You train people?
-	AI_Output	(self ,other,"DIA_Keroloth_HELLO_07_01"); //Yes. Once those orcs or, even worse, the dragons attack again, every single hand will be needed.
+	AI_Output	(other ,self,"DIA_Keroloth_HELLO_15_00"); //Du trainierst die Leute?
+	AI_Output	(self ,other,"DIA_Keroloth_HELLO_07_01"); //Ja. Bei uns ist jeder Mann gefragt, wenn die Orks, oder schlimmer noch, die Drachen wieder angreifen.
 };
 //***********************************************
 //	Kannst DU mir was beibringen
@@ -75,10 +75,10 @@ FUNC INT DIA_Keroloth_WantTeach_Condition()
  
 FUNC VOID DIA_Keroloth_WantTeach_Info()
 {	
-	AI_Output 	(other,self ,"DIA_Keroloth_WantTeach_15_00"); //Can you train me, too?
-	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_01"); //Sure. I'll train any good man.
-	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_02"); //But besides your talent, you need a good weapon if you want to survive here.
-	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_03"); //Ask the knight Tandor. He'll take care of you.
+	AI_Output 	(other,self ,"DIA_Keroloth_WantTeach_15_00"); //Kannst du mich auch trainieren?
+	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_01"); //Sicher. Ich trainiere jeden guten Mann.
+	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_02"); //Aber neben deinem Talent brauchst du auch eine gute Waffe, wenn du hier überleben willst.
+	AI_Output 	(self ,other,"DIA_Keroloth_WantTeach_07_03"); //Wende dich an Ritter Tandor. Er wird dich versorgen.
 		
 	Keroloth_TeachPlayer = TRUE;
 	Log_CreateTopic (TOPIC_Teacher_OC,LOG_NOTE);
@@ -112,7 +112,7 @@ FUNC INT DIA_Keroloth_Teacher_Condition()
  
 FUNC VOID DIA_Keroloth_Teacher_Info()
 {	
-	AI_Output 	(other,self ,"DIA_Keroloth_Teacher_15_00"); //I want to train!
+	AI_Output 	(other,self ,"DIA_Keroloth_Teacher_15_00"); //Ich will trainieren!
 	
 	Info_ClearChoices 	(DIA_Keroloth_Teacher);
 	Info_AddChoice 		(DIA_Keroloth_Teacher,DIALOG_BACK,DIA_Keroloth_Teacher_Back);
@@ -127,12 +127,12 @@ FUNC VOID DIA_Keroloth_Teacher_Back ()
 
 FUNC VOID B_Keroloth_TeachNoMore1 ()
 {
-	AI_Output(self,other,"B_Keroloth_TeachNoMore1_07_00"); //You are very good. There's nothing I can still teach you.
+	AI_Output(self,other,"B_Keroloth_TeachNoMore1_07_00"); //Du bist ziemlich gut. Es gibt nichts, was ich dir noch beibringen kann.
 };
 
 FUNC VOID B_Keroloth_TeachNoMore2 ()
 {
-	AI_Output(self,other,"B_Keroloth_TeachNoMore2_07_00"); //Only a trained swordmaster can help you now.
+	AI_Output(self,other,"B_Keroloth_TeachNoMore2_07_00"); //Jetzt kann dir nur noch ein ausgebildeter Schwertmeister weiter helfen.
 };
 
 FUNC VOID DIA_Keroloth_Teacher_1H_1 ()
@@ -194,7 +194,7 @@ FUNC INT DIA_Keroloth_Teach_Condition()
  
 FUNC VOID DIA_Keroloth_Teach_Info()
 {	
-	AI_Output (other,self ,"DIA_Keroloth_Teach_15_00"); //Let's begin.
+	AI_Output (other,self ,"DIA_Keroloth_Teach_15_00"); //Lass uns beginnen.
 	
 	Info_ClearChoices 	(DIA_Keroloth_Teach);
 	Info_AddChoice 		(DIA_Keroloth_Teach,	DIALOG_BACK		,DIA_Keroloth_Teach_Back);
@@ -257,14 +257,14 @@ FUNC INT DIA_Keroloth_Udar_Condition()
  
 FUNC VOID DIA_Keroloth_Udar_Info()
 {	
-	AI_Output 	(other,self ,"DIA_Keroloth_Udar_15_00"); //What about long-range combat?
-	AI_Output	(self ,other,"DIA_Keroloth_Udar_07_01"); //What about it?
-	AI_Output 	(other,self ,"DIA_Keroloth_Udar_15_02"); //Can you teach me that, too?
-	AI_Output	(self ,other,"DIA_Keroloth_Udar_07_03"); //No, but you can ask Udar, he's a good - no, he is the BEST crossbowman I know.
+	AI_Output 	(other,self ,"DIA_Keroloth_Udar_15_00"); //Was ist mit Fernkampf?
+	AI_Output	(self ,other,"DIA_Keroloth_Udar_07_01"); //Was soll damit sein?
+	AI_Output 	(other,self ,"DIA_Keroloth_Udar_15_02"); //Kannst du mir das auch beibringen?
+	AI_Output	(self ,other,"DIA_Keroloth_Udar_07_03"); //Nein, aber du kannst ja mal Udar fragen, er ist ein guter - nein, er ist der BESTE Armbrustschütze, den ich kenne.
 	
 	
 	Log_CreateTopic	(TOPIC_Teacher_OC, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher_OC, "Udar aus der Burg des Minentals kennt sich mit ArmbrÃ¼sten aus.");
+	B_LogEntry		(TOPIC_Teacher_OC, "Udar aus der Burg des Minentals kennt sich mit Armbrüsten aus.");
 };
 //#####################################################################
 //##
@@ -356,9 +356,9 @@ func int DIA_Keroloth_KAP4_HELLO_Condition ()
 
 func void DIA_Keroloth_KAP4_HELLO_Info ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_15_00"); //You're pulling such a long face.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_07_01"); //(agitated) Damn it to hell. I tell you, you have to watch like a hawk.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_07_02"); //If you turn your back for a moment, all your stuff is gone. Dirty scum!
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_15_00"); //Du machst so ein langes Gesicht.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_07_01"); //(aufgeregt) Verdammter Mist. Aufpassen musst du wie ein Luchs, sag ich dir.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_07_02"); //Kaum drehst du dich mal um, ist dein ganzer Kram weg. Dreckiges Pack!
 
 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, DIALOG_BACK, DIA_Keroloth_KAP4_HELLO_ende );
 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Ein Paladin sollte sich nicht so aufregen.", DIA_Keroloth_KAP4_HELLO_ruhig );
@@ -374,23 +374,23 @@ func void DIA_Keroloth_KAP4_HELLO_ende ()
 
 func void DIA_Keroloth_KAP4_HELLO_bestohlen ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_15_00"); //Did someone steal from you?
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_01"); //No. They smuggled 20 gold pieces into my pocket. Of course they stole something, you idiot!
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_02"); //I tell you, when I get my hands on the dirty swine...
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_15_00"); //Hat man dich bestohlen?
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_01"); //Nein. Sie haben mir 20 Goldstücke in die Tasche gemogelt. Natürlich gestohlen, du Idiot!
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_02"); //Ich sag dir, wenn ich die Drecksau zu fassen kriege ...
 
 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "Was fehlt dir denn?", DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt );
 };
 func void DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_15_00"); //So what are you missing?
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_01"); //My purse, with all my savings in it.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_02"); //And now it's gone!
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_15_03"); //It'll turn up somewhere.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_04"); //When I get my hands on him...
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_15_00"); //Was fehlt dir denn?
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_01"); //Mein Geldbeutel, da waren meine ganzen Ersparnisse drin.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_02"); //Und jetzt ist er weg!
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_15_03"); //Der findet sich schon wieder.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_04"); //Wenn ich den zu fassen kriege ...
 
 	Log_CreateTopic (TOPIC_KerolothsGeldbeutel, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KerolothsGeldbeutel, LOG_RUNNING);
-	B_LogEntry (TOPIC_KerolothsGeldbeutel,"Der Paladin Keroloth vermisst seinen Geldbeutel. Er behauptet, er sei ihm von den DrachenjÃ¤gern gestohlen worden."); 
+	B_LogEntry (TOPIC_KerolothsGeldbeutel,"Der Paladin Keroloth vermisst seinen Geldbeutel. Er behauptet, er sei ihm von den Drachenjägern gestohlen worden."); 
 
 
 	Info_ClearChoices	(DIA_Keroloth_KAP4_HELLO);
@@ -398,24 +398,24 @@ func void DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt ()
 
 func void DIA_Keroloth_KAP4_HELLO_pack ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_pack_15_00"); //What scum?
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_pack_15_00"); //Welches Pack?
 	
 	if (hero.guild == GIL_DJG)
 		{
-			AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_pack_07_01"); //You shabby dragon hunters, of course. Who else?
+			AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_pack_07_01"); //Ihr lumpigen Drachenjäger, natürlich. Wer sonst?
 		}
 	else
 		{
-			AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_pack_07_02"); //Those dragon hunting riff-raff, of course. Who did you think I was talking about?
+			AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_pack_07_02"); //Dieses Lumpengesindel von Drachenjägern natürlich. Was hast du denn gedacht, wovon ich rede?
 		};
 		
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_pack_07_03"); //(to himself) You've got to watch out, I tell you.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_pack_07_03"); //(zu sich) Aufpassen musst du, sag ich dir.
 };
 
 func void DIA_Keroloth_KAP4_HELLO_ruhig ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_ruhig_15_00"); //Calm down! A paladin shouldn't lose his temper like that.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_ruhig_07_01"); //But I don't want to calm down. That was everything I own, damnit!
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_ruhig_15_00"); //Beruhige dich wieder! Ein Paladin sollte sich nicht so aufregen.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_ruhig_07_01"); //Ich will mich aber nicht beruhigen. Das war mein ganzer Besitz, verdammt noch mal!
 };
 
 
@@ -446,51 +446,51 @@ func int DIA_Keroloth_KAP4_GELDGEFUNDEN_Condition ()
 
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_Info ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_15_00"); //I think I found your purse.
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_15_00"); //Ich glaube, ich habe deinen Geldbeutel gefunden.
 	TOPIC_END_KerolothsGeldbeutel = TRUE;
 	B_GivePlayerXP (XP_KerolothsGeldbeutel);
 	if (B_GiveInvItems (other, self, ItMi_KerolothsGeldbeutelLeer_MIS,1))
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_07_01"); //The pouch is empty. What swine did this?
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_07_01"); //Der Beutel ist ja leer. Welches Schwein hat das getan?
 	
 		Keroloths_BeutelLeer = TRUE;
 	};
 	if (B_GiveInvItems (other, self, ItMi_KerolothsGeldbeutel_MIS,1))
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_07_02"); //What? Where? What bastard did that?
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_07_02"); //Was? Wo? Welcher Mistkerl war das?
 	};
 	
 	if (hero.guild == GIL_DJG)
 	{
-		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Moment. Wie siehtÂ´s mit einer Belohnung aus?", DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn );
+		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Moment. Wie sieht´s mit einer Belohnung aus?", DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn );
 	};
 
-	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Er lag da drÃ¼ben bei der Schmiede.", DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede );
-	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Ich habe einen der DrachenjÃ¤ger in Verdacht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
-	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "WeiÃŸ ich doch nicht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung);
+	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Er lag da drüben bei der Schmiede.", DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede );
+	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Ich habe einen der Drachenjäger in Verdacht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
+	Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Weiß ich doch nicht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung);
 };
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_15_00"); //How would I know?
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_15_00"); //Weiß ich doch nicht.
 
 	if (hero.guild == GIL_DJG)
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_07_01"); //Are you trying to pull my leg? It was you, admit it.
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_07_01"); //Willst du mich verarschen? Du bist es doch gewesen, gib's zu.
 		
 		Info_ClearChoices	(DIA_Keroloth_KAP4_GELDGEFUNDEN);
-		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Ich habe einen der DrachenjÃ¤ger in Verdacht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
+		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Ich habe einen der Drachenjäger in Verdacht.", DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG );
 		Info_AddChoice	(DIA_Keroloth_KAP4_GELDGEFUNDEN, "Du kannst mich mal.", DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_kannstmich );
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_07_02"); //I'll find that out yet.
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_07_02"); //Das werde ich noch raus kriegen.
 		AI_StopProcessInfos (self);
 	};
 };
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_kannstmich ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_kannstmich_15_00"); //Kiss my ass.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_kannstmich_07_01"); //I'll teach you to steal from decent folks.
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_kannstmich_15_00"); //Du kannst mich mal.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_kannstmich_07_01"); //Ich werd dich lehren, anständige Leute zu beklauen.
 
 	AI_StopProcessInfos	(self);
 	B_Attack (self, other, AR_NONE, 1);	
@@ -498,17 +498,17 @@ func void DIA_Keroloth_KAP4_GELDGEFUNDEN_keineAhnung_kannstmich ()
 
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_15_00"); //I suspect one of the dragon hunters.
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_15_00"); //Ich habe einen der Drachenjäger in Verdacht.
 		
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_01"); //(angry) I knew it.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_01"); //(verärgert) Hab ich's doch gewusst.
 	
 	if (hero.guild == GIL_DJG)
 		{
-			AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_02"); //(bellows) They never should have let you into the castle.
+			AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_02"); //(brüllt) Euch hätte man gar nicht in die Burg lassen dürfen.
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_03"); //Just wait, I'll give those swine what for.
+			AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG_07_03"); //Na warte, diese Schweine werden mich noch kennen lernen.
 		};
 
 	AI_StopProcessInfos	(self);
@@ -533,23 +533,23 @@ func void DIA_Keroloth_KAP4_GELDGEFUNDEN_DJG ()
 
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede_15_00"); //Ehm. It was over there, by the smithy.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede_07_01"); //Where? Near the smithy? It must have fallen out of a dragon hunter's pocket there, don't tell me otherwise.
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede_15_00"); //Ähm. Er lag drüben bei der Schmiede.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Schmiede_07_01"); //Wo? Bei der Schmiede? Das ist doch sicher einem Drachenjäger aus der Tasche gefallen, erzähl mir doch nichts.
 };
 
 func void DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn_15_00"); //Just a moment. What about a reward?
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn_15_00"); //Moment. Wie sieht's mit einer Belohnung aus?
 	
  	if (Keroloths_BeutelLeer == TRUE)
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn_07_01"); //That's the last straw. It's been a while since you've had a knuckle sandwich, huh?
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn_07_01"); //Das schlägt doch dem Fass den Boden aus. Dir hat wohl schon lange keiner mehr die Fresse poliert, was?
 		AI_StopProcessInfos	(self);
 		B_Attack (self, other, AR_NONE, 1);	
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn_07_02"); //Arrh. All right. Here's a few coins. And now tell me, who did it?
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_GELDGEFUNDEN_Lohn_07_02"); //Arrh. Na gut. Hier hast ein paar Münzen. Und jetzt erzähl, wer ist das gewesen?
 		CreateInvItems (self, ItMi_Gold, 50);									
 		B_GiveInvItems (self, other, ItMi_Gold, 50);					
 		Keroloth_HasPayed = TRUE;
@@ -567,7 +567,7 @@ instance DIA_Keroloth_KAP4_BELOHNUNG		(C_INFO)
 	information	 = 	DIA_Keroloth_KAP4_BELOHNUNG_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Ich will Finderlohn fÃ¼r deinen Geldbeutel.";
+	description	 = 	"Ich will Finderlohn für deinen Geldbeutel.";
 };
 
 func int DIA_Keroloth_KAP4_BELOHNUNG_Condition ()
@@ -582,17 +582,17 @@ func int DIA_Keroloth_KAP4_BELOHNUNG_Condition ()
 
 func void DIA_Keroloth_KAP4_BELOHNUNG_Info ()
 {
- 	AI_Output			(other, self, "DIA_Keroloth_KAP4_BELOHNUNG_15_00"); //I want my finder's fee for your purse.
+ 	AI_Output			(other, self, "DIA_Keroloth_KAP4_BELOHNUNG_15_00"); //Ich will Finderlohn für deinen Geldbeutel.
 
 	if ((Keroloths_BeutelLeer == TRUE) || (hero.guild == GIL_DJG))
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_BELOHNUNG_07_01"); //You can have a punch in the jaw!
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_BELOHNUNG_07_01"); //Du kannst wohl ein paar aufs Maul haben!
 		AI_StopProcessInfos	(self);
 		B_Attack (self, other, AR_NONE, 1);	
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Keroloth_KAP4_BELOHNUNG_07_02"); //Is that your biggest worry? Here's a couple of damn coins, and now beat it.
+		AI_Output			(self, other, "DIA_Keroloth_KAP4_BELOHNUNG_07_02"); //Du hast Sorgen! Hier hast du ein paar verdammte Münzen und jetzt verschwinde.
 		
 		CreateInvItems (self, ItMi_Gold, 50);									
 		B_GiveInvItems (self, other, ItMi_Gold, 50);					
@@ -612,7 +612,7 @@ instance DIA_Keroloth_KAP4_ENTSPANNDICH		(C_INFO)
 	information	 = 	DIA_Keroloth_KAP4_ENTSPANNDICH_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"RegÂ´ dich ab.";
+	description	 = 	"Reg´ dich ab.";
 };
 
 func int DIA_Keroloth_KAP4_ENTSPANNDICH_Condition ()
@@ -627,23 +627,23 @@ func int DIA_Keroloth_KAP4_ENTSPANNDICH_Condition ()
 
 func void DIA_Keroloth_KAP4_ENTSPANNDICH_Info ()
 {
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_ENTSPANNDICH_15_00"); //Relax.
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_ENTSPANNDICH_15_00"); //Reg´ dich ab.
 	
 	if (hero.guild == GIL_KDF)
 	{
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_01"); //Yes, Master. I'll try.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_01"); //Ja, Meister. Ich werde mich bemühen.
 	}
 	else if (MIS_OCGateOpen == TRUE)
 	{
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_02"); //I can't prove it, but I think you're the traitor who opened the gate.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_03"); //You'll pay for that now.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_02"); //Ich kann es nicht beweisen, aber ich glaube, du bist der Verräter, der das Tor geöffnet hat.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_03"); //Dafür wirst du jetzt bezahlen.
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);	
 	}
 	else 
 	{
-	AI_Output			(other, self, "DIA_Keroloth_KAP4_ENTSPANNDICH_15_04"); //You've got your purse back, haven't you?
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_05"); //Don't push me, boy! Clear off!
+	AI_Output			(other, self, "DIA_Keroloth_KAP4_ENTSPANNDICH_15_04"); //Du hast ja deinen Geldbeutel wieder.
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_ENTSPANNDICH_07_05"); //Reiz mich nicht, Bursche! Zieh Leine!
 	AI_StopProcessInfos (self);
 	};
 };

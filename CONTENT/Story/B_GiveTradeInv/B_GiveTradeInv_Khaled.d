@@ -21,13 +21,13 @@ FUNC VOID B_GiveTradeInv_Khaled (var C_NPC slf)
 		CreateInvItems (slf, ItMw_Barbarenstreitaxt, 1); 
 		CreateInvItems (slf, ItMw_Berserkeraxt, 1); 
 		
-		CreateInvItems (slf, ItRw_Bow_L_01, 1); 
-		CreateInvItems (slf, ItRw_Bow_L_03, 1); 
-		CreateInvItems (slf, ItRw_Bow_M_03, 1); 
-		CreateInvItems (slf, ItRw_Bow_H_02, 1); 
-		CreateInvItems (slf, ItRw_Bow_H_04, 1); 
-		CreateInvItems (slf, ItRw_Crossbow_M_02, 1); 
-		CreateInvItems (slf, ItRw_Crossbow_H_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_03, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_03, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_06, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_07, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_04, 1); 
 		
 		CreateInvItems (slf, ItRw_Arrow, 30); 
 		

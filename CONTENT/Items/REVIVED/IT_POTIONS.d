@@ -1,5 +1,5 @@
 // ************************************************************************************************
-// Wirkung und Kosten von Trnken
+// Wirkung und Kosten von Tränken
 // ************************************************************************************************
 const int Value_Elixier1		= 600;			const int Mana_Elixier1			= 100;
 const int Value_ElixierEgg		= 800;			const int ManaMax_ElixierEgg	= 10;	// FIXME: was wenn der SC das selbst benutzt??
@@ -395,7 +395,7 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_03 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_STR_01 (C_Item)
 {
-	name 			=	"Essenz der StÃ¤rke";
+	name 			=	"Essenz der Stärke";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -424,7 +424,7 @@ INSTANCE ITPO_REVIVED_BOOST_STR_01 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_STR_02 (C_Item)
 {
-	name 			=	"Extrakt der StÃ¤rke";
+	name 			=	"Extrakt der Stärke";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -453,7 +453,7 @@ INSTANCE ITPO_REVIVED_BOOST_STR_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_STR_03 (C_Item)
 {
-	name 			=	"Elixier der StÃ¤rke";
+	name 			=	"Elixier der Stärke";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -643,7 +643,7 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_02 (C_Item)
 
 INSTANCE ITPO_REVIVED_BOOST_MASTER_03 (C_Item)
 {
-	name 			=	"Trank der GÃ¶ttlichkeit";
+	name 			=	"Trank der Göttlichkeit";
 
 	mainflag 		=	ITEM_KAT_POTIONS;
 	flags 			=	ITEM_MULTI;
@@ -700,7 +700,7 @@ INSTANCE ITPO_REVIVED_SPEED_01 (C_Item)
 	inv_rotz		= 1;
 
 	description		= name;
-	TEXT[1]			= "ErmÃ¶glicht kurzzeitiges Sprinten";
+	TEXT[1]			= "Ermöglicht kurzzeitiges Sprinten";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste_01/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= Value_Haste_01;
 };
@@ -730,7 +730,7 @@ INSTANCE ITPO_REVIVED_SPEED_02 (C_Item)
 	inv_rotz		= 1;
 
 	description		= name;
-	TEXT[1]			= "ErmÃ¶glicht Sprinten";
+	TEXT[1]			= "Ermöglicht Sprinten";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste_02/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= Value_Haste_02;
 };
@@ -760,7 +760,7 @@ INSTANCE ITPO_REVIVED_SPEED_03 (C_Item)
 	inv_rotz		= 1;
 
 	description		= name;
-	TEXT[1]			= "ErmÃ¶glicht lÃ¤ngeres Sprinten";
+	TEXT[1]			= "Ermöglicht längeres Sprinten";
 	TEXT[3]			= NAME_Duration;				COUNT[3]	= Time_Haste_03/60000;
 	TEXT[5]			= NAME_Value;					COUNT[5]	= Value_Haste_03;
 };
@@ -823,7 +823,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 	inv_rotz		= 1;
 
 	description			= name;
-	TEXT[0]				= "ermÃ¶glicht Kontakt zum SchlÃ¤fer";
+	TEXT[0]				= "ermöglicht Kontakt zum Schläfer";
 	TEXT[1]				= NAME_Bonus_ManaMax;			COUNT[1]	= ManaMax_ElixierEgg;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_ElixierEgg;
 };
@@ -884,7 +884,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_02 (C_Item)
 	inv_rotz		= 1;
 
 	description			= name;
-	TEXT[0]				= "Probably not made for humans.";
+	TEXT[0]				= "Wahrscheinlich nicht für Menschen gemacht.";
 	TEXT[1]				= NAME_Bonus_HpMax;			COUNT[1]	= ManaMax_ElixierEgg;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_ElixierEgg;
 };

@@ -1,5 +1,5 @@
 // *********************************************
-// NSC steht mit Armen in die Hfte gestemmt rum
+// NSC steht mit Armen in die Hüfte gestemmt rum
 // *********************************************
 
 func void ZS_Stand_Guarding()
@@ -19,7 +19,7 @@ func void ZS_Stand_Guarding()
 
 func int ZS_Stand_Guarding_loop()
 {
-	if (Npc_IsOnFP (self, "STAND") || Npc_IsOnFP (self, "Gardist"))
+	if (Npc_IsOnFP (self, "STAND") || Npc_IsOnFP (self, "GUARD"))
 	{	
 		AI_AlignToFP (self);
 		if (self.aivar[AIV_TAPOSITION] == NOTINPOS_WALK)
@@ -34,9 +34,9 @@ func int ZS_Stand_Guarding_loop()
 		AI_AlignToFP 	(self);
 		self.aivar[AIV_TAPOSITION] = NOTINPOS_WALK;
 	}
-	else if (Wld_IsFPAvailable(self,"Gardist"))
+	else if (Wld_IsFPAvailable(self,"GUARD"))
 	{
-		AI_GotoFP 		(self, "Gardist");
+		AI_GotoFP 		(self, "GUARD");
 		AI_StandUp 		(self);
 		AI_AlignToFP 	(self);
 		self.aivar[AIV_TAPOSITION] = NOTINPOS_WALK;

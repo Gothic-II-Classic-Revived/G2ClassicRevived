@@ -17,7 +17,7 @@ instance DJG_715_Ferros (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
-	EquipItem			(self, ItRw_Crossbow_M_01);	
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_01);	
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

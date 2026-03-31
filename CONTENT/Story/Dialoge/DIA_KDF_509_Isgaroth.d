@@ -19,11 +19,11 @@ FUNC INT DIA_Isgaroth_EXIT_Condition()
 
 FUNC VOID DIA_Isgaroth_EXIT_Info()
 {
-	AI_Output	(self ,other,"DIA_Isgaroth_EXIT_01_00"); //MÃ¶ge Innos allzeit Ã¼ber dich wachen.
+	AI_Output	(self ,other,"DIA_Isgaroth_EXIT_01_00"); //Möge Innos allzeit über dich wachen.
 	AI_StopProcessInfos (self);
 };
 //****************************************************************************
-//	Begrssung
+//	Begrüssung
 //****************************************************************************
 
 INSTANCE DIA_Isgaroth_Hello   (C_INFO)
@@ -44,7 +44,7 @@ FUNC INT DIA_Isgaroth_Hello_Condition()
 };
 FUNC VOID DIA_Isgaroth_Hello_Info()
 {
-	AI_Output (self ,other,"DIA_Isgaroth_Hello_01_00"); //Innos be with you. What can I do for you, wanderer?
+	AI_Output (self ,other,"DIA_Isgaroth_Hello_01_00"); //Innos zum Gruß. Was kann ich für dich tun, Wanderer?
 }; 
 //****************************************************************************
 //	Segen
@@ -64,8 +64,8 @@ FUNC INT DIA_Isgaroth_Segen_Condition()
 };
 FUNC VOID DIA_Isgaroth_Segen_Info()
 {
-	AI_Output (other ,self,"DIA_Isgaroth_Segen_15_00"); //Bless me!
-	AI_Output (self ,other,"DIA_Isgaroth_Segen_01_01"); //I bless you in the name of Innos. May the Lord's fire burn in your heart and give you the strength to act according to his justice.
+	AI_Output (other ,self,"DIA_Isgaroth_Segen_15_00"); //Segne mich!
+	AI_Output (self ,other,"DIA_Isgaroth_Segen_01_01"); //Ich segne dich im Namen Innos'. Der Herr lasse sein Feuer in deinem Herzen brennen und gebe dir die Kraft, nach seinem Recht zu handeln.
 	
 	Isgaroth_Segen = TRUE;
 }; 
@@ -92,11 +92,11 @@ FUNC INT DIA_Isgaroth_Wolf_Condition()
 };
 FUNC VOID DIA_Isgaroth_Wolf_Info()
 {
-	AI_Output (other,self ,"DIA_Isgaroth_Wolf_15_00"); //Sergio sent me. I have taken over his task. So, what is it?
-	AI_Output (self ,other,"DIA_Isgaroth_Wolf_01_01"); //A dark wolf has been roaming the area recently. Track it down and kill it.
+	AI_Output (other,self ,"DIA_Isgaroth_Wolf_15_00"); //Sergio schickt mich. Ich habe seine Aufgabe übernommen. Also, was gibt's?
+	AI_Output (self ,other,"DIA_Isgaroth_Wolf_01_01"); //Hier in der Gegend streift seit kurzer Zeit ein dunkler Wolf herum. Spüre ihn auf und erlege ihn.
 
 	MIS_IsgarothWolf = LOG_RUNNING;
-	B_LogEntry (Topic_IsgarothWolf,"Am Schrein treibt sich ein dunkler Wolf herum. Ich soll ihn aufspÃ¼ren und erlegen.");
+	B_LogEntry (Topic_IsgarothWolf,"Am Schrein treibt sich ein dunkler Wolf herum. Ich soll ihn aufspüren und erlegen.");
 	
 };
 //********************************************************************************
@@ -123,8 +123,8 @@ FUNC INT DIA_Isgaroth_tot_Condition()
 };
 FUNC VOID DIA_Isgaroth_tot_Info()
 {
-	AI_Output (other,self ,"DIA_Isgaroth_tot_15_00"); //I have killed the wolf.
-	AI_Output (self ,other,"DIA_Isgaroth_tot_01_01"); //Good work, novice. You are a brave man. But now return to the monastery and go about your duties.
+	AI_Output (other,self ,"DIA_Isgaroth_tot_15_00"); //Ich habe den Wolf erlegt.
+	AI_Output (self ,other,"DIA_Isgaroth_tot_01_01"); //Gute Arbeit, Novize. Du bist ein mutiger Mann. Doch nun geh wieder zurück ins Kloster und verrichte deine Arbeit.
 	
 	MIS_IsgarothWolf = LOG_SUCCESS;
 	B_GivePlayerXP (XP_IsgarothWolf);
@@ -153,14 +153,14 @@ FUNC INT DIA_Isgaroth_Job_Condition()
 };
 FUNC VOID DIA_Isgaroth_Job_Info()
 {
-	AI_Output (other,self ,"DIA_Isgaroth_Job_15_00"); //What are you doing here?
-	AI_Output (self ,other,"DIA_Isgaroth_Job_01_01"); //I am a Magician of Fire. A priest of our god Innos.
-	AI_Output (self ,other,"DIA_Isgaroth_Job_01_02"); //This shrine is consecrated to HIM, the highest god, the creator of the fire and lord of justice.
-	AI_Output (self ,other,"DIA_Isgaroth_Job_01_03"); //People come to me in order to pray to Innos and be blessed.
-	AI_Output (self ,other,"DIA_Isgaroth_Job_01_04"); //And for a small donation, you can get many useful things from me.
+	AI_Output (other,self ,"DIA_Isgaroth_Job_15_00"); //Was machst du hier?
+	AI_Output (self ,other,"DIA_Isgaroth_Job_01_01"); //Ich bin ein Magier des Feuers. Ein Priester unseres Gottes Innos'.
+	AI_Output (self ,other,"DIA_Isgaroth_Job_01_02"); //Dieser Schrein ist IHM, dem obersten Gott, dem Schöpfer des Feuers und Herrn der Gerichtsbarkeit geweiht.
+	AI_Output (self ,other,"DIA_Isgaroth_Job_01_03"); //Zu mir kommen die Menschen, um zu Innos zu beten und sich segnen zu lassen.
+	AI_Output (self ,other,"DIA_Isgaroth_Job_01_04"); //Und für eine kleine Spende bekommst du bei mir verschiedene nützliche Dinge.
 	
 	Log_CreateTopic (Topic_KlosterTrader,LOG_NOTE);
-	B_LogEntry (Topic_KlosterTrader,"Meister Isgaroth handelt mit nÃ¼tzlichen, magischen GegenstÃ¤nden, am Schrein vor dem Kloster.");
+	B_LogEntry (Topic_KlosterTrader,"Meister Isgaroth handelt mit nützlichen, magischen Gegenständen, am Schrein vor dem Kloster.");
 };
 //****************************************************************************
 //	Trade
@@ -185,7 +185,7 @@ FUNC INT DIA_Isgaroth_Trade_Condition()
 FUNC VOID DIA_Isgaroth_Trade_Info()
 {
 	B_GiveTradeInv (self);
-	AI_Output (other ,self,"DIA_Isgaroth_Trade_15_00"); //Show me your wares.
+	AI_Output (other ,self,"DIA_Isgaroth_Trade_15_00"); //Zeig mir deine Ware.
 };
 //********************************************************************************
 //	Kloster
@@ -209,21 +209,21 @@ FUNC INT DIA_Isgaroth_Kloster_Condition()
 };
 FUNC VOID DIA_Isgaroth_Kloster_Info()
 {
-	AI_Output (other,self ,"DIA_Isgaroth_Kloster_15_00"); //Where will this path take me?
-	AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_01"); //The path leads to the monastery of the Magicians of Fire. However, access is permitted only to the servants of Innos.
+	AI_Output (other,self ,"DIA_Isgaroth_Kloster_15_00"); //Wohin komme ich, wenn ich diesen Weg weitergehe?
+	AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_01"); //Der Weg führt zum Kloster der Feuermagier. Doch der Zutritt ist nur den Dienern Innos' gestattet.
 	
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //And if you want to be accepted as a novice in the monastery, you must bring a sheep and...
+		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //Und wenn du als Novize im Kloster aufgenommen werden willst, musst du ein Schaf mitbringen und ...
 		B_Say_Gold (self, other,Summe_Kloster);
 		
 		Log_CreateTopic (Topic_Kloster,LOG_MISSION);
 		Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
-		B_LogEntry (Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und 1000 GoldstÃ¼cke.");
+		B_LogEntry (Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und 1000 Goldstücke.");
 	}
 	else 
 	{
-		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_03"); //Since you have already chosen to join another group, entrance will be denied you.
+		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_03"); //Da du dich bereits einer anderen Gruppe angeschlossen hast, wird dir der Zugang verwehrt bleiben.
 	};
 };
 
@@ -252,9 +252,9 @@ FUNC INT DIA_Isgaroth_Vatras_Condition()
 };
 FUNC VOID DIA_Isgaroth_Vatras_Info()
 {
-	AI_Output (other,self ,"DIA_ISgaroth_Vatras_15_00"); //I carry a message from Vatras.
-	AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_01"); //What is this message?
-	AI_Output (other,self ,"DIA_Isgaroth_Vatras_15_02"); //It's a letter. Here.
+	AI_Output (other,self ,"DIA_ISgaroth_Vatras_15_00"); //Ich habe eine Botschaft von Vatras.
+	AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_01"); //Wie lautet diese Botschaft?
+	AI_Output (other,self ,"DIA_Isgaroth_Vatras_15_02"); //Es ist ein Brief. Hier.
 	
 	if (Npc_HasItems (other,ItWr_VatrasMessage) == 1)
 	{
@@ -264,8 +264,8 @@ FUNC VOID DIA_Isgaroth_Vatras_Info()
 		};
 		B_UseFakeScroll();
 	
-		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_03"); //Good, you can tell Vatras that I have received the message.
-		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_04"); //Take these potions as a reward for your service, they will surely be of use to you.
+		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_03"); //Gut, du kannst Vatras ausrichten, dass ich die Nachricht erhalten habe.
+		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_04"); //Als Belohnung für deine Dienste nimm diese Tränke, sie werden dir sicher noch nützlich sein.
 		
 		CreateInvItems (self, ITPO_REVIVED_HEALTH_02,2);
 		B_GiveInvItems (self,other,ITPO_REVIVED_HEALTH_02,2);
@@ -281,8 +281,8 @@ FUNC VOID DIA_Isgaroth_Vatras_Info()
 		};
 		B_UseFakeScroll ();
 	
-		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_05"); //The seal is broken. What were you thinking, you fool!
-		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_06"); //Go and tell Vatras that I have received his message.
+		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_05"); //Das Siegel ist gebrochen. Was fällt dir ein, du Narr.
+		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_06"); //Geh und sage Vatras, dass ich seine Nachricht erhalten habe.
 		AI_StopProcessInfos (self);
 	};	
 	Vatras_Return = TRUE;

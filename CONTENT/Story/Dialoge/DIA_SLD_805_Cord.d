@@ -46,8 +46,8 @@ FUNC INT DIA_Cord_Hallo_Condition()
 
 FUNC VOID DIA_Cord_Hallo_Info()
 {
-	AI_Output (self ,other, "DIA_Cord_Hallo_14_00"); //Wenn du ein Problem mit den WÃ¶lfen oder FeldrÃ¤ubern hast, dann frag einen der jÃ¼ngeren SÃ¶ldner.
-	AI_Output (self ,other, "DIA_Cord_Hallo_14_01"); //Zu mir kannst du kommen, wenn hier die Paladine anrÃ¼cken.
+	AI_Output (self ,other, "DIA_Cord_Hallo_14_00"); //Wenn du ein Problem mit den Wölfen oder Feldräubern hast, dann frag einen der jüngeren Söldner.
+	AI_Output (self ,other, "DIA_Cord_Hallo_14_01"); //Zu mir kannst du kommen, wenn hier die Paladine anrücken.
 
 		AI_Output (other, self, "DIA_Cord_Hallo_15_02"); //Was?
 		AI_Output (self ,other, "DIA_Cord_Hallo_14_03"); //Jedes Mal, wenn einer von euch Bauern zu mir kommt, geht's darum, harmlose Tiere abzumetzeln.
@@ -67,7 +67,7 @@ INSTANCE DIA_Cord_WannaJoin   (C_INFO)
 	condition   = DIA_Cord_WannaJoin_Condition;
 	information = DIA_Cord_WannaJoin_Info;
 	permanent   = TRUE;
-	description = "Ich will SÃ¶ldner werden!";
+	description = "Ich will Söldner werden!";
 };
 
 FUNC INT DIA_Cord_WannaJoin_Condition()
@@ -81,15 +81,15 @@ FUNC INT DIA_Cord_WannaJoin_Condition()
 
 FUNC VOID B_Cord_BeBetter ()
 {
-	AI_Output (self ,other, "DIA_Cord_WannaJoin_14_14"); //Solange du nicht vernÃ¼nftig mit einer Waffe umgehen kannst, bist du hier falsch!
+	AI_Output (self ,other, "DIA_Cord_WannaJoin_14_14"); //Solange du nicht vernünftig mit einer Waffe umgehen kannst, bist du hier falsch!
 };
 
 FUNC VOID DIA_Cord_WannaJoin_Info()
 {
-	AI_Output (other, self, "DIA_Cord_WannaJoin_15_00"); //Ich will SÃ¶ldner werden!
+	AI_Output (other, self, "DIA_Cord_WannaJoin_15_00"); //Ich will Söldner werden!
 	if (Cord_SchonmalGefragt == FALSE)
 	{
-		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_01"); //Du siehst mir eher wie ein Kandidat fÃ¼r die Feldarbeit aus, Junge.
+		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_01"); //Du siehst mir eher wie ein Kandidat für die Feldarbeit aus, Junge.
 		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_02"); //Kannst du denn mit einer Waffe umgehen?
 		Cord_SchonmalGefragt = TRUE;
 	}
@@ -107,7 +107,7 @@ FUNC VOID DIA_Cord_WannaJoin_Info()
 	{
 		AI_Output (other, self, "DIA_Cord_WannaJoin_15_06"); //Tjaaa ...
 	};
-	AI_Output (self ,other, "DIA_Cord_WannaJoin_14_07"); //Und wie steht's mit ZweihÃ¤ndern?
+	AI_Output (self ,other, "DIA_Cord_WannaJoin_14_07"); //Und wie steht's mit Zweihändern?
 	if (Npc_GetTalentSkill(other, NPC_TALENT_2H) > 0)
 	{
 		AI_Output (other, self, "DIA_Cord_WannaJoin_15_08"); //Damit kann ich umgehen.
@@ -120,23 +120,23 @@ FUNC VOID DIA_Cord_WannaJoin_Info()
 	if (Npc_GetTalentSkill(other, NPC_TALENT_1H) > 0)
 	|| (Npc_GetTalentSkill(other, NPC_TALENT_2H) > 0)
 	{
-		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_10"); //Du bist jedenfalls kein blutiger AnfÃ¤nger mehr. Gut. Ich werde fÃ¼r dich stimmen.
+		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_10"); //Du bist jedenfalls kein blutiger Anfänger mehr. Gut. Ich werde für dich stimmen.
 		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_11"); //Was dir noch an Wissen fehlt, kannst du von mir lernen.
 		Cord_Approved = TRUE;
 		B_GivePlayerXP (XP_Cord_Approved);
 		B_LogEntry (TOPIC_SLDRespekt,"Cord's Stimme habe ich im Sack.");
 		Log_CreateTopic (Topic_SoldierTeacher,LOG_NOTE);
-		B_LogEntry (Topic_SoldierTeacher,"Cord kann mich im Umgang mit Ein - und ZweihÃ¤ndern unterrichten.");
+		B_LogEntry (Topic_SoldierTeacher,"Cord kann mich im Umgang mit Ein - und Zweihändern unterrichten.");
 	}
 	else
 	{
-		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_12"); //Das heiÃŸt mit anderen Worten: Du bist ein blutiger AnfÃ¤nger!
-		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_13"); //Jeder SÃ¶ldner muss sich auf seine Kameraden verlassen kÃ¶nnen. Unser aller Leben hÃ¤ngt davon ab.
+		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_12"); //Das heißt mit anderen Worten: Du bist ein blutiger Anfänger!
+		AI_Output (self ,other, "DIA_Cord_WannaJoin_14_13"); //Jeder Söldner muss sich auf seine Kameraden verlassen können. Unser aller Leben hängt davon ab.
 		B_Cord_BeBetter ();
 		
 		Log_CreateTopic (TOPIC_CordProve,LOG_MISSION);
 		Log_SetTopicStatus (TOPIC_CordProve,LOG_RUNNING); 
-		B_LogEntry (TOPIC_CordProve,"Cord wird mir seine Stimme geben, wenn ich ein besserer KÃ¤mpfer bin."); 
+		B_LogEntry (TOPIC_CordProve,"Cord wird mir seine Stimme geben, wenn ich ein besserer Kämpfer bin."); 
 	};
 };
 
@@ -150,7 +150,7 @@ INSTANCE DIA_Cord_ExplainSkills   (C_INFO)
 	condition   = DIA_Cord_ExplainSkills_Condition;
 	information = DIA_Cord_ExplainSkills_Info;
 	permanent   = FALSE;
-	description = "Was soll ich eher lernen, einhÃ¤ndigen oder zweihÃ¤ndigen Kampf?";
+	description = "Was soll ich eher lernen, einhändigen oder zweihändigen Kampf?";
 };
 
 FUNC INT DIA_Cord_ExplainSkills_Condition()
@@ -162,12 +162,12 @@ FUNC INT DIA_Cord_ExplainSkills_Condition()
 };
 FUNC VOID DIA_Cord_ExplainSkills_Info()
 {
-	AI_Output (other, self, "DIA_Cord_ExplainSkills_15_00"); //Was soll ich eher lernen, einhÃ¤ndigen oder zweihÃ¤ndigen Kampf?
-	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_01"); //Die beiden Waffengattungen sind recht Ã¤hnlich.
-	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_02"); //Sobald du die nÃ¤chste Stufe bei einer Waffengattung erreicht hast, lernst du automatisch die andere mit.
-	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_03"); //Wenn du zum Beispiel ein guter KÃ¤mpfer mit der Einhandwaffe bist, aber noch ein AnfÃ¤nger mit der Zweihandwaffe, ...
+	AI_Output (other, self, "DIA_Cord_ExplainSkills_15_00"); //Was soll ich eher lernen, einhändigen oder zweihändigen Kampf?
+	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_01"); //Die beiden Waffengattungen sind recht ähnlich.
+	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_02"); //Sobald du die nächste Stufe bei einer Waffengattung erreicht hast, lernst du automatisch die andere mit.
+	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_03"); //Wenn du zum Beispiel ein guter Kämpfer mit der Einhandwaffe bist, aber noch ein Anfänger mit der Zweihandwaffe, ...
 	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_04"); //...wirst du bei allem, was du an Training mit Einhandwaffen investierst auch mit Zweihandwaffen besser werden.
-	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_05"); //Wenn du immer nur eine Waffengattung trainierst, wird das Training fÃ¼r dich anstrengender.
+	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_05"); //Wenn du immer nur eine Waffengattung trainierst, wird das Training für dich anstrengender.
 	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_06"); //Trainierst du immer beide, kommst du mit weniger Einsatz genauso weit.
 	AI_Output (self ,other, "DIA_Cord_ExplainSkills_14_07"); //Im Endeffekt kommt es aufs selbe raus - es ist deine Wahl.
 };
@@ -196,9 +196,9 @@ FUNC VOID DIA_Cord_ExplainWeapons_Info()
 {
 	AI_Output (other, self, "DIA_Cord_ExplainWeapons_15_00"); //Wo liegt der Vorteil von Einhand- oder Zweihandwaffen?
 	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_01"); //Eine gute Frage. Ich sehe, du hast dich schon mit dem Thema auseinandergesetzt.
-	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_02"); //EinhÃ¤nder sind schneller, aber etwas schwÃ¤cher.
-	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_03"); //ZweihÃ¤nder richten mehr Schaden an, aber du kannst nicht so schnell zuschlagen.
-	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_04"); //AuÃŸerdem ist mehr StÃ¤rke erforderlich, um einen ZweihÃ¤nder zu fÃ¼hren. Das bedeutet zusÃ¤tzliches Training.
+	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_02"); //Einhänder sind schneller, aber etwas schwächer.
+	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_03"); //Zweihänder richten mehr Schaden an, aber du kannst nicht so schnell zuschlagen.
+	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_04"); //Außerdem ist mehr Stärke erforderlich, um einen Zweihänder zu führen. Das bedeutet zusätzliches Training.
 	AI_Output (self ,other, "DIA_Cord_ExplainWeapons_14_05"); //Nur, wenn du bereit bist, viel zu investieren, hast du eine Chance, richtig gut zu werden.
 };
 
@@ -217,7 +217,7 @@ INSTANCE DIA_Cord_Teach(C_INFO)
 	condition	= DIA_Cord_Teach_Condition;
 	information	= DIA_Cord_Teach_Info;
 	permanent	= TRUE;
-	description = "Bring mir bei, wie man kÃ¤mpft!";
+	description = "Bring mir bei, wie man kämpft!";
 };                       
 
 FUNC INT DIA_Cord_Teach_Condition()
@@ -227,12 +227,12 @@ FUNC INT DIA_Cord_Teach_Condition()
 
 FUNC VOID B_Cord_Zeitverschwendung ()
 {
-	AI_Output (self ,other,"DIA_Cord_Teach_14_03"); //Ich verschwende meine Zeit nicht mit AnfÃ¤ngern.
+	AI_Output (self ,other,"DIA_Cord_Teach_14_03"); //Ich verschwende meine Zeit nicht mit Anfängern.
 };
 
 FUNC VOID DIA_Cord_Teach_Info()
 {	
-	AI_Output (other,self, "DIA_Cord_Teach_15_00"); //Bring mir bei, wie man kÃ¤mpft!
+	AI_Output (other,self, "DIA_Cord_Teach_15_00"); //Bring mir bei, wie man kämpft!
 	if (Cord_Approved == TRUE)
 	|| (hero.guild == GIL_SLD)
 	|| (hero.guild == GIL_DJG)
@@ -248,13 +248,13 @@ FUNC VOID DIA_Cord_Teach_Info()
 		}
 		else if  (Npc_GetTalentSkill(other, NPC_TALENT_1H) > 0)
 		{
-			AI_Output (self ,other,"DIA_Cord_Teach_14_02"); //Ich kann dich im Umgang mit Einhandwaffen trainieren. Aber fÃ¼r ZweihÃ¤nder bist du noch zu schlecht.
+			AI_Output (self ,other,"DIA_Cord_Teach_14_02"); //Ich kann dich im Umgang mit Einhandwaffen trainieren. Aber für Zweihänder bist du noch zu schlecht.
 			B_Cord_Zeitverschwendung();
 			Cord_Approved = TRUE;
 		}
 		else if (Npc_GetTalentSkill(other, NPC_TALENT_2H) > 0)
 		{
-			AI_Output (self ,other,"DIA_Cord_Teach_14_04"); //Also mit Einhandwaffen bist du noch ein blutiger AnfÃ¤nger! Aber du kannst schon ganz passabel mit einem ZweihÃ¤nder umgehen.
+			AI_Output (self ,other,"DIA_Cord_Teach_14_04"); //Also mit Einhandwaffen bist du noch ein blutiger Anfänger! Aber du kannst schon ganz passabel mit einem Zweihänder umgehen.
 			AI_Output (self ,other,"DIA_Cord_Teach_14_05"); //Wenn du Erfahrung mit Einhandwaffen brauchst, such dir einen anderen Lehrer.
 			Cord_Approved = TRUE;
 		}
@@ -289,7 +289,7 @@ FUNC VOID DIA_Cord_Teach_Info()
 	}
 	else 
 	{
-		AI_Output (self ,other,"DIA_Cord_Teach_14_06"); //Ich trainiere nur SÃ¶ldner oder wÃ¼rdige AnwÃ¤rter!
+		AI_Output (self ,other,"DIA_Cord_Teach_14_06"); //Ich trainiere nur Söldner oder würdige Anwärter!
 	};
 };
 

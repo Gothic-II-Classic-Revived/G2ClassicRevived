@@ -4,7 +4,7 @@
 
 INSTANCE ITKE_REVIVED_STONEFORTRESS (C_Item)
 {
-	name 				=	"Alter SchlÃ¼ssel";
+	name 				=	"Alter Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	
@@ -14,13 +14,13 @@ INSTANCE ITKE_REVIVED_STONEFORTRESS (C_Item)
 	visual 				=	"ItKe_Key_01.3ds";
 	material 			=	MAT_METAL;
 	description			= name;
-	TEXT[0]				= "An old rusty key to a chest";
-	TEXT[1]				= "from the old mountain fort";
+	TEXT[0]				= "Ein alter, rostiger Schlüssel zu einer Truhe";
+	TEXT[1]				= "aus der alten Bergfestung";
 };
 
 INSTANCE ITKE_REVIVED_XARDAS(C_Item)
 {
-	name 				=	"Xardas SchlÃ¼ssel";
+	name 				=	"Xardas Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -32,14 +32,14 @@ INSTANCE ITKE_REVIVED_XARDAS(C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"Ein TruhenschlÃ¼ssel";
+	TEXT[2]				=	"Ein Truhenschlüssel";
 	TEXT[3]				=   "von Xardas";
-	TEXT[5]				=   "A bit worn down, it's old.";
+	TEXT[5]				=   "Er ist etwas abgenutzt, er ist alt.";
 };
 
 INSTANCE ITKE_REVIVED_GOMEZ (C_Item)
 {
-	name 				=	"Gomez' SchlÃ¼ssel";
+	name 				=	"Gomez' Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	
@@ -49,8 +49,8 @@ INSTANCE ITKE_REVIVED_GOMEZ (C_Item)
 	visual 				=	"ItKe_Key_01.3ds";
 	material 			=	MAT_METAL;
 	description			= name;
-	TEXT[0]				= "An old rusty key to a chest";
-	TEXT[1]				= "from the old mountain fort";
+	TEXT[0]				= "Ein alter, rostiger Schlüssel zu einer Truhe";
+	TEXT[1]				= "aus der alten Bergfestung";
 };
 
 //****************************************************************************
@@ -59,7 +59,7 @@ INSTANCE ITKE_REVIVED_GOMEZ (C_Item)
 
 INSTANCE ITKE_REVIVED_GORDONRAMSAY (C_Item)
 {
-	name 				=	"KÃ¼chenschlÃ¼ssel";
+	name 				=	"Küchenschlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	
@@ -69,6 +69,6 @@ INSTANCE ITKE_REVIVED_GORDONRAMSAY (C_Item)
 	visual 				=	"ItKe_Key_01.3ds";
 	material 			=	MAT_METAL;
 	description			= name;
-	TEXT[0]				= "Alter SchlÃ¼ssel";
-	TEXT[1]				= "with the initials G.R.";
+	TEXT[0]				= "Alter Schlüssel";
+	TEXT[1]				= "mit den Initialen G.R.";
 };

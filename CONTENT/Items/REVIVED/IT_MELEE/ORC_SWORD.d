@@ -143,8 +143,8 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_01 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
-	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -168,8 +168,8 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_02 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
-	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -193,15 +193,15 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_03 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
-	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_04 (C_Item)
 {	
-	name 				=	"DÃ¤monenstreich";
+	name 				=	"Dämonenstreich";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -218,8 +218,8 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_04 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
-	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -243,8 +243,8 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_05 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
-	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

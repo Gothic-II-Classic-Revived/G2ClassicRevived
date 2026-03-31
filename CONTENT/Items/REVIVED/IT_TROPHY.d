@@ -52,9 +52,9 @@ INSTANCE ITAT_REVIVED_CRAWLEREGG(C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[0]					=	"These eggs were laid by";
-	TEXT[1]					=	"a minecrawler queen.";
-	TEXT[2]					=	"Sie enthalten ein viel stÃ¤rkeres Sekret";
+	TEXT[0]					=	"Diese Eier wurden gelegt von";
+	TEXT[1]					=	"einer Minecrawler-Königin.";
+	TEXT[2]					=	"Sie enthalten ein viel stärkeres Sekret";
 	TEXT[3]					=	"als die Zangen der normalen Minecrawler.";
 	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
@@ -79,7 +79,7 @@ INSTANCE ITAT_REVIVED_SCAVENGEREGG(C_Item)
 
 INSTANCE ITAT_REVIVED_FUR_HELLHOUND (C_Item)
 {
-	name 				=	"Haut eines HÃ¶llenhundes";
+	name 				=	"Haut eines Höllenhundes";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -209,7 +209,7 @@ INSTANCE ITAT_REVIVED_SKIN_RAZOR (C_Item)
 
 INSTANCE ITAT_REVIVED_SKIN_BITER (C_Item)
 {
-	name 				=	"Haut eines BeiÃŸers";
+	name 				=	"Haut eines Beißers";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -275,7 +275,7 @@ INSTANCE ITAT_REVIVED_SKIN_ALLIGATOR (C_Item)
 
 INSTANCE ITAT_REVIVED_DEMONHEART (C_Item)
 {
-	name 				=	"Herz eines DÃ¤monen";
+	name 				=	"Herz eines Dämonen";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -291,7 +291,7 @@ INSTANCE ITAT_REVIVED_DEMONHEART (C_Item)
 
 INSTANCE ITAT_REVIVED_DEMONLORDHEART (C_Item)
 {
-	name 				=	"Herz eines DÃ¤monenlords";
+	name 				=	"Herz eines Dämonenlords";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -323,9 +323,9 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_FIRE (C_Item)
 	material 			=	MAT_STONE;
 
 	description				=	name;
-	TEXT[0]					=	"Dieses StÃ¼ck stammt aus den Ãœberresten";
-	TEXT[1]					=	"a defeated fire golem.";
-	TEXT[2]					=	"It has the power to burn a foe.";
+	TEXT[0]					=	"Dieses Stück stammt aus den Überresten";
+	TEXT[1]					=	"einem besiegten Feuergolem.";
+	TEXT[2]					=	"Es hat die Kraft, einen Gegner zu verbrennen.";
 	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
 };
 
@@ -345,9 +345,9 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_ICE (C_Item)
 	material 			=	MAT_STONE;
 
 	description				=	name;
-	TEXT[0]					=	"Dieses StÃ¼ck stammt aus den Ãœberresten";
+	TEXT[0]					=	"Dieses Stück stammt aus den Überresten";
 	TEXT[1]					=	"eines besiegten Eisgolems.";
-	TEXT[2]					=	"It has the power to freeze a foe.";
+	TEXT[2]					=	"Es hat die Kraft, einen Gegner einzufrieren.";
 	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
 };
 
@@ -367,9 +367,9 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_ROCK (C_Item)
 	material 			=	MAT_STONE;
 
 	description				=	name;
-	TEXT[0]					=	"Dieses StÃ¼ck stammt aus den Ãœberresten";
-	TEXT[1]					=	"a defeated stone golem.";
-	TEXT[2]					=	"It has the power to zap a foe.";
+	TEXT[0]					=	"Dieses Stück stammt aus den Überresten";
+	TEXT[1]					=	"einem besiegten Steingolem.";
+	TEXT[2]					=	"Es hat die Kraft, einen Gegner zu elektrisieren.";
 	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
 };
 
@@ -389,9 +389,9 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_SWAMP (C_Item)
 	material 			=	MAT_STONE;
 
 	description				=	name;
-	TEXT[0]					=	"Dieses StÃ¼ck stammt aus den Ãœberresten";
-	TEXT[1]					=	"a defeated swamp golem.";
-	TEXT[2]					=	"It has the power to punch a foe.";
+	TEXT[0]					=	"Dieses Stück stammt aus den Überresten";
+	TEXT[1]					=	"einem besiegten Sumpfgolem.";
+	TEXT[2]					=	"Es hat die Kraft, einen Gegner zu schlagen.";
 	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
 };
 
@@ -414,10 +414,10 @@ INSTANCE ITAT_REVIVED_DRAGONHEART_UNDEAD (C_Item)
 	material 			=	MAT_CLAY;
 
 	description				=		name;
-	TEXT[0]					=	"Dieses Herz stammt aus den Ãœberresten";
-	TEXT[1]					=	"of a defeated undead dragon.";
-	TEXT[2]					=	"It has the power to take away";
-	TEXT[3]					=	"the life out of it's foes.";
+	TEXT[0]					=	"Dieses Herz stammt aus den Überresten";
+	TEXT[1]					=	"eines besiegten untoten Drachen.";
+	TEXT[2]					=	"Es hat die Kraft,";
+	TEXT[3]					=	"seinen Gegnern das Leben zu rauben.";
 	TEXT[5]					=		NAME_Value;						COUNT[5]	= value;
 	
 	//INV_ZBIAS					=	INVCAM_ENTF_MISC_STANDARD;
@@ -440,9 +440,9 @@ INSTANCE ITAT_REVIVED_DRAGONHEART_FIRE (C_Item)
 	material 			=	MAT_CLAY;
 
 	description				=		name;
-	TEXT[0]					=	"Dieses Herz stammt aus den Ãœberresten";
-	TEXT[1]					=	"of a defeated fire dragon.";
-	TEXT[2]					=	"It has the power to set foes";
+	TEXT[0]					=	"Dieses Herz stammt aus den Überresten";
+	TEXT[1]					=	"eines besiegten Feuerdrachen.";
+	TEXT[2]					=	"Es hat die Kraft, Gegner";
 	TEXT[3]					=	"in Flammen aufgehen zu lassen.";
 	TEXT[5]					=		NAME_Value;						COUNT[5]	= value;
 };
@@ -464,10 +464,10 @@ INSTANCE ITAT_REVIVED_DRAGONHEART_ICE (C_Item)
 	material 			=	MAT_CLAY;
 
 	description				=		name;
-	TEXT[0]					=	"Dieses Herz stammt aus den Ãœberresten";
-	TEXT[1]					=	"of a defeated ice dragon.";
-	TEXT[2]					=	"It has the power to pierce a foe";
-	TEXT[3]					=	"with ice.";
+	TEXT[0]					=	"Dieses Herz stammt aus den Überresten";
+	TEXT[1]					=	"eines besiegten Eisdrachen.";
+	TEXT[2]					=	"Es hat die Kraft, einen Gegner";
+	TEXT[3]					=	"mit Eis zu durchbohren.";
 	TEXT[5]					=		NAME_Value;						COUNT[5]	= value;
 };
 
@@ -488,8 +488,8 @@ INSTANCE ITAT_REVIVED_DRAGONHEART_ROCK (C_Item)
 	material 			=	MAT_CLAY;
 
 	description				=		name;
-	TEXT[0]					=	"Dieses Herz stammt aus den Ãœberresten";
-	TEXT[1]					=	"of a defeated rock dragon.";
+	TEXT[0]					=	"Dieses Herz stammt aus den Überresten";
+	TEXT[1]					=	"eines besiegten Felsdrachen.";
 	TEXT[2]					=	"Es hat die Kraft, einen Gegner"; 
 	TEXT[3]					=	"durch die Luft zu schleudern.";
 	TEXT[5]					=		NAME_Value;						COUNT[5]	= value;
@@ -512,9 +512,9 @@ INSTANCE ITAT_REVIVED_DRAGONHEART_SWAMP (C_Item)
 	material 			=	MAT_CLAY;
 
 	description				=		name;
-	TEXT[0]					=	"Dieses Herz stammt aus den Ãœberresten";
-	TEXT[1]					=	"of a defeated swamp dragon.";
-	TEXT[2]					=	"It has the power to distract the foe"; 
-	TEXT[3]					=	"with stinging insects.";
+	TEXT[0]					=	"Dieses Herz stammt aus den Überresten";
+	TEXT[1]					=	"eines besiegten Sumpfdrachen.";
+	TEXT[2]					=	"Es hat die Kraft, den Gegner"; 
+	TEXT[3]					=	"mit stechenden Insekten abzulenken.";
 	TEXT[5]					=		NAME_Value;						COUNT[5]	= value;
 };

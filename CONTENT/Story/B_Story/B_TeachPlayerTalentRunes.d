@@ -27,7 +27,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	oth.lp = oth.lp - kosten;
 	
 	Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentRunes,"Um eine Rune zu erschaffen, benÃ¶tige ich, neben der Spruchrolle des gewÃ¼nschten Spruches, fÃ¼r jede Rune unterschiedliche Zutaten. Mit diesen Zutaten und einem Runenrohling kann ich dann die gewÃ¼nschte Rune am Runentisch erschaffen.");
+	B_LogEntry (TOPIC_TalentRunes,"Um eine Rune zu erschaffen, benötige ich, neben der Spruchrolle des gewünschten Spruches, für jede Rune unterschiedliche Zutaten. Mit diesen Zutaten und einem Runenrohling kann ich dann die gewünschte Rune am Runentisch erschaffen.");
 	
 	var C_NPC ScrollTrader;
 	
@@ -66,61 +66,61 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_TeleportOC)			{	PLAYER_TALENT_RUNES[SPL_TeleportOC] 			= TRUE;	};		
 	// Teleport-Joker fehlen
 	if (spell == SPL_LIGHT)					{	PLAYER_TALENT_RUNES[SPL_LIGHT] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_LIGHT, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Licht': 1 GoldstÃ¼ck.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´LICHT´: 1 Goldmünze.");	};		
 	if (spell == SPL_Firebolt)				{	PLAYER_TALENT_RUNES[SPL_Firebolt] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firebolt, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Feuerpfeil': 1 StÃ¼ck Schwefel.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´FEUERPFEIL´: 1 Schwefel.");	};		
 	if (spell == SPL_Icebolt)				{	PLAYER_TALENT_RUNES[SPL_Icebolt] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Icebolt, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Eispfeil': 1 StÃ¼ck Gletscherquarz.");};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´EISPFEIL´: 1 Gletscherquartz");};		
 	if (spell == SPL_LightHeal)				{	PLAYER_TALENT_RUNES[SPL_LightHeal] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_LightHeal, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Leichte Wunden heilen': 1 Heilpflanze.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´LEICHTE WUNDEN HEILEN´:1 Heilpflanze.");	};		
 	if (spell == SPL_SummonGoblinSkeleton)	{	PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] 	= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumGobSkel, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Goblin-Skelett erschaffen': 1 Goblin-Knochen.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´GOBLINSKELETT ERSCHAFFEN´:1 Goblinknochen.");	};		
 	if (spell == SPL_InstantFireball)		{	PLAYER_TALENT_RUNES[SPL_InstantFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_InstantFireball, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Feuerball': 1 Pech.");	};	
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´FEUERBALL ´: 1 Pech");	};	
 	if (spell == SPL_Zap)					{	PLAYER_TALENT_RUNES[SPL_Zap] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Zap, 1);						
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Kleiner Blitz': 1 Bergkristall.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´BLITZ`:1 Bergkristall.");	};		
 	if (spell == SPL_WINDFIST)				{	PLAYER_TALENT_RUNES[SPL_WINDFIST] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_WINDFIST, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Windfaust': 1 Kohle.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´WINDFAUST´:1 Stück Kohle.");	};		
 	if (spell == SPL_Sleep)					{	PLAYER_TALENT_RUNES[SPL_Sleep] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Sleep, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Schlaf': 1 Sumpfkraut.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´SCHLAF`:1 Sumpfkraut. Auch eine Methode das Zeug zu verwenden.");	};		
 	if (spell == SPL_MediumHeal)			{	PLAYER_TALENT_RUNES[SPL_MediumHeal] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_MediumHeal, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Mittlere Wunden heilen': 1 Heilkraut.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´MITTLERE WUNDEN HEILEN´:1 Heilkraut.");	};		
 	if (spell == SPL_LightningFlash)		{	PLAYER_TALENT_RUNES[SPL_LightningFlash] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_LightningFlash, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Blitz': 1 Bergkristall und 1 Gletscherquarz.");	};	
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´BLITZSCHLAG´: 1 Bergkristall und 1 Gletscher Quartz.");	};	
 	if (spell == SPL_ChargeFireball)		{	PLAYER_TALENT_RUNES[SPL_ChargeFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_ChargeFireball, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'GroÃŸer Feuerball': 1 Schwefel und 1 Pech.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´GROSSER FEUERBALL´: 1 Schwefel und 1 Pech.");	};		
 	if (spell == SPL_SummonSkeleton)		{	PLAYER_TALENT_RUNES[SPL_SummonSkeleton] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumSkel, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Skelett erschaffen': 1 Skelettknochen.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´SKELET BESCHWÖREN´: 1 Skelettknochen.");	};		
 	if (spell == SPL_Fear)					{	PLAYER_TALENT_RUNES[SPL_Fear] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Fear, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Furcht': 1 Schwarze Perle.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´ANGST´: 1 schwarze Perle.");	};		
 	if (spell == SPL_IceCube)				{	PLAYER_TALENT_RUNES[SPL_IceCube] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_IceCube, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Eisblock': 1 Gletscherquarz und 1 Aquamarin.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´EISBLOCK´: 1 Gletscher Quartz und 1 Aquamarin.");	};		
 	if (spell == SPL_ChargeZap)				{	PLAYER_TALENT_RUNES[SPL_ChargeZap] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_ThunderBall, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Kugelblitz': 1 Schwefel und 1 Bergkristall.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´KUGELBLITZ´: 1 Schwefel und 1 Bergkristall.");	};		
 	if (spell == SPL_SummonGolem)			{	PLAYER_TALENT_RUNES[SPL_SummonGolem] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumGol, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune `STEINGOLEM ERSCHAFFEN`:1 Steingolemherz.");	};	
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune `STEINGOLEM ERSCHAFFEN`:1 Steingolemherz.");	};	
 	if (spell == SPL_DestroyUndead)			{	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_HarmUndead, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Untote vernichten': 1 Weihwasser.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´UNTOTE VERNICHTEN´:1 heiliges Wasser .");	};		
 	if (spell == SPL_Pyrokinesis)			{	PLAYER_TALENT_RUNES[SPL_Pyrokinesis] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_Pyrokinesis, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'GroÃŸer Feuersturm': 1 Schwefel und 1 Zunge einer Feuerechse.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune `GROSSER FEUERSTURM´: 1 Schwefel und 1 Zunge eines Feuerwarans.");	};		
 	if (spell == SPL_Firestorm)				{	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firestorm, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Kleiner Feuersturm': 1 Schwefel und 1 Pech.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´FEUERSTURM´: 1 Schwefel und 1 Pech.");	};		
 	if (spell == SPL_IceWave)				{	PLAYER_TALENT_RUNES[SPL_IceWave] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_IceWave, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Eiswelle': 1 Gletscherquarz und 1 Aquamarin");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´EISWELLE´: 1 Gletscher Quartz und 1 Aquamarin");	};		
 	if (spell == SPL_SummonDemon)			{	PLAYER_TALENT_RUNES[SPL_SummonDemon] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumDemon, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'DÃ¤mon beschwÃ¶ren': 1 DÃ¤monenherz");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´DÄMON BESCHWÖREN´: 1 Dämonenherz");	};		
 	if (spell == SPL_FullHeal)				{	PLAYER_TALENT_RUNES[SPL_FullHeal] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_FullHeal, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Schwere Wunden heilen': 1 Heilwurzel");	};	
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´SCHWERE WUNDEN HEILEN´ 1 Heilwurzel");	};	
 	if (spell == SPL_Firerain)				{	PLAYER_TALENT_RUNES[SPL_Firerain] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firerain, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Feuerregen': 1 Pech und 1 Zunge einer Feuerechse.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´FEUERREGEN´: 1 Pech und eine Zunge von einem Feuerwaran");	};		
 	if (spell == SPL_BreathOfDeath)			{	PLAYER_TALENT_RUNES[SPL_BreathOfDeath]			= TRUE;	CreateInvItems (ScrollTrader, ItSc_BreathOfDeath, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Hauch des Todes': 1 Kohle und 1 schwarze Perle");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´TODESHAUCH´: 1 Kohle und 1 schwarze Perle");	};		
 	if (spell == SPL_MassDeath)				{	PLAYER_TALENT_RUNES[SPL_MassDeath] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_MassDeath, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Welle des Todes': 1 Skelettknochen und 1 schwarze Perle");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´MASSENTOD´: 1 Skelettknochen und 1 schwarze Perle");	};		
 	if (spell == SPL_ArmyOfDarkness)		{	PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_ArmyOfDarkness, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Armee der Finsternis': 1 Skelettknochen, 1 schwarze Perle, 1 Herz eines Steingolems und 1 Herz eines DÃ¤mons.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Army of Darkness´: 1 Skeletonbone, 1 Black Perl, 1 Heart of a Stonegolem and 1 Heart of a Demon. ");	};		
 	if (spell == SPL_Shrink)				{	PLAYER_TALENT_RUNES[SPL_Shrink] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Shrink, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Zutaten fÃ¼r die Rune 'Monster schrumpfen': 1 Goblin-Knochen und 1 Trollzahn");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Zutaten für die Rune ´MONSTER SCHRUMPFEN´: 1 Goblinknochen und 1 Trollzahn");	};		
 	
 	//Addon
 	

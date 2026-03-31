@@ -24,9 +24,9 @@ FUNC int ZS_Cook_Pan_Loop ()
 {
 	// ------ Braten ------
 	if (!C_BodyStateContains(self, BS_MOBINTERACT_INTERRUPT))
-	&& (Wld_IsMobAvailable(self,"Pfanne"))
+	&& (Wld_IsMobAvailable(self,"PAN"))
 	{
-		AI_UseMob (self, "Pfanne", 1);
+		AI_UseMob (self, "PAN", 1);
 	};
 		
 	return LOOP_CONTINUE;
@@ -34,8 +34,8 @@ FUNC int ZS_Cook_Pan_Loop ()
 
 FUNC VOID ZS_Cook_Pan_End ()
 {
-	AI_UseMob (self, "Pfanne", -1);
-	AI_UseItem (self,ItFoMutton);		//I gebratenes Fleisch
+	AI_UseMob (self, "PAN", -1);
+	AI_UseItem (self,ItFoMutton);		//Iß gebratenes Fleisch
 };
 
 

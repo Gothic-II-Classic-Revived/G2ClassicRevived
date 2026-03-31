@@ -1,8 +1,8 @@
 
-const int	REV_Damage_2H_Pickaxe				=	25;
+const int	REV_Damage_2H_Pickaxe				=	30;
 const int	REV_Condition_2H_Pickaxe			=	10;
 const int	REV_Range_2H_Pickaxe				=	80;
-const int	REV_Value_2H_Pickaxe				=	200;
+const int	REV_Value_2H_Pickaxe				=	50;
 
 
 //****************************************************************************

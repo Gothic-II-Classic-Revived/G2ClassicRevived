@@ -4,7 +4,7 @@
 //##
 //##########################################################################
 
-FUNC VOID Use_BookstandAnimals1_S1()		//Tierbcher
+FUNC VOID Use_BookstandAnimals1_S1()		//Tierb¸cher
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -24,23 +24,23 @@ FUNC VOID Use_BookstandAnimals1_S1()		//Tierbcher
 					Doc_PrintLine	( nDocID,  0, "Jagd und Beute"					);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Jedes Tier und Wesen besitzt eigene Troph√§en, die den Ruhm und Reichtum eines erfahrenen J√§ger mehren."						);
+					Doc_PrintLines	( nDocID,  0, "Jedes Tier und Wesen besitzt eigene Troph‰en, die den Ruhm und Reichtum eines erfahrenen J‰ger mehren."						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Ein erfahrener J√§ger wei√ü um die Troph√§en seiner Beute und kennt die verschiedenen Methoden sie auszunehmen.");
+					Doc_PrintLines	( nDocID,  0, "Ein erfahrener J‰ger weiﬂ um die Troph‰en seiner Beute und kennt die verschiedenen Methoden sie auszunehmen.");
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLine	( nDocID,  0, "Z√§hne rei√üen"						);
-					Doc_PrintLines	( nDocID,  0, "Die Z√§hne, sind die Waffe von vielen Tieren und Wesen. Wer darum wei√ü, wie er sie seiner Beute fachkundig entrei√üt, findet bei W√∂lfen, Snappern, Schattenl√§ufern, Sumpfhaien und Trollen seine Beute."						);
+					Doc_PrintLine	( nDocID,  0, "Z‰hne reiﬂen"						);
+					Doc_PrintLines	( nDocID,  0, "Die Z‰hne, sind die Waffe von vielen Tieren und Wesen. Wer darum weiﬂ, wie er sie seiner Beute fachkundig entreiﬂt, findet bei Wˆlfen, Snappern, Schattenl‰ufern, Sumpfhaien und Trollen seine Beute."						);
 				
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, "Felle abziehen"						);
-					Doc_PrintLines	( nDocID,  1, "Ein Talent das der erfahrene J√§ger oft zu nutzen wei√ü - gibt es doch viele Tiere, deren K√∂rper von einem Fell gesch√ºtzt ist. Schafe, W√∂lfe und Schattenl√§ufer um nur einige zu benennen."						); 
-					Doc_PrintLines	( nDocID,  1, "Ein J√§ger, der dieses Talent beherrscht, kann auch die H√§ute von Sumphaien und Lurkern abziehen."						);
+					Doc_PrintLines	( nDocID,  1, "Ein Talent das der erfahrene J‰ger oft zu nutzen weiﬂ - gibt es doch viele Tiere, deren Kˆrper von einem Fell gesch¸tzt ist. Schafe, Wˆlfe und Schattenl‰ufer um nur einige zu benennen."						); 
+					Doc_PrintLines	( nDocID,  1, "Ein J‰ger, der dieses Talent beherrscht, kann auch die H‰ute von Sumphaien und Lurkern abziehen."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, "Krallen brechen"						);
-					Doc_PrintLines	( nDocID,  1, "Eine Kunst, die bei Waranen aller Art, Snappern, Lurkern und Schattenl√§ufern eingesetzt werden kann."						);
+					Doc_PrintLines	( nDocID,  1, "Eine Kunst, die bei Waranen aller Art, Snappern, Lurkern und Schattenl‰ufern eingesetzt werden kann."						);
 					Doc_Show		( nDocID );
 					
 					if (RevivedBookstandRead_Hunting1 == FALSE)
@@ -51,7 +51,7 @@ FUNC VOID Use_BookstandAnimals1_S1()		//Tierbcher
 	};
 };
 
-FUNC VOID Use_BookstandAnimals2_S1()		//Tierbcher
+FUNC VOID Use_BookstandAnimals2_S1()		//Tierb¸cher
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -70,21 +70,21 @@ FUNC VOID Use_BookstandAnimals2_S1()		//Tierbcher
 					Doc_PrintLine	( nDocID,  0, "Jagd und Beute"					);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Jedes Tier und Wesen besitzt eigene Troph√§en, die den Ruhm und Reichtum eines erfahrenen J√§ger mehren."						);
+					Doc_PrintLines	( nDocID,  0, "Jedes Tier und Wesen besitzt eigene Troph‰en, die den Ruhm und Reichtum eines erfahrenen J‰ger mehren."						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, "Blutfliegen"			);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Um diese fliegenden Teufel auszunehmen, bedarf es zwei besonderer K√ºnste."					); 
-					Doc_PrintLines	( nDocID,  0, "Zum einen k√∂nnen ihnen die Fl√ºgel abgetrennt, zum anderen kann der Stachel entrissen werden." );
-					Doc_PrintLines	( nDocID,  0, "Beide K√ºnste sollte der erfahrene J√§ger einsetzen, um sich die Troph√§en anzueignen."	);
+					Doc_PrintLines	( nDocID,  0, "Um diese fliegenden Teufel auszunehmen, bedarf es zwei besonderer K¸nste."					); 
+					Doc_PrintLines	( nDocID,  0, "Zum einen kˆnnen ihnen die Fl¸gel abgetrennt, zum anderen kann der Stachel entrissen werden." );
+					Doc_PrintLines	( nDocID,  0, "Beide K¸nste sollte der erfahrene J‰ger einsetzen, um sich die Troph‰en anzueignen."	);
 			
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Feldr√§uber und Minecrawler greifen mit Zangen an. Vor allem die Zangen der Minecrawler"						);
-					Doc_PrintLines	( nDocID,  1, "gelten als besonders wertvoll, weil sie ein Sekret enthalten, das magische Kr√§fte steigert."						);
-					Doc_PrintLines	( nDocID,  1, "Allerdings sollte es mit Vorsicht genossen werden, da der menschliche K√∂rper mit der Zeit nicht mehr darauf reagiert."						);   
-					Doc_PrintLines	( nDocID,  1, "Ebenfalls sehr begehrt sind die Platten der Minecrawler. Aus ihnen lassen sich R√ºstungen herstellen."						);
+					Doc_PrintLines	( nDocID,  1, "Feldr‰uber und Minecrawler greifen mit Zangen an. Vor allem die Zangen der Minecrawler"						);
+					Doc_PrintLines	( nDocID,  1, "gelten als besonders wertvoll, weil sie ein Sekret enthalten, das magische Kr‰fte steigert."						);
+					Doc_PrintLines	( nDocID,  1, "Allerdings sollte es mit Vorsicht genossen werden, da der menschliche Kˆrper mit der Zeit nicht mehr darauf reagiert."						);   
+					Doc_PrintLines	( nDocID,  1, "Ebenfalls sehr begehrt sind die Platten der Minecrawler. Aus ihnen lassen sich R¸stungen herstellen."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLines	( nDocID,  1, " "						);
 					Doc_Show		( nDocID );
@@ -97,7 +97,7 @@ FUNC VOID Use_BookstandAnimals2_S1()		//Tierbcher
 	};
 };
 
-FUNC VOID Use_BookstandAnimals3_S1()		//Tierbcher
+FUNC VOID Use_BookstandAnimals3_S1()		//Tierb¸cher
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -116,20 +116,20 @@ FUNC VOID Use_BookstandAnimals3_S1()		//Tierbcher
 					Doc_PrintLine	( nDocID,  0, "Jagd und Beute"					);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Jedes Tier und Wesen besitzt eigene Troph√§en, die den Ruhm und Reichtum eines erfahrenen J√§ger mehren."						);
+					Doc_PrintLines	( nDocID,  0, "Jedes Tier und Wesen besitzt eigene Troph‰en, die den Ruhm und Reichtum eines erfahrenen J‰ger mehren."						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, "Feuerwaran"						);
-					Doc_PrintLines	( nDocID,  0, "Dieses besondere Wesen z√§hlt zur Gattung der Warane, allerdings ist es in der Lage Feuer zu speien, das jeden der sich ihm auf ein paar Schritt n√§hert, unweigerlich t√∂tet."						);
-					Doc_PrintLines	( nDocID,  0, "Nur wer sich gegen Feuer zu sch√ºtzen vermag, kann sich im Kampf mit diesen Wesen messen und ihm die kostbare Zunge entreissen."	);		
+					Doc_PrintLines	( nDocID,  0, "Dieses besondere Wesen z‰hlt zur Gattung der Warane, allerdings ist es in der Lage Feuer zu speien, das jeden der sich ihm auf ein paar Schritt n‰hert, unweigerlich tˆtet."						);
+					Doc_PrintLines	( nDocID,  0, "Nur wer sich gegen Feuer zu sch¸tzen vermag, kann sich im Kampf mit diesen Wesen messen und ihm die kostbare Zunge entreissen."	);		
 			
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLine	( nDocID,  1, "Der Schattenl√§ufer"		);
+					Doc_PrintLine	( nDocID,  1, "Der Schattenl‰ufer"		);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Der Schattenl√§ufer ist ein uralter Einzelg√§nger der versteckt in W√§ldern lebt."						); 
-					Doc_PrintLines	( nDocID,  1, "Es gibt nur noch wenige Exemplare, so das er f√ºr den Menschen keine Gefahr mehr darstellt, solange er nicht seine Jagdrevier kreuzt."						);
-					Doc_PrintLines	( nDocID,  1, "Der Kopf des Schattenl√§ufers wird von einem Horn gekr√∂nt, das als wertvolle Troph√§e gilt. Ein J√§ger muss die Kunst lernen, das Horn richtig zu brechen,"						);
-					Doc_PrintLines	( nDocID,  1, "damit er diese Troph√§e bekommt."						);
+					Doc_PrintLines	( nDocID,  1, "Der Schattenl‰ufer ist ein uralter Einzelg‰nger der versteckt in W‰ldern lebt."						); 
+					Doc_PrintLines	( nDocID,  1, "Es gibt nur noch wenige Exemplare, so das er f¸r den Menschen keine Gefahr mehr darstellt, solange er nicht seine Jagdrevier kreuzt."						);
+					Doc_PrintLines	( nDocID,  1, "Der Kopf des Schattenl‰ufers wird von einem Horn gekrˆnt, das als wertvolle Troph‰e gilt. Ein J‰ger muss die Kunst lernen, das Horn richtig zu brechen,"						);
+					Doc_PrintLines	( nDocID,  1, "damit er diese Troph‰e bekommt."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 							
@@ -164,9 +164,9 @@ FUNC VOID UseItWr_Bloodfly_01()
   				Doc_PrintLine	( nDocID,  0,"");
 				Doc_PrintLine	( nDocID,  0," ");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
-				Doc_PrintLine	( nDocID,  0,"√úber die Fliegen");
+				Doc_PrintLine	( nDocID,  0,"‹ber die Fliegen");
 				Doc_PrintLine	( nDocID,  0,"");
-				Doc_PrintLines	( nDocID,  0,"Dort aber , wo das Erdreich feucht und die Luft schw√ºl ist, werden die Fliegen angelockt vom rinnenden Schwei√ü aller Kreaturen.Mit ihrem Stachel t√∂ten sie ihre Opfer und laben sich an ihrem Blut.");
+				Doc_PrintLines	( nDocID,  0,"Dort aber , wo das Erdreich feucht und die Luft schw¸l ist, werden die Fliegen angelockt vom rinnenden Schweiﬂ aller Kreaturen.Mit ihrem Stachel tˆten sie ihre Opfer und laben sich an ihrem Blut.");
 				Doc_PrintLine	( nDocID,  0,"");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
@@ -174,7 +174,7 @@ FUNC VOID UseItWr_Bloodfly_01()
 				Doc_PrintLine	( nDocID,  1,"");
 				Doc_PrintLine	( nDocID,  1,"");
 				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLines	( nDocID,  1,"Den Stachel zu entnehmen ist eine Kunst die von vielen Sumpfj√§gern beherrscht wird.Schneide tief in den Unterleib, um den Stachel herum mit gezackten Schnitten und entferne vorsichtig den Stachel mitsamt dem umgebenen Gewebe.Lasse ihn ausbluten und streife das ungeniessbare Fleisch ab.");	
+				Doc_PrintLines	( nDocID,  1,"Den Stachel zu entnehmen ist eine Kunst die von vielen Sumpfj‰gern beherrscht wird.Schneide tief in den Unterleib, um den Stachel herum mit gezackten Schnitten und entferne vorsichtig den Stachel mitsamt dem umgebenen Gewebe.Lasse ihn ausbluten und streife das ungeniessbare Fleisch ab.");	
 				Doc_PrintLine	( nDocID,  1,"");
 				Doc_PrintLine	( nDocID,  1,"");
 				
@@ -207,11 +207,11 @@ FUNC VOID UseJagd_und_Beute()
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_SetFont 	( nDocID, -1, "font_10_book.tga"	   			); 
 				Doc_PrintLine	( nDocID,  0,""); 					
-				Doc_PrintLines	( nDocID,  0,"Sein Schriftzeugnis hat die Zeiten √ºberdauert und seine Ratschl√§ge gelten als Lehrbuch der Jagdkunst. Nach den gro√üen Schlachten im Norden ist es heute jedem Landsmann gel√§ufig, wie man mit dem Bogen umzugehen hat. Jedoch gibt es bei der Jagd einige Regeln zu befolgen, die √ºber den einfachen Umgang mit der Waffe hinaus gehen! Das Wild ist scheu und unberechenbar.");
+				Doc_PrintLines	( nDocID,  0,"Sein Schriftzeugnis hat die Zeiten ¸berdauert und seine Ratschl‰ge gelten als Lehrbuch der Jagdkunst. Nach den groﬂen Schlachten im Norden ist es heute jedem Landsmann gel‰ufig, wie man mit dem Bogen umzugehen hat. Jedoch gibt es bei der Jagd einige Regeln zu befolgen, die ¸ber den einfachen Umgang mit der Waffe hinaus gehen! Das Wild ist scheu und unberechenbar.");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,"Die Kunst der Jagd mit dem Bogen verf√ºgt nicht nur √ºber die √§lteste Tradition, sondern ist auch die gel√§ufigste aller denkbaren Jagdarten. Die Technik dieser Art der traditionellen Jagd hat sich im Lauf der Jahrtausende kaum ver√§ndert und wird sich wohl auch in Zukunft nicht √§ndern. Welche Umst√§nde bestimmen wirklich den Ablauf der Jagd mit dem Bogen? Diese Gesetzm√§√üigkeiten erkannt zu haben, ist die eigentliche hohe Kunst der Bogenjagd.");
+				Doc_PrintLines	( nDocID,  1,"Die Kunst der Jagd mit dem Bogen verf¸gt nicht nur ¸ber die ‰lteste Tradition, sondern ist auch die gel‰ufigste aller denkbaren Jagdarten. Die Technik dieser Art der traditionellen Jagd hat sich im Lauf der Jahrtausende kaum ver‰ndert und wird sich wohl auch in Zukunft nicht ‰ndern. Welche Umst‰nde bestimmen wirklich den Ablauf der Jagd mit dem Bogen? Diese Gesetzm‰ﬂigkeiten erkannt zu haben, ist die eigentliche hohe Kunst der Bogenjagd.");
 				
 				Doc_Show		( nDocID );
 					

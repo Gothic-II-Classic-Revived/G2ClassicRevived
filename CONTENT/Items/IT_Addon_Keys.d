@@ -1,6 +1,6 @@
 INSTANCE ITKE_PORTALTEMPELWALKTHROUGH_ADDON (C_Item)
 {
-	name 				=	"verrosteter SchlÃ¼ssel";
+	name 				=	"verrosteter Schlüssel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -12,7 +12,7 @@ INSTANCE ITKE_PORTALTEMPELWALKTHROUGH_ADDON (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"Passt zur TÃ¼r des";
+	TEXT[2]				=	"Passt zur Tür des";
 	TEXT[3]				=   "Teleportsteins im Portal-Tempel";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -31,8 +31,8 @@ INSTANCE ITKE_Greg_ADDON_MIS (C_Item)
 
 	description			= 	name;
 	
-	TEXT[2]				=	"Der SchlÃ¼ssel zur";
-	TEXT[3]				=   "HÃ¼tte von KapitÃ¤n";
+	TEXT[2]				=	"Der Schlüssel zur";
+	TEXT[3]				=   "Hütte von Kapitän";
 	TEXT[4]				=   "Greg";	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -49,7 +49,7 @@ INSTANCE ITKE_Addon_Tavern_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Lou's SchlÃ¼ssel";
+	description			= 	"Lou's Schlüssel";
 	
 	TEXT[2]				=	"Passt zur Kneipe";
 	TEXT[3]				=   "im Banditenlager";
@@ -69,7 +69,7 @@ INSTANCE ITKE_Addon_Esteban_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Esteban's SchlÃ¼ssel";
+	description			= 	"Esteban's Schlüssel";
 	
 	TEXT[2]				=	"Passt zu der Truhe";
 	TEXT[3]				=   "in seinem Versteck.";
@@ -90,10 +90,10 @@ INSTANCE ITKE_ORLAN_TELEPORTSTATION (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Orlan's SchlÃ¼ssel";
+	description			= 	"Orlan's Schlüssel";
 	
-	TEXT[2]				=	"Passt zur TÃ¼r der HÃ¶hle";
-	TEXT[3]				=   "sÃ¼dlich seiner Taverne";
+	TEXT[2]				=	"Passt zur Tür der Höhle";
+	TEXT[3]				=   "südlich seiner Taverne";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -132,7 +132,7 @@ INSTANCE ITKE_ADDON_BUDDLER_01 (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"TruhenschlÃ¼ssel";
+	description			= 	"Truhenschlüssel";
 	
 	TEXT[2]				=	"Aus dem Banditenlager";
 	TEXT[3]				=   "";
@@ -152,9 +152,9 @@ INSTANCE ITKE_ADDON_SKINNER (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"TruhenschlÃ¼ssel";
+	description			= 	"Truhenschlüssel";
 	
-	TEXT[2]				=	"Skinner's SchlÃ¼ssel";
+	TEXT[2]				=	"Skinner's Schlüssel";
 	TEXT[3]				=   "";
 	
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
@@ -172,7 +172,7 @@ INSTANCE ITKE_Addon_Thorus (C_Item)
 	visual 				=	"ItKe_Key_02.3ds";
 	material 			=	MAT_METAL;
 
-	description			= 	"Thorus SchlÃ¼ssel";
+	description			= 	"Thorus Schlüssel";
 	
 	TEXT[2]				=	"Passt zu einer Truhe";
 	TEXT[3]				=   "";

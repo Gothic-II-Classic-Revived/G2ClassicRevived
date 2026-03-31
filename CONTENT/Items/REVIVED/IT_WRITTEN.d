@@ -16,7 +16,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_01(C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	description				=	"Der erste Kreis der Magie";
 	
 	TEXT[5]					=	NAME_Value;
@@ -36,7 +36,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_02(C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	description				=	"Der zweiter Kreis der Magie";
 	
 	TEXT[5]					=	NAME_Value;
@@ -56,7 +56,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_03 (C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Der dritte Kreis der Magie";
 	
 	TEXT[5]					=	NAME_Value;
@@ -76,7 +76,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Der vierte Kreis der Magie";
 	
 	TEXT[5]					=	NAME_Value;
@@ -86,7 +86,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 {	
-	name 					=	"Der fÃ¼nfte Kreis";
+	name 					=	"Der fünfte Kreis";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -96,8 +96,8 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
-	description				=	"Der fÃ¼nfte Kreis der Magie";
+	scemeName				=	"MAP";
+	description				=	"Der fünfte Kreis der Magie";
 	
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -116,7 +116,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Sechster Kreis der Magie";
 	
 	TEXT[5]					=	NAME_Value;
@@ -129,7 +129,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 
 INSTANCE ITWR_REVIVED_GIFTFROMTHEGODS(C_Item)
 {	
-	name 					=	"GÃ¶ttergabe";
+	name 					=	"Göttergabe";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -139,8 +139,8 @@ INSTANCE ITWR_REVIVED_GIFTFROMTHEGODS(C_Item)
 	visual 					=	"ItWr_Book_02_01.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
-	description				=	"GÃ¶ttergabe";
+	scemeName				=	"MAP";	
+	description				=	"Göttergabe";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
 	on_state[0]				=	Use_BookstandRevived_MAGIC5_S1;
@@ -160,7 +160,7 @@ INSTANCE ITWR_REVIVED_SECRETSOFMAGIC(C_Item)
 	visual 					=	"ItWr_Book_02_02.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	description				=	"Geheimnisse der Zauberei";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -181,7 +181,7 @@ INSTANCE ITWR_REVIVED_POWERFULART (C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Machtvolle Kunst";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -202,7 +202,7 @@ INSTANCE ITWR_REVIVED_ELEMENTARYARCANUM (C_Item)
 	visual 					=	"ItWr_Book_02_04.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Elementare Arcanei";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -223,7 +223,7 @@ INSTANCE ITWR_REVIVED_TRUEPOWER (C_Item)
 	visual 					=	"ItWr_Book_02_05.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Wahre Macht";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -244,7 +244,7 @@ INSTANCE ITWR_REVIVED_MAGICORE (C_Item)
 	visual 					=	"ItWr_Book_02_02.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Das magische Erz";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -265,7 +265,7 @@ INSTANCE ITWR_REVIVED_ASTRONOMY (C_ITEM)
 	visual 					=	"ItWr_Book_02_05.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Astronomie";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -286,7 +286,7 @@ INSTANCE ITWR_REVIVED_ARCANUMGOLUM_01 (C_Item)
 	visual 					=	"ItWr_Book_02_05.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	on_state[0]				=	UseGolemBook1;
 };
 
@@ -302,14 +302,14 @@ INSTANCE ITWR_REVIVED_ARCANUMGOLUM_02(C_Item)
 	visual 					=	"ItWr_Book_02_05.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	on_state[0]				=	UseGolemBook2;
 };
 
 /******************************************************************************************/
 INSTANCE ITWR_REVIVED_WORDSOFGODS_01 (C_ITEM)
 {	
-	name 					=	"Lehren der GÃ¶tter Band1";
+	name 					=	"Lehren der Götter Band1";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -319,8 +319,8 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_01 (C_ITEM)
 	visual 					=	"ItWr_Book_02_01.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
-	description			= "Lehren der GÃ¶tter";
+	scemeName				=	"MAP";
+	description			= "Lehren der Götter";
 	TEXT[0]				= "Band 1";
 	TEXT[5]				= NAME_Value;
 	COUNT[5]			= value;
@@ -329,7 +329,7 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_01 (C_ITEM)
 
 INSTANCE ITWR_REVIVED_WORDSOFGODS_02 (C_ITEM)
 {	
-	name 					=	"Lehren der GÃ¶tter Band2";
+	name 					=	"Lehren der Götter Band2";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -339,8 +339,8 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_02 (C_ITEM)
 	visual 					=	"ItWr_Book_02_02.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
-	description			= "Lehren der GÃ¶tter";
+	scemeName				=	"MAP";
+	description			= "Lehren der Götter";
 	TEXT[0]				= "Band 2";
 	TEXT[5]				= NAME_Value;
 	COUNT[5]			= value;
@@ -349,7 +349,7 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_02 (C_ITEM)
 
 INSTANCE ITWR_REVIVED_WORDSOFGODS_03 (C_ITEM)
 {	
-	name 					=	"Lehren der GÃ¶tter Band3";
+	name 					=	"Lehren der Götter Band3";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -359,8 +359,8 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_03 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
-	description				=	"Lehren der GÃ¶tter";
+	scemeName				=	"MAP";
+	description				=	"Lehren der Götter";
 	TEXT[0]					=	"Band 3";
 
 	TEXT[5]					=	NAME_Value;
@@ -382,7 +382,7 @@ INSTANCE ITWR_REVIVED_VARANT_01 (C_Item)
 	visual 					=	"ItWr_Book_02_04.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description			= "Schlacht um Varant";
 	TEXT[0]				= "Band 1";
 	TEXT[5]				= NAME_Value;
@@ -402,7 +402,7 @@ INSTANCE ITWR_REVIVED_VARANT_02(C_Item)
 	visual 					=	"ItWr_Book_02_05.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description			= "Schlacht um Varant";
 	TEXT[0]				= "Band 2";
 	TEXT[5]				= NAME_Value;
@@ -424,7 +424,7 @@ INSTANCE ITWR_REVIVED_MYRTANAPOETRY (C_Item)
 	visual 					=	"ItWr_Book_02_02.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description			= "Myrtanas Lyrik";
 
 	TEXT[5]				= NAME_Value;
@@ -450,9 +450,9 @@ INSTANCE ITWR_REVIVED_MYRTANAPOETRY (C_Item)
 					Doc_PrintLine	( nDocID,  0,"");
 					Doc_PrintLine	( nDocID,  0,"");
 					Doc_PrintLine	( nDocID,  0,"");
-					Doc_PrintLine	( nDocID,  0,"Das Lied der");
+					Doc_PrintLine	( nDocID,  0,"    The Song of");
 					Doc_PrintLine	( nDocID,  0,"");
-					Doc_PrintLine	( nDocID,  0,"Reue");
+					Doc_PrintLine	( nDocID,  0,"          Repentance");
 					Doc_PrintLine	( nDocID,  0,"");
 					Doc_PrintLine	( nDocID,  0,"");
 					Doc_PrintLine	( nDocID,  0,"");
@@ -502,7 +502,7 @@ INSTANCE ITWR_REVIVED_HUNTANDPREY (C_ITEM)
 	visual 					=	"ItWr_Book_02_02.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Jagd und Beute";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -523,7 +523,7 @@ INSTANCE ITWR_REVIVED_BLOODFLIES (C_Item)
 	visual 					=	"ItWr_Book_02_01.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	description				=	"Die Blutfliegen";
 	
 	TEXT[5]					=	NAME_Value;
@@ -545,7 +545,7 @@ INSTANCE ITWR_REVIVED_ARTOFFIGHTING (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Kampfkunst";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
@@ -566,7 +566,7 @@ INSTANCE ITWR_REVIVED_RECIPES_01 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Rezepturen";
 	TEXT[0]					=	"Band 1";
 	TEXT[5]					=	NAME_Value;
@@ -592,7 +592,7 @@ INSTANCE ITWR_REVIVED_RECIPES_01 (C_ITEM)
 					Doc_PrintLines	( nDocID,  0,"Das Balsam des Sehens:");
 					Doc_PrintLine	( nDocID,  0,"----------------");
 					Doc_PrintLine	( nDocID,  0,"");		
-					Doc_PrintLines	( nDocID,  0,"Dazu wird ihm Galle auf die Augen gestrichen. Galle ist bitter im Geschmack. Wird dieses Bittere auf das Auge genommen, dh: schauen wir das Bittere an, so erwÃ¤chst daraus Weisheit. Wir werden sehend! Bitterkeit und Weisheit schliessen einander aus. Sie sind Gegenpole!");
+					Doc_PrintLines	( nDocID,  0,"Dazu wird ihm Galle auf die Augen gestrichen. Galle ist bitter im Geschmack. Wird dieses Bittere auf das Auge genommen, dh: schauen wir das Bittere an, so erwächst daraus Weisheit. Wir werden sehend! Bitterkeit und Weisheit schliessen einander aus. Sie sind Gegenpole!");
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
@@ -600,7 +600,7 @@ INSTANCE ITWR_REVIVED_RECIPES_01 (C_ITEM)
 					Doc_PrintLines	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1,"");
 					//Absatz
-					Doc_PrintLines	( nDocID,  1,"TrÃ¤nen, Leid und EnttÃ¤uschung sind bitter, die Weisheit aber ist die TrÃ¶sterin in jedem seelischen Schmerz. Bitterkeit und Weisheit bilden eine Alternative. Wo Bitterkeit, da fehlt die Weisheit, und wo Weisheit, da gibt es keine Bitterkeit.");
+					Doc_PrintLines	( nDocID,  1,"Tränen, Leid und Enttäuschung sind bitter, die Weisheit aber ist die Trösterin in jedem seelischen Schmerz. Bitterkeit und Weisheit bilden eine Alternative. Wo Bitterkeit, da fehlt die Weisheit, und wo Weisheit, da gibt es keine Bitterkeit.");
 					Doc_Show		( nDocID );
 	};
 
@@ -616,7 +616,7 @@ INSTANCE ITWR_REVIVED_RECIPES_02 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	"Rezepturen";
 	TEXT[0]					=	"Band 2";
 	TEXT[5]					=	NAME_Value;
@@ -642,7 +642,7 @@ INSTANCE ITWR_REVIVED_RECIPES_02 (C_ITEM)
 					Doc_PrintLines	( nDocID,  0,"Der Wein des Vergessens");
 					Doc_PrintLine	( nDocID,  0,"--------------------");
 						Doc_PrintLine	( nDocID,  0,"");			
-					Doc_PrintLines	( nDocID,  0,"Hoch oben an den HÃ¤ngen des Archolos, gibt es die besten Trauben, die man fÃ¼r diesen Wein finden kann. Die Kunst diesen Wein zu seiner Vollendung reifen zu lassen, besteht darin, ihn unter keinen UmstÃ¤nden jeglicher Bewegung auszusetzen. Die Trauben werden vor der Kellerei mit dem gemeinen Syos-kraut versetzt.");
+					Doc_PrintLines	( nDocID,  0,"Hoch oben an den Hängen des Archolos, gibt es die besten Trauben, die man für diesen Wein finden kann. Die Kunst diesen Wein zu seiner Vollendung reifen zu lassen, besteht darin, ihn unter keinen Umständen jeglicher Bewegung auszusetzen. Die Trauben werden vor der Kellerei mit dem gemeinen Syos-kraut versetzt.");
 
 					//2.Seite
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
@@ -651,7 +651,7 @@ INSTANCE ITWR_REVIVED_RECIPES_02 (C_ITEM)
 					Doc_PrintLine	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1,"");
 					//Absatz
-					Doc_PrintLines	( nDocID,  1,"Sehet und staunet, wenn der Magister klarstes Brunnenwasser zu vortrefflichen Wein verwandelt. Alle ihm huldigen und sich an seiner Gabe laben. Der Magister seine faulen Lehrlinge zur Strafe in Flaschen sperrt, Feuer sich auf wundersame Weise entzÃ¼ndet und schwarze Schlangen emporwachsen.");
+					Doc_PrintLines	( nDocID,  1,"Sehet und staunet, wenn der Magister klarstes Brunnenwasser zu vortrefflichen Wein verwandelt. Alle ihm huldigen und sich an seiner Gabe laben. Der Magister seine faulen Lehrlinge zur Strafe in Flaschen sperrt, Feuer sich auf wundersame Weise entzündet und schwarze Schlangen emporwachsen.");
 					Doc_Show		( nDocID );
 	};
 
@@ -669,9 +669,9 @@ INSTANCE ITWR_REVIVED_KALOMSRECIPE (C_Item)
 	visual 					=	"ItWr_Scroll_01.3DS";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				=	name;
-	TEXT[0]					=	"Das Rezept fÃ¼r einen Heiltrank";
+	TEXT[0]					=	"Das Rezept für einen Heiltrank";
 	TEXT[5]					=	NAME_Value;
 	COUNT[5]				=	value;
 	on_state[0]				=	Use_KalomsRecipe;
@@ -701,9 +701,9 @@ func VOID Use_KalomsRecipe()
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1, ""					);	
 				Doc_PrintLine	( nDocID,  1, ""					);					
-				Doc_PrintLines	( nDocID,  1,"Wenn man es rÃ¼ckwÃ¤rts liest, scheint es einen Sinn zu geben");
+				Doc_PrintLines	( nDocID,  1,"Wenn man es rückwärts liest, scheint es einen Sinn zu geben");
 				Doc_PrintLine	( nDocID,  1, ""					);	
-				Doc_PrintLine	( nDocID,  1,"- Kalom");	
+				Doc_PrintLine	( nDocID,  1,"          - Kalom");	
 				
 				
 				
@@ -722,7 +722,7 @@ func VOID Use_KalomsRecipe()
 //****************************************************************************
 INSTANCE ITWR_REVIVED_RECIPE_TURNIPBOOZE		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r RÃ¼benschnaps";
+	name 				=	"Rezept für Rübenschnaps";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -731,10 +731,10 @@ INSTANCE ITWR_REVIVED_RECIPE_TURNIPBOOZE		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_TurnipBooze;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making Turnip Booze";
+	text[0]				= 	"Rezept für Rübenschnaps";
 };
 func void UseRecipe_TurnipBooze ()
 {
@@ -745,13 +745,13 @@ func void UseRecipe_TurnipBooze ()
 					Doc_SetPage 	( nDocID,  0, "letters.TGA"  , 0 		);
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline  			); 	// -1 -> all pages
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
-					Doc_PrintLine	( nDocID,  0, "RÃ¼benlikÃ¶r"					);
+					Doc_PrintLine	( nDocID,  0, "Rübenlikör"					);
 					Doc_SetFont 	( nDocID,  0, FONT_Book		); 	// -1 -> all pages
 					Doc_PrintLine	( nDocID,  0, "");	
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Herstellung von Alkohol auf RÃ¼benbasis:");	
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Herstellung von Alkohol auf Rübenbasis:");	
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0, "Man nehme eine Wasserflasche, sowie 2 RÃ¼ben und 'ne ordentliche Portion Sumpfkraut.");	
-					Doc_PrintLines	( nDocID,  0, "Dazu gemahlene ZÃ¤hne von einem Sumpfhai."					);
+					Doc_PrintLines	( nDocID,  0, "Man nehme eine Wasserflasche, sowie 2 Rüben und 'ne ordentliche Portion Sumpfkraut.");	
+					Doc_PrintLines	( nDocID,  0, "Dazu gemahlene Zähne von einem Sumpfhai."					);
 					Doc_PrintLines	( nDocID,  0, "Alles in eine Flasche geben und mit einem Schuss Bier aufkochen."					);
 					Doc_PrintLine	( nDocID,  0, "");	
 					Doc_PrintLine	( nDocID,  0, "");	
@@ -775,7 +775,7 @@ func void UseRecipe_TurnipBooze ()
 
 INSTANCE ITWR_REVIVED_RECIPE_VINOSPECIAL		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r 'Vinos Spezial'";
+	name 				=	"Rezept für 'Vinos Spezial'";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -784,10 +784,10 @@ INSTANCE ITWR_REVIVED_RECIPE_VINOSPECIAL		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_VinoSpecial;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making Vino's Special";
+	text[0]				= 	"Rezept für 'Vinos Spezial'";
 };
 func void UseRecipe_VinoSpecial ()
 {
@@ -799,17 +799,17 @@ func void UseRecipe_VinoSpecial ()
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
 
-					Doc_PrintLine	( nDocID,  0, "Vinos SpezialitÃ¤t" );
+					Doc_PrintLine	( nDocID,  0, "Vinos Spezialität" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Herstellung von 'Vinos Spezial':" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Herstellung von 'Vinos Spezial':" );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLines	( nDocID,  0, "Nimm zwei Handvoll Beeren und zerdrÃ¼cke sie gut." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge zwei Ã„pfel und zwei Birnen hinzu, um die Mischung zu sÃ¼ÃŸen." );
-					Doc_PrintLines	( nDocID,  0, "RÃ¼hre die getrockneten FlÃ¼gel einer Blutfliege unter." );
-					Doc_PrintLines	( nDocID,  0, "Lass die Mischung in einer verschlossenen Flasche gÃ¤ren." );
+					Doc_PrintLines	( nDocID,  0, "Nimm zwei Handvoll Beeren und zerdrücke sie gut." );
+					Doc_PrintLines	( nDocID,  0, "Füge zwei Äpfel und zwei Birnen hinzu, um die Mischung zu süßen." );
+					Doc_PrintLines	( nDocID,  0, "Rühre die getrockneten Flügel einer Blutfliege unter." );
+					Doc_PrintLines	( nDocID,  0, "Lass die Mischung in einer verschlossenen Flasche gären." );
 
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -835,7 +835,7 @@ func void UseRecipe_VinoSpecial ()
 
 INSTANCE ITWR_REVIVED_RECIPE_MONSTERDRINK		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r MonstergetrÃ¤nk";
+	name 				=	"Rezept für Monstergetränk";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -844,10 +844,10 @@ INSTANCE ITWR_REVIVED_RECIPE_MONSTERDRINK		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_MonsterDrink;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making Monster Drink";
+	text[0]				= 	"Rezept für 'Monster-Drink'";
 };
 func void UseRecipe_MonsterDrink ()
 {
@@ -859,17 +859,17 @@ func void UseRecipe_MonsterDrink ()
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
 
-					Doc_PrintLine	( nDocID,  0, "BestiengetrÃ¤nk" );
+					Doc_PrintLine	( nDocID,  0, "Bestiengetränk" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Herstellung von MonstergetrÃ¤nk:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Herstellung von Monstergetränk:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLines	( nDocID,  0, "Zerkleinere zwei BlÃ¤tter des KronstÃ¶ckl zu einer Paste." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge gemahlenes Trollzahnpulver aus zwei StÃ¼cken hinzu." );
-					Doc_PrintLines	( nDocID,  0, "Mische vier ZÃ¤hne und vier Klauen von Bestien darunter." );
-					Doc_PrintLines	( nDocID,  0, "Koche alles zusammen, bis das GetrÃ¤nk eindickt." );
+					Doc_PrintLines	( nDocID,  0, "Zerkleinere zwei Blätter des Kronstöckl zu einer Paste." );
+					Doc_PrintLines	( nDocID,  0, "Füge gemahlenes Trollzahnpulver aus zwei Stücken hinzu." );
+					Doc_PrintLines	( nDocID,  0, "Mische vier Zähne und vier Klauen von Bestien darunter." );
+					Doc_PrintLines	( nDocID,  0, "Koche alles zusammen, bis das Getränk eindickt." );
 
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -895,7 +895,7 @@ func void UseRecipe_MonsterDrink ()
 
 INSTANCE ITWR_REVIVED_RECIPE_MAGEWINE		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Klosterwein";
+	name 				=	"Rezept für Klosterwein";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -904,10 +904,10 @@ INSTANCE ITWR_REVIVED_RECIPE_MAGEWINE		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_MageWine;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making Monastery's Wine";
+	text[0]				= 	"Rezept für 'Klosterwein'";
 };
 func void UseRecipe_MageWine ()
 {
@@ -923,12 +923,12 @@ func void UseRecipe_MageWine ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Klosterwein:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Klosterwein:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 
 					Doc_PrintLines	( nDocID,  0, "Presse vier reife Trauben zu Saft aus." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge den Stachel einer Blutfliege hinzu, um den Geschmack zu verstÃ¤rken." );
-					Doc_PrintLines	( nDocID,  0, "VerschlieÃŸe die Mischung in einer Flasche und lass sie reifen." );
+					Doc_PrintLines	( nDocID,  0, "Füge den Stachel einer Blutfliege hinzu, um den Geschmack zu verstärken." );
+					Doc_PrintLines	( nDocID,  0, "Verschließe die Mischung in einer Flasche und lass sie reifen." );
 
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -954,7 +954,7 @@ func void UseRecipe_MageWine ()
 
 INSTANCE ITWR_REVIVED_RECIPE_RICESCHNAPPS		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Reisschnaps";
+	name 				=	"Rezept für Reisschnaps";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -963,10 +963,10 @@ INSTANCE ITWR_REVIVED_RECIPE_RICESCHNAPPS		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_RiceBooze;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making Rice Schnapps";
+	text[0]				= 	"Rezept für 'Reisschnaps'";
 };
 func void UseRecipe_RiceBooze ()
 {
@@ -982,12 +982,12 @@ func void UseRecipe_RiceBooze ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Herstellung von Reisschnaps:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Herstellung von Reisschnaps:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLines	( nDocID,  0, "Nimm vier Reispflanzen und zerkleinere die KÃ¶rner." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge fein gehackte Lurker-Krallen hinzu." );
-					Doc_PrintLines	( nDocID,  0, "Koche die Mischung in einer Flasche auf und lass sie abkÃ¼hlen." );
+					Doc_PrintLines	( nDocID,  0, "Nimm vier Reispflanzen und zerkleinere die Körner." );
+					Doc_PrintLines	( nDocID,  0, "Füge fein gehackte Lurker-Krallen hinzu." );
+					Doc_PrintLines	( nDocID,  0, "Koche die Mischung in einer Flasche auf und lass sie abkühlen." );
 
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1013,7 +1013,7 @@ func void UseRecipe_RiceBooze ()
 
 INSTANCE ITWR_REVIVED_RECIPE_MEAD		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Met";
+	name 				=	"Rezept für Met";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1022,10 +1022,10 @@ INSTANCE ITWR_REVIVED_RECIPE_MEAD		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_Mead;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making Mead";
+	text[0]				= 	"Rezept für 'Met'";
 };
 func void UseRecipe_Mead ()
 {
@@ -1041,12 +1041,12 @@ func void UseRecipe_Mead ()
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Herstellung von Met:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Herstellung von Met:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 
-					Doc_PrintLines	( nDocID,  0, "Nimm zwei Honigwaben und lÃ¶se sie in warmem Wasser auf." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge die Mandibeln eines FeldrÃ¤ubers hinzu." );
-					Doc_PrintLines	( nDocID,  0, "Lass die Mischung gÃ¤ren, bis das GetrÃ¤nk stark wird." );
+					Doc_PrintLines	( nDocID,  0, "Nimm zwei Honigwaben und löse sie in warmem Wasser auf." );
+					Doc_PrintLines	( nDocID,  0, "Füge die Mandibeln eines Feldräubers hinzu." );
+					Doc_PrintLines	( nDocID,  0, "Lass die Mischung gären, bis das Getränk stark wird." );
 
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1073,7 +1073,7 @@ func void UseRecipe_Mead ()
 
 INSTANCE ITWR_REVIVED_RECIPE_MEATSTEW		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Fleischeintopf";
+	name 				=	"Rezept für Fleischeintopf";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1082,10 +1082,10 @@ INSTANCE ITWR_REVIVED_RECIPE_MEATSTEW		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_MeatStew;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a meat stew";
+	text[0]				= 	"Rezept für einen Fleischeintopf";
 };
 func void UseRecipe_MeatStew ()
 {
@@ -1100,10 +1100,10 @@ func void UseRecipe_MeatStew ()
 					Doc_PrintLine	( nDocID,  0, "Fleisch-Eintopf" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Fleischeintopf:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Fleischeintopf:" );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLines	( nDocID,  0, "Nimm zwei StÃ¼cke Fleisch und zwei Portionen Muschelfleisch." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge eine Wurst und einen Streifen Speck hinzu." );
+					Doc_PrintLines	( nDocID,  0, "Nimm zwei Stücke Fleisch und zwei Portionen Muschelfleisch." );
+					Doc_PrintLines	( nDocID,  0, "Füge eine Wurst und einen Streifen Speck hinzu." );
 					Doc_PrintLines	( nDocID,  0, "Koche alles langsam, bis der Eintopf eindickt." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1126,7 +1126,7 @@ func void UseRecipe_MeatStew ()
 
 INSTANCE ITWR_REVIVED_RECIPE_FISHSOUP		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Fischsuppe";
+	name 				=	"Rezept für Fischsuppe";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1135,10 +1135,10 @@ INSTANCE ITWR_REVIVED_RECIPE_FISHSOUP		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_FishSoup;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a fish soup";
+	text[0]				= 	"Rezept für eine Fischsuppe";
 };
 func void UseRecipe_FishSoup ()
 {
@@ -1153,9 +1153,9 @@ func void UseRecipe_FishSoup ()
 					Doc_PrintLine	( nDocID,  0, "Fischsuppe" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Fischsuppe:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Fischsuppe:" );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLines	( nDocID,  0, "Nimm zwei Fische und sÃ¤ubere sie grÃ¼ndlich." );
+					Doc_PrintLines	( nDocID,  0, "Nimm zwei Fische und säubere sie gründlich." );
 					Doc_PrintLines	( nDocID,  0, "Gib sie in einen Topf mit Wasser." );
 					Doc_PrintLines	( nDocID,  0, "Lass die Suppe kochen, bis der Fisch weich wird." );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1179,7 +1179,7 @@ func void UseRecipe_FishSoup ()
 
 INSTANCE ITWR_REVIVED_RECIPE_BUGSOUP		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r FleischkÃ¤fer-Ragout";
+	name 				=	"Rezept für Fleischkäfer-Ragout";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1188,10 +1188,10 @@ INSTANCE ITWR_REVIVED_RECIPE_BUGSOUP		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_BugSoup;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a meat stew";
+	text[0]				= 	"Rezept für einen Fleischeintopf";
 };
 func void UseRecipe_BugSoup ()
 {
@@ -1206,14 +1206,14 @@ func void UseRecipe_BugSoup ()
 					Doc_PrintLine	( nDocID,  0, "Fleischwanzenragout" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von FleischkÃ¤fer-Ragout:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Fleischkäfer-Ragout:" );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLines	( nDocID,  0, "Nimm fÃ¼nf dunkle Pilze und drei Portionen FleischkÃ¤ferfleisch." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge zwei Reispflanzen hinzu, um dem Ragout etwas Konsistenz zu verleihen." );
-					Doc_PrintLines	( nDocID,  0, "Lass es langsam kÃ¶cheln, bis sich die Pilze in der SoÃŸe aufgelÃ¶st haben." );
+					Doc_PrintLines	( nDocID,  0, "Nimm fünf dunkle Pilze und drei Portionen Fleischkäferfleisch." );
+					Doc_PrintLines	( nDocID,  0, "Füge zwei Reispflanzen hinzu, um dem Ragout etwas Konsistenz zu verleihen." );
+					Doc_PrintLines	( nDocID,  0, "Lass es langsam köcheln, bis sich die Pilze in der Soße aufgelöst haben." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLines	( nDocID,  0, "Lass dich vom hÃ¤sslichen Aussehen der FleischkÃ¤fer nicht tÃ¤uschen. Einmal gekocht, schmecken sie kÃ¶stlich." );
+					Doc_PrintLines	( nDocID,  0, "Lass dich vom hässlichen Aussehen der Fleischkäfer nicht täuschen. Einmal gekocht, schmecken sie köstlich." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLines	( nDocID,  0, "" );
 					Doc_Show		( nDocID );
@@ -1232,7 +1232,7 @@ func void UseRecipe_BugSoup ()
 
 INSTANCE ITWR_REVIVED_RECIPE_ROOTSOUP		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Wurzelsuppe";
+	name 				=	"Rezept für Wurzelsuppe";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1241,10 +1241,10 @@ INSTANCE ITWR_REVIVED_RECIPE_ROOTSOUP		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_RootSoup;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a Root Soup";
+	text[0]				= 	"Rezept für eine Wurzelsuppe";
 };
 func void UseRecipe_RootSoup ()
 {
@@ -1259,11 +1259,11 @@ func void UseRecipe_RootSoup ()
 					Doc_PrintLine	( nDocID,  0, "Wurzelsuppe" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Wurzelsuppe:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Wurzelsuppe:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLines	( nDocID,  0, "Nimm zwei Wiesenbeeren und zwei Waldbeeren." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge zwei Portionen Sumpfkraut hinzu." );
-					Doc_PrintLines	( nDocID,  0, "Koche die Mischung vorsichtig zu einer seltsamen, aber sÃ¤ttigenden Suppe." );
+					Doc_PrintLines	( nDocID,  0, "Füge zwei Portionen Sumpfkraut hinzu." );
+					Doc_PrintLines	( nDocID,  0, "Koche die Mischung vorsichtig zu einer seltsamen, aber sättigenden Suppe." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1285,7 +1285,7 @@ func void UseRecipe_RootSoup ()
 
 INSTANCE ITWR_REVIVED_RECIPE_CRAWLERSOUP		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Minecrawler-Suppe";
+	name 				=	"Rezept für Minecrawler-Suppe";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1294,10 +1294,10 @@ INSTANCE ITWR_REVIVED_RECIPE_CRAWLERSOUP		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_CrawlerSoup;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a Minecrawler Soup";
+	text[0]				= 	"Rezept für eine Minecrawler-Suppe";
 };
 func void UseRecipe_CrawlerSoup ()
 {
@@ -1312,11 +1312,11 @@ func void UseRecipe_CrawlerSoup ()
 					Doc_PrintLine	( nDocID,  0, "Minecrawlersuppe" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Minecrawler-Suppe:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Minecrawler-Suppe:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLines	( nDocID,  0, "Nimm zwei Minecrawlerzangen und zerkleinere sie." );
 					Doc_PrintLines	( nDocID,  0, "Mische vier Portionen Sumpfkraut darunter." );
-					Doc_PrintLines	( nDocID,  0, "Koche das GebrÃ¤u, bis die BrÃ¼he dunkel und bitter wird." );
+					Doc_PrintLines	( nDocID,  0, "Koche das Gebräu, bis die Brühe dunkel und bitter wird." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1338,7 +1338,7 @@ func void UseRecipe_CrawlerSoup ()
 
 INSTANCE ITWR_REVIVED_RECIPE_RICEBOWL		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r ReisschÃ¼ssel";
+	name 				=	"Rezept für Reisschüssel";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1347,10 +1347,10 @@ INSTANCE ITWR_REVIVED_RECIPE_RICEBOWL		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_RiceBowl;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a bowl of rice";
+	text[0]				= 	"Rezept für eine Schüssel Reis";
 };
 func void UseRecipe_RiceBowl ()
 {
@@ -1362,12 +1362,12 @@ func void UseRecipe_RiceBowl ()
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
 
-					Doc_PrintLine	( nDocID,  0, "ReisschÃ¼ssel" );
+					Doc_PrintLine	( nDocID,  0, "Reisschüssel" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung einer ReisschÃ¼ssel:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung einer Reisschüssel:" );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLines	( nDocID,  0, "Nimm drei Reispflanzen und trenne die KÃ¶rner ab." );
+					Doc_PrintLines	( nDocID,  0, "Nimm drei Reispflanzen und trenne die Körner ab." );
 					Doc_PrintLines	( nDocID,  0, "Koche sie in einem kleinen Topf, bis sie weich sind." );
 					Doc_PrintLines	( nDocID,  0, "Serviere sie, solange sie noch warm sind." );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1391,7 +1391,7 @@ func void UseRecipe_RiceBowl ()
 
 INSTANCE ITWR_REVIVED_RECIPE_MARMALADE		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Beerenmarmelade";
+	name 				=	"Rezept für Beerenmarmelade";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1400,10 +1400,10 @@ INSTANCE ITWR_REVIVED_RECIPE_MARMALADE		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_Marmalade;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a berry marmalade";
+	text[0]				= 	"Rezept für eine Beerenmarmelade";
 };
 func void UseRecipe_Marmalade ()
 {
@@ -1418,11 +1418,11 @@ func void UseRecipe_Marmalade ()
 					Doc_PrintLine	( nDocID,  0, "Beerenmarmelade" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Beerenmarmelade:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Beerenmarmelade:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLines	( nDocID,  0, "Nimm zwei Trauben, zwei Beeren, zwei Wiesenbeeren und zwei Waldbeeren." );
-					Doc_PrintLines	( nDocID,  0, "Zerkleinere alle FrÃ¼chte zu einem dickflÃ¼ssigen Brei." );
-					Doc_PrintLines	( nDocID,  0, "Koche ihn ein, bis eine sÃ¼ÃŸe Marmelade entsteht." );
+					Doc_PrintLines	( nDocID,  0, "Zerkleinere alle Früchte zu einem dickflüssigen Brei." );
+					Doc_PrintLines	( nDocID,  0, "Koche ihn ein, bis eine süße Marmelade entsteht." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1444,7 +1444,7 @@ func void UseRecipe_Marmalade ()
 
 INSTANCE ITWR_REVIVED_RECIPE_FRUITSALAD		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r Obstsalat";
+	name 				=	"Rezept für Obstsalat";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1453,10 +1453,10 @@ INSTANCE ITWR_REVIVED_RECIPE_FRUITSALAD		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_FruitSalad;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a fruit salad";
+	text[0]				= 	"Rezept für einen Obstsalat";
 };
 func void UseRecipe_FruitSalad ()
 {
@@ -1471,11 +1471,11 @@ func void UseRecipe_FruitSalad ()
 					Doc_PrintLine	( nDocID,  0, "Obstsalat" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von Obstsalat:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Obstsalat:" );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLines	( nDocID,  0, "Nimm einen Apfel, eine Birne, eine Beere und eine Traube." );
-					Doc_PrintLines	( nDocID,  0, "Schneide das Obst in StÃ¼cke, ohne es zu zerdrÃ¼cken." );
-					Doc_PrintLines	( nDocID,  0, "Gib alles in eine SchÃ¼ssel und gieÃŸe eine Flasche Milch darÃ¼ber." );
+					Doc_PrintLines	( nDocID,  0, "Schneide das Obst in Stücke, ohne es zu zerdrücken." );
+					Doc_PrintLines	( nDocID,  0, "Gib alles in eine Schüssel und gieße eine Flasche Milch darüber." );
 					Doc_PrintLines	( nDocID,  0, "Serviere das Gericht frisch." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1498,7 +1498,7 @@ func void UseRecipe_FruitSalad ()
 
 INSTANCE ITWR_REVIVED_RECIPE_OLDSTEW		(C_Item)
 {
-	name 				=	"Rezept fÃ¼r 'StrÃ¤flings-Eintopf'";
+	name 				=	"Rezept für 'Sträflings-Eintopf'";
 
 	mainflag 			=	ITEM_KAT_DOCS;
 	flags 				=	0;
@@ -1507,10 +1507,10 @@ INSTANCE ITWR_REVIVED_RECIPE_OLDSTEW		(C_Item)
 	visual 				=	"ItWr_Scroll_01.3DS";	
 	material 			=	MAT_LEATHER;
 	on_state[0]			=   UseRecipe_OldStew;
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 
 	description			= 	name;
-	text[0]				= 	"Recipe for making a Convict's Stew";
+	text[0]				= 	"Rezept für einen Sträflings-Eintopf";
 };
 func void UseRecipe_OldStew ()
 {
@@ -1522,13 +1522,13 @@ func void UseRecipe_OldStew ()
 					Doc_SetFont 	( nDocID,  0, FONT_BookHeadline );
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1 );
 
-					Doc_PrintLine	( nDocID,  0, "StrÃ¤flings-Eintopf" );
+					Doc_PrintLine	( nDocID,  0, "Sträflings-Eintopf" );
 					Doc_SetFont 	( nDocID,  0, FONT_Book );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLine	( nDocID,  0, "Zutaten fÃ¼r die Zubereitung von StrÃ¤flings-Eintopf:" );
+					Doc_PrintLine	( nDocID,  0, "Zutaten für die Zubereitung von Sträflings-Eintopf:" );
 					Doc_PrintLine	( nDocID,  0, "" );
-					Doc_PrintLines	( nDocID,  0, "Nimm ein hartes Brot und brich es in StÃ¼cke." );
-					Doc_PrintLines	( nDocID,  0, "FÃ¼ge einen stinkenden KÃ¤se, ein altes Bier und abgestandenes Wasser hinzu." );
+					Doc_PrintLines	( nDocID,  0, "Nimm ein hartes Brot und brich es in Stücke." );
+					Doc_PrintLines	( nDocID,  0, "Füge einen stinkenden Käse, ein altes Bier und abgestandenes Wasser hinzu." );
 					Doc_PrintLines	( nDocID,  0, "Koche die elende Mischung, bis selbst ein Paladin sie ertragen kann." );
 					Doc_PrintLine	( nDocID,  0, "" );
 					Doc_PrintLine	( nDocID,  0, "" );
@@ -1555,7 +1555,7 @@ func void UseRecipe_OldStew ()
 
 INSTANCE ITWR_REVIVED_MAP_VALLEY (C_Item)
 {
-	name 		= "Karte des Minentals (ergÃ¤nzt)";
+	name 		= "Karte des Minentals (ergänzt)";
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -1565,7 +1565,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY;
 
 	description	= name;
@@ -1602,12 +1602,12 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_NOORC (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_NOORC;
 
 	description	= name;
-	TEXT[0]		= "Leider fehlt darauf ein groÃŸes Gebiet";
-	TEXT[1]		= "im SÃ¼dwesten.";
+	TEXT[0]		= "Leider fehlt darauf ein großes Gebiet";
+	TEXT[1]		= "im Südwesten.";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 };
@@ -1630,7 +1630,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_NOORC (C_Item)
 
 INSTANCE ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 {
-	name 		= "GarondÂ´s Minenkarte";
+	name 		= "Garond´s Minenkarte";
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -1640,11 +1640,11 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_GAROND;
 
 	description	= name;
-	TEXT[0]		= "It's only part of the full map";
+	TEXT[0]		= "Es ist nur ein Ausschnitt der vollständigen Karte";
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
@@ -1678,12 +1678,12 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_DRAGONS;
 
 	description	= name;
-	TEXT[0]		= "The placement of the orc symbols";
-	TEXT[1]		= "are oddly familiar";
+	TEXT[0]		= "Die Anordnung der Ork-Symbole";
+	TEXT[1]		= "kommt mir seltsam bekannt vor";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 };
@@ -1706,7 +1706,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
 
 INSTANCE ITWR_REVIVED_MAP_VALLEY_CAVES (C_Item)
 {
-	name 		= "HÃ¶hlen des Tals der Minen";
+	name 		= "Höhlen des Tals der Minen";
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -1716,7 +1716,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_CAVES (C_Item)
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
 
-	scemeName	= "Karte";
+	scemeName	= "MAP";
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_CAVES;
 
 	description	= name;
@@ -1756,16 +1756,16 @@ INSTANCE ITWR_REVIVED_MAP_FOCUS (C_Item)
 	visual 					=	"ItWr_Map_01.3DS";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";	
+	scemeName				=	"MAP";	
 	on_state[0]				=	UseFocimap;
 
 	description				= name;
 	TEXT[0]					= "Die Spitzen des Pentagramms markieren die";
-	TEXT[1]					= "Orte aller fÃ¼nf Fokussteine, die damals bei";
+	TEXT[1]					= "Orte aller fünf Fokussteine, die damals bei";
 	TEXT[2]					= "der Erschaffung der magischen Barriere";
 	TEXT[3]					= "verwendet wurden. Die Karte ist alt und die";
-	TEXT[4]					= "and doesn't show how the Valley";
-	TEXT[5]					= "looks today.";
+	TEXT[4]					= "und zeigt nicht, wie das Tal";
+	TEXT[5]					= "heute aussieht.";
 };
 
 FUNC VOID UseFocimap()
@@ -1796,10 +1796,10 @@ INSTANCE ITWR_REVIVED_ALMANAC (C_Item)
 	visual 					=	"ItWr_Book_02_03.3ds";
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	on_state[0]				= 	UseItWrFokusbuch;
 	description				=	name;
-	TEXT[0]					=	"Dieses uralte Zauberbuch enthÃ¤lt eine Reihe";
+	TEXT[0]					=	"Dieses uralte Zauberbuch enthält eine Reihe";
 	TEXT[1]					=	"magischer Formeln, die sich alle auf die";
 	TEXT[2]					=	"Verwendung sogenannter Fokus-Steine beziehen.";
 };
@@ -1818,7 +1818,7 @@ INSTANCE ITWR_REVIVED_CRYPT (C_ITEM)
 	visual 				=	"ItWr_Book_02_03.3ds";
 	material 			=	MAT_LEATHER;
 
-	scemeName			=	"Karte";
+	scemeName			=	"MAP";
 	on_state[0]			= 	UseItWrCryptbuch;
 	description			= "Die Gruft";
 	TEXT[5]				= NAME_Value;
@@ -1840,12 +1840,12 @@ INSTANCE ITWR_REVIVED_CERTIFICATE (C_Item)
 	visual 			=	"ItWr_Scroll_01.3DS";
 	material 		=	MAT_LEATHER;
 
-	scemeName		=	"Karte";	
+	scemeName		=	"MAP";	
 	on_state[0]		=	UseUrkunde;
 	description		=	"Besitzurkunde";
-	TEXT[0]			=	"Entitles the holder to claim the";
-	TEXT[1]			=	"territory of the mountain fort.";
-	TEXT[5]			=	"Value                                      400 pounds of gold";
+	TEXT[0]			=	"Berechtigt den Besitzer, Anspruch auf das";
+	TEXT[1]			=	"Gebiet der Bergfestung zu erheben.";
+	TEXT[5]			=	"Wert                                      400 Pfund Gold";
 };
 
 FUNC VOID UseUrkunde()
@@ -1861,6 +1861,6 @@ FUNC VOID UseUrkunde()
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0,"Ich, Bergmar Burggraf zu Westfeld und meines Herren zu Tymoris Landrichter Ã¼ber das Gut in dem Gebiet um Khorinis gelegen, ... tue kund, ... das ich ... dem Besitzer dieser Urkunde ... und dem Innoshaus daselbst das Lehen auf der Bergfeste (mitsamt weiteren Zehenten und allen dort befindlichen Minen) aufgegeben und verkauft habe um 400 Pfund Gold.");
+				Doc_PrintLines	(nDocID,  0,"Ich, Bergmar Burggraf zu Westfeld und meines Herren zu Tymoris Landrichter über das Gut in dem Gebiet um Khorinis gelegen, ... tue kund, ... das ich ... dem Besitzer dieser Urkunde ... und dem Innoshaus daselbst das Lehen auf der Bergfeste (mitsamt weiteren Zehenten und allen dort befindlichen Minen) aufgegeben und verkauft habe um 400 Pfund Gold.");
 				Doc_Show		(nDocID );
 };

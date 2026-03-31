@@ -47,8 +47,8 @@ FUNC VOID DIA_Gerold_Hallo_Info()
 	AI_Output	(other,self ,"DIA_Gerold_Hallo_15_00");//Was bewacht ihr hier?
 	AI_Output	(self ,other,"DIA_Gerold_Hallo_12_01");//Die Gefangenen.
 	AI_Output	(other,self ,"DIA_Gerold_Hallo_15_02");//Und wer ist das?
-	AI_Output	(self ,other,"DIA_Gerold_Hallo_12_03");//Ein paar StrÃ¤flinge und den SÃ¶ldner Gorn. Ein harter Bursche - stark wie ein Ochse.
-	AI_Output	(self ,other,"DIA_Gerold_Hallo_12_04");//Es waren vier Mann nÃ¶tig, um ihn in Gewahrsam zu nehmen.
+	AI_Output	(self ,other,"DIA_Gerold_Hallo_12_03");//Ein paar Sträflinge und den Söldner Gorn. Ein harter Bursche - stark wie ein Ochse.
+	AI_Output	(self ,other,"DIA_Gerold_Hallo_12_04");//Es waren vier Mann nötig, um ihn in Gewahrsam zu nehmen.
 };	
 // ************************************************************
 // 	Kerker
@@ -74,7 +74,7 @@ FUNC INT DIA_Gerold_Jail_Condition()
 FUNC VOID DIA_Gerold_Jail_Info()
 {	
 	AI_Output	(other,self ,"DIA_Gerold_Jail_15_00");//Kannst du mich in den Kerker lassen?
-	AI_Output	(self ,other,"DIA_Gerold_Jail_12_01");//Nein. Der Kerker ist fÃ¼r NIEMANDEN zugÃ¤nglich. Das gilt fÃ¼r JEDEN. FÃ¼r dich, fÃ¼r Milten und jeden anderen.
+	AI_Output	(self ,other,"DIA_Gerold_Jail_12_01");//Nein. Der Kerker ist für NIEMANDEN zugänglich. Das gilt für JEDEN. Für dich, für Milten und jeden anderen.
 	AI_Output	(self ,other,"DIA_Gerold_Jail_12_02");//Das hier ist keine Taverne, wo man rein und rausspazieren kann, wie man will. Merk dir das.
 	
 	KnowsAboutGorn = TRUE;  
@@ -142,7 +142,7 @@ INSTANCE DIA_Gerold_Deal (C_INFO)
 	condition	= DIA_Gerold_Deal_Condition;
 	information	= DIA_Gerold_Deal_Info;
 	permanent	= FALSE;
-	description ="Ich habe hier eine Notiz fÃ¼r einen Gefangenen...";
+	description ="Ich habe hier eine Notiz für einen Gefangenen...";
 };                       
 
 FUNC INT DIA_Gerold_Deal_Condition()
@@ -159,13 +159,13 @@ FUNC INT DIA_Gerold_Deal_Condition()
  
 FUNC VOID DIA_Gerold_Deal_Info()
 {	
-	AI_Output	(other,self ,"DIA_Gerold_Deal_15_00");	//Ich habe hier eine Notiz fÃ¼r einen Gefangenen. Kannst du sie weitergeben?
-	AI_Output	(self ,other,"DIA_Gerold_Deal_12_01");	//Hm ... prinzipiell spricht nichts dagegen. FÃ¼r wen ist denn diese Notiz?
-	AI_Output	(other,self ,"DIA_Gerold_Deal_15_02");	//FÃ¼r Gorn.
-	AI_Output	(self ,other,"DIA_Gerold_Deal_12_03");	//Ein sehr wichtiger Gefangener. Ich glaube, Garond wÃ¤re nicht damit einverstanden. Aber wenn dir das wichtig ist, werden wir uns bestimmt einigen.
+	AI_Output	(other,self ,"DIA_Gerold_Deal_15_00");	//Ich habe hier eine Notiz für einen Gefangenen. Kannst du sie weitergeben?
+	AI_Output	(self ,other,"DIA_Gerold_Deal_12_01");	//Hm ... prinzipiell spricht nichts dagegen. Für wen ist denn diese Notiz?
+	AI_Output	(other,self ,"DIA_Gerold_Deal_15_02");	//Für Gorn.
+	AI_Output	(self ,other,"DIA_Gerold_Deal_12_03");	//Ein sehr wichtiger Gefangener. Ich glaube, Garond wäre nicht damit einverstanden. Aber wenn dir das wichtig ist, werden wir uns bestimmt einigen.
 	AI_Output	(other,self ,"DIA_Gerold_Deal_15_04");	//Was willst du?
-	AI_Output	(self ,other,"DIA_Gerold_Deal_12_05");	//Unsere Nahrungsrationen werden stÃ¤ndig gekÃ¼rzt. Ich will mal wieder was AnstÃ¤ndiges essen.
-	AI_Output	(self ,other,"DIA_Gerold_Deal_12_06");	//Besorg mir eine leckere Wurst und einen frischen Laib Brot - und sÃ¼ÃŸen Honig.
+	AI_Output	(self ,other,"DIA_Gerold_Deal_12_05");	//Unsere Nahrungsrationen werden ständig gekürzt. Ich will mal wieder was Anständiges essen.
+	AI_Output	(self ,other,"DIA_Gerold_Deal_12_06");	//Besorg mir eine leckere Wurst und einen frischen Laib Brot - und süßen Honig.
 	AI_Output	(self ,other,"DIA_Gerold_Deal_12_07");	//Dazu eine Flasche Wein ... Ja, das sollte reichen. Das wirst du ja wohl hinkriegen. Also komm wieder, wenn du das Zeug hast.
 	
 	B_LogEntry (TOPIC_RescueGorn,"Wenn ich Gerold eine Wurst, Brot, Wein und Honig bringe, wird er die Nachricht an Gorn weiterleiten.");
@@ -180,7 +180,7 @@ INSTANCE DIA_Gerold_Stuff (C_INFO)
 	condition	= DIA_Gerold_Stuff_Condition;
 	information	= DIA_Gerold_Stuff_Info;
 	permanent	= TRUE;
-	description = "Ich hab hier was fÃ¼r dich...";
+	description = "Ich hab hier was für dich...";
 };
 //-----------------------------------                       
 var int DIA_Gerold_Stuff_permanent;
@@ -198,10 +198,10 @@ FUNC INT DIA_Gerold_Stuff_Condition()
  
 FUNC VOID DIA_Gerold_Stuff_Info()
 {	
-	AI_Output	(other,self ,"DIA_Gerold_Stuff_15_00");	//Ich hab hier was fÃ¼r dich. Das Essen, das du haben wolltest.
+	AI_Output	(other,self ,"DIA_Gerold_Stuff_15_00");	//Ich hab hier was für dich. Das Essen, das du haben wolltest.
 	
 	
-	//------------------HACK fr deutliche Anzeige-------------------
+	//------------------HACK für deutliche Anzeige-------------------
 	
 	if (Npc_HasItems (other, ItFo_Honey) >= 1)
 	&& (Npc_HasItems (other, ItFo_Bread) >= 1)
@@ -225,19 +225,19 @@ FUNC VOID DIA_Gerold_Stuff_Info()
 	{
 	*/
 	
-		AI_Output	(self ,other,"DIA_Gerold_Stuff_12_01");	//Good, give me the grub. Do you have the message?
-		AI_Output   (other,self ,"DIA_Gerold_Stuff_15_02"); //Yes, here. Remember, it's for Gorn.
-		AI_Output 	(self ,other,"DIA_Gerold_Stuff_12_03"); //Come back tomorrow, he'll have received the message by then.
+		AI_Output	(self ,other,"DIA_Gerold_Stuff_12_01");	//Gut, gib her das Zeug. Hast du die Nachricht?
+		AI_Output   (other,self ,"DIA_Gerold_Stuff_15_02"); //Ja, hier. Denk daran, sie ist für Gorn.
+		AI_Output 	(self ,other,"DIA_Gerold_Stuff_12_03"); //Komm morgen wieder, dann hat er die Nachricht bekommen.
 		
 		B_GiveInvItems (other,self ,ItWr_LetterForGorn_MIS,1); 
 		DayContactGorn = Wld_GetDay();
 		DIA_Gerold_Stuff_permanent = TRUE;
 		
-		B_LogEntry (TOPIC_RescueGorn,"Gerold hat bekommen was er wollte und wird sich um die Nachricht kÃ¼mmern.");
+		B_LogEntry (TOPIC_RescueGorn,"Gerold hat bekommen was er wollte und wird sich um die Nachricht kümmern.");
 	}
 	else 
 	{
-		AI_Output (self ,other,"DIA_Gerold_Stuff_12_04"); //Come back when you have the stuff I want.
+		AI_Output (self ,other,"DIA_Gerold_Stuff_12_04"); //Komm wieder, wenn du das Zeug dabei hast, was ich wollte.
 	};
 };
 // ************************************************************
@@ -266,26 +266,26 @@ FUNC INT DIA_Gerold_Antwort_Condition()
 };
 FUNC VOID DIA_Gerold_Antwort_Info()
 {	
-	AI_Output	(other,self ,"DIA_Gerold_Antwort_15_00");//Did Gorn receive the message?
+	AI_Output	(other,self ,"DIA_Gerold_Antwort_15_00");//Hat Gorn die Nachricht bekommen?
 	
 	if (DayContactGorn < Wld_GetDay() )
 	{
-		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_01");//Yeah, I'm supposed to tell you from him:
-		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_02");//And?
-		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_03");//It's at the south gate.
-		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_04");//Did he say anything else?
-		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_05");//No. No idea what that's supposed to mean. Do you know what it means?
-		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_06");//Perhaps. But you shouldn't think about it too much.
-		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_07");//Yes, that may be better.
+		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_01");//Ja, ich soll dir was von ihm ausrichten:
+		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_02");//Und?
+		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_03");//Es liegt am Südtor.
+		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_04");//Hat er noch was gesagt?
+		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_05");//Nein. Keine Ahnung, was das bedeuten soll. Weißt du, was es bedeutet?
+		AI_Output	(other,self ,"DIA_Gerold_Antwort_15_06");//Vielleicht. Aber du solltest nicht weiter darüber nachdenken.
+		AI_Output	(self ,other,"DIA_Gerold_Antwort_12_07");//Ist wahrscheinlich besser.
 		
 		
 		GornsTreasure = TRUE;	
 		DIA_Gerold_Antwort_permanent = TRUE;
-		B_LogEntry (TOPIC_RescueGorn,"Gorn lÃ¤ÃŸt uns ausrichten, das sein Gold am SÃ¼dtor liegt.");
+		B_LogEntry (TOPIC_RescueGorn,"Gorn läßt uns ausrichten, das sein Gold am Südtor liegt.");
 	}
 	else
 	{
-		AI_Output	(self ,other,"DIA_Gerold_GornsAnswer_12_08");//No, not yet. Come back later.
+		AI_Output	(self ,other,"DIA_Gerold_GornsAnswer_12_08");//Nein, noch nicht. Komm später wieder.
 	};
 	
 	AI_StopProcessInfos (self);
@@ -315,12 +315,12 @@ FUNC INT DIA_Gerold_SetGornFree_Condition()
  
 FUNC VOID DIA_Gerold_SetGornFree_Info()
 {	
-	AI_Output	(other,self ,"DIA_Gerold_SetGornFree_15_00");//Set Gorn free. That's an order from Commander Garond.
-	AI_Output	(self ,other,"DIA_Gerold_SetGornFree_12_01");//I've already been informed. Here's the key, you can go in.
+	AI_Output	(other,self ,"DIA_Gerold_SetGornFree_15_00");//Lass Gorn frei. Ich komme auf Befehl vom Kommandanten Garond.
+	AI_Output	(self ,other,"DIA_Gerold_SetGornFree_12_01");//Ich bin schon informiert worden. Hier ist der Schlüssel, du kannst reingehen.
 
 	CreateInvItems (self, ItKe_PrisonKey_MIS,1);
 	B_GiveInvItems	(self,other,ItKe_PrisonKey_MIS,1);
-	B_LogEntry (TOPIC_RescueGorn,"Gerold hat mir den SchlÃ¼ssel fÃ¼r den Knast gegeben.");
+	B_LogEntry (TOPIC_RescueGorn,"Gerold hat mir den Schlüssel für den Knast gegeben.");
 };
 // ************************************************************
 // 	Perm
@@ -332,7 +332,7 @@ INSTANCE DIA_Gerold_Perm (C_INFO)
 	condition	= DIA_Gerold_Perm_Condition;
 	information	= DIA_Gerold_Perm_Info;
 	permanent	= TRUE;
-	description = "SchlÃ¤fst du nie?";
+	description = "Schläfst du nie?";
 };                       
 FUNC INT DIA_Gerold_Perm_Condition()
 {
@@ -344,8 +344,8 @@ FUNC INT DIA_Gerold_Perm_Condition()
 };
 FUNC VOID DIA_Gerold_Perm_Info()
 {	
-	AI_Output	(other,self ,"DIA_Gerold_Perm_15_00");//Don't you ever sleep?
-	AI_Output	(self ,other,"DIA_Gerold_Perm_12_01");//No. Innos himself grants me the strength never to need sleep.
+	AI_Output	(other,self ,"DIA_Gerold_Perm_15_00");//Schläfst du nie?
+	AI_Output	(self ,other,"DIA_Gerold_Perm_12_01");//Nein. Innos selbst verleiht mir die Kraft, niemals schlafen zu müssen.
 };	
 //#####################################################################
 //##
@@ -406,11 +406,11 @@ func int DIA_Gerold_KAP4_ALLESRUHIG_Condition ()
 
 func void DIA_Gerold_KAP4_ALLESRUHIG_Info ()
 {
-	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_15_00"); //All quiet?
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_12_01"); //Quiet, yes.
-	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_15_02"); //But?
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_12_03"); //My navel's rubbing against my backbone, man. Garond cut the food rations again.
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_12_04"); //If I don't get a decent meal down my throat, then I'm going to bite Garond's fat ass.
+	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_15_00"); //Alles ruhig?
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_12_01"); //Ruhig schon.
+	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_15_02"); //Aber?
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_12_03"); //Mir hängt der Magen in den Kniekehlen, Mann. Garond hat schon wieder die Nahrungsrationen gekürzt.
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_12_04"); //Wenn ich nicht bald was Anständiges zwischen die Zähne bekomme, dann beiße ich Garond in seinen fetten Arsch.
 
 	Info_ClearChoices	(DIA_Gerold_KAP4_ALLESRUHIG);
 	Info_AddChoice	(DIA_Gerold_KAP4_ALLESRUHIG, "Nicht mein Problem.", DIA_Gerold_KAP4_ALLESRUHIG_Nein );
@@ -418,34 +418,34 @@ func void DIA_Gerold_KAP4_ALLESRUHIG_Info ()
 };
 func void DIA_Gerold_KAP4_ALLESRUHIG_geben ()
 {
-	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_geben_15_00"); //Maybe I could give you something.
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_01"); //Are you crazy? Certainly not here. If one of the others sees, I'll have a ton of new friends, if you know what I mean.
+	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_geben_15_00"); //Vielleicht kann ich dir etwas geben.
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_01"); //Bist du verrückt. Doch nicht hier. Wenn das einer der anderen sieht, hab ich gleich 'ne Menge neuer Freunde, wenn du verstehst, was ich meine.
 	if 	(Wld_IsTime	(23,10,08,00) == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_02"); //You can find me in the magician's temple when everyone else has retired.
+		AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_02"); //Du findest mich im Magiertempel, wenn sich alle zurück gezogen haben.
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_03"); //Quick, follow me to the magician's temple before the others come out of their holes. I don't want to wait until tomorrow.
+		AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_03"); //Schnell, folge mir in den Magiertempel, bevor die anderen wieder aus ihren Löchern kommen. Ich hab keine Lust, bis morgen zu warten.
 	};
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_04"); //There's hardly anyone in the temple at this time anyway. I'll wait for you there.
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_05"); //But just don't show up with dry bread or some raw hunk of meat, got it?
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_04"); //Im Tempel ist sowieso zurzeit kaum jemand. Ich werde dort auf dich warten.
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_geben_12_05"); //Komm mir aber bloß nicht mit einem trockenem Brot oder irgendeinem rohen Fleischdreck, klar?
 
 	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine	(self,"Nahrung"); 
+	Npc_ExchangeRoutine	(self,"Food"); 
 
  	Log_CreateTopic (TOPIC_GeroldGiveFood, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_GeroldGiveFood, LOG_RUNNING);
-	B_LogEntry (TOPIC_GeroldGiveFood,"Garond hat schon wieder die Nahrungsrationen gekÃ¼rzt. Bevor Gerold vor Hunger etwas dummes anstellt, werde ich ihm besser was zu essen geben. Ich soll ihn im Magierhaus der Burg treffen, wenn alle anderen schlafen."); 
+	B_LogEntry (TOPIC_GeroldGiveFood,"Garond hat schon wieder die Nahrungsrationen gekürzt. Bevor Gerold vor Hunger etwas dummes anstellt, werde ich ihm besser was zu essen geben. Ich soll ihn im Magierhaus der Burg treffen, wenn alle anderen schlafen."); 
 
 	MIS_GeroldGiveFood = LOG_RUNNING;
 };
 
 func void DIA_Gerold_KAP4_ALLESRUHIG_Nein ()
 {
-	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_Nein_15_00"); //Not my problem.
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_Nein_12_01"); //You can talk. Garond certainly won't cut your rations.
-	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_Nein_12_02"); //Even if he won't admit it, he's scared shitless and he sees you as his only salvation.
+	AI_Output			(other, self, "DIA_Gerold_KAP4_ALLESRUHIG_Nein_15_00"); //Nicht mein Problem.
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_Nein_12_01"); //Du hast gut reden. Dir kürzt Garond sicher nicht die Rationen.
+	AI_Output			(self, other, "DIA_Gerold_KAP4_ALLESRUHIG_Nein_12_02"); //Auch wenn er es nicht zugibt, aber sein Arsch geht ihm ganz schön auf Grundeis und er sieht in dir seine einzige Rettung.
 
 	AI_StopProcessInfos (self);
 };
@@ -478,9 +478,9 @@ func void DIA_Gerold_MoreFood ()
 
 	if (Gerold_FoodCounter > 8)
 	{
-		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_00"); //That's enough. That's enough. With that I'll be fine for a while.
-		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_01"); //Here's my gold. I can't buy anything for it out here in any case, so you might as well have it.
-		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_02"); //I'd better go then, before somebody sees us.
+		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_00"); //Das reicht. Das reicht. Damit komme ich erstmal über die Runden.
+		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_01"); //Hier hast du mein Gold. Hier draußen kann ich eh nichts dafür kaufen, also kannst du es auch genauso gut haben.
+		AI_Output			(self, other, "DIA_Gerold_MoreFood_12_02"); //Ich geh dann besser, bevor man uns sieht.
 		AI_StopProcessInfos (self);
 		Npc_ExchangeRoutine	(self,"Start");
 		MIS_GeroldGiveFood = LOG_SUCCESS;
@@ -496,14 +496,14 @@ func void DIA_Gerold_MoreFood ()
 			}
 		else
 			{
-				Info_AddChoice	(DIA_Gerold_FOOD, "Mehr habÂ´ ich nicht.", DIA_Gerold_FOOD_kaese_nichtmehr );
+				Info_AddChoice	(DIA_Gerold_FOOD, "Mehr hab´ ich nicht.", DIA_Gerold_FOOD_kaese_nichtmehr );
 				if (Gerold_FoodCounter < 5)
 				{
-					AI_Output			(self, other, "DIA_Gerold_MoreFood_12_03"); //Sure. Give it here. Do you have more?
+					AI_Output			(self, other, "DIA_Gerold_MoreFood_12_03"); //Klar. Her damit. Hast du noch mehr?
 				}
 				else
 				{
-					AI_Output			(self, other, "DIA_Gerold_MoreFood_12_04"); //Yeah. More, more!
+					AI_Output			(self, other, "DIA_Gerold_MoreFood_12_04"); //Ja. Mehr, mehr!
 				};
 			};
 			
@@ -522,7 +522,7 @@ func void DIA_Gerold_MoreFood ()
 			};
 		if Npc_HasItems (other,ItFo_Cheese)
 			{
-			Info_AddChoice	(DIA_Gerold_FOOD, "(KÃ¤se geben)", DIA_Gerold_FOOD_kaese );
+			Info_AddChoice	(DIA_Gerold_FOOD, "(Käse geben)", DIA_Gerold_FOOD_kaese );
 			};
 		if Npc_HasItems (other,ItFo_Sausage)
 			{
@@ -534,15 +534,15 @@ func void DIA_Gerold_MoreFood ()
 
 func void DIA_Gerold_FOOD_Info ()
 {
-	AI_Output			(self, other, "DIA_Gerold_FOOD_12_00"); //There you are. So, what is it now? Do you have anything to eat for me?
+	AI_Output			(self, other, "DIA_Gerold_FOOD_12_00"); //Da bist du ja. Also, was ist jetzt? Hast du was zu essen für mich?
 
 	DIA_Gerold_MoreFood ();
 };
 
 func void DIA_Gerold_FOOD_nichts ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_nichts_15_00"); //I don't have anything right now.
-	AI_Output			(self, other, "DIA_Gerold_FOOD_nichts_12_01"); //First you make such a big deal out of it and now you want to trick me?
+	AI_Output			(other, self, "DIA_Gerold_FOOD_nichts_15_00"); //Ich hab gerade nichts dabei.
+	AI_Output			(self, other, "DIA_Gerold_FOOD_nichts_12_01"); //Erst machst du einen solchen Aufstand und jetzt willst du mich verarschen?
 	
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);
@@ -554,11 +554,11 @@ func void DIA_Gerold_FOOD_nichts ()
 
 func void DIA_Gerold_FOOD_kaese_nichtmehr ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_nichtmehr_15_00"); //That's all I have.
-	AI_Output			(self, other, "DIA_Gerold_FOOD_kaese_nichtmehr_12_01"); //And I'm supposed to believe that? All right, better than nothing. Here's a bit of gold for it.
+	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_nichtmehr_15_00"); //Mehr hab´ ich nicht.
+	AI_Output			(self, other, "DIA_Gerold_FOOD_kaese_nichtmehr_12_01"); //Und das soll ich dir glauben? Na gut, besser als nichts. Hier hast du ein bisschen Gold dafür.
 	CreateInvItems 		(self, ItMi_Gold, 50);									
 	B_GiveInvItems 		(self, other, ItMi_Gold, 50);					
-	AI_Output			(self, other, "DIA_Gerold_FOOD_kaese_nichtmehr_12_02"); //Well. I need to get back to my post.
+	AI_Output			(self, other, "DIA_Gerold_FOOD_kaese_nichtmehr_12_02"); //So. Ich muss zurück auf meinen Posten.
 	AI_StopProcessInfos (self);
 	
 	var int XP_GeroldGiveFoodLow;
@@ -582,35 +582,35 @@ func void DIA_Gerold_FOOD_kaese_nichtmehr ()
 
 func void DIA_Gerold_FOOD_kaese ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_15_00"); //What about a juicy hunk of cheese?
+	AI_Output			(other, self, "DIA_Gerold_FOOD_kaese_15_00"); //Wie wär's mir einem saftigen Stück Käse?
 	B_GiveInvItems (other,self , ItFo_Cheese, 1);	
 	DIA_Gerold_MoreFood ();
 };
 
 func void DIA_Gerold_FOOD_Wurst ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_Wurst_15_00"); //A piece of sausage?
+	AI_Output			(other, self, "DIA_Gerold_FOOD_Wurst_15_00"); //Ein Stück Wurst?
 	B_GiveInvItems (other,self , ItFo_Sausage, 1);	
 	DIA_Gerold_MoreFood ();
 };
 
 func void DIA_Gerold_FOOD_schinken ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_schinken_15_00"); //I could give you this ham.
+	AI_Output			(other, self, "DIA_Gerold_FOOD_schinken_15_00"); //Ich kann dir diesen Schinken geben.
 	B_GiveInvItems (other,self , ItFo_Bacon, 1);	
 	DIA_Gerold_MoreFood ();
 };
 
 func void DIA_Gerold_FOOD_fleisch ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_fleisch_15_00"); //A chunk of meat?
+	AI_Output			(other, self, "DIA_Gerold_FOOD_fleisch_15_00"); //Ein Stück Fleisch?
 	B_GiveInvItems (other,self , ItFoMutton, 1);	
 	DIA_Gerold_MoreFood ();
 };
 
 func void DIA_Gerold_FOOD_Suppe ()
 {
-	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //A good soup would hit the spot, don't you think?
+	AI_Output			(other, self, "DIA_Gerold_FOOD_Suppe_15_00"); //Ich denke, eine gute Suppe könnte dir schmecken.
 
 	if (B_GiveInvItems (other, self, ItFo_FishSoup,1))
 		{
@@ -646,29 +646,29 @@ func int DIA_Gerold_PERM4_Condition ()
 
 func void DIA_Gerold_PERM4_Info ()
 {
-	AI_Output			(other, self, "DIA_Gerold_PERM4_15_00"); //Still hungry?
+	AI_Output			(other, self, "DIA_Gerold_PERM4_15_00"); //Immer noch Hunger?
 	
 	if (MIS_OCGateOpen == TRUE)
 	{
-	AI_Output			(self, other, "DIA_Gerold_PERM4_12_01"); //If the orcs attack again, not even a full belly will help me.
+	AI_Output			(self, other, "DIA_Gerold_PERM4_12_01"); //Wenn die Orks noch mal angreifen, hilft mir auch kein voller Magen.
 	}
 	else if (MIS_GeroldGiveFood == LOG_SUCCESS)
 	{
-	AI_Output			(self, other, "DIA_Gerold_PERM4_12_02"); //That must be a joke. I'm stuffed. Thanks again.
+	AI_Output			(self, other, "DIA_Gerold_PERM4_12_02"); //Das soll wohl ein Witz sein. Ich bin gemästet. Danke noch mal.
 	}
 	else if (MIS_GeroldGiveFood == LOG_OBSOLETE)
 	{
-	AI_Output			(self, other, "DIA_Gerold_PERM4_12_03"); //Yeah. But thanks for your help anyway.
+	AI_Output			(self, other, "DIA_Gerold_PERM4_12_03"); //Ja. Aber trotzdem danke für deine Hilfe.
 	}
 	else
 	{
 		if (hero.guild == GIL_KDF)
 		{
-			AI_Output			(self, other, "DIA_Gerold_PERM4_12_04"); //It's all right, Master.
+			AI_Output			(self, other, "DIA_Gerold_PERM4_12_04"); //Es geht schon, Meister.
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Gerold_PERM4_12_05"); //Beat it!
+			AI_Output			(self, other, "DIA_Gerold_PERM4_12_05"); //Zisch ab!
 		};
 	};
 	AI_StopProcessInfos (self);

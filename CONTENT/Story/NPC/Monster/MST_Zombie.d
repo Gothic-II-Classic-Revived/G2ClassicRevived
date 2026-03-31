@@ -329,7 +329,7 @@ INSTANCE MayaZombie04		(Mst_Default_Zombie)
 	Npc_SetToFistMode(self);
 };
 //*************
-//	Einer der Totenwchter  	
+//	Einer der Totenwächter  	
 //*************
 
 INSTANCE MayaZombie04_Totenw	(Mst_Default_Zombie) 

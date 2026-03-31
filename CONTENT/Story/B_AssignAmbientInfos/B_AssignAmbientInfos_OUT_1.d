@@ -47,15 +47,15 @@ FUNC VOID DIA_OUT_1_STANDARD_Info()
 	
 	if (randy == 0)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_00"); //Seit die Barriere um die Strafkolonie weg ist, haben wir stÃ¤ndig Ã„rger mit Banditen.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_00"); //Seit die Barriere um die Strafkolonie weg ist, haben wir ständig Ärger mit Banditen.
 	};
 	if (randy == 1)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_01"); //Auf die Miliz ist kein Verlass. Wir mÃ¼ssen uns selbst verteidigen.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_01"); //Auf die Miliz ist kein Verlass. Wir müssen uns selbst verteidigen.
 	};
 	if (randy == 2)
 	{
-		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_02"); //Ich lass mich fÃ¼r niemanden einspannen. Weder vom KÃ¶nig, noch von dem fetten Onar. Ich kÃ¤mpfe nur fÃ¼r mich selbst.
+		AI_Output (self,other,"DIA_OUT_1_STANDARD_01_02"); //Ich lass mich für niemanden einspannen. Weder vom König, noch von dem fetten Onar. Ich kämpfe nur für mich selbst.
 	};
 	
 	AI_StopProcessInfos	(self);

@@ -71,7 +71,7 @@ func int DIA_Meldor_Interessantes_Condition ()
 func void DIA_Meldor_Interessantes_Info ()
 {
 	AI_Output (other, self, "DIA_Meldor_Interessantes_15_00"); //Was gibt hier Interessantes zu sehen?
-	AI_Output (self, other, "DIA_Meldor_Interessantes_07_01"); //Hier gibt's 'nen Puff und 'ne Kneipe. Der Wirt heiÃŸt Kardif. Wenn du Informationen willst, dann sprich mit ihm. Er ist der richtige Mann dafÃ¼r.
+	AI_Output (self, other, "DIA_Meldor_Interessantes_07_01"); //Hier gibt's 'nen Puff und 'ne Kneipe. Der Wirt heißt Kardif. Wenn du Informationen willst, dann sprich mit ihm. Er ist der richtige Mann dafür.
 	AI_Output (self, other, "DIA_Meldor_Interessantes_07_02"); //Brauchst du eigentlich Geld?
 	
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
@@ -102,9 +102,9 @@ func int DIA_Meldor_Lehmar_Condition ()
 func void DIA_Meldor_Lehmar_Info ()
 {
 	AI_Output (other, self, "DIA_Meldor_Lehmar_15_00"); //Hast du was zu verschenken?
-	AI_Output (self, other, "DIA_Meldor_Lehmar_07_01"); //(gelangweilt) Nein. Aber direkt hier gegenÃ¼ber ist das Haus von Lehmar, dem Geldverleiher.
-	AI_Output (self, other, "DIA_Meldor_Lehmar_07_02"); //Er wird dir sicher ein paar GoldstÃ¼cke geben, geh nur zu ihm.
-	Npc_ExchangeRoutine (self, "Start");
+	AI_Output (self, other, "DIA_Meldor_Lehmar_07_01"); //(gelangweilt) Nein. Aber direkt hier gegenüber ist das Haus von Lehmar, dem Geldverleiher.
+	AI_Output (self, other, "DIA_Meldor_Lehmar_07_02"); //Er wird dir sicher ein paar Goldstücke geben, geh nur zu ihm.
+	Npc_ExchangeRoutine (self, "START");
 };
 
 
@@ -118,7 +118,7 @@ instance DIA_Meldor_Arbeitest		(C_INFO)
 	condition	= DIA_Meldor_Arbeitest_Condition;
 	information	= DIA_Meldor_Arbeitest_Info;
 	permanent 	= FALSE;
-	description	= "Arbeitest du fÃ¼r Lehmar?";
+	description	= "Arbeitest du für Lehmar?";
 };
 
 func int DIA_Meldor_Arbeitest_Condition ()
@@ -131,7 +131,7 @@ func int DIA_Meldor_Arbeitest_Condition ()
 
 func void DIA_Meldor_Arbeitest_Info ()
 {
-	AI_Output (other, self, "DIA_Meldor_Arbeitest_15_00"); //Arbeitest du fÃ¼r Lehmar?
+	AI_Output (other, self, "DIA_Meldor_Arbeitest_15_00"); //Arbeitest du für Lehmar?
 	AI_Output (self, other, "DIA_Meldor_Arbeitest_07_01"); //Schlaues Kerlchen.
 };
 
@@ -156,7 +156,7 @@ func int DIA_Meldor_InsOV_Condition ()
 func void DIA_Meldor_InsOV_Info ()
 {
 	AI_Output (other, self, "DIA_Meldor_InsOV_15_00"); //Eigentlich war ich auf dem Weg ins obere Viertel ...
-	AI_Output (self, other, "DIA_Meldor_InsOV_07_01"); //(sarkastisch) Ja, klar. Und ich wollte gerade aufs Schiff und mich zu meiner Audienz beim KÃ¶nig bringen lassen.
+	AI_Output (self, other, "DIA_Meldor_InsOV_07_01"); //(sarkastisch) Ja, klar. Und ich wollte gerade aufs Schiff und mich zu meiner Audienz beim König bringen lassen.
 	AI_Output (self, other, "DIA_Meldor_InsOV_07_02"); //Leute wie du und ich kommen nicht mehr ins obere Viertel, seit die Paladine da sind.
 };
 
@@ -170,7 +170,7 @@ instance DIA_Meldor_Citizen		(C_INFO)
 	condition	= DIA_Meldor_Citizen_Condition;
 	information	= DIA_Meldor_Citizen_Info;
 	permanent 	= FALSE;
-	description	= "Bist du BÃ¼rger dieser Stadt?";
+	description	= "Bist du Bürger dieser Stadt?";
 };
 
 func int DIA_Meldor_Citizen_Condition ()
@@ -183,10 +183,10 @@ func int DIA_Meldor_Citizen_Condition ()
 
 func void DIA_Meldor_Citizen_Info ()
 {
-	AI_Output (other, self, "DIA_Meldor_Citizen_15_00"); //Bist du BÃ¼rger dieser Stadt?
+	AI_Output (other, self, "DIA_Meldor_Citizen_15_00"); //Bist du Bürger dieser Stadt?
 	AI_Output (self, other, "DIA_Meldor_Citizen_07_01"); //Wenn du meinst, ob ich hier wohne - ja. Aber ins obere Viertel lassen sie mich deswegen noch lange nicht.
-	AI_Output (self, other, "DIA_Meldor_Citizen_07_02"); //Nur die feinen Pinkel oder die HÃ¤ndler und Handwerker aus der Unterstadt kommen da noch rein.
-	AI_Output (self, other, "DIA_Meldor_Citizen_07_03"); //Die Leute aus dem Hafenviertel haben in Khorinis nicht viel zu melden. Hier gibt's noch nicht mal 'ne regelmÃ¤ÃŸige Milizpatrouille.
+	AI_Output (self, other, "DIA_Meldor_Citizen_07_02"); //Nur die feinen Pinkel oder die Händler und Handwerker aus der Unterstadt kommen da noch rein.
+	AI_Output (self, other, "DIA_Meldor_Citizen_07_03"); //Die Leute aus dem Hafenviertel haben in Khorinis nicht viel zu melden. Hier gibt's noch nicht mal 'ne regelmäßige Milizpatrouille.
 
 };
 // ***********************************************************
@@ -199,7 +199,7 @@ instance DIA_Meldor_Smoke		(C_INFO)
 	condition	= DIA_Meldor_Smoke_Condition;
 	information	= DIA_Meldor_Smoke_Info;
 	permanent 	= FALSE;
-	description	= "WeiÃŸt du, wo ich Kraut kaufen kann?";
+	description	= "Weißt du, wo ich Kraut kaufen kann?";
 };
 
 func int DIA_Meldor_Smoke_Condition ()
@@ -213,16 +213,16 @@ func void DIA_Meldor_Smoke_Info ()
 {
 	var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
 	
-	AI_Output (other, self, "DIA_Meldor_Smoke_15_00"); //WeiÃŸt du, wo ich Kraut kaufen kann?
+	AI_Output (other, self, "DIA_Meldor_Smoke_15_00"); //Weißt du, wo ich Kraut kaufen kann?
 	
 	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
 	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
 	{
-		AI_Output (self, other, "DIA_Meldor_Smoke_07_01"); //(musternd) NÃ¶, keine Ahnung.
+		AI_Output (self, other, "DIA_Meldor_Smoke_07_01"); //(musternd) Nö, keine Ahnung.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Meldor_Smoke_07_02"); //Wenn ich du wÃ¤re, wÃ¼rde ich es mal in der 'roten Laterne' versuchen.
+		AI_Output (self, other, "DIA_Meldor_Smoke_07_02"); //Wenn ich du wäre, würde ich es mal in der 'roten Laterne' versuchen.
 	};
 };
 
@@ -254,22 +254,22 @@ func void DIA_Meldor_PERM_Info ()
 	if (Kapitel <= 1)
 	{
 		AI_Output (self, other, "DIA_Meldor_PERM_07_01"); //Die Stadtwache hat vor kurzem das ganze Hafenviertel auf den Kopf gestellt.
-		AI_Output (self, other, "DIA_Meldor_PERM_07_02"); //Sie waren auf der Suche nach Diebesgut. In letzter Zeit gab's 'ne Menge DiebstÃ¤hle hier. Vor allem in den besseren Vierteln.
+		AI_Output (self, other, "DIA_Meldor_PERM_07_02"); //Sie waren auf der Suche nach Diebesgut. In letzter Zeit gab's 'ne Menge Diebstähle hier. Vor allem in den besseren Vierteln.
 		AI_Output (self, other, "DIA_Meldor_PERM_07_03"); //Klar, dass sie das alles auf die armen Schlucker im Hafen schieben wollen.
 	}
 	else if (Andre_Diebesgilde_aufgeraeumt == TRUE)
 	&&		(Meldor_DGNews == FALSE)
 	{
-		AI_Output (self, other, "DIA_Meldor_PERM_07_04"); //Es heiÃŸt, sie haben ein Diebesnest in der Kanalisation ausgerÃ¤umt. Die Diebe sind alle getÃ¶tet worden.
+		AI_Output (self, other, "DIA_Meldor_PERM_07_04"); //Es heißt, sie haben ein Diebesnest in der Kanalisation ausgeräumt. Die Diebe sind alle getötet worden.
 		Meldor_DGNews = TRUE;
 	}
 	else if (Kapitel == 3)
 	{
-		AI_Output (self, other, "DIA_Meldor_PERM_07_05"); //Im Minental soll es Drachen geben. Bin mal gespannt, wann die Paladine hier abrÃ¼cken, um sie zu bekÃ¤mpfen.
+		AI_Output (self, other, "DIA_Meldor_PERM_07_05"); //Im Minental soll es Drachen geben. Bin mal gespannt, wann die Paladine hier abrücken, um sie zu bekämpfen.
 	}
 	else if (Kapitel == 5)
 	{
-		AI_Output (self, other, "DIA_Meldor_PERM_07_06"); //Die Drachen sind angeblich alle tot. Da hat wohl irgendwer krÃ¤ftig aufgerÃ¤umt.
+		AI_Output (self, other, "DIA_Meldor_PERM_07_06"); //Die Drachen sind angeblich alle tot. Da hat wohl irgendwer kräftig aufgeräumt.
 	}
 	else
 	{

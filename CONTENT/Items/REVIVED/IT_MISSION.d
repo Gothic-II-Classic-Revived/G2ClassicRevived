@@ -19,8 +19,8 @@ INSTANCE ITMS_REVIVED_BALTRAMPACKAGE_PIRATES (C_Item)
 	
 	description			= 	name;
 	TEXT[2]				= 	"Dieses schwere Paket";
-	TEXT[3]				=	"of good things";
-	TEXT[4]				=	"was found with the pirates.";
+	TEXT[3]				=	"guter Dinge";
+	TEXT[4]				=	"wurde bei den Piraten gefunden.";
 };
 
 FUNC VOID Use_BaltramPackageRevived ()

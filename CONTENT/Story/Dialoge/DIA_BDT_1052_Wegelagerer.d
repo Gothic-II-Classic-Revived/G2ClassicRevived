@@ -47,10 +47,10 @@ FUNC INT DIA_1052_Wegelagerer_Hello_Condition()
 
 FUNC VOID DIA_1052_Wegelagerer_Hello_Info()
 {
-	AI_Output (other,self ,"DIA_1052_Wegelagerer_Hello_15_00"); //Who are you?
-	AI_Output (self ,other,"DIA_1052_Wegelagerer_Hello_06_01"); //What is this? An interrogation?
-	AI_Output (self ,other,"DIA_1052_Wegelagerer_Hello_06_02"); //I have nothing to tell you, but you might want to talk to my buddy here.
-	AI_Output (self ,other,"DIA_1052_Wegelagerer_Hello_06_03"); //But be careful, he doesn't take to strangers.
+	AI_Output (other,self ,"DIA_1052_Wegelagerer_Hello_15_00"); //Wer bist du?
+	AI_Output (self ,other,"DIA_1052_Wegelagerer_Hello_06_01"); //Was soll das werden? Ein Verhör?
+	AI_Output (self ,other,"DIA_1052_Wegelagerer_Hello_06_02"); //Ich hab dir nichts zu sagen, aber du kannst ja mal mit meinem Kumpel reden.
+	AI_Output (self ,other,"DIA_1052_Wegelagerer_Hello_06_03"); //Aber sei vorsichtig, er mag keine Fremden.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -77,7 +77,7 @@ func int DIA_Wegelagerer_ANGRIFF2_Condition ()
 
 func void DIA_Wegelagerer_ANGRIFF2_Info ()
 {
-	AI_Output			(self, other, "DIA_Wegelagerer_ANGRIFF2_06_00"); //All right, buddy. You're in for it now.
+	AI_Output			(self, other, "DIA_Wegelagerer_ANGRIFF2_06_00"); //So, Freundchen. Jetzt bist du dran.
 	AI_StopProcessInfos (self);
 	Npc_SetRefuseTalk (self,40);
 

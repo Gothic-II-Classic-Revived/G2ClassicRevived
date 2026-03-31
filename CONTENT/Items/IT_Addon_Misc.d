@@ -28,7 +28,7 @@ INSTANCE ItMi_GoldNugget_Addon(C_Item)
 	
 };
 //---------------------------------------------------------------------
-//	Weie Perle
+//	Weiße Perle
 //---------------------------------------------------------------------
 INSTANCE ItMi_Addon_WhitePearl (C_Item)
 {
@@ -49,11 +49,11 @@ INSTANCE ItMi_Addon_WhitePearl (C_Item)
 	INV_ZBIAS			= INVCAM_ENTF_MISC_STANDARD;
 };
 //---------------------------------------------------------------------
-//	Grner Novize
+//	Grüner Novize
 //---------------------------------------------------------------------
 INSTANCE ItMi_Addon_Joint_01(C_Item)
 {
-	name 				=	"GrÃ¼ner Novize";
+	name 				=	"Grüner Novize";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -63,7 +63,7 @@ INSTANCE ItMi_Addon_Joint_01(C_Item)
 	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_LEATHER;
 
-	scemeName			=	"StÃ¤ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= 	Use_Addon_Joint_01;
 	description			= 	name;
 	
@@ -112,12 +112,12 @@ INSTANCE ItMi_BaltramPaket(C_Item)
 };
 
 //****************************************************************************
-//				Baltrams Lieferung fr Skip
+//				Baltrams Lieferung für Skip
 //			---------------------------------------------
 //****************************************************************************
 INSTANCE ItMi_Packet_Baltram4Skip_Addon (C_Item)
 {
-	name 				=	"Paket fÃ¼r Skip";
+	name 				=	"Paket für Skip";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -131,8 +131,8 @@ INSTANCE ItMi_Packet_Baltram4Skip_Addon (C_Item)
 	
 	description			= 	name;
 	TEXT[2]				= 	"Dieses schwere Paket";
-	TEXT[3]				=	"of good things";
-	TEXT[4]				=	"ist fÃ¼r den Piraten Skip bestimmt";
+	TEXT[3]				=	"guter Dinge";
+	TEXT[4]				=	"ist für den Piraten Skip bestimmt";
 };
 
 /******************************************************************************************/
@@ -173,7 +173,7 @@ INSTANCE ItSe_ADDON_CavalornsBeutel	(C_Item)
 	description			= 	name;
 	
 	TEXT[0]				= 	"";
-	TEXT[1]				= 	"Am Bund hÃ¤ngt ein Schild";
+	TEXT[1]				= 	"Am Bund hängt ein Schild";
 	TEXT[2]				= 	"mit dem Namen 'Cavalorn'";
 	TEXT[3]				= 	"1 Brocken Erz befinden sich darin";
 	TEXT[4]				= 	"";
@@ -187,7 +187,7 @@ FUNC VOID Use_CavalornsBeutel ()
 		SC_OpenedCavalornsBeutel = TRUE;
 		Log_CreateTopic (TOPIC_Addon_CavalornTheHut, LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_Addon_CavalornTheHut, LOG_RUNNING);
-		B_LogEntry (TOPIC_Addon_CavalornTheHut,"Bei Cavalorns HÃ¼tte im Minental habe ich einen Beutel mit einem Erzbrocken gefunden. Cavalorn, der alte Gauner, hat ihn hier bestimmt vergessen.");
+		B_LogEntry (TOPIC_Addon_CavalornTheHut,"Bei Cavalorns Hütte im Minental habe ich einen Beutel mit einem Erzbrocken gefunden. Cavalorn, der alte Gauner, hat ihn hier bestimmt vergessen.");
 };
 
 //**************************************
@@ -195,7 +195,7 @@ FUNC VOID Use_CavalornsBeutel ()
 //**************************************
 instance ItMi_Skull(C_Item)
 {
-	name 				=	"SchÃ¤del";
+	name 				=	"Schädel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -250,7 +250,7 @@ INSTANCE ItMi_IECello(C_Item)
 	
 	material 			=	MAT_WOOD;
 	
-	scemeName			=	"Cello";
+	scemeName			=	"CELLO";
 	on_state[0]			= 	Use_Cello;
 		
 	description			= 	name;

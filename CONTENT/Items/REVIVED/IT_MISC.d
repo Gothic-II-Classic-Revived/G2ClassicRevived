@@ -18,7 +18,7 @@ const int	REV_Value_MagicWater			=	200;
 
 INSTANCE ITMI_REVIVED_JOINT_GREENNOVICE (C_Item)
 {
-	name 				=	"Gr√ºner Novize";
+	name 				=	"Gr¸ner Novize";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -28,7 +28,7 @@ INSTANCE ITMI_REVIVED_JOINT_GREENNOVICE (C_Item)
 	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_GREENNOVICE;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
@@ -61,7 +61,7 @@ INSTANCE ITMI_REVIVED_JOINT_NORTHDARK (C_Item)
 	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_NORTHDARK;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
@@ -94,7 +94,7 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL (C_Item)
 	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_DREAMCALL;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
@@ -117,7 +117,7 @@ func void Use_ITMI_REVIVED_JOINT_DREAMCALL()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 {
-	name 				=	"pr√§parierter Traumruf";
+	name 				=	"pr‰parierter Traumruf";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -127,11 +127,11 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			=	Use_ITMI_REVIVED_JOINT_DREAMCALL_02;
 
 	TEXT[0]		    	= "Dieses Sumpfkraut hat eine weitaus";
-	TEXT[1]             = "st√§rkere Wirkung als normal.";
+	TEXT[1]             = "st‰rkere Wirkung als normal.";
 	//TEXT[3]             = "For the Guru Baal-Tyon!";
 	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
@@ -155,7 +155,7 @@ func void Use_ITMI_REVIVED_JOINT_DREAMCALL_02()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_REGULAR (C_Item)
 {
-	name 				=	"St√§ngel";
+	name 				=	"St‰ngel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -165,7 +165,7 @@ INSTANCE ITMI_REVIVED_JOINT_REGULAR (C_Item)
 	visual 				=	"ItMi_Joint_01.3ds";
 	material 			=	MAT_LEATHER;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= 	Use_ITMI_REVIVED_JOINT_REGULAR;
 	description			= 	name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
@@ -186,7 +186,7 @@ func void Use_ITMI_REVIVED_JOINT_REGULAR()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_APPLE (C_Item)
 {
-	name 				=	"Apfelst√§ngel";
+	name 				=	"Apfelst‰ngel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -196,7 +196,7 @@ INSTANCE ITMI_REVIVED_JOINT_APPLE (C_Item)
 	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_APPLE;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
@@ -217,7 +217,7 @@ func void Use_ITMI_REVIVED_JOINT_APPLE()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_APPLEDOUBLE (C_Item)
 {
-	name 				=	"St√§rkerer Apfelst√§ngel";
+	name 				=	"St‰rkerer Apfelst‰ngel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -227,7 +227,7 @@ INSTANCE ITMI_REVIVED_JOINT_APPLEDOUBLE (C_Item)
 	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_APPLEDOUBLE;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -248,7 +248,7 @@ func void Use_ITMI_REVIVED_JOINT_APPLEDOUBLE()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_HONEY (C_Item)
 {
-	name 				=	"Honigst√§ngel";
+	name 				=	"Honigst‰ngel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -258,7 +258,7 @@ INSTANCE ITMI_REVIVED_JOINT_HONEY (C_Item)
 	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_HONEY;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -279,7 +279,7 @@ func void Use_ITMI_REVIVED_JOINT_HONEY()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_MUSHROOM (C_Item)
 {
-	name 				=	"Pilzst√§ngel";
+	name 				=	"Pilzst‰ngel";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -289,7 +289,7 @@ INSTANCE ITMI_REVIVED_JOINT_MUSHROOM (C_Item)
 	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"St√§ngel";
+	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_MUSHROOM;
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -345,7 +345,7 @@ INSTANCE ITMI_REVIVED_SUGAR (C_Item)
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_SYRIANOIL (C_Item)
 {
-	name 				=	"Syrianisches √ñl";
+	name 				=	"Syrianisches ÷l";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -361,7 +361,7 @@ INSTANCE ITMI_REVIVED_SYRIANOIL (C_Item)
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_STONEOIL (C_Item)
 {
-	name 				=	"Stein√∂l";
+	name 				=	"Steinˆl";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -441,7 +441,7 @@ INSTANCE ITMI_REVIVED_WARHORN (C_Item)
 	visual 				=	"ItMi_Alarmhorn_01.3DS";
 	material 			=	MAT_WOOD;
 
-	scemeName			=	"Horn";
+	scemeName			=	"HORN";
 
 	description			= name;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -449,7 +449,7 @@ INSTANCE ITMI_REVIVED_WARHORN (C_Item)
 
 INSTANCE ITMI_REVIVED_OLDCOIN (C_Item)
 {
-	name 				=	"Alte M√ºnze";
+	name 				=	"Alte M¸nze";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;
@@ -480,7 +480,7 @@ INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
 
 	description			= 	name;
 
-	TEXT[0]				=	"The ore is faded and does not shine.";
+	TEXT[0]				=	"Das Erz ist verblasst und gl‰nzt nicht mehr.";
 	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 	
 	INV_ZBIAS				= INVCAM_ENTF_MISC2_STANDARD;
@@ -616,9 +616,9 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (C_Item)
 	material 			=	MAT_CLAY;
 
 	description			=	name;
-	TEXT[0]				=	"Diese Figur stellt ein unf√∂rmiges Wesen dar,";
-	TEXT[1]				=	"das eine Maske tr√§gt.";
-	TEXT[2]				=	"Die Maske wird von 6 gro√üen Stacheln ums√§umt";
+	TEXT[0]				=	"Diese Figur stellt ein unfˆrmiges Wesen dar,";
+	TEXT[1]				=	"das eine Maske tr‰gt.";
+	TEXT[2]				=	"Die Maske wird von 6 groﬂen Stacheln ums‰umt";
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -635,8 +635,8 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[0]				=	"Diese Figur stellt ein unf√∂rmiges Wesen dar,";
-	TEXT[1]				=	"das eine Maske tr√§gt.";
-	TEXT[2]				=	"The mask is decorated with two big stings.";
+	TEXT[0]				=	"Diese Figur stellt ein unfˆrmiges Wesen dar,";
+	TEXT[1]				=	"das eine Maske tr‰gt.";
+	TEXT[2]				=	"Die Maske ist mit zwei groﬂen Stacheln verziert.";
 	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 };

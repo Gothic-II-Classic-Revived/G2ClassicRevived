@@ -51,7 +51,7 @@ func void DIA_Malak_HALLO_Info ()
 
 	if (hero.guild == GIL_NONE)
 		{
-			AI_Output			(self, other, "DIA_Malak_HALLO_08_01"); //Noch ein TagelÃ¶hner, der nicht weiÃŸ, wohin? Kein Problem. Rede mal mit unserem Bauern Bengar.
+			AI_Output			(self, other, "DIA_Malak_HALLO_08_01"); //Noch ein Tagelöhner, der nicht weiß, wohin? Kein Problem. Rede mal mit unserem Bauern Bengar.
 		}
 	else
 		{
@@ -87,7 +87,7 @@ func void DIA_Malak_WASMACHSTDU_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_WASMACHSTDU_15_00"); //Was machst du hier?
 	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_01"); //Ich bin unser Schafhirte. Es ist nicht gerade eine Arbeit, bei der ich mich kaputt mache.
-	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_02"); //Aber zuweilen muss man ganz schÃ¶n aufpassen. Erst recht, wenn man dem Pass zu nahe kommt.
+	AI_Output			(self, other, "DIA_Malak_WASMACHSTDU_08_02"); //Aber zuweilen muss man ganz schön aufpassen. Erst recht, wenn man dem Pass zu nahe kommt.
 
 };
 
@@ -102,7 +102,7 @@ instance DIA_Malak_PASS		(C_INFO)
 	condition	 = 	DIA_Malak_PASS_Condition;
 	information	 = 	DIA_Malak_PASS_Info;
 
-	description	 = 	"Was weiÃŸt du Ã¼ber den Pass?";
+	description	 = 	"Was weißt du über den Pass?";
 };
 
 func int DIA_Malak_PASS_Condition ()
@@ -116,10 +116,10 @@ func int DIA_Malak_PASS_Condition ()
 
 func void DIA_Malak_PASS_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PASS_15_00"); //Was weiÃŸt du Ã¼ber den Pass?
-	AI_Output			(self, other, "DIA_Malak_PASS_08_01"); //Nicht viel. Nur, dass er zum alten Minental fÃ¼hrt, das bis vor ein paar Wochen noch von der Barriere umschlossen war.
-	AI_Output			(self, other, "DIA_Malak_PASS_08_02"); //Damals war die monatliche Karawane, die alle mÃ¶glichen GÃ¼ter ins Minental brachte, das Einzige, was wir Bauern zu fÃ¼rchten hatten.
-	AI_Output			(self, other, "DIA_Malak_PASS_08_03"); //Diese Halsabschneider haben uns hier drauÃŸen oftmals ganz schÃ¶n zugesetzt.
+	AI_Output			(other, self, "DIA_Malak_PASS_15_00"); //Was weißt du über den Pass?
+	AI_Output			(self, other, "DIA_Malak_PASS_08_01"); //Nicht viel. Nur, dass er zum alten Minental führt, das bis vor ein paar Wochen noch von der Barriere umschlossen war.
+	AI_Output			(self, other, "DIA_Malak_PASS_08_02"); //Damals war die monatliche Karawane, die alle möglichen Güter ins Minental brachte, das Einzige, was wir Bauern zu fürchten hatten.
+	AI_Output			(self, other, "DIA_Malak_PASS_08_03"); //Diese Halsabschneider haben uns hier draußen oftmals ganz schön zugesetzt.
 
 };
 
@@ -148,7 +148,7 @@ func int DIA_Malak_WOPASS_Condition ()
 func void DIA_Malak_WOPASS_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_WOPASS_15_00"); //Wo finde ich den Pass ins alte Minental?
-	AI_Output			(self, other, "DIA_Malak_WOPASS_08_01"); //In der NÃ¤he der beiden WasserfÃ¤lle auf der anderen Seite des Weidenplateaus.
+	AI_Output			(self, other, "DIA_Malak_WOPASS_08_01"); //In der Nähe der beiden Wasserfälle auf der anderen Seite des Weidenplateaus.
 
 };
 
@@ -164,7 +164,7 @@ instance DIA_Malak_MINENTAL		(C_INFO)
 	condition	 = 	DIA_Malak_MINENTAL_Condition;
 	information	 = 	DIA_Malak_MINENTAL_Info;
 
-	description	 = 	"Was erzÃ¤hlt man sich Ã¼ber das Minental?";
+	description	 = 	"Was erzählt man sich über das Minental?";
 };
 
 func int DIA_Malak_MINENTAL_Condition ()
@@ -179,9 +179,9 @@ func int DIA_Malak_MINENTAL_Condition ()
 func void DIA_Malak_MINENTAL_Info ()
 {
 
-	AI_Output			(other, self, "DIA_Malak_MINENTAL_15_00"); //Was erzÃ¤hlt man sich Ã¼ber das Minental?
-	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_01"); //Alles MÃ¶gliche. Nachts wollen einige der Jungs Schreie von dort gehÃ¶rt haben, manche haben seltsame Lichter Ã¼ber den Bergen gesehen.
-	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_02"); //Aber wenn du mich fragst, sind das alles AmmenmÃ¤rchen.
+	AI_Output			(other, self, "DIA_Malak_MINENTAL_15_00"); //Was erzählt man sich über das Minental?
+	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_01"); //Alles Mögliche. Nachts wollen einige der Jungs Schreie von dort gehört haben, manche haben seltsame Lichter über den Bergen gesehen.
+	AI_Output			(self, other, "DIA_Malak_MINENTAL_08_02"); //Aber wenn du mich fragst, sind das alles Ammenmärchen.
 
 };
 
@@ -211,9 +211,9 @@ func int DIA_Malak_WARSTDUSCHONDA_Condition ()
 func void DIA_Malak_WARSTDUSCHONDA_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_WARSTDUSCHONDA_15_00"); //Warst du schon mal im Minental?
-	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_01"); //Nein. Ich bin nur ab und zu in der NÃ¤he des Passes. Ich sehe dann immer diese beiden Paladine da herumstehen und Wache halten.
+	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_01"); //Nein. Ich bin nur ab und zu in der Nähe des Passes. Ich sehe dann immer diese beiden Paladine da herumstehen und Wache halten.
 	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_02"); //Es sieht so aus, als ob sie darauf aufpassen, dass nichts aus dem Tal mehr heraus kommt.
-	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_03"); //Damals war das Minental ein natÃ¼rliches GefÃ¤ngnis. Bist du einmal reingegangen, kamst du nicht wieder raus.
+	AI_Output			(self, other, "DIA_Malak_WARSTDUSCHONDA_08_03"); //Damals war das Minental ein natürliches Gefängnis. Bist du einmal reingegangen, kamst du nicht wieder raus.
 
 };
 
@@ -228,7 +228,7 @@ instance DIA_Malak_PALADINE		(C_INFO)
 	condition	 = 	DIA_Malak_PALADINE_Condition;
 	information	 = 	DIA_Malak_PALADINE_Info;
 
-	description	 = 	"ErzÃ¤hl mir mehr Ã¼ber die Paladine.";
+	description	 = 	"Erzähl mir mehr über die Paladine.";
 };
 
 func int DIA_Malak_PALADINE_Condition ()
@@ -245,8 +245,8 @@ func int DIA_Malak_PALADINE_Condition ()
 
 func void DIA_Malak_PALADINE_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PALADINE_15_00"); //ErzÃ¤hl mir mehr Ã¼ber die Paladine.
-	AI_Output			(self, other, "DIA_Malak_PALADINE_08_01"); //Ich schÃ¤tze mal ein bis zwei Wochen. Ganz genau weiÃŸ ich das nicht.
+	AI_Output			(other, self, "DIA_Malak_PALADINE_15_00"); //Erzähl mir mehr über die Paladine.
+	AI_Output			(self, other, "DIA_Malak_PALADINE_08_01"); //Ich schätze mal ein bis zwei Wochen. Ganz genau weiß ich das nicht.
 	AI_Output			(self, other, "DIA_Malak_PALADINE_08_02"); //Vor einiger Zeit ist sogar ein ganzer Trupp von ihnen im Pass verschwunden. Seither habe ich sie nicht wieder gesehen.
 
 };
@@ -276,7 +276,7 @@ func int DIA_Malak_KEINEFRAUEN_Condition ()
 func void DIA_Malak_KEINEFRAUEN_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_KEINEFRAUEN_15_00"); //Ich sehe hier gar keine Frauen.
-	AI_Output			(self, other, "DIA_Malak_KEINEFRAUEN_08_01"); //Das hast du richtig beobachtet. Das ist sozusagen ein MÃ¤nnerhof. Funktioniert ganz gut, denke ich.
+	AI_Output			(self, other, "DIA_Malak_KEINEFRAUEN_08_01"); //Das hast du richtig beobachtet. Das ist sozusagen ein Männerhof. Funktioniert ganz gut, denke ich.
 
 };
 
@@ -292,7 +292,7 @@ instance DIA_Malak_PERMKAP1		(C_INFO)
 	information	 = 	DIA_Malak_PERMKAP1_Info;
 	permanent	 =  TRUE;	
 
-	description	 = 	"Ãœberarbeite dich nicht.";
+	description	 = 	"Überarbeite dich nicht.";
 };
 
 func int DIA_Malak_PERMKAP1_Condition ()
@@ -314,7 +314,7 @@ func int DIA_Malak_PERMKAP1_Condition ()
 
 func void DIA_Malak_PERMKAP1_Info ()
 {
-	AI_Output			(other, self, "DIA_Malak_PERMKAP1_15_00"); //Ãœberarbeite dich nicht.
+	AI_Output			(other, self, "DIA_Malak_PERMKAP1_15_00"); //Überarbeite dich nicht.
 	AI_Output			(self, other, "DIA_Malak_PERMKAP1_08_01"); //Ich werd's versuchen.
 
 	AI_StopProcessInfos (self);
@@ -384,10 +384,10 @@ func void DIA_Malak_FLEEFROMPASS_Info ()
 	else
 	{
 	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_00"); //Was machst du hier?
-	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_01"); //Ich bin von Bengars Hof hierher geflÃ¼chtet. Ich hatte keine Lust, mich von dem ganz Viehzeugs, das aus dem Pass kam, niedermachen zu lassen.
-	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_02"); //Du kannst dir gar nicht vorstellen, was da fÃ¼r Kreaturen in den letzten Tagen aus dem Pass herausgekommen sind.
+	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_01"); //Ich bin von Bengars Hof hierher geflüchtet. Ich hatte keine Lust, mich von dem ganz Viehzeugs, das aus dem Pass kam, niedermachen zu lassen.
+	AI_Output			(self, other, "DIA_Malak_FLEEFROMPASS_08_02"); //Du kannst dir gar nicht vorstellen, was da für Kreaturen in den letzten Tagen aus dem Pass herausgekommen sind.
 	AI_Output			(other, self, "DIA_Malak_FLEEFROMPASS_15_03"); //Ich kann.
-	B_LogEntry (TOPIC_BengarALLEIN,"Malak hat sich im SÃ¼den verschanzt, weil er Angst vor den Kreaturen hatte, die aus dem Pass aufs Weidenplateau kamen."); 
+	B_LogEntry (TOPIC_BengarALLEIN,"Malak hat sich im Süden verschanzt, weil er Angst vor den Kreaturen hatte, die aus dem Pass aufs Weidenplateau kamen."); 
 	B_GivePlayerXP (XP_FoundMalakFLEEFROMPASS);
 	};
 };
@@ -422,7 +422,7 @@ func void DIA_Malak_Heilung_Info ()
 
 	if (DIA_Malak_Heilung_oneTime == FALSE)
 	{
-	AI_Output			(self, other, "DIA_Malak_Heilung_08_01"); //(weinerlich) Ich will einfach nur nach Hause. Ich geh zurÃ¼ck zu Bengar. Ich hoffe, dass er noch lebt.
+	AI_Output			(self, other, "DIA_Malak_Heilung_08_01"); //(weinerlich) Ich will einfach nur nach Hause. Ich geh zurück zu Bengar. Ich hoffe, dass er noch lebt.
 
 		B_NpcClearObsessionByDMT (self);
 		Npc_ExchangeRoutine	(self,"Start");
@@ -473,7 +473,7 @@ func int DIA_Malak_PERMCASTLE_Condition ()
 func void DIA_Malak_PERMCASTLE_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_PERMCASTLE_15_00"); //Wie ist es hier?
-	AI_Output			(self, other, "DIA_Malak_PERMCASTLE_08_01"); //Ich muss mich hier nur mit Banditen herumÃ¤rgern. Das ist das kleinere Ãœbel.
+	AI_Output			(self, other, "DIA_Malak_PERMCASTLE_08_01"); //Ich muss mich hier nur mit Banditen herumärgern. Das ist das kleinere Übel.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -506,16 +506,16 @@ func int DIA_Malak_BACKTOBENGAR_Condition ()
 func void DIA_Malak_BACKTOBENGAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_00"); //Bengar braucht dich.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_01"); //Ich bin doch nicht wahnsinnig. Solange wir auf dem Hof schutzlos leben mÃ¼ssen, bewege ich mich hier keinen Meter weg!
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_01"); //Ich bin doch nicht wahnsinnig. Solange wir auf dem Hof schutzlos leben müssen, bewege ich mich hier keinen Meter weg!
 	
-	B_LogEntry (TOPIC_BengarALLEIN,"Malak wird nicht zu Bengar zurÃ¼ckkehren, solange Bengars Hof schutzlos ist."); 
+	B_LogEntry (TOPIC_BengarALLEIN,"Malak wird nicht zu Bengar zurückkehren, solange Bengars Hof schutzlos ist."); 
 
 	if (MIS_BengarsHelpingSLD == LOG_SUCCESS)
 	{
-	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_02"); //Ich habe einen SÃ¶ldner angeheuert. Er wird auf den Hof Acht geben.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_03"); //Das ist natÃ¼rlich etwas anderes. Aber Moment mal. Wer bezahlt den Kerl denn?
+	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_02"); //Ich habe einen Söldner angeheuert. Er wird auf den Hof Acht geben.
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_03"); //Das ist natürlich etwas anderes. Aber Moment mal. Wer bezahlt den Kerl denn?
 	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_15_04"); //Das ist mein Problem.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_05"); //(prÃ¼fend) Mmh. Keine Chance, nein zu sagen, was?
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_08_05"); //(prüfend) Mmh. Keine Chance, nein zu sagen, was?
 	
 	Info_AddChoice	(DIA_Malak_BACKTOBENGAR, "Nein.", DIA_Malak_BACKTOBENGAR_los );
 	};
@@ -524,7 +524,7 @@ func void DIA_Malak_BACKTOBENGAR_Info ()
 func void DIA_Malak_BACKTOBENGAR_los ()
 {
 	AI_Output			(other, self, "DIA_Malak_BACKTOBENGAR_los_15_00"); //Nein.
-	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_los_08_01"); //Gut. Dann gehe ich zurÃ¼ck. Hoffentlich taugt der Junge was.
+	AI_Output			(self, other, "DIA_Malak_BACKTOBENGAR_los_08_01"); //Gut. Dann gehe ich zurück. Hoffentlich taugt der Junge was.
 	MIS_GetMalakBack = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Malak_BACKTOBENGAR);
 	B_NpcClearObsessionByDMT (self);

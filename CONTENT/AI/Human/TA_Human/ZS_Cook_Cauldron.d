@@ -24,9 +24,9 @@ FUNC int ZS_Cook_Cauldron_Loop ()
 {
 	// ------ Kochen ------
 	if (!C_BodyStateContains(self, BS_MOBINTERACT_INTERRUPT))
-	&& (Wld_IsMobAvailable(self,"Kessel"))
+	&& (Wld_IsMobAvailable(self,"CAULDRON"))
 	{
-		AI_UseMob (self, "Kessel", 1);
+		AI_UseMob (self, "CAULDRON", 1);
 	};
 	
 	return LOOP_CONTINUE;
@@ -34,6 +34,6 @@ FUNC int ZS_Cook_Cauldron_Loop ()
 
 FUNC VOID ZS_Cook_Cauldron_End ()
 {
-	AI_UseMob (self, "Kessel", -1);
+	AI_UseMob (self, "CAULDRON", -1);
 };
 

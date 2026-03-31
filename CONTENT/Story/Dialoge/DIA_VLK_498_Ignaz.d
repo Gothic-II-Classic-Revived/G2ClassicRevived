@@ -77,11 +77,11 @@ FUNC INT DIA_Ignaz_Hallo_Condition()
 };
 FUNC VOID DIA_Ignaz_Hallo_Info()
 {
-	AI_Output (self, other, "DIA_Ignaz_Hallo_14_00");//Ah - du kommst mir gerade recht. Ich suche noch einen Assistenten fÃ¼r ein magisches Experiment.
+	AI_Output (self, other, "DIA_Ignaz_Hallo_14_00");//Ah - du kommst mir gerade recht. Ich suche noch einen Assistenten für ein magisches Experiment.
 	AI_Output (self, other, "DIA_Ignaz_Hallo_14_01");//Du willst doch bestimmt der Wissenschaft einen Dienst erweisen.
 	AI_Output (other, self, "DIA_Ignaz_Hallo_15_02");//Immer langsam. Sag mir erst mal, worum es geht.
 	AI_Output (self, other, "DIA_Ignaz_Hallo_14_03");//Ich habe einen neuen Zauber entwickelt. Einen Zauber des Vergessens.
-	AI_Output (self, other, "DIA_Ignaz_Hallo_14_04");//Ich konnte bereits einige praktische Anwendungen durchfÃ¼hren, aber mir fehlt die Zeit fÃ¼r einen abschlieÃŸenden Test.
+	AI_Output (self, other, "DIA_Ignaz_Hallo_14_04");//Ich konnte bereits einige praktische Anwendungen durchführen, aber mir fehlt die Zeit für einen abschließenden Test.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Lerninhalte Traenke
@@ -106,9 +106,9 @@ FUNC INT DIA_Ignaz_Traenke_Condition()
 FUNC VOID DIA_Ignaz_Traenke_Info()
 {
 	AI_Output (other, self, "DIA_Ignaz_Traenke_15_00");//Was krieg ich, wenn ich dir helfe?
-	AI_Output (self, other, "DIA_Ignaz_Traenke_14_01");//Ich kann dir das Brauen von TrÃ¤nken beibringen.
+	AI_Output (self, other, "DIA_Ignaz_Traenke_14_01");//Ich kann dir das Brauen von Tränken beibringen.
 	//AI_Output (self, other, "DIA_Ignaz_Traenke_14_02");//I know the recipes for healing and mana essences and for speed potions.
-	AI_Output (self, other, "DIA_Ignaz_Traenke_14_03");//AuÃŸerdem kann ich dir beibringen, wie du ein Elixier der Geschicklichkeit herstellst.
+	AI_Output (self, other, "DIA_Ignaz_Traenke_14_03");//Außerdem kann ich dir beibringen, wie du ein Elixier der Geschicklichkeit herstellst.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Experiment
@@ -120,7 +120,7 @@ INSTANCE DIA_Ignaz_Experiment   (C_INFO)
 	condition   = DIA_Ignaz_Experiment_Condition;
 	information = DIA_Ignaz_Experiment_Info;
 	permanent   = FALSE;
-	description = "ErzÃ¤hl mir mehr Ã¼ber das Experiment und den Zauber.";
+	description = "Erzähl mir mehr über das Experiment und den Zauber.";
 };
 
 FUNC INT DIA_Ignaz_Experiment_Condition()
@@ -129,15 +129,15 @@ FUNC INT DIA_Ignaz_Experiment_Condition()
 };
 FUNC VOID DIA_Ignaz_Experiment_Info()
 {
-	AI_Output (other, self, "DIA_Ignaz_Experiment_15_00");//ErzÃ¤hl mir mehr Ã¼ber das Experiment und den Zauber.
+	AI_Output (other, self, "DIA_Ignaz_Experiment_15_00");//Erzähl mir mehr über das Experiment und den Zauber.
 	AI_Output (self, other, "DIA_Ignaz_Experiment_14_01");//Der Zauber dient dazu, dass der Betroffene verschiedene Ereignisse wieder vergisst.
-	AI_Output (self, other, "DIA_Ignaz_Experiment_14_02");//Bisher konnte ich nur feststellen, dass er funktioniert, wenn der Betroffene verÃ¤rgert ist - also, wenn er gerade bestohlen oder niedergeschlagen wurde.
+	AI_Output (self, other, "DIA_Ignaz_Experiment_14_02");//Bisher konnte ich nur feststellen, dass er funktioniert, wenn der Betroffene verärgert ist - also, wenn er gerade bestohlen oder niedergeschlagen wurde.
 	AI_Output (self, other, "DIA_Ignaz_Experiment_14_03");//Auch wenn er eine solche Tat nur gesehen hat, wird er sie wieder vergessen.
-	AI_Output (other, self, "DIA_Ignaz_Experiment_15_04");//HeiÃŸt das, ich soll irgendjemanden niederschlagen und dann verzaubern?
+	AI_Output (other, self, "DIA_Ignaz_Experiment_15_04");//Heißt das, ich soll irgendjemanden niederschlagen und dann verzaubern?
 	//AI_Output (other, self, "DIA_Ignaz_Add_15_00"); //That would only make sense if that person were REALLY mad after beating him up.
 	//AI_Output (other, self, "DIA_Ignaz_Add_15_01"); //(to himself) But fistfights are nothing out of the ordinary in the harbor district. I guess I'd have to find a victim elsewhere...
-	AI_Output (self, other, "DIA_Ignaz_Experiment_14_05");//Ja, ich denke, du hast verstanden, worum es geht. Aber um jemanden zu verÃ¤rgern, reicht es, wenn du ihn angreifst, du musst ihn nicht niederschlagen.
-	AI_Output (self, other, "DIA_Ignaz_Experiment_14_06");//Bevorzugt dafÃ¼r sind Leute, die alleine sind - wenn noch weitere Personen anwesend sind, kriegst du nur Probleme mit Lord Andre.
+	AI_Output (self, other, "DIA_Ignaz_Experiment_14_05");//Ja, ich denke, du hast verstanden, worum es geht. Aber um jemanden zu verärgern, reicht es, wenn du ihn angreifst, du musst ihn nicht niederschlagen.
+	AI_Output (self, other, "DIA_Ignaz_Experiment_14_06");//Bevorzugt dafür sind Leute, die alleine sind - wenn noch weitere Personen anwesend sind, kriegst du nur Probleme mit Lord Andre.
 	AI_Output (self, other, "DIA_Ignaz_Experiment_14_07");//Und es macht wenig Sinn, den Zauber auf jemanden zu sprechen, der dich gerade angreift. Warte auf den richtigen Augenblick.
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -164,15 +164,15 @@ FUNC VOID DIA_Ignaz_teilnehmen_Info()
 {
 	AI_Output (other, self, "DIA_Ignaz_teilnehmen_15_00");//Okay, ich teste den Zauber.
 	AI_Output (self, other, "DIA_Ignaz_teilnehmen_14_01");//Dann nimm diese Spruchrolle und such dir ein geeignetes Versuchsobjekt.
-	AI_Output (self, other, "DIA_Ignaz_teilnehmen_14_02");//Wenn du die Sache erledigt hast, komm zurÃ¼ck und erzÃ¤hle mir, wie es gelaufen ist.
+	AI_Output (self, other, "DIA_Ignaz_teilnehmen_14_02");//Wenn du die Sache erledigt hast, komm zurück und erzähle mir, wie es gelaufen ist.
 	
 	B_GiveInvItems (self, other, ITSC_Charm,1);
 	MIS_Ignaz_Charm = LOG_RUNNING;
 	
 	Log_CreateTopic (TOPIC_Ignaz,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Ignaz,LOG_RUNNING);
-	B_LogEntry (TOPIC_Ignaz,"Ich soll fÃ¼r Ignaz einen neuen Zauber testen. Einen Zauber des Vergessens. Sobald jemand aufgrund eines Diebstahls oder einer SchlÃ¤gerei oder aus einem anderen Grund verÃ¤rgert ist, wird er nicht mehr mit mir sprechen wollen.");
-	B_LogEntry (TOPIC_Ignaz,"Das ist der richtige Moment, um den Zauber einzusetzen. Dann wird er auch vergessen das er die Tat gemeldet hat. Aber im Hafenviertel wird wohl kaum jemand verÃ¤rgert sein, wenn ich ihn niederschlage...");
+	B_LogEntry (TOPIC_Ignaz,"Ich soll für Ignaz einen neuen Zauber testen. Einen Zauber des Vergessens. Sobald jemand aufgrund eines Diebstahls oder einer Schlägerei oder aus einem anderen Grund verärgert ist, wird er nicht mehr mit mir sprechen wollen.");
+	B_LogEntry (TOPIC_Ignaz,"Das ist der richtige Moment, um den Zauber einzusetzen. Dann wird er auch vergessen das er die Tat gemeldet hat. Aber im Hafenviertel wird wohl kaum jemand verärgert sein, wenn ich ihn niederschlage...");
 	
 	AI_StopProcessInfos (self);
 };
@@ -200,7 +200,7 @@ FUNC INT DIA_Ignaz_Running_Condition()
 FUNC VOID DIA_Ignaz_Running_Info()
 {
 	AI_Output (other, self, "DIA_Ignaz_Running_15_00");//Wegen des Experiments ...
-	AI_Output (self, other, "DIA_Ignaz_Running_14_01");//Hast du schon einen Erfolg erzielen kÃ¶nnen? Oder hast du die Spruchrolle verschwendet? Hm?
+	AI_Output (self, other, "DIA_Ignaz_Running_14_01");//Hast du schon einen Erfolg erzielen können? Oder hast du die Spruchrolle verschwendet? Hm?
 	AI_Output (self, other, "DIA_Ignaz_Running_14_02");//Wenn du weitere Spruchrollen brauchst, dann kannst du sie von mir kaufen.
 	
 };
@@ -229,17 +229,17 @@ FUNC VOID DIA_Ignaz_Danach_Info()
 	AI_Output (other, self, "DIA_Ignaz_Danach_15_00");//Ich habe die Spruchrolle angewendet
 	AI_Output (self, other, "DIA_Ignaz_Danach_14_01");//Gut gut. Und hattest du Erfolg?
 	AI_Output (other, self, "DIA_Ignaz_Danach_15_02");//Ja, es hat funktioniert.
-	AI_Output (self, other, "DIA_Ignaz_Danach_14_03");//Ausgezeichnet. Ein kleiner Fortschritt fÃ¼r die Wissenschaft, aber ein groÃŸer fÃ¼r mich!
-	AI_Output (self, other, "DIA_Ignaz_Danach_14_04");//Jetzt kann ich mich meine Zeit nutzen, um dich in den KÃ¼nsten der Alchemie zu unterweisen.
-	AI_Output (self, other, "DIA_Ignaz_Danach_14_05");//Und, wenn du willst, kannst du auch einige nÃ¼tzliche Dinge von mir haben.
+	AI_Output (self, other, "DIA_Ignaz_Danach_14_03");//Ausgezeichnet. Ein kleiner Fortschritt für die Wissenschaft, aber ein großer für mich!
+	AI_Output (self, other, "DIA_Ignaz_Danach_14_04");//Jetzt kann ich mich meine Zeit nutzen, um dich in den Künsten der Alchemie zu unterweisen.
+	AI_Output (self, other, "DIA_Ignaz_Danach_14_05");//Und, wenn du willst, kannst du auch einige nützliche Dinge von mir haben.
 	
 	Ignaz_TeachAlchemy = TRUE;
 	Log_CreateTopic (Topic_CityTeacher,LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher,"Ignaz kann mir einige Rezepte zur Herstellung von TrÃ¤nken zeigen. Er wohnt im Hafenviertel.");
+	B_LogEntry (Topic_CityTeacher,"Ignaz kann mir einige Rezepte zur Herstellung von Tränken zeigen. Er wohnt im Hafenviertel.");
 	MIS_Ignaz_Charm = LOG_SUCCESS;
 	B_GivePlayerXP (XP_MIS_Ignaz_Charm);
 	
-	//PATCH fallls alle Scrolls aufgekauft oder geplndert wurden
+	//PATCH fallls alle Scrolls aufgekauft oder geplündert wurden
 	CreateInvItems (self,ITSC_Charm		, 3);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -344,8 +344,8 @@ FUNC VOID DIA_Ignaz_Teach_Info()
 		if (Alchemy_Explain != TRUE)
 		{
 			AI_Output (self, other,"DIA_Ignaz_Teach_14_01"); //Zur Herstellung eines Tranks am Alchemietisch brauchst du eine Laborflasche.
-			AI_Output (self, other,"DIA_Ignaz_Teach_14_02"); //Und du benÃ¶tigst unterschiedliche Pflanzen oder andere Ingredienzen fÃ¼r jeden Trank.
-			AI_Output (self, other,"DIA_Ignaz_Teach_14_03"); //Eins noch. Falls du vorhast, das Wissen um Elixiere der Geschicklichkeit zu lernen, solltest du wissen, dass die benÃ¶tigten Pflanzen dafÃ¼r sehr selten sind.
+			AI_Output (self, other,"DIA_Ignaz_Teach_14_02"); //Und du benötigst unterschiedliche Pflanzen oder andere Ingredienzen für jeden Trank.
+			AI_Output (self, other,"DIA_Ignaz_Teach_14_03"); //Eins noch. Falls du vorhast, das Wissen um Elixiere der Geschicklichkeit zu lernen, solltest du wissen, dass die benötigten Pflanzen dafür sehr selten sind.
 			Alchemy_Explain = TRUE;
 		}
 		else

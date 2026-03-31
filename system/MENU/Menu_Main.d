@@ -35,8 +35,8 @@ const int MENU_MAIN_Y = 2500;
 instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "New Game";
-	text[1]		= "Start a new adventure";  // Kommentar
+	text[0]		= "Neues Spiel";
+	text[1]		= "Ein neues Abenteuer beginnen.";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*0;
@@ -57,8 +57,8 @@ instance MENUITEM_MAIN_NEWGAME(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_SAVEGAME_LOAD(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Load Game";
-	text[1]		=	"Continue a saved game";  // Kommentar
+	text[0]		=	"Spiel laden";
+	text[1]		=	"Einen gespeicherten Spielstand laden.";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		=  0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*1;
@@ -73,8 +73,8 @@ INSTANCE MENUITEM_MAIN_SAVEGAME_LOAD(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_SAVEGAME_SAVE(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Save Game";
-	text[1]		= "Save the current game";  // Kommentar
+	text[0]		= "Spiel speichern";
+	text[1]		= "Den aktuellen Spielstand speichern.";  // Kommentar
 	
 	// Positionen  und Dimensionen
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*2;
@@ -95,8 +95,8 @@ instance MENUITEM_MAIN_SAVEGAME_SAVE(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_RESUME(C_MENU_ITEM_DEF)
 {
 	backpic		=	MENU_ITEM_BACK_PIC;
-	text[0]		=	"Resume";
-	text[1]		=   "Resume the current game";  // Kommentar
+	text[0]		=	"Weiterspielen";
+	text[1]		=   "Aktuelles Spiel fortführen.";  // Kommentar
 	
 	// Position und Dimension
 	posx		=	0;		posy		=	MENU_MAIN_Y + MENU_MAIN_DY*3;
@@ -115,8 +115,8 @@ INSTANCE MENUITEM_MAIN_RESUME(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_OPTIONS(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Options";
-	text[1]		= "Game, video, audio settings";  // Kommentar
+	text[0]		= "Einstellungen";
+	text[1]		= "Spiel, Video, Audio und Tastatur einstellen";  // Kommentar
 	
 	// Positionen  und Dimensionen	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*4;
@@ -132,8 +132,8 @@ instance MENUITEM_MAIN_OPTIONS(C_MENU_ITEM_DEF)
 instance MENUITEM_MAIN_INTRO(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Play Intro";
-	text[1]		= "Play introduction sequence";
+	text[0]		= "Intro spielen";
+	text[1]		= "Introsequenz noch einmal abspielen.";
 	// Positionen  und Dimensione	
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*5;
 	dimx		= 8100;		dimy		=  750;
@@ -168,8 +168,8 @@ INSTANCE MENUITEM_MAIN_CREDITS(C_MENU_ITEM_DEF)
 INSTANCE MENUITEM_MAIN_EXIT(C_MENU_ITEM_DEF) 
 {
 	backpic		= MENU_ITEM_BACK_PIC;
-	text[0]		= "Quit Game";
-	text[1]		= "Leave the world of Gothic II";  // Kommentar
+	text[0]		= "Gothic II beenden";
+	text[1]		= "Die Welt von Gothic II verlassen.";  // Kommentar
 	
 	// Positionen  und Dimensionen
 	posx		= 0;		posy		= MENU_MAIN_Y + MENU_MAIN_DY*7;	

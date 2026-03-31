@@ -53,7 +53,7 @@ INSTANCE ITAR_PIR_L_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_PIR_M_Addon (C_Item)
 {
-	name 					=	"PiratenrÃ¼stung";
+	name 					=	"Piratenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -94,7 +94,7 @@ INSTANCE ITAR_PIR_M_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_PIR_H_Addon (C_Item)
 {
-	name 					=	"KapitÃ¤ns Kleidung";
+	name 					=	"Kapitäns Kleidung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -135,7 +135,7 @@ INSTANCE ITAR_PIR_H_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_Thorus_Addon (C_Item)
 {
-	name 					=	"Schwere GardistenrÃ¼stung";
+	name 					=	"Schwere Gardistenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -155,7 +155,7 @@ INSTANCE ITAR_Thorus_Addon (C_Item)
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
-	description				=	"RÃ¼stung von Raven's Garde";
+	description				=	"Rüstung von Raven's Garde";
 
 	TEXT[0]					= 	PRINT_Addon_BDTArmor;
 	TEXT[1]					=	NAME_Prot_Edge;			
@@ -177,7 +177,7 @@ INSTANCE ITAR_Thorus_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_Raven_Addon (C_Item)
 {
-	name 					=	"Ravens RÃ¼stung";
+	name 					=	"Ravens Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -218,7 +218,7 @@ INSTANCE ITAR_Raven_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_OreBaron_Addon (C_Item)
 {
-	name 					=	"ErzbaronrÃ¼stung";
+	name 					=	"Erzbaronrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -259,7 +259,7 @@ INSTANCE ITAR_OreBaron_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_RANGER_Addon (C_Item)
 {
-	name 					=	"RÃ¼stung des 'Rings des Wassers'";
+	name 					=	"Rüstung des 'Rings des Wassers'";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -300,7 +300,7 @@ INSTANCE ITAR_RANGER_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_Fake_RANGER (C_Item)
 {
-	name 					=	"zerissene RÃ¼stung";
+	name 					=	"zerissene Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -371,7 +371,7 @@ INSTANCE ITAR_KDW_L_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_Bloodwyn_Addon (C_Item)
 {
-	name 					=	"Bloodwyn RÃ¼stung";
+	name 					=	"Bloodwyn Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -412,7 +412,7 @@ INSTANCE ITAR_Bloodwyn_Addon (C_Item)
 // ******************************************************
 INSTANCE ITAR_MayaZombie_Addon (C_Item)
 {
-	name 					=	"alte RÃ¼stung";
+	name 					=	"alte Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -453,13 +453,13 @@ INSTANCE ITAR_MayaZombie_Addon (C_Item)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-//	Magische Rstungen
+//	Magische Rüstungen
 //
 
 
 instance ItAr_FireArmor_Addon (C_Item)
 {
-	name 					=	"Magische RÃ¼stung";
+	name 					=	"Magische Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;

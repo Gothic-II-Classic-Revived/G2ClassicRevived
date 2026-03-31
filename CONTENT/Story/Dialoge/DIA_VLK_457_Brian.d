@@ -83,7 +83,7 @@ func int DIA_Brian_HALLO_Condition ()
 
 func void DIA_Brian_HALLO_Info ()
 {
-	AI_Output (self, other, "DIA_Brian_HALLO_04_00"); //Neu in der Stadt, was? Ich heiÃŸe Brian! Ich bin der Lehrling von Meister Harad.
+	AI_Output (self, other, "DIA_Brian_HALLO_04_00"); //Neu in der Stadt, was? Ich heiße Brian! Ich bin der Lehrling von Meister Harad.
 };
 
 // *****************************************************
@@ -113,7 +113,7 @@ func void DIA_Brian_AboutLehrling_Info ()
 	AI_Output (other, self, "DIA_Brian_AboutLehrling_15_00"); //Wie ist es, der Lehrling des Schmieds zu sein?
 	AI_Output (self, other, "DIA_Brian_AboutLehrling_04_01"); //Warum fragst du? Willst du mein Nachfolger werden?
 	AI_Output (other, self, "DIA_Brian_AboutLehrling_15_02"); //Vielleicht.
-	AI_Output (self, other, "DIA_Brian_AboutLehrling_04_03"); //Warum nicht ... Ich bin bald mit meiner Lehre fertig, dann werde ich mich aus der Stadt verkrÃ¼meln.
+	AI_Output (self, other, "DIA_Brian_AboutLehrling_04_03"); //Warum nicht ... Ich bin bald mit meiner Lehre fertig, dann werde ich mich aus der Stadt verkrümeln.
 	AI_Output (self, other, "DIA_Brian_AboutLehrling_04_04"); //Aber es ist nicht wegen Harad. Er ist ein guter Meister - ich habe viel von ihm gelernt.
 	
 };
@@ -142,10 +142,10 @@ func int DIA_Brian_WhyLeave_Condition ()
 func void DIA_Brian_WhyLeave_Info ()
 {
 	AI_Output (other,self , "DIA_Brian_WhyLeave_15_00"); //Warum willst du die Stadt verlassen?
-	AI_Output (self,other , "DIA_Brian_WhyLeave_04_00"); //Weil mir die Leute hier gehÃ¶rig auf die Nerven gehen! Vor allem die anderen Meister.
-	AI_Output (self, other, "DIA_Brian_WhyLeave_04_01"); //Ich weiÃŸ noch, was es fÃ¼r ein Theater war, bei Harad als Lehrling aufgenommen zu werden.
+	AI_Output (self,other , "DIA_Brian_WhyLeave_04_00"); //Weil mir die Leute hier gehörig auf die Nerven gehen! Vor allem die anderen Meister.
+	AI_Output (self, other, "DIA_Brian_WhyLeave_04_01"); //Ich weiß noch, was es für ein Theater war, bei Harad als Lehrling aufgenommen zu werden.
 	AI_Output (self, other, "DIA_Brian_WhyLeave_04_02"); //Wirklich jeder von den Pennern hatte noch was dazu zu sagen.
-	AI_Output (self, other, "DIA_Brian_WhyLeave_04_03"); //Ich will selber entscheiden kÃ¶nnen, wen ich als Lehrling aufnehme und wen nicht.
+	AI_Output (self, other, "DIA_Brian_WhyLeave_04_03"); //Ich will selber entscheiden können, wen ich als Lehrling aufnehme und wen nicht.
 };
 
 // *****************************************************
@@ -172,16 +172,16 @@ func int DIA_Brian_OtherMasters_Condition ()
 func void DIA_Brian_OtherMasters_Info ()
 {
 	AI_Output (other, self, "DIA_Brian_Add_15_00"); //Wer sind die anderen Meister?
-	AI_Output (self ,other, "DIA_Brian_Add_04_01"); //Nun, da wÃ¤ren Thorben der Tischler, Bosper der Bogner, Constantino der Alchemist und Matteo.
-	AI_Output (self ,other, "DIA_Brian_Add_04_02"); //Er stellt RÃ¼stungen her, ber in erster Linie ist er HÃ¤ndler.
-	AI_Output (self ,other, "DIA_Brian_Add_04_03"); //Alle Meister haben ihre HÃ¤user hier an der Strasse.
-	AI_Output (self ,other, "DIA_Brian_Add_04_04"); //Constantinos Laden liegt in der UnterfÃ¼hrung zum Tempel.
+	AI_Output (self ,other, "DIA_Brian_Add_04_01"); //Nun, da wären Thorben der Tischler, Bosper der Bogner, Constantino der Alchemist und Matteo.
+	AI_Output (self ,other, "DIA_Brian_Add_04_02"); //Er stellt Rüstungen her, ber in erster Linie ist er Händler.
+	AI_Output (self ,other, "DIA_Brian_Add_04_03"); //Alle Meister haben ihre Häuser hier an der Strasse.
+	AI_Output (self ,other, "DIA_Brian_Add_04_04"); //Constantinos Laden liegt in der Unterführung zum Tempel.
 };
 
 
 
 // *****************************************************
-// 					ber Meister Harad
+// 					Über Meister Harad
 // *****************************************************
 instance DIA_Brian_AboutHarad (C_INFO)
 {
@@ -190,7 +190,7 @@ instance DIA_Brian_AboutHarad (C_INFO)
 	condition	= DIA_Brian_AboutHarad_Condition;
 	information	= DIA_Brian_AboutHarad_Info;
 	permanent 	= FALSE;
-	description = "ErzÃ¤hl mir mehr Ã¼ber Meister Harad.";
+	description = "Erzähl mir mehr über Meister Harad.";
 };
 
 func int DIA_Brian_AboutHarad_Condition ()
@@ -203,11 +203,11 @@ func int DIA_Brian_AboutHarad_Condition ()
 
 func void DIA_Brian_AboutHarad_Info ()
 {
-	AI_Output (other, self, "DIA_Brian_AboutHarad_15_00"); //ErzÃ¤hl mir mehr Ã¼ber Meister Harad.
+	AI_Output (other, self, "DIA_Brian_AboutHarad_15_00"); //Erzähl mir mehr über Meister Harad.
 	AI_Output (self, other, "DIA_Brian_AboutHarad_04_01"); //Er ist zurzeit nicht besonders gut in Stimmung.
-	AI_Output (self, other, "DIA_Brian_AboutHarad_04_02"); //Vor ein paar Tagen kamen Paladine und haben ihm befohlen, Schwerter fÃ¼r sie zu schmieden.
+	AI_Output (self, other, "DIA_Brian_AboutHarad_04_02"); //Vor ein paar Tagen kamen Paladine und haben ihm befohlen, Schwerter für sie zu schmieden.
 	AI_Output (self, other, "DIA_Brian_AboutHarad_04_03"); //Sie haben ihm sogar verboten, seine Schwerter an jemand anderen zu verkaufen.
-	AI_Output (self, other, "DIA_Brian_AboutHarad_04_04"); //Jetzt schuftet er Tag und Nacht, um den Auftrag so schnell wie mÃ¶glich zu beenden.
+	AI_Output (self, other, "DIA_Brian_AboutHarad_04_04"); //Jetzt schuftet er Tag und Nacht, um den Auftrag so schnell wie möglich zu beenden.
 };
 
 // *****************************************************
@@ -232,7 +232,7 @@ func void DIA_Brian_NEEDWEAPONS_Info ()
 {
 	AI_Output (other, self, "DIA_Brian_NEEDWEAPONS_15_00"); //Kann ich bei dir Waffen kaufen?
 	AI_Output (self, other, "DIA_Brian_NEEDWEAPONS_04_01"); //Das nicht gerade. Ich bin nur Gehilfe.
-	AI_Output (self, other, "DIA_Brian_NEEDWEAPONS_04_02"); //Die Waffen, die in dieser Schmiede hergestellt werden, werden von der Miliz abgeholt und in die TÃ¼rme gebracht. Dort werden sie gelagert.
+	AI_Output (self, other, "DIA_Brian_NEEDWEAPONS_04_02"); //Die Waffen, die in dieser Schmiede hergestellt werden, werden von der Miliz abgeholt und in die Türme gebracht. Dort werden sie gelagert.
 	AI_Output (self, other, "DIA_Brian_NEEDWEAPONS_04_03"); //Aber wenn es mit dem Schmieden selbst zu tun hat, kann ich dir vielleicht weiter helfen.
 };
 
@@ -274,13 +274,13 @@ func void DIA_Brian_WASKAUFEN_Info ()
 		
 		if (MIS_Jack_NewLighthouseOfficer == 0)
 		{
-			AI_Output			(self, other, "DIA_Brian_WASKAUFEN_04_02"); //Seit Harad nicht mehr da ist, hÃ¤lt die Miliz mich genau im Auge.
-			AI_Output			(self, other, "DIA_Brian_WASKAUFEN_04_03"); //Ich darf die Schmiede nicht weiter fÃ¼hren. Sie haben Angst, dass ich die ganze Schmiede verkaufe und mich dann einfach aus dem Staub mache.
+			AI_Output			(self, other, "DIA_Brian_WASKAUFEN_04_02"); //Seit Harad nicht mehr da ist, hält die Miliz mich genau im Auge.
+			AI_Output			(self, other, "DIA_Brian_WASKAUFEN_04_03"); //Ich darf die Schmiede nicht weiter führen. Sie haben Angst, dass ich die ganze Schmiede verkaufe und mich dann einfach aus dem Staub mache.
 		};
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Brian_WASKAUFEN_04_05"); //Ich kÃ¶nnte dir Schmiederohlinge verkaufen.
+		AI_Output			(self, other, "DIA_Brian_WASKAUFEN_04_05"); //Ich könnte dir Schmiederohlinge verkaufen.
 	};
 	
 	if (Brian_Trade_Einmal == FALSE)
@@ -329,7 +329,7 @@ FUNC VOID DIA_Brian_KAP3_EXIT_Info()
 
 
 //*********************************************************************
-//	Kannst du auch Schmuckstcke reparieren?
+//	Kannst du auch Schmuckstücke reparieren?
 //*********************************************************************
 instance DIA_Brian_RepairNecklace		(C_INFO)
 {
@@ -338,7 +338,7 @@ instance DIA_Brian_RepairNecklace		(C_INFO)
 	condition	 = 	DIA_Brian_RepairNecklace_Condition;
 	information	 = 	DIA_Brian_RepairNecklace_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Kannst du SchmuckstÃ¼cke reparieren?";
+	description	 = 	"Kannst du Schmuckstücke reparieren?";
 };
 
 func int DIA_Brian_RepairNecklace_Condition ()
@@ -357,12 +357,12 @@ func int DIA_Brian_RepairNecklace_Condition ()
 
 func void DIA_Brian_RepairNecklace_Info ()
 {
-	AI_Output (other,self ,"DIA_Brian_RepairNecklace_15_00"); //Can you repair jewelry?
-	AI_Output (self	,other,"DIA_Brian_RepairNecklace_04_01"); //I'm just an assistant, I'm glad if I'm even allowed to make a dagger.
+	AI_Output (other,self ,"DIA_Brian_RepairNecklace_15_00"); //Kannst du Schmuckstücke reparieren?
+	AI_Output (self	,other,"DIA_Brian_RepairNecklace_04_01"); //Ich bin nur Gehilfe, ich bin schon froh, wenn mich mal einen Dolch schmieden darf.
 	
 	if ((Npc_IsDead (Harad))== FALSE)
 	{
-		AI_Output (self ,other,"DIA_Brian_RepairNecklace_04_02"); //Jewelry? You'll have to ask the master.
+		AI_Output (self ,other,"DIA_Brian_RepairNecklace_04_02"); //Schmuck? Da musst du schon den Meister fragen.
 	};
 	
 	MIS_SCKnowsInnosEyeIsBroken  = TRUE; 	
@@ -448,7 +448,7 @@ instance DIA_Brian_NEWLIGHTHOUSEOFFICER		(C_INFO)
 	condition	 = 	DIA_Brian_NEWLIGHTHOUSEOFFICER_Condition;
 	information	 = 	DIA_Brian_NEWLIGHTHOUSEOFFICER_Info;
 
-	description	 = 	"Ich hÃ¶rte, du hÃ¤ttest Interesse an Jacks altem Leuchtturm.";
+	description	 = 	"Ich hörte, du hättest Interesse an Jacks altem Leuchtturm.";
 };
 
 func int DIA_Brian_NEWLIGHTHOUSEOFFICER_Condition ()
@@ -463,12 +463,12 @@ func int DIA_Brian_NEWLIGHTHOUSEOFFICER_Condition ()
 
 func void DIA_Brian_NEWLIGHTHOUSEOFFICER_Info ()
 {
-	AI_Output			(other, self, "DIA_Brian_NEWLIGHTHOUSEOFFICER_15_00"); //I heard that you are interested in Jack's old lighthouse.
-	AI_Output			(other, self, "DIA_Brian_NEWLIGHTHOUSEOFFICER_15_01"); //Jack is considering going back to sea. But his lighthouse would be unguarded then.
-	AI_Output			(self, other, "DIA_Brian_NEWLIGHTHOUSEOFFICER_04_02"); //But it should be clear to Jack that I'll make a smithy out of his lighthouse when he isn't there.
-	AI_Output			(other, self, "DIA_Brian_NEWLIGHTHOUSEOFFICER_15_03"); //Is that a problem?
-	AI_Output			(self, other, "DIA_Brian_NEWLIGHTHOUSEOFFICER_04_04"); //(laughs) Not to me. I won't get Harad's smithy anyway. I've put that thought right out of my head.
-	AI_Output			(self, other, "DIA_Brian_NEWLIGHTHOUSEOFFICER_04_05"); //Agreed. We'll meet at Jack's.
+	AI_Output			(other, self, "DIA_Brian_NEWLIGHTHOUSEOFFICER_15_00"); //Ich hörte, du hättest Interesse an Jacks altem Leuchtturm.
+	AI_Output			(other, self, "DIA_Brian_NEWLIGHTHOUSEOFFICER_15_01"); //Jack möchte vielleicht wieder zu See fahren. Aber sein Leuchtturm wäre in der Zeit unbeaufsichtigt.
+	AI_Output			(self, other, "DIA_Brian_NEWLIGHTHOUSEOFFICER_04_02"); //Jack sollte aber klar sein, dass ich aus seinem Leuchtturm eine Schmiede machen werde, wenn er nicht da ist.
+	AI_Output			(other, self, "DIA_Brian_NEWLIGHTHOUSEOFFICER_15_03"); //Ist das ein Problem?
+	AI_Output			(self, other, "DIA_Brian_NEWLIGHTHOUSEOFFICER_04_04"); //(lacht) Nicht für mich. Harads Schmiede kriege ich sowieso nicht. Das hab ich mir schon aus dem Kopf geschlagen.
+	AI_Output			(self, other, "DIA_Brian_NEWLIGHTHOUSEOFFICER_04_05"); //Abgemacht. Wir sehen uns bei Jack.
 	MIS_Jack_NewLighthouseOfficer = LOG_SUCCESS;
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Lighthouse");
@@ -502,8 +502,8 @@ func int DIA_Brian_LIGHTHOUSEFREE_Condition ()
 
 func void DIA_Brian_LIGHTHOUSEFREE_Info ()
 {
-	AI_Output			(other, self, "DIA_Brian_LIGHTHOUSEFREE_15_00"); //And, what do you say?
-	AI_Output			(self, other, "DIA_Brian_LIGHTHOUSEFREE_04_01"); //Lawdy, what a mess. Jack won't recognize the place when I'm done with it.
+	AI_Output			(other, self, "DIA_Brian_LIGHTHOUSEFREE_15_00"); //Und, was sagst du?
+	AI_Output			(self, other, "DIA_Brian_LIGHTHOUSEFREE_04_01"); //Mein lieber Mann, eine ganz schöne Rumpelkammer. Jack wird die Bude nicht wieder erkennen, wenn ich mit ihr fertig bin.
 };
 
 

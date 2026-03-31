@@ -19,7 +19,7 @@ INSTANCE ITPL_REVIVED_BERRIES (C_Item)
 	visual 				=	"REV_ITPL_BERRY_RED.3ds";
 	material 			=	MAT_LEATHER;
 	on_state [0]		=   UseBerrys;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
@@ -44,7 +44,7 @@ INSTANCE ITPL_REVIVED_GRAPES (C_Item)
 
 	visual 				=	"REV_ITPL_WINEBERRY_PURPLE.3ds";
 	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Grapes;
@@ -72,7 +72,7 @@ INSTANCE ITPL_REVIVED_RICEPLANT (C_Item)
 	visual 				=	"ItPl_Weed.3ds";
 	material 			=	MAT_LEATHER;
 	on_state [0]		=   UseRiceplant;
-	scemeName			=	"Nahrung";
+	scemeName			=	"FOOD";
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Riceplant;

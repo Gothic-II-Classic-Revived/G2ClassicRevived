@@ -290,7 +290,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_LESTER (C_Item)
 	visual 				=	"REV_1H_MACE_WAR_02.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Lester";
+	TEXT[0]				=	"Es gehört Lester";
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
@@ -318,7 +318,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_NAMIB (C_Item)
 	visual 				=	"ItMw_1H_Mace_01.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Baal Namib";
+	TEXT[0]				=	"Es gehört Baal Namib";
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
@@ -346,7 +346,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_MOE (C_Item)
 	visual 				=	"ItMw_1H_Mace_02.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Moe";
+	TEXT[0]				=	"Es gehört Moe";
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
@@ -374,7 +374,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_FORTUNO (C_Item)
 	visual 				=	"ItMw_1H_Mace_03.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Fortuno";
+	TEXT[0]				=	"Es gehört Fortuno";
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;

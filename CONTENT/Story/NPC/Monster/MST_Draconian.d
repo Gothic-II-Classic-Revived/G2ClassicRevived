@@ -81,7 +81,7 @@ INSTANCE Draconian			(Mst_Default_Draconian)
 INSTANCE DraconianGreen			(Mst_Default_Draconian)
 {
 	//----- Monster ----
-	name							=	"GrÃ¼ner Drakonier";
+	name							=	"Grüner Drakonier";
 
 	// ------ visuals ------
 	B_SetVisuals_DraconianGreen();

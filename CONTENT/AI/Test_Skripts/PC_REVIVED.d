@@ -314,6 +314,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITFO_REVIVED_MONSTERDRINK, 20);
 	CreateInvItems(self, ITFO_REVIVED_RICEBOOZE, 20);
 	CreateInvItems(self, ITFO_REVIVED_MEAD, 20);
+	CreateInvItems(self, ITFO_REVIVED_MEATSTEW, 20);
+	CreateInvItems(self, ITFO_REVIVED_FISHSOUP, 20);
 	CreateInvItems(self, ITFO_REVIVED_FISHXPSOUP, 20);
 	CreateInvItems(self, ITFO_REVIVED_BUGSOUP, 20);
 	CreateInvItems(self, ITFO_REVIVED_PLANTSOUP, 20);
@@ -352,6 +354,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_1H_AXE_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_AXE_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_AXE_03, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_AXE_04, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_AXE_05, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_AXE_GREAT_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_AXE_HEAVY_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_AXE_HEAVY_02, 1);
@@ -639,9 +643,9 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	//******************************************************************//
 
 	// IT_PLANTS.d
-	CreateInvItems(self, ITPL_REVIVED_BERRIES, 1);
-	CreateInvItems(self, ITPL_REVIVED_GRAPES, 1);
-	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 1);
+	CreateInvItems(self, ITPL_REVIVED_BERRIES, 20);
+	CreateInvItems(self, ITPL_REVIVED_GRAPES, 20);
+	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 20);
 
 	//******************************************************************//
 

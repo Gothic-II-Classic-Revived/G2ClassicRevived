@@ -1,5 +1,5 @@
 // ************************************************************************************************
-// Wirkung und Kosten von Trnken
+// Wirkung und Kosten von Tr‰nken
 // ************************************************************************************************
 
 
@@ -25,7 +25,7 @@ const int 	Value_ManaTrunk			=   200;
 const int 	Value_HpTrunk			=   150;
 
 /******************************************************************************************/
-//	MANATRNKE																			//
+//	MANATRƒNKE																			//
 /******************************************************************************************/
 INSTANCE ItPo_Mana_01(C_Item)
 {
@@ -128,7 +128,7 @@ INSTANCE ItPo_Mana_03(C_Item)
 		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Elixier);
 	};
 /******************************************************************************************/
-//	HEILTRNKE																			//
+//	HEILTRƒNKE																			//
 /******************************************************************************************/
 INSTANCE ItPo_Health_01(C_Item)
 {
@@ -228,7 +228,7 @@ INSTANCE ItPo_Health_03(C_Item)
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Elixier);
 	};
 /******************************************************************************************/
-// TRNKE FR PERMANENTE ATTRIBUT-NDERUNGEN!
+// TRƒNKE F‹R PERMANENTE ATTRIBUT-ƒNDERUNGEN!
 /******************************************************************************************/
 INSTANCE ItPo_Perm_STR(C_Item)
 {
@@ -247,7 +247,7 @@ INSTANCE ItPo_Perm_STR(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= 	"Elixier der St√§rke";
+	description		= 	"Elixier der St‰rke";
 	
 	TEXT[1]			= 	NAME_Bonus_Str;				
 	COUNT[1]		= 	STR_Elixier;
@@ -373,7 +373,7 @@ INSTANCE ItPo_Speed(C_Item)
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	description		= 	"Trank der Geschwindigkeit";
-	TEXT[1]			= 	"Erm√∂glicht kurzzeitiges Sprinten";
+	TEXT[1]			= 	"Ermˆglicht kurzzeitiges Sprinten";
 	
 	TEXT[3]			= 	NAME_Duration;				
 	COUNT[3]		= 	Time_Speed/60000;
@@ -392,7 +392,7 @@ INSTANCE ItPo_Speed(C_Item)
 //	MegaDrink	Kapitel 6																      //
 /******************************************************************************************/
 
-INSTANCE ItPo_MegaDrink (C_Item)	//Joly: Megatrank aus Dracheneiern auf der Dracheninsel -> Kapitel 6 kurz vorm Endgegner
+INSTANCE ItPo_MegaDrink (C_Item)	//Joly: Megatrank aus Dracheneiern auf der Dracheninsel -> Kapitel 6 kurz vor¥m Endgegner
 {
 	name 			=	"Embarla Firgasto";
 
@@ -428,6 +428,6 @@ INSTANCE ItPo_MegaDrink (C_Item)	//Joly: Megatrank aus Dracheneiern auf der Drac
 					B_RaiseAttribute	(self, ATR_STRENGTH,	STRorDEX_MegaDrink);
 				};
 	
-			Npc_ChangeAttribute	(self,	ATR_MANA, - ATR_MANA); //Joly: gem des Rezeptes
+			Npc_ChangeAttribute	(self,	ATR_MANA, - ATR_MANA); //Joly: gem‰ﬂ des Rezeptes
 			Snd_Play ("DEM_Warn");
 		};

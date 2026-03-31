@@ -22,11 +22,11 @@ FUNC VOID Use_Runemaking_KDW_CIRC1_S1()
 
 					Doc_PrintLine	( nDocID,  0, "Die Kreise des Wassers"					);
 					Doc_PrintLine	( nDocID,  0, ""	);
-					Doc_PrintLines	( nDocID,  0, "Die Runen des Wassers und die zu deren Herstellung benÃ¶tigten Ingredenzien");
+					Doc_PrintLines	( nDocID,  0, "Die Runen des Wassers und die zu deren Herstellung benötigten Ingredenzien");
 					Doc_PrintLine	( nDocID,  0, ""	);
 					
 					Doc_PrintLine	( nDocID,  0, "Wirbelwind");
-					Doc_PrintLine	( nDocID,  0, "FlÃ¼gel einer Blutfliege");
+					Doc_PrintLine	( nDocID,  0, "Flügel einer Blutfliege");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_PrintLine	( nDocID,  0, "Eislanze");
@@ -39,7 +39,7 @@ FUNC VOID Use_Runemaking_KDW_CIRC1_S1()
 					
 					Doc_PrintLine	( nDocID,  0, "Unwetter");
 					Doc_PrintLine	( nDocID,  0, "Gletscherquartz");
-					Doc_PrintLine	( nDocID,  0, "FlÃ¼gel einer Blutfliege");
+					Doc_PrintLine	( nDocID,  0, "Flügel einer Blutfliege");
 					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_PrintLine	( nDocID,  0, "Wasserfaust");
@@ -51,11 +51,11 @@ FUNC VOID Use_Runemaking_KDW_CIRC1_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLine	( nDocID,  1, ""					);
 			
-					Doc_PrintLines	( nDocID,  1, "FÃ¼r die Herstellung einer Rune ist jeweils EINE der aufgefÃ¼hrten Ingredenzien erforderlich."					);
+					Doc_PrintLines	( nDocID,  1, "Für die Herstellung einer Rune ist jeweils EINE der aufgeführten Ingredenzien erforderlich."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel fÃ¼r den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
+					Doc_PrintLines	( nDocID,  1, "Dem Anwender muss die Formel für den Zauber bekannt sein und er muss einen blanken Runenstein, sowie eine Spruchrolle des jeweiligen Zaubers besitzen."					);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfÃ¼llt sind, kann er am Runentisch zu Werke gehen."					);
+					Doc_PrintLines	( nDocID,  1, "Erst wenn diese Vorraussetzungen erfüllt sind, kann er am Runentisch zu Werke gehen."					);
 					Doc_Show		( nDocID );
 	};
 };

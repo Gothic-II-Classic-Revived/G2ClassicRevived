@@ -66,7 +66,7 @@ INSTANCE Giant_Rat	(Mst_Default_Giant_Rat)
 
 
 //**************************************
-//	junge Giant_Rat   (fr Spielstart) 	
+//	junge Giant_Rat   (für Spielstart) 	
 //**************************************
 
 INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
@@ -98,7 +98,7 @@ INSTANCE YGiant_Rat	(Mst_Default_Giant_Rat)
 
 
 //**************************************
-//	small Giant_Rat   (fr ambient) 	
+//	small Giant_Rat   (für ambient) 	
 //**************************************
 
 INSTANCE YRat	(Mst_Default_Giant_Rat)

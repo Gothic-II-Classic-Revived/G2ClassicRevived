@@ -4,7 +4,7 @@
 //##
 //##########################################################################
 
-FUNC VOID Use_BookstandHistory2_S1()		//Geschichtsbcher
+FUNC VOID Use_BookstandHistory2_S1()		//Geschichtsb¸cher
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -23,18 +23,18 @@ FUNC VOID Use_BookstandHistory2_S1()		//Geschichtsbcher
 
 					Doc_PrintLine	( nDocID,  0, "Die Insel"					);
 					Doc_PrintLine	( nDocID,  0, ""						);
-					Doc_PrintLines	( nDocID,  0, "Die Hafenstadt Khorinis liegt auf einer Insel vor der K√ºste des K√∂nigreiches Myrtana."						);
-					Doc_PrintLines	( nDocID,  0, "Die Insel ist vor allem durch das Minental bekannt geworden. Ein zweifelhafter Ruf, denn viele Jahre erstreckte sich eine magische Barriere √ºber das gesamte Tal und alle Gefangenen des Reiches wurden dort hinein gebracht."						);
-					Doc_PrintLines	( nDocID,  0, "So wurde das Tal zur Strafkolonie f√ºr viele Verurteilte, die tief unter der Erde nach dem magischen Erz sch√ºrften."						);
+					Doc_PrintLines	( nDocID,  0, "Die Hafenstadt Khorinis liegt auf einer Insel vor der K¸ste des Kˆnigreiches Myrtana."						);
+					Doc_PrintLines	( nDocID,  0, "Die Insel ist vor allem durch das Minental bekannt geworden. Ein zweifelhafter Ruf, denn viele Jahre erstreckte sich eine magische Barriere ¸ber das gesamte Tal und alle Gefangenen des Reiches wurden dort hinein gebracht."						);
+					Doc_PrintLines	( nDocID,  0, "So wurde das Tal zur Strafkolonie f¸r viele Verurteilte, die tief unter der Erde nach dem magischen Erz sch¸rften."						);
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Au√üerhalb von Khorinis gibt es noch einige Bauernh√∂fe, die den guten Boden nutzen, um Weizen und R√ºben anzubauen, aber auch um Schafe zu z√ºchten."						); 
+					Doc_PrintLines	( nDocID,  1, "Auﬂerhalb von Khorinis gibt es noch einige Bauernhˆfe, die den guten Boden nutzen, um Weizen und R¸ben anzubauen, aber auch um Schafe zu z¸chten."						); 
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Seit Generationen ist der gr√∂√üte Hof im Besitz eines Gro√übauern, der sein umliegendes Land an andere Bauern verpachtet."						);
+					Doc_PrintLines	( nDocID,  1, "Seit Generationen ist der grˆﬂte Hof im Besitz eines Groﬂbauern, der sein umliegendes Land an andere Bauern verpachtet."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Mitten auf der Insel steht ein altes Kloster. Ein Kloster Innos, das von den Magiern des Feuers gef√ºhrt wird. Dort gehen sie magischen und alchmistischen Forschungen nach und keltern Wein."						);
+					Doc_PrintLines	( nDocID,  1, "Mitten auf der Insel steht ein altes Kloster. Ein Kloster Innos, das von den Magiern des Feuers gef¸hrt wird. Dort gehen sie magischen und alchmistischen Forschungen nach und keltern Wein."						);
 					
 					Doc_Show		( nDocID );
 					
@@ -46,7 +46,7 @@ FUNC VOID Use_BookstandHistory2_S1()		//Geschichtsbcher
 	};
 };
 
-FUNC VOID Use_BookstandHistory3_S1()		//Geschichtsbcher
+FUNC VOID Use_BookstandHistory3_S1()		//Geschichtsb¸cher
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -66,20 +66,20 @@ FUNC VOID Use_BookstandHistory3_S1()		//Geschichtsbcher
 					Doc_PrintLine	( nDocID,  0, "Das Gesetz der Insel"					);
 					Doc_PrintLine	( nDocID,  0, ""						);
 					
-					Doc_PrintLines	( nDocID,  0, "√úberall dort, wo Menschen zusammenkommen, muss das gemeinsame Leben geregelt werden. Ob das im Kloster, in der Stadt oder auf dem Hof des Gro√übauers ist."						);
+					Doc_PrintLines	( nDocID,  0, "‹berall dort, wo Menschen zusammenkommen, muss das gemeinsame Leben geregelt werden. Ob das im Kloster, in der Stadt oder auf dem Hof des Groﬂbauers ist."						);
 					Doc_PrintLines	( nDocID,  0, "So wird jedes Verbrechen wider der Gemeinschaft bestraft."						);
-					Doc_PrintLines	( nDocID,  0, "Im Sinne der Gemeinschaft ist es nicht erlaubt Schl√§gereien anzuzetteln oder sich in solche verwickeln zu lassen."						);
+					Doc_PrintLines	( nDocID,  0, "Im Sinne der Gemeinschaft ist es nicht erlaubt Schl‰gereien anzuzetteln oder sich in solche verwickeln zu lassen."						);
 					Doc_PrintLines	( nDocID,  0, "Ebenso ist Diebstahl ein Vergehen, das nicht ohne Folge bleibt. Und auch die Schafe stehen unter dem Schutz des Gesetzes."						);
 					Doc_PrintLines	( nDocID,  0, " "						);
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Wer gar einen anderen Menschen niederschl√§gt und ermordet, mu√ü damit rechnen auf der Stelle gerichtet zu werden."						);
-					Doc_PrintLines	( nDocID,  1, "Und wer dem entgehen kann, mu√ü eine hohen Strafe zahlen."						);
-					Doc_PrintLines	( nDocID,  1, "An allen gro√üen Orten, f√ºhren M√§nner das Amt des Rechts aus. Ihnen wird zugetragen welche Taten geschehen und sie fordern die Strafe ein, auf das der Frieden wiederhergestellt wird."						); 
-					Doc_PrintLines	( nDocID,  1, "Denn wer Opfer eines Vergehens wird oder solche bezeugen kann, wird nicht gut auf den T√§ter zu sprechen sein."						);
+					Doc_PrintLines	( nDocID,  1, "Wer gar einen anderen Menschen niederschl‰gt und ermordet, muﬂ damit rechnen auf der Stelle gerichtet zu werden."						);
+					Doc_PrintLines	( nDocID,  1, "Und wer dem entgehen kann, muﬂ eine hohen Strafe zahlen."						);
+					Doc_PrintLines	( nDocID,  1, "An allen groﬂen Orten, f¸hren M‰nner das Amt des Rechts aus. Ihnen wird zugetragen welche Taten geschehen und sie fordern die Strafe ein, auf das der Frieden wiederhergestellt wird."						); 
+					Doc_PrintLines	( nDocID,  1, "Denn wer Opfer eines Vergehens wird oder solche bezeugen kann, wird nicht gut auf den T‰ter zu sprechen sein."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Es gibt nat√ºrlich auch Volk das sich nicht um die Gesetze schert. Vor allem Banditen und S√∂ldner."						);
+					Doc_PrintLines	( nDocID,  1, "Es gibt nat¸rlich auch Volk das sich nicht um die Gesetze schert. Vor allem Banditen und Sˆldner."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLines	( nDocID,  1, ""						);
 					Doc_Show		( nDocID );
@@ -120,12 +120,12 @@ FUNC VOID Use_BookstandRevived_HISTORY1_S1()
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_SetFont 	( nDocID, -1, FONT_Book);
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLines	( nDocID,  0,"Das beste Erz zum Schmieden einer Waffe findet man zweifelsohne in den Erzminen bei Khorinis. Es ist von elementarer Reinheit und durchtr√§nkt von Magie. Es ist von unvergleichlicher H√§rte und doch so weich, dass es nicht bricht. Eine Waffe geschmiedet aus jenem Stahl, der unter unsagbar hohen Aufwand aus den tiefen Minen gewonnen wird, ist mit keiner Klinge und sei sie aus dem noch so besten Stahl gefertigt, zu vergleichen");
+					Doc_PrintLines	( nDocID,  0,"Das beste Erz zum Schmieden einer Waffe findet man zweifelsohne in den Erzminen bei Khorinis. Es ist von elementarer Reinheit und durchtr‰nkt von Magie. Es ist von unvergleichlicher H‰rte und doch so weich, dass es nicht bricht. Eine Waffe geschmiedet aus jenem Stahl, der unter unsagbar hohen Aufwand aus den tiefen Minen gewonnen wird, ist mit keiner Klinge und sei sie aus dem noch so besten Stahl gefertigt, zu vergleichen");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 					Doc_PrintLine	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1,"");	
-					Doc_PrintLines	( nDocID,  1,". Kein Schild, den sie nicht brechen kann, kein Panzer, den sie nicht durchbohrt. K√∂nige und Helden aus l√§ngst vergangen Tagen trugen Waffen aus bestem Khorinisstahl und in ganz Myrtana werden auch heute f√ºr solche Waffen die besten Preise erzielt. Doch wird f√ºr dieses Erz auch ein hoher Preis verlangt. Um es der Erde abzutrotzen mu√ü gro√üer Aufwand getrieben werden, denn es ist so, als wolle das Erz nicht aus dem Scho√üe der Erde entfliehen.");
+					Doc_PrintLines	( nDocID,  1,". Kein Schild, den sie nicht brechen kann, kein Panzer, den sie nicht durchbohrt. Kˆnige und Helden aus l‰ngst vergangen Tagen trugen Waffen aus bestem Khorinisstahl und in ganz Myrtana werden auch heute f¸r solche Waffen die besten Preise erzielt. Doch wird f¸r dieses Erz auch ein hoher Preis verlangt. Um es der Erde abzutrotzen muﬂ groﬂer Aufwand getrieben werden, denn es ist so, als wolle das Erz nicht aus dem Schoﬂe der Erde entfliehen.");
 					
 					Doc_Show		( nDocID );
 					
@@ -150,13 +150,13 @@ FUNC VOID UseSchlacht_um_Varant1()
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_SetFont 	( nDocID, -1, "font_10_book.tga"	   			); 
 				Doc_PrintLine	( nDocID,  0,""); 					
-				Doc_PrintLines	( nDocID,  0,"... doch Feldherr Rhobar w√§hlte den Angriff. Er versammelte sein Heer und stie√ü mit geballter Kraft gegen die schlechtgedeckte rechte Flanke des Feindes vor. Er hielt sich nicht lang mit den Gepl√§nkeln auf, sondern stie√ü wie ein Schwert in die Seite des feindlichen Heeres und zerschnitt sie wie Papier. Immer weiter trieb er seine Mannen voran, immer weiter Richtung der Grenze von Varant. Er wusste, wenn er diese Schlacht gewinnen wollte, musste es ihm gelingen das feindliche Herr zu teilen und verhindern, dass sich Gellon und Lukkor");
+				Doc_PrintLines	( nDocID,  0,"... but Rhobar, the strategist, chose to attack. He assembled his troops and had them storm the enemy's weak right flank. He did not waste his time on long skirmishes, but thrust into the enemy army like a sword and cut down the defenses as though they were made of paper. On and on he drove his troops, advancing on the boarders of Varant. He knew that to win this fight, he would have to disperse the enemy army and prevent Gellon and Lukkor ");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,"vereinen und ihm den vernichtenden Schlag versetzen. Es musste ihm gelingen ihren Nachschub zu st√∂ren, dann war ihm der Sieg nicht mehr zu nehmen ...");
+				Doc_PrintLines	( nDocID,  1,"vereinen und ihm den vernichtenden Schlag versetzen. Es musste ihm gelingen ihren Nachschub zu stˆren, dann war ihm der Sieg nicht mehr zu nehmen ...");
 				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLines	( nDocID,  1,"...Gellon war tot, seine Armee geschlagen, seine nun f√ºhrerlosen Mannen auf der Flucht. Doch Rhobar war  gewillt dem Feind keine Chance zu geben sich zu sammeln und  befahl sofort den Aufbruch, um den Feind zu vernichten. Lukkor indes beschlie√üt die Gunst der Stunde zu nutzen und  K√∂nig Rhobars ersch√∂pften Truppen den Todessto√ü zu versetzen...");
+				Doc_PrintLines	( nDocID,  1,"...Gellon war tot, seine Armee geschlagen, seine nun f¸hrerlosen Mannen auf der Flucht. Doch Rhobar war  gewillt dem Feind keine Chance zu geben sich zu sammeln und  befahl sofort den Aufbruch, um den Feind zu vernichten. Lukkor indes beschlieﬂt die Gunst der Stunde zu nutzen und  Kˆnig Rhobars erschˆpften Truppen den Todesstoﬂ zu versetzen...");
 				
 				Doc_Show		( nDocID );
 					
@@ -179,11 +179,11 @@ FUNC VOID UseSchlacht_um_Varant2()
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_SetFont 	( nDocID, -1, "font_10_book.tga"	   			); 
 				Doc_PrintLine	( nDocID,  0,""); 					
-				Doc_PrintLines	( nDocID,  0,"Der Krieg war entschieden. Varant seiner, f√ºr die Verorgung der Truppen so wichtigen,  Seeh√§fen beraubt. K√∂nig Rhobar weilte schon lange nicht mehr auf den Schlachtfeldern von Varant, sondern √ºberlie√ü es seinen Gener√§len die letzten feindliche Truppen aufzureiben. Varant besa√ü nur noch ein gr√∂√üeres Heer, gef√ºhrt von Lukkor, dem f√§higsten Kriegsherrn des Varantener Heeres, mehr als einmal hatte er eine drohende Niederlage in einen Sieg verwandeln k√∂nnen");
+				Doc_PrintLines	( nDocID,  0,"Der Krieg war entschieden. Varant seiner, f¸r die Verorgung der Truppen so wichtigen,  Seeh‰fen beraubt. Kˆnig Rhobar weilte schon lange nicht mehr auf den Schlachtfeldern von Varant, sondern ¸berlieﬂ es seinen Gener‰len die letzten feindliche Truppen aufzureiben. Varant besaﬂ nur noch ein grˆﬂeres Heer, gef¸hrt von Lukkor, dem f‰higsten Kriegsherrn des Varantener Heeres, mehr als einmal hatte er eine drohende Niederlage in einen Sieg verwandeln kˆnnen");
 
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,". Doch nun sa√ü sein Heer in der Falle. Dem Heer des Feindes zwar zahlenm√§√üig √ºberlegen doch in aussichtloser Position. Lee, der Kriegsheld von Myrtana hatte ihn in eine Falle gelockt. Seine schwere Reiterei konnte auf dem tiefen, sumpfigen Boden des engen Tals nicht k√§mpfen und die H√ºgelketten um ihn herum waren von Lee's Soldaten besetzt, die immer wieder zustie√üen und so sein Herr Mann um Mann dezimierten. Die verzweifelten Ausf√§lle seiner Mannen waren blutig zur√ºckgeschlagen worden. Er war besiegt.");
+				Doc_PrintLines	( nDocID,  1,". Doch nun saﬂ sein Heer in der Falle. Dem Heer des Feindes zwar zahlenm‰ﬂig ¸berlegen doch in aussichtloser Position. Lee, der Kriegsheld von Myrtana hatte ihn in eine Falle gelockt. Seine schwere Reiterei konnte auf dem tiefen, sumpfigen Boden des engen Tals nicht k‰mpfen und die H¸gelketten um ihn herum waren von Lee's Soldaten besetzt, die immer wieder zustieﬂen und so sein Herr Mann um Mann dezimierten. Die verzweifelten Ausf‰lle seiner Mannen waren blutig zur¸ckgeschlagen worden. Er war besiegt.");
 					
 				Doc_Show		( nDocID );
 					

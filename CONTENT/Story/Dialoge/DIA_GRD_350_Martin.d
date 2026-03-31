@@ -109,11 +109,11 @@ func int DIA_Addon_Martin_WasMachstDu_Condition ()
 func void DIA_Addon_Martin_WasMachstDu_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Martin_WasMachstDu_15_00"); //Was gibt es denn hier oben?
-	AI_Output	(self, other, "DIA_Addon_Martin_WasMachstDu_07_01"); //Du stehst hier im Proviantlager der kÃ¶niglichen Garde der Paladine.
+	AI_Output	(self, other, "DIA_Addon_Martin_WasMachstDu_07_01"); //Du stehst hier im Proviantlager der königlichen Garde der Paladine.
 	
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output	(self, other, "DIA_Addon_Martin_WasMachstDu_07_02"); //Ich bin hier der Proviantmeister und verantwortlich fÃ¼r den Paladinkrempel, dass hier nichts abhanden kommt und du bist hier nicht erwÃ¼nscht.
+		AI_Output	(self, other, "DIA_Addon_Martin_WasMachstDu_07_02"); //Ich bin hier der Proviantmeister und verantwortlich für den Paladinkrempel, dass hier nichts abhanden kommt und du bist hier nicht erwünscht.
 		AI_Output	(self, other, "DIA_Addon_Martin_WasMachstDu_07_03"); //Also behalte deine Finger bei dir, sonst hack ich sie dir ab.
 	};
 };
@@ -142,8 +142,8 @@ func int DIA_Addon_Martin_PreTrade_Condition ()
 func void DIA_Addon_Martin_PreTrade_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Martin_PreTrade_15_00"); //Kannst du mir etwas von dem Paladinkrempel verkaufen?
-	AI_Output	(self, other, "DIA_Addon_Martin_PreTrade_07_01"); //Du willst was kaufen? Mh. Sagen wir mal so, wenn du mich fÃ¼r den Ã„rger entschÃ¤digen kannst, dass den Paladinen mal wieder was abhanden gekommen ist, kommen wir vielleicht ins GeschÃ¤ft.
-	AI_Output	(other, self, "DIA_Addon_Martin_PreTrade_15_02"); //Passiert das Ã¶fter, dass etwas abhanden kommt?
+	AI_Output	(self, other, "DIA_Addon_Martin_PreTrade_07_01"); //Du willst was kaufen? Mh. Sagen wir mal so, wenn du mich für den Ärger entschädigen kannst, dass den Paladinen mal wieder was abhanden gekommen ist, kommen wir vielleicht ins Geschäft.
+	AI_Output	(other, self, "DIA_Addon_Martin_PreTrade_15_02"); //Passiert das öfter, dass etwas abhanden kommt?
 	AI_Output	(self, other, "DIA_Addon_Martin_PreTrade_07_03"); //Solange der Proviantmeister sagt, dass es alles seine Richtigkeit hat, nicht.
 	AI_Output	(other, self, "DIA_Addon_Martin_PreTrade_15_04"); //Verstehe.
 };
@@ -172,14 +172,14 @@ func int DIA_Addon_Martin_Farim_Condition ()
 
 func void DIA_Addon_Martin_Farim_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Martin_Farim_15_00"); //Der Fischer Farim hat Probleme mit der Miliz. Die Jungs bestehlen ihn stÃ¤ndig.
+	AI_Output	(other, self, "DIA_Addon_Martin_Farim_15_00"); //Der Fischer Farim hat Probleme mit der Miliz. Die Jungs bestehlen ihn ständig.
 	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_01"); //Und was habe ich damit zu tun?
 	AI_Output	(other, self, "DIA_Addon_Martin_Farim_15_02"); //Du hast einen gewissen Einfluss hier oben bei den Paladinen.
-	AI_Output	(other, self, "DIA_Addon_Martin_Farim_15_03"); //Farim benÃ¶tigt deinen Schutz. Er will dafÃ¼r auch einen Teil von seinem Fang an dich abgeben.
+	AI_Output	(other, self, "DIA_Addon_Martin_Farim_15_03"); //Farim benötigt deinen Schutz. Er will dafür auch einen Teil von seinem Fang an dich abgeben.
 	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_04"); //Verstehe, was du meinst.
-	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_05"); //(abfÃ¤llig) Fische! Als ob ich nicht schon genug Mist verwalten muss.
-	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_06"); //Sag deinem Kumpel, er soll zu mir kommen und erzÃ¤hlen, wie das genau war mit der Miliz.
-	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_07"); //Ich kÃ¼mmere mich drum.
+	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_05"); //(abfällig) Fische! Als ob ich nicht schon genug Mist verwalten muss.
+	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_06"); //Sag deinem Kumpel, er soll zu mir kommen und erzählen, wie das genau war mit der Miliz.
+	AI_Output	(self, other, "DIA_Addon_Martin_Farim_07_07"); //Ich kümmere mich drum.
 	
 	B_LogEntry (TOPIC_Addon_FarimsFish,	"Martin der Proviantmeister wird sich der Sache annehmen."); 
 
@@ -252,8 +252,8 @@ func void DIA_Addon_Martin_FromVatras_Info ()
 	AI_Output (other, self, "DIA_Addon_Martin_FromVatras_15_00"); //Du suchst den Mann, der an die Banditen Waffen verkauft?
 	AI_Output (self, other, "DIA_Addon_Martin_FromVatras_07_01"); //Sagt wer?
 	AI_Output (other, self, "DIA_Addon_Martin_FromVatras_15_02"); //Sagt Vatras.
-	AI_Output (self, other, "DIA_Addon_Martin_FromVatras_07_03"); //Oh. Was weiÃŸt du denn darÃ¼ber?
-	AI_Output (other, self, "DIA_Addon_Martin_FromVatras_15_04"); //Nicht viel, aber ich kÃ¶nnte mehr herausfinden.
+	AI_Output (self, other, "DIA_Addon_Martin_FromVatras_07_03"); //Oh. Was weißt du denn darüber?
+	AI_Output (other, self, "DIA_Addon_Martin_FromVatras_15_04"); //Nicht viel, aber ich könnte mehr herausfinden.
 	AI_Output (self, other, "DIA_Addon_Martin_FromVatras_07_05"); //(erkennt) Ach so ist das ...
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -266,7 +266,7 @@ instance DIA_Addon_Martin_TellAll (C_INFO)
 	condition	= DIA_Addon_Martin_TellAll_Condition;
 	information	= DIA_Addon_Martin_TellAll_Info;
 
-	description	= "Sagst du mir, was du Ã¼ber den WaffenhÃ¤ndler weiÃŸt?";
+	description	= "Sagst du mir, was du über den Waffenhändler weißt?";
 };
 func int DIA_Addon_Martin_TellAll_Condition ()
 {
@@ -277,12 +277,12 @@ func int DIA_Addon_Martin_TellAll_Condition ()
 };
 func void DIA_Addon_Martin_TellAll_Info ()
 {
-	AI_Output (other, self, "DIA_Addon_Martin_TellAll_15_00"); //Sagst du mir, was du Ã¼ber den WaffenhÃ¤ndler weiÃŸt?
-	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_01"); //Pass auf. Wir wissen, dass ein einfluÃŸreicher BÃ¼rger des oberen Viertels dahinter stecken muss.
-	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_02"); //Und einige der Waffen sollen sogar aus den BestÃ¤nden der Miliz gekommen sein.
+	AI_Output (other, self, "DIA_Addon_Martin_TellAll_15_00"); //Sagst du mir, was du über den Waffenhändler weißt?
+	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_01"); //Pass auf. Wir wissen, dass ein einflußreicher Bürger des oberen Viertels dahinter stecken muss.
+	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_02"); //Und einige der Waffen sollen sogar aus den Beständen der Miliz gekommen sein.
 	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_03"); //Aber wer genau dahinter steckt, wissen wir noch nicht.
-	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_04"); //Wenn du genug Mumm in den Knochen hast, eine Gruppe von mindestens fÃ¼nf Banditen aus dem Weg zu rÃ¤umen, kannst du's vielleicht rausfinden ...
-	B_LogEntry (TOPIC_Addon_BanditTrader,"Laut Martin ist der WaffenhÃ¤ndler ein einfluÃŸreicher BÃ¼rger des oberen Viertels."); 
+	AI_Output (self, other, "DIA_Addon_Martin_TellAll_07_04"); //Wenn du genug Mumm in den Knochen hast, eine Gruppe von mindestens fünf Banditen aus dem Weg zu räumen, kannst du's vielleicht rausfinden ...
+	B_LogEntry (TOPIC_Addon_BanditTrader,"Laut Martin ist der Waffenhändler ein einflußreicher Bürger des oberen Viertels."); 
 };	
 ///////////////////////////////////////////////////////////////////////
 //	About Bandits
@@ -306,13 +306,13 @@ func int DIA_Addon_Martin_AboutBandits_Condition ()
 func void DIA_Addon_Martin_AboutBandits_Info ()
 {
 	AI_Output (other, self, "DIA_Addon_Martin_AboutBandits_15_00"); //Was IST mit den Banditen?
-	AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_01"); //Wir wissen, dass die Banditen zur Zeit die VerbindungstraÃŸen zwischen den Bauern und der Stadt belagern.
-	AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_02"); //AuÃŸerdem weiÃŸ ich, dass es eine Waffenlieferung in den letzten Tagen gegeben haben muss.
-	AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_03"); //Vielleicht sind dort bei den Banditen Hinweise zu finden, die den WaffenhÃ¤ndler entlarven kÃ¶nnen.
+	AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_01"); //Wir wissen, dass die Banditen zur Zeit die Verbindungstraßen zwischen den Bauern und der Stadt belagern.
+	AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_02"); //Außerdem weiß ich, dass es eine Waffenlieferung in den letzten Tagen gegeben haben muss.
+	AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_03"); //Vielleicht sind dort bei den Banditen Hinweise zu finden, die den Waffenhändler entlarven können.
 	//AI_Output (self, other, "DIA_Addon_Martin_AboutBandits_07_04"); //Ich werd sehen, was ich tun kann
 	
 	MIS_Martin_FindTheBanditTrader = LOG_RUNNING;
-	B_LogEntry (TOPIC_Addon_BanditTrader,"Die Banditen belagern die Verbindungsstrassen zwischen der Hafenstadt und den BauernhÃ¶fen. Bei ihnen kÃ¶nnten Hinweise zu finden sein, die den WaffenhÃ¤ndler entlarven."); 
+	B_LogEntry (TOPIC_Addon_BanditTrader,"Die Banditen belagern die Verbindungsstrassen zwischen der Hafenstadt und den Bauernhöfen. Bei ihnen könnten Hinweise zu finden sein, die den Waffenhändler entlarven."); 
 };	
 
 ///////////////////////////////////////////////////////////////////////
@@ -326,7 +326,7 @@ instance DIA_Addon_Martin_Fernando		(C_INFO)
 	information	 = 	DIA_Addon_Martin_Fernando_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"Wegen des WaffenhÃ¤ndlers...";
+	description	 = 	"Wegen des Waffenhändlers...";
 };
 
 func int DIA_Addon_Martin_Fernando_Condition ()
@@ -341,7 +341,7 @@ var int Martin_IrrlichtHint;
 
 func void DIA_Addon_Martin_Fernando_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_00"); //Ã„h, wegen des WaffenhÃ¤ndlers ...
+	AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_00"); //Äh, wegen des Waffenhändlers ...
 
 	if 	(Npc_HasItems (other,ItMw_Addon_BanditTrader))
 	||(Npc_HasItems (other,ItRi_Addon_BanditTrader))
@@ -367,18 +367,18 @@ func void DIA_Addon_Martin_Fernando_Info ()
 				};
 				if (Npc_HasItems (other,ItRi_Addon_BanditTrader))
 				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_03"); //Den Ring hier, hatte ein Bandit bei sich. Er deutet auf einen ÃœberseehÃ¤ndler hin.
+					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_03"); //Den Ring hier, hatte ein Bandit bei sich. Er deutet auf einen Überseehändler hin.
 					FernandoHints = (FernandoHints + 1);
 				};
 				if ((Npc_HasItems (other,ItWr_Addon_BanditTrader))&&(BanditTrader_Lieferung_Gelesen == TRUE))
 				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_04"); //Diese Liste, der Lieferung von Waffen und anderen Dingen an die Banditen hier, trÃ¤gt die Unterschrift von einem gewissen Fernando.
+					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_04"); //Diese Liste, der Lieferung von Waffen und anderen Dingen an die Banditen hier, trägt die Unterschrift von einem gewissen Fernando.
 					FernandoHints = (FernandoHints + 3);
 				};
 			
 				if (Fernando_HatsZugegeben == TRUE)
 				{
-					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_05"); //AuÃŸerdem hat Fernando, der alte HÃ¤ndler aus dem oberen Viertel, zugegeben, mit den Banditen GeschÃ¤fte gemacht zu haben.
+					AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_05"); //Außerdem hat Fernando, der alte Händler aus dem oberen Viertel, zugegeben, mit den Banditen Geschäfte gemacht zu haben.
 					FernandoHints = (FernandoHints + 1);
 				};
 			}
@@ -390,14 +390,14 @@ func void DIA_Addon_Martin_Fernando_Info ()
 		if (FernandoHints >= 3)
 		{
 			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_07"); //Ich denke, das reicht. Fernando also. Na, der kann was erleben.
-			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_08"); //Und dabei tut er immer so, als kÃ¶nne er kein WÃ¤sserchen trÃ¼ben.
-			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_09"); //Ich werde dafÃ¼r sorgen, dass er seine Strafe absitzt, bis er schwarz ist.
+			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_08"); //Und dabei tut er immer so, als könne er kein Wässerchen trüben.
+			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_09"); //Ich werde dafür sorgen, dass er seine Strafe absitzt, bis er schwarz ist.
 			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_10"); //Reife Leistung. Das muss ich schon sagen.
-			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_11"); //Vatras wird sich freuen Ã¼ber diese guten Nachrichten.
+			AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_11"); //Vatras wird sich freuen über diese guten Nachrichten.
 			B_StartOtherRoutine	(Fernando,"Prison");
 			Fernando_ImKnast = TRUE;
 			MIs_Martin_FindTheBanditTrader = LOG_SUCCESS;
-			B_LogEntry (TOPIC_Addon_BanditTrader,"Martin wird dafÃ¼r sorgen, dass Fernando seine Strafe absitzt. Ich soll Vatras davon unterrichten."); 
+			B_LogEntry (TOPIC_Addon_BanditTrader,"Martin wird dafür sorgen, dass Fernando seine Strafe absitzt. Ich soll Vatras davon unterrichten."); 
 
 			Ext_RemoveVobTree("NW_EROLBANDITS_TAVERN");
 			Ext_RemoveVobTree("NW_FERNANDOBANDITS_FARM3");
@@ -413,13 +413,13 @@ func void DIA_Addon_Martin_Fernando_Info ()
 		
 			if (Fernando_HatsZugegeben == TRUE)
 			{
-				AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_14"); //Ist ja schÃ¶n, dass er das zugibt, aber ohne handfeste Beweise kann ich da leider nichts machen.
-				AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_15"); //Ich werd mich doch nicht bei Lord Hagen lÃ¤cherlich machen. Da musst du mir schon mehr liefern.
+				AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_14"); //Ist ja schön, dass er das zugibt, aber ohne handfeste Beweise kann ich da leider nichts machen.
+				AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_15"); //Ich werd mich doch nicht bei Lord Hagen lächerlich machen. Da musst du mir schon mehr liefern.
 			}
 			else
 			{
-				AI_Output (self, other, "DIA_Addon_Martin_Fernando_07_16"); //Das reicht noch nicht. Das kÃ¶nnte fast jeder im oberen Viertel sein.
-				AI_Output (self, other, "DIA_Addon_Martin_Fernando_07_17"); //Sieht so aus, als mÃ¼sstest du der Spur der Banditen und den gelieferten Waffen noch weiter folgen, bis wir wissen, wer dahinter steckt.
+				AI_Output (self, other, "DIA_Addon_Martin_Fernando_07_16"); //Das reicht noch nicht. Das könnte fast jeder im oberen Viertel sein.
+				AI_Output (self, other, "DIA_Addon_Martin_Fernando_07_17"); //Sieht so aus, als müsstest du der Spur der Banditen und den gelieferten Waffen noch weiter folgen, bis wir wissen, wer dahinter steckt.
 				if (Martin_IrrlichtHint == FALSE)
 				{
 					AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_18"); //Vielleicht solltest du noch einmal mit Vatras sprechen...
@@ -432,7 +432,7 @@ func void DIA_Addon_Martin_Fernando_Info ()
 	{
 		AI_Output	(other, self, "DIA_Addon_Martin_Fernando_15_19"); //Wie war das nochmal genau?
 		AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_20"); //Also. Du sollst herausfinden, wer hinter den Waffenlieferungen an die Banditen steckt und mir die Beweise bringen.
-		AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_21"); //Aber es mÃ¼ssen schon wirklich belastende Beweise sein. Sonst kann ich den Kerl nicht dingfest machen.
+		AI_Output	(self, other, "DIA_Addon_Martin_Fernando_07_21"); //Aber es müssen schon wirklich belastende Beweise sein. Sonst kann ich den Kerl nicht dingfest machen.
 	};
 };
 
@@ -461,7 +461,7 @@ func int DIA_Addon_Martin_Perm_Condition ()
 func void DIA_Addon_Martin_Perm_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Martin_Perm_15_00"); //Alle Kisten noch da?
-	AI_Output	(self, other, "DIA_Addon_Martin_Perm_07_04"); //Mach dich ruhig Ã¼ber mich lustig. Steh du mal den ganzen Tag auf der Pier und versuche, das ganze Chaos zu Ã¼berblicken.
-	AI_Output	(self, other, "DIA_Addon_Martin_Perm_07_05"); //Die Paladine haben ein GerÃ¼mpel angeschleppt, das ist nicht mehr feierlich.
+	AI_Output	(self, other, "DIA_Addon_Martin_Perm_07_04"); //Mach dich ruhig über mich lustig. Steh du mal den ganzen Tag auf der Pier und versuche, das ganze Chaos zu überblicken.
+	AI_Output	(self, other, "DIA_Addon_Martin_Perm_07_05"); //Die Paladine haben ein Gerümpel angeschleppt, das ist nicht mehr feierlich.
 	AI_Output	(self, other, "DIA_Addon_Martin_Perm_07_06"); //Fass hier nichts an, sonst ruf ich die Wachen, klar?
 };

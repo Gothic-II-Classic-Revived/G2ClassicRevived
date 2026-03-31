@@ -4,8 +4,8 @@ var int Normalwaffen;
 // ****************************************************
 // SMITHWEAPON_S1
 // --------------
-// Funktion wird durch Ambo-Mobsi-Benutzung aufgerufen!
-// bentigtes Item dafr: ItMiSwordrawhot
+// Funktion wird durch Amboß-Mobsi-Benutzung aufgerufen!
+// benötigtes Item dafür: ItMiSwordrawhot
 // *****************************************************
 
 FUNC VOID SMITHWEAPON_S1 ()
@@ -54,9 +54,9 @@ FUNC VOID PC_SmithWeapon_End_Info()
 
 
 // *****************
-// Ambo-Dialoge
+// Amboß-Dialoge
 // -------------
-// hngen am Spieler
+// hängen am Spieler
 // *****************
 
 
@@ -67,7 +67,7 @@ INSTANCE PC_Common (C_INFO)
 	condition		= PC_Common_Condition;
 	information		= PC_Common_Info;
 	permanent		= TRUE;
-	description		= "GewÃ¶hnliche Waffen schmieden";
+	description		= "Gewöhnliche Waffen schmieden";
 };
 
 FUNC INT PC_Common_Condition()

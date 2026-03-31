@@ -30,7 +30,7 @@ instance DIA_Bromor_GIRLS		(C_INFO)
 	condition	 = 	DIA_Bromor_GIRLS_Condition;
 	information	 = 	DIA_Bromor_GIRLS_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"GehÃ¶rt dir der Laden hier?";
+	description	 = 	"Gehört dir der Laden hier?";
 };
 
 func int DIA_Bromor_GIRLS_Condition ()
@@ -43,15 +43,15 @@ func int DIA_Bromor_GIRLS_Condition ()
 func void DIA_Bromor_GIRLS_Info ()
 {
 	//ADDON>
-	AI_Output (other, self, "DIA_Addon_Bromor_GIRLS_15_00"); //GehÃ¶rt dir der Laden hier?
+	AI_Output (other, self, "DIA_Addon_Bromor_GIRLS_15_00"); //Gehört dir der Laden hier?
 	//ADDON<
 
 	//AI_Output (other, self, "DIA_Bromor_GIRLS_15_00"); //I want to have some fun.
 	//AI_Output (self, other, "DIA_Bromor_GIRLS_07_01"); //Deshalb bist du ja hergekommen.
 
-	AI_Output (self, other, "DIA_Bromor_GIRLS_07_02"); //Ich bin Bromor. Das hier ist mein Haus und das sind meine MÃ¤dels. Ich mag meine MÃ¤dels.
-	AI_Output (self, other, "DIA_Bromor_GIRLS_07_03"); //Und wenn du meine MÃ¤dels auch magst, dann bezahlst du dafÃ¼r - 50 GoldstÃ¼cke.
-	AI_Output (self, other, "DIA_Bromor_GIRLS_07_04"); //Und komm nicht auf die Idee, hier Ã„rger zu machen.
+	AI_Output (self, other, "DIA_Bromor_GIRLS_07_02"); //Ich bin Bromor. Das hier ist mein Haus und das sind meine Mädels. Ich mag meine Mädels.
+	AI_Output (self, other, "DIA_Bromor_GIRLS_07_03"); //Und wenn du meine Mädels auch magst, dann bezahlst du dafür - 50 Goldstücke.
+	AI_Output (self, other, "DIA_Bromor_GIRLS_07_04"); //Und komm nicht auf die Idee, hier Ärger zu machen.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -64,7 +64,7 @@ instance DIA_Bromor_Pay		(C_INFO)
 	condition	 = 	DIA_Bromor_Pay_Condition;
 	information	 = 	DIA_Bromor_Pay_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Ich will mich amÃ¼sieren (50 GoldstÃ¼cke zahlen)";
+	description	 = 	"Ich will mich amüsieren (50 Goldstücke zahlen)";
 };
 
 func int DIA_Bromor_Pay_Condition ()
@@ -82,12 +82,12 @@ func int DIA_Bromor_Pay_Condition ()
 var int DIA_Bromor_Pay_OneTime;
 func void DIA_Bromor_Pay_Info ()
 {
-	AI_Output (other, self, "DIA_Bromor_Pay_15_00"); //Ich will mich amÃ¼sieren
+	AI_Output (other, self, "DIA_Bromor_Pay_15_00"); //Ich will mich amüsieren
 	
 	if B_GiveInvItems (other, self, ItMi_Gold, 50)
 	{
-		AI_Output (self, other, "DIA_Bromor_Pay_07_01"); //Gut. (grinst) Die nÃ¤chsten Stunden deines Lebens wirst du so schnell nicht vergessen.
-		AI_Output (self, other, "DIA_Bromor_Pay_07_02"); //Geh mit Nadja nach oben. Viel SpaÃŸ.
+		AI_Output (self, other, "DIA_Bromor_Pay_07_01"); //Gut. (grinst) Die nächsten Stunden deines Lebens wirst du so schnell nicht vergessen.
+		AI_Output (self, other, "DIA_Bromor_Pay_07_02"); //Geh mit Nadja nach oben. Viel Spaß.
 	
 		if (DIA_Bromor_Pay_OneTime == FALSE)
 		{
@@ -127,7 +127,7 @@ func int DIA_Bromor_DOPE_Condition ()
 func void DIA_Bromor_DOPE_Info ()
 {
 	AI_Output (other, self, "DIA_Bromor_DOPE_15_00"); //Kann ich hier auch 'besondere' Ware bekommen?
-	AI_Output (self, other, "DIA_Bromor_DOPE_07_01"); //Klar, alle meine MÃ¤dels sind was ganz Besonderes. (grinst)
+	AI_Output (self, other, "DIA_Bromor_DOPE_07_01"); //Klar, alle meine Mädels sind was ganz Besonderes. (grinst)
 	AI_Output (self, other, "DIA_Bromor_DOPE_07_02"); //Wenn du genug Gold hast, dann kannst du mit Nadja hochgehen.
 };
 
@@ -202,7 +202,7 @@ INSTANCE DIA_Bromor_PICKPOCKET (C_INFO)
 	condition	= DIA_Bromor_PICKPOCKET_Condition;
 	information	= DIA_Bromor_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(Es wÃ¤re gewagt seinen SchlÃ¼ssel zu stehlen)";
+	description = "(Es wäre gewagt seinen Schlüssel zu stehlen)";
 };                       
 
 FUNC INT DIA_Bromor_PICKPOCKET_Condition()

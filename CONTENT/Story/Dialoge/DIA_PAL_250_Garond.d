@@ -60,15 +60,15 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 	{
 		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Garond_PMSchulden_10_01"); //Und die ist seit den letzten Anschuldigungen gestiegen.
-		AI_Output (self, other, "DIA_Garond_PMSchulden_10_02"); //Anscheinend hast du dir noch mehr Ã„rger aufgehalst.
+		AI_Output (self, other, "DIA_Garond_PMSchulden_10_02"); //Anscheinend hast du dir noch mehr Ärger aufgehalst.
 		
 		if (Garond_Schulden < 1000)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_03"); //Aber ich hoffe, dass du jetzt fÃ¼r alles bezahlen wirst! Insgesamt sind das ...
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_03"); //Aber ich hoffe, dass du jetzt für alles bezahlen wirst! Insgesamt sind das ...
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_04"); //Ich bin schwer enttÃ¤uscht von dir. Deine Strafe belÃ¤uft sich auf ...
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_04"); //Ich bin schwer enttäuscht von dir. Deine Strafe beläuft sich auf ...
 		};
 				
 		var int diff; diff = (B_GetTotalPetzCounter(self) - Garond_LastPetzCounter);
@@ -88,7 +88,7 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 		
 		if (Garond_LastPetzCrime == CRIME_MURDER)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_06"); //PlÃ¶tzlich bezichtigt dich niemand mehr des Mordes.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_06"); //Plötzlich bezichtigt dich niemand mehr des Mordes.
 		};
 		
 		if (Garond_LastPetzCrime == CRIME_THEFT)
@@ -100,7 +100,7 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 		if (Garond_LastPetzCrime == CRIME_ATTACK)
 		|| ( (Garond_LastPetzCrime > CRIME_ATTACK) && (B_GetGreatestPetzCrime(self) < CRIME_ATTACK) )
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_08"); //Es gibt keine Zeugen mehr dafÃ¼r, dass du jemals in eine SchlÃ¤gerei verwickelt warst.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_08"); //Es gibt keine Zeugen mehr dafür, dass du jemals in eine Schlägerei verwickelt warst.
 		};
 		
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
@@ -108,13 +108,13 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 			AI_Output (self, other, "DIA_Garond_PMSchulden_10_09"); //Anscheinend sind alle Anschuldigungen gegen dich fallen gelassen worden.
 		};
 		
-		AI_Output (self, other, "DIA_Garond_PMSchulden_10_10"); //Ich weiÃŸ nicht, was da gelaufen ist, aber ich warne dich: Treib es nicht zu weit!
+		AI_Output (self, other, "DIA_Garond_PMSchulden_10_10"); //Ich weiß nicht, was da gelaufen ist, aber ich warne dich: Treib es nicht zu weit!
 				
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
 			AI_Output (self, other, "DIA_Garond_PMSchulden_10_11"); //Ich habe mich entschieden, dir deine Schulden zu erlassen.
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_12"); //Und mach bloÃŸ keinen Ã„rger mehr in der Burg!
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_12"); //Und mach bloß keinen Ärger mehr in der Burg!
 	
 			Garond_Schulden			= 0;
 			Garond_LastPetzCounter 	= 0;
@@ -122,7 +122,7 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_13"); //Damit eins klar ist: Deine Strafe musst du trotzdem in voller HÃ¶he zahlen.
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_13"); //Damit eins klar ist: Deine Strafe musst du trotzdem in voller Höhe zahlen.
 			B_Say_Gold (self, other, Garond_Schulden);
 			AI_Output (self, other, "DIA_Garond_PMSchulden_10_14"); //Also, was ist?
 		};
@@ -182,12 +182,12 @@ FUNC INT DIA_Garond_PETZMASTER_Condition()
 };
 FUNC VOID DIA_Garond_PETZMASTER_Info()
 {
-	Garond_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime hher ist...
+	Garond_Schulden = 0; //weil Funktion nochmal durchlaufen wird, wenn Crime höher ist...
 	
 	// ------ SC hat mit Garond noch nicht gesprochen ------
 	if (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_00"); //Du bist also der Kerl, der hier in der Burg Ã„rger gemacht hat.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_00"); //Du bist also der Kerl, der hier in der Burg Ärger gemacht hat.
 	};
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
@@ -197,24 +197,24 @@ FUNC VOID DIA_Garond_PETZMASTER_Info()
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Mord ist so ziemlich das Letzte, das ich hier gebrauchen kann!
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //Ich bin auf jeden meiner Leute angewiesen - und jetzt habe ich wieder einen weniger!
 		Garond_Schulden = (B_GetTotalPetzCounter(self) * 50); 		//Anzahl der Zeugen * 50
-		Garond_Schulden = Garond_Schulden + 500;						//PLUS Mrder-Malus
+		Garond_Schulden = Garond_Schulden + 500;						//PLUS Mörder-Malus
 		if ((PETZCOUNTER_City_Theft + PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
 		{
 			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_04"); //Ganz zu schweigen von den anderen Sachen, die du angerichtet hast.
 		};
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Ich erklÃ¤re dir jetzt mal was. Wir sitzen hier alle gemeinsam in der Falle.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_06"); //Und ich bin auf jeden einzelnen meiner MÃ¤nner angewiesen. Auch auf dich.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_05"); //Ich erkläre dir jetzt mal was. Wir sitzen hier alle gemeinsam in der Falle.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_06"); //Und ich bin auf jeden einzelnen meiner Männer angewiesen. Auch auf dich.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_07"); //Wenn du jemanden umbringen willst, dann brauchst du nur die Burg zu verlassen. Da gibt's genug Orks.
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_08"); //Ich werde dir eine Strafe aufdrÃ¼cken - obwohl ich mich eigentlich gar nicht mit so einer ScheiÃŸe beschÃ¤ftigen will.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_08"); //Ich werde dir eine Strafe aufdrücken - obwohl ich mich eigentlich gar nicht mit so einer Scheiße beschäftigen will.
 	};		
 	if (B_GetGreatestPetzCrime(self) == CRIME_THEFT) 
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_09"); //Ich hab gehÃ¶rt, das du hier Sachen mitgehen lÃ¤sst.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_09"); //Ich hab gehört, das du hier Sachen mitgehen lässt.
 		if ((PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
 		{
 			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_10"); //Ganz zu schweigen von den anderen Sachen, die mir berichtet wurden.
 		};
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_11"); //Das werde ich dir nicht durchgehen lassen. Ich glaube du unterschÃ¤tzt den Ernst der Lage.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_11"); //Das werde ich dir nicht durchgehen lassen. Ich glaube du unterschätzt den Ernst der Lage.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_12"); //Du wirst eine Strafe zahlen, um dein Verbrechen wieder gut zu machen!
 		
 		Garond_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
@@ -222,22 +222,22 @@ FUNC VOID DIA_Garond_PETZMASTER_Info()
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_13"); //Ich sehe es nicht gerne, wenn es SchlÃ¤gereien zwischen meinen MÃ¤nnern gibt.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_13"); //Ich sehe es nicht gerne, wenn es Schlägereien zwischen meinen Männern gibt.
 	
 		if (PETZCOUNTER_City_Sheepkiller > 0)
 		{
 			AI_Output (self, other, "DIA_Garond_PETZMASTER_10_14"); //Und die Sache mit den Schafen musste wohl auch nicht sein.
 		};
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_15"); //Also wirst du deine Strafe dafÃ¼r zahlen!
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_15"); //Also wirst du deine Strafe dafür zahlen!
 		
 		
 		Garond_Schulden = (B_GetTotalPetzCounter(self) * 50); //Anzahl der Zeugen * 50
 	};
 
-	// ------ Schaf gettet (es gibt drei Schafe in der Burg) ------
+	// ------ Schaf getötet (es gibt drei Schafe in der Burg) ------
 	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
 	{
-		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_16"); //Du gehst rum und tÃ¶test unsere Schafe? Die gehÃ¶ren uns allen.
+		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_16"); //Du gehst rum und tötest unsere Schafe? Die gehören uns allen.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_17"); //Du wirst mir das Fleisch bezahlen.
 	
 		
@@ -267,7 +267,7 @@ func void DIA_Garond_PETZMASTER_PayNow()
 	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
 		B_SetAttitude (self, ATT_NEUTRAL);
 	};
-	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayNow_10_01"); //Gut, dann werde ich die Jungs wieder beruhigen. Aber mach so einen ScheiÃŸ nie wieder!
+	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayNow_10_01"); //Gut, dann werde ich die Jungs wieder beruhigen. Aber mach so einen Scheiß nie wieder!
 
 	B_GrantAbsolution (LOC_OLDCAMP);
 	
@@ -282,8 +282,8 @@ func void DIA_Garond_PETZMASTER_PayNow()
 func void DIA_Garond_PETZMASTER_PayLater()
 {
 	AI_Output (other, self, "DIA_Garond_PETZMASTER_PayLater_15_00"); //Ich habe nicht genug Gold!
-	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_01"); //Dann solltest du das Gold so schnell wie mÃ¶glich beschaffen.
-	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_02"); //Und ich warne dich: Mach noch mehr Ã„rger und es wird teurer fÃ¼r dich!
+	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_01"); //Dann solltest du das Gold so schnell wie möglich beschaffen.
+	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayLater_10_02"); //Und ich warne dich: Mach noch mehr Ärger und es wird teurer für dich!
 	
 	Garond_LastPetzCounter 	= B_GetTotalPetzCounter(self);
 	Garond_LastPetzCrime		= B_GetGreatestPetzCrime(self);
@@ -313,9 +313,9 @@ FUNC INT DIA_Garond_Hello_Condition()
 };
 FUNC VOID DIA_Garond_Hello_Info()
 {	
-		AI_Output (self ,other,"DIA_Garond_Hello_10_00"); //Woher kommst du? Du gehÃ¶rst weder zu den SchÃ¼rftruppen, noch zu meinen Leuten. Also?
-		AI_Output (other ,self,"DIA_Garond_Hello_15_01"); //Ich bin Ã¼ber den Pass gekommen.
-		AI_Output (self ,other,"DIA_Garond_Hello_10_02"); //Ãœber den Pass ...? Du hast es tatsÃ¤chlich geschafft - bei Innos!
+		AI_Output (self ,other,"DIA_Garond_Hello_10_00"); //Woher kommst du? Du gehörst weder zu den Schürftruppen, noch zu meinen Leuten. Also?
+		AI_Output (other ,self,"DIA_Garond_Hello_15_01"); //Ich bin über den Pass gekommen.
+		AI_Output (self ,other,"DIA_Garond_Hello_10_02"); //Über den Pass ...? Du hast es tatsächlich geschafft - bei Innos!
 		
 		if (hero.guild == GIL_KDF)
 		{
@@ -327,7 +327,7 @@ FUNC VOID DIA_Garond_Hello_Info()
 		}
 		else
 		{
-			AI_Output (self ,other,"DIA_Garond_Hello_10_05"); //Ich frage mich, warum ein SÃ¶ldner das alles auf sich nimmt. Was willst du hier?
+			AI_Output (self ,other,"DIA_Garond_Hello_10_05"); //Ich frage mich, warum ein Söldner das alles auf sich nimmt. Was willst du hier?
 		};
 };
 
@@ -356,28 +356,28 @@ FUNC INT DIA_Garond_NeedProof_Condition()
  
 FUNC VOID DIA_Garond_NeedProof_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_NeedProof_15_00"); //I come from Lord Hagen. He wants me to bring him proof of the presence of the dragons.
-	AI_Output (self ,other,"DIA_Garond_NeedProof_10_01"); //And you've come here just to fetch it and then disappear again?
-	AI_Output (other,self ,"DIA_Garond_NeedProof_15_02"); //That's what I had in mind.
-	AI_Output (self ,other,"DIA_Garond_NeedProof_10_03"); //So he wants proof? He can have it. But I can't send you back to Lord Hagen without giving him information about the ore.
-	AI_Output (self ,other,"DIA_Garond_NeedProof_10_04"); //Listen - Lord Hagen absolutely must learn what the situation is here and how much ore we've mined up to now.
-	AI_Output (other,self ,"DIA_Garond_NeedProof_15_05"); //All right, what do you want me to do for you?
-	AI_Output (self ,other,"DIA_Garond_NeedProof_10_06"); //I've got three troops of scrapers out there, but they haven't sent me a single nugget.
-	AI_Output (self ,other,"DIA_Garond_NeedProof_10_07"); //Visit the mining sites and report back to me how much ore they have stored.
-	AI_Output (self ,other,"DIA_Garond_NeedProof_10_08"); //Then I'll write you a letter that you are going to take back to Lord Hagen.
+	AI_Output (other,self ,"DIA_Garond_NeedProof_15_00"); //Ich komme von Lord Hagen. Er will, dass ich ihm einen Beweis für die Anwesenheit der Drachen bringe.
+	AI_Output (self ,other,"DIA_Garond_NeedProof_10_01"); //Und du bist hergekommen, um ihn dir abzuholen und wieder zu verschwinden?
+	AI_Output (other,self ,"DIA_Garond_NeedProof_15_02"); //So hatte ich mir das vorgestellt.
+	AI_Output (self ,other,"DIA_Garond_NeedProof_10_03"); //Er will also einen Beweis? Den kann er haben. Aber ich kann dich nicht zu Lord Hagen zurückschicken, ohne ihm Auskunft über das Erz zu erteilen.
+	AI_Output (self ,other,"DIA_Garond_NeedProof_10_04"); //Hör zu - Lord Hagen muss unbedingt erfahren, wie unsere Situation hier ist und wie viel Erz wir bisher gefördert haben.
+	AI_Output (other,self ,"DIA_Garond_NeedProof_15_05"); //Okay, was soll ich für dich tun?
+	AI_Output (self ,other,"DIA_Garond_NeedProof_10_06"); //Ich habe drei Schürftrupps da draußen, aber die haben mir nicht einen Erzbrocken geschickt.
+	AI_Output (self ,other,"DIA_Garond_NeedProof_10_07"); //Such die Schürfstellen auf und berichte mir, wie viel Erz sie gelagert haben.
+	AI_Output (self ,other,"DIA_Garond_NeedProof_10_08"); //Dann werde ich ein Schreiben für dich aufsetzen, mit dem du zu Lord Hagen zurückkehren wirst.
 	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Oh well - I guess I have no choice.
 	
 	MIS_ScoutMine = LOG_RUNNING;
 	B_StartOtherRoutine (Jergan,"Silvestro");
-	Npc_ExchangeRoutine (self,"Start");
+	Npc_ExchangeRoutine (self,"START");
 	
-	B_LogEntry (TOPIC_MISOLDWORLD,"Bevor Komandant Garond mich zurÃ¼ckschickt, will er das ich die drei SchÃ¼rftruppen aufsuche und ihm davon berichte, wieviel Erz sie dort gelagert haben.");
+	B_LogEntry (TOPIC_MISOLDWORLD,"Bevor Komandant Garond mich zurückschickt, will er das ich die drei Schürftruppen aufsuche und ihm davon berichte, wieviel Erz sie dort gelagert haben.");
 	
 	Log_CreateTopic (TOPIC_ScoutMine,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_ScoutMine,LOG_RUNNING);
 	
-	B_LogEntry (TOPIC_ScoutMine,"Kommandant Garond hat mir eine Aufgabe zugewiesen. Er hat drei SchÃ¼rftrupps auf die Suche nach dem magischen Erz geschickt. Bisher haben sie nichts geliefert.");
-	B_LogEntry (TOPIC_ScoutMine,"Ich soll die drei SchÃ¼rftrupps aufsuchen und herausfinden, wieviel Erz sie gelagert haben.");
+	B_LogEntry (TOPIC_ScoutMine,"Kommandant Garond hat mir eine Aufgabe zugewiesen. Er hat drei Schürftrupps auf die Suche nach dem magischen Erz geschickt. Bisher haben sie nichts geliefert.");
+	B_LogEntry (TOPIC_ScoutMine,"Ich soll die drei Schürftrupps aufsuchen und herausfinden, wieviel Erz sie gelagert haben.");
 
 };
 // ************************************************************
@@ -404,12 +404,12 @@ FUNC INT DIA_Garond_Why_Condition()
 };
 FUNC VOID DIA_Garond_Why_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Why_15_00"); //But why me, of all people?
-	AI_Output (self ,other,"DIA_Garond_Why_10_01"); //Because you know a way to get through the lines of orcs. My boys would be hopelessly lost out there.
-	AI_Output (self ,other,"DIA_Garond_Why_10_02"); //You, on the other hand, have managed to get through once already - that makes you the best man for this job.
+	AI_Output (other,self ,"DIA_Garond_Why_15_00"); //Aber warum ausgerechnet ich?
+	AI_Output (self ,other,"DIA_Garond_Why_10_01"); //Weil du einen Weg durch die Orkreihen kennst. Meine Jungs wären da draußen hoffnungslos verloren.
+	AI_Output (self ,other,"DIA_Garond_Why_10_02"); //Du hast es hingegen schon einmal geschafft durchzukommen - das macht dich zum besten Mann für diesen Job.
 };
 // ************************************************************
-// 			Ausrstung
+// 			Ausrüstung
 // ************************************************************
 
 INSTANCE DIA_Garond_Equipment (C_INFO)
@@ -419,7 +419,7 @@ INSTANCE DIA_Garond_Equipment (C_INFO)
 	condition	= DIA_Garond_Equipment_Condition;
 	information	= DIA_Garond_Equipment_Info;
 	permanent	= FALSE;
-	description = "Ich brauche AusrÃ¼stung.";
+	description = "Ich brauche Ausrüstung.";
 };                       
 
 FUNC INT DIA_Garond_Equipment_Condition()
@@ -434,15 +434,15 @@ FUNC INT DIA_Garond_Equipment_Condition()
 };
 FUNC VOID DIA_Garond_Equipment_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Equipment_15_00"); //I need some equipment.
+	AI_Output (other,self ,"DIA_Garond_Equipment_15_00"); //Ich brauche Ausrüstung.
 	
 	if (other.guild == GIL_KDF)
 	{
-		AI_Output (self ,other,"DIA_Garond_Equipment_10_01"); //Talk to the magician Milten here in the castle. He knows about the things you'll need.
+		AI_Output (self ,other,"DIA_Garond_Equipment_10_01"); //Sprich mit dem Magier Milten hier in der Burg. Er kennt sich mit den Sachen aus, die du benötigen wirst.
 	};
 	if (other.guild == GIL_MIL)
 	{
-		AI_Output (self ,other,"DIA_Garond_Equipment_10_02"); //Talk to Tandor about that. He'll get you everything you need.
+		AI_Output (self ,other,"DIA_Garond_Equipment_10_02"); //Kläre das mit Tandor. Er wird dich mit allem versorgen, was du brauchst.
 		
 		Log_CreateTopic (TOPIC_Trader_OC,LOG_NOTE);
 		B_LogEntry (TOPIC_Trader_OC,"Tandor handelt mit Waffen in der Burg.");
@@ -459,7 +459,7 @@ INSTANCE DIA_Garond_zahlen (C_INFO)
 	condition	= DIA_Garond_zahlen_Condition;
 	information	= DIA_Garond_zahlen_Info;
 	permanent	= FALSE;
-	description = "Wieviel zahlst du mir fÃ¼r den Job?";
+	description = "Wieviel zahlst du mir für den Job?";
 };                       
 
 FUNC INT DIA_Garond_zahlen_Condition()
@@ -473,12 +473,12 @@ FUNC INT DIA_Garond_zahlen_Condition()
 };
 FUNC VOID DIA_Garond_zahlen_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_zahlen_15_00"); //How much will you pay me for the job?
-	AI_Output (self ,other,"DIA_Garond_zahlen_10_01"); //(irritated) I am not used to haggling with mercenaries.
-	AI_Output (self ,other,"DIA_Garond_zahlen_10_02"); //Oh well, I guess I have no choice. I'll pay you 500 gold pieces if you take care of this mission for me.
+	AI_Output (other,self ,"DIA_Garond_zahlen_15_00"); //Wieviel zahlst du mir für den Job?
+	AI_Output (self ,other,"DIA_Garond_zahlen_10_01"); //(verärgert) Ich bin es nicht gewohnt, mit Söldnern zu handeln.
+	AI_Output (self ,other,"DIA_Garond_zahlen_10_02"); //Aber gut, mir bleibt wohl nicht keine andere Wahl. Ich zahle dir 500 Goldstücke, wenn du die Mission für mich erledigst.
 };
 // ************************************************************
-// 	Wo finde ich die Schrfstellen?
+// 	Wo finde ich die Schürfstellen?
 // ************************************************************
 
 INSTANCE DIA_Garond_Wo (C_INFO)
@@ -488,7 +488,7 @@ INSTANCE DIA_Garond_Wo (C_INFO)
 	condition	= DIA_Garond_Wo_Condition;
 	information	= DIA_Garond_Wo_Info;
 	permanent	= FALSE;
-	description = "Wo finde ich die SchÃ¼rfstellen?";
+	description = "Wo finde ich die Schürfstellen?";
 };                       
 
 FUNC INT DIA_Garond_Wo_Condition()
@@ -502,22 +502,22 @@ FUNC INT DIA_Garond_Wo_Condition()
 };
 FUNC VOID DIA_Garond_Wo_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Wo_15_00"); //Where can I find the mining sites?
-	AI_Output (self ,other,"DIA_Garond_Wo_10_01"); //Here, take this map. It shows the two areas where the mining sites are located.
+	AI_Output (other,self ,"DIA_Garond_Wo_15_00"); //Wo finde ich die Schürfstellen?
+	AI_Output (self ,other,"DIA_Garond_Wo_10_01"); //Hier, nimm diese Karte. Dort sind die zwei Gebiete eingezeichnet, in denen sich die Schürfstellen befinden.
 	
 	CreateInvItems (self, ITWR_REVIVED_MAP_VALLEY_GAROND, 1);									
 	B_GiveInvItems (self, other, ITWR_REVIVED_MAP_VALLEY_GAROND, 1);					
 
-	AI_Output (self ,other,"DIA_Garond_Wo_10_02"); //If you have any more questions, ask Parcival. He can tell you all you need to know about the scrapers.
+	AI_Output (self ,other,"DIA_Garond_Wo_10_02"); //Falls du noch weitere Fragen hast, wende dich an Parcival. Er wird dich mit allen Informationen über die Schürfer versorgen.
 	
-	B_LogEntry (TOPIC_ScoutMine,"Der Paladin Parcival kann mich mit Informationen Ã¼ber die SchÃ¼rfer versorgen.");
+	B_LogEntry (TOPIC_ScoutMine,"Der Paladin Parcival kann mich mit Informationen über die Schürfer versorgen.");
 };
 
 FUNC VOID B_Garond_OreCounter3 ()
 {		
-	AI_Output (self ,other,"B_Garond_OreCounter3_10_00"); //Damn! What's going on out there? Has Beliar himself come to wipe us out?
-	AI_Output (self ,other,"B_Garond_OreCounter3_10_01"); //My men are almost all dead and with the bit of ore we have, we CAN'T EVEN STOP ONE ORC LET ALONE AN ARMY!
-	AI_Output (self ,other,"B_Garond_OreCounter3_10_02"); //This expedition is doomed to failure.
+	AI_Output (self ,other,"B_Garond_OreCounter3_10_00"); //Verdammt! Was ist da draußen eigentlich los? Ist Beliar selbst gekommen, um uns zu vernichten?
+	AI_Output (self ,other,"B_Garond_OreCounter3_10_01"); //Meine Männer sind fast alle tot und mit dem bisschen Erz können wir NICHT MAL EINEN ORK AUFHALTEN - GESCHWEIGE DENN EINE ARMEE!
+	AI_Output (self ,other,"B_Garond_OreCounter3_10_02"); //Diese Expedition ist zum Scheitern verurteilt.
 };
 
 // ************************************************************
@@ -544,12 +544,12 @@ FUNC INT DIA_Garond_Fajeth_Condition()
 };
 FUNC VOID DIA_Garond_Fajeth_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Fajeth_15_00"); //I talked to Fajeth.
-	AI_Output (self ,other,"DIA_Garond_Fajeth_10_01"); //What has he got to tell me?
-	AI_Output (other,self ,"DIA_Garond_Fajeth_15_02"); //His people have mined two chests of ore.
-	AI_Output (self ,other,"DIA_Garond_Fajeth_10_03"); //Hmm... two chests? I don't need two chests - I need TWO HUNDRED.
- 	AI_Output (other,self ,"DIA_Garond_Fajeth_15_04"); //He wants me to tell you that he needs more men.
- 	AI_Output (self ,other,"DIA_Garond_Fajeth_10_05"); //What? I'm supposed to send even more men to certain death? He can forget it.
+	AI_Output (other,self ,"DIA_Garond_Fajeth_15_00"); //Ich habe mit Fajeth gesprochen.
+	AI_Output (self ,other,"DIA_Garond_Fajeth_10_01"); //Was hat er mir mitzuteilen?
+	AI_Output (other,self ,"DIA_Garond_Fajeth_15_02"); //Seine Leute haben zwei Kisten mit Erz gefördert.
+	AI_Output (self ,other,"DIA_Garond_Fajeth_10_03"); //So ... zwei Kisten? Ich brauche aber keine zwei Kisten - ich brauche ZWEIHUNDERT Kisten.
+ 	AI_Output (other,self ,"DIA_Garond_Fajeth_15_04"); //Er lässt dir ausrichten, dass er mehr Männer braucht.
+ 	AI_Output (self ,other,"DIA_Garond_Fajeth_10_05"); //Was? Ich soll noch mehr Männer in den sicheren Tod schicken? Das kann er vergessen.
  	
  	Ore_Counter = (Ore_Counter +1);
  	B_GivePlayerXP (XP_Fajeth_Ore);
@@ -570,7 +570,7 @@ INSTANCE DIA_Garond_Silvestro (C_INFO)
 	condition	= DIA_Garond_Silvestro_Condition;
 	information	= DIA_Garond_Silvestro_Info;
 	permanent	= FALSE;
-	description = "Wegen Silvestros SchÃ¼rfstelle...";
+	description = "Wegen Silvestros Schürfstelle...";
 };                       
 
 FUNC INT DIA_Garond_Silvestro_Condition()
@@ -585,12 +585,12 @@ FUNC INT DIA_Garond_Silvestro_Condition()
 };
 FUNC VOID DIA_Garond_Silvestro_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Silvestro_15_00"); //About Silvestro's mining site...
-	AI_Output (self ,other,"DIA_Garond_Silvestro_10_01"); //Did you go see him? Did you talk to him?
-	AI_Output (other,self ,"DIA_Garond_Silvestro_15_02"); //Everyone's dead there. They were surprised by minecrawlers.
-	AI_Output (self ,other,"DIA_Garond_Silvestro_10_03"); //What about the ore? Do you know how much they have mined?
-	AI_Output (other,self ,"DIA_Garond_Silvestro_15_04"); //They managed to secure a few chests first. They're in a cave - along the path from the castle to the mining site.
-	AI_Output (self ,other,"DIA_Garond_Silvestro_10_05"); //Damn! Those were a lot of good men - may Innos have mercy on their souls.
+	AI_Output (other,self ,"DIA_Garond_Silvestro_15_00"); //Wegen Silvestros Schürfstelle...
+	AI_Output (self ,other,"DIA_Garond_Silvestro_10_01"); //Warst du bei ihm? Hast du ihn gesprochen?
+	AI_Output (other,self ,"DIA_Garond_Silvestro_15_02"); //Dort sind alle tot. Sie wurden wohl von Minecrawlern überrascht.
+	AI_Output (self ,other,"DIA_Garond_Silvestro_10_03"); //Was ist mit dem Erz? Weißt du, wie viel sie geschürft haben?
+	AI_Output (other,self ,"DIA_Garond_Silvestro_15_04"); //Ein paar Kisten haben sie vorher in Sicherheit gebracht. Sie stehen in einer Höhle - auf dem Weg von der Burg zur Schürfstelle.
+	AI_Output (self ,other,"DIA_Garond_Silvestro_10_05"); //Verdammt! Das waren viele gute Männer - möge Innos sich ihrer Seelen annehmen.
 	
 	Ore_Counter = (Ore_Counter +1);
 	B_GivePlayerXP (XP_Silvestro_Ore);
@@ -624,26 +624,26 @@ FUNC INT DIA_Garond_Marcos_Condition()
 };
 FUNC VOID DIA_Garond_Marcos_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Marcos_15_00"); //I have met Marcos.
-	AI_Output (self ,other,"DIA_Garond_Marcos_10_01"); //And? What does he have to report? How much ore does he have for us?
-	AI_Output (other,self ,"DIA_Garond_Marcos_15_02"); //Four chests. He has left the mining site to take the ore to safety.
-	AI_Output (other,self ,"DIA_Garond_Marcos_15_03"); //Now he is guarding the chests in a small valley behind the lines of orcs. He's asking for reinforcements, however.
-	AI_Output (self ,other,"DIA_Garond_Marcos_10_04"); //What? Only four chests - and he left his mining site? Damn, that isn't good.
-	AI_Output (self ,other,"DIA_Garond_Marcos_10_05"); //And now he wants more men...? Well, fine, I'll send him two people.
+	AI_Output (other,self ,"DIA_Garond_Marcos_15_00"); //Ich habe Marcos getroffen.
+	AI_Output (self ,other,"DIA_Garond_Marcos_10_01"); //Und? Was hat er zu berichten? Wie viel Erz stellt er uns zur Verfügung?
+	AI_Output (other,self ,"DIA_Garond_Marcos_15_02"); //Vier Kisten. Er hat die Schürfstelle verlassen, um das Erz in Sicherheit zu bringen.
+	AI_Output (other,self ,"DIA_Garond_Marcos_15_03"); //Jetzt bewacht er die Kisten in einem kleinen Tal hinter den Reihen der Orks. Allerdings verlangt er nach Unterstützung.
+	AI_Output (self ,other,"DIA_Garond_Marcos_10_04"); //Was? Nur vier Kisten - und er hat seine Schürfstelle verlassen? Verdammt, das ist nicht gut.
+	AI_Output (self ,other,"DIA_Garond_Marcos_10_05"); //Und jetzt verlangt er auch noch mehr Männer ... ? Na schön, ich werde ihm zwei Leute schicken.
 	
 	
 	Marcos_Guard1.flags = 0;
 	Marcos_Guard2.flags = 0;
 	
-	B_StartOtherRoutine (Marcos_Guard1,"Marcos");
-	B_StartOtherRoutine (Marcos_Guard2,"Marcos");
+	B_StartOtherRoutine (Marcos_Guard1,"MARCOS");
+	B_StartOtherRoutine (Marcos_Guard2,"MARCOS");
 	
 	AI_Teleport (Marcos_Guard1,"OW_STAND_GUARDS");
 	AI_Teleport (Marcos_Guard1,"OW_STAND_GUARDS");
 
 		var C_NPC Marcos_GuardFriend; 
 		Marcos_GuardFriend = Hlp_GetNpc(PAL_254_Wache);
-	B_StartOtherRoutine (Marcos_GuardFriend,"Marcos");
+	B_StartOtherRoutine (Marcos_GuardFriend,"MARCOS");
 	
 	Ore_Counter = (Ore_Counter +1);
 	MIS_Marcos_Jungs = LOG_SUCCESS;
@@ -666,7 +666,7 @@ INSTANCE DIA_Garond_Success (C_INFO)
 	condition	= DIA_Garond_Success_Condition;
 	information	= DIA_Garond_Success_Info;
 	permanent	= FALSE;
-	description = "Was ist mit dem Schreiben fÃ¼r Lord Hagen?";
+	description = "Was ist mit dem Schreiben für Lord Hagen?";
 };                       
 
 FUNC INT DIA_Garond_Success_Condition()
@@ -680,16 +680,16 @@ FUNC INT DIA_Garond_Success_Condition()
 };
 FUNC VOID DIA_Garond_Success_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Success_15_00"); //What about the letter for Lord Hagen?
-	AI_Output (self ,other,"DIA_Garond_Success_10_01"); //We have ten crates of ore on the whole - and we've lost twice as many good men.
-	AI_Output (self ,other,"DIA_Garond_Success_10_02"); //You shall have your letter. Lord Hagen MUST hear of this. This valley is cursed - evil abides here.
+	AI_Output (other,self ,"DIA_Garond_Success_15_00"); //Was ist mit dem Schreiben für Lord Hagen?
+	AI_Output (self ,other,"DIA_Garond_Success_10_01"); //Wir haben insgesamt zehn Kisten Erz - und mehr als doppelt soviele Verluste an guten Männern.
+	AI_Output (self ,other,"DIA_Garond_Success_10_02"); //Du wirst dein Schreiben bekommen. Lord Hagen MUSS davon erfahren. Dieses Tal ist verflucht - das Böse ist hier.
 	
 	CreateInvItems (self,ItWr_PaladinLetter_MIS,1);
 	B_GiveInvItems (self,other,ItWr_PaladinLetter_MIS,1);
 	
 	KnowsPaladins_Ore = TRUE;
 	
-	B_LogEntry (TOPIC_MISOLDWORLD,"Kommandant Garond hat mir einen Brief ausgehÃ¤ndigt. Das wird als Beweis reichen. Damit kann ich zu Lord Hagen zurÃ¼ckkehren.");
+	B_LogEntry (TOPIC_MISOLDWORLD,"Kommandant Garond hat mir einen Brief ausgehändigt. Das wird als Beweis reichen. Damit kann ich zu Lord Hagen zurückkehren.");
 	
 	MIS_ScoutMine = LOG_SUCCESS;
 	B_GivePlayerXP (XP_ScoutMine);
@@ -720,8 +720,8 @@ FUNC INT DIA_Garond_SLD_Condition()
 };
 FUNC VOID DIA_Garond_SLD_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_SLD_15_00"); //What about my pay?
-	AI_Output (self ,other,"DIA_Garond_SLD_10_01"); //Oh yes, right. I still owe you some gold. Here's your reward.
+	AI_Output (other,self ,"DIA_Garond_SLD_15_00"); //Was ist mit meinem Lohn?
+	AI_Output (self ,other,"DIA_Garond_SLD_10_01"); //Ja, richtig. Du bekommst noch Gold von mir. Hier ist deine Belohnung.
 	B_GiveInvItems (self, other, itMI_Gold, 500);
 };
 // ************************************************************
@@ -748,20 +748,20 @@ FUNC INT DIA_Garond_Running_Condition()
 };
 FUNC VOID DIA_Garond_Running_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Running_15_00"); //How's the situation?
+	AI_Output (other,self ,"DIA_Garond_Running_15_00"); //Wie ist die Lage?
 	
 	if (Ore_Counter == 2) 
 	{
-		AI_Output (self ,other,"DIA_Garond_Running_10_01"); //Now I'm only waiting for news about the last mining site - and I hope it's good news.
+		AI_Output (self ,other,"DIA_Garond_Running_10_01"); //Jetzt fehlen mir nur noch die Nachrichten über die letzte Schürfstelle - und ich hoffe, es werden gute sein.
 		
 	}
 	else if (Ore_Counter == 1) 
 	{
-		AI_Output (self ,other,"DIA_Garond_Running_10_02"); //I need the reports about the other two mining sites. Then we shall see.
+		AI_Output (self ,other,"DIA_Garond_Running_10_02"); //Ich brauche die Berichte über die anderen beiden Schürfstellen. Dann sehen wir weiter.
 	}
 	else //0
 	{
-		AI_Output (self ,other,"DIA_Garond_Running_10_03"); //You should set out to find the mining sites. I'm desperate for news about the status of the ore production.
+		AI_Output (self ,other,"DIA_Garond_Running_10_03"); //Du solltest losziehen und die Schürfstellen aufsuchen. Ich brauche dringend Nachricht über den Stand der Erzförderung.
 	};
 	
 };
@@ -776,7 +776,7 @@ INSTANCE DIA_Garond_Gorn (C_INFO)
 	condition	= DIA_Garond_Gorn_Condition;
 	information	= DIA_Garond_Gorn_Info;
 	permanent	= FALSE;
-	description = "Ich will, daÃŸ du Gorn freilÃ¤sst.";
+	description = "Ich will, daß du Gorn freilässt.";
 };                       
 
 FUNC INT DIA_Garond_Gorn_Condition()
@@ -790,15 +790,15 @@ FUNC INT DIA_Garond_Gorn_Condition()
 };
 FUNC VOID DIA_Garond_Gorn_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Gorn_15_00"); //I want you to let Gorn go.
-	AI_Output (self ,other,"DIA_Garond_Gorn_10_01"); //I can't let him go. He has committed many crimes and they must be atoned for.
-	AI_Output (other,self ,"DIA_Garond_Gorn_15_02"); //Can I pay his penalty?
-	AI_Output (self ,other,"DIA_Garond_Gorn_10_03"); //That might be a possibility - but certainly not a cheap one. I want 1000 gold pieces for Gorn.
-	AI_Output (other,self ,"DIA_Garond_Gorn_15_04"); //That's a lot of gold.
-	AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn also has much to answer for. Bring me the gold and I'll set Gorn free.
+	AI_Output (other,self ,"DIA_Garond_Gorn_15_00"); //Ich will, daß du Gorn freilässt.
+	AI_Output (self ,other,"DIA_Garond_Gorn_10_01"); //Ich kann ihn nicht freilassen. Er hat sich vieler Verbrechen schuldig gemacht und die müssen gesühnt werden.
+	AI_Output (other,self ,"DIA_Garond_Gorn_15_02"); //Kann ich seine Strafe bezahlen?
+	AI_Output (self ,other,"DIA_Garond_Gorn_10_03"); //Das wäre eine Möglichkeit - billig wird das allerdings nicht. Ich verlange 1000 Goldstücke für Gorn.
+	AI_Output (other,self ,"DIA_Garond_Gorn_15_04"); //Das ist ein Haufen Gold.
+	AI_Output (self ,other,"DIA_Garond_Gorn_10_05"); //Gorn hat auch einiges auf dem Kerbholz. Bring mir das Gold, dann lasse ich Gorn frei.
 	
 	MIS_RescueGorn = LOG_RUNNING; 
-	B_LogEntry (TOPIC_RescueGorn,"Garond verlangt eintausend GoldstÃ¼cke fÃ¼r die Freilassung von Gorn.");
+	B_LogEntry (TOPIC_RescueGorn,"Garond verlangt eintausend Goldstücke für die Freilassung von Gorn.");
 };
 // ************************************************************
 // Gorn freikaufen
@@ -824,18 +824,18 @@ FUNC INT DIA_Garond_Pay_Condition()
 };
 FUNC VOID DIA_Garond_Pay_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Pay_15_00"); //I want to buy Gorn free.
+	AI_Output (other,self ,"DIA_Garond_Pay_15_00"); //Ich will Gorn freikaufen.
 	
 	if B_GiveInvItems (other, self, ItMI_Gold, 1000)
 	{
-		AI_Output (self ,other,"DIA_Garond_Pay_10_01"); //Agreed. You can go to Gerold and tell him to release Gorn on my orders.
+		AI_Output (self ,other,"DIA_Garond_Pay_10_01"); //Einverstanden. Du kannst zu Gerold gehen und ihm sagen, das Gorn auf meinen Befehl freigelassen wird.
 		
 		Garond_Kerkerauf = TRUE;
-		B_LogEntry (TOPIC_RescueGorn,"Ich habe Garond bezahlt. Jetzt kann ich Gorn aus dem Knast holen. Der WÃ¤chter Gerold wird ihn freilassen.");
+		B_LogEntry (TOPIC_RescueGorn,"Ich habe Garond bezahlt. Jetzt kann ich Gorn aus dem Knast holen. Der Wächter Gerold wird ihn freilassen.");
 	}
 	else
 	{
-		AI_Output (self ,other,"DIA_Garond_Pay_10_02"); //Then bring me the 1000 gold pieces.
+		AI_Output (self ,other,"DIA_Garond_Pay_10_02"); //Dann bring mir die 1000 Goldstücke.
 	};	
 };
 // ************************************************************
@@ -861,9 +861,9 @@ FUNC INT DIA_Garond_Perm2_Condition()
 };
 FUNC VOID DIA_Garond_Perm2_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Perm2_15_00"); //What are you planning to do now?
-	AI_Output (self ,other,"DIA_Garond_Perm2_10_01"); //I've tried everything. You're my only hope now - and that Lord Hagen will send me reinforcements.
-	AI_Output (self ,other,"DIA_Garond_Perm2_10_02"); //We'll continue to stand firm and pray to Innos that he won't leave us despondent in this dark hour.
+	AI_Output (other,self ,"DIA_Garond_Perm2_15_00"); //Was hast du jetzt vor?
+	AI_Output (self ,other,"DIA_Garond_Perm2_10_01"); //Ich habe alles versucht. Meine Hoffnung ruht jetzt auf dir - und darauf, dass Lord Hagen mir Unterstützung schickt.
+	AI_Output (self ,other,"DIA_Garond_Perm2_10_02"); //Wir werden weiterhin ausharren und zu Innos beten, auf dass er uns in diesen dunklen Stunden nicht mutlos werden lässt.
 };
 //#####################################################################
 //##
@@ -921,9 +921,9 @@ func int DIA_Garond_WASGIBTSNEUES_Condition ()
 
 func void DIA_Garond_WASGIBTSNEUES_Info ()
 {
-	AI_Output (other, self, "DIA_Garond_WASGIBTSNEUES_15_00"); //What's new?
-	AI_Output (self, other, "DIA_Garond_WASGIBTSNEUES_10_01"); //Damnit. What are you mucking about here for? I need those bloody reinforcements!
-	AI_Output (self, other, "DIA_Garond_WASGIBTSNEUES_10_02"); //Even Milten has left the castle. But I don't need fewer people - I need more!
+	AI_Output (other, self, "DIA_Garond_WASGIBTSNEUES_15_00"); //Was gibt's Neues?
+	AI_Output (self, other, "DIA_Garond_WASGIBTSNEUES_10_01"); //Verdammt noch mal. Was lungerst du hier rum? Ich brauche die verdammte Verstärkung!
+	AI_Output (self, other, "DIA_Garond_WASGIBTSNEUES_10_02"); //Sogar Milten hat die Burg verlassen. Ich brauche aber nicht weniger Leute - ich brauche mehr!
 };
 //#####################################################################
 //##
@@ -969,7 +969,7 @@ instance DIA_Garond_BACKINKAP4		(C_INFO)
 	condition	 = 	DIA_Garond_BACKINKAP4_Condition;
 	information	 = 	DIA_Garond_BACKINKAP4_Info;
 	Permanent	 =	FALSE;
-	description	 = 	"Ich bin zurÃ¼ck.";
+	description	 = 	"Ich bin zurück.";
 };
 
 func int DIA_Garond_BACKINKAP4_Condition ()
@@ -982,22 +982,22 @@ func int DIA_Garond_BACKINKAP4_Condition ()
 
 func void DIA_Garond_BACKINKAP4_Info ()
 {
-	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_00"); //I'm back.
-	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_01"); //I can see that for myself. Where are the reinforcements?
-	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_02"); //Lord Hagen will come as soon as he has settled everything. Much has happened.
-	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_03"); //I don't care. I need troops. There are more and more orcs and we can't hold out much longer.
-	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_04"); //My men are tired, and we're running out of provisions.
-	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_05"); //Some volunteers have arrived.
+	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_00"); //Ich bin zurück.
+	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_01"); //Das sehe ich selbst. Wo ist die Verstärkung?
+	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_02"); //Lord Hagen kommt, sobald er alle Dinge erledigt hat. Es ist viel passiert.
+	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_03"); //Interessiert mich nicht. Ich brauche Truppen. Die Orks werden immer mehr und wir können nicht mehr lange standhalten.
+	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_04"); //Meine Männer sind müde und die Vorräte gehen zur Neige.
+	AI_Output (other, self, "DIA_Garond_BACKINKAP4_15_05"); //Es sind einige Freiwillige eingetroffen.
 
 	if (hero.guild == GIL_DJG)
 	{
-	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_06"); //You mean yourself and your fellow dragon hunters, huh? You can help us, but there just aren't enough of you.
+	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_06"); //Du meinst dich und deine Drachenjägerkollegen, was? Ihr könnt uns helfen, aber ihr seid einfach zu wenig.
 	}
 	else
 	{
-	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_07"); //You mean the dragon hunters outside in the yard? They may help us, but there just aren't enough of them.
+	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_07"); //Du meinst die Drachenjäger draußen im Hof? Die können uns helfen, aber es sind einfach zu wenig.
 	};
-	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_08"); //If Hagen doesn't send some men soon, I can't make any guarantees.
+	AI_Output (self, other, "DIA_Garond_BACKINKAP4_10_08"); //Wenn Hagen nicht bald Männer schickt, kann ich nichts garantieren.
 
 	B_InitNpcGlobals ();//Joly: zur Sicherheit
 
@@ -1008,20 +1008,20 @@ func void DIA_Garond_BACKINKAP4_Info ()
 	DJG_Angar_SentToStones = TRUE;
 
 
-	// Die Drachenjger vom Spielstart verziehen sich in ihr Lager.
+	// Die Drachenjäger vom Spielstart verziehen sich in ihr Lager.
 	//-----------------------------------------
 		Ext_RemoveVobTree("OW_BANDITS_ERPRESSER");
 		Ext_InsertVobTree("VOBTREE/OW_DRAGONHUNTERS_CAMP.ZEN");
 
-	B_StartOtherRoutine 	(Kjorn,	"Start");
-	B_StartOtherRoutine 	(Godar,	"Start");
-	B_StartOtherRoutine 	(Hokurn,"Start");
-	B_StartOtherRoutine 	(PC_Fighter_DJG,"Start");
-	B_StartOtherRoutine  (Kurgan,"Start");
+	B_StartOtherRoutine 	(Kjorn,	"START");
+	B_StartOtherRoutine 	(Godar,	"START");
+	B_StartOtherRoutine 	(Hokurn,"START");
+	B_StartOtherRoutine 	(PC_Fighter_DJG,"START");
+	B_StartOtherRoutine  (Kurgan,"START");
 
 	if 	(DJG_BiffParty == FALSE)
 	{
-	B_StartOtherRoutine 	(Biff,"Start");
+	B_StartOtherRoutine 	(Biff,"START");
 	};
 };
 
@@ -1057,12 +1057,12 @@ var int Garond_IcedragonKilled_OneTime;
 var int Garond_OricExperte_OneTime;
 func void DIA_Garond_DragonPlettBericht_Info ()
 {
-	B_LogEntry (TOPIC_DRACHENJAGD,"Garond ist sicherlich daran interessiert, wie es um die Drachen steht, obwohl er auf mich eher den EIndruck macht, als wÃ¤re es ihm vÃ¶llig egal."); 
+	B_LogEntry (TOPIC_DRACHENJAGD,"Garond ist sicherlich daran interessiert, wie es um die Drachen steht, obwohl er auf mich eher den EIndruck macht, als wäre es ihm völlig egal."); 
 
 	if (Garond_DragonCounter < MIS_KilledDragons)
 	{
-		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_00"); //I've got news about the dragons.
-		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_01"); //Report.
+		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_00"); //Ich habe Neuigkeiten über die Drachen.
+		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_01"); //Berichte.
 		
 		var int CurrentDragonCount;
 		var int Drachengeld;
@@ -1073,7 +1073,7 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 		if (Npc_IsDead(Swampdragon))
 		&& (Garond_SwampdragonKilled_OneTime == FALSE)
 		{
-			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_02"); //I killed the dragon in the swamp to the east of here.
+			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_02"); //Ich habe den Drachen im Sumpf östlich von hier getötet.
 			Garond_SwampdragonKilled_OneTime = TRUE;
 			CurrentDragonCount = (CurrentDragonCount + 1);
 		};
@@ -1081,7 +1081,7 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 		if (Npc_IsDead(Rockdragon))
 		&& (Garond_RockdragonKilled_OneTime == FALSE)
 		{
-			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_03"); //The dragon in the rock fortress to the south is dead.
+			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_03"); //Der Drache in der Felsenfestung im Süden ist tot.
 			Garond_RockdragonKilled_OneTime = TRUE;
 			CurrentDragonCount = (CurrentDragonCount + 1);
 		};
@@ -1089,7 +1089,7 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 		if (Npc_IsDead(FireDragon))
 		&& (Garond_FireDragonKilled_OneTime == FALSE)
 		{
-			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_04"); //The fire dragon on the volcano to the south will wreak no more havoc.
+			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_04"); //Der Feuerdrache auf dem Vulkan im Süden wird keinen Schaden mehr anrichten.
 			Garond_FireDragonKilled_OneTime = TRUE;
 			CurrentDragonCount = (CurrentDragonCount + 1);
 		};
@@ -1097,12 +1097,12 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 		if (Npc_IsDead(Icedragon))
 		&& (Garond_IcedragonKilled_OneTime == FALSE)
 		{
-			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_05"); //I went to the western ice region and did away with the dragon there.
+			AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_05"); //Ich war in der westlichen Eisregion und habe den Eisdrachen dort zur Strecke gebracht.
 			Garond_IcedragonKilled_OneTime = TRUE;
 			CurrentDragonCount = (CurrentDragonCount + 1);
 		};
 
-		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_06"); //That's good news. Here. I'll give you some money towards your equipment.
+		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_06"); //Das sind gute Neuigkeiten. Hier. Ich gebe dir etwas Geld für deine Ausrüstung.
 		
 		DrachenGeld = (CurrentDragonCount * Garond_KilledDragonGeld);
 		XP_LocalGarond =  (CurrentDragonCount * XP_Garond_KilledDragon);
@@ -1124,20 +1124,20 @@ func void DIA_Garond_DragonPlettBericht_Info ()
 	&& ((Npc_IsDead(Oric))	== FALSE)
 	&& (MIS_AllDragonsDead == FALSE)
 	{
-		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_07"); //Can you give me more information about the dragons?
-		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_08"); //I have other things to worry about. My strategic officer Oric can tell you more about that.
-		B_LogEntry (TOPIC_DRACHENJAGD,"Garonds statigischer Offizier Oric hat veilleicht einige nÃ¼tzliche Informationen fÃ¼r mich."); 
+		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_07"); //Kannst du mir noch mehr Informationen über die Drachen geben?
+		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_08"); //Ich habe mich noch um andere Dinge zu kümmern. Mein strategischer Offizier Oric kann dir mehr dazu sagen.
+		B_LogEntry (TOPIC_DRACHENJAGD,"Garonds statigischer Offizier Oric hat veilleicht einige nützliche Informationen für mich."); 
 		Garond_OricExperte_OneTime = TRUE;
 	}
 	else if (MIS_AllDragonsDead == FALSE)
 	{
-		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_09"); //Have there been any more dragon attacks in the meantime?
-		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_10"); //Luckily not. For the moment they're holding off.
+		AI_Output (other, self, "DIA_Garond_DragonPlettBericht_15_09"); //Hat es inzwischen wieder Angriffe der Drachen gegeben?
+		AI_Output (self, other, "DIA_Garond_DragonPlettBericht_10_10"); //Zum Glück nicht. Im Moment halten sie sich zurück.
 	};
 };
 
 //*********************************************************************
-//	Ich habe alle drachen gettet
+//	Ich habe alle drachen getötet
 //*********************************************************************
 
 ///////////////////////////////////////////////////////////////////////
@@ -1165,14 +1165,14 @@ func int DIA_Garond_AllDragonDead_Condition ()
 
 func void DIA_Garond_AllDragonDead_Info ()
 {
-	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_00"); //All the dragons are dead.
-	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_01"); //(in disbelief) All of them? So evil has been vanquished forever?
-	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_02"); //No, alas not. Their leader still remains.
-	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_03"); //Weren't the dragons the leaders of the orcs?
-	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_04"); //Yes, true, but they also have their own master. We must get rid of him as well.
-	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_05"); //I damn well can't go. I have to guard the ore, and the cursed orcs are still about, too.
-	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_06"); //You'll have to take care of it yourself. I can't help you.
-	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_07"); //May Innos protect you.
+	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_00"); //Alle Drachen sind tot.
+	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_01"); //(ungläubig) Alle? Das Böse ist also entgültig besiegt?
+	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_02"); //Nein, leider noch nicht. Es gibt da noch ihren Anführer.
+	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_03"); //Waren die Drachen nicht die Anführer der Orks?
+	AI_Output (other, self, "DIA_Garond_AllDragonDead_15_04"); //Ja schon, aber auch sie haben ihren Meister. Wir müssen auch ihn beseitigen.
+	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_05"); //Ich kann hier verdammt noch mal nicht weg. Ich muss das Erz sichern und die verfluchten Orks sind auch noch da.
+	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_06"); //Du musst dich alleine darum kümmern. Ich kann dir nicht helfen.
+	AI_Output (self, other, "DIA_Garond_AllDragonDead_10_07"); //Möge Innos dich schützen.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1199,45 +1199,45 @@ func int DIA_Garond_JanBecomeSmith_Condition ()
 
 func void DIA_Garond_JanBecomeSmith_Info ()
 {
-	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_00"); //There is a problem with the smith.
-	AI_Output			(self ,other, "DIA_Garond_JanBecomeSmith_10_01"); //What smith? He's disappeared into the woodwork.
-	AI_Output			(self ,other, "DIA_Garond_JanBecomeSmith_10_02"); //Is he back? Then you can tell him...
-	AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_03"); //No, I'm talking about Jan.
+	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_00"); //Es gibt ein Problem mit dem Schmied.
+	AI_Output			(self ,other, "DIA_Garond_JanBecomeSmith_10_01"); //Welcher Schmied? Der hat sich aus dem Staub gemacht.
+	AI_Output			(self ,other, "DIA_Garond_JanBecomeSmith_10_02"); //Ist er wieder da? Dann kannst du ihm ausrichten ...
+	AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_03"); //Nein, ich meine Jan.
 
 	if (hero.guild == GIL_DJG)
 	{
-		AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_04"); //He is a dragon hunter, just like me, and a good blacksmith.
+		AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_04"); //Er ist Drachenjäger, so wie ich, und ein guter Schmied.
 	}
 	else
 	{
-		AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_05"); //One of the dragon hunters. He's a smith.
+		AI_Output			(other,self , "DIA_Garond_JanBecomeSmith_15_05"); //Einer der Drachenjäger. Er ist Schmied.
 	};	
 
-	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_06"); //That's good. Our previous smith just slinked off, the coward.
-	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_07"); //Jan would be willing to take over the smithy.
-	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_08"); //I see. So you think I can trust him.
-	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_09"); //Yes.
-	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_10"); //If you're so sure, then you can vouch for him.
-	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_11"); //If he causes any trouble, you'll answer for it. Agreed?
+	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_06"); //Das trifft sich ja gut, unser ehemaliger Schmied hat sich einfach verdrückt, dieser Feigling.
+	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_07"); //Jan wäre bereit, die Schmiede zu übernehmen.
+	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_08"); //Verstehe. Du meinst also, ich kann ihm trauen.
+	AI_Output			(other, self, "DIA_Garond_JanBecomeSmith_15_09"); //Ja.
+	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_10"); //Wenn du dir so sicher bist, dann wirst du für ihn bürgen.
+	AI_Output			(self, other, "DIA_Garond_JanBecomeSmith_10_11"); //Sollte er Ärger machen, wirst du dafür geradestehen. Einverstanden?
 	
 	Info_ClearChoices 	(DIA_Garond_JanBecomeSmith);
-	Info_AddChoice 		(DIA_Garond_JanBecomeSmith,"Ich denke drÃ¼ber nach.",DIA_Garond_JanBecomeSmith_No);
-	Info_AddChoice		(DIA_Garond_JanBecomeSmith,"Ich bÃ¼rge fÃ¼r Jan.",DIA_Garond_JanBecomeSmith_Yes); 		
+	Info_AddChoice 		(DIA_Garond_JanBecomeSmith,"Ich denke drüber nach.",DIA_Garond_JanBecomeSmith_No);
+	Info_AddChoice		(DIA_Garond_JanBecomeSmith,"Ich bürge für Jan.",DIA_Garond_JanBecomeSmith_Yes); 		
 };
 
 FUNC VOID DIA_Garond_JanBecomeSmith_No ()
 {
-	AI_Output (other,self ,"DIA_Garond_JanBecomeSmith_No_15_00"); //I'll think about it.
-	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_No_10_01"); //How can I trust him, if even you won't?
-	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_No_10_02"); //Without someone to stand for him, this Jan can keep his hands off the forge.
+	AI_Output (other,self ,"DIA_Garond_JanBecomeSmith_No_15_00"); //Ich denke drüber nach.
+	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_No_10_01"); //Wieso sollte ich ihm trauen, wenn du es noch nicht einmal tust?
+	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_No_10_02"); //Ohne einen Bürgen wird dieser Jan seine Finger von der Schmiede lassen.
 
 	Info_ClearChoices 	(DIA_Garond_JanBecomeSmith);
 };
 
 FUNC VOID DIA_Garond_JanBecomeSmith_Yes()
 {
-	AI_Output (other,self ,"DIA_Garond_JanBecomeSmith_Yes_15_00"); //I'll vouch for Jan.
-	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_Yes_10_01"); //All right. He can use the smithy. Of course, he'll also have to provide my men with swords.
+	AI_Output (other,self ,"DIA_Garond_JanBecomeSmith_Yes_15_00"); //Ich bürge für Jan.
+	AI_Output (self ,other,"DIA_Garond_JanBecomeSmith_Yes_10_01"); //Also gut, er kann die Schmiede benutzen. Allerdings wird er dann auch meine Soldaten mit Klingen versorgen müssen.
 	
 	Info_ClearChoices 	(DIA_Garond_JanBecomeSmith);
 	MIS_JanBecomesSmith = LOG_SUCCESS; 
@@ -1302,16 +1302,16 @@ func int DIA_Garond_PERM5_Condition ()
 
 func void DIA_Garond_PERM5_Info ()
 {
-	AI_Output			(other, self, "DIA_Garond_PERM5_15_00"); //How's the situation?
+	AI_Output			(other, self, "DIA_Garond_PERM5_15_00"); //Wie ist die Lage?
 
 	if (MIS_OCGateOpen == TRUE)
 	{
-	AI_Output			(self, other, "DIA_Garond_PERM5_10_01"); //What a damned mess! Some bastard left the main gate open. Now we're nothing more than fodder for the wolves.
-	AI_Output			(self, other, "DIA_Garond_PERM5_10_02"); //When I get my hands on the traitor...
+	AI_Output			(self, other, "DIA_Garond_PERM5_10_01"); //Verdammte Sauerei! Irgendein Dreckskerl hat das Haupttor geöffnet. Jetzt sind wir nichts weiter als Futter für die Wölfe.
+	AI_Output			(self, other, "DIA_Garond_PERM5_10_02"); //Wenn ich den Verräter zu fassen kriege ...
 	}
 	else
 	{
-	AI_Output			(self, other, "DIA_Garond_PERM5_10_03"); //We'll all die like flies here if Hagen doesn't come soon.
+	AI_Output			(self, other, "DIA_Garond_PERM5_10_03"); //Wir verrecken hier alle wie die Fliegen, wenn Hagen nicht bald kommt.
 	};
 };
 

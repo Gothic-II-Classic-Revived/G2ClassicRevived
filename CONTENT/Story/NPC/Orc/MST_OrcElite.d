@@ -105,7 +105,7 @@ INSTANCE OrcElite_Sit (Mst_Default_OrcElite)
 //		Story Orks											
 //*********************************************************************************************************************************************************************************************************************************
 //*************************
-//	OrkElite_AntiPaladinOrkOberst    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen belriechenden Schergen zu tun!)													
+//	OrkElite_AntiPaladinOrkOberst    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen übelriechenden Schergen zu tun!)													
 //*************************
 INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 {
@@ -132,7 +132,7 @@ INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 };
 
 //*************************
-//	Orc Elite AntiPaladin    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen belriechenden Schergen zu tun!)													
+//	Orc Elite AntiPaladin    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen übelriechenden Schergen zu tun!)													
 //*************************
 INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 {
@@ -151,7 +151,7 @@ INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 };
 
 //*************************
-//	Orc Elite AntiPaladin1    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen belriechenden Schergen zu tun!)													
+//	Orc Elite AntiPaladin1    	(Wenn SC GIL_PAL ist, dann hat er es mit diesen übelriechenden Schergen zu tun!)													
 //*************************
 INSTANCE OrcElite_AntiPaladin1 (Mst_Default_OrcElite)
 {

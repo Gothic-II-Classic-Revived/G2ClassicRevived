@@ -43,7 +43,7 @@ INSTANCE ItFo_Addon_Shellflesh (C_Item)
 	description			= 	name;
 	TEXT[0]				= 	"Saftiges Muschelfleisch";
 	TEXT[1]				= 	NAME_Bonus_HP; COUNT[1] = HP_Shellflesh;
-	TEXT[2]				= 	"Roh unbedingt genie√übar";
+	TEXT[2]				= 	"Roh unbedingt genieﬂbar";
 	TEXT[3]				= 	"";
 	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
 };
@@ -56,7 +56,7 @@ INSTANCE ItFo_Addon_Shellflesh (C_Item)
 //-----------------------------
 INSTANCE ItFo_Addon_Rum(C_Item)
 {
-	name 			=	"Wei√üer Rum";
+	name 			=	"Weiﬂer Rum";
 
 	mainflag 		=	ITEM_KAT_FOOD;
 	flags 			=	ITEM_MULTI;
@@ -119,8 +119,8 @@ INSTANCE ItFo_Addon_Grog(C_Item)
 //	Lou's Hammer (mit Manaessenz)
 //-----------------------------
 
-var int Hammer_Once;	//damit der Magier sich nicht fr 30 Gold superviel MANA kauft!!
-var int SchlafHammer_Once;	//damit der Magier sich nicht fr 30 Gold superviel MANA kauft!!
+var int Hammer_Once;	//damit der Magier sich nicht f¸r 30 Gold superviel MANA kauft!!
+var int SchlafHammer_Once;	//damit der Magier sich nicht f¸r 30 Gold superviel MANA kauft!!
 
 INSTANCE ItFo_Addon_LousHammer (C_Item)
 {
@@ -174,7 +174,7 @@ INSTANCE ItFo_Addon_SchlafHammer (C_Item)
 
 	description		= 	"Doppelter Hammer";
 	
-	TEXT[1]			= 	"Macht den h√§rtesten Trinker m√ºde...";				
+	TEXT[1]			= 	"Macht den h‰rtesten Trinker m¸de...";				
 
 	TEXT[5]			= 	NAME_Value;					
 	COUNT[5]		= 	Value_SchlafHammer;
@@ -210,7 +210,7 @@ INSTANCE ItFo_Addon_SchnellerHering(C_Item)
 	on_state[0]		=	UseSchnellerHering;
 	scemeName		=	"POTIONFAST";
 
-	description		= 	"Sieht gef√§hrlich aus!";
+	description		= 	"Sieht gef‰hrlich aus!";
 	
 	TEXT[1]			= 	"Wirkung unbekannt";				
 	TEXT[2]			=	"Nebenwirkungen wahrscheinlich";
@@ -250,9 +250,9 @@ INSTANCE ItFo_Addon_Pfeffer_01	(C_Item)
 
 	material 			=	MAT_LEATHER;
 		
-	description			= 	"Roter Tr√§nen- Pfeffer";
+	description			= 	"Roter Tr‰nen- Pfeffer";
 	
-	TEXT[0]				= 	"Von den s√ºdlichen Inseln";
+	TEXT[0]				= 	"Von den s¸dlichen Inseln";
 	TEXT[1]				= 	"";
 	TEXT[2]				= 	"";
 	TEXT[3]				= 	"VORSICHT SCHARF!";
@@ -273,7 +273,7 @@ INSTANCE ItFo_Addon_FireStew (C_Item)
 	
 	visual 				=	"ItFo_Stew.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"Reis";
+	scemeName			=	"RICE";
 	on_state[0]			=	Use_FireStew;
 
 	description			= 	name;
@@ -287,7 +287,7 @@ INSTANCE ItFo_Addon_FireStew (C_Item)
 		B_RaiseAttribute 	(self,	ATR_STRENGTH,	STR_FireStew);
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_FireStew);
 		
-		PrintScreen ("St√§rke und Lebensenergie gesteigert!", -1, 34, FONT_ScreenSmall,2); 
+		PrintScreen ("St‰rke und Lebensenergie gesteigert!", -1, 34, FONT_ScreenSmall,2); 
 	};
 //-------------------------------------------------------
 // Fleischsuppe
@@ -303,7 +303,7 @@ INSTANCE ItFo_Addon_Meatsoup (C_Item)
 	
 	visual 				=	"ItFo_FishSoup.3ds";
 	material 			=	MAT_WOOD;
-	scemeName			=	"Reis";
+	scemeName			=	"RICE";
 	on_state[0]			=	Use_MeatSoup;
 
 	description			= 	"Dampfende Fleischsuppe";

@@ -43,8 +43,8 @@ func int DIA_Biff_NW_HAfen_Condition ()
 
 func void DIA_Biff_NW_HAfen_Info ()
 {
-	AI_Output			(other, self, "DIA_Biff_NW_HAfen_15_00"); //OK. Not much longer now.
-	AI_Output			(self, other, "DIA_Biff_NW_HAfen_07_01"); //I can't wait.
+	AI_Output			(other, self, "DIA_Biff_NW_HAfen_15_00"); //So. Bald geht's los.
+	AI_Output			(self, other, "DIA_Biff_NW_HAfen_07_01"); //Da bin ich ja mal gespannt.
 	
 	if (MIS_ReadyforChapter6 == TRUE)
 		{

@@ -79,7 +79,7 @@ FUNC INT DIA_Ramirez_Zeichen_Condition()
 FUNC VOID DIA_Ramirez_Zeichen_Info()
 {
 	AI_PlayAni (other, "T_YES");
-	AI_Output (self, other, "DIA_Ramirez_Zeichen_14_00");//Sieh an, du beherrschst das Zeichen. (gÃ¤hnt) Ich bin beeindruckt.
+	AI_Output (self, other, "DIA_Ramirez_Zeichen_14_00");//Sieh an, du beherrschst das Zeichen. (gähnt) Ich bin beeindruckt.
 };
 
 //////////////////////////////////////////////////////////////////////
@@ -110,12 +110,12 @@ FUNC VOID DIA_Ramirez_Hallo_Info()
 	if (self.aivar [AIV_TalkedToPlayer] == FALSE)
 	&& (Join_Thiefs == FALSE) 
 	{
-		AI_Output (self, other, "DIA_Ramirez_Hallo_14_00");//Hast du dich verlaufen? Ich denke, das hier ist nicht der richtige Ort fÃ¼r dich.
+		AI_Output (self, other, "DIA_Ramirez_Hallo_14_00");//Hast du dich verlaufen? Ich denke, das hier ist nicht der richtige Ort für dich.
 		AI_Output (self, other, "DIA_Ramirez_Hallo_14_01");//Wenn dir hier was passiert, wird dir niemand helfen. Also sei vorsichtig. (grinst breit)
 	};
 	if  (Join_Thiefs == TRUE)  
 	{
-		AI_Output (self, other, "DIA_Ramirez_Hallo_14_02");//Du bist also dabei. Gut, dann viel Erfolg - und immer schÃ¶n vorsichtig sein.
+		AI_Output (self, other, "DIA_Ramirez_Hallo_14_02");//Du bist also dabei. Gut, dann viel Erfolg - und immer schön vorsichtig sein.
 		AI_Output (self, other, "DIA_Ramirez_Hallo_14_03");//Ach und noch was - mir ist egal, wer du da oben bist oder mit wem du da zusammenarbeitest.
 		AI_Output (self, other, "DIA_Ramirez_Hallo_14_04");//Hier unten bist du nur einer von uns. Ein Dieb. Nicht mehr und nicht weniger.
 		DIA_Ramirez_Hallo_permanent = TRUE;
@@ -148,11 +148,11 @@ FUNC INT DIA_Ramirez_Beute_Condition()
 };
 FUNC VOID DIA_Ramirez_Beute_Info()
 {
-	AI_Output (self, other, "DIA_Ramirez_Beute_14_00");//HÃ¶r mal, das ist doch nicht dein Ernst, oder? Du steckst unser Gold ein ... du versuchst, uns zu beklauen?
-	AI_Output (other, self, "DIA_Ramirez_Beute_15_01");//Jetzt reg dich mal nicht wegen der paar MÃ¼nzen auf.
+	AI_Output (self, other, "DIA_Ramirez_Beute_14_00");//Hör mal, das ist doch nicht dein Ernst, oder? Du steckst unser Gold ein ... du versuchst, uns zu beklauen?
+	AI_Output (other, self, "DIA_Ramirez_Beute_15_01");//Jetzt reg dich mal nicht wegen der paar Münzen auf.
 	AI_Output (other, self, "DIA_Ramirez_Beute_15_02");//Ich meine, das bisschen Zeug hier ist eure GESAMTE Beute? Das ist alles, was die Diebesgilde von Khorinis zu bieten hat?
 	AI_Output (self, other, "DIA_Ramirez_Beute_14_03");//Wer sagt denn, dass unsere Beute hier unten lagert?
-	AI_Output (other, self, "DIA_Ramirez_Beute_15_04");//HÃ¤tte mich auch sehr gewundert. Also, wo habt ihr eure SchÃ¤tze versteckt?
+	AI_Output (other, self, "DIA_Ramirez_Beute_15_04");//Hätte mich auch sehr gewundert. Also, wo habt ihr eure Schätze versteckt?
 	AI_Output (self, other, "DIA_Ramirez_Beute_14_05");//An einem sehr sicheren Ort.
 	AI_Output (other, self, "DIA_Ramirez_Beute_15_06");//Verstehe.
 	AI_Output (self, other, "DIA_Ramirez_Beute_14_07");//Okay, du kannst das Gold behalten. Aber ich behalte dich im Auge. Also treib es nicht zu weit.
@@ -196,21 +196,21 @@ FUNC VOID DIA_Ramirez_Bezahlen_Info()
 	
 	if (Npc_GetTalentSkill  (other, NPC_TALENT_PICKLOCK) == TRUE)
 	{ 
-		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_01");//Ich kann dir nichts beibringen. Du weiÃŸt schon alles Ã¼bers SchlÃ¶sser knacken.
+		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_01");//Ich kann dir nichts beibringen. Du weißt schon alles übers Schlösser knacken.
 		if (other.attribute[ATR_DEXTERITY] < T_MAX)
 		{
-			AI_Output (self, other, "DIA_Ramirez_Add_14_00"); //Du muÃŸt nur noch geschickter werden.
+			AI_Output (self, other, "DIA_Ramirez_Add_14_00"); //Du mußt nur noch geschickter werden.
 		};
 		DIA_Ramirez_Bezahlen_permanent = TRUE;
 		Info_ClearChoices (DIA_Ramirez_Bezahlen);
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_02");//Ich kann dir zeigen, wie du SchlÃ¶sser knackst. Das kostet dich lediglich ...
+		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_02");//Ich kann dir zeigen, wie du Schlösser knackst. Das kostet dich lediglich ...
 		B_Say_Gold (self, other, Ramirez_Cost);
 		
 		Info_ClearChoices (DIA_Ramirez_Bezahlen);
-		Info_AddChoice (DIA_Ramirez_Bezahlen,"Vielleicht spÃ¤ter...(ZURÃœCK)",DIA_Ramirez_Bezahlen_Spaeter);
+		Info_AddChoice (DIA_Ramirez_Bezahlen,"Vielleicht später...(ZURÜCK)",DIA_Ramirez_Bezahlen_Spaeter);
 		Info_AddChoice (DIA_Ramirez_Bezahlen,"Okay, ich bezahle...",DIA_Ramirez_Bezahlen_Okay);
 	};
 };
@@ -225,7 +225,7 @@ FUNC VOID DIA_Ramirez_Bezahlen_Okay()
 	if B_GiveInvItems (other, self, ItMi_Gold, Ramirez_Cost)
 	{
 		AI_Output (other, self, "DIA_Ramirez_Bezahlen_Okay_15_01");//... hier ist das Gold.
-		AI_Output (self, other, "DIA_Ramirez_Bezahlen_Okay_14_02");//Gut. Ich stehe zu deiner VerfÃ¼gung.
+		AI_Output (self, other, "DIA_Ramirez_Bezahlen_Okay_14_02");//Gut. Ich stehe zu deiner Verfügung.
 		Ramirez_TeachPlayer = TRUE;
 		DIA_Ramirez_Bezahlen_permanent = TRUE;
 		Info_ClearChoices (DIA_Ramirez_Bezahlen);
@@ -264,9 +264,9 @@ FUNC VOID DIA_Ramirez_Teach_Info()
 	
 	if (Ramirez_Zweimal == FALSE)
 	{
-		AI_Output (self, other, "DIA_Ramirez_Teach_14_06");//SchlÃ¶sser knacken ist die hohe Kunst der Diebe.
-		AI_Output (self, other, "DIA_Ramirez_Teach_14_01");//Du brauchst eine Menge FingerspitzengefÃ¼hl und Intuition. Und ein paar gute Dietriche.
-		AI_Output (self, other, "DIA_Ramirez_Teach_14_02");//Allerdings sind manche Truhen mit speziellen SchlÃ¶ssern versehen, die sich nur mit dem passenden SchlÃ¼ssel Ã¶ffnen lassen.
+		AI_Output (self, other, "DIA_Ramirez_Teach_14_06");//Schlösser knacken ist die hohe Kunst der Diebe.
+		AI_Output (self, other, "DIA_Ramirez_Teach_14_01");//Du brauchst eine Menge Fingerspitzengefühl und Intuition. Und ein paar gute Dietriche.
+		AI_Output (self, other, "DIA_Ramirez_Teach_14_02");//Allerdings sind manche Truhen mit speziellen Schlössern versehen, die sich nur mit dem passenden Schlüssel öffnen lassen.
 		Ramirez_Zweimal = TRUE;
 	};
 	if B_TeachThiefTalent (self, other, NPC_TALENT_PICKLOCK)
@@ -298,7 +298,7 @@ FUNC INT DIA_Ramirez_Viertel_Condition()
 FUNC VOID DIA_Ramirez_Viertel_Info()
 {	
 	AI_Output (other, self, "DIA_Ramirez_Viertel_15_00");//Wo lohnt es sich, einzusteigen?
-	AI_Output (self, other, "DIA_Ramirez_Viertel_14_01");//Im oberen Viertel, natÃ¼rlich.
+	AI_Output (self, other, "DIA_Ramirez_Viertel_14_01");//Im oberen Viertel, natürlich.
 	AI_Output (self, other, "DIA_Ramirez_Viertel_14_02");//Aber, wenn du da oben irgendwo einsteigen willst, warte bis es Nacht ist - dann schlafen alle - bis auf die Stadtwachen.
 	AI_Output (self, other, "DIA_Ramirez_Viertel_14_03");//Die patrouillieren Nachts. Einen von ihnen kenne ich - Wambo. Er ist der Einzige, der Interesse an Gold hat.
 	AI_Output (self, other, "DIA_Ramirez_Viertel_14_04");//Er ist teuer, aber wenn du ihn einmal bezahlt hast, brauchst du dir um ihn keine Gedanken mehr zu machen.
@@ -313,7 +313,7 @@ INSTANCE DIA_Ramirez_Sextant   (C_INFO)
 	condition   = DIA_Ramirez_Sextant_Condition;
 	information = DIA_Ramirez_Sextant_Info;
 	permanent   = FALSE;
-	description = "Hast du einen Job fÃ¼r mich?";
+	description = "Hast du einen Job für mich?";
 };
 
 FUNC INT DIA_Ramirez_Sextant_Condition()
@@ -327,10 +327,10 @@ FUNC INT DIA_Ramirez_Sextant_Condition()
 };
 FUNC VOID DIA_Ramirez_Sextant_Info()
 {
-	AI_Output (other, self, "DIA_Ramirez_Sextant_15_00");//Hast du einen Job fÃ¼r mich?
-	AI_Output (self, other, "DIA_Ramirez_Sextant_14_01");//Hmm ... es gibt da schon eine Sache, die ich gerne haben wÃ¼rde. Aber bisher habe ich es noch nicht gefunden.
+	AI_Output (other, self, "DIA_Ramirez_Sextant_15_00");//Hast du einen Job für mich?
+	AI_Output (self, other, "DIA_Ramirez_Sextant_14_01");//Hmm ... es gibt da schon eine Sache, die ich gerne haben würde. Aber bisher habe ich es noch nicht gefunden.
 	AI_Output (other, self, "DIA_Ramirez_Sextant_15_02");//Was kann ich dir besorgen?
-	AI_Output (self, other, "DIA_Ramirez_Sextant_14_03");//Einen Sextanten. Bring mir einen Sextanten - dafÃ¼r zahle ich dir einen guten Preis.
+	AI_Output (self, other, "DIA_Ramirez_Sextant_14_03");//Einen Sextanten. Bring mir einen Sextanten - dafür zahle ich dir einen guten Preis.
 	
 	Log_CreateTopic (Topic_RamirezSextant,LOG_MISSION);
 	Log_SetTopicStatus (Topic_RamirezSextant, LOG_RUNNING);
@@ -348,7 +348,7 @@ INSTANCE DIA_Ramirez_Success   (C_INFO)
 	condition   = DIA_Ramirez_Success_Condition;
 	information = DIA_Ramirez_Success_Info;
 	permanent   = FALSE;
-	description = "Ich habe einen Sextant fÃ¼r dich.";
+	description = "Ich habe einen Sextant für dich.";
 };
 
 FUNC INT DIA_Ramirez_Success_Condition()
@@ -361,9 +361,9 @@ FUNC INT DIA_Ramirez_Success_Condition()
 };
 FUNC VOID DIA_Ramirez_Success_Info()
 {
-	AI_Output (other, self, "DIA_Ramirez_Success_15_00");//Ich habe einen Sextant fÃ¼r dich.
+	AI_Output (other, self, "DIA_Ramirez_Success_15_00");//Ich habe einen Sextant für dich.
 	B_GiveInvItems (other, self, Itmi_Sextant,1);
-	AI_Output (self, other, "DIA_Ramirez_Success_14_01");//Unglaublich. Du hast tatsÃ¤chlich einen gefunden.
+	AI_Output (self, other, "DIA_Ramirez_Success_14_01");//Unglaublich. Du hast tatsächlich einen gefunden.
 	AI_Output (self, other, "DIA_Ramirez_Success_14_02");//Hier, deinen Lohn hast du dir wahrlich verdient.
 	
 	B_GiveInvItems (self, other, Itmi_Gold,Value_Sextant/2);

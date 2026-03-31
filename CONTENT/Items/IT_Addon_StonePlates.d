@@ -201,21 +201,21 @@ func void Use_StonePlate ()
 						if 		(StoneplateLevel == 1)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_1H, OneH_StPlLevel1);
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(OneH_StPlLevel1));
 							B_Say (self, self, "STONEPLATE_1");
 						}
 						else if (StoneplateLevel == 2)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_1H, OneH_StPlLevel2);
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(OneH_StPlLevel2));
 							B_Say (self, self, "STONEPLATE_2");
 						}
 						else if (StoneplateLevel == 3)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_1H, OneH_StPlLevel3);
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(OneH_StPlLevel3));
 							B_Say (self, self, "STONEPLATE_3");
 						};
@@ -227,21 +227,21 @@ func void Use_StonePlate ()
 						if 		(StoneplateLevel == 1)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_2H, TwoH_StPlLevel1);
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(TwoH_StPlLevel1));
 							B_Say (self, self, "STONEPLATE_1");
 						}
 						else if (StoneplateLevel == 2)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_2H, TwoH_StPlLevel2);
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(TwoH_StPlLevel2));
 							B_Say (self, self, "STONEPLATE_2");
 						}
 						else if (StoneplateLevel == 3)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_2H, TwoH_StPlLevel3);
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(TwoH_StPlLevel3));
 							B_Say (self, self, "STONEPLATE_3");
 						};
@@ -253,21 +253,21 @@ func void Use_StonePlate ()
 						if 		(StoneplateLevel == 1)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_BOW, Bow_StPlLevel1);			//Bogen steigern
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(Bow_StPlLevel1));
 							B_Say (self, self, "STONEPLATE_1");
 						}
 						else if (StoneplateLevel == 2)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_BOW, Bow_StPlLevel2);			//Bogen steigern
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(Bow_StPlLevel2));
 							B_Say (self, self, "STONEPLATE_2");
 						}
 						else if (StoneplateLevel == 3)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_BOW, Bow_StPlLevel3);			//Bogen steigern
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(Bow_StPlLevel3));
 							B_Say (self, self, "STONEPLATE_3");
 						};
@@ -279,21 +279,21 @@ func void Use_StonePlate ()
 						if 		(StoneplateLevel == 1)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_CROSSBOW, CrsBow_StPlLevel1);	//Crossbow mit hochziehen
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(CrsBow_StPlLevel1));
 							B_Say (self, self, "STONEPLATE_1");
 						}
 						else if (StoneplateLevel == 2)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_CROSSBOW, CrsBow_StPlLevel2);	//Crossbow mit hochziehen
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(CrsBow_StPlLevel2));
 							B_Say (self, self, "STONEPLATE_2");
 						}
 						else if (StoneplateLevel == 3)
 						{
 							B_RaiseFightTalent (self, NPC_TALENT_CROSSBOW, CrsBow_StPlLevel3);	//Crossbow mit hochziehen
-							concatText = ConcatStrings (concatText,	"+");
+							concatText = ConcatStrings (concatText,	" + ");
 							concatText = ConcatStrings (concatText,	IntToString(CrsBow_StPlLevel3));
 							B_Say (self, self, "STONEPLATE_3");
 						};
@@ -339,7 +339,7 @@ PROTOTYPE   Prototype_StonePlate (C_ITEM)
 //------------------------------------------------------------------------------------------
 instance ItWr_StrStonePlate1_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate //Joly: in NW verteilt
 {
-	description 		=	"Steintafel der StÃ¤rke I";
+	description 		=	"Steintafel der Stärke I";
 	on_state[0]			=   Use_StrStonePlate1;
 	visual 				=	"ItMi_StonePlate_PowerUp_01.3DS";	 
 };
@@ -350,7 +350,7 @@ func void Use_StrStonePlate1 ()
 };
 instance ItWr_StrStonePlate2_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate 
 {
-	description 		=	"Steintafel der StÃ¤rke II";
+	description 		=	"Steintafel der Stärke II";
 	on_state[0]			=   Use_StrStonePlate2;
 	visual 				=	"ItMi_StonePlate_PowerUp_01.3DS";	 
 };
@@ -361,7 +361,7 @@ func void Use_StrStonePlate2 ()
 };
 instance ItWr_StrStonePlate3_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate //Joly: in NW verteilt
 {
-	description 		=	"Steintafel der StÃ¤rke III";
+	description 		=	"Steintafel der Stärke III";
 	on_state[0]			=   Use_StrStonePlate3;
 	visual 				=	"ItMi_StonePlate_PowerUp_01.3DS";	 
 };
@@ -559,7 +559,7 @@ func void Use_TwoHStonePlate3 ()
 //------------------------------------------------------------------------------------------
 instance ItWr_BowStonePlate1_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate //Joly: in NW verteilt
 {
-	description 		=	"Steintafel des BogenschÃ¼tzen I";
+	description 		=	"Steintafel des Bogenschützen I";
 	on_state[0]			=   Use_BowStonePlate1;
 	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
 };
@@ -570,7 +570,7 @@ func void Use_BowStonePlate1 ()
 };
 instance ItWr_BowStonePlate2_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate 
 {
-	description 		=	"Steintafel des BogenschÃ¼tzen II";
+	description 		=	"Steintafel des Bogenschützen II";
 	on_state[0]			=   Use_BowStonePlate2;
 	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
 };
@@ -581,7 +581,7 @@ func void Use_BowStonePlate2 ()
 };
 instance ItWr_BowStonePlate3_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate 
 {
-	description 		=	"Steintafel des BogenschÃ¼tzen III";
+	description 		=	"Steintafel des Bogenschützen III";
 	on_state[0]			=   Use_BowStonePlate3;
 	visual 				=	"ItMi_StonePlate_PowerUp_03.3DS";	 
 };
@@ -595,7 +595,7 @@ func void Use_BowStonePlate3 ()
 //------------------------------------------------------------------------------------------
 instance ItWr_CrsBowStonePlate1_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate //Joly: in NW verteilt
 {
-	description 		=	"Steintafel des ArmbrustschÃ¼tzen I";
+	description 		=	"Steintafel des Armbrustschützen I";
 	on_state[0]			=   Use_CrsBowStonePlate1;
 	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
 };
@@ -606,7 +606,7 @@ func void Use_CrsBowStonePlate1 ()
 };
 instance ItWr_CrsBowStonePlate2_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate 
 {
-	description 		=	"Steintafel des ArmbrustschÃ¼tzen II";
+	description 		=	"Steintafel des Armbrustschützen II";
 	on_state[0]			=   Use_CrsBowStonePlate2;
 	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
 };
@@ -617,7 +617,7 @@ func void Use_CrsBowStonePlate2 ()
 };
 instance ItWr_CrsBowStonePlate3_Addon (Prototype_StonePlate)//Joly:neue Instancen auch unten eintragen!!!!!!!!!!!!!!!C_ScHasMagicStonePlate 
 {
-	description 		=	"Steintafel des ArmbrustschÃ¼tzen III";
+	description 		=	"Steintafel des Armbrustschützen III";
 	on_state[0]			=   Use_CrsBowStonePlate3;
 	visual 				=	"ItMi_StonePlate_PowerUp_04.3DS";	 
 };

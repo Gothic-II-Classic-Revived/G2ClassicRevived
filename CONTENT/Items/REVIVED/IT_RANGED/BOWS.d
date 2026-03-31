@@ -533,7 +533,7 @@ INSTANCE ITRW_REVIVED_BOW_WAR_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_WAR_04 (C_Item)
 {
-	name 				=	"DÃ¤monenbogen";
+	name 				=	"Dämonenbogen";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -705,7 +705,7 @@ INSTANCE ITRW_REVIVED_BOW_DIEGO (C_Item)
 	visual 				= "ItRwLongbow.mms";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Diego";
+	TEXT[0]				=	"Es gehört Diego";
 	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -732,7 +732,7 @@ INSTANCE ITRW_REVIVED_BOW_WOLF (C_Item)
 	visual 				=	"ItRwLongbow.mms";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Wolf";
+	TEXT[0]				=	"Es gehört Wolf";
 	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -759,7 +759,7 @@ INSTANCE ITRW_REVIVED_BOW_CAVALORN (C_Item)
 	visual 				=	"ItRw_Bow_Small_02.mms";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Cavalorn";
+	TEXT[0]				=	"Es gehört Cavalorn";
 	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -786,7 +786,7 @@ INSTANCE ITRW_REVIVED_BOW_BOSPER (C_Item)
 	visual 				=	"ItRw_Bow_Small_02.mms";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Bosper";
+	TEXT[0]				=	"Es gehört Bosper";
 	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;

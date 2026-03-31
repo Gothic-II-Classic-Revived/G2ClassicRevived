@@ -84,8 +84,8 @@ FUNC INT DIA_Gorn_DI_Teach_Condition()
  
 FUNC VOID DIA_Gorn_DI_Teach_Info()
 {	
-	AI_Output (other, self , 	"DIA_Gorn_DI_Teach_15_00"); //I need training.
-	AI_Output (self, other, 	"DIA_Gorn_DI_Teach_12_01"); //Can't hurt.
+	AI_Output (other, self , 	"DIA_Gorn_DI_Teach_15_00"); //Ich brauche Training.
+	AI_Output (self, other, 	"DIA_Gorn_DI_Teach_12_01"); //Schaden kann's nicht.
 	
 	Info_ClearChoices 	(DIA_Gorn_DI_Teach);
 	Info_AddChoice 		(DIA_Gorn_DI_Teach,	DIALOG_BACK		,DIA_Gorn_DI_Teach_Back);
@@ -97,7 +97,7 @@ FUNC VOID DIA_Gorn_DI_Teach_2H_1 ()
 {
 	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 100))
 	{
-		AI_Output(self,other,"DIA_Gorn_DI_Teach_2H_1_12_00"); //Well. You used to be better than that.
+		AI_Output(self,other,"DIA_Gorn_DI_Teach_2H_1_12_00"); //Na ja. Das hat bei dir aber schon besser ausgesehen.
 	};
 	Info_ClearChoices 	(DIA_Gorn_DI_Teach);
 	Info_AddChoice 		(DIA_Gorn_DI_Teach,	DIALOG_BACK		,DIA_Gorn_DI_Teach_Back);
@@ -109,7 +109,7 @@ FUNC VOID DIA_Gorn_DI_Teach_2H_5 ()
 {
 	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 100))
 	{
-		AI_Output(self,other,"DIA_Gorn_DI_Teach_2H_5_12_00"); //You have to hold your weapon higher. A blind man could get through your guard with his cane.
+		AI_Output(self,other,"DIA_Gorn_DI_Teach_2H_5_12_00"); //Du musst die Waffe höher halten. Durch deine Deckung kommt ja ein Blinder mit 'nem Krückstock.
 	};
 	Info_ClearChoices 	(DIA_Gorn_DI_Teach);
 	Info_AddChoice 		(DIA_Gorn_DI_Teach,	DIALOG_BACK		,DIA_Gorn_DI_Teach_Back);
@@ -147,34 +147,34 @@ func int DIA_Gorn_DI_UndeadDragonDead_Condition ()
 var int DIA_Gorn_DI_UndeadDragonDead_OneTime;
 func void DIA_Gorn_DI_UndeadDragonDead_Info ()
 {
-	AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_00"); //You stayed with the ship?
-	AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_01"); //Sure I did. Just imagine what we'd do if it weren't there any more.
+	AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_00"); //Du bist beim Schiff geblieben?
+	AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_01"); //Klar. Stell dir vor, es wäre jetzt nicht mehr da.
 
 	if (DIA_Gorn_DI_UndeadDragonDead_OneTime == FALSE)
 		{
 			if (hero.guild == GIL_DJG)
 			{
-				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_02"); //Now what happens?
-				AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_03"); //Nothing more. I want to go home.
-				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_04"); //(laughs) Home? Where's that? As far as I know, there's no such thing for you.
-				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_05"); //Let me make a suggestion. We storm the next tavern and drink ourselves senseless.
-				AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_06"); //Mmh. Maybe.
-				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_07"); //Hey, come off it, man. It's over.
+				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_02"); //Was passiert denn jetzt noch?
+				AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_03"); //Gar nichts mehr. Ich will nach Hause.
+				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_04"); //(lacht) Nach Hause? Wo ist das? So, wie ich dich kenne, gibt es so etwas für dich nicht.
+				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_05"); //Ich mache dir einen Vorschlag. Wir stürmen die nächste Taverne, und werden uns erstmal sinnlos besaufen.
+				AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_06"); //Mmh. Vielleicht.
+				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_07"); //Hey, komm wieder runter, Mann. Es ist vorbei.
 			};
 			DIA_Gorn_DI_UndeadDragonDead_OneTime = TRUE;
 		};
 	
 	if (Npc_KnowsInfo(other, DIA_Biff_DI_plunder))
 			{
-				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_08"); //Somebody still needs to tell Biff, otherwise he'll rot on this island.
+				AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_08"); //Jemand muss nur noch Biff Bescheid sagen, sonst vergammelt er noch auf dieser Insel.
 
 				if (Npc_IsDead(Biff_DI)== FALSE)
 					{
-						AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_09"); //He'll be here in time.
+						AI_Output			(other ,self, "DIA_Gorn_DI_UndeadDragonDead_15_09"); //Der kommt schon noch rechtzeitig.
 					};
 			};			
 	
-	AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_10"); //There's nothing left here for us. Tell the captain to clear the ship.
+	AI_Output			(self ,other, "DIA_Gorn_DI_UndeadDragonDead_12_10"); //Hier gibt es nichts mehr zu holen für uns. Sag dem Kapitän, er soll das Schiff klar machen.
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Start");
 };

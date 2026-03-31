@@ -43,7 +43,7 @@ FUNC INT DIA_Dragomir_Hello_Condition()
 FUNC VOID DIA_Dragomir_Hello_Info()
 {
 	AI_Output (self,other,"DIA_Dragomir_Hello_12_00"); //Soweit von zu Hause noch unterwegs?
-	AI_Output (self,other,"DIA_Dragomir_Hello_12_01"); //Hier drauÃŸen musst du vorsichtig sein, besonders, wenn du alleine unterwegs bist.
+	AI_Output (self,other,"DIA_Dragomir_Hello_12_01"); //Hier draußen musst du vorsichtig sein, besonders, wenn du alleine unterwegs bist.
 };		 
 	
 // ***********************************************************
@@ -56,7 +56,7 @@ INSTANCE DIA_Dragomir_OutHere   (C_INFO)
 	condition   = DIA_Dragomir_OutHere_Condition;
 	information = DIA_Dragomir_OutHere_Info;
 	permanent   = FALSE;
-	description = "Was machst du hier drauÃŸen?";
+	description = "Was machst du hier draußen?";
 };
 FUNC INT DIA_Dragomir_OutHere_Condition()
 {
@@ -64,11 +64,11 @@ FUNC INT DIA_Dragomir_OutHere_Condition()
 };
 FUNC VOID DIA_Dragomir_OutHere_Info()
 {
-	AI_Output (other,self ,"DIA_Dragomir_OutHere_15_00"); //Was machst du hier drauÃŸen?
+	AI_Output (other,self ,"DIA_Dragomir_OutHere_15_00"); //Was machst du hier draußen?
 	AI_Output (self ,other,"DIA_Dragomir_OutHere_12_01"); //Na ja, die Taverne ist mir zu teuer, deshalb habe ich mich hier niedergelassen.
 	AI_Output (self ,other,"DIA_Dragomir_OutHere_12_02"); //Die vorherigen Bewohner brauchen es anscheinend nicht mehr.
 	AI_Output (other,self ,"DIA_Dragomir_Settlers_15_00"); //Wer waren die Bewohner dieses Lagers?
-	AI_Output (self ,other,"DIA_Dragomir_Settlers_12_01"); //Keine Ahnung, wahrscheinlich irgendwelche JÃ¤ger. Vermutlich ist es ihnen hier drauÃŸen zu gefÃ¤hrlich geworden.
+	AI_Output (self ,other,"DIA_Dragomir_Settlers_12_01"); //Keine Ahnung, wahrscheinlich irgendwelche Jäger. Vermutlich ist es ihnen hier draußen zu gefährlich geworden.
 };
 
 // ***********************************************************
@@ -81,7 +81,7 @@ INSTANCE DIA_Dragomir_Dangerous   (C_INFO)
 	condition   = DIA_Dragomir_Dangerous_Condition;
 	information = DIA_Dragomir_Dangerous_Info;
 	permanent   = FALSE;
-	description = "Ist es hier drauÃŸen nicht zu gefÃ¤hrlich?";
+	description = "Ist es hier draußen nicht zu gefährlich?";
 };
 FUNC INT DIA_Dragomir_Dangerous_Condition()
 {
@@ -92,11 +92,11 @@ FUNC INT DIA_Dragomir_Dangerous_Condition()
 };
 FUNC VOID DIA_Dragomir_Dangerous_Info()
 {
-	AI_Output (other,self ,"DIA_Dragomir_Dangerous_15_00"); //Ist es hier drauÃŸen nicht zu gefÃ¤hrlich?
+	AI_Output (other,self ,"DIA_Dragomir_Dangerous_15_00"); //Ist es hier draußen nicht zu gefährlich?
 	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_01"); //Na ja, nicht wenn man sich verteidigen kann. Meine Armbrust hat mir schon so manchen guten Dienst erwiesen.
-	AI_Output (other,self ,"DIA_Dragomir_Dangerous_15_02"); //Besonders groÃŸ ist sie ja nicht.
-	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_03"); //Aber tÃ¶dlich, wenn man weiÃŸ, wie man mit ihr umgehen muss. Ich hatte schon mal eine GrÃ¶ÃŸere. Die ist mir leider abhanden gekommen.
-	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_04"); //Ich hatte mich zu weit nach Norden in die Berge vorgewagt. Es gibt dort einen groÃŸen Steinkreis mit einem Opferaltar.
+	AI_Output (other,self ,"DIA_Dragomir_Dangerous_15_02"); //Besonders groß ist sie ja nicht.
+	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_03"); //Aber tödlich, wenn man weiß, wie man mit ihr umgehen muss. Ich hatte schon mal eine Größere. Die ist mir leider abhanden gekommen.
+	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_04"); //Ich hatte mich zu weit nach Norden in die Berge vorgewagt. Es gibt dort einen großen Steinkreis mit einem Opferaltar.
 	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_05"); //Als ich dort oben Scavenger jagte, kamen diese ekelhaften untoten Wesen aus dem Wald und griffen mich an.
 	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_06"); //Alles, was ich noch tun konnte, war, um mein Leben zu rennen.
 	AI_Output (self ,other,"DIA_Dragomir_Dangerous_12_07"); //Dabei ist mir meine Armbrust aus der Hand geglitten. Ich wette, sie liegt noch heute da oben bei dem seltsamen Steinkreis im Norden.
@@ -133,10 +133,10 @@ FUNC VOID DIA_Dragomir_Armbrust_Info()
 {
 	AI_Output (other,self ,"DIA_Dragomir_Armbrust_15_00"); //Hier. Ich habe deine Armbrust gefunden.
 	B_GiveInvItems (other, self, ITRW_REVIVED_CROSSBOW_DRAGOMIR, 1);					
-	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_01"); //Das ist tatsÃ¤chlich meine. Sag nicht, du bist oben bei dem Steinkreis gewesen.
+	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_01"); //Das ist tatsächlich meine. Sag nicht, du bist oben bei dem Steinkreis gewesen.
 	AI_Output (other,self ,"DIA_Dragomir_Armbrust_15_02"); //Und ob!
-	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_03"); //Ganz schÃ¶n leichtsinnig. Wie auch immer, ich danke dir.
-	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_04"); //Ich werde dir diese Tat natÃ¼rlich belohnen. Ich hoffe, das ist genug.
+	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_03"); //Ganz schön leichtsinnig. Wie auch immer, ich danke dir.
+	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_04"); //Ich werde dir diese Tat natürlich belohnen. Ich hoffe, das ist genug.
 
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					
@@ -181,7 +181,7 @@ FUNC VOID DIA_Dragomir_Learn_Info()
 	}
 	else if (MIS_DragomirsArmbrust == LOG_SUCCESS)
 	{
-		AI_Output (self ,other,"DIA_Dragomir_Learn_Here_12_01"); //Gut, von mir aus kÃ¶nnen wir sofort anfangen.
+		AI_Output (self ,other,"DIA_Dragomir_Learn_Here_12_01"); //Gut, von mir aus können wir sofort anfangen.
 		
 		Dragomir_TeachPlayer = TRUE;
 		Info_ClearChoices (DIA_Dragomir_Learn);
@@ -193,7 +193,7 @@ FUNC VOID DIA_Dragomir_Learn_Info()
 		B_Say_Gold (self,other,Dragomir_TeachingCost);
 		
 		Info_ClearChoices (DIA_Dragomir_Learn);
-		Info_AddChoice (DIA_Dragomir_Learn,"Vielleicht spÃ¤ter.",DIA_Dragomir_Learn_Later);
+		Info_AddChoice (DIA_Dragomir_Learn,"Vielleicht später.",DIA_Dragomir_Learn_Later);
 		if (Npc_HasItems (other,ItMi_Gold) >= Dragomir_TeachingCost)
 		{ 
 			Info_AddChoice (DIA_Dragomir_Learn,"Hier hast du dein Gold.",DIA_Dragomir_Learn_Here);
@@ -203,7 +203,7 @@ FUNC VOID DIA_Dragomir_Learn_Info()
 
 FUNC VOID DIA_Dragomir_Learn_Later()
 {
-	AI_Output (other,self ,"DIA_Dragomir_Learn_Later_15_00"); //Vielleicht spÃ¤ter.
+	AI_Output (other,self ,"DIA_Dragomir_Learn_Later_15_00"); //Vielleicht später.
 	Info_ClearChoices (DIA_Dragomir_Learn);
 };
 
@@ -211,7 +211,7 @@ FUNC VOID DIA_Dragomir_Learn_Here()
 {
 	AI_Output (other,self ,"DIA_Dragomir_Learn_Here_15_00"); //Hier hast du dein Gold.
 	B_GiveInvItems (other,self,ItMi_Gold,Dragomir_TeachingCost);
-	AI_Output (self ,other,"DIA_Dragomir_Learn_Here_12_01"); //Gut, von mir aus kÃ¶nnen wir sofort anfangen.
+	AI_Output (self ,other,"DIA_Dragomir_Learn_Here_12_01"); //Gut, von mir aus können wir sofort anfangen.
 	
 	Dragomir_TeachPlayer = TRUE;
 	Info_ClearChoices (DIA_Dragomir_Learn);

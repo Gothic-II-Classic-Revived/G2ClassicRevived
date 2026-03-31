@@ -14,7 +14,7 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC1 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Wassermagier";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -33,7 +33,7 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC2 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Wassermagier (2. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -52,7 +52,7 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC3 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Wassermagier (3. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -71,7 +71,7 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC4 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Wassermagier (4. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -91,7 +91,7 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC5 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Wassermagier (5. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -111,7 +111,7 @@ INSTANCE ITWR_Addon_Runemaking_KDW_CIRC6 (C_ITEM)
 	visual 					=	"ItWr_Book_02_04.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Wassermagier (6. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -137,7 +137,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC1 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Feuermagier (1. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -155,7 +155,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC2 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Feuermagier (2. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -173,7 +173,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC3 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Feuermagier (3. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -191,7 +191,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC4 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Feuermagier (4. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -209,7 +209,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC5 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Feuermagier (5. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;
@@ -227,7 +227,7 @@ INSTANCE ITWR_Addon_Runemaking_KDF_CIRC6 (C_ITEM)
 	visual 					=	"ItWr_Book_02_03.3ds";  					//BUCH VARIATIONEN: ItWr_Book_01.3DS , ItWr_Book_02_01.3DS, ItWr_Book_02_02.3DS, ItWr_Book_02_03.3DS, ItWr_Book_02_04.3DS, ItWr_Book_02_05.3DS
 	material 				=	MAT_LEATHER;
 
-	scemeName				=	"Karte";
+	scemeName				=	"MAP";
 	description				= 	"Runenbuch der Feuermagier (6. Kreis)";
 	TEXT[5]					= 	NAME_Value;
 	COUNT[5]				= 	value;

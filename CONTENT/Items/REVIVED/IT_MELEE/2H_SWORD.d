@@ -97,13 +97,13 @@ const int	REV_Condition_2H_Sword_Paladin_03	=	150;
 const int	REV_Range_2H_Sword_Paladin_03		=	130;
 const int	REV_Value_2H_Sword_Paladin_03		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Innos_01		=	90;
-const int	REV_Condition_2H_Sword_Innos_01		=	110;
+const int	REV_Damage_2H_Sword_Innos_01		=	100;
+const int	REV_Condition_2H_Sword_Innos_01		=	120;
 const int	REV_Range_2H_Sword_Innos_01			=	140;
-const int	REV_Value_2H_Sword_Innos_01			=	1000;
+const int	REV_Value_2H_Sword_Innos_01			=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Innos_02		=	180;
-const int	REV_Condition_2H_Sword_Innos_02		=	160;
+const int	REV_Condition_2H_Sword_Innos_02		=	120;
 const int	REV_Range_2H_Sword_Innos_02			=	140;
 const int	REV_Value_2H_Sword_Innos_02			=	5000;
 //******************************************************************//
@@ -112,7 +112,7 @@ const int	REV_Condition_2H_Demonslayer		=	160;
 const int	REV_Range_2H_Demonslayer			=	140;
 const int	REV_Value_2H_Demonslayer			=	5000;
 //******************************************************************//
-const int	REV_Damage_2H_Uriziel_01			=	30;
+const int	REV_Damage_2H_Uriziel_01			=	100;
 const int	REV_Condition_2H_Uriziel_01			=	140;
 const int	REV_Range_2H_Uriziel_01				=	120;
 const int	REV_Value_2H_Uriziel_01				=	5000;
@@ -130,7 +130,7 @@ const int	REV_Range_2H_Sword_Pirate_01		=	100;
 const int	REV_Value_2H_Sword_Pirate_01		=	3400;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Hacker_01		=	60;
+const int	REV_Damage_2H_Sword_Hacker_01		=	80;
 const int	REV_Condition_2H_Sword_Hacker_01	=	70;
 const int	REV_Range_2H_Sword_Hacker_01		=	105;
 const int	REV_Value_2H_Sword_Hacker_01		=	1500;
@@ -141,20 +141,20 @@ const int	REV_Range_2H_Sword_Hacker_02		=	105;
 const int	REV_Value_2H_Sword_Hacker_02		=	3500;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Thorus			=	0;
-const int	REV_Condition_2H_Sword_Thorus		=	0;
-const int	REV_Range_2H_Sword_Thorus			=	0;
-const int	REV_Value_2H_Sword_Thorus			=	0;
+const int	REV_Damage_2H_Sword_Thorus			=	120;
+const int	REV_Condition_2H_Sword_Thorus		=	100;
+const int	REV_Range_2H_Sword_Thorus			=	120;
+const int	REV_Value_2H_Sword_Thorus			=	3000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Angar			=	0;
-const int	REV_Condition_2H_Sword_Angar		=	0;
-const int	REV_Range_2H_Sword_Angar			=	0;
-const int	REV_Value_2H_Sword_Angar			=	0;
+const int	REV_Damage_2H_Sword_Angar			=	120;
+const int	REV_Condition_2H_Sword_Angar		=	100;
+const int	REV_Range_2H_Sword_Angar			=	120;
+const int	REV_Value_2H_Sword_Angar			=	3000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Rod				=	60;
 const int	REV_Condition_2H_Sword_Rod			=	40; 
 const int	REV_Range_2H_Sword_Rod				=	130;
-const int	REV_Value_2H_Sword_Rod				=	60;
+const int	REV_Value_2H_Sword_Rod				=	100;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Smith_01		=	105;
@@ -180,7 +180,7 @@ const int	REV_Value_2H_Sword_Smith_04			=	4000;
 const int	REV_Damage_2H_Sword_Smith_05		=	170;
 const int	REV_Condition_2H_Sword_Smith_05		=	150;
 const int	REV_Range_2H_Sword_Smith_05			=	130;
-const int	REV_Value_2H_Sword_Smith_05			=	3800;
+const int	REV_Value_2H_Sword_Smith_05			=	4800;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_01			=	120;
@@ -191,22 +191,22 @@ const int	REV_Value_2H_Sword_Ore_01			=	2800;
 const int	REV_Damage_2H_Sword_Ore_02			=	140;
 const int	REV_Condition_2H_Sword_Ore_02		=	120;
 const int	REV_Range_2H_Sword_Ore_02			=	140;
-const int	REV_Value_2H_Sword_Ore_02			=	400;
+const int	REV_Value_2H_Sword_Ore_02			=	4000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_03			=	160;
 const int	REV_Condition_2H_Sword_Ore_03		=	140;
 const int	REV_Range_2H_Sword_Ore_03			=	140;
-const int	REV_Value_2H_Sword_Ore_03			=	450;
+const int	REV_Value_2H_Sword_Ore_03			=	4500;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_04			=	200;
 const int	REV_Condition_2H_Sword_Ore_04		=	180;
 const int	REV_Range_2H_Sword_Ore_04			=	140;
-const int	REV_Value_2H_Sword_Ore_04			=	440;
+const int	REV_Value_2H_Sword_Ore_04			=	4400;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_05			=	200;
 const int	REV_Condition_2H_Sword_Ore_05		=	180;
 const int	REV_Range_2H_Sword_Ore_05			=	140;
-const int	REV_Value_2H_Sword_Ore_05			=	440;
+const int	REV_Value_2H_Sword_Ore_05			=	6400;
 
 
 
@@ -215,7 +215,7 @@ const int	REV_Value_2H_Sword_Ore_05			=	440;
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_SWORD_OLD_01 (C_Item)
 {	
-	name 				=	"Rostiger ZweihÃ¤nder";
+	name 				=	"Rostiger Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -240,7 +240,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_OLD_01 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_01 (C_Item)
 {	
-	name 				=	"Leichter ZweihÃ¤nder";
+	name 				=	"Leichter Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -265,7 +265,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_02 (C_Item)
 {	
-	name 				=	"HÃ¼terklinge";
+	name 				=	"Hüterklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -290,7 +290,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_02 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_03 (C_Item)
 {	
-	name 				=	"SÃ¶ldnerklinge";
+	name 				=	"Söldnerklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -315,7 +315,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_03 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_04 (C_Item)
 {	
-	name 				=	"KÃ¶nigsklinge";
+	name 				=	"Königsklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -340,7 +340,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_05 (C_Item)
 {	
-	name 				=	"DÃ¤monenklinge";
+	name 				=	"Dämonenklinge";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -365,7 +365,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_LIGHT_05 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_01 (C_Item)
 {	
-	name 				=	"ZweihÃ¤nder";
+	name 				=	"Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -454,7 +454,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_04 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_04;
-	visual 				=	"REV_2H_SWORD_02.3DS";
+	visual 				=	"REV_2H_SWORD_03.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
@@ -490,7 +490,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_05 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_01 (C_Item)
 {	
-	name 				=	"Schwerer ZweihÃ¤nder";
+	name 				=	"Schwerer Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -639,7 +639,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_THORUS (C_Item)
 	visual 				=	"ItMw_2H_Sword_01.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Thorus";
+	TEXT[0]				=	"Es gehört Thorus";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -666,7 +666,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ANGAR (C_Item)
 	visual 				=	"REV_2H_SWORD_02.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Cor Angar";
+	TEXT[0]				=	"Es gehört Cor Angar";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -675,7 +675,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ANGAR (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_ROD (C_Item)
 {
-	name 				=	"Rod's ZweihÃ¤nder";
+	name 				=	"Rod's Zweihänder";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -693,7 +693,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ROD (C_Item)
 	visual 				=	"REV_2H_SLD_SWORD_01.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Rod";
+	TEXT[0]				=	"Es gehört Rod";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -796,7 +796,7 @@ INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_01 (C_Item)
 	visual 				=	"REV_2H_SWORD_HEAVY_03.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"Tainted by ore baron Gomez";
+	TEXT[0]				=	"Von Erzbaron Gomez verunreinigt";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TaintedWeapon2H;
@@ -822,7 +822,7 @@ INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_02 (C_Item)
 	visual 				=	"REV_2H_SWORD_HEAVY_03.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"Purified using Tears of Innos";
+	TEXT[0]				=	"Mit Tränen von Innos gereinigt";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_BlessedWeapon2H;
@@ -831,7 +831,7 @@ INSTANCE ITMW_REVIVED_2H_INNOS_SWORD_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_DEMONSLAYER (C_Item) 
 {	
-	name 				=	"Schwerer DÃ¤monentÃ¶ter";
+	name 				=	"Schwerer Dämonentöter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -855,7 +855,7 @@ INSTANCE ITMW_REVIVED_2H_DEMONSLAYER (C_Item)
 };
 INSTANCE ITMW_REVIVED_2H_DEMONSLAYER_02 (C_Item) 
 {	
-	name 				=	"Schwerer DÃ¤monentÃ¶ter";
+	name 				=	"Schwerer Dämonentöter";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -897,7 +897,7 @@ INSTANCE ITMW_REVIVED_2H_URIZIEL_01 (C_Item)
 	visual 				=	"ItMw_2H_Sword_Sleeper_01.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"The magic gem was removed from the sword.";
+	TEXT[0]				=	"Der magische Edelstein wurde aus dem Schwert entfernt.";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -924,7 +924,7 @@ INSTANCE ITMW_REVIVED_2H_URIZIEL_02 (C_Item)
 	effect				=	"SPELLFX_FIRESWORD";
 
 	description			= 	name;
-	TEXT[0]				= 	"The sword is magically charged.";
+	TEXT[0]				= 	"Das Schwert ist magisch aufgeladen.";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;

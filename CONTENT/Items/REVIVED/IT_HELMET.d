@@ -143,7 +143,7 @@ INSTANCE ITHE_REVIVED_KNIGHT(C_Item)
 // ******************************************************
 INSTANCE ITHE_REVIVED_DJG_M(C_Item)
 {
-	name					=	"Drachenj√§gerhelm";
+	name					=	"Drachenj‰gerhelm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -169,7 +169,7 @@ INSTANCE ITHE_REVIVED_DJG_M(C_Item)
 
 INSTANCE ITHE_REVIVED_DJG_H(C_Item)
 {
-	name					=	"Drachenj√§gerhelm";
+	name					=	"Drachenj‰gerhelm";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;
@@ -195,7 +195,7 @@ INSTANCE ITHE_REVIVED_DJG_H(C_Item)
 // ******************************************************
 INSTANCE ITHE_REVIVED_PIR(C_Item)
 {
-	name					=	"Kapit√§nsm√ºtze";
+	name					=	"Kapit‰nsm¸tze";
 	
 	mainflag				=	ITEM_KAT_ARMOR;
 	flags					=	0;

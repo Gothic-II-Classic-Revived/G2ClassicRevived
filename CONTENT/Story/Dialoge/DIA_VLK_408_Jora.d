@@ -48,7 +48,7 @@ func int DIA_Jora_Sperre_Condition ()
 };
 func void DIA_Jora_Sperre_Info ()
 {
-	AI_Output (self, other, "DIA_Jora_Sperre_08_00"); //Du bist ein StrÃ¤fling aus der Minenkolonie. Dir werde ich nichts verkaufen!
+	AI_Output (self, other, "DIA_Jora_Sperre_08_00"); //Du bist ein Sträfling aus der Minenkolonie. Dir werde ich nichts verkaufen!
 	AI_StopProcessInfos (self);	 
 };
 ///////////////////////////////////////////////////////////////////////
@@ -96,10 +96,10 @@ func int DIA_Jora_GREET_Condition ()
 };
 func void DIA_Jora_GREET_Info ()
 {
-	AI_Output (self, other, "DIA_Jora_GREET_08_00"); //Innos zum GruÃŸ, Fremder, wenn du ein gutes Sortiment fÃ¼r Reisende suchst, dann bist du bei mir richtig.
+	AI_Output (self, other, "DIA_Jora_GREET_08_00"); //Innos zum Gruß, Fremder, wenn du ein gutes Sortiment für Reisende suchst, dann bist du bei mir richtig.
 	AI_Output (self, other, "DIA_Jora_GREET_08_01"); //Aber ich warne dich: Wenn du vorhast, dich bei mir zu bedienen, ohne zu bezahlen, rufe ich die Stadtwache!
 	AI_Output (other, self, "DIA_Jora_GREET_15_02"); //Moment mal, sehe ich etwa aus wie ein Dieb?
-	AI_Output (self, other, "DIA_Jora_GREET_08_03"); //(verÃ¤chtlich) Pah! Du wÃ¤rst nicht der Erste, der sich heute an meinen Sachen bereichert.
+	AI_Output (self, other, "DIA_Jora_GREET_08_03"); //(verächtlich) Pah! Du wärst nicht der Erste, der sich heute an meinen Sachen bereichert.
 
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
 	B_LogEntry (Topic_CityTrader,"Jora handelt mit Waren aller Art am Marktplatz.");
@@ -124,11 +124,11 @@ func int DIA_Jora_Bestohlen_Condition ()
 func void DIA_Jora_Bestohlen_Info ()
 {
 	AI_Output (other, self, "DIA_Jora_Bestohlen_15_00"); //Du bist bestohlen worden?
-	AI_Output (self, other, "DIA_Jora_Bestohlen_08_01"); //Beweisen kann ich's nicht. Der Typ war verdammt clever. Hat sich vorgestellt als Rengaru - wenn das Ã¼berhaupt sein richtiger Name war.
+	AI_Output (self, other, "DIA_Jora_Bestohlen_08_01"); //Beweisen kann ich's nicht. Der Typ war verdammt clever. Hat sich vorgestellt als Rengaru - wenn das überhaupt sein richtiger Name war.
 	AI_Output (self, other, "DIA_Jora_Bestohlen_08_02"); //Treibt sich schon die ganzen letzten Tage am Marktplatz rum.
 	if (Npc_GetDistToWP (self, "NW_CITY_MERCHANT_PATH_38") <= 500)
 	{
-		AI_Output (self, other, "DIA_Jora_Bestohlen_08_03"); //Und jeden Abend sÃ¤uft er sich einen an am Bierstand die StraÃŸe runter. Ich wette der Mistkerl versÃ¤uft MEIN Geld!
+		AI_Output (self, other, "DIA_Jora_Bestohlen_08_03"); //Und jeden Abend säuft er sich einen an am Bierstand die Straße runter. Ich wette der Mistkerl versäuft MEIN Geld!
 	};
 	AI_Output (self, other, "DIA_Jora_Bestohlen_08_04"); //Hab nur mal einen Moment nicht aufgepasst, und mein Geldbeutel war weg!
 };
@@ -140,7 +140,7 @@ func void DIA_Jora_Bestohlen_Info ()
 
 func void B_Jora_GoldForClue()
 {
-	AI_Output (self ,other,"DIA_Jora_Add_08_04"); //Pass auf - wenn du mir mein Gold von diesem Rengaru wiederbesorgst, werde ich dir sagen, was ich weiÃŸ.
+	AI_Output (self ,other,"DIA_Jora_Add_08_04"); //Pass auf - wenn du mir mein Gold von diesem Rengaru wiederbesorgst, werde ich dir sagen, was ich weiß.
 };
 
 
@@ -154,7 +154,7 @@ instance DIA_Jora_HolDeinGold	(C_INFO)
 	condition	 = 	DIA_Jora_HolDeinGold_Condition;
 	information	 = 	DIA_Jora_HolDeinGold_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Ich kÃ¶nnte dir dein Gold wiederbeschaffen...";
+	description	 = 	"Ich könnte dir dein Gold wiederbeschaffen...";
 };
 func int DIA_Jora_HolDeinGold_Condition ()
 {
@@ -165,7 +165,7 @@ func int DIA_Jora_HolDeinGold_Condition ()
 };
 func void DIA_Jora_HolDeinGold_Info ()
 {
-	AI_Output (other, self, "DIA_Jora_HolDeinGold_15_00"); //Ich kÃ¶nnte dir dein Gold wiederbeschaffen...
+	AI_Output (other, self, "DIA_Jora_HolDeinGold_15_00"); //Ich könnte dir dein Gold wiederbeschaffen...
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_08_01"); //(misstrauisch) So? Und warum solltest du das tun?
 
 	Info_ClearChoices (DIA_Jora_HolDeinGold);
@@ -184,14 +184,14 @@ func void DIA_Jora_HolDeinGold_Info ()
 func void DIA_Jora_HolDeinGold_ToOV()
 {
 	AI_Output (other, self,"DIA_Jora_Add_15_00"); //Kommt drauf an - kannst du mir helfen ins obere Viertel zu kommen?
-	AI_Output (self, other, "DIA_Jora_HolDeinGold_08_03"); //(lacht) Da hast du dir den Falschen ausgesucht. Ich komme von auÃŸerhalb - so wie die meisten HÃ¤ndler hier am Marktplatz.
-	AI_Output (self ,other,"DIA_Jora_Add_08_01"); //Wenn du ins obere Viertel willst, geh zu den ansÃ¤ssigen HÃ¤ndlern in der Unterstadt.
+	AI_Output (self, other, "DIA_Jora_HolDeinGold_08_03"); //(lacht) Da hast du dir den Falschen ausgesucht. Ich komme von außerhalb - so wie die meisten Händler hier am Marktplatz.
+	AI_Output (self ,other,"DIA_Jora_Add_08_01"); //Wenn du ins obere Viertel willst, geh zu den ansässigen Händlern in der Unterstadt.
 };
 
 func void DIA_Jora_HolDeinGold_GHDG()
 {
 	AI_Output (other, self,"DIA_Jora_Add_15_02"); //Ich suche Hinweise auf die Diebesgilde!
-	AI_Output (self ,other,"DIA_Jora_Add_08_03"); //Kann schon sein, daÃŸ ich dir weiterhelfen kann.
+	AI_Output (self ,other,"DIA_Jora_Add_08_03"); //Kann schon sein, daß ich dir weiterhelfen kann.
 	B_Jora_GoldForClue();
 
 	Info_ClearChoices (DIA_Jora_HolDeinGold);
@@ -203,7 +203,7 @@ func void DIA_Jora_HolDeinGold_GHDG()
 func void DIA_Jora_HolDeinGold_WillBelohnung()
 {
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_WillBelohnung_15_00"); //Ich will einen Teil des Goldes als Belohnung!
-	AI_Output (self, other, "DIA_Jora_HolDeinGold_WillBelohnung_08_01"); //Sieh erstmal zu, dass du mein Geld wiederbeschaffst. DANN unterhalten wir uns Ã¼ber deine Belohnung!
+	AI_Output (self, other, "DIA_Jora_HolDeinGold_WillBelohnung_08_01"); //Sieh erstmal zu, dass du mein Geld wiederbeschaffst. DANN unterhalten wir uns über deine Belohnung!
 	Info_ClearChoices (DIA_Jora_HolDeinGold);
 	Info_AddChoice (DIA_Jora_HolDeinGold,"Werd' sehen was ich rausfinden kann.",	DIA_Jora_HolDeinGold_DoIt);
 	Info_AddChoice (DIA_Jora_HolDeinGold,"Wieviel Geld war in dem Beutel?",			DIA_Jora_HolDeinGold_HowMuch);
@@ -220,14 +220,14 @@ func void DIA_Jora_HolDeinGold_Wache()
 func void DIA_Jora_HolDeinGold_HowMuch()
 {
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_HowMuch_15_00"); //Wieviel Geld war in dem Beutel?
-	AI_Output (self, other, "DIA_Jora_HolDeinGold_HowMuch_08_01"); //50 GoldstÃ¼cke - das ist 'ne verdammte Menge in diesen beschissenen Zeiten!
+	AI_Output (self, other, "DIA_Jora_HolDeinGold_HowMuch_08_01"); //50 Goldstücke - das ist 'ne verdammte Menge in diesen beschissenen Zeiten!
 };
 
 func void DIA_Jora_HolDeinGold_DoIt()
 {
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_DoIt_15_00"); //Werd' sehen was ich rausfinden kann.
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_01"); //Sei vorsichtig! Wenn du den Mistkerl einfach umhaust, werden die Stadtwachen eingreifen.
-	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_02"); //In letzter Zeit ging es hier ziemlich rau zu, und seit die Paladine da sind, greifen die Wachen bei SchlÃ¤gereien in der Stadt hart durch.
+	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_02"); //In letzter Zeit ging es hier ziemlich rau zu, und seit die Paladine da sind, greifen die Wachen bei Schlägereien in der Stadt hart durch.
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_03"); //Also lass dir was einfallen ...
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_DoIt_15_04"); //Werd ich.
 		
@@ -239,9 +239,9 @@ func void DIA_Jora_HolDeinGold_DoIt()
 	Log_CreateTopic (TOPIC_Jora,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Jora,LOG_RUNNING);
 	
-	B_LogEntry (TOPIC_Jora, "Ein Kerl namens Rengaru hat den HÃ¤ndler Jora bestohlen. Er treibt sich tagsÃ¼ber auf dem Marktplatz herum.");
-	B_LogEntry (TOPIC_Jora, "Ich soll Jora sein Gold zurÃ¼ckbringen.");
-	B_LogEntry (TOPIC_JoraDieb, "Rengaru hat den HÃ¤ndler Jora bestohlen. Wenn ich ihn stelle, gibt es vielleicht ein Kopfgeld fÃ¼r ihn.");
+	B_LogEntry (TOPIC_Jora, "Ein Kerl namens Rengaru hat den Händler Jora bestohlen. Er treibt sich tagsüber auf dem Marktplatz herum.");
+	B_LogEntry (TOPIC_Jora, "Ich soll Jora sein Gold zurückbringen.");
+	B_LogEntry (TOPIC_JoraDieb, "Rengaru hat den Händler Jora bestohlen. Wenn ich ihn stelle, gibt es vielleicht ein Kopfgeld für ihn.");
 
 	Info_ClearChoices 	(DIA_Jora_HolDeinGold);
 };
@@ -274,7 +274,7 @@ func void DIA_Jora_WegenDieb_Info ()
 	
 	if (Npc_IsDead (Rengaru))
 	{
-		Info_AddChoice (DIA_Jora_WegenDieb,"Nun, er hatte einen tÃ¶dlichen Unfall.",DIA_Jora_WegenDieb_Tot);
+		Info_AddChoice (DIA_Jora_WegenDieb,"Nun, er hatte einen tödlichen Unfall.",DIA_Jora_WegenDieb_Tot);
 	}
 	else if (Rengaru_InKnast == TRUE)
 	{	
@@ -307,7 +307,7 @@ func void DIA_Jora_WegenDieb_Entkommen()
 
 func void DIA_Jora_WegenDieb_ImKnast()
 {
-	AI_Output (other, self, "DIA_Jora_WegenDieb_ImKnast_15_00"); //Ja, ich habe ihn erwischt. Er wird die nÃ¤chste Zeit im GefÃ¤ngnis verbringen.
+	AI_Output (other, self, "DIA_Jora_WegenDieb_ImKnast_15_00"); //Ja, ich habe ihn erwischt. Er wird die nächste Zeit im Gefängnis verbringen.
 	AI_Output (self, other, "DIA_Jora_WegenDieb_ImKnast_08_01"); //Was ist mit meinem Gold?
 	Jora_Dieb = LOG_SUCCESS;
 	B_CheckLog();
@@ -316,7 +316,7 @@ func void DIA_Jora_WegenDieb_ImKnast()
 
 func void DIA_Jora_WegenDieb_Tot()
 {
-	AI_Output (other, self, "DIA_Jora_WegenDieb_Tot_15_00"); //Nun, er hatte einen tÃ¶dlichen Unfall.
+	AI_Output (other, self, "DIA_Jora_WegenDieb_Tot_15_00"); //Nun, er hatte einen tödlichen Unfall.
 	AI_Output (self, other, "DIA_Jora_WegenDieb_Tot_08_01"); //Dann wird er zumindest niemanden mehr bestehlen! Innos hat seine Gerechtigkeit walten lassen.
 	AI_Output (self, other, "DIA_Jora_WegenDieb_Tot_08_02"); //Wo ist mein Gold?
 	Jora_Dieb = LOG_SUCCESS;
@@ -326,7 +326,7 @@ func void DIA_Jora_WegenDieb_Tot()
 
 
 // *******************************************************
-// 					Gold zurckbringen
+// 					Gold zurückbringen
 // *******************************************************
 instance DIA_Jora_BringGold (C_INFO)
 {
@@ -335,7 +335,7 @@ instance DIA_Jora_BringGold (C_INFO)
 	condition	 = 	DIA_Jora_BringGold_Condition;
 	information	 = 	DIA_Jora_BringGold_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Hier hast du deine gestohlenen 50 GoldstÃ¼cke zurÃ¼ck.";
+	description	 = 	"Hier hast du deine gestohlenen 50 Goldstücke zurück.";
 };
 
 func int DIA_Jora_BringGold_Condition ()
@@ -348,7 +348,7 @@ func int DIA_Jora_BringGold_Condition ()
 };
 func void DIA_Jora_BringGold_Info ()
 {
-	AI_Output (other, self, "DIA_Jora_BringGold_15_00"); //Hier hast du deine gestohlenen 50 GoldstÃ¼cke zurÃ¼ck.
+	AI_Output (other, self, "DIA_Jora_BringGold_15_00"); //Hier hast du deine gestohlenen 50 Goldstücke zurück.
 	
 	if (B_GiveInvItems (other, self, itmi_gold, 50))
 	{
@@ -359,7 +359,7 @@ func void DIA_Jora_BringGold_Info ()
 	}
 	else
 	{
-		AI_Output (self, other,"DIA_Jora_BringGold_08_03"); //Hey, das sind keine 50 GoldstÃ¼cke! Willst du mich etwa auch bestehlen?
+		AI_Output (self, other,"DIA_Jora_BringGold_08_03"); //Hey, das sind keine 50 Goldstücke! Willst du mich etwa auch bestehlen?
 	};
 };
 
@@ -377,7 +377,7 @@ instance DIA_Jora_GHDgInfo (C_INFO)
 	condition	 = 	DIA_Jora_GHDgInfo_Condition;
 	information	 = 	DIA_Jora_GHDgInfo_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Was weiÃŸt du Ã¼ber die Diebesgilde?";
+	description	 = 	"Was weißt du über die Diebesgilde?";
 };
 
 func int DIA_Jora_GHDgInfo_Condition ()
@@ -391,7 +391,7 @@ func int DIA_Jora_GHDgInfo_Condition ()
 };
 func void DIA_Jora_GHDgInfo_Info ()
 {
-	AI_Output (other, self,"DIA_Jora_Add_15_05"); //Was weiÃŸt du Ã¼ber die Diebesgilde?
+	AI_Output (other, self,"DIA_Jora_Add_15_05"); //Was weißt du über die Diebesgilde?
 	if (Jora_Gold != LOG_SUCCESS)
 	{
 		B_Jora_GoldForClue();
@@ -399,11 +399,11 @@ func void DIA_Jora_GHDgInfo_Info ()
 	else
 	{
 		AI_Output (self ,other,"DIA_Jora_Add_08_06"); //Gut - pass auf - alles was ich dir jetzt sage, hast du nicht von mir, klar?
-		AI_Output (self ,other,"DIA_Jora_Add_08_07"); //In der Hafenkneipe hÃ¤ngen oft zwielichtige Gesellen herum.
-		AI_Output (self ,other,"DIA_Jora_Add_08_08"); //Ich wette, der Wirt weiÃŸ was...
-		AI_Output (self ,other,"DIA_Jora_Add_08_09"); //Wenn du vorhast die Diebe aufzuspÃ¼ren, sollest du mal mit IHM reden.
-		AI_Output (self ,other,"DIA_Jora_Add_08_10"); //Du kÃ¶nntest zum Beispiel so tun, als ob du ne krumme Tour durchziehen willst. Vielleicht geht er drauf ein.
-		AI_Output (self ,other,"DIA_Jora_Add_08_11"); //Aber sei bloÃŸ vorsichtig. Mit diesen Leuten ist garantiet nicht zu spaÃŸen...
+		AI_Output (self ,other,"DIA_Jora_Add_08_07"); //In der Hafenkneipe hängen oft zwielichtige Gesellen herum.
+		AI_Output (self ,other,"DIA_Jora_Add_08_08"); //Ich wette, der Wirt weiß was...
+		AI_Output (self ,other,"DIA_Jora_Add_08_09"); //Wenn du vorhast die Diebe aufzuspüren, sollest du mal mit IHM reden.
+		AI_Output (self ,other,"DIA_Jora_Add_08_10"); //Du könntest zum Beispiel so tun, als ob du ne krumme Tour durchziehen willst. Vielleicht geht er drauf ein.
+		AI_Output (self ,other,"DIA_Jora_Add_08_11"); //Aber sei bloß vorsichtig. Mit diesen Leuten ist garantiet nicht zu spaßen...
 		
 		Jora_GhdgHinweis = TRUE;
 	};
@@ -441,7 +441,7 @@ func void DIA_Jora_Belohnung_Info ()
 	
 	if (Npc_GetDistToWP (self, "NW_CITY_MERCHANT_PATH_38") <= 500)
 	{
-		AI_Output (self, other, "DIA_Jora_Belohnung_08_03"); //Ich muss mich jetzt wieder um meine Kunden kÃ¼mmern ...
+		AI_Output (self, other, "DIA_Jora_Belohnung_08_03"); //Ich muss mich jetzt wieder um meine Kunden kümmern ...
 	};
 	AI_StopProcessInfos (self); 
 };
@@ -456,7 +456,7 @@ instance DIA_Jora_AlriksSchwert	(C_INFO)
 	condition	 = 	DIA_Jora_AlriksSchwert_Condition;
 	information	 = 	DIA_Jora_AlriksSchwert_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Alrik sagt, du hÃ¤ttest sein Schwert ...";
+	description	 = 	"Alrik sagt, du hättest sein Schwert ...";
 };
 func int DIA_Jora_AlriksSchwert_Condition ()
 {
@@ -467,28 +467,28 @@ func int DIA_Jora_AlriksSchwert_Condition ()
 };
 func void DIA_Jora_AlriksSchwert_Info ()
 {
-	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_00"); //Alrik sagt, du hÃ¤ttest sein Schwert ...
-	AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_01"); //Du meinst den abgerissenen Typen, der seine Waffe bei mir fÃ¼r ein paar Fackeln und FleischbrÃ¶ckchen eingetauscht hat?
+	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_00"); //Alrik sagt, du hättest sein Schwert ...
+	AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_01"); //Du meinst den abgerissenen Typen, der seine Waffe bei mir für ein paar Fackeln und Fleischbröckchen eingetauscht hat?
 	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_02"); //Genau den.
 	
 	if (Npc_HasItems (self, ITMW_REVIVED_1H_SWORD_ALRIK) > 0)
 	{
 		AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_03"); //Das Schwert hab ich noch.
-		AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_04"); //Wie viel willst du dafÃ¼r haben?
+		AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_04"); //Wie viel willst du dafür haben?
 		if (Jora_Gold == LOG_SUCCESS) 
 		{
-			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_05"); //Nun - fÃ¼r dich ...
-			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_06"); //Ach, was soll's! Hier, nimm es. SchlieÃŸlich hast du mir geholfen, mein Gold wiederzukriegen ...
+			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_05"); //Nun - für dich ...
+			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_06"); //Ach, was soll's! Hier, nimm es. Schließlich hast du mir geholfen, mein Gold wiederzukriegen ...
 			B_GiveInvItems (self, other, ITMW_REVIVED_1H_SWORD_ALRIK, 1);
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_07"); //Nun - fÃ¼r dich - 50 GoldstÃ¼cke.
+			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_07"); //Nun - für dich - 50 Goldstücke.
 		};
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_08"); //(brummig) Ich hab das Teil nicht mehr! WeiÃŸ der Teufel, wo das Ding jetzt ist.
+		AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_08"); //(brummig) Ich hab das Teil nicht mehr! Weiß der Teufel, wo das Ding jetzt ist.
 	};
 };
 
@@ -503,7 +503,7 @@ instance DIA_Jora_BUYAlriksSchwert	(C_INFO)
 	condition	 = 	DIA_Jora_BUYAlriksSchwert_Condition;
 	information	 = 	DIA_Jora_BUYAlriksSchwert_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Hier sind 50 GoldstÃ¼cke. Gib mir Alriks Schwert.";
+	description	 = 	"Hier sind 50 Goldstücke. Gib mir Alriks Schwert.";
 };
 func int DIA_Jora_BUYAlriksSchwert_Condition ()
 {
@@ -515,25 +515,25 @@ func int DIA_Jora_BUYAlriksSchwert_Condition ()
 };
 func void DIA_Jora_BUYAlriksSchwert_Info ()
 {
-	AI_Output (other, self, "DIA_Jora_BUYAlriksSchwert_15_00"); //Hier sind 50 GoldstÃ¼cke. Gib mir Alriks Schwert.
+	AI_Output (other, self, "DIA_Jora_BUYAlriksSchwert_15_00"); //Hier sind 50 Goldstücke. Gib mir Alriks Schwert.
 
 	if (B_GiveInvItems(other,self,itmi_gold,50))
 	{
 		//if (Jora_Gold == LOG_RUNNING)
 		//{
 			//AI_Output (other, self, "DIA_Jora_BUYAlriksSchwert_15_02"); //Moment, ich wollte das Schwert kaufen...
-			//AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_03"); //Das kannst du doch immer noch tun - fr 50 Goldstcke ist es deins...
+			//AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_03"); //Das kannst du doch immer noch tun - für 50 Goldstücke ist es deins...
 			//Jora_Gold = LOG_SUCCESS;
 		//}
 		//else
 		//{
-			AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_04"); //Hier hast du es - (listig) war ein gutes GeschÃ¤ft.
+			AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_04"); //Hier hast du es - (listig) war ein gutes Geschäft.
 			B_GiveInvItems (self, other, ITMW_REVIVED_1H_SWORD_ALRIK, 1);
 		//};
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_05"); //Du hast nicht genug Gold. Aber keine Angst - ich werd das Schwert noch 'ne Weile behalten. Komm halt spÃ¤ter noch mal wieder ...
+		AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_05"); //Du hast nicht genug Gold. Aber keine Angst - ich werd das Schwert noch 'ne Weile behalten. Komm halt später noch mal wieder ...
 	};
 };
 

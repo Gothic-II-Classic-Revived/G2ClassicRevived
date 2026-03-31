@@ -3,7 +3,7 @@
 // -----------------------------------------------
 // Die STARTUP-Funktionen werden NUR beim ersten Betreten eines Levels 
 // (nach NewGame) aufgerufen, die INIT-Funktionen jedesmal
-// Die Funktionen mssen so heissen wie die zen-files
+// Die Funktionen müssen so heissen wie die zen-files
 // *******************************************************************
 
 // *********
@@ -2122,7 +2122,7 @@ FUNC VOID INIT_OLDWORLD ()
 
 		B_ENTER_OLDWORLD();
 
-	if (MIS_ReadyForChapter4  == TRUE )	//Joly: mu hier in der INIT ganz zum schluss stehen, nachdem alle NSCs frs Kapitel insertet wurden!!!
+	if (MIS_ReadyForChapter4  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter4_OneTime == FALSE)
 	{
 		B_Kapitelwechsel (4, OLDWORLD_ZEN);
@@ -2163,7 +2163,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	// 0 - 5 Uhr Schlafen oder Kneipe
 	// ------------------------------
 	
-	//ITEMS Trme
+	//ITEMS Türme
 	Wld_InsertItem (ItMw_Zweihaender1,"FP_CITY_WEAPON_01");//
 	Wld_InsertItem (ItMw_Schwert,"FP_CITY_WEAPON_02");//
 	Wld_InsertItem (ItMw_Zweihaender2,"FP_CITY_WEAPON_03");//
@@ -2174,14 +2174,14 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertItem (Itke_Buerger,"FP_ITEM_OV_01");//
 	Wld_InsertItem (ItWr_Pfandbrief_MIS,"FP_ITEM_OV_02");//
 	
-	//---Sdtor--------------------
+	//---Südtor--------------------
 	Wld_InsertNpc (Mil_309_Stadtwache	,"NW_CITY_ENTRANCE_01");	//Stadttorwache
 	Wld_InsertNpc (Mil_310_Stadtwache	,"NW_CITY_ENTRANCE_01");	//Stadttorwache Important
 	
 	//---Hauptstrasse--------------
 	Wld_InsertNpc (VLK_458_Rupert		, "NW_CITY_ENTRANCE_01");	//Essensstand, pennt bei Matteo - NW_City_Bed_Rupert
-	Wld_InsertNpc (VLK_499_Buerger		, "NW_CITY_ENTRANCE_01");	//OV-Brger. It an Stand, Smalltalk im OV, pennt iv ??? (OV)
-	Wld_InsertNpc (VLK_416_Matteo		, "NW_CITY_ENTRANCE_01");	//Ausrstungs-Hndler, pennt in NW_City_Bed_Matteo
+	Wld_InsertNpc (VLK_499_Buerger		, "NW_CITY_ENTRANCE_01");	//OV-Bürger. Ißt an Stand, Smalltalk im OV, pennt iv ??? (OV)
+	Wld_InsertNpc (VLK_416_Matteo		, "NW_CITY_ENTRANCE_01");	//Ausrüstungs-Händler, pennt in NW_City_Bed_Matteo
 	Wld_InsertNpc (MIL_325_Miliz 		, "NW_CITY_ENTRANCE_01");	//TORWACHE vor Matteos Lager
 	Wld_InsertNpc (VLK_425_Regis		, "NW_CITY_ENTRANCE_01");	//Bank, Abends Smalltalk vor Kneipe, nachts in Stadtkneipe.
 	Wld_InsertNpc (VLK_451_Buerger		, "NW_CITY_ENTRANCE_01");	//Smalltalk mit 452, Smalltalk mit Thorben, nachts in Kneipe 
@@ -2210,12 +2210,12 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (Mil_323_Miliz		, "NW_CITY_ENTRANCE_01"); 	//Rotationswache Hauptstrasse/Kneipenstrasse/Vatras-Platz
 	//------------------------------
 	Wld_InsertNpc (KDW_439_Vatras	 	, "NW_CITY_ENTRANCE_01");	//24 im Schrein, betet nachts am Schrein
-	Wld_InsertNpc (VLK_426_Buergerin	, "NW_CITY_ENTRANCE_01");	//Zuhrerin, nachts vor Stadtkneipe
-	Wld_InsertNpc (VLK_428_Buergerin	, "NW_CITY_ENTRANCE_01");	//Zuhrerin, nachts Smalltalk Bierstand
-	Wld_InsertNpc (VLK_450_Buerger		, "NW_CITY_ENTRANCE_01");	//Zuhrer, nachts vor Stadtkneipe
-	Wld_InsertNpc (VLK_454_Buerger		, "NW_CITY_ENTRANCE_01");	//Zuhrer, nachts an Blubber
-	Wld_InsertNpc (VLK_455_Buerger		, "NW_CITY_ENTRANCE_01");	//Zuhrer, nachts Smalltalk Bierstand
-	Wld_InsertNpc (VLK_421_Valentino	, "NW_CITY_ENTRANCE_01"); 	//OV-Brger, 
+	Wld_InsertNpc (VLK_426_Buergerin	, "NW_CITY_ENTRANCE_01");	//Zuhörerin, nachts vor Stadtkneipe
+	Wld_InsertNpc (VLK_428_Buergerin	, "NW_CITY_ENTRANCE_01");	//Zuhörerin, nachts Smalltalk Bierstand
+	Wld_InsertNpc (VLK_450_Buerger		, "NW_CITY_ENTRANCE_01");	//Zuhörer, nachts vor Stadtkneipe
+	Wld_InsertNpc (VLK_454_Buerger		, "NW_CITY_ENTRANCE_01");	//Zuhörer, nachts an Blubber
+	Wld_InsertNpc (VLK_455_Buerger		, "NW_CITY_ENTRANCE_01");	//Zuhörer, nachts Smalltalk Bierstand
+	Wld_InsertNpc (VLK_421_Valentino	, "NW_CITY_ENTRANCE_01"); 	//OV-Bürger, 
 	//------------------------------	
 	Wld_InsertNpc (Mil_322_Miliz		, "NW_CITY_ENTRANCE_01");	//Rotationswache Hauptstrasse/Kneipenstrasse/Vatras-Platz
 	
@@ -2223,7 +2223,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (VLK_4201_Wirt		, "NW_CITY_ENTRANCE_01"); 	//Bierstand Wirt, 24h
 	Wld_InsertNpc (NOV_602_Ulf			, "NW_CITY_ENTRANCE_01");	//am saufen, 24h, ab Kap ??? wo?		
 	Wld_InsertNpc (VLK_406_Herold		, "NW_CITY_ENTRANCE_01");	//HEROLD, pennt in OV oder Kaserne - wo ???
-	Wld_InsertNpc (VLK_456_Abuyin		, "NW_CITY_ENTRANCE_01");	//Wasserpfeifen-Hndler, pennt in Hotel
+	Wld_InsertNpc (VLK_456_Abuyin		, "NW_CITY_ENTRANCE_01");	//Wasserpfeifen-Händler, pennt in Hotel
 	Wld_InsertNpc (VLK_440_Bartok	 	, "NW_CITY_ENTRANCE_01");	//Bogenlehrer, nachts vor Stadtkneipe
 	Wld_InsertNpc (VLK_4007_Buerger	 	, "NW_CITY_ENTRANCE_01");	//Bogenlehrer, nachts vor Stadtkneipe
 	Wld_InsertNpc (VLK_4008_Buerger	 	, "NW_CITY_ENTRANCE_01");	//Bogenlehrer, nachts vor Stadtkneipe
@@ -2232,11 +2232,11 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (VLK_414_Hanna	 	, "NW_CITY_ENTRANCE_01"); 	//Hotelbesitzerin, 24h
 	
 	//---Marktplatz--------------------
-	Wld_InsertNpc (VLK_407_Hakon		, "NW_CITY_ENTRANCE_01");	//Waffenhndler, nachts in Hotel
-	Wld_InsertNpc (VLK_408_Jora			, "NW_CITY_ENTRANCE_01");	//Krmer, nachts in Hotel
-	Wld_InsertNpc (VLK_409_Zuris		, "NW_CITY_ENTRANCE_01");	//Trankhndler, nachts in Zuris Haus
-	Wld_InsertNpc (VLK_410_Baltram		, "NW_CITY_ENTRANCE_01");	//Lebensmittelhndler, nachts in Hotel
-	Wld_InsertNpc (VLK_470_Sarah		, "NW_CITY_ENTRANCE_01");	//Waffenhndlerin (Canthars Opfer), nachts in Hotel
+	Wld_InsertNpc (VLK_407_Hakon		, "NW_CITY_ENTRANCE_01");	//Waffenhändler, nachts in Hotel
+	Wld_InsertNpc (VLK_408_Jora			, "NW_CITY_ENTRANCE_01");	//Krämer, nachts in Hotel
+	Wld_InsertNpc (VLK_409_Zuris		, "NW_CITY_ENTRANCE_01");	//Trankhändler, nachts in Zuris Haus
+	Wld_InsertNpc (VLK_410_Baltram		, "NW_CITY_ENTRANCE_01");	//Lebensmittelhändler, nachts in Hotel
+	Wld_InsertNpc (VLK_470_Sarah		, "NW_CITY_ENTRANCE_01");	//Waffenhändlerin (Canthars Opfer), nachts in Hotel
 	Wld_InsertNpc (BDT_492_RENGARU		, "NW_CITY_ENTRANCE_01");	//Dieb, der wegrennt, wenn man ihn zur Rede stellt, nachts an Bierstand
 	Wld_InsertNpc (KDF_511_Daron		, "NW_CITY_ENTRANCE_01");	//Magier auf Marktplats, nachts in Zuris Haus
 	//---------------------------------
@@ -2255,7 +2255,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	//---Weg zum Hafen-----------------
 	Wld_InsertNpc (VLK_484_Lehmar		, "NW_CITY_ENTRANCE_01"); 	//Geldverleiher, hafen04, pennt in hafen04
 	Wld_InsertNpc (VLK_488_Buergerin	, "NW_CITY_ENTRANCE_01");	//Lehmars Frau, pennt in hafen04
-	Wld_InsertNpc (VLK_415_Meldor		, "NW_CITY_ENTRANCE_01"); 	//Einer von Lehmars Schlgern, pennt in hafen03
+	Wld_InsertNpc (VLK_415_Meldor		, "NW_CITY_ENTRANCE_01"); 	//Einer von Lehmars Schlägern, pennt in hafen03
 	Wld_InsertNpc (VLK_487_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Meldors Frau, pennt in hafen03
 
 	//---Platz A----------- (Fight Club)	
@@ -2269,7 +2269,7 @@ func void STARTUP_NewWorld_Part_City_01()
 
 	//---Platz C----------- (Schlachter)
 	Wld_InsertNpc (VLK_424_Alwin		, "NW_CITY_ENTRANCE_01");	//Metzger, pennt in hafen02 - NW_City_Habour_Hut_07_Bed_01
-	Wld_InsertNpc (VLK_479_Lucy	, "NW_CITY_ENTRANCE_01"); 	//Alwins Frau, Grtnerin, NW_City_Pick_02, pennt in hafen02
+	Wld_InsertNpc (VLK_479_Lucy	, "NW_CITY_ENTRANCE_01"); 	//Alwins Frau, Gärtnerin, NW_City_Pick_02, pennt in hafen02
 	Wld_InsertNpc (Hammel			, "NW_CITY_SHEEP_SPAWN_02");	//Schaf
 	Wld_InsertNpc (Sheep			, "NW_CITY_SHEEP_SPAWN_01");	//Schaf
 	Wld_InsertNpc (Sheep			, "NW_CITY_SHEEP_SPAWN_01");	//Schaf
@@ -2281,19 +2281,19 @@ func void STARTUP_NewWorld_Part_City_01()
 	//---Platz D----------- (Arme Handwerker)
 	Wld_InsertNpc (VLK_461_Carl			, "NW_CITY_ENTRANCE_01"); 	//Schmied, pennt in hafen07
 	Wld_InsertNpc (VLK_429_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Carls Frau, pennt in hafen07
-	Wld_InsertNpc (VLK_453_Arbeiter		, "NW_CITY_ENTRANCE_01");	//Sgt, pennt in hafen06
-	Wld_InsertNpc (VLK_430_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Frau vom Sger, pennt in hafen 06
+	Wld_InsertNpc (VLK_453_Arbeiter		, "NW_CITY_ENTRANCE_01");	//Sägt, pennt in hafen06
+	Wld_InsertNpc (VLK_430_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Frau vom Säger, pennt in hafen 06
 	
 	//---Forscher----------
-	Wld_InsertNpc (VLK_498_Ignaz		, "NW_CITY_ENTRANCE_01"); 	//verrckter Forscher, hafen09, lebt und pennt da
+	Wld_InsertNpc (VLK_498_Ignaz		, "NW_CITY_ENTRANCE_01"); 	//verrückter Forscher, hafen09, lebt und pennt da
 	
 	//---Platz E----------- (Edda)
-	Wld_InsertNpc (VLK_471_Edda			, "NW_CITY_ENTRANCE_01"); 	//Kocht fr die Armen, pennt in hafen08 - NW_City_Habour_Poor_Area_Hut_06_Bed_02
+	Wld_InsertNpc (VLK_471_Edda			, "NW_CITY_ENTRANCE_01"); 	//Kocht für die Armen, pennt in hafen08 - NW_City_Habour_Poor_Area_Hut_06_Bed_02
 	//Bett frei (Bed_01)
 
 	//---Platz F----------- (Fellan)
-	Wld_InsertNpc (VLK_480_Fellan		, "NW_CITY_ENTRANCE_01"); 	//irrer Hmmerer, pennt in FELLAN - NW_City_Habour_Hut_05_Bed_01
-	Wld_InsertNpc (VLK_478_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Fellans Frau, Grtnerin, NW_City_Pick_01, pennt in FELLAN
+	Wld_InsertNpc (VLK_480_Fellan		, "NW_CITY_ENTRANCE_01"); 	//irrer Hämmerer, pennt in FELLAN - NW_City_Habour_Hut_05_Bed_01
+	Wld_InsertNpc (VLK_478_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Fellans Frau, Gärtnerin, NW_City_Pick_01, pennt in FELLAN
 	Wld_InsertNpc (VLK_481_Buerger		, "NW_CITY_ENTRANCE_01"); 	//pennt in hafen01
 	Wld_InsertNpc (VLK_482_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//pennt in hafen01
 	
@@ -2301,7 +2301,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (VLK_466_Gernod		, "NW_CITY_ENTRANCE_01"); 	//pennt in hafen05
 	Wld_InsertNpc (VLK_485_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Gernods Frau, pennt in hafen05
 	
-	//---Spaziergnger fr Hafen---------
+	//---Spaziergänger für Hafen---------
 	Wld_InsertNpc (VLK_459_Buerger		, "NW_CITY_ENTRANCE_01"); 	//pennt in hafen10
 	Wld_InsertNpc (VLK_472_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//pennt in hafen10
 	//--------------------------------
@@ -2310,7 +2310,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	
 	//---Hafen--------------
 	Wld_InsertNpc (SLD_449_Lares		, "NW_CITY_ENTRANCE_01");	//Steht am Kai (PreStart 24h), dann nachts in Kneipe
-	Wld_InsertNpc (VLK_444_Jack			, "NW_CITY_ENTRANCE_01");	//am Kai, wartet, da der Leuchtturm frei wird
+	Wld_InsertNpc (VLK_444_Jack			, "NW_CITY_ENTRANCE_01");	//am Kai, wartet, daß der Leuchtturm frei wird
 
 	//---Hafenkneipe---------
 	Wld_InsertNpc (VLK_432_Moe	 		, "NW_CITY_ENTRANCE_01");	//Rausschmeisser 24h
@@ -2319,14 +2319,14 @@ func void STARTUP_NewWorld_Part_City_01()
 	
 	//---Puff-----------------
 	Wld_InsertNpc (VLK_433_Bromor	 	, "NW_CITY_ENTRANCE_01");	//Puff-Besitzer hinter Theke, pennt in ???
-	Wld_InsertNpc (VLK_434_Borka	 	, "NW_CITY_ENTRANCE_01");	//Trsteher Puff 24h
+	Wld_InsertNpc (VLK_434_Borka	 	, "NW_CITY_ENTRANCE_01");	//Türsteher Puff 24h
 	Wld_InsertNpc (VLK_435_Nadja	 	, "NW_CITY_ENTRANCE_01");	//pennt in ???
 	Wld_InsertNpc (VLK_436_Sonja	 	, "NW_CITY_ENTRANCE_01");	//???
 	Wld_InsertNpc (VLK_491_Vanja	 	, "NW_CITY_ENTRANCE_01");	//???
 	
-	//---Fischhndler------------------
+	//---Fischhändler------------------
 	Wld_InsertNpc (VLK_469_Halvor	 	, "NW_CITY_ENTRANCE_01");	//hinter Stand, pennt in NW_City_Bed_Halvor
-	Wld_InsertNpc (VLK_476_Fenia	   	, "NW_CITY_ENTRANCE_01"); 	//Halvors Frau, Hndlerin auf Hafenstrasse, pennt in FISCH
+	Wld_InsertNpc (VLK_476_Fenia	   	, "NW_CITY_ENTRANCE_01"); 	//Halvors Frau, Händlerin auf Hafenstrasse, pennt in FISCH
 
 	//---Kartenzeichner----------------
 	Wld_InsertNpc (VLK_437_Brahim	 	, "NW_CITY_ENTRANCE_01"); 	//Kartenzeichner, pennt in KARTEN
@@ -2352,7 +2352,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	
 	//Items, die auf dem Schiff zu finden sind!
 		
-	Wld_InsertItem			(ItMi_Moleratlubric_MIS,"FP_ITEM_SHIP_07");	//zur Sicherheit fr Vinos Brennerei!
+	Wld_InsertItem			(ItMi_Moleratlubric_MIS,"FP_ITEM_SHIP_07");	//zur Sicherheit für Vinos Brennerei!
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_01"); 
 	Wld_InsertItem			(ITRI_REVIVED_PROT_ARROW_02,"FP_ITEM_SHIP_02");
 	Wld_InsertItem			(ITPO_REVIVED_BOOST_DEX_01,"FP_ITEM_SHIP_03");
@@ -2395,7 +2395,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	
 	Wld_InsertNpc (Mil_312_Wulfgar		, "NW_CITY_ENTRANCE_01");	//1h - 60
 	Wld_InsertNpc (Mil_317_Ruga			, "NW_CITY_ENTRANCE_01");	//2h - 60 und  STR Lehrer
-	Wld_InsertNpc (Mil_313_Boltan		, "NW_CITY_ENTRANCE_01");	//Gefngniswrter
+	Wld_InsertNpc (Mil_313_Boltan		, "NW_CITY_ENTRANCE_01");	//Gefängniswärter
 	//NEU Mortis: STR-Lehrer
 	
 	Wld_InsertNpc (Mil_327_Miliz		, "NW_CITY_ENTRANCE_01");	//SMALLTALK Partner von Boltan
@@ -2422,12 +2422,12 @@ func void STARTUP_NewWorld_Part_City_01()
 	//----------------------------------------------------------------
 
 	Wld_InsertNpc 	(VLK_474_Buerger	, "NW_CITY_ENTRANCE_01"); //
-	//Wld_InsertNpc		(VLK_463_Buerger	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMSE
-	//Wld_InsertNpc		(VLK_464_Buerger	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMSE
-	//Wld_InsertNpc		(VLK_465_Buerger	, "NW_CITY_ENTRANCE_01"); // DRINKING 	GEMSE
+	//Wld_InsertNpc		(VLK_463_Buerger	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMÜSE
+	//Wld_InsertNpc		(VLK_464_Buerger	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMÜSE
+	//Wld_InsertNpc		(VLK_465_Buerger	, "NW_CITY_ENTRANCE_01"); // DRINKING 	GEMÜSE
 	
-	Wld_InsertNpc		(VLK_483_Buergerin	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMSE
-	Wld_InsertNpc		(VLK_490_Buergerin	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMSE
+	Wld_InsertNpc		(VLK_483_Buergerin	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMÜSE
+	Wld_InsertNpc		(VLK_490_Buergerin	, "NW_CITY_ENTRANCE_01"); // SMALLTALK  GEMÜSE
 
 	//Wld_InsertNpc		(VLK_4200_Buergerin	, "NW_CITY_ENTRANCE_01"); //Smalltalk
 
@@ -2438,8 +2438,8 @@ func void STARTUP_NewWorld_Part_City_01()
 	//------------------------------------
 	//---oberes Viertel-------------------
 	//------------------------------------
-	Wld_InsertNpc		(Mil_304_Torwache	, "NW_CITY_ENTRANCE_01");	//Torwache Brgerviertel 24h
-	Wld_InsertNpc		(Mil_305_Torwache	, "NW_CITY_ENTRANCE_01");	//Torwache Brgerviertel Important 24h
+	Wld_InsertNpc		(Mil_304_Torwache	, "NW_CITY_ENTRANCE_01");	//Torwache Bürgerviertel 24h
+	Wld_InsertNpc		(Mil_305_Torwache	, "NW_CITY_ENTRANCE_01");	//Torwache Bürgerviertel Important 24h
 	//------------------------------------
 	Wld_InsertNpc		(PAL_200_Hagen			, "NW_CITY_ENTRANCE_01");// 
 	Wld_InsertNpc		(PAL_201_Ingmar			, "NW_CITY_ENTRANCE_01");//Str-Lehrer
@@ -2541,7 +2541,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_SetMobRoutine (05,00, "FIREPLACE", 0);
 		
 		
-		//---------------- PORTALRUME ------------------------ 
+		//---------------- PORTALRÄUME ------------------------ 
 		
 		//Hafenviertel
 		Wld_AssignRoomToGuild ("hafen01",		GIL_VLK);
@@ -2556,7 +2556,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("hafen09",		GIL_PUBLIC); //Ignaz
 		Wld_AssignRoomToGuild ("hafen10",		GIL_VLK);
 		Wld_AssignRoomToGuild ("hafen11",		GIL_VLK);
-		Wld_AssignRoomToGuild ("Fellan",		GIL_VLK);
+		Wld_AssignRoomToGuild ("fellan",		GIL_VLK);
 		//Wld_AssignRoomToGuild ("boot",			GIL_VLK); - ist RAUS
 		Wld_AssignRoomToGuild ("fisch",			GIL_VLK);
 		Wld_AssignRoomToGuild ("lagerhaus",		GIL_NONE);
@@ -2564,12 +2564,12 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("hafenkneipe",	GIL_NONE);
 		Wld_AssignRoomToGuild ("puff",			GIL_NONE);
 		
-		//Handwerker und Hndler
+		//Handwerker und Händler
 		Wld_AssignRoomToGuild ("bogner",		GIL_PUBLIC);		// = Thorben und Gritta!
-		Wld_AssignRoomToGuild ("Matteo",		GIL_PUBLIC);
+		Wld_AssignRoomToGuild ("matteo",		GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("hotel",			GIL_NONE);
 		Wld_AssignRoomToGuild ("stadtkneipe",	GIL_NONE);
-		Wld_AssignRoomToGuild ("Zuris",			GIL_VLK);
+		Wld_AssignRoomToGuild ("zuris",			GIL_VLK);
 		
 		if (Player_IsApprentice == APP_Constantino)
 		{
@@ -2582,11 +2582,11 @@ func void STARTUP_NewWorld_Part_City_01()
 		
 		if (Player_IsApprentice == APP_Bosper)
 		{
-			Wld_AssignRoomToGuild ("Gritta",	GIL_NONE);		// = BOSPER!
+			Wld_AssignRoomToGuild ("gritta",	GIL_NONE);		// = BOSPER!
 		}
 		else
 		{
-			Wld_AssignRoomToGuild ("Gritta",	GIL_PUBLIC); 	// = BOSPER!
+			Wld_AssignRoomToGuild ("gritta",	GIL_PUBLIC); 	// = BOSPER!
 		};
 		
 		if (Player_IsApprentice == APP_Harad)
@@ -2598,7 +2598,7 @@ func void STARTUP_NewWorld_Part_City_01()
 			Wld_AssignRoomToGuild ("schmied",	GIL_VLK);
 		};
 		
-		//Trme
+		//Türme
 		Wld_AssignRoomToGuild ("turmsued01",	GIL_MIL);
 		Wld_AssignRoomToGuild ("turmsued02",	GIL_MIL);
 		Wld_AssignRoomToGuild ("turmost01",		GIL_MIL);
@@ -2607,7 +2607,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("turmbogner",	GIL_MIL);
 		
 		//Kaserne 
-		Wld_AssignRoomToGuild ("Andre",			GIL_PUBLIC);
+		Wld_AssignRoomToGuild ("andre",			GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("waffenkammer",	GIL_PUBLIC);
 		Wld_AssignRoomToGuild ("barracke",		GIL_MIL);
 		
@@ -2621,7 +2621,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		Wld_AssignRoomToGuild ("reich05",		GIL_VLK);
 		Wld_AssignRoomToGuild ("reich06",		GIL_PUBLIC); //Salandril Alchemist -> Wegen Mission!!!
 		Wld_AssignRoomToGuild ("richter",		GIL_PUBLIC); //wegen SLD Mission Kap.3 
-		Wld_AssignRoomToGuild ("Leomar",		GIL_VLK);
+		Wld_AssignRoomToGuild ("leomar",		GIL_VLK);
 	};
 
 func void INIT_NewWorld_Part_City_01()
@@ -2670,7 +2670,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Sheep, 	"NW_FARM1_OUT_03");
 	Wld_InsertNpc		(Sheep, 	"NW_FARM1_OUT_03");
 	
-	//---Schafe bei der Windmhle---
+	//---Schafe bei der Windmühle---
 	Wld_InsertNpc		(Sheep, 	"NW_FARM1_MILL_01");
 	Wld_InsertNpc		(Sheep, 	"NW_FARM1_MILL_01");
 	Wld_InsertNpc		(Sheep, 	"NW_FARM1_MILL_01");
@@ -2816,7 +2816,7 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc		(Meatbug,		"FP_ROAM_XARDAS_SECRET_01");
 	Wld_InsertNpc		(Meatbug,		"FP_ROAM_XARDAS_SECRET_01");
 
-	//---Hhlengang---
+	//---Höhlengang---
 	Wld_InsertNpc		(YGobbo_Green,		"NW_XARDAS_TOWER_WATERFALL_CAVE_03");
 
 	Wld_InsertNpc		(YGobbo_Green,		"NW_XARDAS_TOWER_WATERFALL_CAVE_ENTRANCE_02");
@@ -2842,7 +2842,7 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	
 	Wld_InsertNpc		(BloodflyJuvenile, 		"NW_XARDAS_TOWER_VALLEY_08");
 
-	//---kleine Hhle im Tal---
+	//---kleine Höhle im Tal---
 	Wld_InsertNpc		(YGiant_Rat, 		"NW_XARDAS_TOWER_SECRET_CAVE_01"); 
 	Wld_InsertNpc		(YGiant_Rat, 		"NW_XARDAS_TOWER_SECRET_CAVE_01");
 	Wld_InsertNpc		(YGiant_Rat, 		"NW_XARDAS_TOWER_SECRET_CAVE_01");
@@ -2888,10 +2888,10 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 	Wld_InsertNpc 	(KDF_510_Hyglas, 	"NW_MONASTERY_ENTRY_01");
 	
 	Wld_InsertNpc 	(NOV_600_Pedro,  	"NW_MONASTERY_ENTRY_01");	//steht vor dem Kloster
-	Wld_InsertNpc 	(NOV_601_Igaraz, 	"NW_MONASTERY_ENTRY_01");	//Erwhlter im Smalltalk im Hof
-	Wld_InsertNpc 	(NOV_603_Agon, 		"NW_MONASTERY_ENTRY_01");	//Krutergarten
+	Wld_InsertNpc 	(NOV_601_Igaraz, 	"NW_MONASTERY_ENTRY_01");	//Erwählter im Smalltalk im Hof
+	Wld_InsertNpc 	(NOV_603_Agon, 		"NW_MONASTERY_ENTRY_01");	//Kräutergarten
 	Wld_InsertNpc 	(NOV_604_Dyrian, 	"NW_MONASTERY_ENTRY_01");	//
-	Wld_InsertNpc 	(NOV_605_Opolos, 	"NW_MONASTERY_ENTRY_01");	//Htet Schafe
+	Wld_InsertNpc 	(NOV_605_Opolos, 	"NW_MONASTERY_ENTRY_01");	//Hütet Schafe
 	Wld_InsertNpc 	(NOV_606_Novize, 	"NW_MONASTERY_ENTRY_01");
 	Wld_InsertNpc 	(NOV_607_Novize, 	"NW_MONASTERY_ENTRY_01");
 	Wld_InsertNpc 	(NOV_608_Garwig, 	"NW_MONASTERY_ENTRY_01");	//Bewacht den Hammer
@@ -2926,7 +2926,7 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 	FUNC VOID INIT_SUB_NewWorld_Part_Monastery_01()
 	{
 		Wld_AssignRoomToGuild ("kloster01",GIL_PUBLIC); //Kirche
-		Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //Bcherei
+		Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //Bücherei
 		//Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
 		Wld_AssignRoomToGuild ("kloster06",GIL_PUBLIC); //Kapelle
 		
@@ -2969,9 +2969,9 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(SLD_802_Buster, 	"BIGFARM");
 	Wld_InsertNpc 	(SLD_827_Soeldner, 	"BIGFARM");
 	
-	// ------ Feldruberhhle ------
+	// ------ Feldräuberhöhle ------
 	
-	//3 rausgenommen, wegen Fester-> werden spter insertet
+	//3 rausgenommen, wegen Fester-> werden später insertet
 	
 	Wld_InsertNpc (Giant_Bug, "NW_BIGFARM_FELDREUBER"); 
 	Wld_InsertNpc (Giant_Bug, "NW_BIGFARM_FELDREUBER2");
@@ -3133,7 +3133,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_937_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_938_Bauer, 	"BIGFARM");
 
-	//Holzfller\Jger
+	//Holzfäller\Jäger
 	Wld_InsertNpc 	(OUT_981_GROM, 	"BIGFARM");
 
 	// Monster
@@ -3170,7 +3170,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
   	Wld_InsertNpc 	(Lurker,	"NW_LAKE_GREG_TREASURE_01"); 
 
 
-//Jgerlager
+//Jägerlager
 
 	Wld_InsertNpc 	(OUT_983_DRAGOMIR,	"NW_CITY_TO_LIGHTHOUSE_13_MONSTER5"); 
 	//Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_NW_ITEM_TROLL_06"); 
@@ -3502,7 +3502,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 		// ------ Abenteuerspielplatz -------
 		Wld_AssignRoomToGuild ("grpturm02",			GIL_PUBLIC); //vorderer Turm
 		Wld_AssignRoomToGuild ("grpturm01",			GIL_PUBLIC); //hinterer Turm
-		Wld_AssignRoomToGuild ("grpwaldhuette02",	GIL_PUBLIC); //Banditenhtte
+		Wld_AssignRoomToGuild ("grpwaldhuette02",	GIL_PUBLIC); //Banditenhütte
 	
 
 	// Second Pass	
@@ -3690,7 +3690,7 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Bloodfly, "NW_CITY_TO_LIGHTHOUSE_03"); //mehr FPs
 	Wld_InsertNpc 	(Bloodfly, "NW_CITY_TO_LIGHTHOUSE_03");
 	
-	// ------- Kste ------
+	// ------- Küste ------
 	Wld_InsertNpc 	(BeachFireWaran, "NW_CITY_BEACH_013"); 
 	Wld_InsertNpc 	(BeachFireWaran, "NW_CITY_BEACH_013"); 
 	
@@ -4019,7 +4019,7 @@ FUNC VOID INIT_NewWorld_Part_Forest_01 ()
 //------- Troll Area ---------------------------
 FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 {
-	//----- Magierhhle -----
+	//----- Magierhöhle -----
 	/*
 	Wld_InsertNpc 	(Skeleton, 				"NW_MAGECAVE_SKELETON");
 	Wld_InsertNpc 	(Lesser_Skeleton, 		"NW_MAGECAVE_15");
@@ -4041,14 +4041,14 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 
 	//----- Schwarzer Troll -----
 	Wld_InsertNpc 	(Troll_Black, 			"NW_TROLLAREA_PATH_84");
-	Wld_InsertNpc 	(OUT_982_GRIMBALD, 		"Troll");
+	Wld_InsertNpc 	(OUT_982_GRIMBALD, 		"TROLL");
 
 	//----- Der Weg -----
 	Wld_InsertNpc 	(Gobbo_Green, 			"NW_TROLLAREA_PATH_56");
 	Wld_InsertNpc 	(Gobbo_Green, 			"NW_TROLLAREA_PATH_56");
 	Wld_InsertNpc 	(YGobbo_Green, 			"NW_TROLLAREA_PATH_56");
 	
-	//----- Der groe See -----
+	//----- Der große See -----
 	Wld_InsertNpc 	(Bloodfly, 	"FP_ROAM_TROLLAREA_SEA_01");
 	Wld_InsertNpc 	(Bloodfly, 	"FP_ROAM_TROLLAREA_SEA_02");
 	Wld_InsertNpc 	(Bloodfly, 	"FP_ROAM_TROLLAREA_SEA_03");
@@ -4086,29 +4086,29 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	Wld_InsertNpc 	(DemonPuma, 	"FP_ROAM_NW_TROLLAREA_RUINS_10");
 
 	
-	//in der Maya-Hhle
+	//in der Maya-Höhle
 	
-	//Gobbos in Eingangshhle
+	//Gobbos in Eingangshöhle
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_01");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_02");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_03");
 	
-	//Gobbos in 2. Hhle
+	//Gobbos in 2. Höhle
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_05");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_06");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_07");
 	
-	//Gobbos in 3. Hhle
+	//Gobbos in 3. Höhle
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_09");
 	Wld_InsertNpc 	(Gobbo_Warrior, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_10");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_11");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_12");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_14");
 	
-	//MineCrawler 1. Hhle
+	//MineCrawler 1. Höhle
 	Wld_InsertNpc 	(Minecrawler, 			"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_16");
 	
-	//2. Hhle
+	//2. Höhle
 	Wld_InsertNpc 	(Minecrawler, 			"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_21");
 	Wld_InsertNpc 	(Minecrawler, 			"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_23");
 	
@@ -4292,7 +4292,7 @@ FUNC VOID INIT_NewWorld()
 	
 	B_ENTER_NEWWORLD ();
 	
-	// ------- Diebesgilde abtten ------ 
+	// ------- Diebesgilde abtöten ------ 
 	if (Diebesgilde_Verraten)
 	&& (Andre_Diebesgilde_aufgeraeumt != TRUE)
 	{
@@ -4317,14 +4317,14 @@ FUNC VOID INIT_NewWorld()
 	INIT_SUB_NewWorld_Part_Forest_01();
 	INIT_SUB_NewWorld_Part_Pass_To_OW_01();
 	
-	if (MIS_ReadyForChapter3  == TRUE )	//Joly: mu hier in der INIT ganz zum schluss stehen, nachdem alle NSCs frs Kapitel insertet wurden!!!
+	if (MIS_ReadyForChapter3  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter3_OneTime == FALSE)
 	{
 		B_Kapitelwechsel (3,NEWWORLD_ZEN);
 		B_Chapter3_OneTime = TRUE;
 	};
 
-	if (MIS_AllDragonsDead  == TRUE )	//Joly: mu hier in der INIT ganz zum schluss stehen, nachdem alle NSCs frs Kapitel insertet wurden!!!
+	if (MIS_AllDragonsDead  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter5_OneTime == FALSE)
 	{
 		B_Kapitelwechsel (5, NEWWORLD_ZEN);
@@ -4440,7 +4440,7 @@ FUNC VOID INIT_FREEMINE ()
 	//-------------------Fackeln-----------------------------
 	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
 
-	//-------- Attitden initialisieren --------
+	//-------- Attitüden initialisieren --------
     B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
 };
@@ -4459,18 +4459,18 @@ FUNC VOID STARTUP_ORCGRAVEYARD ()
 	//-------- globale Story-Variable --------
 	EnteredOrcGraveyard = TRUE;
 
-	//-------- 1. Hhle --------
+	//-------- 1. Höhle --------
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_006");
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_015");
 	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_016");
 
-	//-------- 2. Hhle --------
+	//-------- 2. Höhle --------
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_019B");
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_019D");
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_020B");
 	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_020");
 	
-	//-------- 3. Hhle --------
+	//-------- 3. Höhle --------
 	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_025");
 	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_025");
 	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_025");
@@ -4490,7 +4490,7 @@ FUNC VOID STARTUP_ORCGRAVEYARD ()
 	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_047");
 	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_047");
 
-	//-------- Groe Halle --------
+	//-------- Große Halle --------
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_061");
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_062");
 	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_058");
@@ -4502,7 +4502,7 @@ FUNC VOID INIT_ORCGRAVEYARD ()
 {
 	Wld_SetMobRoutine 	(00,00, "FIREPLACE", 1);
 
-	//-------- Attitden initialisieren --------
+	//-------- Attitüden initialisieren --------
     B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
 };

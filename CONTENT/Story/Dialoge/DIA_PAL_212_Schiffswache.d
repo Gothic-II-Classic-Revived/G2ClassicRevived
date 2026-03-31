@@ -43,7 +43,7 @@ func int DIA_Pal_212_Schiffswache_WERSEIDIHR_Condition ()
 func void DIA_Pal_212_Schiffswache_WERSEIDIHR_Info ()
 {
 	AI_Output			(other, self, "DIA_Pal_212_Schiffswache_WERSEIDIHR_15_00"); //Wer bist du?
-	AI_Output			(self, other, "DIA_Pal_212_Schiffswache_WERSEIDIHR_08_01"); //Wir sind die Abgesandten des KÃ¶nigs Rhobar, die Diener Innos', und werden im Volksmund auch Paladine genannt.
+	AI_Output			(self, other, "DIA_Pal_212_Schiffswache_WERSEIDIHR_08_01"); //Wir sind die Abgesandten des Königs Rhobar, die Diener Innos', und werden im Volksmund auch Paladine genannt.
 };
 
 
@@ -81,7 +81,7 @@ func void DIA_Pal_212_Schiffswache_WASMACHSTDU2_Info ()
 	}
 	else
 	{
-			AI_Output			(self, other, "DIA_Pal_212_Schiffswache_WASMACHSTDU2_08_03"); //Hier meine Zeit verplempern. Ich wÃ¤re viel lieber bei unseren BrÃ¼dern im Minental.
+			AI_Output			(self, other, "DIA_Pal_212_Schiffswache_WASMACHSTDU2_08_03"); //Hier meine Zeit verplempern. Ich wäre viel lieber bei unseren Brüdern im Minental.
 	};
 	AI_StopProcessInfos (self);
 };

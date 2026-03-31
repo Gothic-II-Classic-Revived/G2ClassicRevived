@@ -23,10 +23,10 @@ FUNC VOID B_GiveTradeInv_Rupert (var C_NPC slf)
 		CreateInvItems (slf,ItMw_Morgenstern , 1); 
 		CreateInvItems (slf,ItMw_Richtstab , 1); 
 		
-		CreateInvItems (slf,ItRw_Bow_L_01 , 1); 
-		CreateInvItems (slf,ItRw_Bow_M_01 , 1); 
-		CreateInvItems (slf,ItRw_Bow_M_04 , 1); 
-		CreateInvItems (slf,ItRw_Crossbow_L_02 , 1); 
+		CreateInvItems (slf,ITRW_REVIVED_BOW_SMALL_01 , 1); 
+		CreateInvItems (slf,ITRW_REVIVED_BOW_LONG_01 , 1); 
+		CreateInvItems (slf,ITRW_REVIVED_BOW_LONG_04 , 1); 
+		CreateInvItems (slf,ITRW_REVIVED_CROSSBOW_LIGHT_02 , 1); 
 		
 		CreateInvItems (slf,ITAM_REVIVED_PROT_ARROW_01 , 1);
 

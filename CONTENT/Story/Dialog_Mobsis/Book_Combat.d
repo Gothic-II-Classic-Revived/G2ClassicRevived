@@ -4,7 +4,7 @@
 //##
 //##########################################################################
 
-FUNC VOID Use_BookstandHistory1_S1()		//Geschichtsbcher
+FUNC VOID Use_BookstandHistory1_S1()		//Geschichtsbücher
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -25,14 +25,14 @@ FUNC VOID Use_BookstandHistory1_S1()		//Geschichtsbcher
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, ""						);
 				
-					Doc_PrintLines	( nDocID,  0, "Angriff ist die beste Verteidigung, bei allem was nicht Mensch ist. Eine Parade gegen Tiere oder Monster auszufÃ¼hren ist sinnlos."						);
-					Doc_PrintLines	( nDocID,  0, "Da ist es besser den Gegner mit gezielten SeitenschlÃ¤gen auf Distanz zu halten um Ã¼berraschend eine Kombination aus mehreren SchlÃ¤gen durchzufÃ¼hren."						);
+					Doc_PrintLines	( nDocID,  0, "Angriff ist die beste Verteidigung, bei allem was nicht Mensch ist. Eine Parade gegen Tiere oder Monster auszuführen ist sinnlos."						);
+					Doc_PrintLines	( nDocID,  0, "Da ist es besser den Gegner mit gezielten Seitenschlägen auf Distanz zu halten um überraschend eine Kombination aus mehreren Schlägen durchzuführen."						);
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
-					Doc_PrintLines	( nDocID,  1, "Kombinationen mehrerer SchlÃ¤ge sind natÃ¼rlich einem erfahrenen KÃ¤mpfer vorbehalten. Und wer sogar die Meisterschaft im Kampf erreicht, kann weitere Kombinationen ausfÃ¼hren."						); 
+					Doc_PrintLines	( nDocID,  1, "Kombinationen mehrerer Schläge sind natürlich einem erfahrenen Kämpfer vorbehalten. Und wer sogar die Meisterschaft im Kampf erreicht, kann weitere Kombinationen ausführen."						); 
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLines	( nDocID,  1, ""						);
 					Doc_PrintLines	( nDocID,  1, ""						);
@@ -75,16 +75,16 @@ FUNC VOID UseZweihandBuch()
 			Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 			Doc_PrintLine	( nDocID,  0, ""					);
 			Doc_PrintLine	( nDocID,  0, ""					);
-			Doc_PrintLines	( nDocID,  0, "Das Abblocken der gegnerischen Klinge, mit einer beidhÃ¤ndig gefÃ¼hrten Waffe, kann bei ausreichender Kraft dazu genutzt werden, sÃ¤mtlichen Schwung des Angriffes aufzuhalten und den Gegner zu zwingen seien begonnene Kombination abrupt zu beenden."					);
+			Doc_PrintLines	( nDocID,  0, "Blocking the enemy's blade with a two-handed weapon is a method used by strong fighters to stop the impetus of attacks and force their assailants to abruptly end their assault combinations. "					);
 					
-			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Rnder des TGAs aus, links,oben,rechts,unten)
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 			Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 			Doc_PrintLine	( nDocID,  1, ""					);
 			Doc_PrintLines	( nDocID,  1, ""	);
 			Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
 			Doc_PrintLine	( nDocID,  1, ""					);
 			Doc_PrintLine	( nDocID,  1, ""					);
-			Doc_PrintLines	( nDocID,  1, "Die daraufhin meist folgende Stagnation des Gegners sollte entschlossen genutzt werden, um selbst die Initiative zu ergreifen und den Gegner mit gekonnten SchlÃ¤gen in die Niederlage zu treiben."	);
+			Doc_PrintLines	( nDocID,  1, "The usually resulting halt of the opponent's movement is an opportunity to take the initiative and defeat the enemy with skilled strokes.    "	);
 					
 			Doc_Show		( nDocID );
 					
@@ -115,17 +115,17 @@ FUNC VOID UseEinhandBuch()
 			Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels
 			Doc_SetFont 	( nDocID,  0, FONT_BookHeadline	   			); 	// -1 -> all pages
  			Doc_PrintLine	( nDocID,  0, ""					);
-			Doc_PrintLines	( nDocID,  0, "Die sÃ¼dlÃ¤ndische Verteidigung"	);
+			Doc_PrintLines	( nDocID,  0, "Die südländische Verteidigung"	);
 			Doc_SetFont 	( nDocID,  0, FONT_Book	   			); 	// -1 -> all pages
 			Doc_PrintLine	( nDocID,  0, ""					);
-			Doc_PrintLines	( nDocID,  0, "Der SÃ¼dlÃ¤nder kÃ¤mpft nun mehr weniger mit der Kraft des Nordmannes, als mit seiner Behendigkeit. Denn im heiÃŸen Klima seiner Heimat, bevorzugt er leichte RÃ¼stungen welche ihm mehr Beweglichkeit erlauben. Durch diesen Umstand hat der SÃ¼dlÃ¤nder einen ihm angepassten Kampstil entwickelt, der sich auf fundamentale Weise von den uns bekannten unterscheidet."					);
+			Doc_PrintLines	( nDocID,  0, "A southerner uses less physical strength than a northerner, instead relying on agility. In the hot climate of his home he prefers light armor which permits him to move more freely. The southerner has therefore developed a style of fighting that is fundamentally different from what we are used to. "					);
 					
-			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Rnder des TGAs aus, links,oben,rechts,unten)
+			Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);  //  0 -> margins are in pixels (Position des Textes von den Ränder des TGAs aus, links,oben,rechts,unten)
 			Doc_SetFont 	( nDocID,  1, FONT_BookHeadline	   			); 	// -1 -> all pages
 			Doc_PrintLine	( nDocID,  1, ""					);
 			Doc_SetFont 	( nDocID,  1, FONT_Book	   			); 	// -1 -> all pages
 			Doc_PrintLine	( nDocID,  1, ""					);
-			Doc_PrintLines	( nDocID,  1, "Das wohl bekannnteste ManÃ¶ver des SÃ¼dlÃ¤nders ist wohl der einarmige Block mit rÃ¼ckwÃ¤rtigen Ausfallschritt. Durch den Ausfallschritt gelingt es ihm, die Kraft des gegnerischen Angriffes zu mildern und so eine hervorragende Ausgangsposition zu erlangen, die zum direkten Gegenangriff genutzt werden kann."	);
+			Doc_PrintLines	( nDocID,  1, "Das wohl bekannnteste Manöver des Südländers ist wohl der einarmige Block mit rückwärtigen Ausfallschritt. Durch den Ausfallschritt gelingt es ihm, die Kraft des gegnerischen Angriffes zu mildern und so eine hervorragende Ausgangsposition zu erlangen, die zum direkten Gegenangriff genutzt werden kann."	);
 			Doc_PrintLine	( nDocID,  1, ""					);
 								
 			Doc_Show		( nDocID );
@@ -160,16 +160,16 @@ FUNC VOID UseKampfkunst()
 				Doc_PrintLines	( nDocID,  0,"2000 Jahre lang bildeten diese Lehren des Meisters die Pfeiler bei der Entwicklung der Kampfkunst.");
 				Doc_PrintLine	( nDocID,  0,"");					
 				Doc_PrintLine	( nDocID,  0,"");					
-				Doc_PrintLines	( nDocID,  0,"Geschult werden dabei die Beweglichkeit des KÃ¶rpers, Ruhe und Schnelligkeit, Beobachtung und Reaktion. Die Bewegungen mÃ¼ssen gut koordiniert und die KÃ¶rperhaltung korrekt sein, um die beste Entfaltung deiner Kraft zu erreichen.");			
+				Doc_PrintLines	( nDocID,  0,"Geschult werden dabei die Beweglichkeit des Körpers, Ruhe und Schnelligkeit, Beobachtung und Reaktion. Die Bewegungen müssen gut koordiniert und die Körperhaltung korrekt sein, um die beste Entfaltung deiner Kraft zu erreichen.");			
 				
 				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 				Doc_PrintLine	( nDocID,  1,"");					
 				Doc_PrintLine	( nDocID,  1,"");					
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,"Der Kern der geistigen und kÃ¶rperlichen Lehren des Meisters hat viele Jahre Ã¼berlebt.");
+				Doc_PrintLines	( nDocID,  1,"Der Kern der geistigen und körperlichen Lehren des Meisters hat viele Jahre überlebt.");
 				Doc_PrintLine	( nDocID,  1,"");					
 				Doc_PrintLine	( nDocID,  1,"");					
-				Doc_PrintLines	( nDocID,  1,"Sein einzigartiger Erfolg hat Generationen beeinfluÃŸt. Jahrtausende, in denen zwar die Welt ihr Ã„uÃŸeres schon oft verÃ¤ndert hat, in der aber eines fÃ¼r immer Bestand haben wird: Die Harmonie der inneren KrÃ¤fte mit der gezielten Ã¤uÃŸeren Bewegung des KÃ¶rpers.");					
+				Doc_PrintLines	( nDocID,  1,"Sein einzigartiger Erfolg hat Generationen beeinflußt. Jahrtausende, in denen zwar die Welt ihr Äußeres schon oft verändert hat, in der aber eines für immer Bestand haben wird: Die Harmonie der inneren Kräfte mit der gezielten äußeren Bewegung des Körpers.");					
 
 				Doc_Show		( nDocID );
 					

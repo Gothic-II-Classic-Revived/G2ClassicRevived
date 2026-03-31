@@ -20,7 +20,7 @@ func void ZS_Rake_FP ()
 	
 func int ZS_Rake_FP_Loop ()
 {
-	if (Npc_IsOnFP (self, "Hacke"))
+	if (Npc_IsOnFP (self, "PICK"))
 	{	
 		AI_AlignToFP (self);
 		if (self.aivar[AIV_TAPOSITION] == NOTINPOS_WALK)
@@ -28,9 +28,9 @@ func int ZS_Rake_FP_Loop ()
   			self.aivar[AIV_TAPOSITION] = NOTINPOS;
   		};
 	}	
-	else if (Wld_IsFPAvailable(self,"Hacke"))
+	else if (Wld_IsFPAvailable(self,"PICK"))
 	{
-		AI_GotoFP 		(self, "Hacke");
+		AI_GotoFP 		(self, "PICK");
 		AI_StandUp 		(self);
 		AI_AlignToFP 	(self);
 		self.aivar[AIV_TAPOSITION] = NOTINPOS_WALK;

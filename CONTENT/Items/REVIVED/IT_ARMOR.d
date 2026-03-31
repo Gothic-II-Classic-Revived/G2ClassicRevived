@@ -5,7 +5,7 @@ const int	REV_Prot_Point_BEGGAR				=	0;
 const int	REV_Prot_Fire_BEGGAR				=	0;
 const int	REV_Prot_Magic_BEGGAR				=	0;
 //******************************************************************//
-const int	REV_Value_LEATHER_L					=	500;
+const int	REV_Value_LEATHER_L					=	300;
 const int	REV_Prot_Edge_LEATHER_L				=	25;
 const int	REV_Prot_Blunt_LEATHER_L			=	25;
 const int	REV_Prot_Point_LEATHER_L			=	20;
@@ -19,26 +19,26 @@ const int	REV_Prot_Point_LEATHER_M			=	20;
 const int	REV_Prot_Fire_LEATHER_M				=	10;
 const int	REV_Prot_Magic_LEATHER_M			=	0;
 //******************************************************************//
-const int	REV_Value_LEATHER_H					=	500;
-const int	REV_Prot_Edge_LEATHER_H				=	35;
-const int	REV_Prot_Blunt_LEATHER_H			=	35;
-const int	REV_Prot_Point_LEATHER_H			=	30;
-const int	REV_Prot_Fire_LEATHER_H				=	15;
-const int	REV_Prot_Magic_LEATHER_H			=	0;
+const int	REV_Value_LEATHER_H					=	600;
+const int	REV_Prot_Edge_LEATHER_H				=	40;
+const int	REV_Prot_Blunt_LEATHER_H			=	40;
+const int	REV_Prot_Point_LEATHER_H			=	40;
+const int	REV_Prot_Fire_LEATHER_H				=	25;
+const int	REV_Prot_Magic_LEATHER_H			=	5;
 //******************************************************************//
 const int	REV_Value_ARCHER					=	800;
-const int	REV_Prot_Edge_ARCHER				=	40;
+const int	REV_Prot_Edge_ARCHER				=	50;
 const int	REV_Prot_Blunt_ARCHER				=	40;
 const int	REV_Prot_Point_ARCHER				=	60;
-const int	REV_Prot_Fire_ARCHER				=	10;
+const int	REV_Prot_Fire_ARCHER				=	20;
 const int	REV_Prot_Magic_ARCHER				=	0;
 //******************************************************************//
 const int	REV_Value_KNIGHT					=	10000;
 const int	REV_Prot_Edge_KNIGHT				=	100;
 const int	REV_Prot_Blunt_KNIGHT				=	100;
 const int	REV_Prot_Point_KNIGHT				=	100;
-const int	REV_Prot_Fire_KNIGHT				=	50;
-const int	REV_Prot_Magic_KNIGHT				=	50;
+const int	REV_Prot_Fire_KNIGHT				=	100;
+const int	REV_Prot_Magic_KNIGHT				=	100;
 //******************************************************************//
 /* const int	REV_Value_IDKYET				=	12000;
 const int	REV_Prot_Edge_IDKYET			=	150;
@@ -52,7 +52,7 @@ const int	REV_Prot_Edge_DEMONHUNTER			=	150;
 const int	REV_Prot_Blunt_DEMONHUNTER			=	150;
 const int	REV_Prot_Point_DEMONHUNTER			=	150;
 const int	REV_Prot_Fire_DEMONHUNTER			=	100;
-const int	REV_Prot_Magic_DEMONHUNTER			=	50;
+const int	REV_Prot_Magic_DEMONHUNTER			=	100;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_SFB_L						=	25;
@@ -77,14 +77,14 @@ const int	REV_Prot_Fire_SFB_H					=	5;
 const int	REV_Prot_Magic_SFB_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_STT_M						=	0;
+const int	REV_Value_STT_M						=	150;
 const int	REV_Prot_Edge_STT_M					=	30;
 const int	REV_Prot_Blunt_STT_M				=	30;
 const int	REV_Prot_Point_STT_M				=	5;
 const int	REV_Prot_Fire_STT_M					=	15;
 const int	REV_Prot_Magic_STT_M				=	0;
 //******************************************************************//
-const int	REV_Value_STT_H						=	0;
+const int	REV_Value_STT_H						=	200;
 const int	REV_Prot_Edge_STT_H					=	40;
 const int	REV_Prot_Blunt_STT_H				=	40;
 const int	REV_Prot_Point_STT_H				=	5;
@@ -92,21 +92,21 @@ const int	REV_Prot_Fire_STT_H					=	20;
 const int	REV_Prot_Magic_STT_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_ORG_L						=	0;
+const int	REV_Value_ORG_L						=	200;
 const int	REV_Prot_Edge_ORG_L					=	30;
 const int	REV_Prot_Blunt_ORG_L				=	30;
 const int	REV_Prot_Point_ORG_L				=	5;
 const int	REV_Prot_Fire_ORG_L					=	15;
 const int	REV_Prot_Magic_ORG_L				=	0;
 //******************************************************************//
-const int	REV_Value_ORG_M						=	0;
+const int	REV_Value_ORG_M						=	300;
 const int	REV_Prot_Edge_ORG_M					=	35;
 const int	REV_Prot_Blunt_ORG_M				=	35;
 const int	REV_Prot_Point_ORG_M				=	5;
 const int	REV_Prot_Fire_ORG_M					=	15;
 const int	REV_Prot_Magic_ORG_M				=	0;
 //******************************************************************//
-const int	REV_Value_ORG_H						=	0;
+const int	REV_Value_ORG_H						=	500;
 const int	REV_Prot_Edge_ORG_H					=	40;
 const int	REV_Prot_Blunt_ORG_H				=	40;
 const int	REV_Prot_Point_ORG_H				=	5;
@@ -114,50 +114,50 @@ const int	REV_Prot_Fire_ORG_H					=	20;
 const int	REV_Prot_Magic_ORG_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_GRD_L						=	0;
-const int	REV_Prot_Edge_GRD_L					=	40;
-const int	REV_Prot_Blunt_GRD_L				=	40;
-const int	REV_Prot_Point_GRD_L				=	40;
-const int	REV_Prot_Fire_GRD_L					=	0;
-const int	REV_Prot_Magic_GRD_L				=	0;
+const int	REV_Value_GRD_L						=	1000;
+const int	REV_Prot_Edge_GRD_L					=	60;
+const int	REV_Prot_Blunt_GRD_L				=	60;
+const int	REV_Prot_Point_GRD_L				=	60;
+const int	REV_Prot_Fire_GRD_L					=	40;
+const int	REV_Prot_Magic_GRD_L				=	40;
 //******************************************************************//
-const int	REV_Value_GRD_M						=	0;
+const int	REV_Value_GRD_M						=	1000;
 const int	REV_Prot_Edge_GRD_M					=	70;
 const int	REV_Prot_Blunt_GRD_M				=	70;
 const int	REV_Prot_Point_GRD_M				=	70;
-const int	REV_Prot_Fire_GRD_M					=	10;
-const int	REV_Prot_Magic_GRD_M				=	10;
+const int	REV_Prot_Fire_GRD_M					=	40;
+const int	REV_Prot_Magic_GRD_M				=	40;
 //******************************************************************//
-const int	REV_Value_GRD_H						=	0;
+const int	REV_Value_GRD_H						=	2000;
 const int	REV_Prot_Edge_GRD_H					=	80;
 const int	REV_Prot_Blunt_GRD_H				=	80;
 const int	REV_Prot_Point_GRD_H				=	80;
-const int	REV_Prot_Fire_GRD_H					=	35;
-const int	REV_Prot_Magic_GRD_H				=	35;
+const int	REV_Prot_Fire_GRD_H					=	60;
+const int	REV_Prot_Magic_GRD_H				=	60;
 //******************************************************************//
-const int	REV_Value_GRD_S						=	0;
-const int	REV_Prot_Edge_GRD_S					=	70;
-const int	REV_Prot_Blunt_GRD_S				=	70;
-const int	REV_Prot_Point_GRD_S				=	70;
-const int	REV_Prot_Fire_GRD_S					=	10;
-const int	REV_Prot_Magic_GRD_S				=	10;
+const int	REV_Value_GRD_S						=	2000;
+const int	REV_Prot_Edge_GRD_S					=	100;
+const int	REV_Prot_Blunt_GRD_S				=	100;
+const int	REV_Prot_Point_GRD_S				=	100;
+const int	REV_Prot_Fire_GRD_S					=	60;
+const int	REV_Prot_Magic_GRD_S				=	60;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_EBR_L						=	0;
+const int	REV_Value_EBR_L						=	1000;
 const int	REV_Prot_Edge_EBR_L					=	70;
 const int	REV_Prot_Blunt_EBR_L				=	70;
 const int	REV_Prot_Point_EBR_L				=	5;
 const int	REV_Prot_Fire_EBR_L					=	35;
 const int	REV_Prot_Magic_EBR_L				=	5;
 //******************************************************************//
-const int	REV_Value_EBR_M						=	0;
+const int	REV_Value_EBR_M						=	1000;
 const int	REV_Prot_Edge_EBR_M					=	80;
 const int	REV_Prot_Blunt_EBR_M				=	80;
 const int	REV_Prot_Point_EBR_M				=	30;
 const int	REV_Prot_Fire_EBR_M					=	40;
 const int	REV_Prot_Magic_EBR_M				=	20;
 //******************************************************************//
-const int	REV_Value_EBR_H						=	0;
+const int	REV_Value_EBR_H						=	1000;
 const int	REV_Prot_Edge_EBR_H					=	100;
 const int	REV_Prot_Blunt_EBR_H				=	100;
 const int	REV_Prot_Point_EBR_H				=	50;
@@ -165,50 +165,50 @@ const int	REV_Prot_Fire_EBR_H					=	60;
 const int	REV_Prot_Magic_EBR_H				=	40;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_PAL_L						=	0;
-const int	REV_Prot_Edge_PAL_L					=	90;
-const int	REV_Prot_Blunt_PAL_L				=	90;
-const int	REV_Prot_Point_PAL_L				=	60;
-const int	REV_Prot_Fire_PAL_L					=	50;
-const int	REV_Prot_Magic_PAL_L				=	50;
+const int	REV_Value_PAL_L						=	2000;
+const int	REV_Prot_Edge_PAL_L					=	110;
+const int	REV_Prot_Blunt_PAL_L				=	110;
+const int	REV_Prot_Point_PAL_L				=	110;
+const int	REV_Prot_Fire_PAL_L					=	100;
+const int	REV_Prot_Magic_PAL_L				=	100;
 //******************************************************************//
-const int	REV_Value_PAL_M						=	0;
-const int	REV_Prot_Edge_PAL_M					=	100;
-const int	REV_Prot_Blunt_PAL_M				=	100;
-const int	REV_Prot_Point_PAL_M				=	100;
-const int	REV_Prot_Fire_PAL_M					=	75;
-const int	REV_Prot_Magic_PAL_M				=	75;
+const int	REV_Value_PAL_M						=	2000;
+const int	REV_Prot_Edge_PAL_M					=	120;
+const int	REV_Prot_Blunt_PAL_M				=	120;
+const int	REV_Prot_Point_PAL_M				=	120;
+const int	REV_Prot_Fire_PAL_M					=	100;
+const int	REV_Prot_Magic_PAL_M				=	100;
 //******************************************************************//
-const int	REV_Value_PAL_H						=	0;
+const int	REV_Value_PAL_H						=	2000;
 const int	REV_Prot_Edge_PAL_H					=	150;
 const int	REV_Prot_Blunt_PAL_H				=	150;
 const int	REV_Prot_Point_PAL_H				=	150;
 const int	REV_Prot_Fire_PAL_H					=	100;
 const int	REV_Prot_Magic_PAL_H				=	100;
 //******************************************************************//
-const int	REV_Value_PAL_S						=	0;
+const int	REV_Value_PAL_S						=	2000;
 const int	REV_Prot_Edge_PAL_S					=	150;
 const int	REV_Prot_Blunt_PAL_S				=	150;
 const int	REV_Prot_Point_PAL_S				=	150;
 const int	REV_Prot_Fire_PAL_S					=	100;
-const int	REV_Prot_Magic_PAL_S				=	50;
+const int	REV_Prot_Magic_PAL_S				=	100;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_SLD_L						=	0;
+const int	REV_Value_SLD_L						=	150;
 const int	REV_Prot_Edge_SLD_L					=	30;
 const int	REV_Prot_Blunt_SLD_L				=	30;
 const int	REV_Prot_Point_SLD_L				=	30;
 const int	REV_Prot_Fire_SLD_L					=	0;
 const int	REV_Prot_Magic_SLD_L				=	0;
 //******************************************************************//
-const int	REV_Value_SLD_M						=	0;
+const int	REV_Value_SLD_M						=	300;
 const int	REV_Prot_Edge_SLD_M					=	50;
 const int	REV_Prot_Blunt_SLD_M				=	50;
 const int	REV_Prot_Point_SLD_M				=	50;
 const int	REV_Prot_Fire_SLD_M					=	0;
 const int	REV_Prot_Magic_SLD_M				=	5;
 //******************************************************************//
-const int	REV_Value_SLD_H						=	0;
+const int	REV_Value_SLD_H						=	500;
 const int	REV_Prot_Edge_SLD_H					=	80;
 const int	REV_Prot_Blunt_SLD_H				=	80;
 const int	REV_Prot_Point_SLD_H				=	80;
@@ -216,21 +216,21 @@ const int	REV_Prot_Fire_SLD_H					=	5;
 const int	REV_Prot_Magic_SLD_H				=	10;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_DJG_L						=	0;
+const int	REV_Value_DJG_L						=	2000;
 const int	REV_Prot_Edge_DJG_L					=	120;
 const int	REV_Prot_Blunt_DJG_L				=	120;
 const int	REV_Prot_Point_DJG_L				=	120;
 const int	REV_Prot_Fire_DJG_L					=	75;
 const int	REV_Prot_Magic_DJG_L				=	35;
 //******************************************************************//
-const int	REV_Value_DJG_M						=	0;
+const int	REV_Value_DJG_M						=	3000;
 const int	REV_Prot_Edge_DJG_M					=	120;
 const int	REV_Prot_Blunt_DJG_M				=	120;
 const int	REV_Prot_Point_DJG_M				=	120;
 const int	REV_Prot_Fire_DJG_M					=	75;
 const int	REV_Prot_Magic_DJG_M				=	35;
 //******************************************************************//
-const int	REV_Value_DJG_H						=	0;
+const int	REV_Value_DJG_H						=	3000;
 const int	REV_Prot_Edge_DJG_H					=	150;
 const int	REV_Prot_Blunt_DJG_H				=	150;
 const int	REV_Prot_Point_DJG_H				=	150;
@@ -238,21 +238,21 @@ const int	REV_Prot_Fire_DJG_H					=	100;
 const int	REV_Prot_Magic_DJG_H				=	50;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_KDF_L						=	0;
+const int	REV_Value_KDF_L						=	1000;
 const int	REV_Prot_Edge_KDF_L					=	40;
 const int	REV_Prot_Blunt_KDF_L				=	40;
 const int	REV_Prot_Point_KDF_L				=	40;
 const int	REV_Prot_Fire_KDF_L					=	20;
 const int	REV_Prot_Magic_KDF_L				=	20;
 //******************************************************************//
-const int	REV_Value_KDF_M						=	0;
+const int	REV_Value_KDF_M						=	1000;
 const int	REV_Prot_Edge_KDF_M					=	65;
 const int	REV_Prot_Blunt_KDF_M				=	65;
 const int	REV_Prot_Point_KDF_M				=	40;
 const int	REV_Prot_Fire_KDF_M					=	40;
 const int	REV_Prot_Magic_KDF_M				=	40;
 //******************************************************************//
-const int	REV_Value_KDF_H						=	0;
+const int	REV_Value_KDF_H						=	1000;
 const int	REV_Prot_Edge_KDF_H					=	80;
 const int	REV_Prot_Blunt_KDF_H				=	80;
 const int	REV_Prot_Point_KDF_H				=	80;
@@ -260,21 +260,21 @@ const int	REV_Prot_Fire_KDF_H					=	100;
 const int	REV_Prot_Magic_KDF_H				=	100;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_KDW_L						=	0;
+const int	REV_Value_KDW_L						=	1000;
 const int	REV_Prot_Edge_KDW_L					=	40;
 const int	REV_Prot_Blunt_KDW_L				=	40;
 const int	REV_Prot_Point_KDW_L				=	40;
 const int	REV_Prot_Fire_KDW_L					=	20;
 const int	REV_Prot_Magic_KDW_L				=	20;
 //******************************************************************//
-const int	REV_Value_KDW_M						=	0;
+const int	REV_Value_KDW_M						=	1000;
 const int	REV_Prot_Edge_KDW_M					=	65;
 const int	REV_Prot_Blunt_KDW_M				=	65;
 const int	REV_Prot_Point_KDW_M				=	40;
 const int	REV_Prot_Fire_KDW_M					=	40;
 const int	REV_Prot_Magic_KDW_M				=	40;
 //******************************************************************//
-const int	REV_Value_KDW_H						=	0;
+const int	REV_Value_KDW_H						=	1000;
 const int	REV_Prot_Edge_KDW_H					=	80;
 const int	REV_Prot_Blunt_KDW_H				=	80;
 const int	REV_Prot_Point_KDW_H				=	80;
@@ -282,14 +282,14 @@ const int	REV_Prot_Fire_KDW_H					=	100;
 const int	REV_Prot_Magic_KDW_H				=	100;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_NOV_M						=	0;
+const int	REV_Value_NOV_M						=	150;
 const int	REV_Prot_Edge_NOV_M					=	30;
 const int	REV_Prot_Blunt_NOV_M				=	30;
 const int	REV_Prot_Point_NOV_M				=	0;
 const int	REV_Prot_Fire_NOV_M					=	15;
 const int	REV_Prot_Magic_NOV_M				=	0;
 //******************************************************************//
-const int	REV_Value_TPL_H						=	0;
+const int	REV_Value_TPL_H						=	2000;
 const int	REV_Prot_Edge_TPL_H					=	70;
 const int	REV_Prot_Blunt_TPL_H				=	70;
 const int	REV_Prot_Point_TPL_H				=	60;
@@ -297,28 +297,28 @@ const int	REV_Prot_Fire_TPL_H					=	50;
 const int	REV_Prot_Magic_TPL_H				=	25;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_DMT_L						=	0;
+const int	REV_Value_DMT_L						=	2000;
 const int	REV_Prot_Edge_DMT_L					=	90;
 const int	REV_Prot_Blunt_DMT_L				=	90;
 const int	REV_Prot_Point_DMT_L				=	20;
 const int	REV_Prot_Fire_DMT_L					=	60;
 const int	REV_Prot_Magic_DMT_L				=	30;
 //******************************************************************//
-const int	REV_Value_DMT_M						=	0;
+const int	REV_Value_DMT_M						=	2000;
 const int	REV_Prot_Edge_DMT_M					=	100;
 const int	REV_Prot_Blunt_DMT_M				=	100;
 const int	REV_Prot_Point_DMT_M				=	100;
 const int	REV_Prot_Fire_DMT_M					=	100;
 const int	REV_Prot_Magic_DMT_M				=	100;
 //******************************************************************//
-const int	REV_Value_DMT_H						=	0;
+const int	REV_Value_DMT_H						=	2000;
 const int	REV_Prot_Edge_DMT_H					=	150;
 const int	REV_Prot_Blunt_DMT_H				=	150;
 const int	REV_Prot_Point_DMT_H				=	120;
 const int	REV_Prot_Fire_DMT_H					=	100;
 const int	REV_Prot_Magic_DMT_H				=	120;
 //******************************************************************//
-const int	REV_Value_DMT_S					=	0;
+const int	REV_Value_DMT_S						=	2000;
 const int	REV_Prot_Edge_DMT_S					=	120;
 const int	REV_Prot_Blunt_DMT_S				=	120;
 const int	REV_Prot_Point_DMT_S				=	60;
@@ -326,21 +326,21 @@ const int	REV_Prot_Fire_DMT_S					=	80;
 const int	REV_Prot_Magic_DMT_S				=	105;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_BDT_L						=	0;
+const int	REV_Value_BDT_L						=	150;
 const int	REV_Prot_Edge_BDT_L					=	30;
 const int	REV_Prot_Blunt_BDT_L				=	30;
 const int	REV_Prot_Point_BDT_L				=	30;
 const int	REV_Prot_Fire_BDT_L					=	0;
 const int	REV_Prot_Magic_BDT_L				=	0;
 //******************************************************************//
-const int	REV_Value_BDT_M						=	0;
+const int	REV_Value_BDT_M						=	200;
 const int	REV_Prot_Edge_BDT_M					=	30;
 const int	REV_Prot_Blunt_BDT_M				=	30;
 const int	REV_Prot_Point_BDT_M				=	5;
 const int	REV_Prot_Fire_BDT_M					=	15;
 const int	REV_Prot_Magic_BDT_M				=	0;
 //******************************************************************//
-const int	REV_Value_BDT_H						=	0;
+const int	REV_Value_BDT_H						=	300;
 const int	REV_Prot_Edge_BDT_H					=	30;
 const int	REV_Prot_Blunt_BDT_H				=	30;
 const int	REV_Prot_Point_BDT_H				=	5;
@@ -351,9 +351,9 @@ const int	REV_Prot_Magic_BDT_H				=	0;
 const int	REV_Value_GORDONRAMSAY				=	0;
 const int	REV_Prot_Edge_GORDONRAMSAY			=	50;
 const int	REV_Prot_Blunt_GORDONRAMSAY			=	50;
-const int	REV_Prot_Point_GORDONRAMSAY			=	200;
-const int	REV_Prot_Fire_GORDONRAMSAY			=	500;
-const int	REV_Prot_Magic_GORDONRAMSAY			=	999;
+const int	REV_Prot_Point_GORDONRAMSAY			=	50;
+const int	REV_Prot_Fire_GORDONRAMSAY			=	50;
+const int	REV_Prot_Magic_GORDONRAMSAY			=	50;
 
 
 
@@ -395,7 +395,7 @@ INSTANCE ITAR_REVIVED_BEGGAR (C_Item)
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 {
-	name 					=	"Leichte LederrÃ¼stung";
+	name 					=	"Leichte Lederrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -428,7 +428,7 @@ INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 
 INSTANCE ITAR_REVIVED_LEATHER_M (C_Item)
 {
-	name 					=	"LederrÃ¼stung";
+	name 					=	"Lederrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -460,7 +460,7 @@ INSTANCE ITAR_REVIVED_LEATHER_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_LEATHER_H (C_Item)
 {
-	name 					=	"Schwere LederrÃ¼stung";
+	name 					=	"Schwere Lederrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -497,7 +497,7 @@ FUNC VOID Equip_LEATHER_ARMOR()
 	{
 		LeatherArmor_Equipped = TRUE;	
 	
-		if (Leather01_Equipped == TRUE) //Ledergrtel
+		if (Leather01_Equipped == TRUE) //Ledergürtel
 		{
 			self.protection[PROT_EDGE] 	+= BA_Bonus01;
 			self.protection[PROT_BLUNT] += BA_Bonus01;
@@ -513,7 +513,7 @@ FUNC VOID UnEquip_LEATHER_ARMOR()
 	{
 		LeatherArmor_Equipped = FALSE;	
 	
-		if (Leather01_Equipped == TRUE) //Ledergrtel
+		if (Leather01_Equipped == TRUE) //Ledergürtel
 		{
 			self.protection[PROT_EDGE] 	-= BA_Bonus01;
 			self.protection[PROT_BLUNT] -= BA_Bonus01;
@@ -526,7 +526,7 @@ FUNC VOID UnEquip_LEATHER_ARMOR()
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_ARCHER (C_Item)
 {
-	name 					=	"BogenschÃ¼tzenrÃ¼stung";
+	name 					=	"Bogenschützenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -591,7 +591,7 @@ FUNC VOID UnEquip_ARCHER_ARMOR()
 //******************************************************************//
 INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
 {
-	name 					=	"Alte RitterrÃ¼stung";
+	name 					=	"Alte Ritterrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -621,7 +621,7 @@ INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
 
 INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 {
-	name 					=	"Alte RitterrÃ¼stung"; //(without helmet)
+	name 					=	"Alte Ritterrüstung"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -651,7 +651,7 @@ INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 {
-	name 					=	"DÃ¤monenjÃ¤gerrÃ¼stung";
+	name 					=	"Dämonenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -681,7 +681,7 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 
 INSTANCE ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 {
-	name 					=	"DÃ¤monenjÃ¤gerrÃ¼stung"; //(without helmet)
+	name 					=	"Dämonenjägerrüstung"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -774,7 +774,7 @@ INSTANCE ITAR_REVIVED_SFB_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_SFB_H (C_Item)
 {
-	name 					=	"SchÃ¼rferklamotten";
+	name 					=	"Schürferklamotten";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -839,7 +839,7 @@ INSTANCE ITAR_REVIVED_STT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_STT_H (C_Item)
 {
-	name 					=	"SchattenrÃ¼stung";
+	name 					=	"Schattenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -969,7 +969,7 @@ INSTANCE ITAR_REVIVED_ORG_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_GRD_L (C_Item)
 {
-	name 					=	"Leichte GarderÃ¼stung";
+	name 					=	"Leichte Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1001,7 +1001,7 @@ INSTANCE ITAR_REVIVED_GRD_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_GRD_M (C_Item)
 {
-	name 					=	"GarderÃ¼stung";
+	name 					=	"Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1033,7 +1033,7 @@ INSTANCE ITAR_REVIVED_GRD_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_GRD_H (C_Item)
 {
-	name 					=	"Schwere GarderÃ¼stung";
+	name 					=	"Schwere Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1065,7 +1065,7 @@ INSTANCE ITAR_REVIVED_GRD_H (C_Item)
 };
 INSTANCE ITAR_REVIVED_GRD_S (C_Item)
 {
-	name 					=	"GarderÃ¼stung";
+	name 					=	"Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1165,7 +1165,7 @@ INSTANCE ITAR_REVIVED_EBR_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_EBR_M (C_Item)
 {
-	name 					=	"ErzbaronrÃ¼stung";
+	name 					=	"Erzbaronrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1194,7 +1194,7 @@ INSTANCE ITAR_REVIVED_EBR_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_EBR_H (C_Item)
 {
-	name 					=	"Gomez'RÃ¼stung";
+	name 					=	"Gomez'Rüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1229,7 +1229,7 @@ INSTANCE ITAR_REVIVED_EBR_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 {
-	name 					=	"KÃ¶nigliche GarderÃ¼stung";
+	name 					=	"Königliche Garderüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1261,7 +1261,7 @@ INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 {
-	name 					=	"PaladinrÃ¼stung";
+	name 					=	"Paladinrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1293,7 +1293,7 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 {
-	name 					=	"Schwere PaladinrÃ¼stung";
+	name 					=	"Schwere Paladinrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1325,7 +1325,7 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
 {
-	name 					=	"Schwere PaladinrÃ¼stung"; //(without helmet)
+	name 					=	"Schwere Paladinrüstung"; //(without helmet)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1363,7 +1363,7 @@ INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_SLD_L (C_Item)
 {
-	name 					=	"leichte SÃ¶ldnerrÃ¼stung";
+	name 					=	"leichte Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1396,7 +1396,7 @@ INSTANCE ITAR_REVIVED_SLD_L (C_Item)
 
 INSTANCE ITAR_REVIVED_SLD_L_02 (C_Item)
 {
-	name 					=	"leichte SÃ¶ldnerrÃ¼stung";
+	name 					=	"leichte Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1428,7 +1428,7 @@ INSTANCE ITAR_REVIVED_SLD_L_02 (C_Item)
 };
 INSTANCE ITAR_REVIVED_SLD_M (C_Item)
 {
-	name 					=	"SÃ¶ldnerrÃ¼stung";
+	name 					=	"Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1460,7 +1460,7 @@ INSTANCE ITAR_REVIVED_SLD_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_SLD_H (C_Item)
 {
-	name 					=	"Schwere SÃ¶ldnerrÃ¼stung";
+	name 					=	"Schwere Söldnerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1531,7 +1531,7 @@ FUNC VOID UnEquip_SLD_ARMOR()
 //****************************************************************************
 INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 {
-	name 					=	"Leichte DrachenjÃ¤gerrÃ¼stung";
+	name 					=	"Leichte Drachenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1560,7 +1560,7 @@ INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_DJG_M (C_Item)
 {
-	name 					=	"Mittlere DrachenjÃ¤gerrÃ¼stung";
+	name 					=	"Mittlere Drachenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1589,7 +1589,7 @@ INSTANCE ITAR_REVIVED_DJG_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_DJG_H (C_Item)
 {
-	name 					=	"Schwere DrachenjÃ¤gerrÃ¼stung";
+	name 					=	"Schwere Drachenjägerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1690,7 +1690,7 @@ INSTANCE ITAR_REVIVED_KDF_M (C_Item)
 
 INSTANCE ITAR_REVIVED_KDF_H (C_Item)
 {
-	name 					=	"GroÃŸe Feuerrobe";
+	name 					=	"Große Feuerrobe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1827,7 +1827,7 @@ INSTANCE ITAR_REVIVED_KDW_M (C_Item)
 
 INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 {
-	name 					=	"GroÃŸe Wasserrobe";
+	name 					=	"Große Wasserrobe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1865,7 +1865,7 @@ INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_PSI_NOV (C_Item)
 {
-	name 					=	"NovizenrÃ¼stung";
+	name 					=	"Novizenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1895,7 +1895,7 @@ INSTANCE ITAR_REVIVED_PSI_NOV (C_Item)
 
 INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
 {
-	name 					=	"Schwere TemplerrÃ¼stung";
+	name 					=	"Schwere Templerrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1925,7 +1925,7 @@ INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
 
 INSTANCE ITAR_REVIVED_PSI_TPL_02 (C_Item)
 {
-	name 					=	"Schwere Templer-RÃ¼stung (Skelett)";
+	name 					=	"Schwere Templer-Rüstung (Skelett)";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1990,7 +1990,7 @@ INSTANCE ITAR_REVIVED_DMT_L (C_Item)
 
 INSTANCE ITAR_REVIVED_DMT_M (C_Item)
 {
-	name 					=	"Robe der Dunklen KÃ¼nste";
+	name 					=	"Robe der Dunklen Künste";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2020,7 +2020,7 @@ INSTANCE ITAR_REVIVED_DMT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_DMT_H (C_Item)
 {
-	name 					=	"Hohe Robe der dunklen KÃ¼nste";
+	name 					=	"Hohe Robe der dunklen Künste";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2085,7 +2085,7 @@ INSTANCE ITAR_REVIVED_DMT_S (C_Item)
 //****************************************************************************
 INSTANCE ITAR_REVIVED_BDT_L (C_Item)
 {
-	name 					=	"Leichte BanditenrÃ¼stung";
+	name 					=	"Leichte Banditenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2115,7 +2115,7 @@ INSTANCE ITAR_REVIVED_BDT_L (C_Item)
 
 INSTANCE ITAR_REVIVED_BDT_M (C_Item)
 {
-	name 					=	"Eine RÃ¼stung der Banditen";
+	name 					=	"Eine Rüstung der Banditen";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2145,7 +2145,7 @@ INSTANCE ITAR_REVIVED_BDT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_BDT_H (C_Item)
 {
-	name 					=	"Schwere BanditenrÃ¼stung";
+	name 					=	"Schwere Banditenrüstung";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;

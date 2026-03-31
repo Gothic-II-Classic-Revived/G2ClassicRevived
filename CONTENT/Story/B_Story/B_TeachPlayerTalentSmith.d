@@ -27,28 +27,28 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	oth.lp = oth.lp - kosten;
 	
 	Log_CreateTopic (TOPIC_TalentSmith,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentSmith,"Um eine Waffe zu schmiede, brauche ich zunÃ¤chst ein StÃ¼ck Rohstahl. An einem Schmiedefeuer muss ich den Stahl erhitzen und anschlieÃŸend an einem Amboss in die gewÃ¼nschte Form bringen. FÃ¼r hochwertigere Waffe benÃ¶tigt man hÃ¤ufig noch Substanzen, welche der Waffe besondere Eigenschaften verleihen.");
+	B_LogEntry (TOPIC_TalentSmith,"Um eine Waffe zu schmiede, brauche ich zunächst ein Stück Rohstahl. An einem Schmiedefeuer muss ich den Stahl erhitzen und anschließend an einem Amboss in die gewünschte Form bringen. Für hochwertigere Waffe benötigt man häufig noch Substanzen, welche der Waffe besondere Eigenschaften verleihen.");
 	
 	// ------ Waffe schmieden lernen ------
 	//Bennet
 	if (waffe == WEAPON_Common)				{	PLAYER_TALENT_SMITH[WEAPON_Common] 			= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche keine weiteren Zutaten fÃ¼r das selbstgeschmiedete Schwert.");};
+	B_LogEntry (TOPIC_TalentSmith,"I don't need any more Ingredients for the ´Self-forged Sword´.                     ");};
 	if (waffe == WEAPON_1H_Special_01)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche 1 Erzbrocken, um ein Erz-Langschwert zu schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"I need 1 ore nugget to forge an ´Ore Longsword´.                              ");};
 	if (waffe == WEAPON_2H_Special_01)		{	PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche 2 Erzbrocken, um ein Erz-ZweihÃ¤nder zu schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"I need 2 ore nuggets to forge an ´Ore Two-Hander´.                            ");};
 	if (waffe == WEAPON_1H_Special_02)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche 2 Erzbrocken, um ein Erz-Halbschwert zu schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"I need 2 ore nuggets to forge an ´Ore Bastard Sword´.                         ");};
 	if (waffe == WEAPON_2H_Special_02)		{	PLAYER_TALENT_SMITH[WEAPON_2H_Special_02] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche 3 Erzbrocken, um ein schweres Erz-Zweihandschwert zu schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"I need 3 ore nuggets to forge a ´Heavy Ore Two-Hander´.                       ");};
 	if (waffe == WEAPON_1H_Special_03)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche 3 Erzbrocken, um eine Erz-Kampfklinge zu schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"I need 3 ore nuggets to forge an ´Ore Battle Blade´.                          ");};
 	if (waffe == WEAPON_2H_Special_03)		{	PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Ich brauche 4 Erzbrocken, um eine schwere Erz-Kampfklinge zu schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"I need 4 ore nuggets to forge an ´Heavy Ore Battle Blade´. ");};
 	if (waffe == WEAPON_1H_Special_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 4 Erz und 5 Drachenblut hinzugebe, kann ich mir einen Â´ERZ-DRACHENTÃ–TERÂ´ schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 4 Erz und 5 Drachenblut hinzugebe, kann ich mir einen ´ERZ-DRACHENTÖTER´ schmieden.");};
 	if (waffe == WEAPON_2H_Special_04)		{	PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 5 Erz und 5 Drachenblut hinzugebe, kann ich mir einen Â´GROÃŸEN ERZ-DRACHENTÃ–TERÂ´ schmieden.");};
+	B_LogEntry (TOPIC_TalentSmith,"Wenn ich 5 Erz und 5 Drachenblut hinzugebe, kann ich mir einen ´GROßEN ERZ-DRACHENTÖTER´ schmieden.");};
 	
 	//Harad - Addon
 	if (waffe == WEAPON_1H_Harad_01)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Harad_01] 	= TRUE;	

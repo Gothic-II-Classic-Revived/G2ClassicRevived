@@ -31,7 +31,7 @@ INSTANCE DIA_Garvell_PICKPOCKET (C_INFO)
 	condition	= DIA_Garvell_PICKPOCKET_Condition;
 	information	= DIA_Garvell_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(Es wÃ¤re ein Kinderspiel seinen Geldbeutel zu stehlen)";
+	description = "(Es wäre ein Kinderspiel seinen Geldbeutel zu stehlen)";
 };                       
 
 FUNC INT DIA_Garvell_PICKPOCKET_Condition()
@@ -121,8 +121,8 @@ func void DIA_Garvell_eilig_Info ()
 	AI_Output (other, self, "DIA_Garvell_eilig_15_00"); //Warum hast du es so eilig?
 	AI_Output (self, other, "DIA_Garvell_eilig_04_01"); //Bald werden die Orks kommen und die Stadt niederbrennen.
 	AI_Output (other, self, "DIA_Garvell_eilig_15_02"); //Wie kommst du darauf?
-	AI_Output (self, other, "DIA_Garvell_eilig_04_03"); //Junge, hast du schon die Paladine bemerkt, die Ã¼berall rumlaufen? Was glaubst du, warum die hier sind?
-	AI_Output (self, other, "DIA_Garvell_eilig_04_04"); //Ich sage dir, die sind hier, weil die Orks bald angreifen. Und das wird nicht schÃ¶n.
+	AI_Output (self, other, "DIA_Garvell_eilig_04_03"); //Junge, hast du schon die Paladine bemerkt, die überall rumlaufen? Was glaubst du, warum die hier sind?
+	AI_Output (self, other, "DIA_Garvell_eilig_04_04"); //Ich sage dir, die sind hier, weil die Orks bald angreifen. Und das wird nicht schön.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -149,7 +149,7 @@ func void DIA_Garvell_Schiff_Info ()
 	AI_Output (self, other, "DIA_Garvell_Schiff_04_01"); //(winkt ab) Ach, wir haben tausend Probleme. Der Rumpf ist noch nicht stabil und es fehlen noch viele Bretter.
 	AI_Output (self, other, "DIA_Garvell_Schiff_04_02"); //Aber ich hab kaum noch Gold, um neues Material zu kaufen, und in der letzten Lieferung hatten sich Wanzen eingeschlichen.
 	AI_Output (self, other, "DIA_Garvell_Schiff_04_03"); //Meine Jungs arbeiten nicht produktiv. Der eine will vor allem ein schnelles Schiff, der andere macht sich Gedanken um eine Galionsfigur!
-	AI_Output (self, other, "DIA_Garvell_Schiff_04_04"); //Als ob wir nichts Wichtigeres zu tun hÃ¤tten!
+	AI_Output (self, other, "DIA_Garvell_Schiff_04_04"); //Als ob wir nichts Wichtigeres zu tun hätten!
 	//AI_Output (self, other, "DIA_Addon_Garvell_Schiff_04_00"); //Also, one of my people is simply not showing up for work any more. I'm beginning to fear that this will delay the construction even more.
 };
 
@@ -179,7 +179,7 @@ func void DIA_Garvell_MISSION_Info ()
 	AI_Output (other, self, "DIA_Garvell_MISSION_15_00"); //Kann ich dir irgendwie helfen?
 	AI_Output (self, other, "DIA_Garvell_MISSION_04_01"); //Ja, das kannst du. Finde heraus, was die Paladine vorhaben. Ich will wissen, warum sie hier sind.
 	AI_Output (self, other, "DIA_Garvell_MISSION_04_02"); //Und ich muss wissen, ob die Orks bald angreifen werden - und wie weit sie von der Stadt entfernt sind.
-	AI_Output (self, other, "DIA_Garvell_MISSION_04_03"); //Es wurde nÃ¤mlich schon einer von den Bastarden vor der Stadt gesehen.
+	AI_Output (self, other, "DIA_Garvell_MISSION_04_03"); //Es wurde nämlich schon einer von den Bastarden vor der Stadt gesehen.
 	AI_Output (self, other, "DIA_Garvell_MISSION_04_04"); //Bringe mir einfach alle Informationen, die du kriegen kannst.
 	AI_Output (self ,other, "DIA_Garvell_Add_04_00"); //Ich muss wissen, wieviel Zeit mir noch bleibt, um das Boot fertig zu kriegen.
 
@@ -188,7 +188,7 @@ func void DIA_Garvell_MISSION_Info ()
 	
 	Log_CreateTopic (TOPIC_Garvell,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Garvell,LOG_RUNNING);
-	B_LogEntry (TOPIC_Garvell,"Garvell will Informationen Ã¼ber die Orks und er will wissen, warum die Paladine in der Stadt sind.");
+	B_LogEntry (TOPIC_Garvell,"Garvell will Informationen über die Orks und er will wissen, warum die Paladine in der Stadt sind.");
 };
 FUNC VOID B_GarvellWeiter()
 {
@@ -196,7 +196,7 @@ FUNC VOID B_GarvellWeiter()
 };
 FUNC VOID B_GarvellSuccess()
 {
-	AI_Output (self, other, "DIA_Garvell_Success_04_00"); //Danke fÃ¼r die Informationen. So wie es aussieht, haben wir alle Zeit der Welt, um unser Schiff zu bauen.
+	AI_Output (self, other, "DIA_Garvell_Success_04_00"); //Danke für die Informationen. So wie es aussieht, haben wir alle Zeit der Welt, um unser Schiff zu bauen.
 	MIS_Garvell_Infos = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Ambient);
 };
@@ -210,7 +210,7 @@ instance DIA_Garvell_Orks		(C_INFO)
 	condition	 = 	DIA_Garvell_Orks_Condition;
 	information	 = 	DIA_Garvell_Orks_Info;
 	permanent    =  FALSE;
-	description	 = 	"Ich habe Informationen Ã¼ber die Orks.";
+	description	 = 	"Ich habe Informationen über die Orks.";
 };
 func int DIA_Garvell_Orks_Condition ()
 {	
@@ -222,8 +222,8 @@ func int DIA_Garvell_Orks_Condition ()
 };
 func void DIA_Garvell_Orks_Info ()
 {
-	AI_Output (other, self, "DIA_Garvell_Orks_15_00"); //Ich habe Informationen Ã¼ber die Orks.
-	AI_Output (self, other, "DIA_Garvell_Orks_04_01"); //Lass hÃ¶ren.
+	AI_Output (other, self, "DIA_Garvell_Orks_15_00"); //Ich habe Informationen über die Orks.
+	AI_Output (self, other, "DIA_Garvell_Orks_04_01"); //Lass hören.
 	AI_Output (other, self, "DIA_Garvell_Orks_15_02"); //Sie sitzen im Minental fest und dort werden sie wohl auch bleiben.
 	AI_Output (other, self, "DIA_Garvell_Orks_15_03"); //Zur Sicherheit lassen die Paladine den Pass bewachen.
 
@@ -249,7 +249,7 @@ instance DIA_Garvell_Paladine		(C_INFO)
 	condition	 = 	DIA_Garvell_Paladine_Condition;
 	information	 = 	DIA_Garvell_Paladine_Info;
 	permanent    =  FALSE;
-	description	 = 	"Ich weiÃŸ, warum die Paladine hier sind.";
+	description	 = 	"Ich weiß, warum die Paladine hier sind.";
 };
 func int DIA_Garvell_Paladine_Condition ()
 {	
@@ -261,10 +261,10 @@ func int DIA_Garvell_Paladine_Condition ()
 };
 func void DIA_Garvell_Paladine_Info ()
 {
-	AI_Output (other, self, "DIA_Garvell_Paladine_15_00"); //Ich weiÃŸ, warum die Paladine hier sind.
-	AI_Output (self, other, "DIA_Garvell_Paladine_04_01"); //Wirklich? ErzÃ¤hl!
+	AI_Output (other, self, "DIA_Garvell_Paladine_15_00"); //Ich weiß, warum die Paladine hier sind.
+	AI_Output (self, other, "DIA_Garvell_Paladine_04_01"); //Wirklich? Erzähl!
 	AI_Output (other, self, "DIA_Garvell_Paladine_15_02"); //Die Paladine sind hier, um das magische Erz aus dem Minental zu holen, nicht, weil die Orks die Stadt angreifen wollen.
-	AI_Output (other, self, "DIA_Garvell_Paladine_15_03"); //Sobald sie das Erz haben, werden sie wieder zum Festland zurÃ¼ckkehren.
+	AI_Output (other, self, "DIA_Garvell_Paladine_15_03"); //Sobald sie das Erz haben, werden sie wieder zum Festland zurückkehren.
 
 	Tell_Garvell = (Tell_Garvell +1);
 	B_GivePlayerXP (XP_Ambient);
@@ -302,7 +302,7 @@ func void DIA_Garvell_City_Info ()
 {
 	AI_Output (other, self, "DIA_Garvell_City_15_00"); //Was den Ork vor der Stadt angeht ...
 	AI_Output (self, other, "DIA_Garvell_City_04_01"); //Ja...?
-	AI_Output (other, self, "DIA_Garvell_City_15_02"); //Mach dir Ã¼ber ihn keine Gedanken. Die Stadtwache wird sich um ihn kÃ¼mmern.
+	AI_Output (other, self, "DIA_Garvell_City_15_02"); //Mach dir über ihn keine Gedanken. Die Stadtwache wird sich um ihn kümmern.
 	
 
 	Tell_Garvell = (Tell_Garvell +1);
@@ -342,10 +342,10 @@ func void DIA_Garvell_Perm_Info ()
 	
 	if (MIS_Garvell_Infos != LOG_SUCCESS)
 	{
-		AI_Output (self, other, "DIA_Garvell_Perm_04_01"); //Die Orks rÃ¼cken uns auf den Pelz und du fragst nach dem Hafen?
+		AI_Output (self, other, "DIA_Garvell_Perm_04_01"); //Die Orks rücken uns auf den Pelz und du fragst nach dem Hafen?
 		AI_Output (other, self, "DIA_Garvell_Perm_15_02"); //Ich wollte ja nur ...
-		AI_Output (self, other, "DIA_Garvell_Perm_04_03"); //Das grÃ¶ÃŸte Problem, das wir haben, ist, dass im Hafen nicht genug Schiffe liegen, um uns von hier zu verdrÃ¼cken.
-		AI_Output (self, other, "DIA_Garvell_Perm_04_04"); //Um ehrlich zu sein, liegt hier nur ein Schiff, und das gehÃ¶rt den Paladinen. Die lassen uns bestimmt nicht damit abhauen.
+		AI_Output (self, other, "DIA_Garvell_Perm_04_03"); //Das größte Problem, das wir haben, ist, dass im Hafen nicht genug Schiffe liegen, um uns von hier zu verdrücken.
+		AI_Output (self, other, "DIA_Garvell_Perm_04_04"); //Um ehrlich zu sein, liegt hier nur ein Schiff, und das gehört den Paladinen. Die lassen uns bestimmt nicht damit abhauen.
 	}
 	else
 	{

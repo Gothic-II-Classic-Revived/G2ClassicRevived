@@ -28,7 +28,7 @@ func int B_TeachPlayerTalentAlchemy (var C_NPC slf, var C_NPC oth, var int potio
 	
 	if(Npc_GetTalentSkill(oth, NPC_TALENT_ALCHEMY) <= 0) {
 		Log_CreateTopic (TOPIC_TalentAlchemy,LOG_NOTE);
-		B_LogEntry (TOPIC_TalentAlchemy,"Um einen Trank zu brauen, brauche ich einen leere Laborflasche und die jeweilig benÃ¶tigten Zutaten fÃ¼r den gewÃ¼nschten Trank. Mit diese Zutaten kann man an einem Alchemietisch den gewÃ¼nschten Trank herstellen."); 
+		B_LogEntry (TOPIC_TalentAlchemy,"Um einen Trank zu brauen, brauche ich einen leere Laborflasche und die jeweilig benötigten Zutaten für den gewünschten Trank. Mit diese Zutaten kann man an einem Alchemietisch den gewünschten Trank herstellen."); 
 	
 		Npc_SetTalentSkill 	(oth, NPC_TALENT_ALCHEMY, 1);
 	};
@@ -53,19 +53,19 @@ func int B_TeachPlayerTalentAlchemy (var C_NPC slf, var C_NPC oth, var int potio
 	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_MANA_03);  };
 	
 	if (potion == POTION_Speed)			{	PLAYER_TALENT_ALCHEMY[POTION_Speed] 		= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten Â´TRANK DER GESCHWINDIGKEITÂ´: 1 Snapperkraut und 1 FeldknÃ¶terich");  };
+	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´TRANK DER GESCHWINDIGKEIT´: 1 Snapperkraut und 1 Feldknöterich");  };
 	
 	if (potion == POTION_Perm_STR)		{	PLAYER_TALENT_ALCHEMY[POTION_Perm_STR] 		= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten Â´Elixier der StÃ¤rkeÂ´:1 Drachenwurzel und 1 KronstÃ¶ckel.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´Elixier der Stärke´:1 Drachenwurzel und 1 Kronstöckel.");  };
 	
 	if (potion == POTION_Perm_DEX)		{	PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX] 		= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten Â´ELIXIER DER GESCHICKLICHKEITÂ´: 1 Goblinbeere und 1 KronstÃ¶ckel.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´ELIXIER DER GESCHICKLICHKEIT´: 1 Goblinbeere und 1 Kronstöckel.");  };
 	
 	if (potion == POTION_Perm_Mana)		{	PLAYER_TALENT_ALCHEMY[POTION_Perm_Mana] 	= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten Â´ELIXIER DES GEISTESÂ´:1 Feuerwurzel und 1 KronstÃ¶ckel.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´ELIXIER DES GEISTES´:1 Feuerwurzel und 1 Kronstöckel.");  };
 	
 	if (potion == POTION_Perm_Health)	{	PLAYER_TALENT_ALCHEMY[POTION_Perm_Health] 	= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten Â´ELIXIER DES LEBENSÂ´:1 Heilwurzel und 1 KronstÃ¶ckel.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,"Zutaten ´ELIXIER DES LEBENS´:1 Heilwurzel und 1 Kronstöckel.");  };
 
 
 	if (potion == POTION_Perm_HEALTH_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] 	= TRUE;

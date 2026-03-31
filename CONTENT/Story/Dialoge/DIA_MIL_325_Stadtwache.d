@@ -92,7 +92,7 @@ FUNC INT DIA_Mil_325_Miliz_SecondWarn_Condition()
 
 func void DIA_Mil_325_Miliz_SecondWarn_Info()
 {
-	AI_Output (self, other,"DIA_Mil_325_Miliz_SecondWarn_12_00"); //HÃ¶rst du schlecht? Einen Schritt weiter und ich hack dich in StÃ¼cke!
+	AI_Output (self, other,"DIA_Mil_325_Miliz_SecondWarn_12_00"); //Hörst du schlecht? Einen Schritt weiter und ich hack dich in Stücke!
 
 	other.aivar[AIV_LastDistToWP] 		= Npc_GetDistToWP (other,Mil_325_Checkpoint);
 	self.aivar[AIV_Guardpassage_Status]	= GP_SecondWarnGiven;	
@@ -148,7 +148,7 @@ INSTANCE DIA_Mil_325_Miliz_Pass (C_INFO)
 	condition	= DIA_Mil_325_Miliz_Pass_Condition;
 	information	= DIA_Mil_325_Miliz_Pass_Info;
 	permanent	= FALSE;
-	description	= "Ich gehÃ¶re zur Armee des KÃ¶nigs. Ich will mich ausrÃ¼sten!";
+	description	= "Ich gehöre zur Armee des Königs. Ich will mich ausrüsten!";
 };                       
 
 FUNC INT DIA_Mil_325_Miliz_Pass_Condition()
@@ -162,7 +162,7 @@ FUNC INT DIA_Mil_325_Miliz_Pass_Condition()
 	
 func void DIA_Mil_325_Miliz_Pass_Info()
 {
-	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_15_00"); //Ich gehÃ¶re zur Armee des KÃ¶nigs. Ich will mich ausrÃ¼sten!
+	AI_Output (other, self,"DIA_Mil_325_Miliz_Pass_15_00"); //Ich gehöre zur Armee des Königs. Ich will mich ausrüsten!
 	AI_Output (self, other,"DIA_Mil_325_Miliz_Pass_12_01"); //Hast du den Befehl dazu?
 	
 	Info_ClearChoices (DIA_Mil_325_Miliz_Pass);
@@ -210,7 +210,7 @@ FUNC INT DIA_Mil_325_Miliz_PERM_Condition()
 func void DIA_Mil_325_Miliz_PERM_Info()
 {
 	AI_Output (other, self,"DIA_Mil_325_Miliz_PERM_15_00"); //Warum darf das Lager nicht betreten werden?
-	AI_Output (self, other,"DIA_Mil_325_Miliz_PERM_12_01"); //Der ehrenwerte Lord Hagen hat die Ware fÃ¼r die Armee des KÃ¶nigs beschlagnahmt.
+	AI_Output (self, other,"DIA_Mil_325_Miliz_PERM_12_01"); //Der ehrenwerte Lord Hagen hat die Ware für die Armee des Königs beschlagnahmt.
 };
 
 

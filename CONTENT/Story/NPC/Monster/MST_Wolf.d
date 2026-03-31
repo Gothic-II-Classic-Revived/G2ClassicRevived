@@ -94,7 +94,7 @@ INSTANCE BlackWolf	(Mst_Default_Warg)
 {
 	name							=	"Schwarzer Wolf";
 	level							=	 10;		
-	//fr Inventory
+	//für Inventory
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	30;
@@ -185,7 +185,7 @@ INSTANCE WolfJuvenile	(Mst_Default_Wolf)
 
 
 //************
-//	Missions Wlfe fr Pepe: YWolf    	
+//	Missions Wölfe für Pepe: YWolf    	
 //************
 
 

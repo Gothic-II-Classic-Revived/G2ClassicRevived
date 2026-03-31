@@ -25,7 +25,7 @@ instance DJG_713_Biff (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_1H_AXE_BIFF); //Joly: Axt!!!!! Biff keine andere Waffe geben!!!!!!!!! DOCH DEFAULT MSSIG- die instanz gibts nicht mehr 
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_BIFF); //Joly: Axt!!!!! Biff keine andere Waffe geben!!!!!!!!! DOCH DEFAULT MÄSSIG- die instanz gibts nicht mehr 
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -96,6 +96,6 @@ FUNC VOID Rtn_Stay_AwayFromOC_713 ()
 
 FUNC VOID Rtn_RunsToPass_713 ()
 {
-	TA_RunToWP					(08,00,23,00,"Start");
-    TA_RunToWP					(23,00,08,00,"Start");		
+	TA_RunToWP					(08,00,23,00,"START");
+    TA_RunToWP					(23,00,08,00,"START");		
 };

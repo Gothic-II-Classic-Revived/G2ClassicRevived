@@ -118,7 +118,7 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	B_SetVisuals_Lesser_Skeleton();
 
 	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
-	EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schiet beim Skelett in Zeitlupe...
+	EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
 };
 
 //**************
@@ -165,7 +165,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 
 INSTANCE Crypt_Skeleton_Room_01			(Mst_Default_Skeleton)
 {
-	name							=	"Krypta-W√§chter";
+	name							=	"Krypta-W‰chter";
 
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -177,7 +177,7 @@ INSTANCE Crypt_Skeleton_Room_01			(Mst_Default_Skeleton)
 
 INSTANCE Crypt_Skeleton_Room_02			(Mst_Default_Skeleton)
 {
-	name							=	"Krypta-W√§chter";
+	name							=	"Krypta-W‰chter";
 
 	aivar[AIV_EnemyOverride] = TRUE;
 	
@@ -189,7 +189,7 @@ INSTANCE Crypt_Skeleton_Room_02			(Mst_Default_Skeleton)
 
 INSTANCE Crypt_Skeleton_Room_03			(Mst_Default_Skeleton)
 {
-	name							=	"Krypta-W√§chter";
+	name							=	"Krypta-W‰chter";
 
 	aivar[AIV_EnemyOverride] = TRUE;
 	

@@ -77,7 +77,7 @@ func int DIA_Nadja_STANDARD_Condition ()
 };
 func void DIA_Nadja_STANDARD_Info ()
 {
-	AI_Output (self, other, "DIA_Nadja_STANDARD_16_00"); //Hey, ich kann mich jetzt nicht um dich kÃ¼mmern, SÃ¼ÃŸer. Sprich mit Bromor, wenn du dich amÃ¼sieren willst.
+	AI_Output (self, other, "DIA_Nadja_STANDARD_16_00"); //Hey, ich kann mich jetzt nicht um dich kümmern, Süßer. Sprich mit Bromor, wenn du dich amüsieren willst.
 	
 	AI_StopProcessInfos (self);
 };
@@ -105,11 +105,11 @@ func int DIA_Nadja_Danach_Condition ()
 };
 func void DIA_Nadja_Danach_Info ()
 {
-	AI_Output (self, other, "DIA_Nadja_Danach_16_00"); //Komm das nÃ¤chste Mal wieder zu mir, SÃ¼ÃŸer.
+	AI_Output (self, other, "DIA_Nadja_Danach_16_00"); //Komm das nächste Mal wieder zu mir, Süßer.
 	Nadja_Nacht = FALSE;
 		
 	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"Start");
+	Npc_ExchangeRoutine (self,"START");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info STANDARD
@@ -135,7 +135,7 @@ func int DIA_Nadja_hochgehen_Condition ()
 func void DIA_Nadja_hochgehen_Info ()
 {
 	AI_Output (other, self, "DIA_Nadja_hochgehen_15_00"); //Lass uns hochgehen.
-	AI_Output (self, other, "DIA_Nadja_hochgehen_16_01"); //Heute ist dein GlÃ¼ckstag, SÃ¼ÃŸer. Gehen wir.
+	AI_Output (self, other, "DIA_Nadja_hochgehen_16_01"); //Heute ist dein Glückstag, Süßer. Gehen wir.
 	
 	Bromor_Pay = 2;
 	AI_StopProcessInfos (self);
@@ -151,7 +151,7 @@ instance DIA_Nadja_Poppen	(C_INFO)
 	condition	 = 	DIA_Nadja_Poppen_Condition;
 	information	 = 	DIA_Nadja_Poppen_Info;
 	permanent	 = 	TRUE;
-	description  = "(AmÃ¼sieren)";
+	description  = "(Amüsieren)";
 };
 
 func int DIA_Nadja_Poppen_Condition ()
@@ -164,8 +164,8 @@ func int DIA_Nadja_Poppen_Condition ()
 };
 func void DIA_Nadja_Poppen_Info ()
 {
-	AI_Output (self, other, "DIA_Nadja_Poppen_16_00"); //Die nÃ¤chsten Stunden gehÃ¶ren nur uns.
-	AI_Output (self, other, "DIA_Nadja_Poppen_16_01"); //Es ist Zeit, dass du dich entspannst. Lehne dich zurÃ¼ck und genieÃŸe es.
+	AI_Output (self, other, "DIA_Nadja_Poppen_16_00"); //Die nächsten Stunden gehören nur uns.
+	AI_Output (self, other, "DIA_Nadja_Poppen_16_01"); //Es ist Zeit, dass du dich entspannst. Lehne dich zurück und genieße es.
 
 	Info_ClearChoices (DIA_Nadja_Poppen);
 	Info_AddChoice (DIA_Nadja_Poppen,"Okay ...",DIA_Nadja_Poppen_Start);
@@ -222,21 +222,21 @@ func void DIA_Nadja_BUYHERB_Info ()
 {
 	var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
 	
-	AI_Output (other, self, "DIA_Nadja_BUYHERB_15_00"); //Where can I buy weed around here?
+	AI_Output (other, self, "DIA_Nadja_BUYHERB_15_00"); //Wo kann ich hier Kraut kaufen?
 	
 	if  (Npc_GetDistToWP (self,"NW_CITY_HABOUR_PUFF_NADJA") < 500) 
 	{	
 		if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
 		|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
 		{
-			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_01"); //How would I know? Even if I knew, I'd certainly not tell the city guard.
+			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_01"); //Woher soll ich das wissen? Selbst wenn ich es wüsste, würde ich es der Stadtwache garantiert nicht erzählen.
 			Undercover_Failed = TRUE;
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_02"); //If you want me to tell you something, you'd better part with a few gold pieces.
-			AI_Output (other, self, "DIA_Nadja_BUYHERB_15_03"); //How much do you want?
-			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_04"); //50 gold pieces should do the trick.
+			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_02"); //Wenn ich dir was erzählen soll, musst du schon ein paar Goldstücke locker machen.
+			AI_Output (other, self, "DIA_Nadja_BUYHERB_15_03"); //Wie viel willst du?
+			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_04"); //50 Goldstücke sollten reichen.
 			Nadja_Money = TRUE;
 		};
 	}
@@ -269,17 +269,17 @@ func int DIA_Nadja_WANT_HERB_Condition ()
 func void DIA_Nadja_WANT_HERB_Info ()
 {
 	var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
-	AI_Output (other, self, "DIA_Nadja_WANT_HERB_15_00"); //Now tell me where I can buy weed.
+	AI_Output (other, self, "DIA_Nadja_WANT_HERB_15_00"); //Jetzt sag mir, wo ich Kraut kaufen kann.
 	
 	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
 	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
 	{
-		AI_Output (self, other, "DIA_Nadja_WANT_HERB_16_01"); //Sorry, I simply can't remember.
+		AI_Output (self, other, "DIA_Nadja_WANT_HERB_16_01"); //Tut mir Leid, ich kann mich nicht mehr erinnern.
 	}
 	else
 	{
 		B_GiveInvItems	(other, self, ItMi_Gold, 50); 
-		AI_Output (self, other, "DIA_Nadja_WANT_HERB_16_02"); //Talk to Borka, baby. He'll have some weed for you.
+		AI_Output (self, other, "DIA_Nadja_WANT_HERB_16_02"); //Sprich mit Borka, Süßer. Bei ihm bekommst du dein Kraut.
 		Knows_Borka_Dealer = TRUE;
 	};
 };

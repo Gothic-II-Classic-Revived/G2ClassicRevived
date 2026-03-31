@@ -22,13 +22,13 @@ FUNC VOID Use_Astronomy()
 					Doc_SetFont 	( nDocID,  -1, FONT_Book	   			); 	// -1 -> all pages 
  					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  //  0 -> margins are in pixels					
 					Doc_PrintLine	( nDocID,  0, ""					);										
-					Doc_PrintLines	( nDocID,  0, "...wenn nun aber die Kraft des Ochsen sich vereinigt mit den Prinzipien des Kriegers, so seien alle gewarnt vor den Ereignissen, die da kommen mÃ¶gen.");
-					Doc_PrintLines	( nDocID,  0, "Die unbÃ¤ndige Kraft des Ochsen und die Zielstrebigkeit des Kriegers ist in der Lage das Uralte Gleichgewicht der MÃ¤chte zu erschÃ¼ttern. Die kosmische Grenze zwischen den Dimension wird schwÃ¤cher, so schwach, dass die Schattenkreaturen Beliars auf ein leichtes in unsere Welt Ã¼berwechseln kÃ¶nnen.");
+					Doc_PrintLines	( nDocID,  0, "...wenn nun aber die Kraft des Ochsen sich vereinigt mit den Prinzipien des Kriegers, so seien alle gewarnt vor den Ereignissen, die da kommen mögen.");
+					Doc_PrintLines	( nDocID,  0, "Die unbändige Kraft des Ochsen und die Zielstrebigkeit des Kriegers ist in der Lage das Uralte Gleichgewicht der Mächte zu erschüttern. Die kosmische Grenze zwischen den Dimension wird schwächer, so schwach, dass die Schattenkreaturen Beliars auf ein leichtes in unsere Welt überwechseln können.");
 
 					Doc_SetMargins	( nDocID,  -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);
-					Doc_PrintLines	( nDocID,  1, "Was so etwas bedeutet, zeigen uns die Kriege der vorderen Zeit, als das Band zwischen den Welten noch stÃ¤rker war. Die Schergen des BÃ¶sen brachten Tod und ZerstÃ¶rung Ã¼ber die Welt und nur mit der Hilfe Innos und seines ErwÃ¤hlten war es den Menschen mÃ¶glich das Unheil zu besiegen."	);
-					Doc_PrintLines	( nDocID,  1, "Wenn es jemals wieder soweit kommen mag, dann mag Innos uns schÃ¼tzen, denn einen ErwÃ¤hlten Innos hat es schon seit Ã¼ber hundert Jehren nicht mehr gegeben."					);
+					Doc_PrintLines	( nDocID,  1, "Was so etwas bedeutet, zeigen uns die Kriege der vorderen Zeit, als das Band zwischen den Welten noch stärker war. Die Schergen des Bösen brachten Tod und Zerstörung über die Welt und nur mit der Hilfe Innos und seines Erwählten war es den Menschen möglich das Unheil zu besiegen."	);
+					Doc_PrintLines	( nDocID,  1, "Wenn es jemals wieder soweit kommen mag, dann mag Innos uns schützen, denn einen Erwählten Innos hat es schon seit über hundert Jehren nicht mehr gegeben."					);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLines	( nDocID,  1, "");
 
@@ -63,15 +63,15 @@ FUNC VOID Use_BookstandRevived_ASTRONOMY1_S1()
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
 
 					Doc_PrintLine	( nDocID,  0,"");										
-					Doc_PrintLines	( nDocID,  0,"Im Zentrum befindet sich der Morgrad mit seinen vier Elementen Erde, Wasser, Feuer und Luft, der Raum des VergÃ¤nglichen, in seinem Inneren die unaussprechliche Dunkelheit des Beliar. Ãœber allem befindet sich die SphÃ¤re des Himmels.");
+					Doc_PrintLines	( nDocID,  0,"Im Zentrum befindet sich der Morgrad mit seinen vier Elementen Erde, Wasser, Feuer und Luft, der Raum des Vergänglichen, in seinem Inneren die unaussprechliche Dunkelheit des Beliar. Über allem befindet sich die Sphäre des Himmels.");
 					Doc_PrintLine	( nDocID,  0,"");
-					Doc_PrintLines	( nDocID,  0,"In der Hierarchie des Kosmos nimmt der Mensch die Stellung des EmpfÃ¤ngers ein. Durch seine Seele hat er Teil am hÃ¶chsten Sein, dem gÃ¶ttlichen Geist, sein vergÃ¤nglicher KÃ¶rper hingegen besteht aus Stoffen des Morgrad. Als kleines Abbild der ganzen Welt.");
+					Doc_PrintLines	( nDocID,  0,"In der Hierarchie des Kosmos nimmt der Mensch die Stellung des Empfängers ein. Durch seine Seele hat er Teil am höchsten Sein, dem göttlichen Geist, sein vergänglicher Körper hingegen besteht aus Stoffen des Morgrad. Als kleines Abbild der ganzen Welt.");
 
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1,"");
-					Doc_PrintLines	( nDocID,  1,"Die synodische Umlaufszeit der Planeten, dh. die Zeitdauer zwischen zwei gleichartigen Stellungen in Bezug zum Morgrad unserer Welt, weicht jedes Jahrhundert um einige Grade ab, so dass wir davon ausgehen kÃ¶nnen, uns in einer stÃ¤ndigen Bewegung mit dem restlichen Kosmos zu befinden.");
+					Doc_PrintLines	( nDocID,  1,"Die synodische Umlaufszeit der Planeten, dh. die Zeitdauer zwischen zwei gleichartigen Stellungen in Bezug zum Morgrad unserer Welt, weicht jedes Jahrhundert um einige Grade ab, so dass wir davon ausgehen können, uns in einer ständigen Bewegung mit dem restlichen Kosmos zu befinden.");
 					Doc_PrintLine	( nDocID,  1,"");
-					Doc_PrintLines	( nDocID,  1,"Bei der Aufstellung eines Kalenders bezogen wir uns Anfangs auf den Mondlauf, um den AnschluÃŸ an die tatsÃ¤chliche LÃ¤nge des Sonnenjahres zu erhalten.");
+					Doc_PrintLines	( nDocID,  1,"Bei der Aufstellung eines Kalenders bezogen wir uns Anfangs auf den Mondlauf, um den Anschluß an die tatsächliche Länge des Sonnenjahres zu erhalten.");
 					
 					Doc_Show		( nDocID );
 					

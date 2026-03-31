@@ -11,7 +11,7 @@
 
 INSTANCE REVIVED_LEARN_ALCHEMY_ALL(C_Item)
 {
-	name = "DEBUG (TrÃ¤nke erlernen)";
+	name = "DEBUG (Tränke erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -20,8 +20,8 @@ INSTANCE REVIVED_LEARN_ALCHEMY_ALL(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_ALCHEMY_ALL;
 	description = "REVIVED_LEARN_ALCHEMY_ALL";
-	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all potions in the game.";
+	text[4] = "DEBUG-GEGENSTAND";
+	text[5] = "Ermöglicht es dir, alle Tränke im Spiel zu erlernen.";
 };
 
 
@@ -98,8 +98,8 @@ INSTANCE REVIVED_LEARN_SMITHING_ALL(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_SMITHING_ALL;
 	description = "REVIVED_LEARN_SMITHING_ALL";
-	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all smith recipes in the game.";
+	text[4] = "DEBUG-GEGENSTAND";
+	text[5] = "Ermöglicht es dir, alle Schmiederezepte im Spiel zu erlernen.";
 };
 
 
@@ -138,8 +138,8 @@ INSTANCE REVIVED_LEARN_BOWMAKING_ALL(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_BOWMAKING_ALL;
 	description = "REVIVED_LEARN_BOWMAKING_ALL";
-	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all bowmaking recipes in the game.";
+	text[4] = "DEBUG-GEGENSTAND";
+	text[5] = "Ermöglicht es dir, alle Rezepte zur Bogenherstellung im Spiel zu erlernen.";
 };
 
 
@@ -168,8 +168,8 @@ INSTANCE REVIVED_LEARN_RUNES_ALL(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_RUNES_ALL;
 	description = "REVIVED_LEARN_RUNES_ALL";
-	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all rune recipes in the game.";
+	text[4] = "DEBUG-GEGENSTAND";
+	text[5] = "Ermöglicht es dir, alle Runenrezepte im Spiel zu erlernen.";
 };
 
 
@@ -210,7 +210,7 @@ func void use_REVIVED_LEARN_RUNES_ALL()
 
 INSTANCE REVIVED_LEARN_TROPHIES_ALL(C_Item)
 {
-	name = "DEBUG (TrophÃ¤en erlernen)";
+	name = "DEBUG (Trophäen erlernen)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -219,8 +219,8 @@ INSTANCE REVIVED_LEARN_TROPHIES_ALL(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_TROPHIES_ALL;
 	description = "REVIVED_LEARN_TROPHIES_ALL";
-	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all trophies in the game.";
+	text[4] = "DEBUG-GEGENSTAND";
+	text[5] = "Ermöglicht es dir, alle Trophäen im Spiel zu erlernen.";
 };
 
 
@@ -254,8 +254,8 @@ INSTANCE REVIVED_LEARN_TALENTS_ALL(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_TALENTS_ALL;
 	description = "REVIVED_LEARN_TALENTS_ALL";
-	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all talents and components in the game.";
+	text[4] = "DEBUG-GEGENSTAND";
+	text[5] = "Damit kannst du alle Talente und Komponenten im Spiel erlernen.";
 };
 
 

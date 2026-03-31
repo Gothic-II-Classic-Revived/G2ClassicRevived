@@ -48,11 +48,11 @@ func void DIA_Ulf_Hallo_Info ()
 	
 	if (hero.guild == GIL_KDF)
 	{
-		AI_Output (self, other, "DIA_Ulf_Hallo_03_01"); //Ich versuche, die Aufgaben, die das Kloster mir stellt, zu eurer Zufriedenheit zu erf√ºllen.
+		AI_Output (self, other, "DIA_Ulf_Hallo_03_01"); //Ich versuche, die Aufgaben, die das Kloster mir stellt, zu eurer Zufriedenheit zu erf¸llen.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Ulf_Hallo_03_02"); //Ich bin Novize und komme vom Kloster. Ich erledige die Boteng√§nge f√ºr die Magier und auch die Paladine.
+		AI_Output (self, other, "DIA_Ulf_Hallo_03_02"); //Ich bin Novize und komme vom Kloster. Ich erledige die Boteng‰nge f¸r die Magier und auch die Paladine.
 		AI_Output (self, other, "DIA_Ulf_Hallo_03_03"); //Ich habe die drei Wirte in der Stadt mit Wein aus dem Kloster versorgt.
 	};	
 };
@@ -94,7 +94,7 @@ instance DIA_Ulf_Kloster		(C_INFO)
 	condition	 = 	DIA_Ulf_Kloster_Condition;
 	information	 = 	DIA_Ulf_Kloster_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Was kannst du mir √ºber das Kloster erz√§hlen?";
+	description	 = 	"Was kannst du mir ¸ber das Kloster erz‰hlen?";
 };
 
 func int DIA_Ulf_Kloster_Condition ()
@@ -108,8 +108,8 @@ func int DIA_Ulf_Kloster_Condition ()
 };
 func void DIA_Ulf_Kloster_Info ()
 {
-	AI_Output (other, self, "DIA_Ulf_Kloster_15_00"); //Was kannst du mir √ºber das Kloster erz√§hlen?
-	AI_Output (self, other, "DIA_Ulf_Kloster_03_01"); //Wir Novizen suchen Erleuchtung im Gebet zu Innos und lernen von den Magiern die Grunds√§tze des Glaubens.
+	AI_Output (other, self, "DIA_Ulf_Kloster_15_00"); //Was kannst du mir ¸ber das Kloster erz‰hlen?
+	AI_Output (self, other, "DIA_Ulf_Kloster_03_01"); //Wir Novizen suchen Erleuchtung im Gebet zu Innos und lernen von den Magiern die Grunds‰tze des Glaubens.
 	AI_Output (self, other, "DIA_Ulf_Kloster_03_02"); //Wir dienen ihnen, so wie wir Innos dienen und bereiten uns auf den Bund mit dem Feuer vor.
 };
 ///////////////////////////////////////////////////////////////////////
@@ -138,9 +138,9 @@ func int DIA_Ulf_Bringen_Condition ()
 func void DIA_Ulf_Bringen_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Bringen_15_00"); //Bring mich zum Kloster.
-	AI_Output (self, other, "DIA_Ulf_Bringen_03_01"); //Vergiss es. Wei√üt du, wie vielen Viechern ich auf dem Weg ausgewichen bin?
-	AI_Output (self, other, "DIA_Ulf_Bringen_03_02"); //Wenn ich an diese ganzen Blutfliegen, W√∂lfe und Goblins denke, dann bin ich froh, dass ich nicht mehr weg muss.
-	AI_Output (self, other, "DIA_Ulf_Bringen_03_03"); //Au√üerdem kannst du eh nicht ins Kloster.
+	AI_Output (self, other, "DIA_Ulf_Bringen_03_01"); //Vergiss es. Weiﬂt du, wie vielen Viechern ich auf dem Weg ausgewichen bin?
+	AI_Output (self, other, "DIA_Ulf_Bringen_03_02"); //Wenn ich an diese ganzen Blutfliegen, Wˆlfe und Goblins denke, dann bin ich froh, dass ich nicht mehr weg muss.
+	AI_Output (self, other, "DIA_Ulf_Bringen_03_03"); //Auﬂerdem kannst du eh nicht ins Kloster.
 	AI_Output (other, self, "DIA_Ulf_Bringen_15_04"); //Warum nicht?
 	AI_Output (self, other, "DIA_Ulf_Bringen_03_05"); //Der Zugang ist nur den Magiern, Paladinen und Novizen erlaubt.
 };
@@ -168,14 +168,14 @@ func int DIA_Ulf_Aufnahme_Condition ()
 func void DIA_Ulf_Aufnahme_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Aufnahme_15_00"); //Wie kann ich Novize werden?
-	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_01"); //Wenn ein Mann den tiefen Wunsch versp√ºrt ...
+	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_01"); //Wenn ein Mann den tiefen Wunsch versp¸rt ...
 	AI_Output (other, self, "DIA_Ulf_Aufnahme_15_02"); //Hey - sag mir einfach nur, was die Bedingungen sind.
 	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_03"); //Du brauchst die Gaben. Ein Schaf und ...
 	B_Say_Gold (self, other, Summe_Kloster);
 	
 	Log_CreateTopic (Topic_Kloster,LOG_MISSION);
 	Log_SetTopicStatus (Topic_Kloster,LOG_RUNNING);
-	B_LogEntry (Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und 1000 Goldst√ºcke.");
+	B_LogEntry (Topic_Kloster,"Um im Innos - Kloster als Novize aufgenommen zu werden, brauche ich ein Schaf und 1000 Goldst¸cke.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Gold
@@ -201,7 +201,7 @@ func int DIA_Ulf_Gold_Condition ()
 func void DIA_Ulf_Gold_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Gold_15_00"); //Wo soll ich so viel Gold hernehmen?
-	AI_Output (self, other, "DIA_Ulf_Gold_03_01"); //Da du offensichtlich niemanden kennst, der das mal eben f√ºr dich bezahlt, musst du halt arbeiten gehen.
+	AI_Output (self, other, "DIA_Ulf_Gold_03_01"); //Da du offensichtlich niemanden kennst, der das mal eben f¸r dich bezahlt, musst du halt arbeiten gehen.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Schaf
@@ -227,7 +227,7 @@ func int DIA_Ulf_Schaf_Condition ()
 func void DIA_Ulf_Schaf_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Schaf_15_00"); //Woher kriege ich ein Schaf?
-	AI_Output (self, other, "DIA_Ulf_Schaf_03_01"); //Von den Bauern nat√ºrlich. Aber umsonst wirst du das nicht bekommen.
+	AI_Output (self, other, "DIA_Ulf_Schaf_03_01"); //Von den Bauern nat¸rlich. Aber umsonst wirst du das nicht bekommen.
 	
 	B_LogEntry (Topic_Kloster,"Ein Schaf bekomme ich bei den Bauern.");
 };
@@ -254,12 +254,12 @@ func int DIA_Ulf_Suche_Condition ()
 };
 func void DIA_Ulf_Suche_Info ()
 {
-	AI_Output (self, other, "DIA_Ulf_Suche_03_00"); //Hey, wei√üt du, was passiert ist?
-	AI_Output (other, self, "DIA_Ulf_Suche_15_01"); //Du bist erw√§hlt worden.
-	AI_Output (self, other, "DIA_Ulf_Suche_03_02"); //Richtig. Gerade eben will ich noch einen k√ºhlen Schluck Bier zu mir nehmen - da biegt Daron um die Ecke und erl√§utert mir, dass ich erw√§hlt bin.
-	AI_Output (self, other, "DIA_Ulf_Suche_03_03"); //Wer h√§tte das gedacht? Innos' Wille ist halt unergr√ºndlich. Und was f√ºhrt dich her?
-	AI_Output (other, self, "DIA_Ulf_Suche_15_04"); //Ich habe die Pr√ºfung des Feuers gefordert.
-	AI_Output (self, other, "DIA_Ulf_Suche_03_05"); //Nicht m√∂glich?! Junge, du bist aber verdammt mutig. Hei√üt das, du suchst auch das, 'was der Gl√§ubige hinter dem Pfad findet'?
+	AI_Output (self, other, "DIA_Ulf_Suche_03_00"); //Hey, weiﬂt du, was passiert ist?
+	AI_Output (other, self, "DIA_Ulf_Suche_15_01"); //Du bist erw‰hlt worden.
+	AI_Output (self, other, "DIA_Ulf_Suche_03_02"); //Richtig. Gerade eben will ich noch einen k¸hlen Schluck Bier zu mir nehmen - da biegt Daron um die Ecke und erl‰utert mir, dass ich erw‰hlt bin.
+	AI_Output (self, other, "DIA_Ulf_Suche_03_03"); //Wer h‰tte das gedacht? Innos' Wille ist halt unergr¸ndlich. Und was f¸hrt dich her?
+	AI_Output (other, self, "DIA_Ulf_Suche_15_04"); //Ich habe die Pr¸fung des Feuers gefordert.
+	AI_Output (self, other, "DIA_Ulf_Suche_03_05"); //Nicht mˆglich?! Junge, du bist aber verdammt mutig. Heiﬂt das, du suchst auch das, 'was der Gl‰ubige hinter dem Pfad findet'?
 	AI_Output (other, self, "DIA_Ulf_Suche_15_06"); //So sieht's aus.
 };
 ///////////////////////////////////////////////////////////////////////
@@ -287,7 +287,7 @@ func void DIA_Ulf_Rausgefunden_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Rausgefunden_15_00"); //Hast du schon was rausgefunden?
 	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_01"); //Na ja, ich bin einfach mal Agon gefolgt - aber inzwischen habe ich ihn verloren.
-	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_02"); //Und jetzt ... wie es hie√ü es noch? Folge den Zeichen Innos'. Aber das mit dem Pfad verstehe ich nicht ...
+	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_02"); //Und jetzt ... wie es hieﬂ es noch? Folge den Zeichen Innos'. Aber das mit dem Pfad verstehe ich nicht ...
 	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_03"); //Was soll's, ich suche mal weiter.
 	
 	AI_StopProcessInfos (self);
@@ -318,7 +318,7 @@ func int DIA_Ulf_Folgen_Condition ()
 func void DIA_Ulf_Folgen_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Folgen_15_00"); //Folgst du mir etwa?
-	AI_Output (self, other, "DIA_Ulf_Folgen_03_01"); //Quatsch. Ich gehe nur zuf√§llig den gleichen Weg wie du.
+	AI_Output (self, other, "DIA_Ulf_Folgen_03_01"); //Quatsch. Ich gehe nur zuf‰llig den gleichen Weg wie du.
 	
 	AI_StopProcessInfos (self);
 };
@@ -332,7 +332,7 @@ instance DIA_Ulf_Stop		(C_INFO)
 	condition	 = 	DIA_Ulf_Stop_Condition;
 	information	 = 	DIA_Ulf_Stop_Info;
 	permanent	 = 	FALSE;
-	description  = "H√∂r auf mir nachzulaufen!";
+	description  = "Hˆr auf mir nachzulaufen!";
 };
 func int DIA_Ulf_Stop_Condition ()
 {	
@@ -345,7 +345,7 @@ func int DIA_Ulf_Stop_Condition ()
 };
 func void DIA_Ulf_Stop_Info ()
 {
-	AI_Output (other, self, "DIA_Ulf_Stop_15_00"); //H√∂r auf mir nachzulaufen!
+	AI_Output (other, self, "DIA_Ulf_Stop_15_00"); //Hˆr auf mir nachzulaufen!
 	AI_Output (self, other, "DIA_Ulf_Stop_03_01"); //Ich laufe dir nicht nach. Aber bitte, wenn du das glaubst - dann gehe ich jetzt woanders lang.
 	
 	AI_StopProcessInfos (self);
@@ -374,21 +374,21 @@ func int DIA_Ulf_Abrechnung_Condition ()
 };
 func void DIA_Ulf_Abrechnung_Info ()
 {
-	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_00"); //So sieht man sich wieder. Wei√üt du - ich habe nachgedacht. Ich glaube, der Wunsch Magier zu sein, ist stark in mir.
+	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_00"); //So sieht man sich wieder. Weiﬂt du - ich habe nachgedacht. Ich glaube, der Wunsch Magier zu sein, ist stark in mir.
 	AI_Output (other, self, "DIA_Ulf_Abrechnung_15_01"); //Oh Mann - tu das nicht ...
-	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_02"); //Ich habe keine Wahl. Das Leben als Novize ist nichts f√ºr mich.
-	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_03"); //Ich muss einfach Magier werden. Dann wird alles gut f√ºr mich. Und jetzt werde ich mir das nehmen, was mir zusteht.
+	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_02"); //Ich habe keine Wahl. Das Leben als Novize ist nichts f¸r mich.
+	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_03"); //Ich muss einfach Magier werden. Dann wird alles gut f¸r mich. Und jetzt werde ich mir das nehmen, was mir zusteht.
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_04"); //Hast du noch was zu sagen, bevor es zu Ende geht?
 	
 	Info_ClearChoices (DIA_Ulf_Abrechnung);
-	Info_AddChoice (DIA_Ulf_Abrechnung,"Lass es sein, ich will dich nicht t√∂ten.",DIA_Ulf_Abrechnung_Lass);
+	Info_AddChoice (DIA_Ulf_Abrechnung,"Lass es sein, ich will dich nicht tˆten.",DIA_Ulf_Abrechnung_Lass);
 	Info_AddChoice (DIA_Ulf_Abrechnung,"Kommen wir direkt zur Sache - ich muss noch zum Kloster.",DIA_Ulf_Abrechnung_Schnell);
 	Info_AddChoice (DIA_Ulf_Abrechnung,"Hast du was zu rauchen?",DIA_Ulf_Abrechnung_Rauch);
 };
 FUNC VOID DIA_Ulf_Abrechnung_Lass()
 {
-	AI_Output (other, self, "DIA_Ulf_Abrechnung_Lass_15_00"); //Lass es sein, ich will dich nicht t√∂ten.
-	AI_Output (self, other, "DIA_Ulf_Abrechnung_Lass_03_01"); //Gro√üe Worte. Aber du wei√üt, dass du keine Chance gegen mich hast! Auf geht's.
+	AI_Output (other, self, "DIA_Ulf_Abrechnung_Lass_15_00"); //Lass es sein, ich will dich nicht tˆten.
+	AI_Output (self, other, "DIA_Ulf_Abrechnung_Lass_03_01"); //Groﬂe Worte. Aber du weiﬂt, dass du keine Chance gegen mich hast! Auf geht's.
 	
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_KILL,0);
@@ -404,7 +404,7 @@ FUNC VOID DIA_Ulf_Abrechnung_Schnell()
 FUNC VOID DIA_Ulf_Abrechnung_Rauch()
 {
 	AI_Output (other, self, "DIA_Ulf_Abrechnung_Rauch_15_00"); //Hast du was zu rauchen?
-	AI_Output (self, other, "DIA_Ulf_Abrechnung_Rauch_03_01"); //Du hast Gl√ºck. Ich hab tats√§chlich was dabei.
+	AI_Output (self, other, "DIA_Ulf_Abrechnung_Rauch_03_01"); //Du hast Gl¸ck. Ich hab tats‰chlich was dabei.
 	
 	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR,1);
 	B_UseItem (other, ITMI_REVIVED_JOINT_REGULAR);

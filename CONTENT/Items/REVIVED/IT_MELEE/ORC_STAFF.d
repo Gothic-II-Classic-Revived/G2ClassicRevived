@@ -92,9 +92,9 @@ INSTANCE ITMW_REVIVED_ORC_ULUMULU (C_Item)
 	visual_skin 		=	0;
 	
 	description			=	name;
-	TEXT[0]				=	"Ulu-Mulu is a sign of great respect.";
-	TEXT[2]				=	NAME_Damage_Blunt;				COUNT[3]	= damageTotal;
-	TEXT[3] 			=	NAME_Str_needed;				COUNT[4]	= cond_value[2];
+	TEXT[0]				=	"Ulu-Mulu ist ein Zeichen groﬂen Respekts.";
+	TEXT[2]				=	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
+	TEXT[3] 			=	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				=	NAME_Value; 					COUNT[5]	= value;
 };

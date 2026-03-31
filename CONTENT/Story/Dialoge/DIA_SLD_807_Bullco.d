@@ -44,11 +44,11 @@ func void DIA_Bullco_Hallo_Info ()
 	AI_Output (other, self, "DIA_Bullco_HALLO_15_00"); //Wir beide sollten uns mal unterhalten ...
 	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
 	{
-		AI_Output (self, other, "DIA_Bullco_HALLO_06_01"); //HÃ¶r zu, du hast gewonnen! Jetzt lass mich in Ruhe!
+		AI_Output (self, other, "DIA_Bullco_HALLO_06_01"); //Hör zu, du hast gewonnen! Jetzt lass mich in Ruhe!
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Bullco_HALLO_06_02"); //Ich wÃ¼sste nicht, worÃ¼ber!
+		AI_Output (self, other, "DIA_Bullco_HALLO_06_02"); //Ich wüsste nicht, worüber!
 	};
 	AI_StopProcessInfos (self);
 };
@@ -114,9 +114,9 @@ func int DIA_Bullco_PleaseLeave_Condition ()
 
 func void DIA_Bullco_PleaseLeave_Info ()
 {
-	AI_Output (self, other, "DIA_Bullco_PleaseLeave_06_00"); //Wir beide mÃ¼ssen uns mal unterhalten.
+	AI_Output (self, other, "DIA_Bullco_PleaseLeave_06_00"); //Wir beide müssen uns mal unterhalten.
 	AI_Output (other, self, "DIA_Bullco_PleaseLeave_15_01"); //Was willst du?
-	AI_Output (self, other, "DIA_Bullco_PleaseLeave_06_02"); //Ich denke, es wird das Beste sein, wenn du dich auf dem Hof nicht mehr blicken lÃ¤sst.
+	AI_Output (self, other, "DIA_Bullco_PleaseLeave_06_02"); //Ich denke, es wird das Beste sein, wenn du dich auf dem Hof nicht mehr blicken lässt.
 	AI_Output (self, other, "DIA_Bullco_PleaseLeave_06_03"); //Sieh zu, dass du hier bis morgen verschwunden bist. Wir haben uns verstanden?
 
 	Bullco_Leave_Day = B_GetDayPlus();	
@@ -156,8 +156,8 @@ func void DIA_Bullco_DailyCheck_Info ()
 	if (Bullco_HitCounter == 0)
 	{
 		AI_Output (self, other, "DIA_Bullco_DailyCheck_06_00"); //Du bist ja immer noch hier ...
-		AI_Output (self, other, "DIA_Bullco_DailyCheck_06_01"); //Ich dachte, wir hÃ¤tten uns darauf geeinigt, dass ich dich in Frieden ziehen lasse.
-		AI_Output (self, other, "DIA_Bullco_DailyCheck_06_02"); //Du hÃ¤ttest besser auf mich hÃ¶ren sollen.
+		AI_Output (self, other, "DIA_Bullco_DailyCheck_06_01"); //Ich dachte, wir hätten uns darauf geeinigt, dass ich dich in Frieden ziehen lasse.
+		AI_Output (self, other, "DIA_Bullco_DailyCheck_06_02"); //Du hättest besser auf mich hören sollen.
 	}
 	else
 	{
@@ -200,13 +200,13 @@ func void DIA_Bullco_WontLeave_Info ()
 
 	if (self.aivar[AIV_DefeatedByPlayer] == FALSE)
 	{
-		AI_Output (self, other, "DIA_Bullco_WontLeave_06_01"); //(seufzt) Na dann mÃ¼ssen wir noch mal darÃ¼ber reden!
+		AI_Output (self, other, "DIA_Bullco_WontLeave_06_01"); //(seufzt) Na dann müssen wir noch mal darüber reden!
 		AI_StopProcessInfos (self);
 		B_Attack (self, other, AR_NONE, 1);		
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Bullco_WontLeave_06_02"); //(brummig) Ja, ja, erzÃ¤hl das jemandem, den es interessiert ...
+		AI_Output (self, other, "DIA_Bullco_WontLeave_06_02"); //(brummig) Ja, ja, erzähl das jemandem, den es interessiert ...
 		Bullco_scharf = FALSE;
 		AI_StopProcessInfos (self);
 	};
@@ -240,12 +240,12 @@ func int DIA_Bullco_PepesSchafe_Condition ()
 func void DIA_Bullco_PepesSchafe_Info ()
 {
 	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_00"); //Sagt dir der Name Pepe etwas?
-	AI_Output (self, other, "DIA_Bullco_PepesSchafe_06_01"); //Ich kapier zwar kein Wort von dem, was du da faselst, aber dein Ton gefÃ¤llt mir nicht!
-	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_02"); //Du hÃ¤ttest auf seine Schafe aufpassen sollen.
+	AI_Output (self, other, "DIA_Bullco_PepesSchafe_06_01"); //Ich kapier zwar kein Wort von dem, was du da faselst, aber dein Ton gefällt mir nicht!
+	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_02"); //Du hättest auf seine Schafe aufpassen sollen.
 	AI_Output (self, other, "DIA_Bullco_PepesSchafe_06_03"); //Was interessieren mich seine Schafe?
 	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_04"); //Lee interessieren sie.
 	AI_Output (self, other, "DIA_Bullco_PepesSchafe_06_05"); //Worauf willst du hinaus?
-	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_06"); //Wenn du mir weiter auf den Keks gehst, werde ich dafÃ¼r sorgen, dass du die Schafe bezahlen musst.
+	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_06"); //Wenn du mir weiter auf den Keks gehst, werde ich dafür sorgen, dass du die Schafe bezahlen musst.
 	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_07"); //Wenn du also auf deinen Sold Wert legst, lass mich in Zukunft zufrieden!
 	AI_Output (self, other, "DIA_Bullco_PepesSchafe_06_08"); //(zornig) Du, du ...
 	AI_Output (other, self, "DIA_Bullco_PepesSchafe_15_09"); //(ruhig) Ja?

@@ -55,34 +55,34 @@ func void DIA_Geppert_HALLO_Info ()
 	};	
 	
 	AI_Output			(self, other, "DIA_Geppert_HALLO_10_00"); //Halt! Wer da?
-	AI_Output			(self, other, "DIA_Geppert_HALLO_10_01"); //Du bist doch nicht gekommen, um mich wieder in die Erzminen zurÃ¼ck zu schicken.
-	AI_Output			(self, other, "DIA_Geppert_HALLO_10_02"); //Da muss ich dich leider enttÃ¤uschen. Ich geh nicht mehr zurÃ¼ck.
+	AI_Output			(self, other, "DIA_Geppert_HALLO_10_01"); //Du bist doch nicht gekommen, um mich wieder in die Erzminen zurück zu schicken.
+	AI_Output			(self, other, "DIA_Geppert_HALLO_10_02"); //Da muss ich dich leider enttäuschen. Ich geh nicht mehr zurück.
 	
 
 	Info_ClearChoices	(DIA_Geppert_HALLO);
-	Info_AddChoice	(DIA_Geppert_HALLO, "Was machst du hier drauÃŸen?", DIA_Geppert_HALLO_Wasmachtihr );
-	Info_AddChoice	(DIA_Geppert_HALLO, "Du bist ein entlaufender StrÃ¤fling, stimmtÂ´s?", DIA_Geppert_HALLO_Flucht );
+	Info_AddChoice	(DIA_Geppert_HALLO, "Was machst du hier draußen?", DIA_Geppert_HALLO_Wasmachtihr );
+	Info_AddChoice	(DIA_Geppert_HALLO, "Du bist ein entlaufender Sträfling, stimmt´s?", DIA_Geppert_HALLO_Flucht );
 };
 
 func void DIA_Geppert_HALLO_Flucht ()
 {
-	AI_Output			(other, self, "DIA_Geppert_HALLO_Flucht_15_00"); //Du bist ein entlaufender StrÃ¤fling, stimmtÂ´s?
-	AI_Output			(self, other, "DIA_Geppert_HALLO_Flucht_10_01"); //Du merkst aber auch alles. Glaubst du denn, ich wÃ¼rde mich sonst in diesem Dreckloch verkriechen?
+	AI_Output			(other, self, "DIA_Geppert_HALLO_Flucht_15_00"); //Du bist ein entlaufender Sträfling, stimmt´s?
+	AI_Output			(self, other, "DIA_Geppert_HALLO_Flucht_10_01"); //Du merkst aber auch alles. Glaubst du denn, ich würde mich sonst in diesem Dreckloch verkriechen?
 	Info_ClearChoices	(DIA_Geppert_HALLO);
 };
 
 func void DIA_Geppert_HALLO_Wasmachtihr ()
 {
-	AI_Output			(other, self, "DIA_Geppert_HALLO_Wasmachtihr_15_00"); //Was machst du hier drauÃŸen?
+	AI_Output			(other, self, "DIA_Geppert_HALLO_Wasmachtihr_15_00"); //Was machst du hier draußen?
 	
 	if 	((other.guild == GIL_MIL) || (other.guild == GIL_PAL))
 			{
-				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_01"); //Was soll die blÃ¶de Fragerei? Ich versteck mich hier vor euch Soldaten.
-				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_02"); //Rede nicht lange um den heiÃŸen Brei herum. Entweder du bringst mich jetzt um oder du verschwindest wieder.
+				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_01"); //Was soll die blöde Fragerei? Ich versteck mich hier vor euch Soldaten.
+				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_02"); //Rede nicht lange um den heißen Brei herum. Entweder du bringst mich jetzt um oder du verschwindest wieder.
 			}
 			else
 			{
-				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_03"); //BlÃ¶de Frage. Verstecken natÃ¼rlich. Die Schweine der Miliz haben ihre SpÃ¤her Ã¼berall.
+				AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_03"); //Blöde Frage. Verstecken natürlich. Die Schweine der Miliz haben ihre Späher überall.
 			};
 
 	AI_Output			(self, other, "DIA_Geppert_HALLO_Wasmachtihr_10_04"); //In die Mine geh ich jedenfalls nicht wieder.

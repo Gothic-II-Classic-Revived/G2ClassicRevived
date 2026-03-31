@@ -262,7 +262,7 @@ FUNC VOID PC_OreHacken_Hour_Info()
 		}
 		else
 		{
-			PrintScreen ("Erzsplitter fliegen Ã¼berall herum...", -1, -1, FONT_ScreenSmall, 2);	
+			PrintScreen ("Erzsplitter fliegen überall herum...", -1, -1, FONT_ScreenSmall, 2);	
 			Truemmer_Count = (Truemmer_Count +1);
 		};
 	}
@@ -273,7 +273,7 @@ FUNC VOID PC_OreHacken_Hour_Info()
 	};
 };
 //*******************************************************
-//	Goldhacken Trmmerschlag
+//	Goldhacken Trümmerschlag
 //*******************************************************
 INSTANCE PC_OreHacken_TSchlag (C_Info)
 {
@@ -282,7 +282,7 @@ INSTANCE PC_OreHacken_TSchlag (C_Info)
 	condition		= PC_OreHacken_TSchlag_Condition;
 	information		= PC_OreHacken_TSchlag_Info;
 	permanent		= TRUE;
-	description		= "TrÃ¼mmerschlag ansetzen."; 
+	description		= "Trümmerschlag ansetzen."; 
 };
 
 FUNC INT PC_OreHacken_TSchlag_Condition ()
@@ -342,7 +342,7 @@ INSTANCE PC_OreHacken_Chance (C_Info)
 	condition		= PC_OreHacken_Chance_Condition;
 	information		= PC_OreHacken_Chance_Info;
 	permanent		= TRUE;
-	description		= "(Eigene FÃ¤higkeit prÃ¼fen)"; 
+	description		= "(Eigene Fähigkeit prüfen)"; 
 };
 
 FUNC INT PC_OreHacken_Chance_Condition ()
@@ -359,34 +359,34 @@ FUNC VOID PC_OreHacken_Chance_Info()
 	
 	if (Hero_HackChance < 20) 
 	{
-		ConcatText = ConcatStrings ("Absoluter AnfÃ¤nger (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Absoluter Anfänger (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 40) 
 	{
-		ConcatText = ConcatStrings ("Ziemlich passabler SchÃ¼rfer (" , IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Ziemlich passabler Schürfer (" , IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 55) 
 	{
-		ConcatText = ConcatStrings ("Ein erfahrener SchÃ¼rfer (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Ein erfahrener Schürfer (", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 75) 
 	{
-		ConcatText = ConcatStrings ("Echter Buddler (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Genuine digger ( ", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 90) 
 	{
-		ConcatText = ConcatStrings ("Verdammt guter Buddler (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Damn good digger ( ", IntToString (Hero_HackChance));
 	}
 	else if (Hero_HackChance < 98) 
 	{
-		ConcatText = ConcatStrings ("Meisterbuddler (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Master digger ( ", IntToString (Hero_HackChance));
 	}
 	else
 	{
-		ConcatText = ConcatStrings ("Guru unter den Buddlern (", IntToString (Hero_HackChance));
+		ConcatText = ConcatStrings ("Guru among diggers ( ", IntToString (Hero_HackChance));
 	};
 	
-	ConcatText = ConcatStrings (concatText, "Prozent)");
+	ConcatText = ConcatStrings (concatText, " percent)");
 	
 	PrintScreen (concatText, -1, -1, FONT_ScreenSmall,2);
 };

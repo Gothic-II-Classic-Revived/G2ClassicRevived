@@ -50,20 +50,20 @@ func void DIA_Engardo_HALLO_Info ()
 	Akils_SLDStillthere = TRUE;
 	if (Chance == FALSE)
 	{
-		AI_Output (self, other, "DIA_Engardo_HALLO_13_00"); //Hey Kleiner, hast du dich verlaufen? Geh zurÃ¼ck aufs Feld und pflÃ¼ck ein paar RÃ¼ben.
+		AI_Output (self, other, "DIA_Engardo_HALLO_13_00"); //Hey Kleiner, hast du dich verlaufen? Geh zurück aufs Feld und pflück ein paar Rüben.
 		Chance = 1;
 		AI_StopProcessInfos (self);
 	}
 	else if (Chance == 1) 
 	{	
 		AI_Output (self, other, "DIA_Engardo_HALLO_13_01"); //Du bist zur falschen Zeit am falschen Ort...
-		AI_Output (self, other, "DIA_Engardo_HALLO_13_02"); //... also ich wÃ¼rde sagen, wenn du leben willst, dann verschwindest du jetzt, kapiert?
+		AI_Output (self, other, "DIA_Engardo_HALLO_13_02"); //... also ich würde sagen, wenn du leben willst, dann verschwindest du jetzt, kapiert?
 		Chance = 2;
 		AI_StopProcessInfos (self);
 	}
 	else if (Chance == 2)
 	{
-		AI_Output (self, other, "DIA_Engardo_HALLO_13_03"); //Hast du was mit den Ohren oder willst du unbedingt sterben? (gleichgÃ¼ltig) Na - jetzt ist es zu spÃ¤t.
+		AI_Output (self, other, "DIA_Engardo_HALLO_13_03"); //Hast du was mit den Ohren oder willst du unbedingt sterben? (gleichgültig) Na - jetzt ist es zu spät.
 		
 		SLD_840_Alvares.guild = GIL_BDT;
 		SLD_841_Engardo.guild = GIL_BDT;

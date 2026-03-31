@@ -55,8 +55,8 @@ FUNC INT DIA_Wegelagerer_Hello_Condition()
 
 FUNC VOID DIA_Wegelagerer_Hello_Info()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Hello_15_00"); //What are you doing here?
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Hello_07_01"); //What's it to you?
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Hello_15_00"); //Was machst du hier?
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Hello_07_01"); //Was geht dich das an?
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -84,8 +84,8 @@ FUNC INT DIA_Wegelagerer_Novice_Condition()
 
 FUNC VOID DIA_Wegelagerer_Novice_Info()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Novice_15_00"); //I'm looking for a novice.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Novice_07_01"); //That's very interesting. We're looking for someone, too.
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Novice_15_00"); //Ich suche einen Novizen.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Novice_07_01"); //Das ist ja interessant. Wir suchen nämlich auch jemanden.
 
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
 	Info_AddChoice (DIA_1051_Wegelagerer_Novice,"Wen sucht ihr?",DIA_1051_Wegelagerer_Question_Novice_Who);
@@ -116,9 +116,9 @@ FUNC INT DIA_Wegelagerer_Question_Condition()
 
 FUNC VOID DIA_Wegelagerer_Question_Info()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_15_00"); //Just asking.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_07_01"); //Understood. But what are YOU doing here?
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_07_02"); //Anyway, this is our road and we don't like it when someone bothers us here.
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_15_00"); //War nur 'ne Frage.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_07_01"); //Schon verstanden. Aber was machst DU denn hier?
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_07_02"); //Schließlich ist das unsere Straße und wir haben's nicht gern, wenn man uns hier belästigt.
 	
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
 	if (MIS_Novizenchase == LOG_RUNNING)
@@ -132,8 +132,8 @@ FUNC VOID DIA_Wegelagerer_Question_Info()
 
 FUNC VOID DIA_1051_Wegelagerer_Question_Novice ()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_Novice_15_00"); //I'm looking for a novice.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_Novice_07_01"); //That's very interesting. We're looking for someone, too.
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_Novice_15_00"); //Ich suche einen Novizen.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_Novice_07_01"); //Das ist ja interessant. Wir suchen nämlich auch jemanden.
 	
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
 	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Wen sucht ihr?",DIA_1051_Wegelagerer_Question_Novice_Who);
@@ -142,8 +142,8 @@ FUNC VOID DIA_1051_Wegelagerer_Question_Novice ()
 
 FUNC VOID DIA_1051_Wegelagerer_Question_Novice_Who ()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_Novice_Who_15_00"); //And who would that be?
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_Novice_Who_07_01"); //You!
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_Novice_Who_15_00"); //Und wer ist das?
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_Novice_Who_07_01"); //Dich!
 	BDT_1051_Wegelagerer_Angriff = TRUE;
 	Npc_SetRefuseTalk (self,40);
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
@@ -152,27 +152,27 @@ FUNC VOID DIA_1051_Wegelagerer_Question_Novice_Who ()
 
 FUNC VOID DIA_1051_Wegelagerer_Question_MyConcern ()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_MyConcern_15_00"); //That's none of your business.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_07_01"); //What do you mean? Are you looking for trouble?
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_MyConcern_15_00"); //Das geht dich nichts an.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_07_01"); //Was soll das? Willst du Ärger?
 	
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
-	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Nein, schon gut. Kein Ã„rger.",DIA_1051_Wegelagerer_Question_MyConcern_No);
+	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Nein, schon gut. Kein Ärger.",DIA_1051_Wegelagerer_Question_MyConcern_No);
 	Info_AddChoice (DIA_1051_Wegelagerer_Question,"Wenn es sein muss.",DIA_1051_Wegelagerer_Question_MyConcern_Yes);
 };
 
 FUNC VOID DIA_1051_Wegelagerer_Question_MyConcern_No ()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_MyConcern_No_15_00"); //No, never mind. No trouble.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_No_07_01"); //I understand, you filled your pants. Now scram.
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_MyConcern_No_15_00"); //Nein, schon gut. Kein Ärger.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_No_07_01"); //Kann verstehen, dass du die Hosen voll hast. Jetzt verzieh dich.
 	
 	AI_StopProcessInfos (self); //Joly: Ausweg ohne angegriffen zu werden!!!!!!!!!
 };
 
 FUNC VOID DIA_1051_Wegelagerer_Question_MyConcern_Yes ()
 {
-	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_MyConcern_Yes_15_00"); //If you insist.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_Yes_07_01"); //Ho ho, you've got a big mouth.
-	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_Yes_07_02"); //It's time I shut it for you.
+	AI_Output (other,self ,"DIA_1051_Wegelagerer_Question_MyConcern_Yes_15_00"); //Wenn es sein muss.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_Yes_07_01"); //Hoho, ganz schön große Klappe.
+	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_MyConcern_Yes_07_02"); //Es wird Zeit, dass ich sie dir stopfe.
 
 	BDT_1051_Wegelagerer_Angriff = TRUE;
 	Npc_SetRefuseTalk (self,40);
@@ -181,8 +181,8 @@ FUNC VOID DIA_1051_Wegelagerer_Question_MyConcern_Yes ()
 
 FUNC VOID DIA_1051_Wegelagerer_Question_LookAround ()
 {
-	AI_Output	(other,self ,"DIA_1051_Wegelagerer_Question_LookAround_15_00"); //I'm only having a look around.
-	AI_Output 	(self ,other,"DIA_1051_Wegelagerer_Question_LookAround_07_01"); //Do that, but stop bugging us.
+	AI_Output	(other,self ,"DIA_1051_Wegelagerer_Question_LookAround_15_00"); //Ich seh mich nur mal um.
+	AI_Output 	(self ,other,"DIA_1051_Wegelagerer_Question_LookAround_07_01"); //Tu das, aber hör auf uns zu nerven.
 	
 	AI_StopProcessInfos (self); //Joly: Ausweg ohne angegriffen zu werden!!!!!!!!!
 };
@@ -214,7 +214,7 @@ func int DIA_Wegelagerer_ANGRIFF_Condition ()
 
 func void DIA_Wegelagerer_ANGRIFF_Info ()
 {
-	AI_Output			(self, other, "DIA_Wegelagerer_ANGRIFF_07_00"); //That's it for you.
+	AI_Output			(self, other, "DIA_Wegelagerer_ANGRIFF_07_00"); //Jetzt bist du reif.
 
 	AI_StopProcessInfos (self);
 

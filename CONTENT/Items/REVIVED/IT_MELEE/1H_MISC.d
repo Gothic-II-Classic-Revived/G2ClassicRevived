@@ -2,64 +2,64 @@
 const int	REV_Damage_1H_Sickle_01				=	7;
 const int	REV_Condition_1H_Sickle_01			=	5;
 const int	REV_Range_1H_Sickle_01				=	50;
-const int	REV_Value_1H_Sickle_01				=	100;
+const int	REV_Value_1H_Sickle_01				=	5;
 //******************************************************************//
 const int	REV_Damage_1H_Poker_01				=	5;
 const int	REV_Condition_1H_Poker_01			=	5;
 const int	REV_Range_1H_Poker_01				=	70;
-const int	REV_Value_1H_Poker_01				=	40;
+const int	REV_Value_1H_Poker_01				=	5;
 //******************************************************************//
 const int	REV_Damage_1H_Scythe_01				=	7;
 const int	REV_Condition_1H_Scythe_01			=	5;
 const int	REV_Range_1H_Scythe_01				=	70;
-const int	REV_Value_1H_Scythe_01				=	25;
+const int	REV_Value_1H_Scythe_01				=	10;
 //******************************************************************//
 const int	REV_Damage_1H_Hatchet_01			=	10;
 const int	REV_Condition_1H_Hatchet_01			=	10;
 const int	REV_Range_1H_Hatchet_01				=	50;
-const int	REV_Value_1H_Hatchet_01				=	100;
+const int	REV_Value_1H_Hatchet_01				=	10;
 //******************************************************************//
 const int	REV_Damage_1H_Sledgehammer_01		=	10;
 const int	REV_Condition_1H_Sledgehammer_01	=	10;
 const int	REV_Range_1H_Sledgehammer_01		=	50;
-const int	REV_Value_1H_Sledgehammer_01		=	300;
+const int	REV_Value_1H_Sledgehammer_01		=	30;
 //******************************************************************//
 const int	REV_Damage_1H_Club_01				=	10;
 const int	REV_Condition_1H_Club_01			=	10;
 const int	REV_Range_1H_Club_01				=	70;
-const int	REV_Value_1H_Club_01				=	50;
+const int	REV_Value_1H_Club_01				=	10;
 //******************************************************************//
 const int	REV_Damage_1H_Club_02				=	8;
 const int	REV_Condition_1H_Club_02			=	5;
 const int	REV_Range_1H_Club_02				=	70;
-const int	REV_Value_1H_Club_02				=	50;
+const int	REV_Value_1H_Club_02				=	10;
 //******************************************************************//
 const int	REV_Damage_1H_Nailmace_01			=	15;
 const int	REV_Condition_1H_Nailmace_01		=	10;
 const int	REV_Range_1H_Nailmace_01			=	70;
-const int	REV_Value_1H_Nailmace_01			=	50;
+const int	REV_Value_1H_Nailmace_01			=	20;
 //******************************************************************//
 const int	REV_Damage_1H_WalkingStick_01		=	8;
 const int	REV_Condition_1H_WalkingStick_01	=	5;
 const int	REV_Range_1H_WalkingStick_01		=	70;
-const int	REV_Value_1H_WalkingStick_01		=	25;
+const int	REV_Value_1H_WalkingStick_01		=	5;
 //******************************************************************//
 const int	REV_Damage_1H_Branch_01				=	5;
 const int	REV_Condition_1H_Branch_01			=	5;
 const int	REV_Range_1H_Branch_01				=	70;
-const int	REV_Value_1H_Branch_01				=	10;
+const int	REV_Value_1H_Branch_01				=	5;
 //******************************************************************//
 const int	REV_Damage_1H_Knife_01				=	20;
 const int	REV_Condition_1H_Knife_01			=	10;
 const int	REV_Range_1H_Knife_01				=	50;
-const int	REV_Value_1H_Knife_01				=	25;
+const int	REV_Value_1H_Knife_01				=	15;
 //******************************************************************//
-const int	REV_Damage_1H_Dagger_01				=	5;
+const int	REV_Damage_1H_Dagger_01				=	10;
 const int	REV_Condition_1H_Dagger_01			=	5;
 const int	REV_Range_1H_Dagger_01				=	50;
-const int	REV_Value_1H_Dagger_01				=	25;
+const int	REV_Value_1H_Dagger_01				=	15;
 //******************************************************************//
-const int	REV_Damage_1H_Dagger_02				=	7;
+const int	REV_Damage_1H_Dagger_02				=	10;
 const int	REV_Condition_1H_Dagger_02			=	5;
 const int	REV_Range_1H_Dagger_02				=	50;
 const int	REV_Value_1H_Dagger_02				=	50;
@@ -67,7 +67,7 @@ const int	REV_Value_1H_Dagger_02				=	50;
 const int	REV_Damage_1H_Sword_07				=	30;
 const int	REV_Condition_1H_Sword_07			=	20;
 const int	REV_Range_1H_Sword_07				=	70;
-const int	REV_Value_1H_Sword_07				=	150;
+const int	REV_Value_1H_Sword_07				=	75;
 
 
 //****************************************************************************
@@ -100,7 +100,7 @@ INSTANCE ITMW_REVIVED_1H_SICKLE_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_POKER_01 (C_Item)
 {	
-	name 				=	"SchÃ¼rhaken";
+	name 				=	"Schürhaken";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -200,7 +200,7 @@ INSTANCE ITMW_REVIVED_1H_SLEDGEHAMMER_01 (C_Item)
 
 INSTANCE ITMW_REVIVED_1H_CLUB_01 (C_Item)
 {	
-	name 				=	"KnÃ¼ppel";
+	name 				=	"Knüppel";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_AXE;	

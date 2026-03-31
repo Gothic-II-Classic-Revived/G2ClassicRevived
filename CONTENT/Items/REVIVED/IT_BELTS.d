@@ -1,6 +1,6 @@
 INSTANCE ITBE_REVIVED_ARCHER (C_Item)
 {
-	name 			=	"BogenschÃ¼tzen-GÃ¼rtel";
+	name 			=	"Bogenschützen-Gürtel";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_BELT|ITEM_MULTI;

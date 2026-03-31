@@ -66,20 +66,20 @@ func void DIA_Grimbald_HALLO_Info ()
 func void DIA_Grimbald_HALLO_ich ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_HALLO_ich_15_00"); //Warum ich?
-	AI_Output			(self, other, "DIA_Grimbald_HALLO_ich_07_01"); //Du siehst krÃ¤ftig aus. So einen Kerl kann ich jetzt gebrauchen.
+	AI_Output			(self, other, "DIA_Grimbald_HALLO_ich_07_01"); //Du siehst kräftig aus. So einen Kerl kann ich jetzt gebrauchen.
 };
 
 func void DIA_Grimbald_HALLO_Was ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_HALLO_Was_15_00"); //Was hast du vor?
-	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_07_01"); //Ich will die Snapper da oben jagen, aber ich glaube, es sind zu viele fÃ¼r mich allein.
+	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_07_01"); //Ich will die Snapper da oben jagen, aber ich glaube, es sind zu viele für mich allein.
 
-	Info_AddChoice	(DIA_Grimbald_HALLO, "Da machÂ´ ich nicht mit.", DIA_Grimbald_HALLO_Was_neinnein );
+	Info_AddChoice	(DIA_Grimbald_HALLO, "Da mach´ ich nicht mit.", DIA_Grimbald_HALLO_Was_neinnein );
 	Info_AddChoice	(DIA_Grimbald_HALLO, "Ok. Ich helfe dir. Geh vor.", DIA_Grimbald_HALLO_Was_ja );
 };
 func void DIA_Grimbald_HALLO_Was_neinnein ()
 {
-	AI_Output			(other, self, "DIA_Grimbald_HALLO_Was_neinnein_15_00"); //Da machÂ´ ich nicht mit.
+	AI_Output			(other, self, "DIA_Grimbald_HALLO_Was_neinnein_15_00"); //Da mach´ ich nicht mit.
 	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_neinnein_07_01"); //Dann verzieh dich, du Feigling.
 	Grimbald_PissOff = TRUE;
 	Info_ClearChoices	(DIA_Grimbald_HALLO);
@@ -88,7 +88,7 @@ func void DIA_Grimbald_HALLO_Was_neinnein ()
 func void DIA_Grimbald_HALLO_Was_ja ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_HALLO_Was_ja_15_00"); //Ok. Ich helfe dir. Geh vor.
-	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_ja_07_01"); //Alles klar. Komm aber dem schwarzen Troll dahinten nicht zu nahe. Der reiÃŸt dich sonst in StÃ¼cke, klar?
+	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_ja_07_01"); //Alles klar. Komm aber dem schwarzen Troll dahinten nicht zu nahe. Der reißt dich sonst in Stücke, klar?
 	AI_Output			(self, other, "DIA_Grimbald_HALLO_Was_ja_07_02"); //Und wehe du kneifst.
 	B_StartOtherRoutine	(self,"Jagd");
 	AI_StopProcessInfos (self);
@@ -97,7 +97,7 @@ func void DIA_Grimbald_HALLO_Was_ja ()
 func void DIA_Grimbald_HALLO_nein ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_HALLO_nein_15_00"); //Ich hab was zu erledigen.
-	AI_Output			(self, other, "DIA_Grimbald_HALLO_nein_07_01"); //ErzÃ¤hl nicht so einen Unsinn. Was kannst du hier in der Wildnis schon wichtiges vor haben?
+	AI_Output			(self, other, "DIA_Grimbald_HALLO_nein_07_01"); //Erzähl nicht so einen Unsinn. Was kannst du hier in der Wildnis schon wichtiges vor haben?
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -131,7 +131,7 @@ func void DIA_Grimbald_Jagd_Info ()
 		&& (Npc_IsDead(Grimbald_Snapper3)))
 		|| (Grimbald_PissOff == FALSE)
 	{
-		AI_Output			(self, other, "DIA_Grimbald_Jagd_07_01"); //Mmh. Na gut. Du warst mir zwar bisher keine groÃŸe Hilfe, aber ich will mal nicht so sein.
+		AI_Output			(self, other, "DIA_Grimbald_Jagd_07_01"); //Mmh. Na gut. Du warst mir zwar bisher keine große Hilfe, aber ich will mal nicht so sein.
 		Grimbald_TeachAnimalTrophy = TRUE;
 	}
 	else
@@ -140,7 +140,7 @@ func void DIA_Grimbald_Jagd_Info ()
 		B_Say_Gold (self, other, 200);
 	
 		Info_ClearChoices	(DIA_Grimbald_Jagd);
-		Info_AddChoice	(DIA_Grimbald_Jagd, "Ich denke drÃ¼ber nach.", DIA_Grimbald_Jagd_zuviel );
+		Info_AddChoice	(DIA_Grimbald_Jagd, "Ich denke drüber nach.", DIA_Grimbald_Jagd_zuviel );
 		Info_AddChoice	(DIA_Grimbald_Jagd, "In Ordnung.", DIA_Grimbald_Jagd_ja );
 	};
 };
@@ -163,7 +163,7 @@ func void DIA_Grimbald_Jagd_ja ()
 
 func void DIA_Grimbald_Jagd_zuviel ()
 {
-	AI_Output			(other, self, "DIA_Grimbald_Jagd_zuviel_15_00"); //Ich denke drÃ¼ber nach.
+	AI_Output			(other, self, "DIA_Grimbald_Jagd_zuviel_15_00"); //Ich denke drüber nach.
 	AI_Output			(self, other, "DIA_Grimbald_Jagd_zuviel_07_01"); //Wie du meinst.
 	Info_ClearChoices	(DIA_Grimbald_Jagd);
 };
@@ -217,7 +217,7 @@ func void DIA_Grimbald_TEACHHUNTING_Info ()
 				};
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
 				{ 
-					Info_AddChoice	(DIA_Grimbald_TEACHHUNTING, B_BuildLearnString ("BlutfliegenflÃ¼gel",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Grimbald_TEACHHUNTING_BFWing	);
+					Info_AddChoice	(DIA_Grimbald_TEACHHUNTING, B_BuildLearnString ("Blutfliegenflügel",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Grimbald_TEACHHUNTING_BFWing	);
 				};
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
 				{ 
@@ -234,7 +234,7 @@ func void DIA_Grimbald_TEACHHUNTING_Info ()
 			}
 			else
 			{
-				AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_07_02"); //Du weiÃŸt schon alles, was ich dir beibringen kÃ¶nnte.
+				AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_07_02"); //Du weißt schon alles, was ich dir beibringen könnte.
 			};
 };
 
@@ -247,7 +247,7 @@ func void DIA_Grimbald_TEACHHUNTING_BFSting()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFSting))
 		{
-			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_BFSting_07_00"); //Den Stachel der Blutfliege zu entfernen ist eigentlich kein Problem. Man muss nur den Ansatz finden und mit dem Messer fest zustoÃŸen.
+			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_BFSting_07_00"); //Den Stachel der Blutfliege zu entfernen ist eigentlich kein Problem. Man muss nur den Ansatz finden und mit dem Messer fest zustoßen.
 		};
 	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
 };
@@ -256,7 +256,7 @@ func void DIA_Grimbald_TEACHHUNTING_BFWing()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFWing))
 		{
-			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_BFWing_07_00"); //Die FlÃ¼gel der Blutfliege reiÃŸt man einfach aus dem KÃ¶rper der Fliege oder lÃ¶st sie mit einem scharfen Messer ab.
+			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_BFWing_07_00"); //Die Flügel der Blutfliege reißt man einfach aus dem Körper der Fliege oder löst sie mit einem scharfen Messer ab.
 		};
 	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
 };
@@ -265,7 +265,7 @@ func void DIA_Grimbald_TEACHHUNTING_Claws ()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Claws))
 		{
-			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_Claws_07_00"); //Klauen entfernt man unterschiedlich. Bei einigen Tieren mit einem starken Hieb und bei einigen genÃ¼gt ein einfaches Abschneiden mit dem Messer.
+			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_Claws_07_00"); //Klauen entfernt man unterschiedlich. Bei einigen Tieren mit einem starken Hieb und bei einigen genügt ein einfaches Abschneiden mit dem Messer.
 		};
 	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
 };
@@ -274,7 +274,7 @@ func void DIA_Grimbald_TEACHHUNTING_Mandibles ()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Mandibles))
 		{
-			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_Mandibles_07_00"); //Minecrawler und FeldrÃ¤uber haben starke Zangen, die man mit einem festen Ruck vom Kopf der Tiere lÃ¶sen kann.
+			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_Mandibles_07_00"); //Minecrawler und Feldräuber haben starke Zangen, die man mit einem festen Ruck vom Kopf der Tiere lösen kann.
 		};
 	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
 };
@@ -283,7 +283,7 @@ func void DIA_Grimbald_TEACHHUNTING_CrawlerPlate ()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_CrawlerPlate))
 		{
-			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_CrawlerPlate_07_00"); //Minecrawlerplatten sitzen den Biestern ziemlich fest auf dem KÃ¶rper, aber mit einem scharfen stabilen Gegenstand bekommt man sie ab.
+			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_CrawlerPlate_07_00"); //Minecrawlerplatten sitzen den Biestern ziemlich fest auf dem Körper, aber mit einem scharfen stabilen Gegenstand bekommt man sie ab.
 		};
 	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
 };
@@ -314,7 +314,7 @@ func int DIA_Grimbald_NovChase_Condition ()
 func void DIA_Grimbald_NovChase_Info ()
 {
 	AI_Output			(other, self, "DIA_Grimbald_NovChase_15_00"); //Hast du einen Novizen hier vorbeikommen sehen?
-	AI_Output			(self, other, "DIA_Grimbald_NovChase_07_01"); //Hier sind eine Menge merkwÃ¼rdiger Gestalten vorbeigekommen heute. So auch die beiden Geigen da oben bei dem Felsbogen.
+	AI_Output			(self, other, "DIA_Grimbald_NovChase_07_01"); //Hier sind eine Menge merkwürdiger Gestalten vorbeigekommen heute. So auch die beiden Geigen da oben bei dem Felsbogen.
 	AI_Output			(self, other, "DIA_Grimbald_NovChase_07_02"); //Vorhin war auch noch ein Novize der Feuermagier bei ihnen.
 	B_GivePlayerXP (XP_Ambient);
 };
@@ -342,7 +342,7 @@ func int DIA_Grimbald_Trolltot_Condition ()
 
 func void DIA_Grimbald_Trolltot_Info ()
 {
-	AI_Output			(self, other, "DIA_Grimbald_Trolltot_07_00"); //Der schwarze Troll ist tot. Alle Achtung. HÃ¤tte nicht gedacht, dass man die Ã¼berhaupt tÃ¶ten kann. Das werde ich mir merken.
+	AI_Output			(self, other, "DIA_Grimbald_Trolltot_07_00"); //Der schwarze Troll ist tot. Alle Achtung. Hätte nicht gedacht, dass man die überhaupt töten kann. Das werde ich mir merken.
 	B_GivePlayerXP (XP_Ambient*2);
 };
 

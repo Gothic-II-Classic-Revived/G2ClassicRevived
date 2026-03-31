@@ -5,17 +5,17 @@
 func void B_LastWarningVatras ()
 {
 	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_00"); //Was hast du getan, Elender? 
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_01"); //Wir vom Orden des Wassers haben dich mehrmals davor gewarnt, dem BÃ¶sen zu verfallen.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_01"); //Wir vom Orden des Wassers haben dich mehrmals davor gewarnt, dem Bösen zu verfallen.
 	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_02"); //Doch mir ist Ohren gekommen, dass du den Pfad des alles erhaltenen Gleichgewichts verlassen hast.
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_03"); //Du bist mordend und plÃ¼nderns durch die Lande gezogen und hast dich schwerer Verbrechen schuldig gemacht.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_03"); //Du bist mordend und plünderns durch die Lande gezogen und hast dich schwerer Verbrechen schuldig gemacht.
 	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_04"); //Zahlreiche unschuldige Menschen sind durch DEINE Hand dahingerafft worden.
-	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_05"); //Du stehst nun mit den MÃ¤chten der Finsternis im Bunde.
+	AI_Output	(self, other, "DIA_Addon_Vatras_LastWarning_ADD_05_05"); //Du stehst nun mit den Mächten der Finsternis im Bunde.
 };
 
 func void B_VatrasPissedOff ()
 {
-	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_00"); //Von nun an kannst du nicht mehr mit meiner UnterstÃ¼tzung zu rechnen. 
-	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_01"); //Geh weg. Du bist jetzt ein AusgestoÃŸener fÃ¼r mich.
+	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_00"); //Von nun an kannst du nicht mehr mit meiner Unterstützung zu rechnen. 
+	AI_Output	(self, other, "DIA_Addon_Vatras_PissedOffPerm_Add_05_01"); //Geh weg. Du bist jetzt ein Ausgestoßener für mich.
 	
 	if (Vatras_IsOnBoard == LOG_SUCCESS)
 	{
@@ -27,5 +27,5 @@ func void B_VatrasPissedOff ()
 	VatrasPissedOffForever = TRUE;
 
 	AI_StopProcessInfos (self);
-	Npc_ExchangeRoutine (self,"Beten"); 
+	Npc_ExchangeRoutine (self,"PRAY"); 
 };

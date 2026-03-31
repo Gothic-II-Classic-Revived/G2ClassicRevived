@@ -2,15 +2,15 @@
 //	BlackGobbo Prototype	
 //*************************
 
-PROTOTYPE Mst_Default_Gobbo_Warrior (C_NPC)			
+PROTOTYPE Mst_Default_Gobbo_Elite (C_NPC)			
 {
 	//----- Monster ----
-	name							=	"Goblin Krieger";
+	name							=	"Goblin-Elite";
 	guild							=	GIL_GOBBO;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_BLACK;
 	
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 15);
+	B_SetMonsterAttributesForLevel(self, 18);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	70;
@@ -46,44 +46,21 @@ PROTOTYPE Mst_Default_Gobbo_Warrior (C_NPC)
 //	Visuals
 //***************
 
-func void B_SetVisuals_Gobbo_Warrior ()
+func void B_SetVisuals_Gobbo_Elite ()
 {
 	Mdl_SetVisual			(self,	"Gobbo.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Gob_Body",		2,			DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
-};
-
-//***************
-//	Visuals
-//***************
-
-func void B_SetVisuals_Gobbo_Warrior_Visir ()
-{
-	Mdl_SetVisual			(self,	"Gobbo.mds");
-	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Gob_Body",		3,			DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Gob_Elite",	0,			DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 // ***********
 // Black Gobbo   	
 // ***********
 
-INSTANCE Gobbo_Warrior (Mst_Default_Gobbo_Warrior)
+INSTANCE Gobbo_Elite (Mst_Default_Gobbo_Elite)
 {
-	B_SetVisuals_Gobbo_Warrior();
+	B_SetVisuals_Gobbo_Elite();
 	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_SWORD_OLD_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
+	Npc_SetToFightMode (self, ITMW_REVIVED_1H_DAGGER_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 	Mdl_SetModelScale(self, 1.15, 1.15, 1.15);
 };
-// ***********
-// Black Gobbo   	
-// ***********
-
-INSTANCE Gobbo_Warrior_Visir (Mst_Default_Gobbo_Warrior)
-{
-	B_SetVisuals_Gobbo_Warrior_Visir();
-	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_AXE_OLD_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
-	Mdl_SetModelScale(self, 1.15, 1.15, 1.15);
-};
-

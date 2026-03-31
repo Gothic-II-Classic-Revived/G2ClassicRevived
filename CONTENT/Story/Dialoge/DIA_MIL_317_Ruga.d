@@ -31,7 +31,7 @@ INSTANCE DIA_Ruga_PICKPOCKET (C_INFO)
 	condition	= DIA_Ruga_PICKPOCKET_Condition;
 	information	= DIA_Ruga_PICKPOCKET_Info;
 	permanent	= TRUE;
-	description = "(Es wÃ¤re einfach seinen SchlÃ¼ssel zu stehlen)";
+	description = "(Es wäre einfach seinen Schlüssel zu stehlen)";
 };                       
 
 FUNC INT DIA_Ruga_PICKPOCKET_Condition()
@@ -96,10 +96,10 @@ func int DIA_Ruga_Hallo_Condition ()
 func void DIA_Ruga_Hallo_Info ()
 {
 	AI_Output (other, self, "DIA_Ruga_Hallo_15_00"); //Was machst du hier?
-	AI_Output (self, other, "DIA_Ruga_Hallo_11_01"); //Ich trainiere die Jungs im Umgang mit der Armbrust und sorge dafÃ¼r, dass sie ein bisschen beweglicher werden.
+	AI_Output (self, other, "DIA_Ruga_Hallo_11_01"); //Ich trainiere die Jungs im Umgang mit der Armbrust und sorge dafür, dass sie ein bisschen beweglicher werden.
 	
 	Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
-	B_LogEntry (Topic_CityTeacher, "Ruga, von der Stadtwache, kann mir helfen geschickter zu werden und mich im Umgang mit der Armbrust unterweisen. Allerdings muss ich dazu im Dienst des KÃ¶nigs stehen.");
+	B_LogEntry (Topic_CityTeacher, "Ruga, von der Stadtwache, kann mir helfen geschickter zu werden und mich im Umgang mit der Armbrust unterweisen. Allerdings muss ich dazu im Dienst des Königs stehen.");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Train
@@ -129,8 +129,8 @@ func void DIA_Ruga_Train_Info ()
 	|| (hero.guild == GIL_PAL)
 	|| (hero.guild == GIL_KDF)
 	{
-		AI_Output (self, other, "DIA_Ruga_Train_11_01"); //NatÃ¼rlich. Wenn du genÃ¼gend Erfahrung mitbringst, kann ich dir helfen.
-		AI_Output (self, other, "DIA_Ruga_Train_11_02"); //Und vergiss nicht, Geschicklichkeit und Fernkampf gehÃ¶ren zusammen wie Armbrust und Bolzen. Das eine ...
+		AI_Output (self, other, "DIA_Ruga_Train_11_01"); //Natürlich. Wenn du genügend Erfahrung mitbringst, kann ich dir helfen.
+		AI_Output (self, other, "DIA_Ruga_Train_11_02"); //Und vergiss nicht, Geschicklichkeit und Fernkampf gehören zusammen wie Armbrust und Bolzen. Das eine ...
 		AI_Output (other, self, "DIA_Ruga_Train_15_03"); //... ist ohne das andere nicht viel wert. Verstehe.
 	
 		Ruga_TeachCrossbow = TRUE;
@@ -139,13 +139,13 @@ func void DIA_Ruga_Train_Info ()
 	else if ((hero.guild == GIL_SLD)
 	|| 		 (hero.guild == GIL_DJG))
 	{
-		AI_Output (self, other, "DIA_Ruga_Train_11_04"); //Mach, dass du wegkommst, (verÃ¤chtlich) SÃ¶ldner.
+		AI_Output (self, other, "DIA_Ruga_Train_11_04"); //Mach, dass du wegkommst, (verächtlich) Söldner.
 		AI_StopProcessInfos (self);
 	}
 	else 
 	{	 
-		AI_Output (self, other, "DIA_Ruga_Train_11_05"); //Nein, ich trainiere nur die MÃ¤nner, die im Dienste des KÃ¶nigs stehen. Niemand sonst.
-		AI_Output (self, other, "DIA_Ruga_Train_11_06"); //Aber gute Leute kÃ¶nnen wir immer gebrauchen. Also, wenn du der Miliz beitreten willst, sprich mit Lord Andre.
+		AI_Output (self, other, "DIA_Ruga_Train_11_05"); //Nein, ich trainiere nur die Männer, die im Dienste des Königs stehen. Niemand sonst.
+		AI_Output (self, other, "DIA_Ruga_Train_11_06"); //Aber gute Leute können wir immer gebrauchen. Also, wenn du der Miliz beitreten willst, sprich mit Lord Andre.
 	};     
 };
 //**************************************
@@ -174,7 +174,7 @@ FUNC INT DIA_Ruga_Teach_Condition()
  
 FUNC VOID DIA_Ruga_Teach_Info()
 {	
-	AI_Output (other,self ,"DIA_Ruga_Teach_15_00"); //Show me how to use a crossbow.
+	AI_Output (other,self ,"DIA_Ruga_Teach_15_00"); //Zeig mir den Umgang mit der Armbrust.
 
 	Info_ClearChoices 	(DIA_Ruga_Teach);
 	Info_AddChoice 		(DIA_Ruga_Teach,	DIALOG_BACK		,DIA_Ruga_Teach_Back);
@@ -186,7 +186,7 @@ FUNC VOID DIA_Ruga_Teach_Back ()
 {
 	if (other.HitChance[NPC_TALENT_CROSSBOW] >= 90)
 	{
-		AI_Output(self,other,"DIA_Ruga_Teach_11_00"); //There is nothing more that I could teach you. It is time that you found yourself another teacher.
+		AI_Output(self,other,"DIA_Ruga_Teach_11_00"); //Ich kann dir nichts mehr beibringen. Es ist an der Zeit, dass du einen anderen Lehrer aufsuchst.
 		DIA_Ruga_Teach_permanent = TRUE;
 		
 	};
@@ -239,7 +239,7 @@ func int DIA_Ruga_TEACHDEX_Condition ()
 };
 func void DIA_Ruga_TEACHDEX_Info ()
 {
-	AI_Output (other, self, "DIA_Ruga_TEACHDEX_15_00"); //I want to become more dexterous.
+	AI_Output (other, self, "DIA_Ruga_TEACHDEX_15_00"); //Ich will geschickter werden
 	
 	Info_ClearChoices   (DIA_Ruga_TEACHDEX);
 	Info_AddChoice 		(DIA_Ruga_TEACHDEX, DIALOG_BACK, DIA_Ruga_TEACHDEX_BACK);
@@ -251,7 +251,7 @@ func void DIA_Ruga_TEACHDEX_BACK()
 {
 	if (other.attribute[ATR_DEXTERITY] >= T_LOW)
 	{
-		AI_Output (self, other, "DIA_Ruga_TEACHDEX_11_00"); //This is all I can teach you. If you want to become more dexterous, go find a different teacher.
+		AI_Output (self, other, "DIA_Ruga_TEACHDEX_11_00"); //Mehr kann ich dir nicht beibringen. Wenn du geschickter werden willst, dann such dir einen anderen Lehrer.
 		DIA_Ruga_TEACHDEX_permanent = TRUE;
 	};
 	Info_ClearChoices (DIA_Ruga_TEACHDEX);

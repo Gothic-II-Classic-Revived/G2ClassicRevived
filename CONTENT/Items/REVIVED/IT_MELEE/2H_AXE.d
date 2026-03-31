@@ -342,7 +342,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_ORE_01 (C_Item)
 	name 				=	"Erzaxt";
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_AXE;	
+	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_WOOD;
 
 	value 				=	REV_Value_2H_Axe_Ore_01;
@@ -387,7 +387,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LEE (C_Item)
 	visual 				=	"REV_2H_AXE_HEAVY_01.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Lee";
+	TEXT[0]				=	"Es gehört Lee";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -415,7 +415,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_SYLVIO (C_Item)
 	visual 				=	"REV_2H_AXE_HEAVY_04.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Sylvio";
+	TEXT[0]				=	"Es gehört Sylvio";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -443,7 +443,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_TORLOF (C_Item)
 	visual 				=	"REV_2H_AXE_HEAVY_02.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Torlof";
+	TEXT[0]				=	"Es gehört Torlof";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
@@ -471,7 +471,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_GORN (C_Item)
 	visual 				=	"REV_2H_AXE_HEAVY_03.3DS";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Gorn";
+	TEXT[0]				=	"Es gehört Gorn";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;

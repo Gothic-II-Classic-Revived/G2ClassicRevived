@@ -289,7 +289,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_JUDGE (C_Item)
 	visual 				=	"ItMw_2H_Staff_02.3DS";
 
 	description			= name;
-	TEXT[0]				= "It belongs to the Judge.";
+	TEXT[0]				= "Es gehört dem Richter.";
 	TEXT[2]				= NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;

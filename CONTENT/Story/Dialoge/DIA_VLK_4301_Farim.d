@@ -75,15 +75,15 @@ func int DIA_Addon_Farim_Hallo_Condition ()
 func void DIA_Addon_Farim_Hallo_Info ()
 {
 	AI_Output	(other, self, "DIA_Addon_Farim_Hallo_15_00"); //Du bist Fischer?
-	AI_Output	(self, other, "DIA_Addon_Farim_Hallo_11_01"); //(zynisch) Wie hast du das bloÃŸ erraten?
+	AI_Output	(self, other, "DIA_Addon_Farim_Hallo_11_01"); //(zynisch) Wie hast du das bloß erraten?
 	AI_Output	(self, other, "DIA_Addon_Farim_Hallo_11_02"); //Kannst du mich nicht einfach in Ruhe lassen?
 	if (hero.guild == GIL_MIL)
 	{
-		AI_Output (self, other, "DIA_Addon_Farim_Landstreicher_Add_11_02"); //Nimm's mir nicht Ã¼bel, aber in letzter Zeit bin ich nicht sehr gut auf die Miliz zu sprechen.
+		AI_Output (self, other, "DIA_Addon_Farim_Landstreicher_Add_11_02"); //Nimm's mir nicht übel, aber in letzter Zeit bin ich nicht sehr gut auf die Miliz zu sprechen.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Addon_Farim_Landstreicher_Add_11_03"); //Nimm's mir nicht Ã¼bel, aber in letzter Zeit bin ich nicht so gut drauf. Ã„rger mit der Miliz...
+		AI_Output (self, other, "DIA_Addon_Farim_Landstreicher_Add_11_03"); //Nimm's mir nicht übel, aber in letzter Zeit bin ich nicht so gut drauf. Ärger mit der Miliz...
 	};
 };
 
@@ -97,7 +97,7 @@ instance DIA_Addon_Farim_MilizProbs		(C_INFO)
 	condition	 = 	DIA_Addon_Farim_MilizProbs_Condition;
 	information	 = 	DIA_Addon_Farim_MilizProbs_Info;
 
-	description	 = 	"Ã„rger mit der Miliz?";
+	description	 = 	"Ärger mit der Miliz?";
 };
 
 func int DIA_Addon_Farim_MilizProbs_Condition ()
@@ -110,36 +110,36 @@ func int DIA_Addon_Farim_MilizProbs_Condition ()
 
 func void DIA_Addon_Farim_MilizProbs_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Farim_MilizProbs_15_00"); //Ã„rger mit der Miliz?
+	AI_Output	(other, self, "DIA_Addon_Farim_MilizProbs_15_00"); //Ärger mit der Miliz?
 	if (((hero.guild == GIL_MIL)||(hero.guild == GIL_PAL)) == FALSE)
 	{
-		AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_01"); //Die Mistkerle kommen stÃ¤ndig her und nehmen sich einfach, was sie wollen.
+		AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_01"); //Die Mistkerle kommen ständig her und nehmen sich einfach, was sie wollen.
 	};
-	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_02"); //Letzte Woche haben sie meinen gesamten Fang mitgenommen. 'Ist fÃ¼r die gute Sache', haben sie gesagt.
-	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_03"); //Ich weiÃŸ ja, dass jeder sehen muss, wo er bleibt, seit die Bauern ihren Handel eingestellt haben.
+	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_02"); //Letzte Woche haben sie meinen gesamten Fang mitgenommen. 'Ist für die gute Sache', haben sie gesagt.
+	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_03"); //Ich weiß ja, dass jeder sehen muss, wo er bleibt, seit die Bauern ihren Handel eingestellt haben.
 	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_04"); //Da kommt es schon mal vor, dass der eine oder andere Kohldampf schieben muss. Kein Wunder, dass sie mir den Fisch vor der Nase wegSCHNAPPEN.
-	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_05"); //Aber wenn das so weiter geht, hab ich nicht mal genug, um mich selbst zu ernÃ¤hren.
+	AI_Output	(self, other, "DIA_Addon_Farim_MilizProbs_11_05"); //Aber wenn das so weiter geht, hab ich nicht mal genug, um mich selbst zu ernähren.
 	
 	Info_ClearChoices	(DIA_Addon_Farim_MilizProbs);
 	Info_AddChoice	(DIA_Addon_Farim_MilizProbs, "Gib mir all deine Fische.", DIA_Addon_Farim_MilizProbs_klauen );
 	Info_AddChoice	(DIA_Addon_Farim_MilizProbs, "Vielleicht kann ich dir helfen", DIA_Addon_Farim_MilizProbs_helfen );
-	Info_AddChoice	(DIA_Addon_Farim_MilizProbs, "Hast du mit den Paladinen schon mal darÃ¼ber gesprochen?", DIA_Addon_Farim_MilizProbs_paladine );
+	Info_AddChoice	(DIA_Addon_Farim_MilizProbs, "Hast du mit den Paladinen schon mal darüber gesprochen?", DIA_Addon_Farim_MilizProbs_paladine );
 };
 func void DIA_Addon_Farim_MilizProbs_paladine ()
 {
-	AI_Output			(other, self, "DIA_Addon_Farim_MilizProbs_paladine_15_00"); //Hast du mit den Paladinen schon mal darÃ¼ber gesprochen?
+	AI_Output			(other, self, "DIA_Addon_Farim_MilizProbs_paladine_15_00"); //Hast du mit den Paladinen schon mal darüber gesprochen?
 	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_paladine_11_01"); //(lacht) Machst du Witze? Was interessiert das die Kerle, wenn ein armer Schlucker wie ich Probleme mit der Miliz hat?
 };
 var int Farim_PissedOff;
 func void DIA_Addon_Farim_MilizProbs_klauen ()
 {
 	AI_Output			(other, self, "DIA_Addon_Farim_MilizProbs_klauen_15_00"); //Gib mir all deine Fische.
-	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_klauen_11_01"); //(bÃ¶se) Hab ich's doch gewusst. Noch so ein Mistkerl.
+	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_klauen_11_01"); //(böse) Hab ich's doch gewusst. Noch so ein Mistkerl.
 	
 	if (other.guild == GIL_MIL)
 	|| (other.guild == GIL_PAL)
 	{
-		AI_Output (self, other, "DIA_Addon_Farim_MilizProbs_klauen_11_02"); //Da bist du leider zu spÃ¤t gekommen. Deine Freunde haben schon gestern alles mitgenommen.
+		AI_Output (self, other, "DIA_Addon_Farim_MilizProbs_klauen_11_02"); //Da bist du leider zu spät gekommen. Deine Freunde haben schon gestern alles mitgenommen.
 	};
 	
 	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_klauen_11_04"); //Tja. Ich glaube, es ist besser, wenn du jetzt gehst.
@@ -149,7 +149,7 @@ func void DIA_Addon_Farim_MilizProbs_klauen ()
 func void DIA_Addon_Farim_MilizProbs_helfen ()
 {
 	AI_Output			(other, self, "DIA_Addon_Farim_MilizProbs_helfen_15_00"); //Vielleicht kann ich dir helfen
-	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_helfen_11_02"); //Ich weiÃŸ nicht. Du mÃ¼sstest schon jemanden von der Miliz kennen, der 'nen guten Draht zu den Paladinen hat ...
+	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_helfen_11_02"); //Ich weiß nicht. Du müsstest schon jemanden von der Miliz kennen, der 'nen guten Draht zu den Paladinen hat ...
 	AI_Output			(self, other, "DIA_Addon_Farim_MilizProbs_helfen_11_03"); //Die Paladine werden mir den Fisch wohl kaum abkaufen.
 	AI_Output			(other, self, "DIA_Addon_Farim_MilizProbs_helfen_15_04"); //Ich werde sehen, was ich machen kann.
 	Info_ClearChoices	(DIA_Addon_Farim_MilizProbs);
@@ -171,7 +171,7 @@ instance DIA_Addon_Farim_MartinHelps		(C_INFO)
 	condition	 = 	DIA_Addon_Farim_MartinHelps_Condition;
 	information	 = 	DIA_Addon_Farim_MartinHelps_Info;
 
-	description	 = 	"Ich hab die LÃ¶sung deiner Milizprobleme.";
+	description	 = 	"Ich hab die Lösung deiner Milizprobleme.";
 };
 
 func int DIA_Addon_Farim_MartinHelps_Condition ()
@@ -185,17 +185,17 @@ func int DIA_Addon_Farim_MartinHelps_Condition ()
 
 func void DIA_Addon_Farim_MartinHelps_Info ()
 {
-	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_00"); //Ich hab die LÃ¶sung deiner Milizprobleme.
+	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_00"); //Ich hab die Lösung deiner Milizprobleme.
 	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_01"); //Und wie sieht die aus?
 
 	if (hero.guild == GIL_MIL)||(hero.guild == GIL_PAL)
 	{
-		AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_02"); //Ich bin einfach zu selten hier, um stÃ¤ndig auf deine Fische aufzupassen.
+		AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_02"); //Ich bin einfach zu selten hier, um ständig auf deine Fische aufzupassen.
 		AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_03"); //Aber ich habe da jemanden, der das kann.
 	};
 	
-	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_04"); //Martin, der Proviantmeister der Paladine, will sich deine Geschichte von der Miliz und deinen Fischen anhÃ¶ren.
-	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_05"); //Und du meinst, er kann dafÃ¼r sorgen, dass mich die anderen der Miliz in Ruhe lassen?
+	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_04"); //Martin, der Proviantmeister der Paladine, will sich deine Geschichte von der Miliz und deinen Fischen anhören.
+	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_05"); //Und du meinst, er kann dafür sorgen, dass mich die anderen der Miliz in Ruhe lassen?
 	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_06"); //Hat er zumindest gesagt.
 	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_07"); //Gut. Ich danke dir. Ich kann dir nicht viel geben. Aber warte ...
 	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_08"); //Ich habe diesen seltsamen blauen Stein auf einer der Inseln vor Khorinis gefunden.

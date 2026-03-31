@@ -52,7 +52,7 @@ func int DIA_Cipher_HALLO_Condition ()
 func void DIA_Cipher_HALLO_Info ()
 {
 	AI_Output			(other, self, "DIA_Cipher_HALLO_15_00"); //Nettes Lager.
-	AI_Output			(self, other, "DIA_Cipher_HALLO_07_01"); //Du sagst es. Hier stinkt's wie im Schlachthof. Ãœberall tote Viecher und vermoderte BÃ¤ume!
+	AI_Output			(self, other, "DIA_Cipher_HALLO_07_01"); //Du sagst es. Hier stinkt's wie im Schlachthof. Überall tote Viecher und vermoderte Bäume!
 };
 
 
@@ -84,22 +84,22 @@ func void DIA_CipherDJG_HELLOAGAIN_Info ()
 {
 	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_15_00"); //Was machst du hier?
 	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_01"); //Ich sitze hier schon einige Zeit und warte nur noch auf den richtigen Moment.
-	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_15_02"); //Richtiger Moment? WofÃ¼r?
-	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_03"); //Da drÃ¼ben soll sich angeblich ein Drache aufhalten. Seit er hier ist, hat sich dort ein ziemlich Ã¼bler Sumpf gebildet.
+	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_15_02"); //Richtiger Moment? Wofür?
+	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_03"); //Da drüben soll sich angeblich ein Drache aufhalten. Seit er hier ist, hat sich dort ein ziemlich übler Sumpf gebildet.
 	//AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_04"); //I can well remember a time when you wouldn't get your feet wet around here.
-	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_05"); //Doch jetzt wÃ¼rde ich da alleine niemals rein gehen.
+	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_05"); //Doch jetzt würde ich da alleine niemals rein gehen.
 
 	if ((Npc_IsDead(DJG_Rod)) == FALSE)
 		{
-			AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_06"); //Na gut. Rod ist noch da. Aber der lÃ¤uft ja schon bei dem Anblick der Fleischwanzen davon.
+			AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_06"); //Na gut. Rod ist noch da. Aber der läuft ja schon bei dem Anblick der Fleischwanzen davon.
 		};
 
-	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_07"); //Was ist mit dir? Du bist sicher nicht nur zum VergnÃ¼gen hier, oder? Lass uns zusammen rein gehen.
+	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_07"); //Was ist mit dir? Du bist sicher nicht nur zum Vergnügen hier, oder? Lass uns zusammen rein gehen.
 
-	B_LogEntry (TOPIC_Dragonhunter,"Von Cipher habe ich erfahren, daÃŸ sich im Sumpfgebiet des Minentals ein Drache aufhalten soll."); 
+	B_LogEntry (TOPIC_Dragonhunter,"Von Cipher habe ich erfahren, daß sich im Sumpfgebiet des Minentals ein Drache aufhalten soll."); 
 
 	Info_AddChoice	(DIA_CipherDJG_HELLOAGAIN, "Ich bleibe lieber allein.", 	DIA_CipherDJG_HELLOAGAIN_GoAlone);
-	Info_AddChoice	(DIA_CipherDJG_HELLOAGAIN, "Warum nicht, Hilfe kÃ¶nnte ich brauchen.", DIA_CipherDJG_HELLOAGAIN_GoTogether);
+	Info_AddChoice	(DIA_CipherDJG_HELLOAGAIN, "Warum nicht, Hilfe könnte ich brauchen.", DIA_CipherDJG_HELLOAGAIN_GoTogether);
 
 
 
@@ -107,14 +107,14 @@ func void DIA_CipherDJG_HELLOAGAIN_Info ()
 func void DIA_CipherDJG_HELLOAGAIN_GoAlone ()
 {
 	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_GoAlone_15_00"); //Ich bleibe lieber allein.
-	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_GoAlone_07_01"); //Wie du willst. Hab ich mich eben getÃ¤uscht!
+	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_GoAlone_07_01"); //Wie du willst. Hab ich mich eben getäuscht!
 	AI_StopProcessInfos (self);
 };
 
 func void DIA_CipherDJG_HELLOAGAIN_GoTogether ()
 {
-	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_GoTogether_15_00"); //Warum nicht, Hilfe kÃ¶nnte ich brauchen.
-	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_GoTogether_07_01"); //Das ist gut. Dann komme ich endlich hier weg. Der Gestank ist ja unertrÃ¤glich. Sag wenn's los geht!
+	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_GoTogether_15_00"); //Warum nicht, Hilfe könnte ich brauchen.
+	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_GoTogether_07_01"); //Das ist gut. Dann komme ich endlich hier weg. Der Gestank ist ja unerträglich. Sag wenn's los geht!
 
 	DJG_SwampParty = TRUE;
 	Info_ClearChoices	(DIA_CipherDJG_HELLOAGAIN);
@@ -131,7 +131,7 @@ instance DIA_CipherDJG_GOTOGETHERAGAIN		(C_INFO)
 
 
 
-	description	 = 	"Ich hab's mir Ã¼berlegt! Lass uns zusammen gehen!";
+	description	 = 	"Ich hab's mir überlegt! Lass uns zusammen gehen!";
 };
 
 func int DIA_CipherDJG_GOTOGETHERAGAIN_Condition ()
@@ -149,7 +149,7 @@ func int DIA_CipherDJG_GOTOGETHERAGAIN_Condition ()
 
 func void DIA_CipherDJG_GOTOGETHERAGAIN_Info ()
 {
-	AI_Output			(other, self, "DIA_CipherDJG_GOTOGETHERAGAIN_15_00"); //Ich hab's mir Ã¼berlegt! Lass uns zusammen gehen!
+	AI_Output			(other, self, "DIA_CipherDJG_GOTOGETHERAGAIN_15_00"); //Ich hab's mir überlegt! Lass uns zusammen gehen!
 	AI_Output			(self, other, "DIA_CipherDJG_GOTOGETHERAGAIN_07_01"); //Sag, wenn's los geht!
 	DJG_SwampParty = TRUE;
 };
@@ -167,7 +167,7 @@ instance DIA_CipherDJG_GO		(C_INFO)
 
 
 
-	description	 = 	"Jetzt wÃ¤re ein guter Moment um aufzubrechen!";
+	description	 = 	"Jetzt wäre ein guter Moment um aufzubrechen!";
 };
 
 func int DIA_CipherDJG_GO_Condition ()
@@ -185,7 +185,7 @@ func int DIA_CipherDJG_GO_Condition ()
 var int DJG_SwampParty_GoGoGo;
 func void DIA_CipherDJG_GO_Info ()
 {
-	AI_Output			(other, self, "DIA_CipherDJG_GO_15_00"); //Jetzt wÃ¤re ein guter Moment um aufzubrechen!
+	AI_Output			(other, self, "DIA_CipherDJG_GO_15_00"); //Jetzt wäre ein guter Moment um aufzubrechen!
 	AI_Output			(self, other, "DIA_CipherDJG_GO_07_01"); //Packen wir's!
 
 	AI_StopProcessInfos	(self);	
@@ -223,9 +223,9 @@ FUNC INT DIA_CipherDJG_SwampWait2_Condition()
 
 func VOID DIA_CipherDJG_SwampWait2_Info()
 {
-	AI_Output (self, other,"DIA_CipherDJG_SwampWait2_07_00"); //The swamp starts just behind the next bend here. I suggest we go straight through here.
-	AI_Output (self, other,"DIA_CipherDJG_SwampWait2_07_01"); //Or you can also check the passage over there, so none of the beasts can attack us from the rear. What do you prefer?
-	AI_Output (other, self,"DIA_CipherDJG_SwampWait2_15_02"); //Let's not waste any time!
+	AI_Output (self, other,"DIA_CipherDJG_SwampWait2_07_00"); //Hier hinter der nächsten Biegung beginnt der Sumpf. Ich schlage vor, wir gehen hier weiter gerade durch.
+	AI_Output (self, other,"DIA_CipherDJG_SwampWait2_07_01"); //Du kannst aber auch den Gang dort drüben checken, damit uns keins von den Viechern in den Rücken fällt. Was ist dir lieber?
+	AI_Output (other, self,"DIA_CipherDJG_SwampWait2_15_02"); //Verlieren wir keine Zeit!
 
 	Info_AddChoice	(DIA_CipherDJG_SwampWait2, DIALOG_ENDE, DIA_CipherDJG_SwampWait2_weiter );
 };
@@ -280,11 +280,11 @@ func VOID DIA_CipherDJG_GoForSwampDragon_Info()
 	}
 	else	//Joly: noch nicht zum Drachen gesprochen! griefen an, wenn der Dialog mit "Swampi" zu ende ist
 	{
-	AI_Output			(self, other, "DIA_CipherDJG_GoForSwampDragon_07_01"); //I can already hear the creature. We must be careful!
-	AI_Output			(self, other, "DIA_CipherDJG_GoForSwampDragon_07_02"); //Go ahead and see if we can attack.
+	AI_Output			(self, other, "DIA_CipherDJG_GoForSwampDragon_07_01"); //Ich kann das Vieh schon hören. Wir müssen vorsichtig sein!
+	AI_Output			(self, other, "DIA_CipherDJG_GoForSwampDragon_07_02"); //Geh vor und sieh nach, ob wir angreifen können.
 	AI_StopProcessInfos	(self);
 	};
-	self.flags =0;	//Joly: Wer wei!!?!
+	self.flags =0;	//Joly: Wer weiß!!?!
 	DJG_Rod.flags =0; 
 };
 
@@ -313,9 +313,9 @@ func int DIA_CipherDJG_SWAMPDRAGONDEAD_Condition ()
 
 func void DIA_CipherDJG_SWAMPDRAGONDEAD_Info ()
 {
-	AI_Output			(self, other, "DIA_CipherDJG_SWAMPDRAGONDEAD_07_00"); //Damn. Is it dead?
-	AI_Output			(other, self, "DIA_CipherDJG_SWAMPDRAGONDEAD_15_01"); //Calm down. It's over!
-	AI_Output			(self, other, "DIA_CipherDJG_SWAMPDRAGONDEAD_07_02"); //Boy, what a humdinger.
+	AI_Output			(self, other, "DIA_CipherDJG_SWAMPDRAGONDEAD_07_00"); //Verdammt. Ist er tot?
+	AI_Output			(other, self, "DIA_CipherDJG_SWAMPDRAGONDEAD_15_01"); //Beruhige dich wieder. Es ist vorbei!
+	AI_Output			(self, other, "DIA_CipherDJG_SWAMPDRAGONDEAD_07_02"); //Junge, war das ein Brocken.
 	
 	AI_StopProcessInfos	(self);
 	B_GivePlayerXP (XP_CipherDJGDeadDragon);
@@ -351,11 +351,11 @@ func int DIA_CipherDJG_WHATNEXT_Condition ()
 
 func void DIA_CipherDJG_WHATNEXT_Info ()
 {
-	AI_Output	(other, self, "DIA_CipherDJG_WHATNEXT_15_00"); //The swamp dragon is dead! What are you going to do now?
-	AI_Output	(self, other, "DIA_CipherDJG_WHATNEXT_07_01"); //No idea. I haven't thought about it, really. At any rate, you could now return to Khorinis as a hero.
-	AI_Output	(self, other, "DIA_CipherDJG_WHATNEXT_07_02"); //I bet there's a pile to be made out of this. Think about it.
+	AI_Output	(other, self, "DIA_CipherDJG_WHATNEXT_15_00"); //Der Sumpfdrache ist tot!
+	AI_Output	(self, other, "DIA_CipherDJG_WHATNEXT_07_01"); //Keine Ahnung. Darüber habe ich mir noch keine Gedanken gemacht. Immerhin könntest du jetzt als Held nach Khorinis zurück kehren.
+	AI_Output	(self, other, "DIA_CipherDJG_WHATNEXT_07_02"); //Ich vermute, daraus lässt sich Kapital schlagen! Denk mal darüber nach!
 
-	B_LogEntry (TOPIC_Dragonhunter,"Cipher meinte, nachdem der Sumpfdrache tot war, daÃŸ er nun als Â´HeldÂ´ das groÃŸe Geld machen wÃ¼rde. Naja. Wir werden sehen."); 
+	B_LogEntry (TOPIC_Dragonhunter,"Cipher meinte, nachdem der Sumpfdrache tot war, daß er nun als ´Held´ das große Geld machen würde. Naja. Wir werden sehen."); 
 
 	AI_StopProcessInfos	(self);
 };

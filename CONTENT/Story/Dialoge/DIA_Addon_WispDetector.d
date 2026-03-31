@@ -57,7 +57,7 @@ func void DIA_Addon_WispDetector_DetectItems_Info ()
 	};
 	if (PLAYER_TALENT_WISPDETECTOR[WISPSKILL_NONE] 	== TRUE)		
 	{	
-		Info_AddChoice	(DIA_Addon_WispDetector_DetectItems, "Ich brauche Gold, Schl√ºssel und Gebrauchsgegenst√§nde"		, DIA_Addon_WispDetector_DetectItems_NONE );
+		Info_AddChoice	(DIA_Addon_WispDetector_DetectItems, "Ich brauche Gold, Schl¸ssel und Gebrauchsgegenst‰nde"		, DIA_Addon_WispDetector_DetectItems_NONE );
 	};
 	if (PLAYER_TALENT_WISPDETECTOR[WISPSKILL_FF] 	== TRUE)		
 	{	
@@ -77,7 +77,7 @@ func void DIA_Addon_WispDetector_DetectItems_Info ()
 	};
 	if (PLAYER_TALENT_WISPDETECTOR[WISPSKILL_POTIONS] == TRUE)	
 	{	
-		Info_AddChoice	(DIA_Addon_WispDetector_DetectItems, "Ich brauche Tr√§nke aller Art."							, DIA_Addon_WispDetector_DetectItems_POTIONS );
+		Info_AddChoice	(DIA_Addon_WispDetector_DetectItems, "Ich brauche Tr‰nke aller Art."							, DIA_Addon_WispDetector_DetectItems_POTIONS );
 	};
 
 	Info_AddChoice	(DIA_Addon_WispDetector_DetectItems, "Such' einfach alles, was du finden kannst."				, DIA_Addon_WispDetector_DetectItems_ALL );
@@ -101,7 +101,7 @@ func void DIA_Addon_WispDetector_DetectItems_ALL ()
 
 func void DIA_Addon_WispDetector_DetectItems_POTIONS ()
 {
-	AI_Output			(other, self, "DIA_Addon_WispDetector_DetectItems_POTIONS_15_00"); //Ich brauche Tr√§nke aller Art.
+	AI_Output			(other, self, "DIA_Addon_WispDetector_DetectItems_POTIONS_15_00"); //Ich brauche Tr‰nke aller Art.
 	WispSearching = WispSearch_POTIONS;
 	B_IrrlichtBeep();
 	AI_StopProcessInfos (self);
@@ -141,7 +141,7 @@ func void DIA_Addon_WispDetector_DetectItems_FF ()
 
 func void DIA_Addon_WispDetector_DetectItems_NONE ()
 {
-	AI_Output			(other, self, "DIA_Addon_WispDetector_DetectItems_NONE_15_00"); //Ich brauche Gold, Schl√ºssel und Gebrauchsgegenst√§nde
+	AI_Output			(other, self, "DIA_Addon_WispDetector_DetectItems_NONE_15_00"); //Ich brauche Gold, Schl¸ssel und Gebrauchsgegenst‰nde
 	WispSearching = WispSearch_NONE;
 	B_IrrlichtBeep();
 	AI_StopProcessInfos (self);

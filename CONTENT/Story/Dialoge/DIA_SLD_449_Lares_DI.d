@@ -45,7 +45,7 @@ FUNC INT DIA_Lares_DI_Hallo_Condition()
 };
 FUNC VOID DIA_Lares_DI_Hallo_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_DI_Hallo_15_00"); //Wie lÃ¤uft's denn so?
+	AI_Output (other,self ,"DIA_Lares_DI_Hallo_15_00"); //Wie läuft's denn so?
 
 	if (ORkSturmDI == TRUE)
 	{
@@ -69,7 +69,7 @@ INSTANCE DIA_Lares_DI_Training (C_INFO)
 	information	= DIA_Lares_DI_Training_Info;
 	permanent	 = 	TRUE;
 
-	description = "Lehre mich deine FÃ¤higkeiten.";
+	description = "Lehre mich deine Fähigkeiten.";
 };                       
 FUNC INT DIA_Lares_DI_Training_Condition()
 {
@@ -81,7 +81,7 @@ FUNC INT DIA_Lares_DI_Training_Condition()
 
 FUNC VOID DIA_Lares_DI_Training_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_DI_Training_15_00"); //Lehre mich deine FÃ¤higkeiten.
+	AI_Output (other,self ,"DIA_Lares_DI_Training_15_00"); //Lehre mich deine Fähigkeiten.
 	AI_Output (self ,other,"DIA_Lares_DI_Training_09_01"); //Kein Problem.
 	
 	Info_ClearChoices (DIA_Lares_DI_Training);
@@ -120,7 +120,7 @@ FUNC VOID DIA_Lares_DI_Training_1H_5 ()
 {
 	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 100))
 	{
-			AI_Output (self ,other,"DIA_Lares_DI_Training_1H_5_09_00"); //Bleibe in deiner HÃ¼fte flexibel, dann kannst du dich bei einem Gegenangriff besser wegdrehen.
+			AI_Output (self ,other,"DIA_Lares_DI_Training_1H_5_09_00"); //Bleibe in deiner Hüfte flexibel, dann kannst du dich bei einem Gegenangriff besser wegdrehen.
 	};
 	Info_ClearChoices (DIA_Lares_DI_Training);
 	Info_AddChoice	  (DIA_Lares_DI_Training, DIALOG_BACK, DIA_Lares_DI_Training_BACK);
@@ -144,7 +144,7 @@ func void DIA_Lares_DI_Training_DEX_1 ()
 {
 	if (B_TeachAttributePoints (self, other, ATR_DEXTERITY, 1, T_MED))
 	{
-		AI_Output (self ,other,"DIA_Lares_DI_Training_DEX_1_09_00"); //The upper half of your body has to act in harmony with the rest.
+		AI_Output (self ,other,"DIA_Lares_DI_Training_DEX_1_09_00"); //Die obere Hälfte deines Körpers muss immer in Harmonie mit dem Rest agieren.
 	};
 
 	Info_ClearChoices (DIA_Lares_DI_Training);
@@ -168,7 +168,7 @@ func void DIA_Lares_DI_Training_DEX_5 ()
 {
 	if (B_TeachAttributePoints (self, other, ATR_DEXTERITY, 5, T_MED))
 	{
-		AI_Output (self ,other,"DIA_Lares_DI_Training_DEX_5_09_00"); //You always have to watch your footing.
+		AI_Output (self ,other,"DIA_Lares_DI_Training_DEX_5_09_00"); //Bei deinen Füssen musst du immer auf ihre Stellung achten.
 	};
 
 	Info_ClearChoices (DIA_Lares_DI_Training);
@@ -189,7 +189,7 @@ func void DIA_Lares_DI_Training_SNEAK ()
 {
 	if (B_TeachThiefTalent (self, other, NPC_TALENT_SNEAK))
 	{
-		AI_Output (self ,other,"DIA_Lares_DI_Training_SNEAK_09_00"); //Always use the entire sole of your foot when sneaking.
+		AI_Output (self ,other,"DIA_Lares_DI_Training_SNEAK_09_00"); //Benutze immer die ganze Fußsohle beim Schleichen.
 	};
 
 	Info_ClearChoices (DIA_Lares_DI_Training);
@@ -223,7 +223,7 @@ INSTANCE DIA_Lares_DI_UndeadDragonDead (C_INFO)
 	information	= DIA_Lares_DI_UndeadDragonDead_Info;
 	permanent	 = 	TRUE;
 
-	description = "Dich kÃ¼mmert das Ganze scheinbar Ã¼berhaupt nicht.";
+	description = "Dich kümmert das Ganze scheinbar überhaupt nicht.";
 };                       
 FUNC INT DIA_Lares_DI_UndeadDragonDead_Condition()
 {
@@ -236,13 +236,13 @@ FUNC INT DIA_Lares_DI_UndeadDragonDead_Condition()
 var int DIA_Lares_DI_UndeadDragonDead_OneTime;
 FUNC VOID DIA_Lares_DI_UndeadDragonDead_Info()
 {	
-	AI_Output (other,self ,"DIA_Lares_DI_UndeadDragonDead_15_00"); //You don't really seem to care about all this.
-	AI_Output (self ,other,"DIA_Lares_DI_UndeadDragonDead_09_01"); //Ah, you know, I thought you'd make it.
+	AI_Output (other,self ,"DIA_Lares_DI_UndeadDragonDead_15_00"); //Dich kümmert das Ganze scheinbar überhaupt nicht.
+	AI_Output (self ,other,"DIA_Lares_DI_UndeadDragonDead_09_01"); //Ach, weißt du, ich habe mir gedacht, dass du es schaffen würdest.
 
 	if (DIA_Lares_DI_UndeadDragonDead_OneTime == FALSE )
 	{
-		AI_Output (other,self ,"DIA_Lares_DI_UndeadDragonDead_15_02"); //What are you going to do now?
-		AI_Output (self ,other,"DIA_Lares_DI_UndeadDragonDead_09_03"); //No idea. I guess I'll follow you for now.
+		AI_Output (other,self ,"DIA_Lares_DI_UndeadDragonDead_15_02"); //Was machst du nun?
+		AI_Output (self ,other,"DIA_Lares_DI_UndeadDragonDead_09_03"); //Keine Ahnung. Ich werde dir erst einmal folgen, schätze ich.
 		
 		DIA_Lares_DI_UndeadDragonDead_OneTime = TRUE;
 	};

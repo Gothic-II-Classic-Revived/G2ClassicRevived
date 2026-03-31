@@ -236,7 +236,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 {
-	name 				=	"TrolltÃ¶ter-Armbrust";
+	name 				=	"Trolltöter-Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -261,7 +261,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_03 (C_Item)
 {
-	name 				=	"DrachenjÃ¤gerarmbrust";
+	name 				=	"Drachenjägerarmbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -387,7 +387,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_FIRE_01 (C_Item)
 //****************************************************************************
 INSTANCE ITRW_REVIVED_CROSSBOW_DRAGOMIR (C_Item)
 {
-	name 				=	"DragomirÂ´s Armbrust";
+	name 				=	"Dragomir´s Armbrust";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -406,7 +406,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_DRAGOMIR (C_Item)
 	visual 				=	"ItRw_Crossbow_L_02.mms";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Dragomir";
+	TEXT[0]				=	"Es gehört Dragomir";
 	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -433,7 +433,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_SENGRATH (C_Item)
 	visual 				=	"ItRw_Crossbow_L_02.mms";
 
 	description			= 	name;
-	TEXT[0]				=	"It belongs to Sengrath";
+	TEXT[0]				=	"Es gehört Sengrath";
 	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;

@@ -45,8 +45,8 @@ func void DIA_Balthasar_HALLO_Info ()
 	AI_Output			(other, self, "DIA_Balthasar_HALLO_15_00"); //Wie sieht's aus?
 	AI_Output			(self, other, "DIA_Balthasar_HALLO_05_01"); //Ah, ein neues Gesicht hier auf dem Hof. Hat mir der alte Geizknorpel endlich einen Lehrling bewilligt?
 	AI_Output			(other, self, "DIA_Balthasar_HALLO_15_02"); //Ich bin kein Lehrling.
-	AI_Output			(self, other, "DIA_Balthasar_HALLO_05_03"); //Oh. Ach so. Ich bin nicht mehr der JÃ¼ngste, weiÃŸt du? Und warte schon seit Jahren auf meine AblÃ¶sung.
-	AI_Output			(self, other, "DIA_Balthasar_HALLO_05_04"); //Du bist doch nicht etwa hier wegen der verÃ¤rgerten Nachbarschaft, oder?
+	AI_Output			(self, other, "DIA_Balthasar_HALLO_05_03"); //Oh. Ach so. Ich bin nicht mehr der Jüngste, weißt du? Und warte schon seit Jahren auf meine Ablösung.
+	AI_Output			(self, other, "DIA_Balthasar_HALLO_05_04"); //Du bist doch nicht etwa hier wegen der verärgerten Nachbarschaft, oder?
 	
 
 };
@@ -75,7 +75,7 @@ func int DIA_Balthasar_WASMACHSTDU_Condition ()
 func void DIA_Balthasar_WASMACHSTDU_Info ()
 {
 	AI_Output			(other, self, "DIA_Balthasar_WASMACHSTDU_15_00"); //Welche Arbeit machst du hier?
-	AI_Output			(self, other, "DIA_Balthasar_WASMACHSTDU_05_01"); //Oh, ich hÃ¼te Schafe und das mach ich schon seit ich denken kann.
+	AI_Output			(self, other, "DIA_Balthasar_WASMACHSTDU_05_01"); //Oh, ich hüte Schafe und das mach ich schon seit ich denken kann.
 	AI_Output			(self, other, "DIA_Balthasar_WASMACHSTDU_05_02"); //Die Tiere sind sehr treu und auch sehr schlau, musst du wissen. Wenn du sie gut behandelst, dann folgen sie dir ein ganzes Leben lang.
 
 };
@@ -126,7 +126,7 @@ instance DIA_Balthasar_AERGERMITNACHBARN		(C_INFO)
 	condition	 = 	DIA_Balthasar_AERGERMITNACHBARN_Condition;
 	information	 = 	DIA_Balthasar_AERGERMITNACHBARN_Info;
 
-	description	 = 	"Was fÃ¼r Ã„rger hast du mit den Nachbarn?";
+	description	 = 	"Was für Ärger hast du mit den Nachbarn?";
 };
 
 func int DIA_Balthasar_AERGERMITNACHBARN_Condition ()
@@ -147,11 +147,11 @@ func int DIA_Balthasar_AERGERMITNACHBARN_Condition ()
 
 func void DIA_Balthasar_AERGERMITNACHBARN_Info ()
 {
-	AI_Output			(other, self, "DIA_Balthasar_AERGERMITNACHBARN_15_00"); //Was fÃ¼r Ã„rger hast du mit den Nachbarn?
-	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_01"); //Das Gras auf dieser Seite der groÃŸen Felder ist immer sehr mickrig und ausgedÃ¶rrt. Dann geh ich meistens auf die groÃŸen Weiden der anderen Bauern.
-	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_02"); //Dem GroÃŸbauer macht das nichts aus, aber Bengar, der Bauer auf dem Weidenplateau, macht jedes Mal einen riesigen Aufstand, wenn ich mit den Tieren bei ihm bin.
+	AI_Output			(other, self, "DIA_Balthasar_AERGERMITNACHBARN_15_00"); //Was für Ärger hast du mit den Nachbarn?
+	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_01"); //Das Gras auf dieser Seite der großen Felder ist immer sehr mickrig und ausgedörrt. Dann geh ich meistens auf die großen Weiden der anderen Bauern.
+	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_02"); //Dem Großbauer macht das nichts aus, aber Bengar, der Bauer auf dem Weidenplateau, macht jedes Mal einen riesigen Aufstand, wenn ich mit den Tieren bei ihm bin.
 	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_03"); //Er ist der Meinung, dass Sekob Zoll bezahlen soll, wenn ich seine Tiere auf Bengars Weide bringe.
-	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_04"); //Sekob macht dafÃ¼r aber keine mÃ¼de MÃ¼nze locker und darum darf ich nicht mehr rauf auf das Plateau.
+	AI_Output			(self, other, "DIA_Balthasar_AERGERMITNACHBARN_05_04"); //Sekob macht dafür aber keine müde Münze locker und darum darf ich nicht mehr rauf auf das Plateau.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -179,8 +179,8 @@ func int DIA_Balthasar_WOBENGAR_Condition ()
 func void DIA_Balthasar_WOBENGAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Balthasar_WOBENGAR_15_00"); //Wo finde ich das Weidenplateau und Bengars Hof?
-	AI_Output			(self, other, "DIA_Balthasar_WOBENGAR_05_01"); //Du folgst dem Feldweg und Ã¼berquerst die groÃŸe Kreuzung.
-	AI_Output			(self, other, "DIA_Balthasar_WOBENGAR_05_02"); //Wenn du dich dann rechts hÃ¤ltst, siehst du vor dir eine groÃŸes Felsmassiv. Rechts dahinter ist das Weidenplateau und der Pass.
+	AI_Output			(self, other, "DIA_Balthasar_WOBENGAR_05_01"); //Du folgst dem Feldweg und überquerst die große Kreuzung.
+	AI_Output			(self, other, "DIA_Balthasar_WOBENGAR_05_02"); //Wenn du dich dann rechts hältst, siehst du vor dir eine großes Felsmassiv. Rechts dahinter ist das Weidenplateau und der Pass.
 };
 
 
@@ -216,12 +216,12 @@ func int DIA_Balthasar_TALKTOBENGAR_Condition ()
 func void DIA_Balthasar_TALKTOBENGAR_Info ()
 {
 	AI_Output			(other, self, "DIA_Balthasar_TALKTOBENGAR_15_00"); //Vielleicht sollte ich mal mit Bengar sprechen.
-	AI_Output			(self, other, "DIA_Balthasar_TALKTOBENGAR_05_01"); //Das wÃ¼rdest du fÃ¼r mich tun? Was willst du ihm denn sagen, ich meine, ich will keinen Ã„rger, hÃ¶rst du?
+	AI_Output			(self, other, "DIA_Balthasar_TALKTOBENGAR_05_01"); //Das würdest du für mich tun? Was willst du ihm denn sagen, ich meine, ich will keinen Ärger, hörst du?
 	AI_Output			(other, self, "DIA_Balthasar_TALKTOBENGAR_15_02"); //Wir werden sehen.
 
 	Log_CreateTopic (TOPIC_BalthasarsSchafe, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BalthasarsSchafe, LOG_RUNNING);
-	B_LogEntry (TOPIC_BalthasarsSchafe,"Der Bauer Bengar hat dem Schafhirten Balthasar verboten seine Schafe aufÂ´s Weidenplateau zu fÃ¼hren."); 
+	B_LogEntry (TOPIC_BalthasarsSchafe,"Der Bauer Bengar hat dem Schafhirten Balthasar verboten seine Schafe auf´s Weidenplateau zu führen."); 
 	MIS_Balthasar_BengarsWeide = LOG_RUNNING;
 };
 
@@ -343,7 +343,7 @@ func void DIA_Balthasar_PERMKAP1_Info ()
 				AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_02"); //Schlimme Zeiten sind das, ich kann meine Schafe nicht finden.
 				if (Npc_IsDead(Sekob)== FALSE)
 				{
-					AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_03"); //Das werde ich Sekob wohl beichten mÃ¼ssen.
+					AI_Output			(self, hero, "DIA_Balthasar_PERMKAP1_05_03"); //Das werde ich Sekob wohl beichten müssen.
 				};
 				AI_StopProcessInfos (self);
 				Npc_ExchangeRoutine	(self,"Start"); //Joly: falls er auf der 2. Weide bei Bengar ist.
