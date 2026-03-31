@@ -538,8 +538,8 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Firewaran,"FP_ROAM_OW_SCA_01_BADITS2");
 		Wld_InsertNpc	(Firewaran,"FP_ROAM_OW_SCA_01_BADITS");
 
-		Wld_InsertNpc	(Gobbo_Black,"FP_ROAM_OW_GOBBO_07_06");
-		Wld_InsertNpc	(Gobbo_Black,"FP_ROAM_OW_GOBBO_07_03");
+		Wld_InsertNpc	(Gobbo_Elite,"FP_ROAM_OW_GOBBO_07_06");
+		Wld_InsertNpc	(Gobbo_Elite,"FP_ROAM_OW_GOBBO_07_03");
 
 		Wld_InsertNpc	(DragonSnapper,"FP_ROAM_OW_SNAPPER_WOOD05_02");
 		Wld_InsertNpc	(DragonSnapper,"FP_ROAM_OW_SNAPPER_WOOD05_02");

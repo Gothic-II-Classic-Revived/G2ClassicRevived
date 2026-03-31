@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_Gobbo_Elite (C_NPC)			
 {
 	//----- Monster ----
-	name							=	"Goblin Elite";
+	name							=	"Goblin Raider";
 	guild							=	GIL_GOBBO;
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_BLACK;
 	

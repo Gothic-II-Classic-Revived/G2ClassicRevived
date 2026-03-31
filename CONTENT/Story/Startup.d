@@ -1255,9 +1255,9 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(BDT_1000_LOAFER, "OW_PATH_056");
 	Wld_InsertNpc		(BDT_1003_Bandit_M, "OW_PATH_056");
 
+	Wld_InsertNpc		(Gobbo_Elite,"OW_GOBBO_PLACE_SPAWN");	
 	Wld_InsertNpc		(Gobbo_Black,"OW_GOBBO_PLACE_SPAWN");	
-	Wld_InsertNpc		(Gobbo_Green,"OW_GOBBO_PLACE_SPAWN");	
-	Wld_InsertNpc		(Gobbo_Green,"OW_GOBBO_PLACE_SPAWN");	
+	Wld_InsertNpc		(Gobbo_Black,"OW_GOBBO_PLACE_SPAWN");	
 
 	Wld_InsertNpc		(Waran,"OW_WARAN_G_SPAWN");
 	Wld_InsertNpc		(Waran,"OW_WARAN_G_SPAWN");
@@ -1465,8 +1465,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 
-	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_SNAPPER_INCAVE_DM2");
-	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_SNAPPER_INCAVE_DM2");
+	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_SNAPPER_INCAVE_DM2");
+	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_SNAPPER_INCAVE_DM2");
 	
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
@@ -1654,15 +1654,15 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
 
-	Wld_InsertNpc		(Gobbo_Black,"SPAWN_GOBBO_LOCATION_29_03");
-	Wld_InsertNpc		(Gobbo_Black,"SPAWN_GOBBO_LOCATION_29_03");
+	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_GOBBO_LOCATION_29_03");
+	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_GOBBO_LOCATION_29_03");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_GOBBO_LOCATION_29_03");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_GOBBO_LOCATION_29_03");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_GOBBO_LOCATION_29_03");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_GOBBO_LOCATION_29_03");
 
-	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_GOBBO_CAVE03INDOOR_05");
-	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_GOBBO_CAVE03INDOOR_05");
+	Wld_InsertNpc		(Gobbo_Elite,"SPAWN_OW_GOBBO_CAVE03INDOOR_05");
+	Wld_InsertNpc		(Gobbo_Elite,"SPAWN_OW_GOBBO_CAVE03INDOOR_05");
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_GOBBO_CAVE03INDOOR_02");
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_GOBBO_CAVE03INDOOR_02");
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_GOBBO_CAVE03INDOOR_02");
@@ -1675,11 +1675,11 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE8");
 	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE8");
 	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE9");
-	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE9");
-	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE9");
-	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE10");
-	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE10");
-	Wld_InsertNpc		(Gobbo_Black,"GOBBO_MASTERCAVE10");
+	Wld_InsertNpc		(Gobbo_Warrior,"GOBBO_MASTERCAVE9");
+	Wld_InsertNpc		(Gobbo_Warrior,"GOBBO_MASTERCAVE9");
+	Wld_InsertNpc		(Gobbo_Warrior,"GOBBO_MASTERCAVE10");
+	Wld_InsertNpc		(Gobbo_Elite,"GOBBO_MASTERCAVE10");
+	Wld_InsertNpc		(Gobbo_Elite,"GOBBO_MASTERCAVE10");
 
 	Wld_InsertNpc		(Scavenger_Demon,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
 	Wld_InsertNpc		(Scavenger_Demon,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
@@ -1975,9 +1975,9 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_06_04");
 	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_06_04");
 
+	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
-	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
-	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
+	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
 
 	Wld_InsertNpc		(GRD_4152_Olav, 		"LOCATION_15_IN_2");
 	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
@@ -2727,7 +2727,7 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Gobbo_Black, 	"NW_FARM1_CITYWALL_FOREST_14");
 	Wld_InsertNpc		(Gobbo_Black,	"NW_FARM1_CITYWALL_FOREST_15");
 	Wld_InsertNpc		(Gobbo_Black, 	"NW_FARM1_CITYWALL_FOREST_15");
-	Wld_InsertNpc		(Gobbo_Black, 	"NW_FARM1_CITYWALL_FOREST_16");
+	Wld_InsertNpc		(Gobbo_Elite, 	"NW_FARM1_CITYWALL_FOREST_16");
 	
 	//---FARM1CAVE---
 	Wld_InsertNpc		(BDT_1000_LOAFER, 	"NW_FARM1_BANDITS_CAVE_06");
@@ -3463,8 +3463,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
  		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
  		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
 
- 		Wld_InsertNpc 	(Gobbo_Black, 		"NW_FARM3_VALLEY_011");
- 		Wld_InsertNpc 	(Gobbo_Black, 		"NW_FARM3_VALLEY_011");
+ 		Wld_InsertNpc 	(Gobbo_Elite, 		"NW_FARM3_VALLEY_011");
+ 		Wld_InsertNpc 	(Gobbo_Elite, 		"NW_FARM3_VALLEY_011");
 
  		Wld_InsertNpc 	(Hellhound, 		"NW_FARM3_VALLEY_015_MOVEMENT");
  		Wld_InsertNpc 	(Hellhound, 		"NW_FARM3_VALLEY_015_MOVEMENT");
@@ -3562,7 +3562,7 @@ FUNC VOID STARTUP_NewWorld_Part_Pass_To_OW_01 ()
 	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_05");
 	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_05");
 	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_06");
-	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_06");
+	Wld_InsertNpc	(Gobbo_Black,"NW_PASS_GRAT_06");
 	
 	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_07");
 	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_02");
@@ -3822,7 +3822,7 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Gobbo_Green, "NW_CITYFOREST_CAVE_A01");
 	Wld_InsertNpc 	(Gobbo_Green, "NW_CITYFOREST_CAVE_A01");
 	
-	Wld_InsertNpc 	(Gobbo_Black, "NW_CITYFOREST_CAVE_A02");
+	Wld_InsertNpc 	(Gobbo_Elite, "NW_CITYFOREST_CAVE_A02");
 	
 	Wld_InsertNpc 	(Giant_Rat, "NW_CITYFOREST_CAVE_04");
 	Wld_InsertNpc 	(Giant_Rat, "NW_CITYFOREST_CAVE_04");
@@ -4099,7 +4099,7 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_07");
 	
 	//Gobbos in 3. Höhle
-	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_09");
+	Wld_InsertNpc 	(Gobbo_Elite, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_09");
 	Wld_InsertNpc 	(Gobbo_Warrior, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_10");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_11");
 	Wld_InsertNpc 	(Gobbo_Black, 	"FP_ROAM_NW_TROLLAREA_RUINS_CAVE_12");
