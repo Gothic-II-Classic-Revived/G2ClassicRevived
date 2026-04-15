@@ -9,6 +9,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	
 	//--------- abilities --------
 	B_SetAttributesForLevel(self, 500);	
+	bodyStateInterruptableOverride = TRUE;
 
 	//-------- visuals --------
 	Mdl_SetVisual		(self,"HUMANS.MDS");
@@ -733,17 +734,13 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 
 	// IT_RINGS.d
 	CreateInvItems(self, ITRI_REVIVED_PROT_ARROW_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_ARROW_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_MELEE_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_MELEE_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_WEAPON_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_WEAPON_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_FIRE_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_FIRE_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_FIRE_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_FIRE_02, 1);
+	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_FIRE, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_TOTAL_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_TOTAL_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_HP_01, 1);
