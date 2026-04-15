@@ -656,7 +656,7 @@ instance DIA_Jan_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Jan_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Jan_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Demonhunter Armor (Protection: weapons 150, arrows 150) (12000 gold)"; //Wenn �ndern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	REV_BuildTradeString(ITAR_REVIVED_DEMONHUNTER);
 };
 
 func int DIA_Jan_DJG_ARMOR_M_Condition ()
@@ -669,23 +669,17 @@ func int DIA_Jan_DJG_ARMOR_M_Condition ()
 	};	
 };
 
-var int HelmetOrNot;
-
-FUNC VOID DIA_JAN_DHT_SellArmor()
-{
-	if (Npc_HasItems (other,itmi_Gold) >= 12000)
+func void DIA_Jan_DJG_ARMOR_M_Info ()
+{	
+	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
+	
+	if (B_GiveInvItems (other,self,ItMi_Gold,REV_Value_DEMONHUNTER))
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_01"); //You can see that it's worth every gold piece.
 		
-		B_GiveInvItems (other,self,ItMi_Gold,12000);
-		if(HelmetOrNot == TRUE)
-		{
-			CreateInvItems (self,ITAR_REVIVED_DEMONHUNTER,1);
-			B_GiveInvItems (self,other,ITAR_REVIVED_DEMONHUNTER,1);
-		} else {
-			CreateInvItems (self,ITAR_REVIVED_DEMONHUNTER_02,1);
-			B_GiveInvItems (self,other,ITAR_REVIVED_DEMONHUNTER_02,1);
-		};
+		CreateInvItems (self,ITAR_REVIVED_DEMONHUNTER,1);
+		B_GiveInvItems (self,other,ITAR_REVIVED_DEMONHUNTER,1);
+		AI_EquipArmor (other, ITAR_REVIVED_DEMONHUNTER);
 		
 		Jan_DIA_Jan_DJG_ARMOR_M_permanent = TRUE;
 	}
@@ -693,29 +687,6 @@ FUNC VOID DIA_JAN_DHT_SellArmor()
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_02"); //You don't have enough gold.
 	};	
-};
-
-func void DIA_JAN_DHT_Armor_Helmet()
-{
-	HelmetOrNot = TRUE;
-
-	DIA_JAN_DHT_SellArmor();
-	Info_ClearChoices (DIA_JAN_SellArmor);
-};
-func void DIA_JAN_DHT_Armor_NoHelmet()
-{
-	HelmetOrNot = FALSE;
-
-	DIA_JAN_DHT_SellArmor();
-	Info_ClearChoices (DIA_JAN_SellArmor);
-};
-
-func void DIA_Jan_DJG_ARMOR_M_Info ()
-{	
-	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
-
-	Info_AddChoice (DIA_JAN_SellArmor,"Demonhunter Armor (Protection: weapons 150, arrows 150) (12000 gold)",DIA_JAN_DHT_Armor_Helmet);
-	Info_AddChoice (DIA_JAN_SellArmor,"Demonhunter Armor w/o helmet (Protection: weapons 150, arrows 150) (12000 gold)",DIA_JAN_DHT_Armor_NoHelmet);
 };
 
 ///////////////////////////////////////////////////////////////////////

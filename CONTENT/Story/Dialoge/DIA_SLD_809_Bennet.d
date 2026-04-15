@@ -960,7 +960,7 @@ instance DIA_Bennet_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Bennet_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Bennet_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Medium dragon hunter armor: Protection: weapons 80, arrows 80 (12000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	REV_BuildTradeString(ITAR_REVIVED_DJG_M);
 };
 
 func int DIA_Bennet_DJG_ARMOR_M_Condition ()
@@ -977,15 +977,15 @@ func void DIA_Bennet_DJG_ARMOR_M_Info ()
 {	
 	AI_Output	(other,self ,"DIA_Bennet_DJG_ARMOR_M_15_00"); //I want to buy the armor.
 	
-	if (Npc_HasItems (other,itmi_Gold) >= 12000)
+	if (B_GiveInvItems (other,self,ItMi_Gold,REV_Value_DJG_M))
 	{
 		AI_Output 	(self ,other,"DIA_Bennet_DJG_ARMOR_M_06_01"); //Very good. You'll be delighted with it.
 		AI_Output	(other,self ,"DIA_Bennet_DJG_ARMOR_M_15_02"); //I should certainly expect that at this price.
 		AI_Output 	(self ,other,"DIA_Bennet_DJG_ARMOR_M_06_03"); //You'll find that it is worth every single gold piece.
 		
-		B_GiveInvItems (other,self,ItMi_Gold,12000);
-		CreateInvItems (self,ITAR_DJG_M,1);
-		B_GiveInvItems (self,other,ITAR_DJG_M,1);
+		CreateInvItems (self,ITAR_REVIVED_DJG_M,1);
+		B_GiveInvItems (self,other,ITAR_REVIVED_DJG_M,1);
+		AI_EquipArmor (other, ITAR_REVIVED_DJG_M);
 		
 		Bennet_DIA_Bennet_DJG_ARMOR_M_permanent = TRUE;
 	}
@@ -1046,7 +1046,7 @@ instance DIA_Bennet_DJG_ARMOR_H		(C_INFO)
 	condition	 = 	DIA_Bennet_DJG_ARMOR_H_Condition;
 	information	 = 	DIA_Bennet_DJG_ARMOR_H_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Heavy dragon hunter armor: Protection: weapons 90, arrows 90. (20000 gold)"; //Wenn ändern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	REV_BuildTradeString(ITAR_REVIVED_DJG_H);
 };
 
 func int DIA_Bennet_DJG_ARMOR_H_Condition ()
@@ -1063,14 +1063,14 @@ func void DIA_Bennet_DJG_ARMOR_H_Info ()
 {	
 	AI_Output	(other,self ,"DIA_Bennet_DJG_ARMOR_H_15_00"); //Give me the armor.
 	
-	if (Npc_HasItems (other,itmi_Gold) >= 20000)
+	if (B_GiveInvItems (other,self,ItMi_Gold, REV_Value_DJG_H))
 	{
 		AI_Output 	(self ,other,"DIA_Bennet_DJG_ARMOR_H_06_01"); //This is the best armor I have ever made.
 		AI_Output 	(self ,other,"DIA_Bennet_DJG_ARMOR_H_06_02"); //A true masterpiece.
 		
-		B_GiveInvItems (other,self,ItMi_Gold,20000);
-		CreateInvItems (self,ITAR_DJG_H,1);
-		B_GiveInvItems (self,other,ITAR_DJG_H,1);
+		CreateInvItems (self,ITAR_REVIVED_DJG_H,1);
+		B_GiveInvItems (self,other,ITAR_REVIVED_DJG_H,1);
+		AI_EquipArmor (other, ITAR_REVIVED_DJG_H);
 		
 		Bennet_DIA_Bennet_DJG_ARMOR_H_permanent = TRUE;
 	}

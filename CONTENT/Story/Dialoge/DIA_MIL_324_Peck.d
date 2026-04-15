@@ -85,7 +85,7 @@ INSTANCE DIA_Peck_BUYARMOR (C_INFO)
 	condition	= DIA_Peck_BUYARMOR_Condition;
 	information	= DIA_Peck_BUYARMOR_Info;
 	permanent	= TRUE;
-	description = "Buy Guard's Armor (Protection: Weapons 55, Arrows 30. Price: 1650 gold)"; 
+	description	 =  REV_BuildTradeString(ITAR_REVIVED_GRD_M);
 }; 
 
 FUNC INT DIA_Peck_BUYARMOR_Condition()
@@ -101,11 +101,13 @@ FUNC INT DIA_Peck_BUYARMOR_Condition()
  
 FUNC VOID DIA_Peck_BUYARMOR_Info()
 {	
-	if (B_GiveInvItems (other, self, Itmi_Gold, 1650))
+	if (B_GiveInvItems (other, self, Itmi_Gold, REV_Value_GRD_M))
 	{
 		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 		AI_Output (self, other,	"DIA_Peck_Add_12_05"); //Here, take it.
-		B_GiveInvItems (self,other, ITAR_REVIVED_GRD_M,1);
+		CreateInvItems (self, ITAR_REVIVED_GRD_M, 1);
+		B_GiveInvItems (self, other, ITAR_REVIVED_GRD_M, 1);
+		AI_EquipArmor (other, ITAR_REVIVED_GRD_M);
 		DIA_Peck_BUYARMOR_perm = TRUE;
 	}
 	else

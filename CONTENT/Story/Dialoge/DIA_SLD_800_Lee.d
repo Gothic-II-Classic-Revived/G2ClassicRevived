@@ -1022,7 +1022,7 @@ instance DIA_Lee_BuyArmorM (C_INFO)
 	condition	= DIA_Lee_BuyArmorM_Condition;
 	information	= DIA_Lee_BuyArmorM_Info;
 	permanent	= TRUE;
-	description = "Buy medium mercenary armor. Protection: weapons 45, arrows 45. Cost: 1000 gold";
+	description	=  REV_BuildTradeString(ITAR_REVIVED_SLD_M);
 };                       
 FUNC INT DIA_Lee_BuyArmorM_Condition()
 {
@@ -1152,7 +1152,7 @@ instance DIA_Lee_BuyArmorH (C_INFO)
 	condition	= DIA_Lee_BuyArmorH_Condition;
 	information	= DIA_Lee_BuyArmorH_Info;
 	permanent	= TRUE;
-	description = "Buy heavy mercenary armor. Protection: weapons 60, arrows 60. Cost: 2500 gold";
+	description	=  REV_BuildTradeString(ITAR_REVIVED_SLD_H);
 };                       
 FUNC INT DIA_Lee_BuyArmorH_Condition()
 {
@@ -1166,7 +1166,7 @@ FUNC VOID DIA_Lee_BuyArmorH_Info()
 {	
 	AI_Output (other,self ,"DIA_Lee_BuyArmorH_15_00"); //Give me the heavy armor.
 	
-	if (B_GiveInvItems (other, self, itmi_gold, 2500))
+	if (B_GiveInvItems (other, self, itmi_gold, REV_Value_SLD_H))
 	{
 		AI_Output (self ,other,"DIA_Lee_BuyArmorH_04_01"); //Here. Very good armor. It's the same that I wear.
 		CreateInvItems (self,ITAR_REVIVED_SLD_H,1);

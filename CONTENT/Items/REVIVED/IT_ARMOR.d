@@ -358,8 +358,6 @@ const int	REV_Prot_Magic_GORDONRAMSAY			=	50;
 
 
 
-
-
 //****************************************************************************
 //			GUILDLESS
 //****************************************************************************
@@ -651,7 +649,7 @@ INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 {
-	name 					=	"Demonhunter Armor";
+	name 					=	"Demon Hunter Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1434,7 +1432,7 @@ INSTANCE ITAR_REVIVED_SLD_M (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_SLD_L;
+	value 					=	REV_Value_SLD_M;
 
 	protection [PROT_EDGE]	=	REV_Prot_Edge_SLD_M;
 	protection [PROT_BLUNT] = 	REV_Prot_Blunt_SLD_M;
@@ -1531,7 +1529,7 @@ FUNC VOID UnEquip_SLD_ARMOR()
 //****************************************************************************
 INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 {
-	name 					=	"Light Dragon Hunter's Armor";
+	name 					=	"Dragon Hunter's Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
