@@ -103,6 +103,8 @@ func void AlchemyMixMultiple_Input(var int dialogue, var int item_instance)
 	PotionDialogue = dialogue;
 	PotionMixMultiple = TRUE;
 
+	Info_ClearChoices (PotionDialogue);
+
 	Info_AddChoice	(PotionDialogue, DIALOG_BACK, 		PC_PotionAlchemy_Stop_Info);
 	Info_AddChoice	(PotionDialogue,"Make 10",			AlchemyMixMultiple_Make10);
 	Info_AddChoice	(PotionDialogue,"Make 5",			AlchemyMixMultiple_Make5);
@@ -198,7 +200,7 @@ func void AlchemyMixMultiple_Logic(var int amount)
 			AlchemyCraft_NoIngredients();
 		};	
 	};
-	//B_ENDPRODUCTIONDIALOG ();	
+	B_ENDPRODUCTIONDIALOG ();	
 };
 
 func void AlchemyMixMultiple_Make1()
@@ -1123,7 +1125,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};
 		};
 	};
-	//B_ENDPRODUCTIONDIALOG ();	
+	B_ENDPRODUCTIONDIALOG ();	
 };
 
 func void AlchemyCraftMultiple_Make1()
@@ -1211,7 +1213,7 @@ FUNC VOID PC_Charge_InnosEye_Info ()
 		Print (PRINT_ProdItemsMissing);
 		PC_PotionAlchemy_Stop_Info();
 	};	
-	//B_ENDPRODUCTIONDIALOG ();
+	B_ENDPRODUCTIONDIALOG ();
 };
 
 
