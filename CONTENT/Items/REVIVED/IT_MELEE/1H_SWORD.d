@@ -1245,13 +1245,13 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PIRATE_01 (C_Item)
 	damagetype 			=	DAM_EDGE;		
 	range    			=  	REV_Range_1H_Sword_Pirate_01;		
 
-	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	REV_Condition_1H_Sword_Pirate_01;
 	visual 				=	"ItMw_030_1h_sword_03.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
