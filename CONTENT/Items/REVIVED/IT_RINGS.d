@@ -743,27 +743,27 @@ INSTANCE ITAM_REVIVED_MELEE_01 (REVIVED_RING_T3)
 
 FUNC VOID Equip_REV_ITRI_SKILL_MELEE_01()
 {
-	self.attribute[NPC_TALENT_1H] += REV_Change_ITRI_Boost_Melee_01;
-	self.attribute[NPC_TALENT_2H] += REV_Change_ITRI_Boost_Melee_01;
+	self.HitChance[NPC_TALENT_1H] += REV_Change_ITRI_Boost_Melee_01;
+	self.HitChance[NPC_TALENT_2H] += REV_Change_ITRI_Boost_Melee_01;
 };
 
 FUNC VOID UnEquip_REV_ITRI_SKILL_MELEE_01()
 {
-	if self.attribute [NPC_TALENT_1H] >= (REV_Change_ITRI_Boost_Melee_01 + 1)
+	if self.HitChance [NPC_TALENT_1H] >= (REV_Change_ITRI_Boost_Melee_01 + 1)
 	{
-		self.attribute[NPC_TALENT_1H] -= REV_Change_ITRI_Boost_Melee_01;
+		self.HitChance[NPC_TALENT_1H] -= REV_Change_ITRI_Boost_Melee_01;
 	}
 	else
 	{
-		self.attribute[NPC_TALENT_1H] = 1;
+		self.HitChance[NPC_TALENT_1H] = 1;
 	};
 
-	if self.attribute [NPC_TALENT_2H] >= (REV_Change_ITRI_Boost_Melee_01 + 1)
+	if self.HitChance [NPC_TALENT_2H] >= (REV_Change_ITRI_Boost_Melee_01 + 1)
 	{
-		self.attribute[NPC_TALENT_2H] -= REV_Change_ITRI_Boost_Melee_01;
+		self.HitChance[NPC_TALENT_2H] -= REV_Change_ITRI_Boost_Melee_01;
 	}
 	else
 	{
-		self.attribute[NPC_TALENT_2H] = 1;
+		self.HitChance[NPC_TALENT_2H] = 1;
 	};
 };
