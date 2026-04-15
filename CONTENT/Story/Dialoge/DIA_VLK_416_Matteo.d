@@ -170,7 +170,7 @@ instance DIA_Matteo_LEATHER		(C_INFO)
 	condition	 = 	DIA_Matteo_LEATHER_Condition;
 	information	 = 	DIA_Matteo_LEATHER_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Buy 'Heavy Leather Armor'. Protection: weapons 35, arrows 30, fire 15 (1600 gold)";
+	description	 =  REV_BuildTradeString(ITAR_REVIVED_LEATHER_H);
 };
 
 func int DIA_Matteo_LEATHER_Condition ()
@@ -185,11 +185,13 @@ func void DIA_Matteo_LEATHER_Info ()
 {
 	AI_Output (other, self, "DIA_Matteo_LEATHER_15_00"); //All right, give me the armor.
 	
-	if B_GiveInvItems (other, self, ItMi_Gold, 250)
+	if B_GiveInvItems (other, self, ItMi_Gold, REV_Value_LEATHER_H)
 	{	
 		AI_Output (self, other, "DIA_Matteo_LEATHER_09_01"); //You'll love it. (grins)
 
-		B_GiveInvItems 	(self, other, ItAr_Leather_L, 1);
+		CreateInvItems (self, ITAR_REVIVED_LEATHER_H, 1);
+		B_GiveInvItems (self, other, ITAR_REVIVED_LEATHER_H, 1);
+		AI_EquipArmor (other, ITAR_REVIVED_LEATHER_H);
 		Matteo_LeatherBought = TRUE;
 	}
 	else 
