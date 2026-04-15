@@ -29,7 +29,7 @@ FUNC VOID B_GiveTradeInv_Kjorn (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Cheese, 5); 
 		CreateInvItems (slf,ItFoMutton, 5); 
 		CreateInvItems (slf,ItFo_Stew , 5); 
-		CreateInvItems (slf,ITRI_REVIVED_PROT_FIRE_02, 1); 
+		CreateInvItems (slf,ITRI_REVIVED_PROT_MAGIC_FIRE, 1); 
 	
 		Kjorn_ItemsGiven_Chapter_2 = TRUE;
 	};

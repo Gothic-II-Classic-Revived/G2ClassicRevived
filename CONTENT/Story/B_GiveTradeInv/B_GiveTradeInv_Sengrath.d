@@ -27,7 +27,7 @@ FUNC VOID B_GiveTradeInv_Sengrath (var C_NPC slf)
 		CreateInvItems (slf, ITSc_MediumHeal, 5);
 		CreateInvItems (slf, ITSc_LightningFlash, 2);
 		
-		CreateInvItems (slf,ITRI_REVIVED_PROT_MAGIC_FIRE_01, 1); 
+		CreateInvItems (slf,ITRI_REVIVED_PROT_MAGIC_FIRE, 1); 
 		CreateInvItems (slf,ItBe_Addon_STR_10,  1);
 		CreateInvItems (slf,ItBe_Addon_Prot_FIRE,  1);
 		

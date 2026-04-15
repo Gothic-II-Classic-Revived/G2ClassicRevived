@@ -319,8 +319,8 @@ func void DIA_Addon_Fernando_BanditTrader_ja ()
 	CreateInvItems (self, ItMi_Gold, 200);									
 	B_GiveInvItems (self, other, ItMi_Gold, 200);		
 	AI_Output			(self, other, "DIA_Addon_Fernando_BanditTrader_ja_14_02"); //And the ring. We're even now.
-	CreateInvItems (self, ITRI_REVIVED_PROT_ARROW_02, 1);									
-	B_GiveInvItems (self, other, ITRI_REVIVED_PROT_ARROW_02, 1);		
+	CreateInvItems (self, ITRI_REVIVED_PROT_ARROW_01, 1);									
+	B_GiveInvItems (self, other, ITRI_REVIVED_PROT_ARROW_01, 1);		
 	Info_ClearChoices	(DIA_Addon_Fernando_BanditTrader);
 };
 func void DIA_Addon_Fernando_BanditTrader_nein ()

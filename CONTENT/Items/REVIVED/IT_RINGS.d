@@ -1,187 +1,158 @@
-const int	REV_Value_ITRI_Prot_Arrow_01			=	30;
-const int	REV_Change_ITRI_Prot_Arrow_01			=	8;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Arrow_02			=	50;
-const int	REV_Change_ITRI_Prot_Arrow_02			=	12;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Melee_01			=	30;
+const int	REV_Change_ITRI_Prot_Arrow				=	10;
 const int	REV_Change_ITRI_Prot_Melee_01			=	8;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Melee_02			=	50;
 const int	REV_Change_ITRI_Prot_Melee_02			=	12;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Weapon_01			=	50;
 const int	REV_Change_ITRI_Prot_Weapon_01			=	8;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Weapon_02			=	75;
 const int	REV_Change_ITRI_Prot_Weapon_02			=	10;
 //******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Magic_01			=	30;
 const int	REV_Change_ITRI_Prot_Magic_01			=	8;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Magic_02			=	50;
 const int	REV_Change_ITRI_Prot_Magic_02			=	10;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Fire_01				=	30;
-const int	REV_Change_ITRI_Prot_Fire_01			=	10;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Fire_02				=	50;
-const int	REV_Change_ITRI_Prot_Fire_02			=	15;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_MagicFire_01		=	50;
-const int	REV_Change_ITRI_Prot_MagicFire_01		=	10;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_MagicFire_02		=	75;
-const int	REV_Change_ITRI_Prot_MagicFire_02		=	15;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Total_01			=	200;
+const int	REV_Change_ITRI_Prot_MagicFire			=	15;
 const int	REV_Change_ITRI_Prot_Total_01			=	10;
-//******************************************************************//
-const int	REV_Value_ITRI_Prot_Total_02			=	250;
 const int	REV_Change_ITRI_Prot_Total_02			=	15;
 //******************************************************************//
 //******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_Health_01			=	100;
 const int	REV_Change_ITRI_Boost_Health_01			=	10;
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_Health_02			=	200;
 const int	REV_Change_ITRI_Boost_Health_02			=	15;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_Mana_01			=	100;
 const int	REV_Change_ITRI_Boost_Mana_01			=	10;
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_Mana_02			=	200;
 const int	REV_Change_ITRI_Boost_Mana_02			=	15;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_HealthMana_01		=	100;
 const int	REV_Change_ITRI_Boost_HealthMana_01		=	20;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_ITRI_Boost_STR_01				=	100;
 const int	REV_Change_ITRI_Boost_STR_01			=	6;
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_STR_02				=	200;
 const int	REV_Change_ITRI_Boost_STR_02			=	10;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_DEX_01				=	100;
 const int	REV_Change_ITRI_Boost_DEX_01			=	6;
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_DEX_02				=	200;
 const int	REV_Change_ITRI_Boost_DEX_02			=	10;
-//******************************************************************//
-//******************************************************************//
-const int	REV_Value_ITRI_Boost_STRDEX_01			=	100;
 const int	REV_Change_ITRI_Boost_STRDEX_01			=	8;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_ITRI_Boost_Melee_01			=	100;
 const int	REV_Change_ITRI_Boost_Melee_01			=	10;
 //******************************************************************//
 //******************************************************************//
 
-
-
-//****************************************************************************
-//			PROTECTION
-//****************************************************************************
-
-INSTANCE ITRI_REVIVED_PROT_ARROW_01(C_Item)
+PROTOTYPE REVIVED_RING_T1 (C_Item)
 {
-	name 				=	"Ring of Wooden Skin";
+	name 				=	"Tier 1";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
 	material 			=	MAT_METAL;
 
-	value 				=	REV_Value_ITRI_Prot_Arrow_01;
-
-	on_equip			=	Equip_REV_ITRI_PROT_ARROW_01;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_ARROW_01;	
+	value 				=	50;
 
 	visual 				=	"REV_ITRI_NORMAL_01.3DS";
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITRI_Prot_Arrow_01;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
-
-FUNC VOID Equip_REV_ITRI_PROT_ARROW_01()
+PROTOTYPE REVIVED_RING_T2 (C_Item)
 {
-	self.protection [PROT_POINT] 		+=  REV_Change_ITRI_Prot_Arrow_01;
-};
-
-FUNC VOID UnEquip_REV_ITRI_PROT_ARROW_01()
-{
-	self.protection [PROT_POINT] 		-=  REV_Change_ITRI_Prot_Arrow_01;
-};
-
-INSTANCE ITRI_REVIVED_PROT_ARROW_02(C_Item)
-{
-	name 				=	"Ring of Stone Skin";
+	name 				=	"Tier 2";
 
 	mainflag 			=	ITEM_KAT_MAGIC;
 	flags 				=	ITEM_RING;	
 	material 			=	MAT_METAL;
 
-	value 				=	REV_Value_ITRI_Prot_Arrow_02;
-
-	on_equip			=	Equip_REV_ITRI_PROT_ARROW_02;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_ARROW_02;	
-
-	visual 				=	"REV_ITRI_NORMAL_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITRI_Prot_Arrow_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-FUNC VOID Equip_REV_ITRI_PROT_ARROW_02()
-{
-	self.protection [PROT_POINT] 		+=  REV_Change_ITRI_Prot_Arrow_02;
-};
-
-FUNC VOID UnEquip_REV_ITRI_PROT_ARROW_02()
-{
-	self.protection [PROT_POINT] 		-=  REV_Change_ITRI_Prot_Arrow_02;
-};
-
-/******************************************************************************************/
-
-INSTANCE ITRI_REVIVED_PROT_MELEE_01(C_Item)
-{
-	name 				=	"Ring of Iron Skin";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Melee_01;
-
-	on_equip			=	Equip_REV_ITRI_PROT_MELEE_01;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_MELEE_01;	
+	value 				=	100;
 
 	visual 				=	"REV_ITRI_NORMAL_02.3DS";
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+PROTOTYPE REVIVED_RING_T3 (C_Item)
+{
+	name 				=	"Tier 3";
+
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
+
+	value 				=	150;
+
+	visual 				=	"REV_ITRI_NORMAL_03.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+PROTOTYPE REVIVED_RING_T4 (C_Item)
+{
+	name 				=	"Tier 4";
+
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
+
+	value 				=	200;
+
+	visual 				=	"REV_ITRI_NORMAL_04.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+PROTOTYPE REVIVED_RING_T5 (C_Item)
+{
+	name 				=	"Tier 5";
+
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
+
+	value 				=	300;
+
+	visual 				=	"REV_ITRI_NORMAL_05.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+
+	description			= 	name;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+
+//****************************************************************************
+//			PROTECTION
+//****************************************************************************
+
+INSTANCE ITRI_REVIVED_PROT_ARROW_01 (REVIVED_RING_T1)
+{
+	name 				=	"Ring of Stone Skin";
+
+	on_equip			=	Equip_REV_ITRI_PROT_ARROW;
+	on_unequip			=	UnEquip_REV_ITRI_PROT_ARROW;	
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITRI_Prot_Arrow;
+};
+
+FUNC VOID Equip_REV_ITRI_PROT_ARROW()
+{
+	self.protection [PROT_POINT] 		+=  REV_Change_ITRI_Prot_Arrow;
+};
+
+FUNC VOID UnEquip_REV_ITRI_PROT_ARROW()
+{
+	self.protection [PROT_POINT] 		-=  REV_Change_ITRI_Prot_Arrow;
+};
+
+/******************************************************************************************/
+
+INSTANCE ITRI_REVIVED_PROT_MELEE_01 (REVIVED_RING_T2)
+{
+	name 				=	"Ring of Iron Skin";
+
+	on_equip			=	Equip_REV_ITRI_PROT_MELEE_01;
+	on_unequip			=	UnEquip_REV_ITRI_PROT_MELEE_01;	
+
+	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITRI_Prot_Melee_01;
 	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITRI_Prot_Melee_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_MELEE_01()
@@ -196,27 +167,16 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MELEE_01()
 	self.protection [PROT_BLUNT]		-=  REV_Change_ITRI_Prot_Melee_01;
 };
 
-INSTANCE ITRI_REVIVED_PROT_MELEE_02(C_Item)
+INSTANCE ITRI_REVIVED_PROT_MELEE_02 (REVIVED_RING_T3)
 {
 	name 				=	"Ring of Ore Skin";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Melee_02;
 
 	on_equip			=	Equip_REV_ITRI_PROT_MELEE_02;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_MELEE_02;	
 
-	visual 				=	"REV_ITRI_NORMAL_02.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITRI_Prot_Melee_02;
 	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITRI_Prot_Melee_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_MELEE_02()
@@ -233,28 +193,17 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MELEE_02()
 
 /******************************************************************************************/
 
-INSTANCE ITRI_REVIVED_PROT_WEAPON_01(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_WEAPON_01 (REVIVED_RING_T4)
 {
 	name 				=	"Ring of Steadfastness";
 
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Weapon_01;
-
 	on_equip			=	Equip_REV_ITRI_PROT_WEAPON_01;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_WEAPON_01;	
-
-	visual 				=	"REV_ITRI_NORMAL_03.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Prot_Edge;					COUNT[1]	= REV_Change_ITRI_Prot_Weapon_01;
 	TEXT[2]				= 	NAME_Prot_Blunt;				COUNT[2]	= REV_Change_ITRI_Prot_Weapon_01;
 	TEXT[3]				= 	NAME_Prot_Point;				COUNT[3]	= REV_Change_ITRI_Prot_Weapon_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_WEAPON_01()
@@ -271,35 +220,24 @@ FUNC VOID UnEquip_REV_ITRI_PROT_WEAPON_01()
 	self.protection [PROT_POINT]		-=  REV_Change_ITRI_Prot_Weapon_01;
 };
 
-INSTANCE ITRI_REVIVED_PROT_WEAPON_02(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_WEAPON_02 (REVIVED_RING_T5)
 {
 	name 				=	"Ring of Impeachability";
 
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Weapon_02;
-
 	on_equip			=	Equip_REV_ITRI_PROT_WEAPON_02;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_WEAPON_02;	
-
-	visual 				=	"REV_ITRI_NORMAL_03.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Prot_Edge;					COUNT[1]	= REV_Change_ITRI_Prot_Weapon_02;
 	TEXT[2]				= 	NAME_Prot_Blunt;				COUNT[2]	= REV_Change_ITRI_Prot_Weapon_02;
 	TEXT[3]				= 	NAME_Prot_Point;				COUNT[3]	= REV_Change_ITRI_Prot_Weapon_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_WEAPON_02()
 {
-	self.protection [PROT_EDGE] 		+=  REV_Change_ITRI_Prot_Weapon_01;
-	self.protection [PROT_BLUNT]		+=  REV_Change_ITRI_Prot_Weapon_01;
-	self.protection [PROT_POINT]		+=  REV_Change_ITRI_Prot_Weapon_01;
+	self.protection [PROT_EDGE] 		+=  REV_Change_ITRI_Prot_Weapon_02;
+	self.protection [PROT_BLUNT]		+=  REV_Change_ITRI_Prot_Weapon_02;
+	self.protection [PROT_POINT]		+=  REV_Change_ITRI_Prot_Weapon_02;
 };
 
 FUNC VOID UnEquip_REV_ITRI_PROT_WEAPON_02()
@@ -311,26 +249,16 @@ FUNC VOID UnEquip_REV_ITRI_PROT_WEAPON_02()
 
 /******************************************************************************************/
 
-INSTANCE ITRI_REVIVED_PROT_MAGIC_01(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_MAGIC_01 (REVIVED_RING_T1)
 {
 	name 				=	"Ring of Spiritual Protection";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Magic_01;
+	visual 				=	"REV_ITRI_PROTECTION_01.3DS";
 
 	on_equip			=	Equip_REV_ITRI_PROT_MAGIC_01;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_MAGIC_01;	
 
-	visual 				=	"REV_ITRI_NORMAL_04.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_ITRI_Prot_Magic_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_MAGIC_01()
@@ -343,26 +271,16 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGIC_01()
 	self.protection [PROT_MAGIC] 		-=  REV_Change_ITRI_Prot_Magic_01;
 };
 
-INSTANCE ITRI_REVIVED_PROT_MAGIC_02(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_MAGIC_02 (REVIVED_RING_T2)
 {
 	name 				=	"Protection of Magic";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Magic_02;
+	visual 				=	"REV_ITRI_PROTECTION_02.3DS";
 
 	on_equip			=	Equip_REV_ITRI_PROT_MAGIC_02;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_MAGIC_02;	
 
-	visual 				=	"REV_ITRI_NORMAL_04.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_ITRI_Prot_Magic_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_MAGIC_02()
@@ -375,162 +293,40 @@ FUNC VOID UnEquip_REV_ITRI_PROT_MAGIC_02()
 	self.protection [PROT_MAGIC] 		-=  REV_Change_ITRI_Prot_Magic_02;
 };
 
-/******************************************************************************************/
-
-INSTANCE ITRI_REVIVED_PROT_FIRE_01(C_Item)
-{
-	name 				=	"Ring of Flame Protection";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Fire_01;
-
-	on_equip			=	Equip_REV_ITRI_PROT_FIRE_01;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_FIRE_01;	
-
-	visual 				=	"REV_ITRI_PROT_A_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITRI_Prot_Fire_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-FUNC VOID Equip_REV_ITRI_PROT_FIRE_01()
-{
-	self.protection [PROT_FIRE] 		+=  REV_Change_ITRI_Prot_Fire_01;
-};
-
-FUNC VOID UnEquip_REV_ITRI_PROT_FIRE_01()
-{
-	self.protection [PROT_FIRE] 		-=  REV_Change_ITRI_Prot_Fire_01;
-};
-
-INSTANCE ITRI_REVIVED_PROT_FIRE_02(C_Item)
-{
-	name 				=	"Protection of Fire";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Fire_02;
-
-	on_equip			=	Equip_REV_ITRI_PROT_FIRE_02;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_FIRE_02;	
-
-	visual 				=	"REV_ITRI_PROT_A_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITRI_Prot_Fire_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-FUNC VOID Equip_REV_ITRI_PROT_FIRE_02()
-{
-	self.protection [PROT_FIRE] 		+=  REV_Change_ITRI_Prot_Fire_02;
-};
-
-FUNC VOID UnEquip_REV_ITRI_PROT_FIRE_02()
-{
-	self.protection [PROT_FIRE] 		-=  REV_Change_ITRI_Prot_Fire_02;
-};
-
-/******************************************************************************************/
-
-INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_01(C_ITEM)
-{
-	name 				=	"Ring of Lesser Purification";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_MagicFire_01;
-
-	on_equip			=	Equip_REV_ITRI_PROT_MAGICFIRE_01;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_MAGICFIRE_01;	
-
-	visual 				=	"REV_ITRI_PROT_B_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITRI_Prot_MagicFire_01;
-	TEXT[3]				= 	NAME_Prot_Magic;				COUNT[3]	= REV_Change_ITRI_Prot_MagicFire_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-FUNC VOID Equip_REV_ITRI_PROT_MAGICFIRE_01()
-{
-	self.protection [PROT_FIRE] 		+=  REV_Change_ITRI_Prot_MagicFire_01;
-	self.protection [PROT_MAGIC] 		+=  REV_Change_ITRI_Prot_MagicFire_01;
-};
-
-FUNC VOID UnEquip_REV_ITRI_PROT_MAGICFIRE_01()
-{
-	self.protection [PROT_FIRE] 		-=  REV_Change_ITRI_Prot_MagicFire_01;
-	self.protection [PROT_MAGIC] 		-=  REV_Change_ITRI_Prot_MagicFire_01;
-};
-
-INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_02(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE (REVIVED_RING_T3)
 {
 	name 				=	"Ring of Purification";
+	visual 				=	"REV_ITRI_PROTECTION_03.3DS";
 
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_MagicFire_02;
-
-	on_equip			=	Equip_REV_ITRI_PROT_MAGICFIRE_02;
-	on_unequip			=	UnEquip_REV_ITRI_PROT_MAGICFIRE_02;	
-
-	visual 				=	"REV_ITRI_PROT_B_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITRI_PROT_MAGICFIRE;
+	on_unequip			=	UnEquip_REV_ITRI_PROT_MAGICFIRE;	
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITRI_Prot_MagicFire_02;
-	TEXT[3]				= 	NAME_Prot_Magic;				COUNT[3]	= REV_Change_ITRI_Prot_MagicFire_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITRI_Prot_MagicFire;
+	TEXT[3]				= 	NAME_Prot_Magic;				COUNT[3]	= REV_Change_ITRI_Prot_MagicFire;
 };
 
-FUNC VOID Equip_REV_ITRI_PROT_MAGICFIRE_02()
+FUNC VOID Equip_REV_ITRI_PROT_MAGICFIRE()
 {
-	self.protection [PROT_FIRE] 		+=  REV_Change_ITRI_Prot_MagicFire_02;
-	self.protection [PROT_MAGIC] 		+=  REV_Change_ITRI_Prot_MagicFire_02;
+	self.protection [PROT_FIRE] 		+=  REV_Change_ITRI_Prot_MagicFire;
+	self.protection [PROT_MAGIC] 		+=  REV_Change_ITRI_Prot_MagicFire;
 };
 
-FUNC VOID UnEquip_REV_ITRI_PROT_MAGICFIRE_02()
+FUNC VOID UnEquip_REV_ITRI_PROT_MAGICFIRE()
 {
-	self.protection [PROT_FIRE] 		-=  REV_Change_ITRI_Prot_MagicFire_02;
-	self.protection [PROT_MAGIC] 		-=  REV_Change_ITRI_Prot_MagicFire_02;
+	self.protection [PROT_FIRE] 		-=  REV_Change_ITRI_Prot_MagicFire;
+	self.protection [PROT_MAGIC] 		-=  REV_Change_ITRI_Prot_MagicFire;
 };
 
 /******************************************************************************************/
 
-INSTANCE ITRI_REVIVED_PROT_TOTAL_01(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_TOTAL_01 (REVIVED_RING_T4)
 {
 	name 				=	"Ring of Lesser Invincibility";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Total_01;
+	visual 				=	"REV_ITRI_PROTECTION_04.3DS";
 
 	on_equip			=	Equip_REV_ITRI_PROT_TOTAL_01;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_TOTAL_01;	
-
-	visual 				=	"REV_ITRI_GOOD_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_ITRI_Prot_Total_01;
@@ -538,7 +334,6 @@ INSTANCE ITRI_REVIVED_PROT_TOTAL_01(C_ITEM)
 	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITRI_Prot_Total_01;
 	TEXT[3]				= 	NAME_Prot_Fire;					COUNT[3]	= REV_Change_ITRI_Prot_Total_01;
 	TEXT[4]				= 	NAME_Prot_Magic;				COUNT[4]	= REV_Change_ITRI_Prot_Total_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_TOTAL_01()
@@ -559,22 +354,13 @@ FUNC VOID UnEquip_REV_ITRI_PROT_TOTAL_01()
 	self.protection [PROT_MAGIC]    	-=   REV_Change_ITRI_Prot_Total_01;
 };
 
-INSTANCE ITRI_REVIVED_PROT_TOTAL_02(C_ITEM)
+INSTANCE ITRI_REVIVED_PROT_TOTAL_02 (REVIVED_RING_T5)
 {
 	name 				=	"Ring of Greater Invincibility";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Prot_Total_02;
+	visual 				=	"REV_ITRI_PROTECTION_05.3DS";
 
 	on_equip			=	Equip_REV_ITRI_PROT_TOTAL_02;
 	on_unequip			=	UnEquip_REV_ITRI_PROT_TOTAL_02;	
-
-	visual 				=	"REV_ITRI_GOOD_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_ITRI_Prot_Total_02;
@@ -582,7 +368,6 @@ INSTANCE ITRI_REVIVED_PROT_TOTAL_02(C_ITEM)
 	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITRI_Prot_Total_02;
 	TEXT[3]				= 	NAME_Prot_Fire;					COUNT[3]	= REV_Change_ITRI_Prot_Total_02;
 	TEXT[4]				= 	NAME_Prot_Magic;				COUNT[4]	= REV_Change_ITRI_Prot_Total_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_PROT_TOTAL_02()
@@ -607,41 +392,30 @@ FUNC VOID UnEquip_REV_ITRI_PROT_TOTAL_02()
 //			BOOST
 //****************************************************************************
 
-INSTANCE ITRI_REVIVED_HP_01(C_Item)
+INSTANCE ITRI_REVIVED_HP_01 (REVIVED_RING_T1)
 {
 	name 				=	"Ring of Life";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Boost_Health_01;
+	visual 				=	"REV_ITRI_BOOST_01.3DS";
 
 	on_equip			=	Equip_REV_ITRI_BOOST_HEALTH_01;
 	on_unequip			=	UnEquip_REV_ITRI_BOOST_HEALTH_01;	
 
-	visual 				=	"REV_ITRI_GREAT_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Bonus_HP;					COUNT[2]	= REV_Change_ITRI_Boost_Health_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_BOOST_HEALTH_01()
 {
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + REV_Change_ITRI_Boost_Health_01; 
-	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + REV_Change_ITRI_Boost_Health_01;
+	self.attribute[ATR_HITPOINTS_MAX] += REV_Change_ITRI_Boost_Health_01; 
+	self.attribute[ATR_HITPOINTS] += REV_Change_ITRI_Boost_Health_01;
 };
 
 FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_01()
 {
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - REV_Change_ITRI_Boost_Health_01;
-
+	self.attribute[ATR_HITPOINTS_MAX] -= REV_Change_ITRI_Boost_Health_01;
 	if self.attribute [ATR_HITPOINTS] >= (REV_Change_ITRI_Boost_Health_01 + 1)
 	{
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - REV_Change_ITRI_Boost_Health_01;
+		self.attribute[ATR_HITPOINTS] -= REV_Change_ITRI_Boost_Health_01;
 	}
 	else
 	{
@@ -649,41 +423,30 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_01()
 	};
 };
 
-INSTANCE ITRI_REVIVED_HP_02(C_Item)
+INSTANCE ITRI_REVIVED_HP_02 (REVIVED_RING_T2)
 {
 	name 				=	"Greater Ring of Life";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Boost_Health_02;
+	visual 				=	"REV_ITRI_PROTECTION_02.3DS";
 
 	on_equip			=	Equip_REV_ITRI_BOOST_HEALTH_02;
 	on_unequip			=	UnEquip_REV_ITRI_BOOST_HEALTH_02;	
 
-	visual 				=	"REV_ITRI_GREAT_02.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Bonus_HP;					COUNT[2]	= REV_Change_ITRI_Boost_Health_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_BOOST_HEALTH_02()
 {
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + REV_Change_ITRI_Boost_Health_02; 
-	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + REV_Change_ITRI_Boost_Health_02;
+	self.attribute[ATR_HITPOINTS_MAX] += REV_Change_ITRI_Boost_Health_02; 
+	self.attribute[ATR_HITPOINTS] += REV_Change_ITRI_Boost_Health_02;
 };
 
 FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_02()
 {
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - REV_Change_ITRI_Boost_Health_02;
-
+	self.attribute[ATR_HITPOINTS_MAX] -= REV_Change_ITRI_Boost_Health_02;
 	if self.attribute [ATR_HITPOINTS] >= (REV_Change_ITRI_Boost_Health_02 + 1)
 	{
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - REV_Change_ITRI_Boost_Health_02;
+		self.attribute[ATR_HITPOINTS] -= REV_Change_ITRI_Boost_Health_02;
 	}
 	else
 	{
@@ -693,41 +456,30 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HEALTH_02()
 
 /******************************************************************************************/
 
-INSTANCE ITRI_REVIVED_MP_01(C_Item)
+INSTANCE ITRI_REVIVED_MP_01 (REVIVED_RING_T1)
 {
 	name 				=	"Ring of Magic";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Boost_Mana_01;
+	visual 				=	"REV_ITRI_PROTECTION_01.3DS";
 
 	on_equip			=	Equip_REV_ITRI_BOOST_MANA_01;
 	on_unequip			=	UnEquip_REV_ITRI_BOOST_MANA_01;	
 
-	visual 				=	"REV_ITRI_GREAT_01.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Bonus_Mana;				COUNT[2]	= REV_Change_ITRI_Boost_Mana_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_BOOST_MANA_01()
 {
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + REV_Change_ITRI_Boost_Mana_01; 
-	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + REV_Change_ITRI_Boost_Mana_01;
+	self.attribute[ATR_MANA_MAX] += REV_Change_ITRI_Boost_Mana_01; 
+	self.attribute[ATR_MANA] += REV_Change_ITRI_Boost_Mana_01;
 };
 
 FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_01()
 {
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - REV_Change_ITRI_Boost_Mana_01;
-
+	self.attribute[ATR_MANA_MAX] -= REV_Change_ITRI_Boost_Mana_01;
 	if self.attribute [ATR_MANA] >= (REV_Change_ITRI_Boost_Mana_01 + 1)
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - REV_Change_ITRI_Boost_Mana_01;
+		self.attribute[ATR_MANA] -= REV_Change_ITRI_Boost_Mana_01;
 	}
 	else
 	{
@@ -735,41 +487,30 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_01()
 	};
 };
 
-INSTANCE ITRI_REVIVED_MP_02(C_Item)
+INSTANCE ITRI_REVIVED_MP_02 (REVIVED_RING_T2)
 {
 	name 				=	"Greater Ring of Magic";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Boost_Mana_02;
+	visual 				=	"REV_ITRI_PROTECTION_02.3DS";
 
 	on_equip			=	Equip_REV_ITRI_BOOST_MANA_02;
 	on_unequip			=	UnEquip_REV_ITRI_BOOST_MANA_02;	
 
-	visual 				=	"REV_ITRI_GREAT_02.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Bonus_Mana;				COUNT[2]	= REV_Change_ITRI_Boost_Mana_02;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_BOOST_MANA_02()
 {
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + REV_Change_ITRI_Boost_Mana_02; 
-	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + REV_Change_ITRI_Boost_Mana_02;
+	self.attribute[ATR_MANA_MAX] += REV_Change_ITRI_Boost_Mana_02; 
+	self.attribute[ATR_MANA] += REV_Change_ITRI_Boost_Mana_02;
 };
 
 FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_02()
 {
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - REV_Change_ITRI_Boost_Mana_02;
-
+	self.attribute[ATR_MANA_MAX] -= REV_Change_ITRI_Boost_Mana_02;
 	if self.attribute [ATR_MANA] >= (REV_Change_ITRI_Boost_Mana_02 + 1)
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - REV_Change_ITRI_Boost_Mana_02;
+		self.attribute[ATR_MANA] -= REV_Change_ITRI_Boost_Mana_02;
 	}
 	else
 	{
@@ -779,54 +520,44 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_MANA_02()
 
 /******************************************************************************************/
 
-INSTANCE ITRI_REVIVED_HP_MP_01(C_Item)
+INSTANCE ITRI_REVIVED_HP_MP_01 (REVIVED_RING_T3)
 {
 	name 				=	"Ring of Enlightenment";
-
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_ITRI_Boost_HealthMana_01;
+	visual 				=	"REV_ITRI_PROTECTION_03.3DS";
 
 	on_equip			=	Equip_REV_ITRI_BOOST_HPMP_01;
 	on_unequip			=	UnEquip_REV_ITRI_BOOST_HPMP_01;	
 
-	visual 				=	"REV_ITRI_GREAT_03.3DS";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
 	description			= 	name;
 	TEXT[2]				= 	NAME_Bonus_HP;					COUNT[2]	= REV_Change_ITRI_Boost_HealthMana_01;
 	TEXT[3]				= 	NAME_Bonus_Mana;				COUNT[3]	= REV_Change_ITRI_Boost_HealthMana_01;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
 FUNC VOID Equip_REV_ITRI_BOOST_HPMP_01()
 {
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + REV_Change_ITRI_Boost_HealthMana_01; 
-	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + REV_Change_ITRI_Boost_HealthMana_01;
+	self.attribute[ATR_HITPOINTS_MAX] += REV_Change_ITRI_Boost_HealthMana_01; 
+	self.attribute[ATR_HITPOINTS] += REV_Change_ITRI_Boost_HealthMana_01;
 	
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + REV_Change_ITRI_Boost_HealthMana_01; 
-	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + REV_Change_ITRI_Boost_HealthMana_01;
+	self.attribute[ATR_MANA_MAX] += REV_Change_ITRI_Boost_HealthMana_01; 
+	self.attribute[ATR_MANA] += REV_Change_ITRI_Boost_HealthMana_01;
 };
 
 FUNC VOID UnEquip_REV_ITRI_BOOST_HPMP_01()
 {
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - REV_Change_ITRI_Boost_HealthMana_01;
+	self.attribute[ATR_HITPOINTS_MAX] -= REV_Change_ITRI_Boost_HealthMana_01;
 	if self.attribute [ATR_HITPOINTS] >= (REV_Change_ITRI_Boost_HealthMana_01 + 1)
 	{
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - REV_Change_ITRI_Boost_HealthMana_01;
+		self.attribute[ATR_HITPOINTS] -= REV_Change_ITRI_Boost_HealthMana_01;
 	}
 	else
 	{
 		self.attribute[ATR_HITPOINTS] = 1;
 	};
 
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - REV_Change_ITRI_Boost_HealthMana_01;
+	self.attribute[ATR_MANA_MAX] -= REV_Change_ITRI_Boost_HealthMana_01;
 	if self.attribute [ATR_MANA] >= (REV_Change_ITRI_Boost_HealthMana_01 + 1)
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - REV_Change_ITRI_Boost_HealthMana_01;
+		self.attribute[ATR_MANA] -= REV_Change_ITRI_Boost_HealthMana_01;
 	}
 	else
 	{
@@ -836,238 +567,203 @@ FUNC VOID UnEquip_REV_ITRI_BOOST_HPMP_01()
 
 /******************************************************************************************/
 
-INSTANCE ITRI_REVIVED_DEX_01(C_Item)
+INSTANCE ITRI_REVIVED_DEX_01 (REVIVED_RING_T1)
 {
-	name 					=	"Ring of Lesser Dexterity";
+	name 				=	"Ring of Dexterity";
+	visual 				=	"REV_ITRI_BOOST_01.3DS";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	on_equip			=	Equip_REV_ITRI_BOOST_DEX_01;
+	on_unequip			=	UnEquip_REV_ITRI_BOOST_DEX_01;
 
-	value 					=	160;
-
-	visual 					=	"REV_ITRI_GREAT_04.3ds";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_REV_ITRI_Ring_des_Geschicks;
-	on_unequip				=	UnEquip_REV_ITRI_Ring_des_Geschicks;
-
-	description		= name;
-	TEXT[2]			= NAME_Bonus_Dex;
-	COUNT[2]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			=	name;
+	TEXT[2]				= 	NAME_Bonus_Dex;					COUNT[2]	= REV_Change_ITRI_Boost_DEX_01;
 };
 
-FUNC VOID Equip_REV_ITRI_Ring_des_Geschicks()
+FUNC VOID Equip_REV_ITRI_BOOST_DEX_01()
 {
-	Npc_ChangeAttribute(self,ATR_DEXTERITY,5 );
+	self.attribute[ATR_DEXTERITY] += REV_Change_ITRI_Boost_DEX_01;
 };
 
-FUNC VOID UnEquip_REV_ITRI_Ring_des_Geschicks()
+FUNC VOID UnEquip_REV_ITRI_BOOST_DEX_01()
 {
-	Npc_ChangeAttribute(self,ATR_DEXTERITY,-5 );
+	if self.attribute [ATR_DEXTERITY] >= (REV_Change_ITRI_Boost_DEX_01 + 1)
+	{
+		self.attribute[ATR_DEXTERITY] -= REV_Change_ITRI_Boost_DEX_01;
+	}
+	else
+	{
+		self.attribute[ATR_DEXTERITY] = 1;
+	};
 };
 
-INSTANCE ITRI_REVIVED_DEX_02(C_Item)
+INSTANCE ITRI_REVIVED_DEX_02 (REVIVED_RING_T2)
 {
-	name 					=	"Ring of Greater Dexterity";
+	name 				=	"Ring of Agility";
+	visual 				=	"REV_ITRI_BOOST_02.3DS";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	on_equip			=	Equip_REV_ITRI_BOOST_DEX_02;
+	on_unequip			=	UnEquip_REV_ITRI_BOOST_DEX_02;
 
-	value 					=	240;
-
-	visual 					=	"REV_ITRI_GREAT_04.3ds";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_REV_ITRI_Ring_des_Geschicks2;
-	on_unequip				=	UnEquip_REV_ITRI_Ring_des_Geschicks2;
-
-	description		= name;
-	TEXT[2]			= NAME_Bonus_Dex;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			=	name;
+	TEXT[2]				= 	NAME_Bonus_Dex;					COUNT[2]	= REV_Change_ITRI_Boost_DEX_02;
 };
 
-FUNC VOID Equip_REV_ITRI_Ring_des_Geschicks2()
+FUNC VOID Equip_REV_ITRI_BOOST_DEX_02()
 {
-	Npc_ChangeAttribute(self,ATR_DEXTERITY,10 );
+	self.attribute[ATR_DEXTERITY] += REV_Change_ITRI_Boost_DEX_02;
 };
 
-FUNC VOID UnEquip_REV_ITRI_Ring_des_Geschicks2()
+FUNC VOID UnEquip_REV_ITRI_BOOST_DEX_02()
 {
-	Npc_ChangeAttribute(self,ATR_DEXTERITY,-10 );
-};	
-
-/******************************************************************************************/
-
-INSTANCE ITRI_REVIVED_STR_01(C_Item)
-{
-	name 					=	"Ring of Power";
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
-	value 					=	160;
-
-	visual 					=	"REV_ITRI_GREAT_04.3ds";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_REV_ITRI_Staerkering;
-	on_unequip				=	UnEquip_REV_ITRI_Staerkering;
-
-	description		= name;
-	TEXT[2]			= NAME_Bonus_Str;
-	COUNT[2]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
-};
-
-FUNC VOID Equip_REV_ITRI_Staerkering()
-{
-	Npc_ChangeAttribute(self,ATR_STRENGTH,5 );
-};
-
-FUNC VOID UnEquip_REV_ITRI_Staerkering()
-{
-	Npc_ChangeAttribute(self,ATR_STRENGTH,-5 );
-};
-
-INSTANCE ITRI_REVIVED_STR_02(C_Item)
-{
-	name 					=	"Ring of Strength";
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
-	value 					=	240;
-
-	visual 					=	"REV_ITRI_GREAT_04.3ds";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-
-	on_equip				=	Equip_REV_ITRI_Staerkering2;
-	on_unequip				=	UnEquip_REV_ITRI_Staerkering2;
-
-	description		= name;
-	TEXT[2]			= NAME_Bonus_Str;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
-};
-
-FUNC VOID Equip_REV_ITRI_Staerkering2()
-{
-	Npc_ChangeAttribute(self,ATR_STRENGTH,10 );
-};
-
-FUNC VOID UnEquip_REV_ITRI_Staerkering2()
-{
-	Npc_ChangeAttribute(self,ATR_STRENGTH, -10 );
-};	
-
-/******************************************************************************************/
-
-INSTANCE ITRI_REVIVED_STR_DEX_01(C_Item)
-{
-	name 					=	"Warrior's Ring of Power";
-
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
-
-	value 					=	300;
-
-	visual 					=	"REV_ITRI_GREAT_04.3ds";
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_ITEMGLIMMER"; 
-
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_REV_ITRI_Machtring;
-	on_unequip				=	UnEquip_REV_ITRI_Machtring;
-
-	description		= name;
-	TEXT[2]			= NAME_Bonus_Str;
-	COUNT[2]		= 4;
-	TEXT[3] 		= NAME_Bonus_Dex;
-	COUNT[3]		= 4;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
-};
-
-FUNC VOID Equip_REV_ITRI_Machtring()
-{
-	Npc_ChangeAttribute(self,ATR_STRENGTH, 4);
-	Npc_ChangeAttribute(self,ATR_DEXTERITY, 4);
-};
-
-FUNC VOID UnEquip_REV_ITRI_Machtring()
-{
-	Npc_ChangeAttribute(self,ATR_STRENGTH,- 4);
-	Npc_ChangeAttribute(self,ATR_DEXTERITY, -4);
+	if self.attribute [ATR_DEXTERITY] >= (REV_Change_ITRI_Boost_DEX_02 + 1)
+	{
+		self.attribute[ATR_DEXTERITY] -= REV_Change_ITRI_Boost_DEX_02;
+	}
+	else
+	{
+		self.attribute[ATR_DEXTERITY] = 1;
+	};
 };
 
 /******************************************************************************************/
 
-INSTANCE ITAM_REVIVED_MELEE_01 (C_Item)
+INSTANCE ITRI_REVIVED_STR_01 (REVIVED_RING_T1)
+{
+	name 				=	"Ring of Strength";
+	visual 				=	"REV_ITRI_BOOST_01.3DS";
+
+	on_equip			=	Equip_REV_ITRI_BOOST_STR_01;
+	on_unequip			=	UnEquip_REV_ITRI_BOOST_STR_01;
+
+	description			=	name;
+	TEXT[2]				= 	NAME_Bonus_Str;					COUNT[2]	= REV_Change_ITRI_Boost_STR_01;
+};
+
+FUNC VOID Equip_REV_ITRI_BOOST_STR_01()
+{
+	self.attribute[ATR_STRENGTH] += REV_Change_ITRI_Boost_STR_01;
+};
+
+FUNC VOID UnEquip_REV_ITRI_BOOST_STR_01()
+{
+	if self.attribute [ATR_STRENGTH] >= (REV_Change_ITRI_Boost_STR_01 + 1)
+	{
+		self.attribute[ATR_STRENGTH] -= REV_Change_ITRI_Boost_STR_01;
+	}
+	else
+	{
+		self.attribute[ATR_STRENGTH] = 1;
+	};
+};
+
+INSTANCE ITRI_REVIVED_STR_02 (REVIVED_RING_T2)
+{
+	name 				=	"Ring of Power";
+	visual 				=	"REV_ITRI_BOOST_02.3DS";
+
+	on_equip			=	Equip_REV_ITRI_BOOST_STR_02;
+	on_unequip			=	UnEquip_REV_ITRI_BOOST_STR_02;
+
+	description			=	name;
+	TEXT[2]				= 	NAME_Bonus_Str;					COUNT[2]	= REV_Change_ITRI_Boost_STR_02;
+};
+
+FUNC VOID Equip_REV_ITRI_BOOST_STR_02()
+{
+	self.attribute[ATR_STRENGTH] += REV_Change_ITRI_Boost_STR_02;
+};
+
+FUNC VOID UnEquip_REV_ITRI_BOOST_STR_02()
+{
+	if self.attribute [ATR_STRENGTH] >= (REV_Change_ITRI_Boost_STR_02 + 1)
+	{
+		self.attribute[ATR_STRENGTH] -= REV_Change_ITRI_Boost_STR_02;
+	}
+	else
+	{
+		self.attribute[ATR_STRENGTH] = 1;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITRI_REVIVED_STR_DEX_01 (REVIVED_RING_T3)
+{
+	name 				=	"Fighter's Ring";
+	visual 				=	"REV_ITRI_BOOST_03.3DS";
+
+	on_equip			=	Equip_REV_ITRI_BOOST_STRDEX_01;
+	on_unequip			=	UnEquip_REV_ITRI_BOOST_STRDEX_01;
+
+	description			=	name;
+	TEXT[2]				= 	NAME_Bonus_Str;					COUNT[2]	= REV_Change_ITRI_Boost_STRDEX_01;
+	TEXT[3]				= 	NAME_Bonus_Dex;					COUNT[2]	= REV_Change_ITRI_Boost_STRDEX_01;
+};
+
+FUNC VOID Equip_REV_ITRI_BOOST_STRDEX_01()
+{
+	self.attribute[ATR_STRENGTH] += REV_Change_ITRI_Boost_STRDEX_01;
+	self.attribute[ATR_DEXTERITY] += REV_Change_ITRI_Boost_STRDEX_01;
+};
+
+FUNC VOID UnEquip_REV_ITRI_BOOST_STRDEX_01()
+{
+	if self.attribute [ATR_DEXTERITY] >= (REV_Change_ITRI_Boost_STRDEX_01 + 1)
+	{
+		self.attribute[ATR_DEXTERITY] -= REV_Change_ITRI_Boost_STRDEX_01;
+	}
+	else
+	{
+		self.attribute[ATR_DEXTERITY] = 1;
+	};
+
+	if self.attribute [ATR_STRENGTH] >= (REV_Change_ITRI_Boost_STRDEX_01 + 1)
+	{
+		self.attribute[ATR_STRENGTH] -= REV_Change_ITRI_Boost_STRDEX_01;
+	}
+	else
+	{
+		self.attribute[ATR_STRENGTH] = 1;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITAM_REVIVED_MELEE_01 (REVIVED_RING_T3)
 {	
-	name 				=	"Morgan's ring";
+	name 				=	"Warrior's Ring";
+	visual 				=	"REV_ITRI_SKILL_03.3DS";
 
-	mainflag 			=	ITEM_KAT_MAGIC;
-	flags 				=	ITEM_RING;
-	
-	value 				=	500;
-	
-	visual 				=	"ItRi_Prot_Total_02.3DS";
-	material 			=	MAT_METAL;
-	
-	on_equip			=  	Equip_REV_ITRI_RevMorgansRing;
-	on_unequip			= 	UnEquip_REV_ITRI_RevMorgansRing;
+	on_equip			=	Equip_REV_ITRI_SKILL_MELEE_01;
+	on_unequip			=	UnEquip_REV_ITRI_SKILL_MELEE_01;
 
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
-
-	description		= name;
-	
-	
-	TEXT[1]			= "The ring is decorated with many fine runes.";
-	TEXT[2]			= NAME_RaiseWeaponSkill;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
-		
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
-
+	description			=	name;
+	TEXT[2]				= 	NAME_RaiseWeaponSkill;					COUNT[2]	= REV_Change_ITRI_Boost_Melee_01;
 };
 
-FUNC VOID Equip_REV_ITRI_RevMorgansRing()
+FUNC VOID Equip_REV_ITRI_SKILL_MELEE_01()
 {
-	B_AddFightSkill (self, NPC_TALENT_1H, 10);
-	B_AddFightSkill (self, NPC_TALENT_2H, 10);
+	self.attribute[NPC_TALENT_1H] += REV_Change_ITRI_Boost_Melee_01;
+	self.attribute[NPC_TALENT_2H] += REV_Change_ITRI_Boost_Melee_01;
 };
 
-FUNC VOID UnEquip_REV_ITRI_RevMorgansRing()
+FUNC VOID UnEquip_REV_ITRI_SKILL_MELEE_01()
 {
-	B_AddFightSkill (self, NPC_TALENT_1H, -10);
-	B_AddFightSkill (self, NPC_TALENT_2H, -10);
+	if self.attribute [NPC_TALENT_1H] >= (REV_Change_ITRI_Boost_Melee_01 + 1)
+	{
+		self.attribute[NPC_TALENT_1H] -= REV_Change_ITRI_Boost_Melee_01;
+	}
+	else
+	{
+		self.attribute[NPC_TALENT_1H] = 1;
+	};
+
+	if self.attribute [NPC_TALENT_2H] >= (REV_Change_ITRI_Boost_Melee_01 + 1)
+	{
+		self.attribute[NPC_TALENT_2H] -= REV_Change_ITRI_Boost_Melee_01;
+	}
+	else
+	{
+		self.attribute[NPC_TALENT_2H] = 1;
+	};
 };
-
-//****************************************************************************
-//			SPECIAL
-//****************************************************************************
-
