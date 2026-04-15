@@ -81,9 +81,9 @@ func void B_Andre_CantharFalle()
 	AI_Output (self, other, "B_Andre_CantharFalle_08_00"); //The merchant Canthar was here. He said that you are an escaped convict from the mining colony.
 	AI_Output (self, other, "B_Andre_CantharFalle_08_01"); //I don't know whether that's the truth and I prefer not to ask you, but you should clear that matter up.
 	
-	B_RemoveNpc (Sarah);
-	
-			
+	B_StartOtherRoutine (Sarah,"TAVERNE");
+	AI_Teleport (Canthar,"TAVERNE");
+
 	B_StartOtherRoutine (Canthar,"MARKTSTAND");
 	AI_Teleport (Canthar,"NW_CITY_SARAH");
 					
@@ -121,7 +121,32 @@ FUNC INT DIA_Andre_CantharFalle_Condition()
 	{
 		return TRUE;
 	};
-	
+};
+
+FUNC INT DIA_Andre_CantharFalle_Info()
+{
+	if (Andre_CantharFalle == FALSE)
+	{
+		B_Andre_CantharFalle();
+	};
+};
+
+// ************************************************************
+// 			Pablo Steckbrief als INFO (niedrige Important)
+// ************************************************************
+
+INSTANCE DIA_Andre_Steckbrief (C_INFO)
+{
+	npc         = PAL_311_Andre;
+	nr          = 3;
+	condition   = DIA_Andre_Steckbrief_Condition;
+	information = DIA_Andre_Steckbrief_Info;
+	permanent   = TRUE;
+	important 	= TRUE; 
+};
+
+FUNC INT DIA_Andre_Steckbrief_Condition()
+{
 	if (Pablo_AndreMelden == TRUE)
 	&& (!Npc_IsDead(Pablo))
 	&& (Andre_Steckbrief == FALSE)
@@ -130,17 +155,11 @@ FUNC INT DIA_Andre_CantharFalle_Condition()
 	};
 };
 
-FUNC INT DIA_Andre_CantharFalle_Info()
+FUNC INT DIA_Andre_Steckbrief_Info()
 {
 	if (Andre_Steckbrief == FALSE)
 	{
 		B_Andre_Steckbrief();
-	};
-	
-	if (Andre_CantharFalle == FALSE)
-	&& (MIS_Canthars_KomproBrief_Day <= Wld_GetDay() - 2)
-	{
-		B_Andre_CantharFalle();
 	};
 };
 
@@ -176,23 +195,6 @@ FUNC INT DIA_Andre_PMSchulden_Condition()
 FUNC VOID DIA_Andre_PMSchulden_Info()
 {
 	AI_Output (self, other, "DIA_Andre_PMSchulden_08_00"); //Have you come to pay your penalty?
-
-						
-						// ------ STECKBRIEF ------
-						if (Pablo_AndreMelden == TRUE)
-						&& (!Npc_IsDead(Pablo))
-						&& (Andre_Steckbrief == FALSE)
-						{
-							B_Andre_Steckbrief();
-						};
-						
-						// ------- CANTHAR -------
-						if (MIS_Canthars_KomproBrief == LOG_RUNNING) 
-						&& (MIS_Canthars_KomproBrief_Day <= (Wld_GetDay() - 2))
-						&& (Andre_CantharFalle == FALSE)
-						{
-							B_Andre_CantharFalle();	
-						};
 
 	if (B_GetTotalPetzCounter(self) > Andre_LastPetzCounter)
 	{
@@ -328,23 +330,6 @@ FUNC VOID DIA_Andre_PETZMASTER_Info()
 	{
 		AI_Output (self, other, "DIA_Andre_PETZMASTER_08_00"); //You must be the new fellow who has caused trouble here in the city.
 	};
-	
-						// ------ STECKBRIEF ------
-						if (Pablo_AndreMelden == TRUE)
-						&& (!Npc_IsDead(Pablo))
-						&& (Andre_Steckbrief == FALSE)
-						{
-							B_Andre_Steckbrief();
-						};	
-	
-						// ------- CANTHAR -------
-						if (MIS_Canthars_KomproBrief == LOG_RUNNING) 
-						&& (MIS_Canthars_KomproBrief_Day <= (Wld_GetDay() - 2))
-						&& (Andre_CantharFalle == FALSE)
-						{
-							B_Andre_CantharFalle();	
-						};
-	
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
 	{
