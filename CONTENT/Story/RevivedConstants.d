@@ -30,6 +30,9 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 const string NAME_DementorNovice		= "Seeker Novice";
 const string NAME_Templar				= "Apocalyptic Templar";
 const string NAME_JudgeGuard			= "Judge's House Guard";
+const string NAME_LOAFER				=	"Loafer";
+const string NAME_HIGHWAYMAN			=	"Highwayman";
+
 
 // Death Messages
 const string PRINT_DEATH_MESSAGE_0		=	"Your journey ends here.";
@@ -105,10 +108,6 @@ const string LOGENTRY_RECIPE_RICEBOWL        	= "Ingredients for 'Rice bowl':\n3
 const string LOGENTRY_RECIPE_BERRYMARMALADE  	= "Ingredients for 'Berry Marmalade':\n2 Grapes\n2 Berries\n2 Meadow berry\n2 Forest berry";
 const string LOGENTRY_RECIPE_FRUITSALAD      	= "Ingredients for 'Fruit salad':\n1 Apple\n1 Pear\n1 Berry\n1 Grape\n1 Milk bottle";
 const string LOGENTRY_RECIPE_CONVICTSTEW    	= "Ingredients for 'Convict's Stew':\n1 Hard Bread\n1 Stinky Cheese\n1 Old Beer\n1 Stale Water";
-
-// NPC Names
-const string NAME_LOAFER				=	"Loafer";
-const string NAME_HIGHWAYMAN			=	"Highwayman";
 
 
 // Items
@@ -199,7 +198,7 @@ CONST STRING TESTLEVEL_TELEPORT_DI			= "DRAGONISLAND.ZEN";
 // Graves (Stone Fortress)
 CONST STRING MOBNAME_GRAVE_REVIVED_01		= "Crygreg - 'Happy Anniversary!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_02		= "Macintosh - 'You couldn't have fucking told me this earlier?!'";
-CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Angel - 'Hi Damiaeing.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Jorgenson - 'Das ist interresant.'";
 CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb - 'Can I help you with a sausage in these troubled times?'";
 CONST STRING MOBNAME_GRAVE_REVIVED_05		= "Alistair - 'Crygreg yearns for Bjorn.'";
 CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joka - 'The Cocos are invading!'";
@@ -333,6 +332,14 @@ var int EnterOG_Kapitel3;
 var int EnterOG_Kapitel4;
 var int EnterOG_Kapitel5;
 
+const int PASS_ZEN = 8;
+var int EnteredPassZen;
+var int EnterPass_Kapitel1;
+var int EnterPass_Kapitel2;
+var int EnterPass_Kapitel3;
+var int EnterPass_Kapitel4;
+var int EnterPass_Kapitel5;
+
 
 // ***************
 // Book Constants
@@ -434,7 +441,10 @@ var int SCUsed_OW_TELEPORTSTATION_MONASTERY;
 var int SCUsed_OW_TELEPORTSTATION_CLIFF;
 var int SCUsed_OW_TELEPORTSTATION_STONEFORTRESS;
 
+var int SCUsed_PASS_TELEPORTSTATION_ENTRY;
+
 var int SCUsed_AllOWTeleportStones;
+var int SCUsed_AllPassTeleportStones;
 
 
 const int OreMob_All_Amount_MAX = 3;
@@ -630,7 +640,9 @@ const int	Read_BookstandPersonal_Max = 4;
 // ***************
 
 const int	XP_NostalgiaBonus				= 25;
-const int 	XP_Addon_AllOWTeleporststones	= 400;
+const int 	XP_AllNWTeleportStones		= 400;
+const int 	XP_AllOWTeleportStones		= 400;
+const int 	XP_AllPassTeleportStones	= 400;
 
 const int	XP_BookstandAlchemy				= 25;
 const int	XP_BookstandRunemaking			= 25;
