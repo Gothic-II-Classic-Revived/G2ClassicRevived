@@ -10,7 +10,7 @@ instance VLK_440_Bartok (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 30);
+	B_SetMonsterAttributesForLevel(self, 30);
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
