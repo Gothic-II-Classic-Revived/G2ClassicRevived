@@ -65,7 +65,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 				SCUsed_NW_TELEPORTSTATION_FOREST = TRUE; 
 			};
 		}
-		else	//else fall wird nicht benutzt, nur zur sicherheit
+		else
 		{
 			AI_Teleport	(hero, "TOT"); 
 		};			
@@ -132,7 +132,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 				SCUsed_OW_TELEPORTSTATION_STONEFORTRESS = TRUE; 
 			};
 		}
-		else	//else fall wird nicht benutzt, nur zur sicherheit
+		else
 		{
 			AI_Teleport	(hero, "TOT"); 
 		};		
@@ -145,8 +145,8 @@ func void EVT_TELEPORTSTATION_FUNC ()
 		&& (SCUsed_AllNWTeleporststones != TRUE)
 		{
 			SCUsed_AllNWTeleporststones = TRUE;
-			B_GivePlayerXP (XP_Addon_AllNWTeleporststones);
-		};			
+			B_GivePlayerXP (XP_AllNWTeleportStones);
+		};
 		
 		if (SCUsed_OW_TELEPORTSTATION_STONEHENGE == TRUE)
 		&& (SCUsed_OW_TELEPORTSTATION_TROLLCANYON == TRUE)
@@ -156,6 +156,7 @@ func void EVT_TELEPORTSTATION_FUNC ()
 		&& (SCUsed_AllOWTeleportStones != TRUE)
 		{
 			SCUsed_AllOWTeleportStones = TRUE;
-			B_GivePlayerXP (XP_Addon_AllOWTeleporststones);
-		};			
+			B_GivePlayerXP (XP_AllOWTeleportStones);
+		};
+		
 };
