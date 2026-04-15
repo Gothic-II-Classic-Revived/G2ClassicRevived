@@ -1,29 +1,149 @@
 //****************************************************************************
-//			...
+//			POCKETS
 //****************************************************************************
 
+PROTOTYPE REVIVED_POCKET (C_Item)
+{
+	name 					=	"Pocket";
+	
+	mainflag 				=	ITEM_KAT_NONE;
+	flags 					=	0;
+	value 					=	0;
 
+	visual 					=	"REV_IT_POCKET_WHITE.3ds";
+	scemeName 				=	"MAPSEALED";
+	material 				=	MAT_LEATHER;
+
+	description				=	"PROTOTYPE";
+};
+
+//****************************************************************************
+INSTANCE REVIVED_POCKET_BLUE (REVIVED_POCKET)
+{
+	name = "Blue Pocket";
+	visual = "REV_IT_POCKET_BLUE.3ds";
+	on_state[0] = use_REVIVED_POCKET_BLUE;
+};
+
+func void use_REVIVED_POCKET_BLUE()
+{
+
+};
+
+//****************************************************************************
+INSTANCE REVIVED_POCKET_CYAN (REVIVED_POCKET)
+{
+	name = "Cyan Pocket";
+	visual = "REV_IT_POCKET_CYAN.3ds";
+	on_state[0] = use_REVIVED_POCKET_CYAN;
+};
+
+func void use_REVIVED_POCKET_CYAN()
+{
+
+};
+
+//****************************************************************************
+INSTANCE REVIVED_POCKET_PURPLE (REVIVED_POCKET)
+{
+	name = "Purple Pocket";
+	visual = "REV_IT_POCKET_PURPLE.3ds";
+	on_state[0] = use_REVIVED_POCKET_PURPLE;
+};
+
+func void use_REVIVED_POCKET_PURPLE()
+{
+
+};
+
+//****************************************************************************
+INSTANCE REVIVED_POCKET_RED (REVIVED_POCKET)
+{
+	name = "Red Pocket";
+	visual = "REV_IT_POCKET_RED.3ds";
+	on_state[0] = use_REVIVED_POCKET_RED;
+};
+
+func void use_REVIVED_POCKET_RED()
+{
+
+};
+
+//****************************************************************************
+INSTANCE REVIVED_POCKET_YELLOW (REVIVED_POCKET)
+{
+	name = "Yellow Pocket";
+	visual = "REV_IT_POCKET_YELLOW.3ds";
+	on_state[0] = use_REVIVED_POCKET_YELLOW;
+};
+
+func void use_REVIVED_POCKET_YELLOW()
+{
+
+};
+
+//****************************************************************************
+
+INSTANCE REVIVED_POCKET_WHITE (REVIVED_POCKET)
+{
+	name = "White Pocket";
+	visual = "REV_IT_POCKET_WHITE.3ds";
+	on_state[0] = use_REVIVED_POCKET_WHITE;
+};
+
+func void use_REVIVED_POCKET_WHITE()
+{
+
+};
+
+//****************************************************************************
+
+INSTANCE REVIVED_POCKET_BLACK (REVIVED_POCKET)
+{
+	name = "Black Pocket";
+	visual = "REV_IT_POCKET_BLACK.3ds";
+	on_state[0] = use_REVIVED_POCKET_BLACK;
+
+	text[4] = "Debug items from the mod";
+};
+
+func void use_REVIVED_POCKET_BLACK()
+{
+	CreateInvItems(hero, REVIVED_LEARN_ALCHEMY_ALL, 1);
+	CreateInvItems(hero, REVIVED_LEARN_SMITHING_ALL, 1);
+	CreateInvItems(hero, REVIVED_LEARN_BOWMAKING_ALL, 1);
+	CreateInvItems(hero, REVIVED_LEARN_TROPHIES_ALL, 1);
+	CreateInvItems(hero, REVIVED_LEARN_RUNES_ALL, 1);
+	CreateInvItems(hero, REVIVED_LEARN_TALENTS_ALL, 1);
+};
 
 
 //****************************************************************************
 //			DEBUG
 //****************************************************************************
 
-INSTANCE REVIVED_LEARN_ALCHEMY_ALL(C_Item)
+PROTOTYPE REVIVED_DEBUG_LEARN (C_Item)
 {
-	name = "DEBUG (Potion Learn)";
+	name = "DEBUG (... Learn)";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
-	value = 10;
+	value = 0;
 	visual = "ItMi_HolyWater.3ds";
 	scemeName = "POTIONFAST";
-	material = MAT_LEATHER;
-	on_state[0] = use_REVIVED_LEARN_ALCHEMY_ALL;
-	description = "REVIVED_LEARN_ALCHEMY_ALL";
+	material = MAT_GLAS;
+	description = "REVIVED_DEBUG_LEARN";
 	text[4] = "DEBUG ITEM";
-	text[5] = "Allowing you to learn all potions in the game.";
 };
 
+//****************************************************************************
+
+INSTANCE REVIVED_LEARN_ALCHEMY_ALL (REVIVED_DEBUG_LEARN)
+{
+	name = "DEBUG (Potion Learn)";
+	on_state[0] = use_REVIVED_LEARN_ALCHEMY_ALL;
+	description = "REVIVED_LEARN_ALCHEMY_ALL";
+	text[5] = "Allowing you to learn all potions in the game.";
+};
 
 func void use_REVIVED_LEARN_ALCHEMY_ALL()
 {
@@ -87,21 +207,13 @@ func void use_REVIVED_LEARN_ALCHEMY_ALL()
 
 //****************************************************************************
 
-INSTANCE REVIVED_LEARN_SMITHING_ALL(C_Item)
+INSTANCE REVIVED_LEARN_SMITHING_ALL (REVIVED_DEBUG_LEARN)
 {
 	name = "DEBUG (Smithing Learn)";
-	mainflag = ITEM_KAT_NONE;
-	flags = 0;
-	value = 10;
-	visual = "ItMi_HolyWater.3ds";
-	scemeName = "POTIONFAST";
-	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_SMITHING_ALL;
 	description = "REVIVED_LEARN_SMITHING_ALL";
-	text[4] = "DEBUG ITEM";
 	text[5] = "Allowing you to learn all smith recipes in the game.";
 };
-
 
 func void use_REVIVED_LEARN_SMITHING_ALL()
 {
@@ -127,21 +239,13 @@ func void use_REVIVED_LEARN_SMITHING_ALL()
 
 //****************************************************************************
 
-INSTANCE REVIVED_LEARN_BOWMAKING_ALL(C_Item)
+INSTANCE REVIVED_LEARN_BOWMAKING_ALL (REVIVED_DEBUG_LEARN)
 {
 	name = "DEBUG (Bowmaking Learn)";
-	mainflag = ITEM_KAT_NONE;
-	flags = 0;
-	value = 10;
-	visual = "ItMi_HolyWater.3ds";
-	scemeName = "POTIONFAST";
-	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_BOWMAKING_ALL;
 	description = "REVIVED_LEARN_BOWMAKING_ALL";
-	text[4] = "DEBUG ITEM";
 	text[5] = "Allowing you to learn all bowmaking recipes in the game.";
 };
-
 
 func void use_REVIVED_LEARN_BOWMAKING_ALL()
 {
@@ -157,21 +261,13 @@ func void use_REVIVED_LEARN_BOWMAKING_ALL()
 
 //****************************************************************************
 
-INSTANCE REVIVED_LEARN_RUNES_ALL(C_Item)
+INSTANCE REVIVED_LEARN_RUNES_ALL (REVIVED_DEBUG_LEARN)
 {
 	name = "DEBUG (Runes Learn)";
-	mainflag = ITEM_KAT_NONE;
-	flags = 0;
-	value = 10;
-	visual = "ItMi_HolyWater.3ds";
-	scemeName = "POTIONFAST";
-	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_RUNES_ALL;
 	description = "REVIVED_LEARN_RUNES_ALL";
-	text[4] = "DEBUG ITEM";
 	text[5] = "Allowing you to learn all rune recipes in the game.";
 };
-
 
 func void use_REVIVED_LEARN_RUNES_ALL()
 {
@@ -208,21 +304,13 @@ func void use_REVIVED_LEARN_RUNES_ALL()
 
 //****************************************************************************
 
-INSTANCE REVIVED_LEARN_TROPHIES_ALL(C_Item)
+INSTANCE REVIVED_LEARN_TROPHIES_ALL (REVIVED_DEBUG_LEARN)
 {
 	name = "DEBUG (Trophies Learn)";
-	mainflag = ITEM_KAT_NONE;
-	flags = 0;
-	value = 10;
-	visual = "ItMi_HolyWater.3ds";
-	scemeName = "POTIONFAST";
-	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_TROPHIES_ALL;
 	description = "REVIVED_LEARN_TROPHIES_ALL";
-	text[4] = "DEBUG ITEM";
 	text[5] = "Allowing you to learn all trophies in the game.";
 };
-
 
 func void use_REVIVED_LEARN_TROPHIES_ALL()
 {
@@ -243,21 +331,13 @@ func void use_REVIVED_LEARN_TROPHIES_ALL()
 
 //****************************************************************************
 
-INSTANCE REVIVED_LEARN_TALENTS_ALL(C_Item)
+INSTANCE REVIVED_LEARN_TALENTS_ALL (REVIVED_DEBUG_LEARN)
 {
 	name = "DEBUG (Talent Learn)";
-	mainflag = ITEM_KAT_NONE;
-	flags = 0;
-	value = 10;
-	visual = "ItMi_HolyWater.3ds";
-	scemeName = "POTIONFAST";
-	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_LEARN_TALENTS_ALL;
 	description = "REVIVED_LEARN_TALENTS_ALL";
-	text[4] = "DEBUG ITEM";
 	text[5] = "Allowing you to learn all talents and components in the game.";
 };
-
 
 func void use_REVIVED_LEARN_TALENTS_ALL()
 {

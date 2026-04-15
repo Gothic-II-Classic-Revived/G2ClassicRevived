@@ -10,6 +10,22 @@ const int	REV_Value_PureAlcohol			=	80;
 const int	REV_Value_Vinegar				=	80;
 const int	REV_Value_MagicWater			=	200;
 
+//****************************************************************************
+
+PROTOTYPE REVIVED_MISC (C_Item)
+{
+	name 				=	"Miscellaneous";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_OldCoin_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			=	"PROTOTYPE";
+};
 
 
 //****************************************************************************
@@ -311,332 +327,202 @@ func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 //			COMPONENTS
 //****************************************************************************
 
-INSTANCE ITMI_REVIVED_SALT (C_Item)
+INSTANCE ITMI_REVIVED_SALT (REVIVED_MISC)
 {
 	name 				=	"Salt";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_Salt;
 
 	visual 				=	"REV_ITMI_SALT.3DS";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Salt;
+	description			= 	name;
 };
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_SUGAR (C_Item)
+
+INSTANCE ITMI_REVIVED_SUGAR (REVIVED_MISC)
 {
 	name 				=	"Sugar";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_Sugar;
 
 	visual 				=	"REV_ITMI_SUGAR.3DS";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Sugar;
+	description			= 	name;
 };
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_SYRIANOIL (C_Item)
+
+INSTANCE ITMI_REVIVED_SYRIANOIL (REVIVED_MISC)
 {
 	name 				=	"Syrianic Oil";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_SyrianOil;
 
 	visual 				=	"REV_ITMI_SYRIANOIL.3DS";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_SyrianOil;
+	description			= 	name;
 };
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_STONEOIL (C_Item)
+
+INSTANCE ITMI_REVIVED_STONEOIL (REVIVED_MISC)
 {
 	name 				=	"Stone Oil";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_StoneOil;
 
 	visual 				=	"REV_ITMI_STONEOIL.3DS";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_StoneOil;
+	description			= 	name;
 };
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_PUREALCOHOL (C_Item)
+
+INSTANCE ITMI_REVIVED_PUREALCOHOL (REVIVED_MISC)
 {
 	name 				=	"Pure Alcohol";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_PureAlcohol;
 
 	visual 				=	"REV_ITMI_ALCOHOL.3DS";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_PureAlcohol;
+	description			= 	name;
 };
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_VINEGAR (C_Item)
+
+INSTANCE ITMI_REVIVED_VINEGAR (REVIVED_MISC)
 {
 	name 				=	"Vinegar";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_Vinegar;
 
 	visual 				=	"REV_ITMI_ALCOHOL.3DS";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Vinegar;
+	description			= 	name;
 };
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_MAGICWATER (C_Item)
+
+INSTANCE ITMI_REVIVED_MAGICWATER (REVIVED_MISC)
 {
 	name 				=	"Magic Water";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
 	value 				=	REV_Value_MagicWater;
 
 	visual 				=	"REV_ITMI_MAGICWATER.3ds";
 	material 			=	MAT_GLAS;
 
-	description			= name;
-
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_MagicWater;
-};
-
-//****************************************************************************
-//			MISCELLANEOUS
-//****************************************************************************
-
-INSTANCE ITMI_REVIVED_WARHORN (C_Item)
-{
-	name 				=	"Horn";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MULTI;
-
-	value 				=	9;
-
-	visual 				=	"ItMi_Alarmhorn_01.3DS";
-	material 			=	MAT_WOOD;
-
-	scemeName			=	"HORN";
-
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITMI_REVIVED_OLDCOIN (C_Item)
-{
-	name 				=	"Old Coin";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI|ITEM_MISSION;
-
-	value 				=	0;
-
-	visual 				=	"ItMi_Stuff_OldCoin_01.3DS";
-	material 			=	MAT_METAL;
-
-	description			= name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
-{
-	name 				=	"Lump of Ore";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Nugget;
-
-	visual 				=	"REV_ItMi_Nugget_NoMagic.3ds";
-	material 			=	MAT_STONE;
-
-	//wear				= 	WEAR_EFFECT;
-	//effect				=	"SPELLFX_MANAPOTION";
-
 	description			= 	name;
-
-	TEXT[0]				=	"The ore is faded and does not shine.";
-	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_MISC2_STANDARD;
 };
-
 
 //****************************************************************************
 //			STUFF
 //****************************************************************************
 
-INSTANCE ITMI_REVIVED_STUFF_AMPHORE (C_Item)
+INSTANCE ITMI_REVIVED_WARHORN (REVIVED_MISC)
+{
+	name 				=	"Horn";
+
+	visual 				=	"ItMi_Alarmhorn_01.3DS";
+	material 			=	MAT_WOOD;
+	scemeName			=	"HORN";
+
+	description			= 	name;
+};
+
+INSTANCE ITMI_REVIVED_OLDCOIN (REVIVED_MISC)
+{
+	name 				=	"Old Coin";
+	flags 				=	ITEM_MULTI|ITEM_MISSION;
+	value 				=	0;
+
+	visual 				=	"ItMi_Stuff_OldCoin_01.3DS";
+	material 			=	MAT_METAL;
+
+	description			= 	name;
+};
+
+INSTANCE ITMI_REVIVED_MAGICORE (REVIVED_MISC)
+{
+	name 				=	"Lump of Ore";
+
+	visual 				=	"REV_ItMi_Nugget_NoMagic.3ds";
+
+	TEXT[0]				=	"The ore is faded and does not shine.";
+	INV_ZBIAS			=	INVCAM_ENTF_MISC2_STANDARD;
+
+	description			= 	name;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_AMPHORE (REVIVED_MISC)
 {
 	name 				=	"Amphore";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Amphore_01.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_CUP_01 (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_CUP_01 (REVIVED_MISC)
 {
 	name 				=	"Cup";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Cup_01.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_CUP_02 (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_CUP_02 (REVIVED_MISC)
 {
 	name 				=	"Cup";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Cup_02.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_MUG (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_MUG (REVIVED_MISC)
 {
 	name 				=	"Mug";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Mug_01.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_PLATE (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_PLATE (REVIVED_MISC)
 {
 	name 				=	"Metal plate";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Plate_01.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_SILVERWARE (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_SILVERWARE (REVIVED_MISC)
 {
 	name 				=	"Silverware";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Silverware_01.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_PIPE (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_PIPE (REVIVED_MISC)
 {
 	name 				=	"Pipe";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"ItMi_Stuff_Pipe_01.3ds";
-	material 			=	MAT_STONE;
 
 	description			= 	name;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (REVIVED_MISC)
 {
 	name 				=	"Figurine";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
 
 	visual 				=	"ItMi_Stuff_Idol_Sleeper_01.3DS";
 	material 			=	MAT_CLAY;
 
-	description			=	name;
+	description			= 	name;
+
 	TEXT[0]				=	"This figure is a misshapen";
 	TEXT[1]				=	"being with a mask.";
 	TEXT[2]				=	"The mask is surrounded by six big stings.";
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
+INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (REVIVED_MISC)
 {
 	name 				=	"Figurine";
 
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_Stuff;
-
 	visual 				=	"REV_ITMI_STUFF_IDOL_OGRONT_01.3DS";
-	material 			=	MAT_STONE;
+	material 			=	MAT_CLAY;
 
 	description			= 	name;
+
 	TEXT[0]				=	"This figure is a misshapen";
 	TEXT[1]				=	"being with a mask.";
 	TEXT[2]				=	"The mask is decorated with two big stings.";
-	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 };
