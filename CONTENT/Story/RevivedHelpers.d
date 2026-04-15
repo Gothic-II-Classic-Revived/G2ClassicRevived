@@ -23,6 +23,14 @@ func string REV_BuildTradeString (var int itemInstance)
 		protMagic	= IntToString(REV_Prot_Magic_ARCHER);
 		value		= IntToString(REV_Value_ARCHER);
 	}
+	else if(itemInstance == ITAR_REVIVED_LEATHER_H)
+	{
+		armorName	= "Demon Hunter Armor";
+		protEdge	= IntToString(REV_Prot_Edge_LEATHER_H);
+		protPoint	= IntToString(REV_Prot_Point_LEATHER_H);
+		protMagic	= IntToString(REV_Prot_Magic_LEATHER_H);
+		value		= IntToString(REV_Value_LEATHER_H);
+	}
 	else if(itemInstance == ITAR_REVIVED_GRD_M)
 	{
 		armorName	= "Guard's Armor";
