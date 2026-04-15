@@ -31,7 +31,7 @@ func void INIT_GLOBAL()
 func void STARTUP_Testlevel ()
 {
 	Wld_InsertNpc	(PC_REVIVED,	"SPAWN_PC_REVIVED"); 
-	Wld_InsertNpc	(PC_HERO,	"SPAWN_PC_HERO"); 
+	//Wld_InsertNpc	(SH,	"SPAWN_PC_HERO"); 
 
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_01");
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_02");
@@ -737,6 +737,12 @@ func void STARTUP_DEMONTOWER ()
 	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_01");
 	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_01");
 	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_01");
+	
+	Wld_InsertNpc		(OrcDog,"OW_PATH_3047");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_3047");
+	Wld_InsertNpc		(OrcElite_Roam,"OW_PATH_3048");
+	Wld_InsertNpc		(OrcShaman_Sit,"FP_CAMPFIRE_ORC_DEMONTOWER_001");
+	Wld_InsertNpc		(OrcShaman_Sit,"FP_CAMPFIRE_ORC_DEMONTOWER_002");
 
 
 	// Demon Tower
@@ -1470,6 +1476,11 @@ func void STARTUP_SURFACE ()
 	
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
+	
+	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
+	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
 
 
 	// Orc Territory (Orc City)
@@ -2354,7 +2365,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		
 	Wld_InsertItem			(ItMi_Moleratlubric_MIS,"FP_ITEM_SHIP_07");	//zur Sicherheit für Vinos Brennerei!
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_01"); 
-	Wld_InsertItem			(ITRI_REVIVED_PROT_ARROW_02,"FP_ITEM_SHIP_02");
+	Wld_InsertItem			(ITRI_REVIVED_PROT_ARROW_01,"FP_ITEM_SHIP_02");
 	Wld_InsertItem			(ITPO_REVIVED_BOOST_DEX_01,"FP_ITEM_SHIP_03");
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_04");
 	Wld_InsertItem			(ITPO_REVIVED_SPEED_03,"FP_ITEM_SHIP_05");
@@ -3697,8 +3708,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	//Wld_InsertNpc	(BeachWaran,"FP_ROAM_FISHERCOAST_01");	
 	//Wld_InsertNpc	(BeachWaran,"FP_ROAM_FISHERCOAST_02");
 
-	Wld_InsertNpc 	(BeachWaran, "FP_ROAM_FISHERMAN_01");
 	Wld_InsertNpc 	(BeachWaran, "FP_ROAM_FISHERMAN_04");
+	Wld_InsertNpc 	(BeachWaran, "FP_ROAM_FISHERMAN_05");
 	
 	// ------- vom Osttor zu Farm2 ------
 	Wld_InsertNpc 	(Mil_337_Mika, "FARM2");
