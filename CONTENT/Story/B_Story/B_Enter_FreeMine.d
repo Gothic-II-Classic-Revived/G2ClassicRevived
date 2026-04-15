@@ -55,11 +55,11 @@ func void B_Enter_FREEMINE()
 	{
 		B_ENTER_FREEMINE_Kapitel_2();
 	};
-	if(MIS_ReadyForChapter3 == TRUE)
+	if(Kapitel >= 3)
 	{
 		B_ENTER_FREEMINE_Kapitel_3();
 	};
-	if(MIS_ReadyforChapter4 == TRUE)
+	if(Kapitel >= 4)
 	{
 		B_ENTER_FREEMINE_Kapitel_4();
 	};
@@ -68,5 +68,6 @@ func void B_Enter_FREEMINE()
 		B_ENTER_FREEMINE_Kapitel_5();
 	};
 
+	CurrentLevel = FREEMINE_ZEN; 
 	B_InitNpcGlobals();
 };

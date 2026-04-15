@@ -55,11 +55,11 @@ func void B_Enter_ORCGRAVEYARD()
 	{
 		B_ENTER_ORCGRAVEYARD_Kapitel_2();
 	};
-	if(MIS_ReadyForChapter3 == TRUE)
+	if(Kapitel >= 3)
 	{
 		B_ENTER_ORCGRAVEYARD_Kapitel_3();
 	};
-	if(MIS_ReadyforChapter4 == TRUE)
+	if(Kapitel >= 4)
 	{
 		B_ENTER_ORCGRAVEYARD_Kapitel_4();
 	};
@@ -68,5 +68,6 @@ func void B_Enter_ORCGRAVEYARD()
 		B_ENTER_ORCGRAVEYARD_Kapitel_5();
 	};
 
+	CurrentLevel = ORCGRAVEYARD_ZEN; 
 	B_InitNpcGlobals();
 };

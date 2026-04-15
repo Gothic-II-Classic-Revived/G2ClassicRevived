@@ -83,5 +83,6 @@ func void B_Enter_AbandonedMine()
 		B_ENTER_ABANDONEDMINE_Kapitel_5();
 	};
 
+	CurrentLevel = ABANDONEDMINE_ZEN; 
 	B_InitNpcGlobals();
 };

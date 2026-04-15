@@ -104,6 +104,22 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	{
 		B_ENTER_NEWWORLD ();
 	};
+	if (aktuelles_Level_Zen == ABANDONEDMINE_ZEN)
+	{
+		B_Enter_AbandonedMine ();
+	};
+	if (aktuelles_Level_Zen == FREEMINE_ZEN)
+	{
+		B_Enter_FREEMINE ();
+	};
+	if (aktuelles_Level_Zen == ORCGRAVEYARD_ZEN)
+	{
+		B_Enter_ORCGRAVEYARD ();
+	};
+	if (aktuelles_Level_Zen == PASS_ZEN)
+	{
+		B_ENTER_PASS ();
+	};
 	
  
  	//	AMBIENT XPs
