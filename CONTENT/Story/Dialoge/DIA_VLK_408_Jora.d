@@ -102,7 +102,7 @@ func void DIA_Jora_GREET_Info ()
 	AI_Output (self, other, "DIA_Jora_GREET_08_03"); //(scornful) Bah! You wouldn't be the first one to make off with my things today.
 
 	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
-	B_LogEntry (Topic_CityTrader,"Jora trades in weapons of all kinds at the marketplace.");
+	B_LogEntry (Topic_CityTrader,"Jora trades in traveler supplies of all kinds at the marketplace.");
 };
 
 // *******************************************************

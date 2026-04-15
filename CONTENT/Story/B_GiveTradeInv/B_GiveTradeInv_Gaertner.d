@@ -14,6 +14,7 @@ FUNC VOID B_GiveTradeInv_Gaertner (var C_NPC slf)
 		CreateInvItems (slf, ItPl_Health_Herb_01, 6);
 		CreateInvItems (slf, ItPl_Mana_Herb_01, 6);
 		CreateInvItems (slf, ItPl_Blueplant, 6);
+		CreateInvItems (slf, ITPL_REVIVED_BERRIES, 4);
 
 		Gaertner_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -25,6 +26,7 @@ FUNC VOID B_GiveTradeInv_Gaertner (var C_NPC slf)
 		CreateInvItems (slf, ItPl_Health_Herb_01, 8);
 		CreateInvItems (slf, ItPl_Mana_Herb_01, 8);
 		CreateInvItems (slf, ItPl_SwampHerb, 4);
+		CreateInvItems (slf, ITPL_REVIVED_RICEPLANT, 4);
 
 		Gaertner_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -36,6 +38,8 @@ FUNC VOID B_GiveTradeInv_Gaertner (var C_NPC slf)
 		CreateInvItems (slf, ItPl_Health_Herb_02, 6);
 		CreateInvItems (slf, ItPl_Mana_Herb_02, 6);
 		CreateInvItems (slf, ItPl_Speed_Herb_01, 3);
+		CreateInvItems (slf, ITPL_REVIVED_GRAPES, 4);
+		CreateInvItems (slf, ITPL_REVIVED_BERRIES, 4);
 
 		Gaertner_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -48,6 +52,8 @@ FUNC VOID B_GiveTradeInv_Gaertner (var C_NPC slf)
 		CreateInvItems (slf, ItPl_Mana_Herb_02, 8);
 		CreateInvItems (slf, ItPl_Temp_Herb, 3);
 		CreateInvItems (slf, ItPl_Dex_Herb_01, 2);
+		CreateInvItems (slf, ITPL_REVIVED_GRAPES, 4);
+		CreateInvItems (slf, ITPL_REVIVED_BERRIES, 4);
 
 		Gaertner_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -60,6 +66,8 @@ FUNC VOID B_GiveTradeInv_Gaertner (var C_NPC slf)
 		CreateInvItems (slf, ItPl_Mana_Herb_03, 5);
 		CreateInvItems (slf, ItPl_Perm_Herb, 2);
 		CreateInvItems (slf, ItPl_Strength_Herb_01, 2);
+		CreateInvItems (slf, ITPL_REVIVED_GRAPES, 4);
+		CreateInvItems (slf, ITPL_REVIVED_BERRIES, 4);
 
 		Gaertner_ItemsGiven_Chapter_5 = TRUE;
 	};

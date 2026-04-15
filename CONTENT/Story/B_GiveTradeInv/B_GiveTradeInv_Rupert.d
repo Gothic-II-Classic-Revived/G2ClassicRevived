@@ -20,6 +20,7 @@ FUNC VOID B_GiveTradeInv_Rupert (var C_NPC slf)
 	&& (Rupert_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
+		CreateInvItems (slf, ITPL_REVIVED_BERRIES, 2);
 		CreateInvItems (slf, ItFo_Beer, 4);
 		CreateInvItems (slf, ItFo_Fish, 2);
 		CreateInvItems (slf, ItKE_Lockpick, 3);
@@ -30,7 +31,7 @@ FUNC VOID B_GiveTradeInv_Rupert (var C_NPC slf)
 	&& (Rupert_ItemsGiven_Chapter_3 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 300); 
-		CreateInvItems (slf, ItFo_Wine, 2);
+		CreateInvItems (slf, ITPL_REVIVED_GRAPES, 2);
 		CreateInvItems (slf, ItFo_Stew, 2);
 		CreateInvItems (slf, ItMi_Pitch, 1);
 		Rupert_ItemsGiven_Chapter_3 = TRUE;

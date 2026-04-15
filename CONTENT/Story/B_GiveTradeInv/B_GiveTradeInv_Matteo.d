@@ -21,7 +21,6 @@ FUNC VOID B_GiveTradeInv_Matteo (var C_NPC slf)
 		CreateInvItems (slf, ItMiSwordraw, 1); 
 		CreateInvItems (slf, ItMi_Lute, 1);
 		CreateInvItems (slf, ItMi_Scoop, 1);
-
 		CreateInvItems (slf, ITMW_REVIVED_2H_PICKAXE, 1);
 
 		Matteo_ItemsGiven_Chapter_1 = TRUE;

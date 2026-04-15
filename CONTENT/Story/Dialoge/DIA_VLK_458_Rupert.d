@@ -77,31 +77,9 @@ FUNC VOID DIA_Rupert_Hello_Info()
 {	
 	AI_Output (self ,other,"DIA_Rupert_Hello_03_00"); //Hello, stranger!
 	AI_Output (self ,other,"DIA_Rupert_Hello_03_01"); //You must be hungry and thirsty - can I perhaps interest you in my wares?
-};	
 
-// ************************************************************
-// 			  				 Zu Pal 
-// ************************************************************
-INSTANCE DIA_Rupert_ZuPal(C_INFO)
-{
-	npc			= VLK_458_Rupert;
-	nr			= 1;
-	condition	= DIA_Rupert_ZuPal_Condition;
-	information	= DIA_Rupert_ZuPal_Info;
-	permanent	= FALSE;
-	description = "I was actually on my way to see the paladins...";
-};                       
-FUNC INT DIA_Rupert_ZuPal_Condition()
-{
-	if (Kapitel < 2)
-	{
-		return TRUE;
-	};	
-};
-FUNC VOID DIA_Rupert_ZuPal_Info()
-{	
-	AI_Output (other, self,"DIA_Rupert_ZuPal_15_00"); //I was actually on my way to see the paladins...
-	AI_Output (self ,other,"DIA_Rupert_ZuPal_03_01"); //There's little chance of that. Since the paladins made themselves at home in the upper end of town, hardly anyone gets in there any more.
+	Log_CreateTopic (Topic_CityTrader,LOG_NOTE);
+	B_LogEntry (Topic_CityTrader,"Rupert sells food and drinks.");
 };	
 
 // ************************************************************
@@ -114,11 +92,11 @@ INSTANCE DIA_Rupert_HelpMeIntoOV(C_INFO)
 	condition	= DIA_Rupert_HelpMeIntoOV_Condition;
 	information	= DIA_Rupert_HelpMeIntoOV_Info;
 	permanent	= FALSE;
-	description = "Can you help me get into the upper quarter?";
+	description = "I was actually on my way to see the paladins...";
 };                       
 FUNC INT DIA_Rupert_HelpMeIntoOV_Condition()
 {
-	if (Npc_KnowsInfo(other, DIA_Rupert_ZuPal))
+	if (Kapitel < 2)
 	&& (hero.guild == GIL_NONE)
 	{
 		return TRUE;
@@ -126,6 +104,9 @@ FUNC INT DIA_Rupert_HelpMeIntoOV_Condition()
 };
 FUNC VOID DIA_Rupert_HelpMeIntoOV_Info()
 {	
+	AI_Output (other, self,"DIA_Rupert_ZuPal_15_00"); //I was actually on my way to see the paladins...
+	AI_Output (self ,other,"DIA_Rupert_ZuPal_03_01"); //There's little chance of that. Since the paladins made themselves at home in the upper end of town, hardly anyone gets in there any more.
+
 	AI_Output (other, self,"DIA_Rupert_HelpMeIntoOV_15_00"); //Can you help me get into the upper quarter?
 	AI_Output (self ,other,"DIA_Rupert_HelpMeIntoOV_03_01"); //Me? No, I don't have much say here myself!
 	AI_Output (self ,other,"DIA_Rupert_HelpMeIntoOV_03_02"); //There are only a few people here in the lower city who have enough influence to get you past the guards.
@@ -262,7 +243,6 @@ FUNC VOID DIA_Rupert_YourOffer_Info()
 		AI_Output (self	,other,"DIA_Rupert_Mercs_03_01"); //I heard that most of them are former convicts from the mining colony.
 		AI_Output (self	,other,"DIA_Rupert_Mercs_03_02"); //And their leader is supposed to have been a big shot with the King - a general or something - whom they put away as a traitor!
 		AI_Output (self	,other,"DIA_Rupert_Mercs_03_03"); //These are terrible times.
-	
 	};
 };
 
@@ -276,9 +256,9 @@ INSTANCE DIA_Rupert_Trade(C_INFO)
 	condition	= DIA_Rupert_Trade_Condition;
 	information	= DIA_Rupert_Trade_Info;
 	permanent	= TRUE;
-	description = "Show me your wares.";
 	trade		= TRUE;
-};                       
+	description	= "Show me your wares.";
+};
 FUNC INT DIA_Rupert_Trade_Condition()
 {
 	if (Npc_KnowsInfo (other,DIA_Rupert_YourOffer))
@@ -288,6 +268,7 @@ FUNC INT DIA_Rupert_Trade_Condition()
 };
 FUNC VOID DIA_Rupert_Trade_Info()
 {	
+	B_GiveTradeInv (self);
 	AI_Output (other,self ,"DIA_Rupert_Trade_15_00"); //Show me your wares.
 	if (hero.guild == GIL_KDF)
 	|| (hero.guild == GIL_PAL)

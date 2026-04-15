@@ -11,8 +11,9 @@ FUNC VOID B_GiveTradeInv_Brian (var C_NPC slf)
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItMiSwordraw, 3); 
-		CreateInvItems (slf, ItMi_Coal, 2);
-		CreateInvItems (slf, ItMi_Pitch, 1);
+
+		CreateInvItems (slf, ItMi_Hammer, 1);
+
 		Brian_ItemsGiven_Chapter_1 = TRUE;
 	};
 
@@ -20,9 +21,8 @@ FUNC VOID B_GiveTradeInv_Brian (var C_NPC slf)
 	&& (Brian_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
-		CreateInvItems (slf, ItMiSwordraw, 3); 
-		CreateInvItems (slf, ItMi_Coal, 2);
-		CreateInvItems (slf, ItMi_Pitch, 2);
+		CreateInvItems (slf, ItMiSwordraw, 4); 
+
 		Brian_ItemsGiven_Chapter_2 = TRUE;
 	};
 
@@ -33,6 +33,7 @@ FUNC VOID B_GiveTradeInv_Brian (var C_NPC slf)
 		CreateInvItems (slf, ItMiSwordraw, 4); 
 		CreateInvItems (slf, ItMi_Coal, 4);
 		CreateInvItems (slf, ItMi_Pitch, 2);
+
 		Brian_ItemsGiven_Chapter_3 = TRUE;
 	};
 
@@ -42,7 +43,9 @@ FUNC VOID B_GiveTradeInv_Brian (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 400); 
 		CreateInvItems (slf, ItMiSwordraw, 4); 
 		CreateInvItems (slf, ItMi_Coal, 4);
+		CreateInvItems (slf, ItMi_Pitch, 2);
 		CreateInvItems (slf, ItMi_Nugget, 1);
+
 		Brian_ItemsGiven_Chapter_4 = TRUE;
 	};
 
@@ -52,7 +55,9 @@ FUNC VOID B_GiveTradeInv_Brian (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 500); 
 		CreateInvItems (slf, ItMiSwordraw, 5); 
 		CreateInvItems (slf, ItMi_Coal, 4);
+		CreateInvItems (slf, ItMi_Pitch, 2);
 		CreateInvItems (slf, ItMi_Nugget, 1);
+
 		Brian_ItemsGiven_Chapter_5 = TRUE;
 	};
 };

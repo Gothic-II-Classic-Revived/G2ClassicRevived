@@ -14,6 +14,8 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Nugget, 8);
 		CreateInvItems (slf, ItMi_Coal, 6);
 
+		CreateInvItems (slf, ItMi_Hammer, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_PICKAXE, 1);
 		CreateInvItems (slf, ItBE_Addon_SLD_01, 1); 
 		
 		Bennet_ItemsGiven_Chapter_1 = TRUE;

@@ -14,6 +14,8 @@ FUNC VOID B_GiveTradeInv_Xardas (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Quartz, 6);
 		CreateInvItems (slf, ItMi_Rockcrystal, 3);
 
+		CreateInvItems (slf, ITSC_REVIVED_TELEPORT_XARDAS, 5);
+
 		Xardas_ItemsGiven_Chapter_2 = TRUE;
 	};
 

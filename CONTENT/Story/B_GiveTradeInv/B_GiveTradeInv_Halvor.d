@@ -12,7 +12,6 @@ FUNC VOID B_GiveTradeInv_Halvor (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 100);
 		
 		CreateInvItems (slf, ItFo_Fish, 14);
-		CreateInvItems (slf, ItFo_FishSoup, 4);
 
 		Halvor_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -22,7 +21,6 @@ FUNC VOID B_GiveTradeInv_Halvor (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 200);
 
 		CreateInvItems (slf, ItFo_Fish, 16);
-		CreateInvItems (slf, ItFo_FishSoup, 5);
 
 		Halvor_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -32,7 +30,6 @@ FUNC VOID B_GiveTradeInv_Halvor (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 300);
 
 		CreateInvItems (slf, ItFo_Fish, 18);
-		CreateInvItems (slf, ItFo_FishSoup, 6);
 
 		Halvor_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -42,7 +39,6 @@ FUNC VOID B_GiveTradeInv_Halvor (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 400);
 
 		CreateInvItems (slf, ItFo_Fish, 20);
-		CreateInvItems (slf, ItFo_FishSoup, 7);
 
 		Halvor_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -52,7 +48,6 @@ FUNC VOID B_GiveTradeInv_Halvor (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 500);
 
 		CreateInvItems (slf, ItFo_Fish, 22);
-		CreateInvItems (slf, ItFo_FishSoup, 8);
 
 		Halvor_ItemsGiven_Chapter_5 = TRUE;
 	};

@@ -22,6 +22,8 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems (slf, ItSc_LightHeal, 3);
 
 		CreateInvItems (slf, ItBE_Addon_NOV_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_STAFF_NOVICE_01, 1);
+
 		Gorax_ItemsGiven_Chapter_1 = TRUE;
 	};
 	if ((Kapitel >= 2)
@@ -35,7 +37,12 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Quartz, 4);
 		CreateInvItems (slf, ItMi_Rockcrystal, 2);
 
+		CreateInvItems (slf, ITFO_REVIVED_MAGEWINE, 2);
+
 		CreateInvItems (slf, ItBE_Addon_KDF_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_BALL_03, 1);
+
 		Gorax_ItemsGiven_Chapter_2 = TRUE;
 	};
 	if ((Kapitel >= 3)
@@ -51,9 +58,14 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Coal, 2);
 		CreateInvItems (slf, ItMi_Pitch, 1);
 		CreateInvItems (slf, ItAt_WaranFiretongue, 1);	
+		
+		CreateInvItems (slf, ITFO_REVIVED_MAGEWINE, 2);
 
 		CreateInvItems (slf, ItSc_MediumHeal, 5);
 		CreateInvItems (slf, ItSc_Thunderball, 2);
+
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_GOOD_03, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_BLADES_03, 1);
 
 		Gorax_ItemsGiven_Chapter_3 = TRUE;
 	};
@@ -69,6 +81,8 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Aquamarine, 2);
 		CreateInvItems (slf, ItMi_Coal, 2);
 		CreateInvItems (slf, ItMi_Pitch, 1);
+		
+		CreateInvItems (slf, ITFO_REVIVED_MAGEWINE, 2);
 
 		CreateInvItems (slf, ItSc_LightningFlash, 5);
 		CreateInvItems (slf, ItSc_ChargeFireball, 3);
@@ -87,6 +101,8 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems (slf, ItMi_DarkPearl, 2);
 		CreateInvItems (slf, ItMi_Aquamarine, 3);
 		CreateInvItems (slf, ItMi_HolyWater, 3);
+		
+		CreateInvItems (slf, ITFO_REVIVED_MAGEWINE, 2);
 
 		Gorax_ItemsGiven_Chapter_5 = TRUE;
 	};

@@ -10,10 +10,14 @@ FUNC VOID B_GiveTradeInv_Rosi (var C_NPC slf)
 	&& (Rosi_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100);
+		CreateInvItems (slf, ItRw_Arrow, 60);
+		CreateInvItems (slf, ItRw_Bolt, 60);
+		CreateInvItems (slf, ItLsTorch, 5);
 
 		CreateInvItems (slf, ItFo_Bread, 6);
 		CreateInvItems (slf, ItFo_Cheese, 5);
 
+		CreateInvItems (slf, ItMi_Scoop, 1);
 		CreateInvItems (slf, ITWR_REVIVED_RECIPE_OLDSTEW, 1);
 
 		Rosi_ItemsGiven_Chapter_1 = TRUE;
@@ -22,6 +26,9 @@ FUNC VOID B_GiveTradeInv_Rosi (var C_NPC slf)
 	&& (Rosi_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200);
+		CreateInvItems (slf, ItRw_Arrow, 60);
+		CreateInvItems (slf, ItRw_Bolt, 60);
+		CreateInvItems (slf, ItLsTorch, 5);
 
 		CreateInvItems (slf, ItFo_Bread, 6);
 		CreateInvItems (slf, ItFoMutton, 5);
@@ -35,6 +42,9 @@ FUNC VOID B_GiveTradeInv_Rosi (var C_NPC slf)
 	&& (Rosi_ItemsGiven_Chapter_3 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 300);
+		CreateInvItems (slf, ItRw_Arrow, 60);
+		CreateInvItems (slf, ItRw_Bolt, 60);
+		CreateInvItems (slf, ItLsTorch, 5);
 
 		CreateInvItems (slf, ItFo_Bacon, 5);
 		CreateInvItems (slf, ItPl_Beet, 6);
@@ -48,6 +58,9 @@ FUNC VOID B_GiveTradeInv_Rosi (var C_NPC slf)
 	&& (Rosi_ItemsGiven_Chapter_4 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 400);
+		CreateInvItems (slf, ItRw_Arrow, 60);
+		CreateInvItems (slf, ItRw_Bolt, 60);
+		CreateInvItems (slf, ItLsTorch, 5);
 
 		CreateInvItems (slf, ItFo_Stew, 6);
 		CreateInvItems (slf, ItFo_FishSoup, 6);
@@ -61,6 +74,9 @@ FUNC VOID B_GiveTradeInv_Rosi (var C_NPC slf)
 	&& (Rosi_ItemsGiven_Chapter_5 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 500);
+		CreateInvItems (slf, ItRw_Arrow, 60);
+		CreateInvItems (slf, ItRw_Bolt, 60);
+		CreateInvItems (slf, ItLsTorch, 5);
 
 		CreateInvItems (slf, ItFo_Stew, 8);
 		CreateInvItems (slf, ItFo_FishSoup, 8);
