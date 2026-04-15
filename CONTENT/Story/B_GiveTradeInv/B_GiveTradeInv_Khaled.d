@@ -10,73 +10,50 @@ FUNC VOID B_GiveTradeInv_Khaled (var C_NPC slf)
 	&& (Khaled_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
-		
-		CreateInvItems (slf, ItMw_Nagelkeule2 , 1);
-		CreateInvItems (slf, ItMw_Streitaxt1, 1);
-		CreateInvItems (slf, ItMw_Schwert3, 1); 
-		CreateInvItems (slf, ItMw_Streitkolben, 1); 
-		CreateInvItems (slf, ItMw_Zweihaender2 , 1);
-		CreateInvItems (slf, ItMw_Streitaxt2, 1); 
-		CreateInvItems (slf, ItMw_Zweihaender4, 1); 
-		CreateInvItems (slf, ItMw_Barbarenstreitaxt, 1); 
-		CreateInvItems (slf, ItMw_Berserkeraxt, 1); 
-		
-		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_02, 1); 
-		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_03, 1); 
-		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_03, 1); 
-		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_06, 1); 
-		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_07, 1); 
-		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_02, 1); 
-		CreateInvItems (slf, ITRW_REVIVED_CROSSBOW_04, 1); 
-		
-		CreateInvItems (slf, ItRw_Arrow, 30); 
-		
-		//Gürtel
-		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
-		
+
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_LIGHT_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_LIGHT_02, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_LIGHT_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_LIGHT_02, 1);
+
 		Khaled_ItemsGiven_Chapter_1 = TRUE;
 	};
-	
+
 	if ((Kapitel >= 2)
 	&& (Khaled_ItemsGiven_Chapter_2 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 250); 
-		CreateInvItems (slf, ItRw_Arrow, 50); 
-		CreateInvItems (slf, ItRw_Bolt, 30); 
-		
+		CreateInvItems (slf, ItMi_Gold, 200); 
+
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_LIGHT_03, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_LIGHT_03, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_HEAVY_01, 1);
+
 		Khaled_ItemsGiven_Chapter_2 = TRUE;
 	};
 
 	if ((Kapitel >= 3)
 	&& (Khaled_ItemsGiven_Chapter_3 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 450); 
-		CreateInvItems (slf, ItRw_Arrow, 70); 
-		CreateInvItems (slf, ItRw_Bolt, 50); 
-		CreateInvItems (slf, ItBe_Addon_Prot_Point, 1); 
-		//Joly: ERZROHLING!!  NICHT ZU VIELE !!!
-		//***********************************
-		CreateInvItems (slf, ItMi_Nugget, 1); 
-		//***********************************
-		
+		CreateInvItems (slf, ItMi_Gold, 300); 
+
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_02, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_03, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_HEAVY_02, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_HEAVY_03, 1);
+
 		Khaled_ItemsGiven_Chapter_3 = TRUE;
 	};
 
 	if ((Kapitel >= 4)
 	&& (Khaled_ItemsGiven_Chapter_4 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 700); 
-		CreateInvItems (slf, ItMiSwordraw, 1); 
-		CreateInvItems (slf, ItRw_Arrow, 80); 
-		CreateInvItems (slf, ItRw_Bolt, 60); 
-		CreateInvItems (slf, ItBe_Addon_Prot_EDGE, 1);
-		CreateInvItems (slf, ItBe_Addon_Prot_EdgPoi, 1);
-		
-		
-		//Joly: ERZROHLING!!  NICHT ZU VIELE !!!
-		//***********************************
-		CreateInvItems (slf, ItMi_Nugget, 2); 
-		//***********************************
+		CreateInvItems (slf, ItMi_Gold, 400); 
+
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_HEAVY_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_HEAVY_02, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_HEAVY_04, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_ORE_01, 1);
 
 		Khaled_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -84,9 +61,12 @@ FUNC VOID B_GiveTradeInv_Khaled (var C_NPC slf)
 	if ((Kapitel >= 5)
 	&& (Khaled_ItemsGiven_Chapter_5 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 1100); 
-		CreateInvItems (slf, ItRw_Arrow, 100); 
-		CreateInvItems (slf, ItRw_Bolt, 70); 
+		CreateInvItems (slf, ItMi_Gold, 500); 
+
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_HEAVY_03, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_HEAVY_04, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_ORE_01, 1);
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_ORE_02, 1);
 
 		Khaled_ItemsGiven_Chapter_5 = TRUE;
 	};

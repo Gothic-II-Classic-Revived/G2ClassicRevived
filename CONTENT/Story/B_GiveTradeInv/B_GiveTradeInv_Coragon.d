@@ -10,7 +10,8 @@ FUNC VOID B_GiveTradeInv_Coragon (var C_NPC slf)
 	if ((Kapitel >= 1)
 	&& (Coragon_ItemsGiven_Chapter_1 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 50); 
+		CreateInvItems (slf, ItMi_Gold, 100); 
+		
 		CreateInvItems (slf, ItFo_Wine, 6); 
 		CreateInvItems (slf, ItFo_Booze, 3); 
 		CreateInvItems (slf, ItFo_Beer, 5); 
@@ -24,7 +25,8 @@ FUNC VOID B_GiveTradeInv_Coragon (var C_NPC slf)
 	if ((Kapitel >= 2)
 	&& (Coragon_ItemsGiven_Chapter_2 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 50); 
+		CreateInvItems (slf, ItMi_Gold, 200); 
+
 		CreateInvItems (slf, ItFo_Wine, 4); 
 		CreateInvItems (slf, ItFo_Booze, 3); 
 		CreateInvItems (slf, ItFo_Beer, 5); 
@@ -39,7 +41,8 @@ FUNC VOID B_GiveTradeInv_Coragon (var C_NPC slf)
 	if ((Kapitel >= 3)
 	&& (Coragon_ItemsGiven_Chapter_3 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 50); 
+		CreateInvItems (slf, ItMi_Gold, 300); 
+
 		CreateInvItems (slf, ItFo_Wine, 4); 
 		CreateInvItems (slf, ItFo_Booze, 5); 
 		CreateInvItems (slf, ItFo_Beer, 6); 
@@ -53,7 +56,8 @@ FUNC VOID B_GiveTradeInv_Coragon (var C_NPC slf)
 	if ((Kapitel >= 4)
 	&& (Coragon_ItemsGiven_Chapter_4 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 150); 
+		CreateInvItems (slf, ItMi_Gold, 400); 
+
 		CreateInvItems (slf, ItFo_Wine, 7); 
 		CreateInvItems (slf, ItFo_Booze, 4); 
 		CreateInvItems (slf, ItFo_Beer, 6); 
@@ -66,7 +70,8 @@ FUNC VOID B_GiveTradeInv_Coragon (var C_NPC slf)
 	if ((Kapitel >= 5)
 	&& (Coragon_ItemsGiven_Chapter_5 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 150); 
+		CreateInvItems (slf, ItMi_Gold, 500); 
+
 		CreateInvItems (slf, ItFo_Wine, 5); 
 		CreateInvItems (slf, ItFo_Booze, 4); 
 		CreateInvItems (slf, ItFo_Beer, 5); 

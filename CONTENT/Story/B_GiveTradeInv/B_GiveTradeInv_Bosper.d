@@ -10,7 +10,7 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 	if ((Kapitel >= 1)
 	&& (Bosper_ItemsGiven_Chapter_1 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 50); 
+		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItRw_Arrow, 30); 
 		
 		// ------ Waffen ------
@@ -31,7 +31,7 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 	if ((Kapitel >= 2)
 	&& (Bosper_ItemsGiven_Chapter_2 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 100); 
+		CreateInvItems (slf, ItMi_Gold, 200); 
 		CreateInvItems (slf, ItRw_Arrow, 50); 
 		CreateInvItems (slf, ItRw_Bolt, 50); 
 		CreateInvItems (slf, ItBe_Addon_DEX_5, 1); 
@@ -48,7 +48,7 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 	if ((Kapitel >= 3)
 	&& (Bosper_ItemsGiven_Chapter_3 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 100); 
+		CreateInvItems (slf, ItMi_Gold, 300); 
 		CreateInvItems (slf, ItRw_Arrow, 100); 
 		CreateInvItems (slf, ItRw_Bolt, 100); 
 		CreateInvItems (slf, ItBe_Addon_DEX_10, 1);
@@ -63,7 +63,7 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 	if ((Kapitel >= 4)
 	&& (Bosper_ItemsGiven_Chapter_4 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 150); 
+		CreateInvItems (slf, ItMi_Gold, 400); 
 		CreateInvItems (slf, ItRw_Arrow, 180); 
 		CreateInvItems (slf, ItRw_Bolt, 160); 
 		
@@ -79,7 +79,7 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 	if ((Kapitel >= 5)
 	&& (Bosper_ItemsGiven_Chapter_5 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 200); 
+		CreateInvItems (slf, ItMi_Gold, 500); 
 		CreateInvItems (slf, ItRw_Arrow, 200); 
 		CreateInvItems (slf, ItRw_Bolt, 170); 
 		

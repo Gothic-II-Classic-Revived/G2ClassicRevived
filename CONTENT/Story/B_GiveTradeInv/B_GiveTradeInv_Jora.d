@@ -10,83 +10,63 @@ FUNC VOID B_GiveTradeInv_Jora (var C_NPC slf)
 	&& (Jora_ItemsGiven_Chapter_1 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
-		CreateInvItems (slf, ItSc_Light,1); 
-		CreateInvItems (slf, ItPl_Health_Herb_01 , 2);
-		CreateInvItems (slf, ItPl_Mushroom_01 , 3);
-		CreateInvItems (slf, ItFoMutton, 8); 
-		CreateInvItems (slf, ItRw_Arrow, 30);
-		CreateInvItems (slf, ItRw_Bolt,  30);
-		
-		// ------ Waffen ------
-		CreateInvItems (slf,ItMw_ShortSword3 , 1); 
-		CreateInvItems (slf,ItMw_Folteraxt , 1); 
-		CreateInvItems (slf,ItMw_Morgenstern , 1); 
-		CreateInvItems (slf,ItMw_Richtstab , 1); 
-		
-		CreateInvItems (slf,ITRW_REVIVED_BOW_SMALL_01 , 1); 
-		CreateInvItems (slf,ITRW_REVIVED_BOW_LONG_01 , 1); 
-		CreateInvItems (slf,ITRW_REVIVED_BOW_LONG_04 , 1); 
-		CreateInvItems (slf,ITRW_REVIVED_CROSSBOW_LIGHT_02 , 1); 
-		
-		CreateInvItems (slf,ITAM_REVIVED_PROT_ARROW_01 , 1);
-
-		// ------ Revived ------
-		CreateInvItems (slf, ITBE_REVIVED_ARCHER, 1); 
-				
+		CreateInvItems (slf, ItFo_Water, 5);
+		CreateInvItems (slf, ItFo_Bread, 4);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 2);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 2);
+		CreateInvItems (slf, ItKE_Lockpick, 3);
+		CreateInvItems (slf, ItLsTorch, 5);
 		Jora_ItemsGiven_Chapter_1 = TRUE;
 	};
 	
 	if ((Kapitel >= 2)
 	&& (Jora_ItemsGiven_Chapter_2 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 100); 
-		CreateInvItems (slf,ItMiSwordraw,1); 
-		CreateInvItems (slf,ItPl_Health_Herb_01 , 3);
-		CreateInvItems (slf,ItPl_Mushroom_02 , 2);
-		CreateInvItems (slf,ItFo_Fishsoup, 3); 
-		CreateInvItems (slf, ItRw_Arrow, 60);
-		CreateInvItems (slf, ItRw_Bolt,  60);
-			
+		CreateInvItems (slf, ItMi_Gold, 200); 
+		CreateInvItems (slf, ItFo_Fish, 3);
+		CreateInvItems (slf, ItPl_Mushroom_01, 4);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 2);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 2);
+		CreateInvItems (slf, ItKE_Lockpick, 4);
+		CreateInvItems (slf, ItLsTorch, 5);
 		Jora_ItemsGiven_Chapter_2 = TRUE;
 	};
 
 	if ((Kapitel >= 3)
 	&& (Jora_ItemsGiven_Chapter_3 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 100); 
-		CreateInvItems (slf,ItFo_Wine,1); 
-		CreateInvItems (slf,ItPl_Mana_Herb_01 , 4);
-		CreateInvItems (slf,ItPl_Health_Herb_02 , 3);
-		CreateInvItems (slf, ItRw_Arrow, 60);
-		CreateInvItems (slf, ItRw_Bolt,  60);
-			
+		CreateInvItems (slf, ItMi_Gold, 300); 
+		CreateInvItems (slf, ItFo_Stew, 3);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02, 3);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02, 3);
+		CreateInvItems (slf, ItKE_Lockpick, 5);
+		CreateInvItems (slf, ItLsTorch, 5);
+		CreateInvItems (slf, ItSc_Light, 3);
 		Jora_ItemsGiven_Chapter_3 = TRUE;
 	};
 
 	if ((Kapitel >= 4)
 	&& (Jora_ItemsGiven_Chapter_4 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 150); 
-		CreateInvItems (slf,ItMi_Rockcrystal,1); 
-		CreateInvItems (slf,ItPl_Mana_Herb_02 , 4);
-		CreateInvItems (slf,ItPl_Health_Herb_03 , 5);
-		CreateInvItems (slf, ItRw_Arrow, 60);
-		CreateInvItems (slf, ItRw_Bolt,  60);	
-		CreateInvItems (slf, ItBe_Addon_STR_10, 1);
+		CreateInvItems (slf, ItMi_Gold, 400); 
+		CreateInvItems (slf, ItFo_Sausage, 4);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02, 3);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02, 3);
+		CreateInvItems (slf, ItKE_Lockpick, 5);
+		CreateInvItems (slf, ItSc_Light, 3);
 		Jora_ItemsGiven_Chapter_4 = TRUE;
 	};
 
 	if ((Kapitel >= 5)
 	&& (Jora_ItemsGiven_Chapter_5 == FALSE))
 	{
-		CreateInvItems (slf, ItMi_Gold, 200); 
-		CreateInvItems (slf,ItMi_Coal,3); 
-		CreateInvItems (slf,ItMi_Pitch,2); 
-		CreateInvItems (slf,ItPl_Health_Herb_03 , 5);
-		CreateInvItems (slf,ItPl_Mana_Herb_03 , 5);
-		CreateInvItems (slf, ItRw_Arrow, 160);
-		CreateInvItems (slf, ItRw_Bolt,  160);	
-		
+		CreateInvItems (slf, ItMi_Gold, 500); 
+		CreateInvItems (slf, ItFo_Bacon, 4);
+		CreateInvItems (slf, ItPl_Mana_Herb_02, 2);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_03, 4);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_03, 4);
+		CreateInvItems (slf, ItKE_Lockpick, 6);
+		CreateInvItems (slf, ItSc_Light, 3);
 		Jora_ItemsGiven_Chapter_5 = TRUE;
 	};
 };
