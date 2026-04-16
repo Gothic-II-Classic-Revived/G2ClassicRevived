@@ -175,51 +175,6 @@ func void DIA_Pedro_TEMPEL_Info ()
  	};
 };
 
-//*********************************************************************
-//	ADDON Statuette
-//*********************************************************************
-instance DIA_Addon_Pedro_Statuette (C_INFO)
-{
-	npc			 = 	NOV_600_Pedro;
-	nr			 = 	2;
-	condition	 = 	DIA_Addon_Pedro_Statuette_Condition;
-	information	 = 	DIA_Addon_Pedro_Statuette_Info;
-	permanent	 = 	FALSE;
-	description	 = 	"I've got this statuette...";
-};
-func int DIA_Addon_Pedro_Statuette_Condition ()
-{	
-	if (Npc_HasItems (other,ItMi_LostInnosStatue_Daron))
-	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
-	//&& (Npc_KnowsInfo (other,DIA_Pedro_Rules))
-	&& (hero.guild != GIL_NOV)
-	&& (hero.guild != GIL_KDF)
-	//&& (hero.guild != GIL_NONE)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Addon_Pedro_Statuette_Info ()
-{
-	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_15_00"); //I've got this statuette here. I think they're missing it in the monastery.
-	if (Kapitel <= 3)
-	{
-		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_03"); //I can't let you in even with this precious gem, I'm afraid.
-	};
-	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_Abgeben_15_00"); //Can I just hand the statuette over to you?
-	AI_Output (self, other, "DIA_Addon_Pedro_Statuette_Abgeben_09_01"); //Of course, I shall take care of it. Thank you for this unselfish deed.
-	
-		if B_GiveInvItems (other, self, ItMi_LostInnosStatue_Daron,1)
-		{
-			Npc_RemoveInvItems (self, ItMi_LostInnosStatue_Daron,1);
-		};
-		
-	MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
-	MiltenORPedro_LostInnosStatue_Daron = TRUE;
-	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
-	B_LogEntry (TOPIC_Revived_DaronStatuette, "I gave the statuette back to Pedro. I should return to Daron to report the good news."); 
-	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
-};
 ///////////////////////////////////////////////////////////////////////
 //	Regeln
 ///////////////////////////////////////////////////////////////////////
@@ -251,6 +206,58 @@ func void DIA_Pedro_Rules_Info ()
 	if (hero.guild == GIL_NONE)
 	{
 		AI_Output (self ,other,"DIA_Pedro_Rules_09_07"); //If you are prepared to follow these rules and have the offering to Innos, we are willing to accept you into our monastery as a novice.
+	};
+};
+
+//*********************************************************************
+//	ADDON Statuette
+//*********************************************************************
+instance DIA_Addon_Pedro_Statuette (C_INFO)
+{
+	npc			 = 	NOV_600_Pedro;
+	nr			 = 	2;
+	condition	 = 	DIA_Addon_Pedro_Statuette_Condition;
+	information	 = 	DIA_Addon_Pedro_Statuette_Info;
+	permanent	 = 	FALSE;
+	description	 = 	"I've got this statuette...";
+};
+func int DIA_Addon_Pedro_Statuette_Condition ()
+{	
+	if (Npc_HasItems (other,ItMi_LostInnosStatue_Daron))
+	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
+	&& (hero.guild != GIL_NOV)
+	&& (hero.guild != GIL_KDF)
+	{
+		return TRUE;
+	};
+};
+func void DIA_Addon_Pedro_Statuette_Info ()
+{
+	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_15_00"); //I've got this statuette here. I think they're missing it in the monastery.
+	if (Kapitel <= 3)
+	&& (hero.guild != GIL_NONE)
+	{
+		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_03"); //I can't let you in even with this precious gem, I'm afraid.
+
+		AI_Output (other, self, "DIA_Addon_Pedro_Statuette_Abgeben_15_00"); //Can I just hand the statuette over to you?
+		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_Abgeben_09_01"); //Of course, I shall take care of it. Thank you for this unselfish deed.
+
+		if B_GiveInvItems (other, self, ItMi_LostInnosStatue_Daron,1)
+		{
+			Npc_RemoveInvItems (self, ItMi_LostInnosStatue_Daron,1);
+		};
+		
+		MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
+		MiltenORPedro_LostInnosStatue_Daron = TRUE;
+		B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
+		B_LogEntry (TOPIC_Revived_DaronStatuette, "I gave the statuette back to Pedro. I should return to Daron to report the good news."); 
+		Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
+	} 
+	else if (hero.guild == GIL_NONE)
+	{
+		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_02"); //Well, under these truly exceptional circumstances you are free to become a novice.
+	
+		B_LogEntry (Topic_Kloster,"Pedro the novice will let me into the monastery because I was carrying the missing stauette. I was supposed to give it to someone in the monastery."); 
 	};
 };
 
@@ -291,12 +298,18 @@ func void DIA_Pedro_AUFNAHME_Info ()
 		AI_Output (self, other, "DIA_Pedro_AUFNAHME_09_01"); //You have already chosen your path. The path of magic is closed to you.
 		DIA_Pedro_AUFNAHME_NOPERM = TRUE;
 	}
+	else if (Npc_KnowsInfo (other, DIA_Addon_Pedro_Statuette))
+	&& (Npc_HasItems(other, ItMi_LostInnosStatue_Daron) >= 1)
+	{
+		AI_Output (self, other, "DIA_Addon_Pedro_AUFNAHME_09_02"); //Is that really what you wish to do? For you must know that there will be no turning back for you then.
+		B_DIA_Pedro_AUFNAHME_Choice ();
+	}
 	else if (hero.guild == GIL_NONE )
 	&& (Npc_HasItems (hero, ItMi_Gold) >= Summe_Kloster)
 	&& Wld_DetectNpc (self,Follow_Sheep,NOFUNC,-1) 
 	&& (Npc_GetDistToNpc(self, other) < 1000)
 	{
-		AI_Output (self, other, "DIA_Addon_Pedro_AUFNAHME_09_02"); //Is that really what you wish to do? For you must know that there will be no turning back for you then.
+		
 		AI_Output (self, hero, "DIA_Pedro_AUFNAHME_09_03"); //I see that you have brought the required offering. If you are truly willing, you are now free to become a novice.
 		AI_Output (self, hero, "DIA_Pedro_AUFNAHME_09_04"); //However, if you make this decision there is no going back - consider well if this is your path!
 		
@@ -329,6 +342,11 @@ FUNC VOID DIA_Pedro_AUFNAHME_YES()
 	
 	DIA_Pedro_AUFNAHME_NOPERM = TRUE;
 	NOV_Aufnahme = TRUE;
+ 	if (Npc_KnowsInfo (other, DIA_Addon_Pedro_Statuette))
+ 	{
+		Pedro_NOV_Aufnahme_LostInnosStatue_Daron = TRUE;
+		Liesel_Giveaway = LOG_OBSOLETE;
+	};
 	B_GivePlayerXP (XP_AufnahmeNovize);
 	
 	Wld_AssignRoomToGuild ("Kloster02",GIL_KDF);
