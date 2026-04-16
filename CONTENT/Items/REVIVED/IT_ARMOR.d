@@ -1127,6 +1127,105 @@ FUNC VOID UnEquip_GRD_ARMOR()
 	};
 };
 
+//****************************************************************************
+//			GUARDS - OLD
+//****************************************************************************
+INSTANCE ITAR_REVIVED_GRD_L_02 (C_Item)
+{
+	name 					=	"Light Guard's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_GRD_L;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_GRD_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_L;
+
+	visual 					=	"REV_GRDL_02.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_L_02.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+INSTANCE ITAR_REVIVED_GRD_M_02 (C_Item)
+{
+	name 					=	"Guard's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_GRD_M;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_M;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_M;
+	protection [PROT_POINT] = 	REV_Prot_Point_GRD_M;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_M;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_M;
+
+	visual 					=	"REV_GRDM_02.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_M_02.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+INSTANCE ITAR_REVIVED_GRD_H_02 (C_Item)
+{
+	name 					=	"Heavy Guard's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_GRD_H;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_GRD_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_H;
+ 
+	visual 					=	"REV_GRDH_02.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_H_02.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
 
 
 //****************************************************************************
