@@ -6,6 +6,8 @@ const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
 var int			MiltenORPedro_LostInnosStatue_Daron;
 var int 		TOPIC_Revived_DaronStatuette_END;
 
+var int			OrlanWine_Scam;
+
 const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
 
 const string	TOPIC_Revived_EddaStatue			=	"Robbed in the Harbour";

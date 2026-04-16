@@ -36,7 +36,7 @@ instance DIA_Orlan_Wein		(C_INFO)
 func int DIA_Orlan_Wein_Condition ()
 {	
 	if (MIS_GoraxWein == LOG_RUNNING)
-	&& (Npc_HasItems (other, ItFo_Wine) >= 12)
+	&& (Npc_HasItems (other, ITFO_REVIVED_MAGEWINE) >= 12)
 	{
 		return TRUE;
 	};
@@ -58,7 +58,9 @@ FUNC VOID DIA_Orlan_Wein_JA()
 	AI_Output (self, other, "DIA_Orlan_Wein_JA_05_01"); //Here you go. It was a pleasure doing business with you.
 	
 	B_GiveInvItems (self, other, ItmI_Gold, 100);
-	B_GiveInvItems (other, self, ItFo_Wine, 12);
+	B_GiveInvItems (other, self, ITFO_REVIVED_MAGEWINE, 12);
+
+	OrlanWine_Scam = TRUE;
 	
 	Info_ClearChoices (DIA_Orlan_Wein);
 };
@@ -67,11 +69,12 @@ FUNC VOID DIA_Orlan_Wein_NEIN()
 	AI_Output (other, self, "DIA_Orlan_Wein_NEIN_15_00"); //Are you trying to pull a fast one? The price is 240 gold coins.
 	AI_Output (self, other, "DIA_Orlan_Wein_NEIN_05_01"); //So, Gorax warned you, did he? All right, maybe the two of us can do a bit of business. Look - I'll give you 100 gold pieces for the wine.
 	AI_Output (self, other, "DIA_Orlan_Wein_NEIN_05_02"); //You tell Gorax that I pulled the wool over your eyes and you'll get FOUR spell scrolls from me.
-	
+	AI_Output (other, self, "DIA_Orlan_Wein_Was_15_00"); //What kind of spell scrolls are they?
+	AI_Output (self, other, "DIA_Orlan_Wein_Was_05_01"); //No idea - I don't know anything about that. They're from a guest who... eh... forgot them here, yeah.
+
 	Info_ClearChoices (DIA_Orlan_Wein);
 	Info_AddChoice (DIA_Orlan_Wein,"Hey, just give me the 240 gold coins.",DIA_Orlan_Wein_Nie);
 	Info_AddChoice (DIA_Orlan_Wein,"All right, sounds fair enough. Give me those spell scrolls.",DIA_Orlan_Wein_Okay);
-	Info_AddChoice (DIA_Orlan_Wein,"What kind of spell scrolls are they?",DIA_Orlan_Wein_Was);
 };
 FUNC VOID DIA_Orlan_Wein_Nie()
 {
@@ -79,7 +82,9 @@ FUNC VOID DIA_Orlan_Wein_Nie()
 	AI_Output (self, other, "DIA_Orlan_Wein_Nie_05_01"); //You don't want to do business, eh? -sigh- All right, here's the gold.
 	
 	B_GiveInvItems (self, other, ItmI_Gold, 240);
-	B_GiveInvItems (other, self, ItFo_Wine, 12);
+	B_GiveInvItems (other, self, ITFO_REVIVED_MAGEWINE, 12);
+
+	OrlanWine_Scam = FALSE;
 	
 	Info_ClearChoices (DIA_Orlan_Wein);
 };
@@ -95,19 +100,15 @@ FUNC VOID DIA_Orlan_Wein_Okay()
 	AI_Output (other, self, "DIA_Orlan_Wein_Okay_15_00"); //All right, sounds fair enough. Give me those spell scrolls.
 	AI_Output (self, other, "DIA_Orlan_Wein_Okay_05_01"); //Here are the spell scrolls and the gold.
 	
-	B_GiveInvItems (other, self, ItFo_Wine, 12);
+	B_GiveInvItems (other, self, ITFO_REVIVED_MAGEWINE, 12);
 	
-	
-	CreateInvItems  (hero,ITSC_Light,2);
-	CreateInvItems  (hero,ItSc_LightHeal,1);
-	CreateInvItems  (hero,ItSc_SumGobSkel,1);
+	B_GiveInvItems  (self, other,ItSc_InstantFireball,2);
+	B_GiveInvItems  (self, other,ItSc_FullHeal,1);
+	B_GiveInvItems  (self, other,ItSc_SumGobSkel,1);
+
+	OrlanWine_Scam = TRUE;
 	
 	Info_ClearChoices (DIA_Orlan_Wein);
-};
-FUNC VOID DIA_Orlan_Wein_Was()
-{
-	AI_Output (other, self, "DIA_Orlan_Wein_Was_15_00"); //What kind of spell scrolls are they?
-	AI_Output (self, other, "DIA_Orlan_Wein_Was_05_01"); //No idea - I don't know anything about that. They're from a guest who... eh... forgot them here, yeah.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info WerBistDu
@@ -174,21 +175,20 @@ func void DIA_Orlan_RUESTUNG_Info ()
 	Info_ClearChoices		(DIA_Orlan_RUESTUNG);
 
 	Info_AddChoice			(DIA_Orlan_RUESTUNG, "I'll think about it."	,	DIA_Orlan_RUESTUNG_BACK);	
-	Info_AddChoice			(DIA_Orlan_RUESTUNG, "'Archer's Suit'. Protection: weapons 40, arrows 60, fire 10 (1800 gold)" , DIA_Orlan_RUESTUNG_Buy);	
+	Info_AddChoice			(DIA_Orlan_RUESTUNG, REV_BuildTradeString(ITAR_REVIVED_ARCHER), DIA_Orlan_RUESTUNG_Buy);	
 };  
 
 func void DIA_Orlan_RUESTUNG_Buy ()
 {
-	//AI_Output				(other, self,"DIA_Orlan_RUESTUNG_Buy_15_00"); //I'd like to buy the leather armor.
 	AI_Output				(other, self, "DIA_Orlan_HotelZimmer_ja_15_00"); //All right. Here's the dough.
 
-	if (B_GiveInvItems		(other, self, ITMI_GOLD, 1800))
+	if (B_GiveInvItems		(other, self, ITMI_GOLD, REV_Value_ARCHER))
 		{
 			AI_Output			(self, other,"DIA_Orlan_RUESTUNG_Buy_05_01"); //A wise decision.
 
 			CreateInvItems 		(self, ITAR_REVIVED_ARCHER, 1);
 			B_GiveInvItems		(self, other, ITAR_REVIVED_ARCHER, 1);
-			AI_EquipBestArmor	(other);
+			AI_EquipArmor (other, ITAR_REVIVED_ARCHER);
 			DIA_Orlan_RUESTUNG_noPerm = TRUE;
 		}
 	else

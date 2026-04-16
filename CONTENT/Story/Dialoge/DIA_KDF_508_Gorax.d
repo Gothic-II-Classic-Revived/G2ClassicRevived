@@ -331,7 +331,7 @@ func void DIA_Gorax_Aufgabe2_Info ()
 	AI_Output (self, other, "DIA_Gorax_Aufgabe2_14_02"); //Orlan, the landlord of the inn 'The Dead Harpy' has ordered a shipment. We've agreed on 240 gold pieces for the bottles.
 	AI_Output (self, other, "DIA_Gorax_Aufgabe2_14_03"); //Bring him these bottles - but don't let him shortchange you.
 	 
-	B_GiveInvItems (self, other, ItFo_Wine,12);
+	B_GiveInvItems (self, other, ITFO_REVIVED_MAGEWINE, 12);
 	MIS_GoraxWein = LOG_RUNNING; 
 	
 	Log_CreateTopic (Topic_GoraxWein,LOG_MISSION);
@@ -370,48 +370,48 @@ func void DIA_Gorax_Orlan_Info ()
 		AI_Output (self, other, "DIA_Gorax_Orlan_14_01"); //And, did you get the 240 gold coins?
 	
 		DIA_Gorax_Orlan_permanent = TRUE;
-		Info_ClearChoices (DIA_Gorax_Orlan);
-	
-		Info_AddChoice (DIA_Gorax_Orlan,"He put one over on me! (Give 100 gold)",DIA_Gorax_Orlan_100);
-		Info_AddChoice (DIA_Gorax_Orlan,"I've got the gold. (Give 240 gold)",DIA_Gorax_Orlan_240);
+		
+		if(OrlanWine_Scam == TRUE)
+		{
+			AI_Output (other, self, "DIA_Gorax_Orlan_100_15_00"); //He put one over on me!
+			AI_Output (self, other, "DIA_Gorax_Orlan_100_14_01"); //You sold it to him cheaper? Oh no, why did I have to send YOU of all people?
+			AI_Output (self, other, "DIA_Gorax_Orlan_100_14_02"); //You really are utterly and completely useless. Now get out of my sight.
+			
+			B_GiveInvItems (other, self, ItMI_Gold, 100);
+			
+			MIS_GoraxWein = LOG_FAILED;
+			
+			Info_ClearChoices (DIA_Gorax_Orlan);
+			AI_StopProcessInfos (self);
+		}
+		else 
+		{
+			AI_Output (other, self, "DIA_Gorax_Orlan_240_15_00"); //I've got the gold.
+			
+			if B_GiveInvItems (other, self, ItMI_Gold, 240)	
+			{
+				AI_Output (self, other, "DIA_Gorax_Orlan_240_14_01"); //Excellent. You're really useful. Take this spell scroll of healing as a reward. And now go and find yourself something else to do.
+				
+				B_GiveInvItems  (self, other,ItSc_FullHeal,1);
+
+				MIS_GoraxWein = LOG_SUCCESS;
+				B_GivePlayerXP (XP_Goraxwein);			
+			}
+			else
+			{
+				AI_Output (self, other, "DIA_Gorax_Orlan_240_14_02"); //But you've already spent part of the money, haven't you? You're good for nothing - begone!
+				MIS_GoraxWein = LOG_FAILED; 
+				B_GiveInvItems (other, self, ItMI_Gold, Npc_HasItems (other, ItmI_Gold));
+			};
+			
+			Info_ClearChoices (DIA_Gorax_Orlan);
+		};
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Gorax_Orlan_14_02"); //What have you done with that gold? Did you spend it? Go get it and then come back!
 		
 	};
-};
-FUNC VOID DIA_Gorax_Orlan_100 ()
-{
-	AI_Output (other, self, "DIA_Gorax_Orlan_100_15_00"); //He put one over on me!
-	AI_Output (self, other, "DIA_Gorax_Orlan_100_14_01"); //You sold it to him cheaper? Oh no, why did I have to send YOU of all people?
-	AI_Output (self, other, "DIA_Gorax_Orlan_100_14_02"); //You really are utterly and completely useless. Now get out of my sight.
-	
-	B_GiveInvItems (other, self, ItMI_Gold, 100);
-	
-	MIS_GoraxWein = LOG_FAILED;
-	 
-	Info_ClearChoices (DIA_Gorax_Orlan);
-	AI_StopProcessInfos (self);
-};
-FUNC VOID DIA_Gorax_Orlan_240 ()
-{
-	AI_Output (other, self, "DIA_Gorax_Orlan_240_15_00"); //I've got the gold.
-	
-	if B_GiveInvItems (other, self, ItMI_Gold, 240)	
-	{
-		AI_Output (self, other, "DIA_Gorax_Orlan_240_14_01"); //Excellent. You're really useful. Take this spell scroll of healing as a reward. And now go and find yourself something else to do.
-		MIS_GoraxWein = LOG_SUCCESS;
-		B_GivePlayerXP (XP_Goraxwein);			
-	}
-	else
-	{
-		AI_Output (self, other, "DIA_Gorax_Orlan_240_14_02"); //But you've already spent part of the money, haven't you? You're good for nothing - begone!
-		MIS_GoraxWein = LOG_FAILED; 
-		B_GiveInvItems (other, self, ItMI_Gold, Npc_HasItems (other, ItmI_Gold));
-	};
-	
-	Info_ClearChoices (DIA_Gorax_Orlan);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info JOB
