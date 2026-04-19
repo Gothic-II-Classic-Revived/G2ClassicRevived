@@ -14,7 +14,7 @@ INSTANCE DIA_Xardas_FirstEXIT(C_INFO)
                        
 FUNC INT DIA_Xardas_FirstEXIT_Condition()
 {
-	if (Npc_KnowsInfo (other, DIA_Xardas_TODO))
+	if (Npc_KnowsInfo (other, DIA_Xardas_HELLO))
 	&& (Kapitel < 3)
 	{
 		return TRUE;
@@ -112,32 +112,7 @@ FUNC VOID DIA_Xardas_Hello_Info()
 	AI_Output (self, other, "DIA_Xardas_AWAY_14_01"); //If we flee now, then it's only to face the dragons later.
 	AI_Output (self, other, "DIA_Xardas_AWAY_14_02"); //With the help of the soldiers and the magicians who live around here, we can stop them before their army is completely formed.
 	AI_Output (self, other, "DIA_Xardas_AWAY_14_03"); //We're not going to get a better chance.
-};
 
-///////////////////////////////////////////////////////////////////////
-//	Info TODO
-///////////////////////////////////////////////////////////////////////
-
-instance DIA_Xardas_TODO (C_INFO) 		//E1
-{
-	npc			 = 	NONE_100_Xardas;
-	nr			 = 	1;
-	condition	 = 	DIA_Xardas_TODO_Condition;
-	information	 = 	DIA_Xardas_TODO_Info;
-	Permanent 	 =  FALSE;
-	description	 = 	"What can we do now?";
-};
-
-func int DIA_Xardas_TODO_Condition ()
-{	
-	if (Kapitel < 3)	
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Xardas_TODO_Info ()
-{
 	AI_Output (other, self, "DIA_Xardas_TODO_15_00"); //What can we do?
 	AI_Output (self, other, "DIA_Xardas_TODO_14_01"); //This time we cannot handle it by ourselves. Only the power of Innos can help us against those dragons.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_02"); //A group of paladins is stationed in the city of Khorinis, not far from here.
@@ -171,7 +146,8 @@ instance DIA_Xardas_WEAPON (C_INFO)		//E1
 
 func int DIA_Xardas_WEAPON_Condition ()
 {	
-	if (Kapitel < 3)	
+	if (Npc_KnowsInfo (other, DIA_Xardas_HELLO))
+	&& (Kapitel < 3)	
 	{
 		return TRUE;
 	};
@@ -198,7 +174,7 @@ instance DIA_Xardas_PALADIN	(C_INFO) //E2 nach TODO
 };
 func int DIA_Xardas_PALADIN_Condition ()
 {	
-	if (Npc_KnowsInfo (other, DIA_Xardas_TODO))
+	if (Npc_KnowsInfo (other, DIA_Xardas_HELLO))
 	&& (Lothar.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (Kapitel < 3)	
 	{
@@ -229,7 +205,7 @@ instance DIA_Xardas_Khorinis (C_INFO) //E2 nach TODO
 };
 func int DIA_Xardas_Khorinis_Condition ()
 {	
-	if (Npc_KnowsInfo (other, DIA_Xardas_TODO))
+	if (Npc_KnowsInfo (other, DIA_Xardas_HELLO))
 	&& (Lothar.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (Kapitel < 3)	
 	{
@@ -535,12 +511,8 @@ func void DIA_Xardas_DMTSINDDA_Beweis ()
 	AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_Beweis_15_02"); //I received a letter from Garond, the commander of the paladins in the Valley of Mines. In it, he asks for reinforcements.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_Beweis_14_03"); //That should be enough to convince that militant warhorse. Well done.
 	
-	Info_AddChoice	(DIA_Xardas_DMTSINDDA, "What will be the next step now?", DIA_Xardas_DMTSINDDA_DMT_WhatToDo );
 	B_GivePlayerXP (XP_Ambient);
-};
 
-func void DIA_Xardas_DMTSINDDA_DMT_WhatToDo ()
-{
 	AI_Output			(other, self, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_15_00"); //What will be the next step now?
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_01"); //Go and bring Lord Hagen the letter from Garond so that he may grant you access to the Eye of Innos.
 	AI_Output			(self, other, "DIA_Xardas_DMTSINDDA_DMT_WhatToDo_14_02"); //Then go to the monastery and talk to Pyrokar. He must give you the Eye.
