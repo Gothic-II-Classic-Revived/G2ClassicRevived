@@ -351,7 +351,7 @@ FUNC INT DIA_Dyrian_other_Condition()
 	if (other.guild != GIL_KDF)
 	&& (other.guild != GIL_NOV)
 	&& (other.guild != GIL_NONE)
-	
+	&& (self.guild == GIL_NOV)
 	{
 		return TRUE;
 	};	
@@ -360,6 +360,34 @@ FUNC VOID DIA_Dyrian_other_Info()
 {
 	B_Dyrian_PlayerHowIsIt();
 	AI_Output (self ,other,"DIA_Dyrian_HowIsIt_13_02"); //I thank Innos that I can be here in the monastery.
+	
+	AI_StopProcessInfos (self);	
+};
+//*****************************************************************************
+//			Wie gehts? //bing bong
+//*****************************************************************************
+INSTANCE DIA_Dyrian_other2   (C_INFO)
+{
+	npc         = NOV_604_Dyrian;
+	nr          = 3;
+	condition   = DIA_Dyrian_other2_Condition;
+	information = DIA_Dyrian_other2_Info;
+	permanent   = TRUE;
+	description = "How's it going?";
+};
+FUNC INT DIA_Dyrian_other2_Condition()
+{
+	if (other.guild != GIL_KDF)
+	&& (self.guild != GIL_NOV)
+	&& (Kapitel >= 3)
+	{
+		return TRUE;
+	};	
+};
+FUNC VOID DIA_Dyrian_other2_Info()
+{
+	B_Dyrian_PlayerHowIsIt();
+	Npc_SetRefuseTalk(self, 5);
 	
 	AI_StopProcessInfos (self);	
 };
@@ -439,7 +467,6 @@ INSTANCE DIA_Dyrian_nachher   (C_INFO)
 FUNC INT DIA_Dyrian_nachher_Condition()
 {
 	if  Npc_KnowsInfo (other,DIA_Dyrian_Kneipe)
-	
 	{
 		return TRUE;
 	};	

@@ -135,6 +135,10 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		if ((!Npc_IsDead (Dyrian)) && (hero.guild != GIL_KDF))
 		{
 			B_StartOtherRoutine (Dyrian,"NOFAVOUR");
+			Dyrian.guild = GIL_OUT;
+			Npc_RemoveInvItem(Dyrian, ITAR_NOV_L);
+			CreateInvItems(Dyrian, ITAR_BAU_L, 1);
+			AI_EquipArmor(Dyrian, ITAR_BAU_L);
 		};
 		
 		if (!Npc_IsDead (Hodges))
