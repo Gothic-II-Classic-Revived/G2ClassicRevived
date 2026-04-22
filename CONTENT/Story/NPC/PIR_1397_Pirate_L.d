@@ -2,7 +2,7 @@ instance PIR_1397_Pirate_L (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_ADDON_PIRAT; //Hank
-	guild 		= GIL_PIR;
+	guild 		= GIL_BDT; //GIL_PIR;
 	id 			= 1397;
 	voice 		= 6;
 	flags       = 0;									

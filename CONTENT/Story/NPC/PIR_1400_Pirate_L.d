@@ -2,7 +2,7 @@ instance PIR_1400_Pirate_L (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_ADDON_PIRAT; //Skip
-	guild 		= GIL_PIR;
+	guild 		= GIL_BDT; //GIL_PIR;
 	id 			= 1400;
 	voice 		= 1;
 	flags       = 0;								

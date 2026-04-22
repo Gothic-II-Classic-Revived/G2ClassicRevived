@@ -2,7 +2,7 @@ instance PIR_1398_Pirate_M (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_ADDON_PIRAT; //Angus
-	guild 		= GIL_PIR;
+	guild 		= GIL_BDT; //GIL_PIR;
 	id 			= 1398;
 	voice 		= 1;
 	flags       = 0;			

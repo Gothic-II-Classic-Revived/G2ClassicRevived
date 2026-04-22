@@ -2,7 +2,7 @@ instance PIR_1399_Pirate_H (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_ADDON_PIRAT; //Greg
-	guild 		= GIL_PIR;
+	guild 		= GIL_BDT; //GIL_PIR;
 	id 			= 1399;
 	voice 		= 13;
 	flags       = 0;									
