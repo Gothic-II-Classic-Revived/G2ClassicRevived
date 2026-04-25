@@ -35,7 +35,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_2 ()
 		// ------ Immortal-Flags löschen ------
 
 		// ------ TAs ändern ------
-		//------------- Steht unten am Weg 1. Charakter in Oldworld---------------------------------------------------------
+	
 	// ------ Respawn ------
 	if (ENTER_OLDWORLD_FIRSTTIME_TRIGGER_ONETIME == FALSE)
 		{
@@ -67,6 +67,10 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_2 ()
 			
 			//in der Wolfshöhle gemauerter Raum
 			B_KillNpc (Olav);
+	
+			// ------ VOBTREES ------
+				Ext_InsertVobTree("VOBTREE/OW_ABANDONEDMINE_MOLERATS.ZEN");
+				Ext_InsertVobTree("VOBTREE/OW_BANDITS_ERPRESSER.ZEN");
 				
 			ENTER_OLDWORLD_FIRSTTIME_TRIGGER_ONETIME = TRUE;
 		};

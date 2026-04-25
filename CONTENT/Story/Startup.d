@@ -2096,10 +2096,6 @@ func void STARTUP_SURFACE ()
 
 		// Exchange Place
 		Wld_SendTrigger("EVT_OW_STARTLOCKOUT_MOVER");
-	
-	// ------ VOBTREES ------
-		Ext_InsertVobTree("VOBTREE/OW_ABANDONEDMINE_MOLERATS.ZEN");
-		Ext_InsertVobTree("VOBTREE/OW_BANDITS_ERPRESSER.ZEN");
 
 		B_ENTER_OLDWORLD();
 	};
