@@ -10,7 +10,8 @@ instance VLK_412_Harad (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 25);																
+	B_SetAttributesForLevel(self, 25);		
+	self.attribute[ATR_STRENGTH] = 120;	// needs to equip the Orc Sword 
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
