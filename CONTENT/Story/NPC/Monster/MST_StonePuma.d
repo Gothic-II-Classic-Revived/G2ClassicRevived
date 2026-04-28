@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_StonePuma(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 20);
+	B_SetMonsterAttributesForLevel(self, 24);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;

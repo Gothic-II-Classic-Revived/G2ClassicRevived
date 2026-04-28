@@ -114,25 +114,3 @@ INSTANCE Kervo_Lurker6	(Mst_Default_Lurker)
 	aivar[AIV_MaxDistToWp]			= 500;
 	aivar[AIV_OriginalFightTactic] 	= FAI_LURKER;
 };
-
-
-//Addon
-//Beachlurker
-
-INSTANCE BeachLurker1	(Mst_Default_Lurker)
-{
-	B_SetVisuals_Lurker();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE BeachLurker2	(Mst_Default_Lurker)
-{
-	B_SetVisuals_Lurker();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE BeachLurker3	(Mst_Default_Lurker)
-{
-	B_SetVisuals_Lurker();
-	Npc_SetToFistMode(self);
-};

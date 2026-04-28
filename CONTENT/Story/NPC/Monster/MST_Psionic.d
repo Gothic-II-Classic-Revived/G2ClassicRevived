@@ -7,7 +7,7 @@ PROTOTYPE Mst_Default_Psionic(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_FANATIC;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 30);
+	B_SetMonsterAttributesForLevel(self, 20);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	150;
@@ -74,6 +74,8 @@ INSTANCE Zombie_Novice03	(Mst_Default_Psionic)
 INSTANCE Skeleton_Templar	(Mst_Default_Psionic)
 {
 	name						=	"Undead Templar";
+
+	B_SetMonsterAttributesForLevel(self, 30);
 
 	Mdl_SetVisual		(self,	"HumanS.mds");
 	//Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds"); //FIXME s.Skeleton.

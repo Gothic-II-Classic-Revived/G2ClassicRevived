@@ -748,7 +748,7 @@ func void STARTUP_DEMONTOWER ()
 	// Demon Tower
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_04");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_05");
-	Wld_InsertNpc				(Gobbo_SkeletonOWDemonTower,"DT_E1_06"); // Hat den Teleport ItRu_TeleportOWDemonTower in der Tasche
+	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_06");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_07");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_08");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_09");
@@ -1362,7 +1362,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Zombie01,"LOCATION_05_02_STONEHENGE");
 	Wld_InsertNpc		(Zombie02,"LOCATION_05_02_STONEHENGE2");
 	Wld_InsertNpc		(Zombie04,"LOCATION_05_02_STONEHENGE3");
-	Wld_InsertNpc		(Shadowbeast_Skeleton_Angar,"LOCATION_05_02_STONEHENGE4");
+	Wld_InsertNpc		(Shadowbeast_Skeleton,"LOCATION_05_02_STONEHENGE4");
 	Wld_InsertNpc		(Zombie03,"LOCATION_05_02_STONEHENGE5");
 
 	Wld_InsertNpc		(Skeleton_Lord,"OW_PATH_033_TO_CAVE5_000");
@@ -1707,9 +1707,9 @@ func void STARTUP_SURFACE ()
 
 
 	// Road to Stone Fortress
-	Wld_InsertNpc		(Waran,"PATH_TO_PLATEAU01");
-	Wld_InsertNpc		(Waran,"PATH_TO_PLATEAU01");
-	Wld_InsertNpc		(Waran,"PATH_TO_PLATEAU01"); 
+	Wld_InsertNpc		(BeachWaran,"OW_OC_PSI_MOVEMENT1");
+	Wld_InsertNpc		(BeachWaran,"OW_OC_PSI_MOVEMENT1");
+	Wld_InsertNpc		(BeachWaran,"OW_OC_PSI_MOVEMENT1"); 
 	
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE_02_05");
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE_02_05");
@@ -1902,6 +1902,12 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_WOLF05_SPAWN02");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_WOLF05_SPAWN02");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_WOLF05_SPAWN02");
+
+	// Orc Pallisade
+	Wld_InsertNpc	  	(OrcShaman_Sit,"OW_PATH_290");
+	Wld_InsertNpc	  	(OrcElite_Roam,"OW_PATH_290");
+	Wld_InsertNpc	  	(OrcElite_Roam,"OW_PATH_290");
+	Wld_InsertNpc	  	(OrcElite_Roam,"OW_PATH_290");
 
 	// Orc Tents
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_000");

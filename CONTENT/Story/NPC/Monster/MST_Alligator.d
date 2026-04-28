@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Addon_Alligator (C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_Alligator;
 	
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 12);
+	B_SetMonsterAttributesForLevel(self, 14);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;

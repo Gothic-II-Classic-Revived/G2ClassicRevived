@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Scavenger_Demon(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SCAVENGER_DEMON;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 10);
+	B_SetMonsterAttributesForLevel(self, 8);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;

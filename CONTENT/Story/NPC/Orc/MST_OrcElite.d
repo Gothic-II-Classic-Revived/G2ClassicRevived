@@ -11,7 +11,7 @@ PROTOTYPE Mst_Default_OrcElite(C_Npc)
 	voice							=	18;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 60);
+	B_SetMonsterAttributesForLevel(self, 50);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	200;

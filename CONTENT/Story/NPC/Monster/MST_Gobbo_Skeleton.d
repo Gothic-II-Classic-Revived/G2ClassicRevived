@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Gobbo_Skeleton(C_NPC)
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_SKELETON;
 	
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 15);
+	B_SetMonsterAttributesForLevel(self, 10);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	75;
@@ -85,15 +85,3 @@ INSTANCE Summoned_Gobbo_Skeleton (Mst_Default_Gobbo_Skeleton)
 	
 	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
 };
-
-
-//************************************
-//	Gobbo_Skeleton im OW Dämonenturm	
-//************************************
-INSTANCE Gobbo_SkeletonOWDemonTower	(Mst_Default_Gobbo_Skeleton)
-{
-	B_SetVisuals_Gobbo_Skeleton();
-	
-	Npc_SetToFightMode (self, ITMW_REVIVED_1H_BRANCH_01); //Waffe ist nur Optik - Schaden wird NUR über STR bestimmt (Gobbo ist als Monster im Fistmode)
-};
-	

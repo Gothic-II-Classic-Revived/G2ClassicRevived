@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Snapper(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SNAPPER;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 20);
+	B_SetMonsterAttributesForLevel(self, 25);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	75;
@@ -52,6 +52,13 @@ func void B_SetVisuals_Snapper()
 	Mdl_SetVisual			(self,	"Snapper.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Sna_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
+func void B_SetVisuals_SnapperLeader()
+{
+	Mdl_SetVisual			(self,	"DragonSnapper.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"DRAGONSNAPPER_WEAK",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 
@@ -122,25 +129,12 @@ INSTANCE NewMine_Snapper8	(Mst_Default_Snapper)
 
 INSTANCE NewMine_LeadSnapper	(Mst_Default_Snapper)	//OW NewMineMission Kill_Snapper: Bilgot weiß von einem Leittier, das muß tot -> Fajeths Auftrag erledigt! 
 {
-	B_SetVisuals_Snapper();
+	B_SetVisuals_SnapperLeader();
 	Npc_SetToFistMode(self);
-	name	=	"Pack Leader";
+	name	=	"Snapper Pack Leader";
 	
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	60;
-	attribute	[ATR_DEXTERITY]		=	60;
-	attribute	[ATR_HITPOINTS_MAX]	=	160;
-	attribute	[ATR_HITPOINTS]		=	160;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-
-	//----- Protections ----	
-	protection	[PROT_BLUNT]		=	30;
-	protection	[PROT_EDGE]			=	30;
-	protection	[PROT_POINT]		=	20;		
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	30;
-	protection	[PROT_MAGIC]		=	0;
+	B_SetMonsterAttributesForLevel(self, 28);
 	
 	CreateInvItems (self, ItAt_ClawLeader,1);
 };

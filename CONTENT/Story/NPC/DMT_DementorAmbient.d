@@ -8,7 +8,7 @@ PROTOTYPE Default_AmbientDementor (C_NPC)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 100);	
+	B_SetAttributesForLevel(self, 60);
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);	
 														
 		

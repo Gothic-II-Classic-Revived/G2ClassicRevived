@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Giant_DesertRat(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 10);
+	B_SetMonsterAttributesForLevel(self, 6);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	30;

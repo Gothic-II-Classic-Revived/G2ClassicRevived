@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Demon(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_DEMON;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 50);
+	B_SetMonsterAttributesForLevel(self, 40);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	150;

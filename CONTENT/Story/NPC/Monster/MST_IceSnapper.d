@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_IceSnapper(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SNAPPER;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 20);
+	B_SetMonsterAttributesForLevel(self, 28);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	100;

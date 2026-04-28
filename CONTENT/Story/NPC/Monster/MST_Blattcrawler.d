@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Blattcrawler(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLATTCRAWLER;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 15);
+	B_SetMonsterAttributesForLevel(self, 11);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;

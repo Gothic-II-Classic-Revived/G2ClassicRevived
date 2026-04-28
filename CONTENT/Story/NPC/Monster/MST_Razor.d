@@ -53,61 +53,7 @@ func void Set_Razor_Visuals()
 **	Razor    															**
 *************************************************************************/
 
-// in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
-
 INSTANCE Razor (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE CanyonRazor01 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE CanyonRazor02 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor03 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor04 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor05 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor06 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor07 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor08 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor09 (Mst_Default_Razor)
-{
-	Set_Razor_Visuals();
-	Npc_SetToFistMode(self);
-};
-INSTANCE CanyonRazor10 (Mst_Default_Razor)
 {
 	Set_Razor_Visuals();
 	Npc_SetToFistMode(self);

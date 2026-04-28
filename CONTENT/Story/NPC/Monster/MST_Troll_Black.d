@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Troll_Black(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL_BLACK;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 50);
+	B_SetMonsterAttributesForLevel(self, 70);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	300;

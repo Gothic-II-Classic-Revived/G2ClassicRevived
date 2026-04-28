@@ -96,20 +96,16 @@ INSTANCE BlackWolf	(Mst_Default_Warg)
 	level							=	 10;		
 	//für Inventory
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
+
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	30;
-	attribute	[ATR_DEXTERITY]		=	30;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-	
+	B_SetMonsterAttributesForLevel(self, 10);
+
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	25;
-	protection	[PROT_EDGE]			=	25;
-	protection	[PROT_POINT]		=	25;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
+	protection	[PROT_BLUNT]		=	40;
+	protection	[PROT_EDGE]			=	40;
+	protection	[PROT_POINT]		=	40;
+	protection	[PROT_FIRE]			=	20;
+	protection	[PROT_FLY]			=	20;
 	protection	[PROT_MAGIC]		=	0;
 	
 	B_SetVisuals_BlackWolf();

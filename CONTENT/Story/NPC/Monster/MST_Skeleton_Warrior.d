@@ -68,15 +68,6 @@ INSTANCE Shadow_Warrior	(Mst_Shadow_Warrior)
 INSTANCE Shadow_WarriorGeneral	(Mst_Shadow_Warrior)
 {
 	name							=	"Shadow General";
-	level							=	80;
-
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	180; //+ 105 Waffe
-	attribute	[ATR_DEXTERITY]		=	180;
-	attribute	[ATR_HITPOINTS_MAX]	=	500;
-	attribute	[ATR_HITPOINTS]		=	500;
-	attribute	[ATR_MANA_MAX] 		=	200;
-	attribute	[ATR_MANA] 			=	200;
 	
 	EquipItem	(self, ITMW_REVIVED_2H_SWORD_HEAVY_05);
 

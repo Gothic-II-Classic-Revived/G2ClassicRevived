@@ -16,17 +16,16 @@ PROTOTYPE Mst_Default_Dragon_Rock(C_Npc)
 	level = 500;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	150;
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	IMMUNE;
+	protection	[PROT_FIRE]			=	300;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	300;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
-	damage		[DAM_INDEX_FIRE]	=	160;
-	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt für Fire+Fly
+	damage		[DAM_INDEX_FIRE]	=	150;
 	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//------ Kampf-Taktik -----	

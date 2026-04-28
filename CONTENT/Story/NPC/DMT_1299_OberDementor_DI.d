@@ -15,7 +15,7 @@ instance DMT_1299_OberDementor_DI (Npc_Default)
 	bodyStateInterruptableOverride = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 200);	
+	B_SetAttributesForLevel(self, 100);	
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);															
 	
 	// ------ Kampf-Taktik ------

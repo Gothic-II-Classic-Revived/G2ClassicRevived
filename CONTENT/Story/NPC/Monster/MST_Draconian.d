@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Draconian(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_DRACONIAN;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 35);
+	B_SetMonsterAttributesForLevel(self, 40);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	120;

@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Gobbo_Elite (C_NPC)
 	aivar[AIV_MM_REAL_ID]			= 	ID_GOBBO_BLACK;
 	
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 18);
+	B_SetMonsterAttributesForLevel(self, 15);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	70;

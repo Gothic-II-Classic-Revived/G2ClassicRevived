@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_ZOMBIE;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 25);
+	B_SetMonsterAttributesForLevel(self, 35);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	100;
@@ -116,39 +116,6 @@ INSTANCE Zombie03	(Mst_Default_Zombie)
 INSTANCE Zombie04	(Mst_Default_Zombie)
 {
 	B_SetVisuals_Zombie04();
-	Npc_SetToFistMode(self);
-};
-
-//********************************
-//	Bloodwyn Zombie 	
-//********************************
-INSTANCE Zombie_Addon_Knecht	(Mst_Default_Zombie)
-{
-	
-	name 			= "Raven's Henchman";
-	
-	Mdl_SetVisual			(self,	"Zombie.mds");
-	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody 		(self,	"Zom_Body",		0,			0,			"Zom_Head", 0,  		DEFAULT,	ITAR_Thorus_Addon);
-	
-	Npc_SetToFistMode(self);
-};
-//********************************
-//	Bloodwyn Zombie 	
-//********************************
-INSTANCE Zombie_Addon_Bloodwyn	(Mst_Default_Zombie)
-{
-	
-	name = "Bloodwyn Awakened";
-	level							=	25;
-	
-	attribute	[ATR_HITPOINTS_MAX]	=	1600;
-	attribute	[ATR_HITPOINTS]		=	1600;
-	
-	Mdl_SetVisual			(self,	"Zombie.mds");
-	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody 		(self,	"Zom_Body",		0,			0,			"Zom_Head", 0,  		DEFAULT,	ITAR_Thorus_Addon);
-	
 	Npc_SetToFistMode(self);
 };
 
@@ -324,15 +291,6 @@ INSTANCE MayaZombie03		(Mst_Default_Zombie)
 };
 
 INSTANCE MayaZombie04		(Mst_Default_Zombie)
-{
-	B_SetVisuals_Maya_Zombie04();
-	Npc_SetToFistMode(self);
-};
-//*************
-//	Einer der Totenwächter  	
-//*************
-
-INSTANCE MayaZombie04_Totenw	(Mst_Default_Zombie) 
 {
 	B_SetVisuals_Maya_Zombie04();
 	Npc_SetToFistMode(self);

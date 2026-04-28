@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 20);
+	B_SetMonsterAttributesForLevel(self, 25);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	75;

@@ -9,7 +9,7 @@ PROTOTYPE Mst_Default_Hellhound(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_HELLHOUND;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 22);
+	B_SetMonsterAttributesForLevel(self, 24);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	80;

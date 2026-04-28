@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Troll(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_TROLL;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 35);
+	B_SetMonsterAttributesForLevel(self, 60);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	200;
@@ -63,28 +63,6 @@ func void B_SetVisuals_Troll()
 //***********
 INSTANCE Troll	(Mst_Default_Troll)
 {
-	B_SetVisuals_Troll();
-	Npc_SetToFistMode(self);
-};
-
-//***********
-//	Troll    
-//***********
-INSTANCE Valley_Troll (Mst_Default_Troll)
-{
-	B_SetVisuals_Troll();
-	Npc_SetToFistMode(self);
-	aivar[AIV_MaxDistToWp]			= 2300; //wegen Quahodron-Gruft-Troll
-	aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;
-};
-
-//***********
-//	Maya-Troll    
-//***********
-INSTANCE Maya_Troll	(Mst_Default_Troll)
-{
-	aivar[AIV_MaxDistToWp]			= 1000;
-	aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;
 	B_SetVisuals_Troll();
 	Npc_SetToFistMode(self);
 };

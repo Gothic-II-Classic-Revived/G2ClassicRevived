@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Giant_Bug(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_GIANT_BUG;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 6);
+	B_SetMonsterAttributesForLevel(self, 5);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	40;

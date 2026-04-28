@@ -6,7 +6,7 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
 
 	//----- Attribute ----	
-	B_SetAttributesForLevel(self, 150);	
+	B_SetAttributesForLevel(self, 70);
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);	
 
 	//----- Protection ----
@@ -42,7 +42,7 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 instance DMT_TemplarAmbientL (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);
+	B_SetAttributesForLevel(self, 50);
 	
 	// ------ visuals ------
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL_02);	
@@ -51,7 +51,7 @@ instance DMT_TemplarAmbientL (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);
+	B_SetAttributesForLevel(self, 60);
 	
 	// ------ visuals ------
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL_02);	
@@ -60,7 +60,7 @@ instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 instance DMT_TemplarAmbientH (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 5);
+	B_SetAttributesForLevel(self, 70);
 	
 	// ------ visuals ------
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL);	

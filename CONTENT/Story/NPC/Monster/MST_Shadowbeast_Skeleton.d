@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Shadowbeast_Skeleton(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_SHADOWBEAST_SKELETON;
 	
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 40);
+	B_SetMonsterAttributesForLevel(self, 35);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	100;
@@ -56,16 +56,6 @@ func void B_SetVisuals_Shadowbeast_Skeleton()
 //*****************************
 
 INSTANCE Shadowbeast_Skeleton	(Mst_Default_Shadowbeast_Skeleton)
-{
-	B_SetVisuals_Shadowbeast_Skeleton();
-	Npc_SetToFistMode(self);
-};
-
-//*****************************
-//	Shadowbeast_Skeleton_Angar    	
-//*****************************
-
-INSTANCE Shadowbeast_Skeleton_Angar	(Mst_Default_Shadowbeast_Skeleton)
 {
 	B_SetVisuals_Shadowbeast_Skeleton();
 	Npc_SetToFistMode(self);

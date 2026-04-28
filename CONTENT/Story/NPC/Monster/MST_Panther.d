@@ -10,7 +10,7 @@ PROTOTYPE Mst_Default_Panther(C_Npc)
 	aivar[AIV_MM_REAL_ID]			= 	ID_PANTHER;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 20);
+	B_SetMonsterAttributesForLevel(self, 22);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	80;

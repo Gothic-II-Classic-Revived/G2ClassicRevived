@@ -59,16 +59,3 @@ INSTANCE SwampGolem	(Mst_Default_Addon_SwampGolem)
 	B_SetVisuals_Swampgolem();
 	Npc_SetToFistMode	(self);
 };
-
-//******************
-//	SwampGolem_Valley
-//******************
-
-INSTANCE SwampGolem_Valley	(Mst_Default_Addon_SwampGolem)
-{
-	B_SetVisuals_Swampgolem();
-	Npc_SetToFistMode	(self);
-	aivar[AIV_MaxDistToWp]			= 1500;
-	aivar[AIV_OriginalFightTactic] 	= FAI_STONEGOLEM;
-};
-

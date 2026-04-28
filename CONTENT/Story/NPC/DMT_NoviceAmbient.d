@@ -8,7 +8,7 @@ PROTOTYPE Default_AmbientNovice (C_NPC)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 80);	
+	B_SetAttributesForLevel(self, 50);
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);					
 		
 	// ------ Kampf-Taktik ------

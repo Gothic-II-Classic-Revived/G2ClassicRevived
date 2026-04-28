@@ -12,16 +12,16 @@ PROTOTYPE Mst_Default_Dragon_Undead(C_Npc)
 	bodyStateInterruptableOverride = TRUE;
 
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 100);
+	B_SetMonsterAttributesForLevel(self, 150);
 	level = 1000;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	200;
-	protection	[PROT_EDGE]			=	200;
-	protection	[PROT_POINT]		=	200;
-	protection	[PROT_FIRE]			=	200;
-	protection	[PROT_FLY]			=	200;
-	protection	[PROT_MAGIC]		=	200;
+	protection	[PROT_BLUNT]		=	300;
+	protection	[PROT_EDGE]			=	300;
+	protection	[PROT_POINT]		=	300;
+	protection	[PROT_FIRE]			=	300;
+	protection	[PROT_FLY]			=	300;
+	protection	[PROT_MAGIC]		=	300;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;

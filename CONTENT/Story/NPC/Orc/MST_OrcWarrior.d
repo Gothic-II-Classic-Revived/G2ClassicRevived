@@ -11,7 +11,7 @@ PROTOTYPE Mst_Default_OrcWarrior(C_Npc)
 	voice							=	18;
 
 	//----- Attributes ----
-	B_SetMonsterAttributesForLevel(self, 30);
+	B_SetMonsterAttributesForLevel(self, 40);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	100;

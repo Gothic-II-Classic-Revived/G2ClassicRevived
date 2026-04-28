@@ -16,12 +16,12 @@ PROTOTYPE Mst_Default_Dragon_Ice(C_Npc)
 	level = 500;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	150;
-	protection	[PROT_EDGE]			=	150;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	150;
-	protection	[PROT_FLY]			=	150;
-	protection	[PROT_MAGIC]		=	150;
+	protection	[PROT_BLUNT]		=	200;
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	200;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	300;
 	
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
