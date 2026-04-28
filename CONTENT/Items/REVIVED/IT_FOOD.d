@@ -21,6 +21,7 @@ const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;
 
 const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	5;
 const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	10;
+const int	REV_Value_SouthWine			=	30;		const int	REV_Bonus_SouthWine		=	5;
 const int	REV_Value_MageWine			=	50;		const int	REV_HP_MageWine			=	15;
 const int	REV_Value_MonsterDrink		=	30;		const int	REV_HP_MonsterDrink		=	15;		const int	REV_Time_MonsterDrink	=	10000;
 const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
@@ -542,6 +543,36 @@ INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
 	FUNC VOID UseVinoBooze()
 	{
 		REV_ChangeStatPercent (ATR_MANA,	REV_HP_VinoBooze);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_SOUTHWINE (C_Item)
+{	
+	name 				=	"Southern Wine";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_SouthWine;
+
+	visual 				=	"REV_ITFO_MAGEWINE.3ds";
+	material 			=	MAT_GLAS;
+	on_state[0]			=	UseSouthWine;
+	scemeName			=	"POTION";
+
+	description			= name;
+	TEXT[1]				= NAME_BonusHPMP;				COUNT[1]	= REV_Bonus_SouthWine;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseSouthWine()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_Bonus_SouthWine);
+		Npc_ChangeAttribute	(self,	ATR_MANA,	REV_Bonus_SouthWine);
+		Snd_Play	("LevelUp");
+		B_RaiseAttribute (self, ATR_HITPOINTS, REV_Bonus_SouthWine);
+		B_RaiseAttribute (self, ATR_MANA, REV_Bonus_SouthWine);
 	};
 
 /******************************************************************************************/

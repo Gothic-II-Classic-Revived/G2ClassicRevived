@@ -144,7 +144,7 @@ FUNC VOID DIA_Gritta_WantsMoney_Continue03 ()
 	
 	Info_ClearChoices (DIA_Gritta_WantsMoney);
 	Info_AddChoice (DIA_Gritta_WantsMoney,"Cut it out. Where's the gold?",DIA_Gritta_WantsMoney_WhereMoney);
-	Info_AddChoice (DIA_Gritta_WantsMoney,"Continue...",DIA_Gritta_WantsMoney_Continue01);
+	//Info_AddChoice (DIA_Gritta_WantsMoney,"Continue...",DIA_Gritta_WantsMoney_Continue01);
 };
 FUNC VOID DIA_Gritta_WantsMoney_WhereMoney ()
 {
@@ -218,7 +218,7 @@ func void DIA_Gritta_WINE_Info ()
 	AI_Output (other, self, "DIA_Gritta_WINE_15_03"); //Yeah, yeah, never mind.
 
 	B_GivePlayerXP 		(XP_PayForGritta);
-	B_GiveInvItems 		(self, other, Itfo_Wine, 1);
+	B_GiveInvItems 		(self, other, ITFO_REVIVED_SOUTHWINE, 1);
 	
 	AI_StopProcessInfos (self); 
 };
