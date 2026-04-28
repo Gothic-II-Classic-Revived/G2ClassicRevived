@@ -149,7 +149,10 @@ func void DIA_Harad_OrcRunning_Info ()
 func void DIA_Harad_OrcRunning_TooHard()
 {
 	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_00"); //But an orc is a damn tough opponent...
-	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_01"); //Hm - looking at you, you might be right. You don't have much meat on your bones. But that can change.
+	if(hero.attribute[ATR_STRENGTH] < 30)
+	{
+		AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_01"); //Hm - looking at you, you might be right. You don't have much meat on your bones. But that can change.
+	};
 	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_02"); //Nevertheless, you have to prove to me that you have the courage to fight.
 	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_03"); //So couldn't it be something slightly smaller?
 	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_04"); //Hm - (considering) Hakon, the weapons dealer in the marketplace, told me that he was attacked by bandits a few days ago.

@@ -421,6 +421,7 @@ func void DIA_1013_BANDIT_FromCavalorn_Info ()
 	B_GivePlayerXP (XP_BanditWeg);
 
 	AI_UnequipArmor (self);
+	Npc_RemoveInvItem (self, ITAR_REVIVED_BDT_M);
 	CreateInvItems (self,ITAR_REVIVED_LEATHER_M,1);
 	AI_EquipArmor 	(self,ITAR_REVIVED_LEATHER_M);
 	Npc_SetTrueGuild (self, GIL_OUT);

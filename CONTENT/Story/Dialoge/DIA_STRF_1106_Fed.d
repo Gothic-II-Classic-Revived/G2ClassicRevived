@@ -71,7 +71,7 @@ func int DIA_Fed_Snapper_Condition ()
 func void DIA_Fed_Snapper_Info ()
 {
 	AI_Output (other, self, "DIA_Fed_Snapper_15_00"); //What do you know about the snappers?
-	AI_Output (self, other, "DIA_Fed_Snapper_08_01"); //Bilgot watches them at night. A few of them are down at the pool at the base of the dark tower.
+	//AI_Output (self, other, "DIA_Fed_Snapper_08_01"); //Bilgot watches them at night. A few of them are down at the pool at the base of the dark tower.
 	AI_Output (self, other, "DIA_Fed_Snapper_08_02"); //Others are right above us - on top of the cliff. They're just waiting until we're all exhausted.
 	AI_Output (self, other, "DIA_Fed_Snapper_08_03"); //We managd to trap ourselves here. Soon they'll attack the camp - and have their bloody feast...
 	AI_Output (other, self, "DIA_Fed_Snapper_15_04"); //I see.
@@ -86,7 +86,7 @@ instance DIA_Fed_Perm	(C_INFO)
 	condition	 = 	DIA_Fed_Perm_Condition;
 	information	 = 	DIA_Fed_Perm_Info;
 	permanent	 =  TRUE;
-	description	 = 	"Are you crazy?";
+	description	 = 	"Are you all right?";
 };
 func int DIA_Fed_Perm_Condition ()
 {	
@@ -106,12 +106,8 @@ func void DIA_Fed_Perm_Info ()
 		AI_Output (self, other, "DIA_Fed_Perm_08_03"); //And sooner or later they'll get us and feed on our dead bodies...
 	};
 	AI_StopProcessInfos(self);
-	
 
 };
-
-
-
 
 // ************************************************************
 // 			  				PICK POCKET

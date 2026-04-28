@@ -228,30 +228,7 @@ FUNC VOID DIA_Matteo_Paladine_Info()
 	AI_Output (self, other, "DIA_Matteo_Paladine_09_04"); //Of course they let me in!
 	AI_Output (self, other, "DIA_Matteo_Paladine_09_05"); //I had my shop in the city when most of those pompous asses were still chasing pigs with wooden swords!
 	AI_Output (self, other, "DIA_Matteo_Paladine_09_06"); //And yesterday the bastards came and confiscated half of my goods!
-};
-
-// ************************************************************
-// 			  				Confiscated 			E2
-// ************************************************************
-INSTANCE DIA_Matteo_Confiscated(C_INFO)
-{
-	npc			= VLK_416_Matteo;
-	nr			= 2;
-	condition	= DIA_Matteo_Confiscated_Condition;
-	information	= DIA_MAtteo_Confiscated_Info;
-	permanent	= FALSE;
-	description = "The paladins seized your goods?";
-};                       
-FUNC INT DIA_Matteo_Confiscated_Condition()
-{	
-	if (Npc_KnowsInfo (other,DIA_Matteo_Paladine))
-	{
-		return TRUE;
-	};
-};
-FUNC VOID DIA_Matteo_Confiscated_Info()
-{	
-
+	
 	AI_Output (other, self, "DIA_Matteo_Confiscated_15_00"); //The paladins seized your goods?
 	AI_Output (self, other, "DIA_Matteo_Confiscated_09_01"); //Everything I had stored in the back yard.
 	AI_Output (self, other, "DIA_Matteo_Confiscated_09_02"); //They simply posted a guard in front of the entrance to the yard.
@@ -362,7 +339,7 @@ FUNC INT DIA_Matteo_LehrlingLater_Condition()
 };
 func VOID DIA_Matteo_LehrlingLater_Info()
 {	
-	AI_Output (other, self, "DIA_Matteo_LehrlingLater_15_00"); //So can you help me get into the upper quarter?
+	AI_Output (other, self, "DIA_Matteo_LehrlingLater_15_00"); //Help me to become an apprentice to one of the masters.
 	B_Matteo_Preis();
 };
 	
@@ -738,40 +715,3 @@ FUNC VOID DIA_Matteo_Minenanteil_Info()
 	AI_Output (self, other, "DIA_Matteo_Minenanteil_09_01"); //(nervously) Mining shares? Oops. Where did they come from? No idea where I got them. Honestly, your honor.
 	B_GivePlayerXP (XP_Ambient);
 };	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

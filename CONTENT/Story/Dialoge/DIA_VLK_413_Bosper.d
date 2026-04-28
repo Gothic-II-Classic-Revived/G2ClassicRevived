@@ -876,38 +876,38 @@ func void DIA_Bosper_SellFur_Info ()
 
 		if (Npc_HasItems(other, ITAT_REVIVED_FUR_HELLHOUND) > 0)
 		{
-			AI_Wait (self,3);
+			AI_Wait (self,1);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_HELLHOUND) * REV_VALUE_HELLHOUNDFUR) );
 			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_HELLHOUND, Npc_HasItems(other, ITAT_REVIVED_FUR_HELLHOUND));
 		};
 		if (Npc_HasItems(other, ITAT_REVIVED_FUR_ORCDOG) > 0)
 		{
-			AI_Wait (self,3);
+			AI_Wait (self,1);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_ORCDOG) * REV_VALUE_ORCDOGFUR) );
 			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_ORCDOG, Npc_HasItems(other, ITAT_REVIVED_FUR_ORCDOG));
 		};
 		if (Npc_HasItems(other, ITAT_REVIVED_FUR_ICEWOLF) > 0)
 		{
-			AI_Wait (self,3);
+			AI_Wait (self,1);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_ICEWOLF) * REV_VALUE_ICEWOLFFUR) );
 			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_ICEWOLF, Npc_HasItems(other, ITAT_REVIVED_FUR_ICEWOLF));
 		};
 		if (Npc_HasItems(other, ITAT_REVIVED_FUR_BLACKWOLF) > 0)
 		{
-			AI_Wait (self,3);
+			AI_Wait (self,1);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_BLACKWOLF) * REV_VALUE_BLACKWOLFFUR) );
 			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_BLACKWOLF, Npc_HasItems(other, ITAT_REVIVED_FUR_BLACKWOLF));
 		};
 		if (Npc_HasItems(other, ITAT_REVIVED_FUR_PANTHER) > 0)
 		{
-			AI_Wait (self,3);
+			AI_Wait (self,1);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_PANTHER) * REV_VALUE_PANTHERFUR) );
 			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_PANTHER, Npc_HasItems(other, ITAT_REVIVED_FUR_PANTHER));
 		};
 		
 		if (Npc_HasItems(other, ItAt_Addon_KeilerFur) > 0)
 		{
-			AI_Wait (self,3);
+			AI_Wait (self,1);
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_Addon_KeilerFur) * Value_KeilerFur) );
 			B_GiveInvItems(other, self, ItAt_Addon_KeilerFur, Npc_HasItems(other, ItAt_Addon_KeilerFur));
 		};

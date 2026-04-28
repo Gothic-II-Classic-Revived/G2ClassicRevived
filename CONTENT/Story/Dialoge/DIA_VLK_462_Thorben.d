@@ -623,6 +623,7 @@ FUNC INT DIA_Thorben_GrittaHatteGold_Condition()
 {	
 	if (Npc_KnowsInfo(other, DIA_Thorben_Gritta))
 	&& (Npc_HasItems(Gritta, itmi_gold) < 100)
+	&& (Gritta_GoldGiven == TRUE)
 	&& (!Npc_IsDead (Gritta))
 	{
 		return TRUE;
@@ -652,12 +653,9 @@ FUNC VOID DIA_Thorben_GrittaHatteGold_Info()
 
 func void B_Thorben_DeletePetzCrimeGritta()
 {
-	if (Gritta_GoldGiven == FALSE)
-	{
-		AI_Output (self, other,"B_Thorben_DeletePetzCrimeGritta_06_00"); //From what I know of this little viper, I'm sure she'll run straight to the city guard and accuse you, too!
-		AI_Output (self, other,"B_Thorben_DeletePetzCrimeGritta_06_01"); //I shall see to it that the matter is settled.
-		B_DeletePetzCrime (Gritta);
-	};
+	AI_Output (self, other,"B_Thorben_DeletePetzCrimeGritta_06_00"); //From what I know of this little viper, I'm sure she'll run straight to the city guard and accuse you, too!
+	AI_Output (self, other,"B_Thorben_DeletePetzCrimeGritta_06_01"); //I shall see to it that the matter is settled.
+	B_DeletePetzCrime (Gritta);
 };
 
 func void DIA_Thorben_GrittaHatteGold_MatteoHatEs()
