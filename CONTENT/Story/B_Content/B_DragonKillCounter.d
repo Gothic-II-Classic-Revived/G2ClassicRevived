@@ -40,6 +40,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 			MIS_KilledDragons = (MIS_KilledDragons + 1);
 			FreDragnIsDead = TRUE;
 
+			Wld_SendTrigger("EVT_TROLLSCHLUCHT_GATE");
 			Wld_SendTrigger("FOCUSTELEPORT_TROLLCANYON");
 			Snd_Play ("MFX_TELEKINESIS_STARTINVEST");
 		};
