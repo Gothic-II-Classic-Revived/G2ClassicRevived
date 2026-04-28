@@ -362,13 +362,13 @@ INSTANCE ITMW_REVIVED_1H_DAGGER_01 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=	REV_Range_1H_Dagger_01;		
 
-	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	REV_Condition_1H_Dagger_01;
 	visual 				=	"Itmw_005_1h_dagger_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -387,13 +387,13 @@ INSTANCE ITMW_REVIVED_1H_DAGGER_02 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=	REV_Range_1H_Dagger_02;		
 
-	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	REV_Condition_1H_Dagger_02;
 	visual 				=	"REV_1H_DAGGER_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

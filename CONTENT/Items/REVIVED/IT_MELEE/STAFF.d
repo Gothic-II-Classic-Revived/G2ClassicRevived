@@ -149,13 +149,13 @@ INSTANCE ITMW_REVIVED_2H_STAFF_02 (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=	REV_Range_2H_Staff_02;		
 
-	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	REV_Condition_2H_Staff_02;
 	visual 				=	"ItMw_2H_Staff_02.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -282,7 +282,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_JUDGE (C_Item)
 	damagetype 			=	DAM_EDGE;
 	range    			=  	REV_Range_2H_Staff_Judge;
 
-	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_atr[2]   		= 	ATR_DEXTERITY;
 	cond_value[2]  		= 	REV_Condition_2H_Staff_Judge;
 
 	//owner 				=   VLK_402_Richter;
@@ -291,7 +291,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_JUDGE (C_Item)
 	description			= name;
 	TEXT[0]				= "It belongs to the Judge.";
 	TEXT[2]				= NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[3] 			= NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
