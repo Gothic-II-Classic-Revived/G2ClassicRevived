@@ -267,7 +267,7 @@ func void DIA_Dragomir_Teach_Back ()
 
 func void DIA_Dragomir_Teach_1H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 1, 75);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 1, 60);
 	
 	Info_ClearChoices 	(DIA_Dragomir_Teach);
 	Info_AddChoice 		(DIA_Dragomir_Teach,	DIALOG_BACK		,DIA_Dragomir_Teach_Back);
@@ -277,7 +277,7 @@ func void DIA_Dragomir_Teach_1H_1 ()
 
 func void DIA_Dragomir_Teach_1H_5 ()	
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 5, 75);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 5, 60);
 	
 	Info_ClearChoices 	(DIA_Dragomir_Teach);
 	Info_AddChoice 		(DIA_Dragomir_Teach,	DIALOG_BACK		,DIA_Dragomir_Teach_Back);

@@ -114,7 +114,7 @@ FUNC VOID DIA_Wolf_DI_Training_Info()
 // ------ 1% Waffentalent ------
 func void DIA_Wolf_DI_Training_BOW_1()
 {
-	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_BOW, 1, 90))
+	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_BOW, 1, 100))
 	{
 		AI_Output (self ,other,"DIA_Wolf_DI_Training_BOW_1_08_00"); //Unlike the crossbow, the bow is very bulky and requires a lot of space. Always make sure that you have enough of that in battle.
 	};
@@ -131,7 +131,7 @@ func void DIA_Wolf_DI_Training_BOW_1()
 // ------ 5% Waffentalent ------
 func void DIA_Wolf_DI_Training_BOW_5()
 {
-	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_BOW, 5, 90))
+	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_BOW, 5, 100))
 	{
 		AI_Output (self ,other,"DIA_Wolf_DI_Training_BOW_5_08_00"); //Let the string glide through your fingers when you shoot. A cramped finger will mess up the arrow's trajectory.
 	};

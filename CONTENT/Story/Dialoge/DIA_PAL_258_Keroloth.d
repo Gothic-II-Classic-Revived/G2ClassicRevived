@@ -137,7 +137,7 @@ FUNC VOID B_Keroloth_TeachNoMore2 ()
 
 FUNC VOID DIA_Keroloth_Teacher_1H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 60);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 90);
 	
 	if (other.HitChance[NPC_TALENT_1H] >= 60)
 	{
@@ -153,7 +153,7 @@ FUNC VOID DIA_Keroloth_Teacher_1H_1 ()
 
 FUNC VOID DIA_Keroloth_Teacher_1H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 60);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 90);
 	
 	if (other.HitChance[NPC_TALENT_1H] >= 60)
 	{
@@ -215,7 +215,7 @@ FUNC VOID DIA_Keroloth_Teach_Back ()
 
 FUNC VOID DIA_Keroloth_Teach_2H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 60);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 90);
 	
 	Info_ClearChoices 	(DIA_Keroloth_Teach);
 	Info_AddChoice 		(DIA_Keroloth_Teach,	DIALOG_BACK		,DIA_Keroloth_Teach_Back);
@@ -225,7 +225,7 @@ FUNC VOID DIA_Keroloth_Teach_2H_1 ()
 
 FUNC VOID DIA_Keroloth_Teach_2H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 60);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 90);
 	
 	Info_ClearChoices 	(DIA_Keroloth_Teach);
 	Info_AddChoice 		(DIA_Keroloth_Teach,	DIALOG_BACK		,DIA_Keroloth_Teach_Back);

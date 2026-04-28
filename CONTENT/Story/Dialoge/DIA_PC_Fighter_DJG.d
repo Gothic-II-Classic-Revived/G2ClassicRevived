@@ -86,7 +86,7 @@ instance DIA_GornDJG_HALLO		(C_INFO)
 
 func int DIA_GornDJG_HALLO_Condition ()
 {
-	if (Npc_GetDistToWP(self,"OW_DJG_ROCKCAMP_01")<1500) 				
+	if (Npc_GetDistToWP(self,"PATH_TO_PLATEAU03_002")<1500) 				
 		{
 			return TRUE;
 		};

@@ -138,7 +138,7 @@ func void DIA_Girion_DI_Teach_CROSSBOW_5()
 };
 FUNC VOID DIA_Girion_DI_Teach_1H_1 ()
 {
-	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 90))
+	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 100))
 	{
 			AI_Output (self ,other,"DIA_Girion_DI_Teach_1H_1_08_00"); //Your blade must slice through the air like a reed in the wind.
 	};
@@ -155,7 +155,7 @@ FUNC VOID DIA_Girion_DI_Teach_1H_1 ()
 
 FUNC VOID DIA_Girion_DI_Teach_1H_5 ()
 {
-	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 90))
+	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 100))
 	{
 			AI_Output (self ,other,"DIA_Girion_DI_Teach_1H_5_08_00"); //Always use your strength with calculation. Running blindly at your opponent has never yet led to success.
 	};
@@ -172,7 +172,7 @@ FUNC VOID DIA_Girion_DI_Teach_1H_5 ()
 
 FUNC VOID DIA_Girion_DI_Teach_2H_1 ()
 {
-	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 90))
+	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 100))
 	{
 		AI_Output(self,other,"DIA_DIA_Girion_DI_Teach_2H_1_08_00"); //Don't hold the shaft so tightly, then your blow will hit its mark.
 	};
@@ -189,7 +189,7 @@ FUNC VOID DIA_Girion_DI_Teach_2H_1 ()
 
 FUNC VOID DIA_Girion_DI_Teach_2H_5 ()
 {
-	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 90))
+	if (B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 100))
 	{
 		AI_Output(self,other,"DIA_Girion_DI_Teach_2H_5_08_00"); //Don't forget to parry. But the best defense is always to dodge your opponent's blow.
 	};

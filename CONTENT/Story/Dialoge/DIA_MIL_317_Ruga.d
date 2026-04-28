@@ -195,7 +195,7 @@ FUNC VOID DIA_Ruga_Teach_Back ()
 
 FUNC VOID DIA_Ruga_Teach_1H_1 ()
 {
-	 B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 1, 90);
+	 B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 1, 60);
 	
 	Info_ClearChoices 	(DIA_Ruga_Teach);
 	Info_AddChoice 		(DIA_Ruga_Teach,	DIALOG_BACK		,DIA_Ruga_Teach_Back);
@@ -205,7 +205,7 @@ FUNC VOID DIA_Ruga_Teach_1H_1 ()
 };
 FUNC VOID DIA_Ruga_Teach_1H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 5, 90);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 5, 60);
 	
 	Info_ClearChoices 	(DIA_Ruga_Teach);
 	Info_AddChoice 		(DIA_Ruga_Teach,	DIALOG_BACK		,DIA_Ruga_Teach_Back);

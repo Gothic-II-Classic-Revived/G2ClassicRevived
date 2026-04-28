@@ -401,7 +401,7 @@ FUNC VOID B_Hokurn_TeachedEnough ()
 
 FUNC VOID DIA_Hokurn_Teach_2H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 100);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 90);
 	
 	if (other.HitChance[NPC_TALENT_2H] >= 100)
 	{
@@ -412,7 +412,7 @@ FUNC VOID DIA_Hokurn_Teach_2H_1 ()
 
 FUNC VOID DIA_Hokurn_Teach_2H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 100);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 90);
 	
 	if (other.HitChance[NPC_TALENT_2H] >= 100)
 	{
@@ -423,7 +423,7 @@ FUNC VOID DIA_Hokurn_Teach_2H_5 ()
 
 FUNC VOID DIA_Hokurn_Teach_1H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 100);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 90);
 	
 	if (other.HitChance[NPC_TALENT_1H] >= 100)
 	{
@@ -434,7 +434,7 @@ FUNC VOID DIA_Hokurn_Teach_1H_1 ()
 
 FUNC VOID DIA_Hokurn_Teach_1H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 100);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 90);
 	
 	if (other.HitChance[NPC_TALENT_1H] >= 100)
 	{

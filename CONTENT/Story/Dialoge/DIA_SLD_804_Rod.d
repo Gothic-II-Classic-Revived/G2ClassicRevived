@@ -154,7 +154,7 @@ FUNC VOID DIA_Rod_Teach_Back ()
 
 FUNC VOID DIA_Rod_Teach_2H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 90);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 60);
 	
 	Info_ClearChoices (DIA_Rod_Teach);
 	Info_AddChoice (DIA_Rod_Teach, DIALOG_BACK, DIA_Rod_Teach_Back);
@@ -164,7 +164,7 @@ FUNC VOID DIA_Rod_Teach_2H_1 ()
 
 FUNC VOID DIA_Rod_Teach_2H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 90);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 60);
 	
 	Info_ClearChoices (DIA_Rod_Teach);
 	Info_AddChoice (DIA_Rod_Teach, DIALOG_BACK, DIA_Rod_Teach_Back);

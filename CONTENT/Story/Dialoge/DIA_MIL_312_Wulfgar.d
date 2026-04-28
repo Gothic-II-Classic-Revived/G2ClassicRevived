@@ -276,7 +276,7 @@ FUNC VOID DIA_Wulfgar_Teach_Back ()
 
 FUNC VOID DIA_Wulfgar_Teach_1H_1 ()
 {
-	if B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 75)
+	if B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 1, 70)
 	{
 		Info_ClearChoices 	(DIA_Wulfgar_Teach);
 		Info_AddChoice 		(DIA_Wulfgar_Teach,	DIALOG_BACK		,DIA_Wulfgar_Teach_Back);
@@ -288,7 +288,7 @@ FUNC VOID DIA_Wulfgar_Teach_1H_1 ()
 };
 FUNC VOID DIA_Wulfgar_Teach_1H_5 ()
 {
-	if B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 75)
+	if B_TeachFightTalentPercent (self, other, NPC_TALENT_1H, 5, 70)
 	{
 		Info_ClearChoices 	(DIA_Wulfgar_Teach);
 		Info_AddChoice 		(DIA_Wulfgar_Teach,	DIALOG_BACK		,DIA_Wulfgar_Teach_Back);
@@ -301,7 +301,7 @@ FUNC VOID DIA_Wulfgar_Teach_1H_5 ()
 
 FUNC VOID DIA_Wulfgar_Teach_2H_1 ()
 {
-	if B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 75)
+	if B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 70)
 	{
 		Info_ClearChoices 	(DIA_Wulfgar_Teach);
 		Info_AddChoice 		(DIA_Wulfgar_Teach,	DIALOG_BACK		,DIA_Wulfgar_Teach_Back);
@@ -313,7 +313,7 @@ FUNC VOID DIA_Wulfgar_Teach_2H_1 ()
 };
 FUNC VOID DIA_Wulfgar_Teach_2H_5 ()
 {
-	if B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 75)
+	if B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 70)
 	{
 		Info_ClearChoices 	(DIA_Wulfgar_Teach);
 		Info_AddChoice 		(DIA_Wulfgar_Teach,	DIALOG_BACK		,DIA_Wulfgar_Teach_Back);

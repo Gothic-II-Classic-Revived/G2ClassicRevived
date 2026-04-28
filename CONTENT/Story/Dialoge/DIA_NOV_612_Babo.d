@@ -165,7 +165,7 @@ FUNC VOID DIA_Babo_Teach_Info()
 };
 FUNC VOID DIA_Babo_Teach_Back ()
 {
-	if (other.HitChance[NPC_TALENT_2H] >= 75)
+	if (other.HitChance[NPC_TALENT_2H] >= 60)
 	{
 		AI_Output (self,other,"DIA_DIA_Babo_Teach_Back_03_00"); //You've learned everything about two-handed combat that I can teach you.
 		
@@ -176,7 +176,7 @@ FUNC VOID DIA_Babo_Teach_Back ()
 
 FUNC VOID DIA_Babo_Teach_2H_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 75);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 1, 60);
 	
 	if (other.HitChance [NPC_TALENT_2H]  >  babo_merk2h)
 	{
@@ -211,7 +211,7 @@ FUNC VOID DIA_Babo_Teach_2H_1 ()
 
 FUNC VOID DIA_Babo_Teach_2H_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 75);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_2H, 5, 60);
 	
 	if (other.HitChance [NPC_TALENT_2H]  >  babo_merk2h)
 	{

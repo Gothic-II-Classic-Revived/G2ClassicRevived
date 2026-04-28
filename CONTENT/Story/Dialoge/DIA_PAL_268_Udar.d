@@ -195,7 +195,7 @@ FUNC VOID B_Udar_TeachNoMore2 ()
 
 FUNC VOID DIA_Udar_Teach_Crossbow_1 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 1, 60);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 1, 90);
 	
 	if (other.HitChance[NPC_TALENT_CROSSBOW] >= 60)
 	{
@@ -211,7 +211,7 @@ FUNC VOID DIA_Udar_Teach_Crossbow_1 ()
 
 FUNC VOID DIA_Udar_Teach_Crossbow_5 ()
 {
-	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 5, 60);
+	B_TeachFightTalentPercent (self, other, NPC_TALENT_CROSSBOW, 5, 90);
 	
 	if (other.HitChance[NPC_TALENT_CROSSBOW] >= 60)
 	{

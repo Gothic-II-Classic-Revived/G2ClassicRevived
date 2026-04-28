@@ -11,6 +11,7 @@ INSTANCE NOV_612_Babo (Npc_Default)
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 15);		
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 1);
+	self.HitChance [NPC_TALENT_2H] = 60; 
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
