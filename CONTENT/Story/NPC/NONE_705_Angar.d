@@ -54,8 +54,8 @@ FUNC VOID Rtn_Zwischenstop_705 ()
 
 FUNC VOID Rtn_Angriff_705 ()
 {
-	TA_Stand_ArmsCrossed					(08,00,23,00,"FORTRESS_MINE_021");
-    TA_Stand_ArmsCrossed					(23,00,08,00,"FORTRESS_MINE_021");		
+	TA_Guide_Player					(08,00,23,00,"FORTRESS_MINE_021");
+    TA_Guide_Player					(23,00,08,00,"FORTRESS_MINE_021");		
 };
 
 FUNC VOID Rtn_RunToEntrance_705 ()

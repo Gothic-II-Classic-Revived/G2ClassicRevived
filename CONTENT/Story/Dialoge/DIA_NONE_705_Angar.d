@@ -107,6 +107,14 @@ func void DIA_Angar_WIEKOMMSTDUHIERHER_Info ()
 	Log_SetTopicStatus(TOPIC_AngarsAmulett, LOG_RUNNING);
 	B_LogEntry (TOPIC_AngarsAmulett,"Angar lost his amulet and is now desperately trying to find it."); 
 
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_000");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_002");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_003");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_004");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_005");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_006");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_007");
+		Wld_InsertNpc	(SkeletonMage_Angar,"FORTRESS_TEMPLE_016");
 
 	Info_AddChoice	(DIA_Angar_WIEKOMMSTDUHIERHER, DIALOG_BACK, DIA_Angar_WIEKOMMSTDUHIERHER_gehen );
 	Info_AddChoice	(DIA_Angar_WIEKOMMSTDUHIERHER, "Where exactly did you lose your amulet?", DIA_Angar_WIEKOMMSTDUHIERHER_amulett );
@@ -132,7 +140,7 @@ func void DIA_Angar_WIEKOMMSTDUHIERHER_amulett ()
 	if (DJG_Angar_SentToStones == FALSE)
 	{
 		AI_Output			(self, other, "DIA_Angar_WIEKOMMSTDUHIERHER_amulett_04_01"); //Somewhere in the south, shortly before I awoke here in the castle.
-		B_LogEntry (TOPIC_AngarsAmulett,"The amulet is supposed to be somewhere in the south. Angar's going to go looking for it."); 
+		B_LogEntry (TOPIC_AngarsAmulett,"The amulet is supposed to be somewhere in the south, probably around the mountain fortress. Angar's going to go looking for it."); 
 	}
 	else
 	{
