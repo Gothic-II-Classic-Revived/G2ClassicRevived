@@ -559,6 +559,7 @@ func void DIA_Lares_OtherGuild_Info ()
 // ------------------------------------------------------------
 // Lass uns gehen...
 // ------------------------------------------------------------
+var int Lares_Guide_Once;
 instance DIA_Lares_GoNow (C_INFO)
 {
 	npc			 = 	SLD_449_Lares;
@@ -571,6 +572,7 @@ instance DIA_Lares_GoNow (C_INFO)
 func int DIA_Lares_GoNow_Condition ()
 {	
 	if (Lares_WayToOnar == TRUE)
+	&& (Lares_Guide_Once == FALSE)
 	&& ((Kapitel < 3) && (hero.guild != GIL_SLD))
 	&& (Npc_GetDistToWP(self,"NW_CITY_HABOUR_02_B")<500)
 			{
@@ -583,6 +585,7 @@ func void DIA_Lares_GoNow_Info ()
 	AI_Output (self, other, "DIA_Addon_Lares_GoNow_09_04"); //Where?
 	AI_Output (other, self, "DIA_Addon_Lares_GoNow_Onar_15_00"); //To Onar's farm.
 	
+	Lares_Guide_Once = TRUE;
 	LaresGuide_ZuOnar = TRUE;
 	Npc_ExchangeRoutine (self, "GUIDE");
 
