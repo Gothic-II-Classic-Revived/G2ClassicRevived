@@ -27,6 +27,7 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		CreateInvItems (slf, ItMiSwordraw, 8);
 		CreateInvItems (slf, ItMi_Nugget, 12);
 		CreateInvItems (slf, ItMi_Coal, 8);
+		CreateInvItems (slf, ItBE_Addon_MC, 1); 
 
 		Bennet_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -37,8 +38,6 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		CreateInvItems (slf, ItMiSwordraw, 10);
 		CreateInvItems (slf, ItMi_Nugget, 14);
 		CreateInvItems (slf, ItMi_Coal, 10);
-
-		CreateInvItems (slf, ItBE_Addon_MC, 1); 
 
 		Bennet_ItemsGiven_Chapter_3 = TRUE;
 	};

@@ -20,7 +20,7 @@ FUNC VOID DIA_Gestath_EXIT_Info()
 {
 	var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
 	
-	if (Hlp_IsItem (heroArmor, ITAR_DJG_Crawler) == TRUE)
+	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_CRAWLER) == TRUE)
 	{
 		AI_Output			(self, other, "DIA_Gestath_EXIT_09_00"); //(dryly) Cool armor!
 	};

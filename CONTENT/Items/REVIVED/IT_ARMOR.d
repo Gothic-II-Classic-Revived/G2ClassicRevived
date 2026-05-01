@@ -29,9 +29,9 @@ const int	REV_Prot_Magic_LEATHER_H			=	5;
 const int	REV_Value_ARCHER					=	800;
 const int	REV_Prot_Edge_ARCHER				=	50;
 const int	REV_Prot_Blunt_ARCHER				=	40;
-const int	REV_Prot_Point_ARCHER				=	60;
+const int	REV_Prot_Point_ARCHER				=	80;
 const int	REV_Prot_Fire_ARCHER				=	20;
-const int	REV_Prot_Magic_ARCHER				=	0;
+const int	REV_Prot_Magic_ARCHER				=	10;
 //******************************************************************//
 const int	REV_Value_KNIGHT					=	10000;
 const int	REV_Prot_Edge_KNIGHT				=	100;
@@ -46,6 +46,13 @@ const int	REV_Prot_Blunt_IDKYET			=	150;
 const int	REV_Prot_Point_IDKYET			=	150;
 const int	REV_Prot_Fire_IDKYET			=	100;
 const int	REV_Prot_Magic_IDKYET			=	50; */
+//******************************************************************//
+const int	REV_Value_CRAWLER					=	1500;
+const int	REV_Prot_Edge_CRAWLER				=	80;
+const int	REV_Prot_Blunt_CRAWLER				=	80;
+const int	REV_Prot_Point_CRAWLER				=	80;
+const int	REV_Prot_Fire_CRAWLER				=	40;
+const int	REV_Prot_Magic_CRAWLER				=	20;
 //******************************************************************//
 const int	REV_Value_DEMONHUNTER				=	12000;
 const int	REV_Prot_Edge_DEMONHUNTER			=	150;
@@ -645,6 +652,71 @@ INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+/******************************************************************************************/
+INSTANCE ITAR_REVIVED_CRAWLER (C_Item)
+{
+	name 					=	"Crawler Plate Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_CRAWLER;
+
+	protection [PROT_EDGE] 	=	REV_Prot_Edge_CRAWLER;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_CRAWLER;
+	protection [PROT_POINT] = 	REV_Prot_Point_CRAWLER;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_CRAWLER;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_CRAWLER;
+
+	on_equip				=	Equip_CRAWLER_ARMOR;
+	on_unequip				=	UnEquip_CRAWLER_ARMOR;
+
+	visual 					=	"REV_DHT.3ds";
+	visual_change 			=	"REV_ARMOR_DHT.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+FUNC VOID Equip_CRAWLER_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		MCArmor_Equipped = TRUE;
+	
+		if (MC_Equipped == TRUE)	
+		{
+			self.protection[PROT_EDGE] 	+= BA_Bonus01;
+			self.protection[PROT_BLUNT] += BA_Bonus01;
+			self.protection[PROT_POINT] += BA_Bonus01;
+			self.protection[PROT_MAGIC] += BA_Bonus01;
+			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+		};
+	};			
+};
+FUNC VOID UnEquip_CRAWLER_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		MCArmor_Equipped = FALSE;
+		
+		if (MC_Equipped == TRUE)	
+		{
+			self.protection[PROT_EDGE] 	-= BA_Bonus01;
+			self.protection[PROT_BLUNT] -= BA_Bonus01;
+			self.protection[PROT_POINT] -= BA_Bonus01;
+			self.protection[PROT_MAGIC] -= BA_Bonus01;
+			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+		};
+	};			
 };
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)

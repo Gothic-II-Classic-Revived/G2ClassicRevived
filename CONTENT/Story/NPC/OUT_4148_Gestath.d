@@ -21,7 +21,7 @@ INSTANCE OUT_4148_GESTATH (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Thorus, BodyTex_B, ITAR_DJG_Crawler);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Thorus, BodyTex_B, ITAR_REVIVED_CRAWLER);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

@@ -301,8 +301,7 @@ INSTANCE DIA_Wolf_AboutCrawler(C_INFO)
 };                       
 FUNC INT DIA_Wolf_AboutCrawler_Condition()
 {
-	if (Kapitel >= 2)
-	&& (Wolf_ProduceCrawlerArmor == TRUE)
+	if (Wolf_ProduceCrawlerArmor == TRUE)
 	{
 		return TRUE;
 	};
@@ -430,10 +429,11 @@ FUNC VOID DIA_Wolf_ArmorReady_Info()
 		}
 		else
 		{
-			CreateInvItems (self, ItAr_Djg_Crawler, 1);
+			CreateInvItems (self, ITAR_REVIVED_CRAWLER, 1);
 			Npc_RemoveInvItems (self, ItAt_CrawlerPlate, 10);
 			AI_Output (self, other, "DIA_Wolf_ArmorReady_08_02"); //I finished it. Here it is.
-			B_GiveInvItems (self, other, ItAr_Djg_Crawler, 1);
+			B_GiveInvItems (self, other, ITAR_REVIVED_CRAWLER, 1);
+			AI_EquipArmor (other, ITAR_REVIVED_CRAWLER);
 			AI_Output (self, other, "DIA_Wolf_ArmorReady_08_03"); //Turned out really well, I think...
 			AI_Output (other, self, "DIA_Wolf_ArmorReady_15_04"); //Thank you!
 			AI_Output (self, other, "DIA_Wolf_ArmorReady_08_05"); //Don't mention it.
