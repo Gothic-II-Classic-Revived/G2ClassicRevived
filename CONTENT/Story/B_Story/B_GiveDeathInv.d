@@ -136,7 +136,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_MINECRAWLERQUEEN)	{	CreateInvItems (slf, ItAt_CrawlerMandibles, 1);	};
 
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_BLATTCRAWLER) 		{	CreateInvItems (slf, ItAt_CrawlerMandibles, 1);	};
+		//if (slf.aivar[AIV_MM_REAL_ID] == ID_BLATTCRAWLER) 		{	CreateInvItems (slf, ItAt_CrawlerMandibles, 1);	};
 	};
 	
 	// ------ Crawler-Platten ------
@@ -237,121 +237,256 @@ func void B_GiveDeathInv (var C_NPC slf)
 	// ------ Orc Inventory -----
 	Orc_Randomizer	= Hlp_Random (10);
 	
-	//------ Orcwarrior -----
-	
-	if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCWARRIOR)
+	//------ Draconian -----
+	if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
 	&& (Orc_Randomizer == 0)		
 	{	
 		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02	, 1);
 		CreateInvItems (slf, ItMI_Gold	, 2);	
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCWARRIOR)
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
 	&& (Orc_Randomizer == 1)
 	{	
 		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01	, 1);
 		CreateInvItems (slf, ItFoMuttonRaw	, 1);	
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCWARRIOR)
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
 	&& (Orc_Randomizer == 2)
 	{	
 		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01	, 2);
 		CreateInvItems (slf, ItMI_Gold	, 18);	
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCWARRIOR)
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
 	&& (Orc_Randomizer == 3)
 	{	
-		CreateInvItems (slf, ItFo_Booze	, 1);
+		CreateInvItems (slf, ItPl_Dex_Herb_01,1);
 		CreateInvItems (slf, ItMi_SilverRing	, 1);	
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCWARRIOR)
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
 	&& (Orc_Randomizer == 4)
 	{	
 		CreateInvItems (slf, ItPl_Health_Herb_01	, 1);
 		CreateInvItems (slf, ItMI_Gold	, 4);	
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCWARRIOR)
-	&& (Orc_Randomizer <= 7)
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
+	&& (Orc_Randomizer == 5)
 	{	
 		CreateInvItems (slf, ItMI_Gold	, 9);	
 		CreateInvItems (slf, ITFO_REVIVED_HAM_01_RAW	, 1);	
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
+	&& (Orc_Randomizer == 6)
+	{	
+		CreateInvItems (slf, ItAt_Teeth	, 2);	
+		CreateInvItems (slf, ITFO_REVIVED_RICEBOOZE	, 1);	
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
+	&& (Orc_Randomizer == 7)
+	{	
+		CreateInvItems (slf, ItMI_Gold	, 12);	
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02	, 1);	
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
+	&& (Orc_Randomizer == 8)
+	{	
+		CreateInvItems (slf, ItFoMuttonRaw	, 2);	
+		CreateInvItems (slf, ITAT_REVIVED_SKIN_DRAGONSNAPPER	, 1);	
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DRACONIAN)
+	&& (Orc_Randomizer <= 9)
+	{	
+		CreateInvItems (slf, ItMI_Gold	, 9);	
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01	, 2);	
 	};
-	//----- OrcShamane -----
 
-	if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCSHAMAN)
+	//------ Orcwarrior -----
+	if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
 	&& (Orc_Randomizer == 0)
 	{
-		CreateInvItems (slf, ITPO_REVIVED_MANA_03	, 1);
-		CreateInvItems (slf, ItMI_Gold	, 5);	
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02, 1);
+		CreateInvItems (slf, ItMi_Scoop, 1);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCSHAMAN)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
 	&& (Orc_Randomizer == 1)
 	{
-		CreateInvItems (slf, ITPO_REVIVED_MANA_02	, 2);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 1);
+		CreateInvItems (slf, ItFoMuttonRaw, 1);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCSHAMAN)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
 	&& (Orc_Randomizer == 2)
 	{
-		CreateInvItems (slf, ITPO_REVIVED_MANA_02	, 1);
-		CreateInvItems (slf, ItMi_Coal,1); 
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 2);
+		CreateInvItems (slf, ItMi_Gold, 18);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCSHAMAN)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
 	&& (Orc_Randomizer == 3)
 	{
-		CreateInvItems (slf, ITPO_REVIVED_MANA_01	, 2);
-		CreateInvItems (slf, ItMI_Gold	, 12);	
+		CreateInvItems (slf, ItFo_Booze, 1);
+		CreateInvItems (slf, ItMi_SilverRing, 1);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCSHAMAN)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
 	&& (Orc_Randomizer == 4)
 	{
-		CreateInvItems (slf, ITPO_REVIVED_MANA_01	, 1);
-		CreateInvItems (slf, ItMi_Sulfur,1); 
+		CreateInvItems (slf, ItPl_Health_Herb_01, 1);
+		CreateInvItems (slf, ItMi_Gold, 4);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCSHAMAN)
-	&& (Orc_Randomizer <= 8)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
+	&& (Orc_Randomizer == 5)
 	{
-		CreateInvItems (slf,ItPl_Mana_Herb_02,2);
-		CreateInvItems (slf, ItMI_Gold	, 8);	
-	};
-	//----- OrcElite -----
-
-	if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCELITE )
-	&& (Orc_Randomizer == 0)
-	{
-		CreateInvItems (slf,ItAt_WolfFur,1);
-		CreateInvItems (slf,ITPO_REVIVED_HEALTH_03,1);
-		CreateInvItems (slf,ItFoMutton,2);
+		CreateInvItems (slf, ItMi_Gold, 9);
+		CreateInvItems (slf, ITFO_REVIVED_HAM_01_RAW, 1);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCELITE)
-	&& (Orc_Randomizer == 1)
-	{
-		CreateInvItems (slf,ItMi_GoldRing,1);
-		CreateInvItems (slf,ITPO_REVIVED_HEALTH_01,1);
-		CreateInvItems (slf,ItMi_Gold,26);
-	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCELITE)
-	&& (Orc_Randomizer == 2)
-	{
-		CreateInvItems (slf,ItSc_LightHeal,1);
-		CreateInvItems (slf,ItLSTorch,2);
-		CreateInvItems (slf,ItAt_Teeth,1); 
-	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCELITE)
-	&& (Orc_Randomizer <= 5)
-	{
-		CreateInvItems (slf,ItMi_Gold,19);
-		CreateInvItems (slf,ITPO_REVIVED_HEALTH_02,1);
-	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCELITE)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
 	&& (Orc_Randomizer == 6)
 	{
-		CreateInvItems (slf,ItAt_WargFur,1);
-		//CreateInvItems (slf,ItPl_Strength_Herb_01,1);
+		CreateInvItems (slf, ItFoMutton, 1);
+		CreateInvItems (slf, ItMi_Gold, 6);
 	}
-	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_ORCELITE)
-	&& (Orc_Randomizer <= 9)
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
+	&& (Orc_Randomizer == 7)
 	{
-		CreateInvItems (slf,ItMi_Gold ,22);
-		CreateInvItems (slf,ITPO_REVIVED_HEALTH_01,1);
+		CreateInvItems (slf, ItAt_Teeth, 1);
+		CreateInvItems (slf, ItMi_Gold, 8);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
+	&& (Orc_Randomizer == 8)
+	{
+		CreateInvItems (slf, ItFo_Booze, 1);
+		CreateInvItems (slf, ItFoMuttonRaw, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCWARRIOR)
+	&& (Orc_Randomizer == 9)
+	{
+		CreateInvItems (slf, ItMi_Gold, 14);
+		CreateInvItems (slf, ItAt_WolfFur,1);
+	};
+
+	//----- OrcShamane -----
+	if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 0)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_03, 1);
+		CreateInvItems (slf, ItSc_Firebolt, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 1)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02, 2);
+		CreateInvItems (slf, ItSc_Light, 2);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 2)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02, 1);
+		CreateInvItems (slf, ItMi_Coal, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 3)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 2);
+		CreateInvItems (slf, ITSC_REVIVED_TELEKINESIS, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 4)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 1);
+		CreateInvItems (slf, ItMi_Sulfur, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 5)
+	{
+		CreateInvItems (slf, ItPl_Mana_Herb_02, 2);
+		CreateInvItems (slf, ItMi_Gold, 2);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 6)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02, 1);
+		CreateInvItems (slf, ItMi_Pitch, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 7)
+	{
+		CreateInvItems (slf, ItSc_FullHeal, 1);
+		CreateInvItems (slf, ITMI_REVIVED_SYRIANOIL, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 8)
+	{
+		CreateInvItems (slf, ItPl_Mana_Herb_03, 2);
+		CreateInvItems (slf, ITMI_REVIVED_PUREALCOHOL, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCSHAMAN)
+	&& (Orc_Randomizer == 9)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_MANA_03, 1);
+		CreateInvItems (slf, ITMI_REVIVED_STONEOIL, 1);
+	};
+
+	//----- OrcElite -----
+	if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 0)
+	{
+		CreateInvItems (slf, ItAt_WargFur, 1);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_03, 1);
+		CreateInvItems (slf, ItFoMutton, 2);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 1)
+	{
+		CreateInvItems (slf, ItMi_GoldRing, 1);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 1);
+		CreateInvItems (slf, ItMi_Gold, 26);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 2)
+	{
+		CreateInvItems (slf, ItSc_LightHeal, 1);
+		CreateInvItems (slf, ItLSTorch, 2);
+		CreateInvItems (slf, ItAt_Teeth, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 3)
+	{
+		CreateInvItems (slf, ItMi_Gold, 19);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 4)
+	{
+		CreateInvItems (slf, ItMi_Gold, 24);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 5)
+	{
+		CreateInvItems (slf, ItFo_Booze, 1);
+		CreateInvItems (slf, ItMi_SilverRing, 1);
+		CreateInvItems (slf, ItMi_Gold, 16);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 6)
+	{
+		CreateInvItems (slf, ITAT_REVIVED_FUR_BLACKWOLF, 1);
+		CreateInvItems (slf, ItPl_Strength_Herb_01, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 7)
+	{
+		CreateInvItems (slf, ItMi_Gold, 22);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_02, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 8)
+	{
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_03, 2);
+		CreateInvItems (slf, ITAT_REVIVED_FUR_HELLHOUND, 1);
+	}
+	else if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+	&& (Orc_Randomizer == 9)
+	{
+		CreateInvItems (slf, ItMi_Gold, 30);
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 1);
 	};
 	
 	//-------- Dämonen -----
@@ -359,7 +494,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	&& (Orc_Randomizer == 0)
 	{
 		CreateInvItems (slf, ITPO_REVIVED_MANA_03	, 2);
-		CreateInvItems (slf, ItMi_GoldRing	, 1);	
+		CreateInvItems (slf, ITMI_REVIVED_MAGICWATER	, 1);	
 	}
 	else if (slf.aivar[AIV_MM_REAL_ID]			== 	ID_DEMON)
 	&& (Orc_Randomizer <= 2)
