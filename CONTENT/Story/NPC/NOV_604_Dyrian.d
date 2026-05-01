@@ -46,6 +46,6 @@ FUNC VOID Rtn_Favour_604()
 
 FUNC VOID Rtn_NoFavour_604()
 {	
-	TA_Stand_Drinking	(08,00,23,30,"TAVERNE");
-    TA_Stand_Drinking	(23,30,08,00,"TAVERNE");
+	TA_Stand_Drinking	(08,00,23,30,"NW_TAVERNE_IN_06");
+    TA_Stand_Drinking	(23,30,08,00,"NW_TAVERNE_IN_06");
 };
