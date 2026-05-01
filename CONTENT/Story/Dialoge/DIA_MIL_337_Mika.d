@@ -128,7 +128,7 @@ func void DIA_Mika_WASGEFAEHRLICH_Info ()
 {
 	AI_Output			(other, self, "DIA_Mika_WASGEFAEHRLICH_15_00"); //What's so dangerous out here?
 	AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_01"); //Many things.
-	if (other.protection[PROT_EDGE]	< ITAR_Leather_L.protection [PROT_EDGE])	//Joly: kleiner als die Lederrüstung
+	if (other.protection[PROT_EDGE]	< REV_Prot_Blunt_LEATHER_L)	//Joly: kleiner als die Lederrüstung
 	{
 		AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_02"); //For one thing, there's the bandits. They'd polish off a little wimp like you for breakfast.
 		AI_Output			(self, other, "DIA_Mika_WASGEFAEHRLICH_12_03"); //If the bandits don't catch you, then the wild animals in the forest or the mercenaries roaming around will take care of you.
@@ -241,6 +241,7 @@ func void DIA_Mika_UEBERLEGT_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Info HILFE
 ///////////////////////////////////////////////////////////////////////
+var int Mika_Helps_AtFarm;
 instance DIA_Mika_HILFE		(C_INFO)
 {
 	npc		 = 	Mil_337_Mika;
@@ -273,6 +274,7 @@ func void DIA_Mika_HILFE_Info ()
 
 	if (!Npc_IsDead (Alvares)) 
 	&& (!Npc_IsDead (Engardo))
+	&& (Mika_Helps_AtFarm == FALSE)
 	&& ( (Akils_SLDstillthere == TRUE) || (Npc_KnowsInfo (other, DIA_Sarah_Bauern)) )
 	{
 		Info_AddChoice	(DIA_Mika_HILFE, "The farmer Akil is under attack by mercenaries.", DIA_Mika_HILFE_Akil );
@@ -289,6 +291,7 @@ func void DIA_Mika_HILFE_Akil ()
 	B_GivePlayerXP (Xp_Ambient);
 	B_LogEntry (TOPIC_AkilsSLDStillthere,"Mika wants to help me solve the mercenary problem on Akil's farm."); 
 
+	Mika_Helps_AtFarm = TRUE;
 	Npc_ExchangeRoutine	(self,"Akil"); 
 };
 
@@ -335,11 +338,11 @@ func int DIA_Mika_Zack_Condition ()
 func void DIA_Mika_Zack_Info ()
 {
 	AI_Output			(self, other, "DIA_Mika_Zack_12_00"); //Now watch how this works.
-	Info_AddChoice	(DIA_Mika_Zack, DIALOG_ENDE, DIA_Mika_Zack_los );
+
+	AI_StopProcessInfos (self);
 };
 func void DIA_Mika_Zack_los ()
 {
-	AI_StopProcessInfos (self);
 	//Joly: B_attack funzt hier nicht und ist auch nicht nötig!!!!!!!!!!!
 	if(!Npc_IsDead (Alvares))
 	{
@@ -378,6 +381,7 @@ func void DIA_Mika_WIEDERNACHHAUSE_Info ()
 	AI_Output			(self, other, "DIA_Mika_WIEDERNACHHAUSE_12_00"); //All right. That's that. I'll be off then.
 
 	AI_StopProcessInfos (self);		
+	
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine	(self,"Start"); 
 	B_GivePlayerXP (Xp_Ambient);
