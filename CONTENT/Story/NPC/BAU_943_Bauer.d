@@ -36,7 +36,7 @@ FUNC VOID Rtn_Start_943 ()
 	TA_Rake_FP				(05,00,12,00,"NW_FARM2_FIELD_05");
     TA_Sit_Campfire			(12,00,14,00,"NW_FARM2_FIELD_04_C");//Pause
     TA_Rake_FP				(14,00,20,52,"NW_FARM2_FIELD_05");
-    TA_Sit_Campfire			(20,52,05,00,"NW_FARM2_OUT_09");
+    TA_Sit_Campfire			(20,52,05,00,"NW_FARM2_HUT1_000");
 };
 
 

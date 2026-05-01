@@ -33,11 +33,10 @@ instance BAU_945_Egill (Npc_Default)
 };
 
 FUNC VOID Rtn_Start_945 ()
-{	
-	TA_Pick_FP			(05,00,21,00,"NW_FARM2_FIELD_02");
-    TA_Stand_Drinking	(21,00,00,02,"NW_FARM2_OUT_10");
-    TA_Sit_Bench		(00,02,05,00,"NW_FARM2_OUT_06");
+{
+	TA_Pick_FP			(05,00,12,00,"NW_FARM2_FIELD_02");
+	TA_Pick_FP			(12,00,20,55,"NW_FARM2_FIELD_03");
+    TA_Stand_Drinking	(20,55,00,02,"NW_FARM2_OUT_12");
+    TA_Sit_Campfire		(00,02,02,00,"NW_FARM2_OUT_03");
+    TA_Sleep			(02,00,05,00,"NW_FARM2_HUT1_005");
 };
-
-
-

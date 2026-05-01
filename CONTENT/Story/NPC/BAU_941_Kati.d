@@ -41,10 +41,7 @@ FUNC VOID Rtn_Start_941 ()
 {	
 	TA_Cook_Stove		(05,00,10,00,"NW_FARM2_HOUSE_IN_04");
     TA_Sit_Bench		(10,00,12,00,"NW_FARM2_BENCH_02");
-   	TA_Cook_Stove		(12,00,20,55,"NW_FARM2_HOUSE_IN_04");
-    TA_Roast_Scavenger 	(20,55,23,59,"NW_FARM2_BBQ");
-    TA_Sleep			(23,59,05,00,"NW_FARM2_HOUSE_IN_02");
+   	TA_Cook_Stove		(12,00,19,55,"NW_FARM2_HOUSE_IN_04");
+    TA_Roast_Scavenger 	(19,55,23,59,"NW_FARM2_BBQ");
+    TA_Sleep			(23,59,05,00,"NW_FARM2_HOUSE_IN_02_C_BED");
 };
-
-
-

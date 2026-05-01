@@ -3650,8 +3650,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(BAU_944_Ehnim, 		"FARM2");
 	Wld_InsertNpc 	(BAU_945_Egill, 		"FARM2");
 
-	Wld_InsertNpc 	(Sheep, 		"NW_FARM2_OUT_02");
-	Wld_InsertNpc 	(Sheep, 		"NW_FARM2_OUT_02");
+	Wld_InsertNpc 	(Sheep, 		"NW_FARM2_OUT_16");
+	Wld_InsertNpc 	(Sheep, 		"NW_FARM2_OUT_16");
 
 	// Taverne
 	
@@ -4018,6 +4018,14 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 
 	FUNC VOID INIT_SUB_NewWorld_Part_Forest_01()
 	{
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_01");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_02");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_03");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_04");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_05");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_06");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_07");
+		REV_SetObjectRoutine_Fire("FIREPLACE_FARM2_08");
 	};
 
 FUNC VOID INIT_NewWorld_Part_Forest_01 ()

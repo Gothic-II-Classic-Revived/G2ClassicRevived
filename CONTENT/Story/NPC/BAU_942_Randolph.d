@@ -29,19 +29,20 @@ instance BAU_942_Randolph (Npc_Default)
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_preStart_942;
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
+
 FUNC VOID Rtn_preStart_942 ()
 {	
 	TA_Stand_Guarding (08,00,22,00,"NW_FARM2_FIELD_04_B");
     TA_Stand_Guarding (22,00,08,00,"NW_FARM2_FIELD_04_B");
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
+
 FUNC VOID Rtn_Start_942 ()
 {	
 	TA_Pick_FP 			(05,00,21,00,"NW_FARM2_FIELD_04");
-    TA_Stand_Eating		(21,00,05,00,"NW_FARM2_OUT_07");
+    TA_Stand_Eating		(21,00,00,00,"NW_FARM2_HUT1_000");
+    TA_Sleep			(00,00,05,00,"NW_FARM2_HUT1_003");
 };
-//Joly: NIE AUF EINE BANK ODER THRON SETZEN
+
 FUNC VOID Rtn_Wettkampf_942 ()
 {	
 	TA_Stand_Drinking  	(08,00,22,00,"NW_TAVERNE_RUKHAR");	
