@@ -18,6 +18,12 @@ func void B_MemorizePlayerCrime (var C_NPC slf, var C_NPC taeter, var int crime)
 		return;
 	};
 	
+	// Required-kill NPCs must not poison their home area's Petzmaster state.
+	if (REV_IsRequiredKillTarget(slf))
+	{
+		return;
+	};
+
 	// ------ Gilden, die nicht auf Crimes reagieren ------
 	if (slf.guild == GIL_DMT)
 	//|| (slf.guild == GIL_BDT) Addon Banditen reagieren auf Crimes, allerdings nur die im Lager 

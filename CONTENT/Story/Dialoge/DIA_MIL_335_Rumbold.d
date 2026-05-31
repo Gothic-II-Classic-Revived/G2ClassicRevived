@@ -180,9 +180,6 @@ func void DIA_Rumbold_HALLO_schwanzeinziehen ()
 
 func void DIA_Rumbold_HALLO_ENDAttack ()
 {
-	Mil_335_Rumbold.guild = GIL_BDT;
-	Mil_336_Rick.guild = GIL_BDT;
-
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_KILL, 1);	
 

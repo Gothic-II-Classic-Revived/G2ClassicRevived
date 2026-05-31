@@ -79,7 +79,10 @@ func void B_AssessDefeat()
 		{
 			B_Say (self, other, "$OHMYGODHESDOWN");
 			
-			B_MemorizePlayerCrime (self, other, CRIME_ATTACK); //nur, wenn other == player
+			if (!REV_IsRequiredKillTarget(victim))
+			{
+				B_MemorizePlayerCrime (self, other, CRIME_ATTACK); //nur, wenn other == player
+			};
 		}
 		// -----------------------------------------------
 		

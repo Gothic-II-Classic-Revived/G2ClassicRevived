@@ -123,3 +123,15 @@ func void REV_ChangeStatPercent (var int recover, var int recoverPercent)
 
 	Npc_ChangeAttribute (hero, recover, amountDelta);
 };
+func int REV_IsRequiredKillTarget (var C_NPC slf)
+{
+	if (slf == SLD_840_Alvares)
+	|| (slf == SLD_841_Engardo)
+	|| (slf == MIL_335_Rumbold)
+	|| (slf == MIL_336_Rick)
+	{
+		return TRUE;
+	};
+
+	return FALSE;
+};

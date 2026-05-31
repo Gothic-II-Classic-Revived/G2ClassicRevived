@@ -57,9 +57,6 @@ func void DIA_Alvares_HAUAB_Info ()
 
 func void AlvaresStartAttack()
 {
-	SLD_840_Alvares.guild = GIL_BDT;
-	SLD_841_Engardo.guild = GIL_BDT;
-
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_KILL, 1);	
 

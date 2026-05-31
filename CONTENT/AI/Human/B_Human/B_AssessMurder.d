@@ -106,6 +106,11 @@ FUNC VOID B_AssessMurder()
 	};
 	
 	
+	if (REV_IsRequiredKillTarget(victim))
+	{
+		return;
+	};
+
 	// ------ Täter und Opfer BEIDE Human ------
 	// + Ich war HOSTILE oder ANGRY zum Opfer 
 	// + Ich bin FRIENDLY oder NEUTRAL zum Mörder
