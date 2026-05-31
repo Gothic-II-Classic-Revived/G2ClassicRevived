@@ -272,8 +272,7 @@ func VOID DIA_CipherDJG_GoForSwampDragon_Info()
 {
 	if (Npc_KnowsInfo(other, DIA_Dragon_Swamp_Exit)) //Joly: schon zum Drachen gesprochen!
 	{
-	//AI_Output			(self, other, "DIA_CipherDJG_GoForSwampDragon_07_00"); //(bellows) Attack!
-	B_Say(self, self, "DIA_CipherDJG_GoForSwampDragon_07_00"); //(bellows) Attack!
+	AI_Output			(self, other, "DIA_CipherDJG_GoForSwampDragon_07_00"); //(bellows) Attack!
 	AI_StopProcessInfos	(self);
 	Npc_ExchangeRoutine	(self,"SwampDragon");
 	B_StartOtherRoutine	(DJG_Rod,"SwampDragon");

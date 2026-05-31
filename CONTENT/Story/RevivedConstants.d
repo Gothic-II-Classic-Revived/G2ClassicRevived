@@ -29,11 +29,13 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 // ***************
 
 // NPC Names
-const string NAME_DementorNovice		= "Seeker Novice";
-const string NAME_Templar				= "Apocalyptic Templar";
-const string NAME_JudgeGuard			= "Judge's House Guard";
+const string NAME_DementorNovice		=	"Seeker Novice";
+const string NAME_Templar				=	"Apocalyptic Templar";
+const string NAME_JudgeGuard			=	"Judge's House Guard";
 const string NAME_LOAFER				=	"Loafer";
 const string NAME_HIGHWAYMAN			=	"Highwayman";
+
+const string NAME_BOUNTY				=	"Bounty";
 
 
 // Death Messages
@@ -45,21 +47,21 @@ const string PRINT_DEATH_MESSAGE_4		=	"You are finally free.";
 
 
 // Eating Bonus Messages
-const string PRINT_Eat_Apple1				= "Tastes juicy and fresh.";
-const string PRINT_Eat_Apple2				= "You feel refreshed.";
-const string PRINT_Eat_Apple3				= "You feel well and strong!";
-const string PRINT_Eat_SourApple1			= "The taste sparks your curiosity.";
-const string PRINT_Eat_SourApple2			= "You feel energized.";
-const string PRINT_Eat_SourApple3			= "You feel agile and alert!";
-const string PRINT_Eat_Pear1				= "Sweet and mellow taste.";
-const string PRINT_Eat_Pear2				= "You feel a strange clarity.";
-const string PRINT_Eat_Pear3				= "You feel open to new knowledge!";
-const string PRINT_Eat_MPMushroom1			= "The mushroom tingles with magic power.";
-const string PRINT_Eat_MPMushroom2			= "You feel a spark of energy.";
-const string PRINT_Eat_MPMushroom3			= "Your mind clears and mana flows!";
-const string PRINT_Eat_HPMushroom1			= "Earthy and rich in taste.";
-const string PRINT_Eat_HPMushroom2			= "The hearty flavor revitalizes you.";
-const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
+const string PRINT_Eat_Apple1			=	"Tastes juicy and fresh.";
+const string PRINT_Eat_Apple2			=	"You feel refreshed.";
+const string PRINT_Eat_Apple3			=	"You feel well and strong!";
+const string PRINT_Eat_SourApple1		=	"The taste sparks your curiosity.";
+const string PRINT_Eat_SourApple2		=	"You feel energized.";
+const string PRINT_Eat_SourApple3		=	"You feel agile and alert!";
+const string PRINT_Eat_Pear1			=	"Sweet and mellow taste.";
+const string PRINT_Eat_Pear2			=	"You feel a strange clarity.";
+const string PRINT_Eat_Pear3			=	"You feel open to new knowledge!";
+const string PRINT_Eat_MPMushroom1		=	"The mushroom tingles with magic power.";
+const string PRINT_Eat_MPMushroom2		=	"You feel a spark of energy.";
+const string PRINT_Eat_MPMushroom3		=	"Your mind clears and mana flows!";
+const string PRINT_Eat_HPMushroom1		=	"Earthy and rich in taste.";
+const string PRINT_Eat_HPMushroom2		=	"The hearty flavor revitalizes you.";
+const string PRINT_Eat_HPMushroom3		=	"Your body feels more resilient!";
 
 
 // Log Entries
@@ -200,7 +202,7 @@ CONST STRING TESTLEVEL_TELEPORT_DI			= "DRAGONISLAND.ZEN";
 // Graves (Stone Fortress)
 CONST STRING MOBNAME_GRAVE_REVIVED_01		= "Crygreg - 'Happy Anniversary!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_02		= "Macintosh - 'You couldn't have fucking told me this earlier?!'";
-CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Jorgenson - 'Das ist interresant.'";
+CONST STRING MOBNAME_GRAVE_REVIVED_03		= "Jorgenson - 'ALISTAAAAIR!'";
 CONST STRING MOBNAME_GRAVE_REVIVED_04		= "Berb - 'Can I help you with a sausage in these troubled times?'";
 CONST STRING MOBNAME_GRAVE_REVIVED_05		= "Alistair - 'Crygreg yearns for Bjorn.'";
 CONST STRING MOBNAME_GRAVE_REVIVED_06		= "Joka - 'The Cocos are invading!'";
@@ -311,7 +313,7 @@ const int	_TIME_MESSAGE_RAISEATTRIBUTE	=	4;
 // ***************
 
 const int ABANDONEDMINE_ZEN = 5;
-var int PlayerPassedAbandonedMine;
+var int EnteredAbandonedMine;
 var int EnterAM_Kapitel1;
 var int EnterAM_Kapitel2;
 var int EnterAM_Kapitel3;
@@ -420,7 +422,7 @@ const int NPCTYPE_MILOUT_AMBIENT	=	12;
 const int NPCTYPE_MILOUT_MAIN		=	13;
 
 const int GIL_FANATIC				=	53;
-const int GIL_56					=	56;
+const int GIL_BOUNT					=	56;
 const int GIL_57					=	57;
 const int GIL_63					=	63;
 const int GIL_64					=	64;
@@ -534,6 +536,18 @@ var int Bounty2;
 var int Bounty3;
 var int Bounty4;
 var int Bounty5;
+
+var int VatrasMessage1;
+var int VatrasMessage2;
+var int VatrasMessage3;
+var int VatrasMessage4;
+var int VatrasMessage5;
+
+var int BaltramPackage1;
+var int BaltramPackage2;
+var int BaltramPackage3;
+var int BaltramPackage4;
+var int BaltramPackage5;
 
 
 // ***************

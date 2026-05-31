@@ -33,8 +33,8 @@ instance BAU_971_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_971 ()
 {	
-	TA_Smalltalk		(08,00,22,00,"NW_TAVERNE_IN_RANGERMEETING"); 
-    TA_Smalltalk		(22,00,08,00,"NW_TAVERNE_IN_RANGERMEETING");
+	TA_Smalltalk		(08,00,22,00,"NW_TAVERNE_IN_12"); 
+    TA_Smalltalk		(22,00,08,00,"NW_TAVERNE_IN_12");
 };
 
 

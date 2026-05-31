@@ -147,7 +147,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_ORC (C_Item)
 };
 
 //****************************************************************************
-//			SPELLS
+//			PSI SPELLS
 //****************************************************************************
 
 INSTANCE ITSC_REVIVED_TELEKINESIS (C_Item)
@@ -492,7 +492,7 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)
 };
 
 //****************************************************************************
-//			TRANSFORM
+//			TRANSFORM (From G1)
 //****************************************************************************
 
 INSTANCE ITSC_REVIVED_TRANSFORM_MEATBUG (C_Item)
@@ -567,30 +567,6 @@ INSTANCE ITSC_REVIVED_TRANSFORM_BLOODFLY (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-INSTANCE ITSC_REVIVED_TRANSFORM_SWAMPDRONE (C_Item)
-{
-	name 				=	NAME_SPL_TrfSwampDrone;
-
-	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	ITEM_MULTI;
-	material			=	MAT_LEATHER;
-
-	value 				=	REV_Value_TRANSFORM_SCROLL_WEAK;
-
-	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
-
-	spell			    = 	SPL_TrfSwampDrone;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	REV_Cost_TRANSFORM_SCROLL_WEAK;
-
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
 INSTANCE ITSC_REVIVED_TRANSFORM_MINECRAWLER (C_Item)
 {
 	name 				=	NAME_SPL_TrfMinecrawler;
@@ -606,6 +582,58 @@ INSTANCE ITSC_REVIVED_TRANSFORM_MINECRAWLER (C_Item)
 	spell			    = 	SPL_TrfMinecrawler;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	REV_Cost_TRANSFORM_SCROLL_MID;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_TRANSFORM_ORCDOG (C_Item)
+{
+	name 				=	NAME_SPL_TrfOrcDog;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+	material			=	MAT_LEATHER;
+
+	value 				=	REV_Value_TRANSFORM_SCROLL_MID;
+
+	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
+
+	spell			    = 	SPL_TrfOrcDog;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	REV_Cost_TRANSFORM_SCROLL_MID;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+//****************************************************************************
+//			TRANSFORM (From REVIVED)
+//****************************************************************************
+
+INSTANCE ITSC_REVIVED_TRANSFORM_SWAMPDRONE (C_Item)
+{
+	name 				=	NAME_SPL_TrfSwampDrone;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+	material			=	MAT_LEATHER;
+
+	value 				=	REV_Value_TRANSFORM_SCROLL_WEAK;
+
+	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
+
+	spell			    = 	SPL_TrfSwampDrone;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	REV_Cost_TRANSFORM_SCROLL_WEAK;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -652,30 +680,6 @@ INSTANCE ITSC_REVIVED_TRANSFORM_BOAR (C_Item)
 	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
 
 	spell			    = 	SPL_TrfBoar;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	REV_Cost_TRANSFORM_SCROLL_MID;
-
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_TRANSFORM_ORCDOG (C_Item)
-{
-	name 				=	NAME_SPL_TrfOrcDog;
-
-	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	ITEM_MULTI;
-	material			=	MAT_LEATHER;
-
-	value 				=	REV_Value_TRANSFORM_SCROLL_MID;
-
-	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
-
-	spell			    = 	SPL_TrfOrcDog;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	REV_Cost_TRANSFORM_SCROLL_MID;
 

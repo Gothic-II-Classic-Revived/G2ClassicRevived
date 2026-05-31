@@ -849,7 +849,7 @@ func void STARTUP_SURFACE ()
 {
 	// Dragons
 	Wld_InsertNpc		(Dragon_Swamp,					"OW_SWAMPDRAGON");
-	Wld_InsertItem		(ItWr_StonePlateCommon_Addon,	"OW_ITEM_SWAMPHORT_01"); 
+	Wld_InsertItem		(ItAm_Addon_WispDetector,		"OW_ITEM_SWAMPHORT_01"); 
 	Wld_InsertItem		(ITRI_REVIVED_STR_DEX_01,		"OW_ITEM_SWAMPHORT_02"); 
 
 	Wld_InsertNpc		(Dragon_Rock, 					"OW_STONEDRAGON");
@@ -860,9 +860,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertItem		(ITRW_REVIVED_CROSSBOW_FIRE_01,	"OW_ITEM_FIREHORT_01"); 
 	Wld_InsertItem		(ItMi_Sextant,			"OW_ITEM_FIREHORT_02"); 
 
-	Wld_InsertNpc		(Dragon_Ice, 					"OW_ICEDRAGON");
-	Wld_InsertItem		(ItWr_Addon_LPBook,				"OW_ITEM_ICEHORT_01"); 
-	Wld_InsertItem		(ItAt_DragonEgg_MIS,			"OW_ITEM_ICEHORT_02"); 
+	// Ice Dragon is inserted in Free Mine.
 
 
 	// Exchange Place			
@@ -1027,13 +1025,17 @@ func void STARTUP_SURFACE ()
 
 
 	// Shipwreck
-	Wld_InsertNpc		(FireWaran,"OW_COAST_SHIPWRECK_WARAN");
-	Wld_InsertNpc		(FireWaran,"OW_COAST_SHIPWRECK_WARAN");
-	Wld_InsertNpc		(FireWaran,"OW_COAST_SHIPWRECK_WARAN");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN");
 
-	Wld_InsertNpc		(FireWaran,"OW_COAST_SHIPWRECK_WARAN_2");
-	Wld_InsertNpc		(FireWaran,"OW_COAST_SHIPWRECK_WARAN_2");
-	Wld_InsertNpc		(FireWaran,"OW_COAST_SHIPWRECK_WARAN_2");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN_2");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN_2");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN_2");
+
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN_3");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN_3");
+	Wld_InsertNpc		(BeachFireWaran,"OW_COAST_SHIPWRECK_WARAN_3");
 
 
 	// Fog Tower
@@ -1661,9 +1663,13 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SNAPPER_OCWOOD1_05_02");
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SNAPPER_OCWOOD1_05_02");
 
-	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
-	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
-	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
+	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
+	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
+	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
+
+	Wld_InsertNpc		(Alligator,"OW_OC_PSI_MOVEMENT1");
+	Wld_InsertNpc		(Alligator,"OW_OC_PSI_MOVEMENT1");
+	Wld_InsertNpc		(Alligator,"OW_OC_PSI_MOVEMENT1");
 
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_GOBBO_LOCATION_29_03");
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_GOBBO_LOCATION_29_03");
@@ -1692,8 +1698,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Gobbo_Elite,"GOBBO_MASTERCAVE10");
 	Wld_InsertNpc		(Gobbo_Elite,"GOBBO_MASTERCAVE10");
 
-	Wld_InsertNpc		(Scavenger_Demon,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
-	Wld_InsertNpc		(Scavenger_Demon,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
+	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
+	Wld_InsertNpc		(OrcDog,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
 
 	Wld_InsertNpc		(Scavenger_Demon,"FP_ROAM_OW_WARAN_OCWALD_PSI_PATH4");
 	Wld_InsertNpc		(Scavenger_Demon,"FP_ROAM_OW_WARAN_OCWALD_PSI_PATH4");
@@ -1707,9 +1713,6 @@ func void STARTUP_SURFACE ()
 
 
 	// Road to Stone Fortress
-	Wld_InsertNpc		(BeachWaran,"OW_OC_PSI_MOVEMENT1");
-	Wld_InsertNpc		(BeachWaran,"OW_OC_PSI_MOVEMENT1");
-	Wld_InsertNpc		(BeachWaran,"OW_OC_PSI_MOVEMENT1"); 
 	
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE_02_05");
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE_02_05");
@@ -1764,6 +1767,14 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_07");	
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_09");
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_22");
+
+
+	// Old Castle (Dungeon)
+	Wld_InsertNpc		(MeatbugIndoor,	"CASTLE_DUNG_021");
+	Wld_InsertNpc		(MeatbugIndoor,	"CASTLE_DUNG_024");
+	Wld_InsertNpc		(MeatbugIndoor,	"CASTLE_DUNG_024");
+	Wld_InsertNpc		(MeatbugIndoor,	"CASTLE_DUNG_025");
+
 
 
 	// Orc Graveyard (Outside)
@@ -4370,7 +4381,7 @@ FUNC VOID INIT_NewWorld()
 
 func void STARTUP_AbandonedMine()
 {
-	PlayerPassedAbandonedMine = TRUE;
+	EnteredAbandonedMine = TRUE;
 
 		Wld_InsertNpc(Minecrawler,"AM_022");
 		Wld_InsertNpc(Minecrawler,"AM_023");
@@ -4425,6 +4436,9 @@ func void INIT_SUB_AbandonedMine()
 func void INIT_AbandonedMine()
 {
 	INIT_SUB_AbandonedMine();
+    B_InitMonsterAttitudes ();
+	B_InitGuildAttitudes ();
+	B_InitNpcGlobals ();
 	B_Enter_AbandonedMine();
 };
 
@@ -4442,28 +4456,45 @@ FUNC VOID STARTUP_FREEMINE ()
 	//-------- globale Story-Variable --------
 	EnteredFreeMine = TRUE;
 
+	// Dragon
+	Wld_InsertNpc		(Dragon_Ice, 				"FM_162");
+	Wld_InsertItem		(ItWr_Addon_BookXP1000,		"OW_ITEM_ICEHORT_01"); 
+	Wld_InsertItem		(ItRu_BeliarsRage,			"OW_ITEM_ICEHORT_02"); 
+
+
+	//---------------------Draconians-------------------------
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_01");
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_02");
+	Wld_InsertNpc				(Draconian		, "FM_139");
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_04");
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_05");
+	Wld_InsertNpc				(Draconian		, "FM_116");
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_07");
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_08");
+	Wld_InsertNpc				(Draconian		, "FP_GUARD_09");
+
+
 	//--------------------Minecrawler-------------------------
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_01");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_04");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_05");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_06");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_09");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_14");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_17");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_29");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_28");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_32");//
-	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_34");//
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_01");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_04");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_05");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_06");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_09");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_14");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_17");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_29");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_28");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_32");
+	Wld_InsertNpc				(IceMinecrawler		, "FP_ROAM_CRAWLER_34");
 };
 
 FUNC VOID INIT_FREEMINE ()	
 {
-	//-------------------Fackeln-----------------------------
-	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
-
 	//-------- Attitüden initialisieren --------
     B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
+	B_InitNpcGlobals ();
+	B_Enter_FreeMine();
 };
 
 
@@ -4526,4 +4557,6 @@ FUNC VOID INIT_ORCGRAVEYARD ()
 	//-------- Attitüden initialisieren --------
     B_InitMonsterAttitudes ();
 	B_InitGuildAttitudes();
+	B_InitNpcGlobals ();
+	B_Enter_OrcGraveyard();
 };

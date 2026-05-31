@@ -29,9 +29,11 @@ instance BDT_3007_Sly (Npc_Default)
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Sly, BodyTex_N, ITAR_REVIVED_STT_M);	
 	Mdl_SetModelFatness	(self, 0);
-	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
+	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds");
 
+	// ------ TA ------
 	daily_routine = Rtn_Start_3007;
+	start_aistate = ZS_Bandit; 
 };	 
 
 	FUNC VOID Rtn_Start_3007()

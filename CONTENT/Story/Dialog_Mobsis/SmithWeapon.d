@@ -507,7 +507,7 @@ FUNC VOID PC_WEAPON_1H_REVIVED_ORE_01_Info ()
 	{
 		Npc_RemoveInvItems (hero, ItMi_Nugget, 1);
 		
-		CreateInvItems 	   (hero, ITMW_REVIVED_1H_SWORD_0RE_01,1); 
+		CreateInvItems 	   (hero, ITMW_REVIVED_1H_SWORD_ORE_01,1); 
 		Print (PRINT_SmithSuccess);
 	}
 	else

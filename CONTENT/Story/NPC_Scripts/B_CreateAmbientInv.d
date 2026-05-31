@@ -611,18 +611,19 @@ func void B_CreateAmbientInv (var C_NPC slf)
 	Zufall = Hlp_Random (7);
 
 	if 		(slf.guild == GIL_VLK)			{		B_CreateAmbientInv_VLK (Zufall);}
-			else if (slf.guild == GIL_BAU)	{		B_CreateAmbientInv_BAU (Zufall);		}
-			else if (slf.guild == GIL_NOV)	{		B_CreateAmbientInv_NOV (Zufall);		}
-			else if (slf.guild == GIL_SLD)	{		B_CreateAmbientInv_SLD (Zufall);		}
-			else if (slf.guild == GIL_KDF)	{		B_CreateAmbientInv_KDF (Zufall);		}
-			else if (slf.guild == GIL_MIL)	{		B_CreateAmbientInv_MIL (Zufall);		}
-			else if (slf.guild == GIL_DJG)	{		B_CreateAmbientInv_DJG (Zufall);		}
-			else if (slf.guild == GIL_PAL)	{		B_CreateAmbientInv_PAL (Zufall);		}
-			else if (slf.guild == GIL_DMT)	{		B_CreateAmbientInv_DMT (Zufall);		}
-			else if (slf.guild == GIL_STRF)	{		B_CreateAmbientInv_STRF(Zufall);		}
-			else if (slf.guild == GIL_PIR)	{		B_CreateAmbientInv_PIR(Zufall);			}
-			else if (slf.guild == GIL_BDT)	{		B_CreateAmbientInv_BDT(Zufall);			}
-			else 							{		B_CreateAmbientInv_BAU (Zufall);		};
+			else if (slf.guild == GIL_BAU)	{		B_CreateAmbientInv_BAU (Zufall);}
+			else if (slf.guild == GIL_NOV)	{		B_CreateAmbientInv_NOV (Zufall);}
+			else if (slf.guild == GIL_SLD)	{		B_CreateAmbientInv_SLD (Zufall);}
+			else if (slf.guild == GIL_KDF)	{		B_CreateAmbientInv_KDF (Zufall);}
+			else if (slf.guild == GIL_MIL)	{		B_CreateAmbientInv_MIL (Zufall);}
+			else if (slf.guild == GIL_DJG)	{		B_CreateAmbientInv_DJG (Zufall);}
+			else if (slf.guild == GIL_PAL)	{		B_CreateAmbientInv_PAL (Zufall);}
+			else if (slf.guild == GIL_DMT)	{		B_CreateAmbientInv_DMT (Zufall);}
+			else if (slf.guild == GIL_STRF)	{		B_CreateAmbientInv_STRF(Zufall);}
+			else if (slf.guild == GIL_PIR)	{		B_CreateAmbientInv_PIR (Zufall);}
+			else if (slf.guild == GIL_BDT)	{		B_CreateAmbientInv_BDT (Zufall);}
+			else if (slf.guild == GIL_BOUNT){		B_CreateAmbientInv_BDT (Zufall);}
+			else 							{		B_CreateAmbientInv_BAU (Zufall);};
 	
 };
 

@@ -313,7 +313,7 @@ FUNC VOID PC_PrayBeliar_PrayIdol_ManaPay ()
 //*******************************************************
 //	SchwertWeihe
 //*******************************************************
-INSTANCE PC_PrayBeliar_UPGRATEBELIARSWEAPON (C_Info) 
+/* INSTANCE PC_PrayBeliar_UPGRATEBELIARSWEAPON (C_Info) 
 {
 	npc				= PC_Hero;
 	nr				= 2;
@@ -339,3 +339,4 @@ FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_Info()
 	B_ClearBeliarsWeapon ();
 	B_UpgrateBeliarsWeapon ();
 }; 
+ */

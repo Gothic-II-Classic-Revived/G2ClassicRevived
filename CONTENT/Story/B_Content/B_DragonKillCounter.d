@@ -13,6 +13,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		var C_NPC RckDragn; 	RckDragn 		= Hlp_GetNpc(Dragon_Rock); 
 		var C_NPC FreDragn; 	FreDragn 		= Hlp_GetNpc(Dragon_Fire); 
 		var C_NPC IcDragn; 		IcDragn 		= Hlp_GetNpc(Dragon_Ice);  
+		var C_NPC UndDragn; 	UndDragn 		= Hlp_GetNpc(Dragon_Undead);  
 
 		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (SwapDragn)))
 		&& (SwapDragnIsDead == FALSE)
@@ -71,7 +72,8 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 			};
 	};
 	
-	if (current_dragon.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)
+	if ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (UndDragn)))
+	&& (UndeadDragonIsDead == FALSE)
 	{
 		UndeadDragonIsDead = TRUE;
 		

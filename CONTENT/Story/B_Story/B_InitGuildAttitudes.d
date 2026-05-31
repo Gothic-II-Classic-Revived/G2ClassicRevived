@@ -214,7 +214,7 @@ func void B_InitGuildAttitudes ()
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_ANGRY,		GIL_NONE	);
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_ANGRY,		GIL_PAL		);
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_ANGRY,		GIL_MIL		);
-		Wld_SetGuildAttitude	(GIL_PIR,	ATT_NEUTRAL,	GIL_VLK		);
+		Wld_SetGuildAttitude	(GIL_PIR,	ATT_ANGRY,		GIL_VLK		);
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_ANGRY,		GIL_KDF		);
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_ANGRY,		GIL_NOV		);
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_NEUTRAL,	GIL_DJG		);

@@ -208,13 +208,13 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		//--------
 		if ((Npc_IsDead(Sengrath))== FALSE)		 //Joly: Sengrath Missing in Action auf der Suche nach seiner verlorenen Armbrust.
 			{
-				B_StartOtherRoutine	(Sengrath,"ORCBARRIER");
+				B_StartOtherRoutine	(Sengrath,"ORCBARRIER");							
+				B_KillNpc     	(Sengrath);
 				if (!(Npc_HasItems (Sengrath,ITRW_REVIVED_CROSSBOW_SENGRATH)))
 				{
 	 				CreateInvItems 	(Sengrath, ITRW_REVIVED_CROSSBOW_SENGRATH, 1);	
 	 			};
-	 			Sengrath_Missing = TRUE;								
-				B_KillNpc     	(Sengrath);
+	 			Sengrath_Missing = TRUE;	
 			};
 
 		//Tote Drachenjäger
@@ -579,15 +579,6 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Draconian,"LOCATION_18_OUT");
 		Wld_InsertNpc	(Draconian,"FP_ROAM_OW_ROCK_DRACONIAN_07");
 		Wld_InsertItem 	(ItSc_Firestorm,"FP_OW_ITEM_13");
-
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_000");
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_002");
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_003");
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_004");
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_005");
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_006");
-		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_007");
-		Wld_InsertNpc	(SkeletonMage_Angar,"FORTRESS_TEMPLE_016");
 	
 		//Orkbarriere
 		

@@ -9,14 +9,6 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_1 ()
 		// ------ Gilden-Attitüden ändern ------
 
 		// ------ TAs ändern ------
-		if (ENTERED_ADDONWORLD == TRUE)
-		{
-			if (SC_GotPORTALTEMPELWALKTHROUGHKey == FALSE)
-			{
-				Wld_InsertNpc 	(Stoneguardian_MerdarionsSchluessel, "NW_TROLLAREA_PORTALTEMPEL_22"); 
-				SC_GotPORTALTEMPELWALKTHROUGHKey = TRUE;
-			};
-		};
 
 		// ------ Respawn ------
 };
@@ -425,7 +417,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(OrcWarrior_Roam, "NW_TROLLAREA_PLANE_06");
  		Wld_InsertNpc 	(DragonSnapper, 	"NW_FARM3_BIGWOOD_04");
  		Wld_InsertNpc 	(DragonSnapper, 	"NW_FARM3_BIGWOOD_04");
-		Wld_InsertNpc 	(Maya_Troll, 		"NW_TROLLAREA_RUINS_41");
+		Wld_InsertNpc 	(Troll, 		"NW_TROLLAREA_RUINS_41");
 	
 		//***********GILDENABHÄNGIG*****************************************
 		//AntiPaladine für den Paladin 

@@ -123,6 +123,11 @@ const int	REV_Range_2H_Uriziel_02				=	120;
 const int	REV_Value_2H_Uriziel_02				=	5000;
 
 //******************************************************************//
+const int	REV_Damage_2H_Big_01				=	150;
+const int	REV_Condition_2H_Big_01				=	140;
+const int	REV_Range_2H_Big_01					=	120;
+const int	REV_Value_2H_Big_01					=	5000;
+//******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Pirate_01		=	115;
 const int	REV_Condition_2H_Sword_Pirate_01	=	110;
@@ -183,8 +188,8 @@ const int	REV_Range_2H_Sword_Smith_05			=	130;
 const int	REV_Value_2H_Sword_Smith_05			=	4800;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Ore_01			=	120;
-const int	REV_Condition_2H_Sword_Ore_01		=	100;
+const int	REV_Damage_2H_Sword_Ore_01			=	140;
+const int	REV_Condition_2H_Sword_Ore_01		=	120;
 const int	REV_Range_2H_Sword_Ore_01			=	140;
 const int	REV_Value_2H_Sword_Ore_01			=	2800;
 //******************************************************************//
@@ -198,8 +203,8 @@ const int	REV_Condition_2H_Sword_Ore_03		=	140;
 const int	REV_Range_2H_Sword_Ore_03			=	140;
 const int	REV_Value_2H_Sword_Ore_03			=	4500;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Ore_04			=	200;
-const int	REV_Condition_2H_Sword_Ore_04		=	180;
+const int	REV_Damage_2H_Sword_Ore_04			=	185;
+const int	REV_Condition_2H_Sword_Ore_04		=	160;
 const int	REV_Range_2H_Sword_Ore_04			=	140;
 const int	REV_Value_2H_Sword_Ore_04			=	4400;
 //******************************************************************//
@@ -845,31 +850,7 @@ INSTANCE ITMW_REVIVED_2H_DEMONSLAYER (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Demonslayer;
-	visual 				=	"REV_2H_CRIMSONBLADE_01.3DS";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_TwoHanded;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-INSTANCE ITMW_REVIVED_2H_DEMONSLAYER_02 (C_Item) 
-{	
-	name 				=	"Heavy Demonslayer";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_2HD_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_2H_Demonslayer;
-
-	damageTotal			= 	REV_Damage_2H_Demonslayer;
-	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Demonslayer;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_2H_Demonslayer;
-	visual 				=	"REV_2H_CRIMSONBLADE_02.3DS";
+	visual 				=	"REV_2H_CRIMSONBLADE.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
@@ -925,6 +906,31 @@ INSTANCE ITMW_REVIVED_2H_URIZIEL_02 (C_Item)
 
 	description			= 	name;
 	TEXT[0]				= 	"The sword is magically charged.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_2H_BIG_01 (C_Item) 
+{	
+	name 				=	"Zangetsu";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_BIG_01;
+
+	damageTotal			= 	REV_Damage_2H_BIG_01;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_BIG_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_BIG_01;
+	visual 				=	"REV_2H_SWORD_BIG_01.3DS";
+
+	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;

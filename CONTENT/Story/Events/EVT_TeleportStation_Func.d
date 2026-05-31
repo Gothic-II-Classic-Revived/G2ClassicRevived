@@ -136,6 +136,25 @@ func void EVT_TELEPORTSTATION_FUNC ()
 		{
 			AI_Teleport	(hero, "TOT"); 
 		};		
+	}
+	else if (CurrentLevel == PASS_ZEN)
+	{
+		if (Npc_GetDistToWP(hero, "PASS_TELEPORTSTATION_ENTRY")<3000)
+		{
+			AI_Teleport	(hero, "PASS_TELEPORTSTATION_ENTRY");
+
+			if (SCUsed_PASS_TELEPORTSTATION_ENTRY != TRUE)
+			{
+				B_LogEntry (TOPIC_Addon_TeleportsNW,"I've activated the teleporter stone at the entrance of the pass. It seems to be a shortcut to the other teleport station in the pass."); 
+				B_GivePlayerXP (XP_Ambient);
+			
+				SCUsed_PASS_TELEPORTSTATION_ENTRY = TRUE; 
+			};
+		}
+		else
+		{
+			AI_Teleport	(hero, "TOT"); 
+		};		
 	};
 		
 		if (SCUsed_NW_TELEPORTSTATION_CASTLEMINE == TRUE)
@@ -159,4 +178,10 @@ func void EVT_TELEPORTSTATION_FUNC ()
 			B_GivePlayerXP (XP_AllOWTeleportStones);
 		};
 		
+		if (SCUsed_PASS_TELEPORTSTATION_ENTRY == TRUE)
+		&& (SCUsed_AllPassTeleportStones != TRUE)
+		{
+			SCUsed_AllPassTeleportStones = TRUE;
+			B_GivePlayerXP (XP_AllPassTeleportStones);
+		};
 };

@@ -28,6 +28,9 @@ instance BDT_3006_Santino (Npc_Default)
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 
+	// ------ TA ------
+	start_aistate = ZS_Bandit;
+
 	daily_routine = Rtn_Start_3006;
 };	 
 

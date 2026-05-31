@@ -26,11 +26,13 @@ instance BDT_3004_Bullit (Npc_Default)
 	CreateInvItems	(self, ITRW_BOLT, 30);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Bullit, BodyTex_N, ITAR_REVIVED_GRD_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Bullit, BodyTex_N, ITAR_REVIVED_GRD_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
+	// ------ TA ------
 	daily_routine = Rtn_Start_3004;
+	start_aistate = ZS_Bandit;
 };	 
 
 	FUNC VOID Rtn_Start_3004()

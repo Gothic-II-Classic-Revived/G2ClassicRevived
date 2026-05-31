@@ -574,7 +574,7 @@ func void DIA_Addon_Vatras_Waffen_Info ()
 	}
 	else
 	{
-		Info_AddChoice (DIA_Addon_Vatras_Waffen, "What do you know about the weapons dealer so far?", DIA_Addon_Vatras_Waffen_ToMartin);
+		Info_AddChoice (DIA_Addon_Vatras_Waffen, "How much do you know about the weapons dealer?", DIA_Addon_Vatras_Waffen_ToMartin);
 	};
 };
 func void DIA_Addon_Vatras_Waffen_BACK()

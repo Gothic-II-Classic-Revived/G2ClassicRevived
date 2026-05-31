@@ -7,6 +7,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	voice			= 15;
 	id				= 0;
 	
+	self.aivar[AIV_INVINCIBLE] = true;
+	
 	//--------- abilities --------
 	B_SetAttributesForLevel(self, 500);	
 	bodyStateInterruptableOverride = TRUE;
@@ -242,6 +244,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_KNIGHT_02, 1);
 	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER, 1);
 	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_CRAWLER, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_H, 1);
@@ -444,7 +447,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_DEMONSLAYER, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_DEMONSLAYER_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_URIZIEL_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_URIZIEL_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_BANDIT_01, 1);
@@ -467,7 +469,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_SMITH_03, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_SMITH_04, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_SMITH_05, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_0RE_01, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_ORE_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_ORE_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_ORE_03, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_ORE_04, 1);
@@ -530,7 +532,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_2H_INNOS_SWORD_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_INNOS_SWORD_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_DEMONSLAYER, 1);
-	CreateInvItems(self, ITMW_REVIVED_2H_DEMONSLAYER_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_URIZIEL_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_URIZIEL_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_SWORD_SMITH_01, 1);

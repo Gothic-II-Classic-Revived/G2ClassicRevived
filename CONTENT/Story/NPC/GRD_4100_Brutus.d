@@ -44,7 +44,7 @@ FUNC VOID Rtn_Start_4100 ()
 //Joly: NIE AUF EINE BANK ODER THRON SETZEN
 FUNC VOID Rtn_Meatbugs_4100 ()
 {	
-	TA_Stand_ArmsCrossed 		(08,00,23,00,"OCC_CENTER_BRUTUS"); 
-    TA_Stand_ArmsCrossed		(23,00,08,00,"OCC_CENTER_BRUTUS");
+	TA_Stand_ArmsCrossed 		(08,00,23,00,"OCC_MERCS_DOWNSTAIRS_1"); 
+    TA_Stand_ArmsCrossed		(23,00,08,00,"OCC_MERCS_DOWNSTAIRS_1");
 };
 

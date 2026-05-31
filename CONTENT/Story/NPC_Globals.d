@@ -336,10 +336,6 @@ func void  B_InitNpcGlobals ()
 	Farim			= Hlp_GetNpc (VLK_4301_Farim);				  	
   
   	Dexter			= Hlp_GetNpc (BDT_1060_Dexter);	
- 	
- 	Sumpfi_01		= Hlp_GetNpc (MIS_Addon_Swampshark_01); 
-	Sumpfi_02		= Hlp_GetNpc (MIS_Addon_Swampshark_02); 
-	Sumpfi_03 		= Hlp_GetNpc (MIS_Addon_Swampshark_03); 
 
  	//--------------------------GOTHIC 2--------------------------------------------
  	

@@ -2,21 +2,21 @@
 //	Minecrawler Prototype
 //*****************************
 
-PROTOTYPE Mst_Default_Minecrawler(C_Npc)			
+PROTOTYPE Mst_Default_IceMinecrawler(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Minecrawler";
+	name							=	"Ice Minecrawler";
 	guild							=	GIL_MINECRAWLER;
 	aivar[AIV_MM_REAL_ID]			= 	ID_MINECRAWLER;
 	
 	//----- Attribute ----
-	B_SetMonsterAttributesForLevel(self, 12);
+	B_SetMonsterAttributesForLevel(self, 18);
 
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	80;
 	protection	[PROT_EDGE]			=	100;
 	protection	[PROT_POINT]		=	120;
-	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FIRE]			=	50;
 	protection	[PROT_FLY]			=	100;
 	protection	[PROT_MAGIC]		=	0;
 	
@@ -45,36 +45,20 @@ PROTOTYPE Mst_Default_Minecrawler(C_Npc)
 // Visuals
 //***********
 
-func void B_SetVisuals_Minecrawler()
+func void B_SetVisuals_IceMinecrawler()
 {
 	Mdl_SetVisual			(self,	"Crawler.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Crw_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"CRAWLER_ICE",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+
 //*****************
-//	Minecrawler
+//	Ice Minecrawler
 //*****************
 
-INSTANCE Minecrawler	(Mst_Default_Minecrawler)
+INSTANCE IceMinecrawler	(Mst_Default_IceMinecrawler)
 {
-	B_SetVisuals_Minecrawler();
+	B_SetVisuals_IceMinecrawler();
 	Npc_SetToFistMode(self);
 };
-//*****************
-//	Minecrawler_Priest im PriesterHaus der ADW
-//*****************
-
-INSTANCE Minecrawler_Priest	(Mst_Default_Minecrawler)
-{
-	B_SetVisuals_Minecrawler();
-	Npc_SetToFistMode(self);
-};
-INSTANCE GoldMinecrawler	(Mst_Default_Minecrawler)
-{
-	B_SetVisuals_Minecrawler();
-	Npc_SetToFistMode(self);
-};
-
-
-

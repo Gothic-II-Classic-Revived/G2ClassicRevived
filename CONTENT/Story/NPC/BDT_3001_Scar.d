@@ -28,7 +28,9 @@ instance BDT_3001_Scar (Npc_Default)
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 
+	// ------ TA ------
 	daily_routine = Rtn_Start_3001;
+	start_aistate = ZS_Bandit;
 };	 
 
 	FUNC VOID Rtn_Start_3001()

@@ -199,6 +199,12 @@ const int	REV_Range_1H_Sword_Pirate_02		=	70;
 const int	REV_Value_1H_Sword_Pirate_02		=	1800;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Damage_1H_Sword_Sabre_01		=	80;
+const int	REV_Condition_1H_Sword_Sabre_01	=	50;
+const int	REV_Range_1H_Sword_Sabre_01		=	70;
+const int	REV_Value_1H_Sword_Sabre_01		=	1800;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_1H_Sword_Alrik			=	35;
 const int	REV_Condition_1H_Sword_Alrik		=	20;
 const int	REV_Range_1H_Sword_Alrik			=	70;
@@ -276,12 +282,12 @@ const int	REV_Condition_1H_Sword_Ore_01		=	100;
 const int	REV_Range_1H_Sword_Ore_01			=	120;
 const int	REV_Value_1H_Sword_Ore_01			=	4000;
 //******************************************************************//
-const int	REV_Damage_1H_Sword_Ore_02			=	120;
-const int	REV_Condition_1H_Sword_Ore_02		=	90;
+const int	REV_Damage_1H_Sword_Ore_02			=	140;
+const int	REV_Condition_1H_Sword_Ore_02		=	120;
 const int	REV_Range_1H_Sword_Ore_02			=	120;
 const int	REV_Value_1H_Sword_Ore_02			=	5000;
 //******************************************************************//
-const int	REV_Damage_1H_Sword_Ore_03			=	145;
+const int	REV_Damage_1H_Sword_Ore_03			=	140;
 const int	REV_Condition_1H_Sword_Ore_03		=	120;
 const int	REV_Range_1H_Sword_Ore_03			=	110;
 const int	REV_Value_1H_Sword_Ore_03			=	3000;
@@ -954,183 +960,8 @@ INSTANCE ITMW_REVIVED_1H_SWORD_BASTARD_04 (C_Item)
 
 
 //****************************************************************************
-//			SPECIAL
+//			BANDITS
 //****************************************************************************
-INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_01 (C_Item) 
-{	
-	name 				=	"Paladin's Sword";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_Sword_Paladin_01;
-
-	damageTotal			= 	REV_Damage_1H_Sword_Paladin_01;
-	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_1H_Sword_Paladin_01;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Sword_Paladin_01;
-	visual 				=	"REV_1H_SWORD_LONG_04_PAL_01.3DS";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_OneHanded;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_02 (C_Item) 
-{	
-	name 				=	"Paladin's Sword";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_Sword_Paladin_02;
-
-	damageTotal			= 	REV_Damage_1H_Sword_Paladin_02;
-	damagetype 			=	DAM_EDGE|DAM_MAGIC;		
-	range    			=  	REV_Range_1H_Sword_Paladin_02;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Sword_Paladin_02;
-	visual 				=	"REV_1H_SWORD_LONG_04_PAL_02.3DS";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_BlessedWeapon1H;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_03 (C_Item) 
-{	
-	name 				=	"Paladin's Sword";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_Sword_Paladin_03;
-
-	damageTotal			= 	REV_Damage_1H_Sword_Paladin_03;
-	damagetype 			=	DAM_EDGE|DAM_FIRE|DAM_MAGIC;		
-	range    			=  	REV_Range_1H_Sword_Paladin_03;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Sword_Paladin_03;
-	visual 				=	"REV_1H_SWORD_LONG_04_PAL_02.3DS";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_HolyWeapon1H;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-//******************************************************************//
-INSTANCE ITMW_REVIVED_1H_DEMONSLAYER (C_Item) 
-{	
-	name 				=	"Demonslayer";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_Demonslayer;
-
-	damageTotal			= 	REV_Damage_1H_Demonslayer;
-	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_1H_Demonslayer;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Demonslayer;
-	visual 				=	"REV_1H_CRIMSONBLADE_01.3DS";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_OneHanded;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-INSTANCE ITMW_REVIVED_1H_DEMONSLAYER_02 (C_Item) 
-{	
-	name 				=	"Demonslayer";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_Demonslayer;
-
-	damageTotal			= 	REV_Damage_1H_Demonslayer;
-	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_1H_Demonslayer;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Demonslayer;
-	visual 				=	"REV_1H_CRIMSONBLADE_02.3DS";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_OneHanded;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-//******************************************************************//
-INSTANCE ITMW_REVIVED_1H_URIZIEL_01 (C_Item) 
-{	
-	name 				=	"URIZIEL";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_URIZIEL_01;
-
-	damageTotal			= 	REV_Damage_1H_URIZIEL_01;
-	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_1H_URIZIEL_01;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_URIZIEL_01;
-	visual 				=	"REV_Uriziel.3DS";
-
-	description			= 	name;
-	TEXT[0]				=	"The magic gem was removed from the sword.";
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_OneHanded;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITMW_REVIVED_1H_URIZIEL_02 (C_Item) 
-{	
-	name 				=	"URIZIEL";
-
-	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
-	material 			=	MAT_METAL;
-
-	value 				=	REV_Value_1H_URIZIEL_02;
-
-	damageTotal			= 	REV_Damage_1H_URIZIEL_02;
-	damagetype 			=	DAM_EDGE|DAM_FIRE|DAM_MAGIC;
-	range    			=  	REV_Range_1H_URIZIEL_02;		
-
-	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_URIZIEL_02;
-	visual 				=	"REV_Uriziel.3DS";
-	effect				=	"SPELLFX_FIRESWORD";
-
-	description			= 	name;
-	TEXT[0]				= 	"The sword is magically charged.";
-	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
-	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= 	NAME_OneHanded;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-//******************************************************************//
 INSTANCE ITMW_REVIVED_1H_SWORD_BANDIT_01 (C_Item)
 {	
 	name 				=	"Bandits' Rapier";
@@ -1277,6 +1108,186 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PIRATE_02 (C_Item)
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_1H_SWORD_SABRE_01 (C_Item)
+{	
+	name 				=	"Sabre";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_Sword_Sabre_01;
+
+	damageTotal			= 	REV_Damage_1H_Sword_Sabre_01;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_1H_Sword_Sabre_01;		
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	REV_Condition_1H_Sword_Sabre_01;
+	visual 				=	"REV_1H_SWORD_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+
+//****************************************************************************
+//			SPECIAL
+//****************************************************************************
+INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_01 (C_Item) 
+{	
+	name 				=	"Paladin's Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_Sword_Paladin_01;
+
+	damageTotal			= 	REV_Damage_1H_Sword_Paladin_01;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_1H_Sword_Paladin_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Sword_Paladin_01;
+	visual 				=	"REV_1H_SWORD_LONG_04_PAL_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_02 (C_Item) 
+{	
+	name 				=	"Paladin's Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_Sword_Paladin_02;
+
+	damageTotal			= 	REV_Damage_1H_Sword_Paladin_02;
+	damagetype 			=	DAM_EDGE|DAM_MAGIC;		
+	range    			=  	REV_Range_1H_Sword_Paladin_02;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Sword_Paladin_02;
+	visual 				=	"REV_1H_SWORD_LONG_04_PAL_02.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_BlessedWeapon1H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_03 (C_Item) 
+{	
+	name 				=	"Paladin's Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_Sword_Paladin_03;
+
+	damageTotal			= 	REV_Damage_1H_Sword_Paladin_03;
+	damagetype 			=	DAM_EDGE|DAM_FIRE|DAM_MAGIC;		
+	range    			=  	REV_Range_1H_Sword_Paladin_03;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Sword_Paladin_03;
+	visual 				=	"REV_1H_SWORD_LONG_04_PAL_02.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_HolyWeapon1H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_1H_DEMONSLAYER (C_Item) 
+{	
+	name 				=	"Demonslayer";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_Demonslayer;
+
+	damageTotal			= 	REV_Damage_1H_Demonslayer;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_1H_Demonslayer;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Demonslayer;
+	visual 				=	"REV_1H_CRIMSONBLADE.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+//******************************************************************//
+INSTANCE ITMW_REVIVED_1H_URIZIEL_01 (C_Item) 
+{	
+	name 				=	"URIZIEL";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_URIZIEL_01;
+
+	damageTotal			= 	REV_Damage_1H_URIZIEL_01;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_1H_URIZIEL_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_URIZIEL_01;
+	visual 				=	"REV_Uriziel.3DS";
+
+	description			= 	name;
+	TEXT[0]				=	"The magic gem was removed from the sword.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_1H_URIZIEL_02 (C_Item) 
+{	
+	name 				=	"URIZIEL";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_URIZIEL_02;
+
+	damageTotal			= 	REV_Damage_1H_URIZIEL_02;
+	damagetype 			=	DAM_EDGE|DAM_FIRE|DAM_MAGIC;
+	range    			=  	REV_Range_1H_URIZIEL_02;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_URIZIEL_02;
+	visual 				=	"REV_Uriziel.3DS";
+	effect				=	"SPELLFX_FIRESWORD";
+
+	description			= 	name;
+	TEXT[0]				= 	"The sword is magically charged.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -1666,7 +1677,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_SMITH_05 (C_Item)
 //****************************************************************************
 //			SMITHING ORE
 //****************************************************************************
-INSTANCE ITMW_REVIVED_1H_SWORD_0RE_01 (C_Item)
+INSTANCE ITMW_REVIVED_1H_SWORD_ORE_01 (C_Item)
 {	
 	name 				=	NAME_1H_REVIVED_ORE_01;
 

@@ -772,3 +772,20 @@ FUNC VOID UnEquip_REV_ITRI_SKILL_MELEE_01()
 		self.HitChance[NPC_TALENT_2H] = 1;
 	};
 };
+
+
+
+//****************************************************************************
+//			SPECIAL
+//****************************************************************************
+
+instance REV_ITRI_RINGOFWATER (REVIVED_RING_T1)
+{
+	name 					=	"Aquamarine ring";
+
+	visual 					=	"ItRi_Hp_Mana_01.3ds";
+		
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
+};

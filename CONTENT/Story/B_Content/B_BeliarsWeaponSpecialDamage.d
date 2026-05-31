@@ -1,3 +1,90 @@
+
+// *********************
+// C_IsItemBeliarsWeapon
+// *********************
+func int C_IsItemBeliarsWeapon(var C_ITEM Weap)
+{	
+	if (Hlp_IsItem(Weap, ItMw_BeliarWeapon_Raven) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_01) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_02) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_03) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_04) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_05) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_06) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_07) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_08) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_09) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_10) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_11) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_12) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_13) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_14) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_15) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_16) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_17) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_18) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_19) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_1H_20) == TRUE)
+
+	//------------------------------------------------------
+
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_01) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_02) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_03) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_04) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_05) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_06) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_07) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_08) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_09) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_10) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_11) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_12) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_13) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_14) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_15) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_16) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_17) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_18) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_19) == TRUE)
+	|| (Hlp_IsItem(Weap, ItMw_BeliarWeapon_2H_20) == TRUE)
+
+
+	//------------------------------------------------------
+
+	|| (Hlp_IsItem(Weap, ItRu_BeliarsRage) 	== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_SuckEnergy) 		== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_GreenTentacle) 	== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_Swarm) 			== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_Skull) 			== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_SummonZombie) 	== TRUE)
+	|| (Hlp_IsItem(Weap, ItRu_SummonGuardian) 	== TRUE)
+	{
+		return TRUE;
+	};
+
+	return FALSE; //DEFAULT
+};	
+
+// ***************************
+// C_ScHasReadiedBeliarsWeapon
+// ***************************
+func int C_ScHasReadiedBeliarsWeapon ()
+{	
+	var C_ITEM ReadyWeap; ReadyWeap = Npc_GetReadiedWeapon(hero);
+	
+	if (C_IsItemBeliarsWeapon(ReadyWeap))
+	{
+		return TRUE;
+	};
+	
+	return FALSE; //DEFAULT
+};
+
+
+// ***************************
+// B_BeliarsWeaponSpecialDamage
+// ***************************
 var int RavenBlitz;
 
 func void B_BeliarsWeaponSpecialDamage (var C_NPC oth, var C_NPC slf) //other ist angreifer, slf ist victim

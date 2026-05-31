@@ -299,7 +299,7 @@ func void DIA_Baltram_HaveYourWarez_Info ()
 	AI_Output (other, self, "DIA_Baltram_HaveYourWarez_15_00"); //I've got your wares.
 	AI_Output (self, other, "DIA_Baltram_HaveYourWarez_01_01"); //Show me.
 	
-	if (Npc_HasItems (other,ItFo_Bacon) < 10)
+	if (Npc_HasItems (other,ITFO_REVIVED_HAM_01_RAW) < 10)
 	{
 		AI_Output (self, other, "DIA_Baltram_HaveYourWarez_01_02"); //We already agreed on 10 hams. Come back when you have enough.
 		
@@ -325,7 +325,7 @@ func void DIA_Baltram_HaveYourWarez_Info ()
 	{
 		AI_Output (self, other, "DIA_Baltram_HaveYourWarez_01_04"); //Hmm, it isn't the best quality, but in these times you can't be too picky.
 		
-		B_GiveInvItems (other,self,ItFo_Bacon,10);
+		B_GiveInvItems (other,self,ITFO_REVIVED_HAM_01_RAW,10);
 		B_GiveInvItems (other,self,ItFo_Wine,10);
 		
 		MIS_BaltramTrade = LOG_SUCCESS;
@@ -372,14 +372,14 @@ func void DIA_Addon_Baltram_Skip_Info ()
 
 
 	Info_ClearChoices	(DIA_Addon_Baltram_Skip);
-	Info_AddChoice	(DIA_Addon_Baltram_Skip, "What is it you trade?", DIA_Addon_Baltram_Skip_was );
+	Info_AddChoice	(DIA_Addon_Baltram_Skip, "What is it you're trading?", DIA_Addon_Baltram_Skip_was );
 	Info_AddChoice	(DIA_Addon_Baltram_Skip, "You will bear the consequences for this!", DIA_Addon_Baltram_Skip_MIL );
 };
 
 func void DIA_Addon_Baltram_Skip_MIL ()
 {
 	AI_Output (other, self, "DIA_Addon_Baltram_Skip_MIL_15_00"); //You will bear the consequences for this!
-	AI_Output (self ,other,"DIA_Baltram_WAREZ_01_02"); //Something had to happen one of these days!
+	AI_Output (self ,other, "DIA_Baltram_WAREZ_01_02"); //Something had to happen one of these days!
 	Info_ClearChoices	(DIA_Addon_Baltram_Skip);
 
 	BaltramRatOut = TRUE;

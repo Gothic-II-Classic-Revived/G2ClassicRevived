@@ -90,11 +90,11 @@ func void DIA_RodDJG_HALLO_warten ()
 		}
 		else
 		{
-		AI_Output		(self, other, "DIA_RodDJG_HALLO_warten_06_02"); //I had been thinking about having a closer look at that swampy area over there.
+		//AI_Output		(self, other, "DIA_RodDJG_HALLO_warten_06_02"); //I had been thinking about having a closer look at that swampy area over there.
 		AI_Output		(self, other, "DIA_RodDJG_HALLO_warten_06_03"); //What do you think? Should we go over there together and see what we can find?
 
 		Info_AddChoice	(DIA_RodDJG_HALLO, "I'll go by myself.", DIA_RodDJG_HALLO_warten_allein );
-		Info_AddChoice	(DIA_RodDJG_HALLO, "What do you know about the swamp region?", DIA_RodDJG_HALLO_warten_wasweisstdu );
+		//Info_AddChoice	(DIA_RodDJG_HALLO, "What do you know about the swamp region?", DIA_RodDJG_HALLO_warten_wasweisstdu );
 		Info_AddChoice	(DIA_RodDJG_HALLO, "Let's go in together.", DIA_RodDJG_HALLO_warten_zusammen );
 		};
 };

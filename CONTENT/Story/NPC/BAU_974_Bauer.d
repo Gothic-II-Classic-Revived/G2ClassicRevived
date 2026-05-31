@@ -32,8 +32,8 @@ instance BAU_974_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_974 ()
 {	
-	TA_Play_Lute 		(08,00,22,00,"NW_TAVERNE_IN_RANGERMEETING_LARES"); 
-    TA_Sit_Chair 		(22,00,08,00,"NW_TAVERNE_IN_RANGERMEETING_LARES");
+	TA_Play_Lute 		(08,00,22,00,"NW_TAVERNE_IN_13"); 
+    TA_Sit_Chair 		(22,00,08,00,"NW_TAVERNE_IN_13");
 };
 
 

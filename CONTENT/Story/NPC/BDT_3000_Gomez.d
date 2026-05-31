@@ -6,7 +6,7 @@ instance BDT_3000_Gomez (Npc_Default)
 	id 			= 3000;
 	voice 		= 11;
 	flags       = 0;								
-	npctype		= NPCTYPE_AMBIENT;
+	npctype		= NPCTYPE_MAIN;
 	
 	//--------Aivars-----------
 	aivar[AIV_EnemyOverride] = TRUE;

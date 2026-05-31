@@ -26,11 +26,13 @@ instance BDT_3003_Cutter (Npc_Default)
 	CreateInvItems	(self, ITRW_BOLT, 30);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Cutter, BodyTex_P, ITAR_REVIVED_GRD_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Cutter, BodyTex_P, ITAR_REVIVED_GRD_H_02);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
+
+	// ------ TA ------
 	daily_routine = Rtn_Start_3003;
+	start_aistate = ZS_Bandit;
 };	 
 
 	FUNC VOID Rtn_Start_3003()

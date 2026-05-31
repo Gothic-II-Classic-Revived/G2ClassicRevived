@@ -13,6 +13,14 @@ func void ZS_MM_AllScheduler()
 		B_KillNpc (self);
 	};
 	//ADDON<
+	
+	//REVIVED>
+	if (self.guild == GIL_DMT)
+	&& (UndeadDragonIsDead == TRUE)
+	{	
+		B_KillNpc (self);
+	};
+	//REVIVED<
 		
 	if (Wld_IsTime	(self.aivar[AIV_MM_SleepStart],00,self.aivar[AIV_MM_SleepEnd],00) || (self.aivar[AIV_MM_SleepStart] == OnlyRoutine))
 	{
