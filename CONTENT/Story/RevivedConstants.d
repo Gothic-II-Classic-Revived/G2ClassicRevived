@@ -1009,11 +1009,11 @@ const int POTION_Perm_MASTER_03  				= 32;
 // Alchemy (Special)
 // ****************
 
-const int POTION_Special_Experience		  		= 32;
-const int POTION_Special_DragonDrink	  		= 33;
+const int POTION_Special_Experience		  		= 33;
+const int POTION_Special_DragonDrink	  		= 34;
 
 
-const int MAX_POTION						= 34;
+const int MAX_POTION							= 35;
 var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
 
 
