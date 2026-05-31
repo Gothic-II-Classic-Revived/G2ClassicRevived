@@ -36,7 +36,7 @@ const int	REV_Value_1H_Sword_Short_05			=	150;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_1H_Sword_01				=	40;
-const int	REV_Condition_1H_Sword_01			=	45;
+const int	REV_Condition_1H_Sword_01			=	35;
 const int	REV_Range_1H_Sword_01				=	100;
 const int	REV_Value_1H_Sword_01				=	100;
 //******************************************************************//

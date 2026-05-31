@@ -3,6 +3,11 @@ const int	REV_Damage_2H_Pickaxe				=	30;
 const int	REV_Condition_2H_Pickaxe			=	10;
 const int	REV_Range_2H_Pickaxe				=	80;
 const int	REV_Value_2H_Pickaxe				=	50;
+//******************************************************************//
+const int	REV_Damage_2H_Lumberjack			=	20;
+const int	REV_Condition_2H_Lumberjack			=	20;
+const int	REV_Range_2H_Lumberjack				=	90;
+const int	REV_Value_2H_Lumberjack				=	50;
 
 
 //****************************************************************************
@@ -28,6 +33,31 @@ INSTANCE ITMW_REVIVED_2H_PICKAXE (C_Item)
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_2H_LUMBERJACK (C_Item)
+{	
+	name 				=	"Woodcutter's Axe";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_AXE;	
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_2H_Lumberjack;
+
+	damageTotal			= 	REV_Damage_2H_Lumberjack;
+	damagetype 			=	DAM_EDGE;
+	range    			=	REV_Range_2H_Lumberjack;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Lumberjack;
+	visual 				=	"ItMw_020_2h_Axe_Lumberjack_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;

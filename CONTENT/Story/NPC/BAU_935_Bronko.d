@@ -21,7 +21,7 @@ instance BAU_935_Bronko (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_2h_Bau_Axe);
+	EquipItem			(self, ITMW_REVIVED_2H_LUMBERJACK);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
