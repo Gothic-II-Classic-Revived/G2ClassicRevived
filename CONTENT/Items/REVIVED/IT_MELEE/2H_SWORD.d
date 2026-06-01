@@ -914,7 +914,7 @@ INSTANCE ITMW_REVIVED_2H_URIZIEL_02 (C_Item)
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_BIG_01 (C_Item) 
 {	
-	name 				=	"Zangetsu";
+	name 				=	"Oversized khyber";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	

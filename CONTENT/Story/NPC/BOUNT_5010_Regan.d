@@ -1,19 +1,19 @@
 
-instance BOUNT_5008_ (Npc_Default)
+instance BOUNT_5010_Regan (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= NAME_BOUNTY; 
+	name 		= "Regan 'The Barbarian'"; 
 	guild 		= GIL_BOUNT;
-	id 			= 5008;
+	id 			= 5010;
 	voice 		= 1;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 30);
+	B_SetAttributesForLevel(self, 40);
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);
@@ -22,7 +22,7 @@ instance BOUNT_5008_ (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_Vlk_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart10, BodyTex_N, ITAR_REVIVED_STT_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

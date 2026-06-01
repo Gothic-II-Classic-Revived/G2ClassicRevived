@@ -531,11 +531,17 @@ var int BaltramPirateTrade;
 var int BaltramRatOut;
 var int BaltramInJail;
 
+var int Bounty0;
 var int Bounty1;
 var int Bounty2;
 var int Bounty3;
 var int Bounty4;
 var int Bounty5;
+var int Bounty6;
+var int Bounty7;
+var int Bounty8;
+var int Bounty9;
+var int Bounty10;
 
 var int VatrasMessage1;
 var int VatrasMessage2;

@@ -13,7 +13,7 @@ instance BOUNT_5000_Qualshy (Npc_Default)
 	B_SetAttributesForLevel(self, 50);
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_2H_BIG_01);
@@ -22,7 +22,7 @@ instance BOUNT_5000_Qualshy (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_BLOODWYN_ADDON);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_REVIVED_GRD_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

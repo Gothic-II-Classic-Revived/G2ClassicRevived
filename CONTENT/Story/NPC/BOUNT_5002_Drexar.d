@@ -10,10 +10,10 @@ instance BOUNT_5002_Drexar (Npc_Default)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 30);
+	B_SetAttributesForLevel(self, 40);
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);
@@ -22,7 +22,7 @@ instance BOUNT_5002_Drexar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_Vlk_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Torlof, BodyTex_N, ITAR_REVIVED_GRD_L_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

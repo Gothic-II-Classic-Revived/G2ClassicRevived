@@ -22,7 +22,7 @@ instance BOUNT_5001_Reliops (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_Vlk_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Wolf, BodyTex_N, ITAR_REVIVED_STT_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

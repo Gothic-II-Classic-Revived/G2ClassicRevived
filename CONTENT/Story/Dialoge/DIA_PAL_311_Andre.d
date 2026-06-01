@@ -867,10 +867,60 @@ func void DIA_Andre_Auslieferung_Info ()
 		Info_AddChoice (DIA_Andre_Auslieferung,"Baltram provides goods to Pirates.",DIA_Andre_Auslieferung_Baltram);
 	};
 	// ------ Bounties -----
-	if (Npc_IsDead(PAL_311_Andre)) //placeholder
-	&& (Bounty1 == FALSE)
+	if (Npc_IsDead(BOUNT_5000_QUALSHY))
+	&& (Bounty0 == TRUE)
 	{
-		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty1.",DIA_Andre_Auslieferung_Bounty);
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for 'Q'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5001_RELIOPS))
+	&& (Bounty1 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Reliops 'Eight Fingers'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5002_DREXAR))
+	&& (Bounty2 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Drexar 'The Duelist'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5003_MIST))
+	&& (Bounty3 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Mist 'The Executioner'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5004_ZERRIT))
+	&& (Bounty4 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Zerrit 'The Beastmaster'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5005_FARRIC))
+	&& (Bounty5 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Farric 'The Twisted Blade'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5006_SALAZAR))
+	&& (Bounty6 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Salazar 'The Sailor'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5007_DELTA))
+	&& (Bounty7 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Delta 'The Warlock'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5008_REKO))
+	&& (Bounty8 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Reko 'The Joker'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5009_TYGREN))
+	&& (Bounty9 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Tygren 'The Traitor'.",DIA_Andre_Auslieferung_Bounty);
+	};
+	if (Npc_IsDead(BOUNT_5010_REGAN))
+	&& (Bounty10 == TRUE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty for Regan 'The Barbarian'.",DIA_Andre_Auslieferung_Bounty);
 	};
 };
 
@@ -883,10 +933,9 @@ func void DIA_Andre_Auslieferung_Back()
 func void DIA_Andre_Auslieferung_Bounty()
 {
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Nagur_08_02"); //Here, take the bounty that you are entitled to.
-	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
-	
-	Bounty1 = TRUE;
-	B_GivePlayerXP (XP_Andre_Auslieferung);
+	B_GiveInvItems (self, other, itmi_gold, Kopfgeld * Kapitel);
+
+	B_GivePlayerXP (XP_Andre_Auslieferung * Kapitel);
 	Info_ClearChoices (DIA_Andre_Auslieferung);
 };
 

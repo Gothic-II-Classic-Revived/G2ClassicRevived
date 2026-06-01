@@ -1,10 +1,10 @@
 
-instance BOUNT_5010_ (Npc_Default)
+instance BOUNT_5009_Tygren (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= NAME_BOUNTY; 
+	name 		= "Tygren 'The Traitor'"; 
 	guild 		= GIL_BOUNT;
-	id 			= 5010;
+	id 			= 5009;
 	voice 		= 1;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
@@ -22,7 +22,7 @@ instance BOUNT_5010_ (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_Vlk_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Weak12, BodyTex_N, ITAR_REVIVED_STT_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 
