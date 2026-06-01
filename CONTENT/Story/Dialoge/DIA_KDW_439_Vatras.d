@@ -889,6 +889,9 @@ func void DIA_Vatras_HEAL_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Info MISSION
 ///////////////////////////////////////////////////////////////////////
+var int Vatras_MessageChapter;
+var int Vatras_MessageOriginalGiven;
+
 instance DIA_Vatras_MISSION		(C_INFO)
 {
 	npc		 	= KDW_439_Vatras;
@@ -897,12 +900,15 @@ instance DIA_Vatras_MISSION		(C_INFO)
 	information	= DIA_Vatras_MISSION_Info;
 	
 	important	= TRUE;
+	permanent	= TRUE;
 };
 func int DIA_Vatras_MISSION_Condition ()
 {	
 	if (Npc_IsInState (self, ZS_Talk))
-	&& (Kapitel >= 2)
-	
+	&& (Npc_KnowsInfo (other, DIA_Vatras_GREET))
+	&& ((Kapitel >= 2) || (Wld_GetDay() >= 5))
+	&& (Kapitel > Vatras_MessageChapter)
+	&& (MIS_Vatras_Message != LOG_RUNNING)
 	{
 		return TRUE;
 	};
@@ -926,7 +932,17 @@ func VOID DIA_Vatras_MISSION_YES()
 	AI_Output (self, other, "DIA_Vatras_Add_05_11"); //Good, then take the message and choose one of these spell scrolls.
 	AI_Output (self, other, "DIA_Vatras_Add_05_12"); //When you have delivered the message, I shall reward you accordingly.
 	
-	B_GiveInvItems (self, hero, ItWr_VatrasMessage,1); 
+	Vatras_MessageChapter = Kapitel;
+	Vatras_Return = FALSE;
+	if (Vatras_MessageOriginalGiven == FALSE)
+	{
+		B_GiveInvItems (self, hero, ItWr_VatrasMessage, 1);
+		Vatras_MessageOriginalGiven = TRUE;
+	}
+	else
+	{
+		B_GiveInvItems (self, hero, ITWR_REVIVED_VATRASMESSAGE_COPY, 1);
+	};
 	MIS_Vatras_Message = LOG_RUNNING;
 	
 	Log_CreateTopic (TOPIC_Botschaft,LOG_MISSION);
@@ -943,23 +959,39 @@ FUNC VOID DIA_Vatras_MISSION_NO ()
 	//AI_Output	(other, self, "DIA_Vatras_MISSION_NO_15_00"); //Such dir einen anderen Laufburschen, alter Mann!
 	AI_Output (other, self, "DIA_ADDON_Vatras_MISSION_NO_15_00"); //Not now!
 	AI_Output (self, other, "DIA_ADDON_Vatras_MISSION_NO_05_01"); //No problem. I shall send somebody else.
+	Vatras_MessageChapter = Kapitel;
+	Vatras_Return = FALSE;
 	MIS_Vatras_Message = LOG_OBSOLETE;
 	Info_ClearChoices 	(DIA_Vatras_MISSION);
 };
 FUNC VOID DIA_Vatras_MISSION_HEAL()
 {
 	AI_Output			(other, self, "DIA_Vatras_MISSION_HEAL_15_00"); //I choose the healing spell.
-	 B_SayVatrasGo();
+	B_SayVatrasGo();
+
+	if(Kapitel < 3)
+	{
+		B_GiveInvItems (self, hero, ItSc_LightHeal, 2);
+	} else if (Kapitel <= 4) {
+		B_GiveInvItems (self, hero, ItSc_MediumHeal, 2);
+	} else {
+		B_GiveInvItems (self, hero, ItSc_FullHeal, 2);
+	};
 	 
-	B_GiveInvItems (self, hero,ItSc_LightHeal ,1);
 	Info_ClearChoices 	(DIA_Vatras_MISSION);
 };
 FUNC VOID DIA_Vatras_MISSION_ICE()
 {
 	AI_Output			(other, self, "DIA_Vatras_MISSION_ICE_15_00"); //Give me the Ice Arrow.
 	B_SayVatrasGo();
-	
-	B_GiveInvItems (self, hero,ItSc_Icebolt ,1);
+
+	if(Kapitel < 3)
+	{
+		B_GiveInvItems (self, hero,ItSc_Icebolt, Kapitel);
+	} else {
+		B_GiveInvItems (self, hero,ItSc_Icelance, 1);
+	};
+
 	Info_ClearChoices 	(DIA_Vatras_MISSION);
 };
 FUNC VOID DIA_Vatras_MISSION_LIGHT()
@@ -967,7 +999,8 @@ FUNC VOID DIA_Vatras_MISSION_LIGHT()
 	AI_Output			(other, self, "DIA_Vatras_MISSION_LIGHT_15_00"); //I'll take the spell of light.
 	B_SayVatrasGo();
 	
-	B_GiveInvItems (self, hero,ItSc_Light ,1);
+	B_GiveInvItems (self, hero, ItSc_Light, Kapitel);
+
 	Info_ClearChoices 	(DIA_Vatras_MISSION);
 };
 ///////////////////////////////////////////////////////////////////////
@@ -980,6 +1013,7 @@ instance DIA_Vatras_MESSAGE_SUCCESS		(C_INFO)
 	condition	= DIA_Vatras_MESSAGE_SUCCESS_Condition;
 	information	= DIA_Vatras_MESSAGE_SUCCESS_Info;
 	
+	permanent	= TRUE;
 	description	= "I have delivered your message.";
 };
 
@@ -997,29 +1031,117 @@ func void DIA_Vatras_MESSAGE_SUCCESS_Info ()
 	AI_Output (self, other, "DIA_Vatras_Add_05_14"); //Accept my thanks. And now pick your reward.
 	
 	MIS_Vatras_Message = LOG_SUCCESS;
-	B_GivePlayerXP(XP_Vatras_Message);
+	Vatras_Return = FALSE;
+	B_GivePlayerXP(XP_Vatras_Message * Kapitel);
 	
 	Info_ClearChoices (DIA_Vatras_MESSAGE_SUCCESS);
-	Info_AddChoice 	  (DIA_Vatras_MESSAGE_SUCCESS,"1 king's sorrel",DIA_Vatras_MESSAGE_SUCCESS_Plant);
-	Info_AddChoice 	  (DIA_Vatras_MESSAGE_SUCCESS,"Ring of Skill",DIA_Vatras_MESSAGE_SUCCESS_Ring);	
-	Info_AddChoice 	  (DIA_Vatras_MESSAGE_SUCCESS,"1 ore nugget",DIA_Vatras_MESSAGE_SUCCESS_Ore);
-};
-FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Plant()
-{
-	B_GiveInvItems (self, hero,ItPl_Perm_Herb ,1);
-	Info_ClearChoices 	(DIA_Vatras_MESSAGE_SUCCESS);
-};
-FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Ring()
-{
-	B_GiveInvItems (self, hero,ITRI_REVIVED_DEX_01 ,1);
-	Info_ClearChoices 	(DIA_Vatras_MESSAGE_SUCCESS);
-};
-FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Ore()
-{
-	B_GiveInvItems (self, hero,ItMI_Nugget ,1);
-	Info_ClearChoices 	(DIA_Vatras_MESSAGE_SUCCESS);
-};
 
+	if (Kapitel < 2)
+	{
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Blank rune",DIA_Vatras_MESSAGE_SUCCESS_Reward1);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Ring of Magic",DIA_Vatras_MESSAGE_SUCCESS_Reward2);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Essence of Life",DIA_Vatras_MESSAGE_SUCCESS_Reward3);
+	}
+	else if (Kapitel == 2)
+	{
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"King's sorrel",DIA_Vatras_MESSAGE_SUCCESS_Reward1);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Ring of Dexterity",DIA_Vatras_MESSAGE_SUCCESS_Reward2);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Ore nugget",DIA_Vatras_MESSAGE_SUCCESS_Reward3);
+	}
+	else if (Kapitel == 3)
+	{
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Amulet of Magic",DIA_Vatras_MESSAGE_SUCCESS_Reward1);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Extract of the Spirit",DIA_Vatras_MESSAGE_SUCCESS_Reward2);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Scroll of Telekinesis",DIA_Vatras_MESSAGE_SUCCESS_Reward3);
+	}
+	else if (Kapitel == 4)
+	{
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Potion of Haste",DIA_Vatras_MESSAGE_SUCCESS_Reward1);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Goblin Berries",DIA_Vatras_MESSAGE_SUCCESS_Reward2);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Scroll of Healing",DIA_Vatras_MESSAGE_SUCCESS_Reward3);
+	}
+	else
+	{
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Dragon Root",DIA_Vatras_MESSAGE_SUCCESS_Reward1);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Ring of Enlightenment",DIA_Vatras_MESSAGE_SUCCESS_Reward2);
+		Info_AddChoice (DIA_Vatras_MESSAGE_SUCCESS,"Scroll of Storm",DIA_Vatras_MESSAGE_SUCCESS_Reward3);
+	};
+};
+FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Reward1()
+{
+	if (Kapitel < 2)
+	{
+		B_GiveInvItems (self, hero, ItMi_RuneBlank, 1);
+	}
+	else if (Kapitel == 2)
+	{
+		B_GiveInvItems (self, hero, ItPl_Perm_Herb, 1);
+	}
+	else if (Kapitel == 3)
+	{
+		B_GiveInvItems (self, hero, ITAM_REVIVED_MP_01, 1);
+	}
+	else if (Kapitel == 4)
+	{
+		B_GiveInvItems (self, hero, ITPO_REVIVED_SPEED_03, 1);
+	}
+	else
+	{
+		B_GiveInvItems (self, hero, ItPl_Strength_Herb_01, 1);
+	};
+
+	Info_ClearChoices (DIA_Vatras_MESSAGE_SUCCESS);
+};
+FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Reward2()
+{
+	if (Kapitel < 2)
+	{
+		B_GiveInvItems (self, hero, ITRI_REVIVED_MP_01, 1);
+	}
+	else if (Kapitel == 2)
+	{
+		B_GiveInvItems (self, hero, ITRI_REVIVED_DEX_01, 1);
+	}
+	else if (Kapitel == 3)
+	{
+		B_GiveInvItems (self, hero, ITPO_REVIVED_BOOST_MANA_02, 1);
+	}
+	else if (Kapitel == 4)
+	{
+		B_GiveInvItems (self, hero, ItPl_Dex_Herb_01, 1);
+	}
+	else
+	{
+		B_GiveInvItems (self, hero, ITRI_REVIVED_HP_MP_01, 1);
+	};
+
+	Info_ClearChoices (DIA_Vatras_MESSAGE_SUCCESS);
+};
+FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Reward3()
+{
+	if (Kapitel < 2)
+	{
+		B_GiveInvItems (self, hero, ITPO_REVIVED_BOOST_HEALTH_01, 1);
+	}
+	else if (Kapitel == 2)
+	{
+		B_GiveInvItems (self, hero, ItMI_Nugget, 1);
+	}
+	else if (Kapitel == 3)
+	{
+		B_GiveInvItems (self, hero, ITSC_REVIVED_TELEKINESIS, 1);
+	}
+	else if (Kapitel == 4)
+	{
+		B_GiveInvItems (self, hero, ItSc_FullHeal, 1);
+	}
+	else
+	{
+		B_GiveInvItems (self, hero, ItSc_Thunderstorm, 1);
+	};
+
+	Info_ClearChoices (DIA_Vatras_MESSAGE_SUCCESS);
+};
 
 
 //#####################################################################

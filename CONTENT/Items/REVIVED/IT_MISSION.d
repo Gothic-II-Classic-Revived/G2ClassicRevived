@@ -35,6 +35,25 @@ FUNC VOID Use_BaltramPackageRevived ()
 
 
 //****************************************************************************
+//			LETTERS
+//****************************************************************************
+INSTANCE ITWR_REVIVED_VATRASMESSAGE_COPY	(C_Item)
+{
+	name 				=	"Sealed Message";
+
+	mainflag 			=	ITEM_KAT_DOCS;
+	flags 				=	ITEM_MISSION;
+
+	value 				=	0;
+
+	visual 				=	"ItWr_Scroll_02.3DS";
+	material 			=	MAT_LEATHER;
+
+	description			= 	name;
+	TEXT[2]				=   "A message from Vatras";
+	TEXT[3]				=   "for the Fire Mages.";
+};
+//****************************************************************************
 //			BOUNTIES
 //****************************************************************************
 

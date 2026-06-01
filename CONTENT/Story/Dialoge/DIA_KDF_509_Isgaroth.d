@@ -245,7 +245,8 @@ FUNC INT DIA_Isgaroth_Vatras_Condition()
 {
 	if (MIS_Vatras_Message == LOG_RUNNING)
 	&& ((Npc_HasItems (other,ItWr_VatrasMessage) == 1)
-	||  (Npc_HasItems (other,ItWr_VatrasMessage_open) == 1))
+	||  (Npc_HasItems (other,ItWr_VatrasMessage_open) == 1)
+	||  (Npc_HasItems (other,ITWR_REVIVED_VATRASMESSAGE_COPY) == 1))
 	{
 		return TRUE;
 	};	
@@ -257,18 +258,37 @@ FUNC VOID DIA_Isgaroth_Vatras_Info()
 	AI_Output (other,self ,"DIA_Isgaroth_Vatras_15_02"); //It's a letter. Here.
 	
 	if (Npc_HasItems (other,ItWr_VatrasMessage) == 1)
+	|| (Npc_HasItems (other,ITWR_REVIVED_VATRASMESSAGE_COPY) == 1)
 	{
-		if B_GiveInvItems (other,self ,ItWr_VatrasMessage,1)
+		if (Npc_HasItems (other,ItWr_VatrasMessage) == 1)
 		{
-			Npc_RemoveInvItems (self,ItWr_VatrasMessage,1); 
+			if B_GiveInvItems (other,self ,ItWr_VatrasMessage,1)
+			{
+				Npc_RemoveInvItems (self,ItWr_VatrasMessage,1);
+			};
+		}
+		else if (Npc_HasItems (other,ITWR_REVIVED_VATRASMESSAGE_COPY) == 1)
+		{
+			if B_GiveInvItems (other,self ,ITWR_REVIVED_VATRASMESSAGE_COPY,1)
+			{
+				Npc_RemoveInvItems (self,ITWR_REVIVED_VATRASMESSAGE_COPY,1);
+			};
 		};
 		B_UseFakeScroll();
 	
 		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_03"); //Good, you can tell Vatras that I have received the message.
 		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_04"); //Take these potions as a reward for your service, they will surely be of use to you.
 		
-		CreateInvItems (self, ITPO_REVIVED_HEALTH_02,2);
-		B_GiveInvItems (self,other,ITPO_REVIVED_HEALTH_02,2);
+		if(Kapitel <= 3)
+		{
+			CreateInvItems (self, ITPO_REVIVED_HEALTH_02, Kapitel * 2);
+			B_GiveInvItems (self, other, ITPO_REVIVED_HEALTH_02, Kapitel * 2);
+		} 
+		else
+		{
+			CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 3);
+			B_GiveInvItems (self, other, ITPO_REVIVED_HEALTH_03, 3);
+		};
 		
 		B_GivePlayerXP ((XP_Ambient)*2);
 		
