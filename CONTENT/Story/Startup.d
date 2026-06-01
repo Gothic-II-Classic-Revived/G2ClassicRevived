@@ -31,8 +31,8 @@ func void INIT_GLOBAL()
 func void STARTUP_Testlevel ()
 {
 	Wld_InsertNpc	(PC_REVIVED,	"SPAWN_PC_REVIVED"); 
-	//Wld_InsertNpc	(SH,	"SPAWN_PC_HERO"); 
-
+	Wld_InsertNpc	(BOUNT_5007_Delta,	"SPAWN_PC_HERO"); 
+	
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_01");
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_02");
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_03");

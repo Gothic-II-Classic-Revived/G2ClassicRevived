@@ -3,20 +3,22 @@ instance BOUNT_5008_Reko (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Reko 'The Joker'"; 
-	guild 		= GIL_BOUNT;
+	guild 		= GIL_BDT;
 	id 			= 5008;
-	voice 		= 1;
+	voice 		= 9;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
+	
+	aivar[AIV_MM_REAL_ID] = GIL_BOUNT;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 20);
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------
-	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);
+	EquipItem			(self, ITMW_REVIVED_2H_PICKAXE);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -3,11 +3,13 @@ instance BOUNT_5001_Reliops (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Reliops 'Eight Fingers'"; 
-	guild 		= GIL_BOUNT;
+	guild 		= GIL_BDT;
 	id 			= 5001;
-	voice 		= 1;
+	voice 		= 2;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
+	
+	aivar[AIV_MM_REAL_ID] = GIL_BOUNT;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 30);
@@ -16,13 +18,15 @@ instance BOUNT_5001_Reliops (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------
-	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_04);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems 		(self, ITRW_ARROW, 30);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Wolf, BodyTex_N, ITAR_REVIVED_STT_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Wolf, BodyTex_N, ITAR_REVIVED_STT_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

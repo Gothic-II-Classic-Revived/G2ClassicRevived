@@ -3,12 +3,14 @@ instance BOUNT_5000_Qualshy (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Q"; 
-	guild 		= GIL_BOUNT;
+	guild 		= GIL_BDT;
 	id 			= 5000;
 	voice 		= 1;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
 	
+	aivar[AIV_MM_REAL_ID] = GIL_BOUNT;
+
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 50);
 
@@ -17,9 +19,11 @@ instance BOUNT_5000_Qualshy (Npc_Default)
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_2H_BIG_01);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_HEAVY_01);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems 		(self, ITRW_BOLT, 30);
 
 	// ------ visuals ------
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_REVIVED_GRD_M_02);	

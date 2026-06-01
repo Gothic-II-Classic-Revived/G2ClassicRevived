@@ -30,6 +30,22 @@ const int	REV_Range_1H_Hammer_03				=	120;
 const int	REV_Value_1H_Hammer_03				=	2500;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Damage_1H_Hammer_New_01				=	60;
+const int	REV_Condition_1H_Hammer_New_01			=	40;
+const int	REV_Range_1H_Hammer_New_01				=	70;
+const int	REV_Value_1H_Hammer_New_01				=	1200;
+//******************************************************************//
+const int	REV_Damage_1H_Hammer_New_02				=	80;
+const int	REV_Condition_1H_Hammer_New_02			=	70;
+const int	REV_Range_1H_Hammer_New_02				=	100;
+const int	REV_Value_1H_Hammer_New_02				=	1900;
+//******************************************************************//
+const int	REV_Damage_1H_Hammer_New_03				=	100;
+const int	REV_Condition_1H_Hammer_New_03			=	85;
+const int	REV_Range_1H_Hammer_New_03				=	120;
+const int	REV_Value_1H_Hammer_New_03				=	2500;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_1H_Hammer_Ore_01			=	120;
 const int	REV_Condition_1H_Hammer_Ore_01		=	120;
 const int	REV_Range_1H_Hammer_Ore_01			=	90;
@@ -133,14 +149,14 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_01 (C_Item)
 	flags 				=	ITEM_AXE;	
 	material 			=	MAT_WOOD;
 
-	value 				=	REV_Value_1H_Hammer_Ore_01;
+	value 				=	REV_Value_1H_Hammer_New_01;
 
-	damageTotal			= 	REV_Damage_1H_Hammer_Ore_01;
+	damageTotal			= 	REV_Damage_1H_Hammer_New_01;
 	damagetype 			=	DAM_BLUNT;
-	range    			=	REV_Range_1H_Hammer_Ore_01;		
+	range    			=	REV_Range_1H_Hammer_New_01;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Hammer_Ore_01;
+	cond_value[2]  		= 	REV_Condition_1H_Hammer_New_01;
 	visual 				=	"REV_1H_HAMMER_01.3DS";
 
 	description			= 	name;
@@ -158,14 +174,14 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_02 (C_Item)
 	flags 				=	ITEM_AXE;	
 	material 			=	MAT_WOOD;
 
-	value 				=	REV_Value_1H_Hammer_Ore_01;
+	value 				=	REV_Value_1H_Hammer_New_02;
 
-	damageTotal			= 	REV_Damage_1H_Hammer_Ore_01;
+	damageTotal			= 	REV_Damage_1H_Hammer_New_02;
 	damagetype 			=	DAM_BLUNT;
-	range    			=	REV_Range_1H_Hammer_Ore_01;		
+	range    			=	REV_Range_1H_Hammer_New_02;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Hammer_Ore_01;
+	cond_value[2]  		= 	REV_Condition_1H_Hammer_New_02;
 	visual 				=	"REV_1H_HAMMER_02.3DS";
 
 	description			= 	name;
@@ -183,14 +199,14 @@ INSTANCE ITMW_REVIVED_1H_HAMMER_03 (C_Item)
 	flags 				=	ITEM_AXE;	
 	material 			=	MAT_WOOD;
 
-	value 				=	REV_Value_1H_Hammer_Ore_01;
+	value 				=	REV_Value_1H_Hammer_New_03;
 
-	damageTotal			= 	REV_Damage_1H_Hammer_Ore_01;
+	damageTotal			= 	REV_Damage_1H_Hammer_New_03;
 	damagetype 			=	DAM_BLUNT;
-	range    			=	REV_Range_1H_Hammer_Ore_01;		
+	range    			=	REV_Range_1H_Hammer_New_03;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_1H_Hammer_Ore_01;
+	cond_value[2]  		= 	REV_Condition_1H_Hammer_New_03;
 	visual 				=	"REV_1H_HAMMER_03.3DS";
 
 	description			= 	name;

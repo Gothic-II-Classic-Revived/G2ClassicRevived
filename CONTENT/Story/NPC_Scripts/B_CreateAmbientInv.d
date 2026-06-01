@@ -603,6 +603,59 @@ if 	InventorySet ==1
 	};
 };
 
+func void B_CreateAmbientInv_BOUNT (var int InventorySet)
+{
+	if(InventorySet == 1)
+	{
+		CreateInvItems (self, ITFO_REVIVED_WATER, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_NORTHDARK, 1);
+		CreateInvItems (self, ITKE_LOCKPICK, 2);
+		CreateInvItems (self, ITMI_REVIVED_MAGICORE, 1);
+		
+	}
+	else if(InventorySet == 2)
+	{
+		CreateInvItems (self, ITFO_REVIVED_APPLE_01, 1);
+		CreateInvItems (self, ITFO_REVIVED_RICEBOOZE, 2);
+		CreateInvItems (self, ITMI_REVIVED_MAGICORE, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 3);
+	}
+	else if(InventorySet == 3)
+	{
+		CreateInvItems (self, ITFO_REVIVED_BEER, 1);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_NORTHDARK, 1);
+		CreateInvItems (self, ITFO_REVIVED_RICEBOOZE, 2);
+	}
+	else if(InventorySet == 4)
+	{ 
+		CreateInvItems (self, ITKE_LOCKPICK, 2);
+		CreateInvItems (self, ITFO_REVIVED_CHEESE_01, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 1);
+		CreateInvItems (self, ITMI_REVIVED_MAGICORE, 1);
+	}
+	else if(InventorySet == 5)
+	{
+		CreateInvItems (self, ITFO_REVIVED_BEER, 1);
+		CreateInvItems (self, ITFO_REVIVED_HAM_01_RAW, 1);
+		CreateInvItems (self, ITFO_REVIVED_WATER, 1);
+		CreateInvItems (self, ITMI_REVIVED_MAGICORE, 2);
+	}
+	else if(InventorySet == 6)
+	{
+		CreateInvItems (self, ITMI_REVIVED_OLDCOIN, 23);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_GREENNOVICE, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_NORTHDARK, 1);
+	}
+	else
+	{
+		CreateInvItems (self, ITMI_REVIVED_JOINT_GREENNOVICE, 1);
+		CreateInvItems (self, ITFO_REVIVED_WINE, 1);
+		CreateInvItems (self, ITFO_REVIVED_BREAD_01, 1);
+		CreateInvItems (self, ITKE_LOCKPICK, 3);
+	};
+};
+
 
 // Hier der NPC Befehl
 func void B_CreateAmbientInv (var C_NPC slf)
@@ -621,8 +674,8 @@ func void B_CreateAmbientInv (var C_NPC slf)
 			else if (slf.guild == GIL_DMT)	{		B_CreateAmbientInv_DMT (Zufall);}
 			else if (slf.guild == GIL_STRF)	{		B_CreateAmbientInv_STRF(Zufall);}
 			else if (slf.guild == GIL_PIR)	{		B_CreateAmbientInv_PIR (Zufall);}
+			else if (slf.aivar[AIV_MM_REAL_ID] == GIL_BOUNT){		B_CreateAmbientInv_BOUNT (Zufall);}
 			else if (slf.guild == GIL_BDT)	{		B_CreateAmbientInv_BDT (Zufall);}
-			else if (slf.guild == GIL_BOUNT){		B_CreateAmbientInv_BDT (Zufall);}
 			else 							{		B_CreateAmbientInv_BAU (Zufall);};
 	
 };

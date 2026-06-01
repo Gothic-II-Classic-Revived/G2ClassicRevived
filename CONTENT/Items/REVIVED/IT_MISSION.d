@@ -75,7 +75,7 @@ FUNC VOID UseBountyLetter0()
 	
 	if(!Bounty0)
 	{
-		Wld_InsertNpc(BOUNT_5000_QUALSHY, "TOT");
+		Wld_InsertNpc(BOUNT_5000_QUALSHY, "NW_TROLLAREA_RUINS_042");
 		Bounty0 = TRUE;
 	};
 };
@@ -117,7 +117,7 @@ FUNC VOID UseBountyLetter1()
 	
 	if(!Bounty1)
 	{
-		Wld_InsertNpc(BOUNT_5001_Reliops, "TOT");
+		Wld_InsertNpc(BOUNT_5001_Reliops, "NW_TROLLAREA_TROLLLAKECAVE_03A");
 		Bounty1 = TRUE;
 	};
 };
@@ -159,7 +159,7 @@ FUNC VOID UseBountyLetter2()
 	
 	if(!Bounty2)
 	{
-		Wld_InsertNpc(BOUNT_5002_Drexar, "TOT");
+		Wld_InsertNpc(BOUNT_5002_Drexar, "NW_XARDAS_GOBBO_01");
 		Bounty2 = TRUE;
 	};
 };
@@ -201,7 +201,7 @@ FUNC VOID UseBountyLetter3()
 	
 	if(!Bounty3)
 	{
-		Wld_InsertNpc(BOUNT_5003_Mist, "TOT");
+		Wld_InsertNpc(BOUNT_5003_Mist, "NW_FARM3_VALLEY_019");
 		Bounty3 = TRUE;
 	};
 };
@@ -243,7 +243,7 @@ FUNC VOID UseBountyLetter4()
 	
 	if(!Bounty4)
 	{
-		Wld_InsertNpc(BOUNT_5004_Zerrit, "TOT");
+		Wld_InsertNpc(BOUNT_5004_Zerrit, "NW_CASTLEMINE_HUT_01_MONSTER");
 		Bounty4 = TRUE;
 	};
 };
@@ -285,7 +285,7 @@ FUNC VOID UseBountyLetter5()
 	
 	if(!Bounty5)
 	{
-		Wld_InsertNpc(BOUNT_5005_Farric, "TOT");
+		Wld_InsertNpc(BOUNT_5005_Farric, "FP_ROAM_NW_BIGFARM_PEPES_WOLFS_02");
 		Bounty5 = TRUE;
 	};
 };
@@ -327,7 +327,7 @@ FUNC VOID UseBountyLetter6()
 	
 	if(!Bounty6)
 	{
-		Wld_InsertNpc(BOUNT_5006_Salazar, "TOT");
+		Wld_InsertNpc(BOUNT_5006_Salazar, "NW_CITY_TO_LIGHTHOUSE_15");
 		Bounty6 = TRUE;
 	};
 };
@@ -369,7 +369,7 @@ FUNC VOID UseBountyLetter7()
 	
 	if(!Bounty7)
 	{
-		Wld_InsertNpc(BOUNT_5007_Delta, "TOT");
+		Wld_InsertNpc(BOUNT_5007_Delta, "NW_TROLLAREA_TO_MONASTERY");
 		Bounty7 = TRUE;
 	};
 };
@@ -411,7 +411,7 @@ FUNC VOID UseBountyLetter8()
 	
 	if(!Bounty8)
 	{
-		Wld_InsertNpc(BOUNT_5008_Reko, "TOT");
+		Wld_InsertNpc(BOUNT_5008_Reko, "NW_FOREST_VINOSKELLEREI_04");
 		Bounty8 = TRUE;
 	};
 };
@@ -453,7 +453,7 @@ FUNC VOID UseBountyLetter9()
 	
 	if(!Bounty9)
 	{
-		Wld_InsertNpc(BOUNT_5009_Tygren, "TOT");
+		Wld_InsertNpc(BOUNT_5009_Tygren, "FP_ROAM_CITY_TO_FOREST_32");
 		Bounty9 = TRUE;
 	};
 };
@@ -495,7 +495,7 @@ FUNC VOID UseBountyLetter10()
 	
 	if(!Bounty10)
 	{
-		Wld_InsertNpc(BOUNT_5010_Regan, "TOT");
+		Wld_InsertNpc(BOUNT_5010_Regan, "NW_TROLLAREA_NOVCHASE_01");
 		Bounty10 = TRUE;
 	};
 };

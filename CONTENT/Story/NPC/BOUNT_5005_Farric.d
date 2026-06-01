@@ -3,20 +3,22 @@ instance BOUNT_5005_Farric (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Farric 'The Twisted Blade'"; 
-	guild 		= GIL_BOUNT;
+	guild 		= GIL_BDT;
 	id 			= 5005;
-	voice 		= 1;
+	voice 		= 6;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
 	
+	aivar[AIV_MM_REAL_ID] = GIL_BOUNT;
+	
 	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 40);
+	B_SetAttributesForLevel(self, 50);
 
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------
-	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_HEAVY_02);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
