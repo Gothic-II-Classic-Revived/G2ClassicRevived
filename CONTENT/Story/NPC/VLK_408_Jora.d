@@ -15,10 +15,11 @@ instance VLK_408_Jora (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem (self, ITMW_REVIVED_1H_SWORD_ALRIK); //WICHTIG
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_01);
 	
 	// ------ Inventory ------
+	CreateInvItems (self, ITMW_REVIVED_1H_SWORD_ALRIK, 1); //WICHTIG
 	// Händler
 		
 	// ------ visuals ------																			
