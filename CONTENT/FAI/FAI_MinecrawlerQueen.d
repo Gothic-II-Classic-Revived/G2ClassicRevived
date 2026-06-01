@@ -1,5 +1,5 @@
 // ****************************
-// Nahkampf - AI Minecrawler-Queen (27)
+// Nahkampf - AI Minecrawler-Queen (47)
 // ****************************
 
 /*
@@ -25,7 +25,7 @@ CONST INT 	MOVE_WAIT			=	19; // 200 ms
 //////////////////////////////////////////////////
 
 // Gegner attackiert mich
-INSTANCE FA_ENEMY_PREHIT_27 (C_FightAI)
+INSTANCE FA_ENEMY_PREHIT_47 (C_FightAI)
 {
 	move[0] = MOVE_WAIT;
 	move[1] = MOVE_WAIT;
@@ -33,7 +33,7 @@ INSTANCE FA_ENEMY_PREHIT_27 (C_FightAI)
 };
 
 // Gegner macht Sturmattacke
-INSTANCE FA_ENEMY_STORMPREHIT_27 (C_FightAI)
+INSTANCE FA_ENEMY_STORMPREHIT_47 (C_FightAI)
 {
 // FIXME: Auch wenn ich einfach so auf das Monster zurenne, macht es eine ParadeJumpB!
 	move[0] = MOVE_PARADE;
@@ -45,26 +45,26 @@ INSTANCE FA_ENEMY_STORMPREHIT_27 (C_FightAI)
 //////////////////////////////////////////////////
 
 // was tun, wenn ich gerade auf den Gegner zurenne?
-INSTANCE FA_MY_W_RUNTO_27 (C_FightAI)
+INSTANCE FA_MY_W_RUNTO_47 (C_FightAI)
 {
 	move[0] = MOVE_TURN;
 };
 
 // was tun, wenn ich gerade Strafe?
-INSTANCE FA_MY_W_STRAFE_27 (C_FightAI)
+INSTANCE FA_MY_W_STRAFE_47 (C_FightAI)
 {
 	move[0] = MOVE_ATTACK;
 };
 
 // was tun, wenn ich den Gegner im Focus habe?
-INSTANCE FA_MY_W_FOCUS_27 (C_FightAI)
+INSTANCE FA_MY_W_FOCUS_47 (C_FightAI)
 {
 	move[0] = MOVE_WAIT;
 	move[1] = MOVE_ATTACK;
 };
 
 // was tun, wenn ich den Gegner nicht im Focus habe?
-INSTANCE FA_MY_W_NOFOCUS_27 (C_FightAI)
+INSTANCE FA_MY_W_NOFOCUS_47 (C_FightAI)
 {
 	move[0] = MOVE_TURN;
 };
@@ -75,21 +75,21 @@ INSTANCE FA_MY_W_NOFOCUS_27 (C_FightAI)
 ////////////////////////////////////////////////////////////
 
 // was tun, wenn ich gerade auf den Gegner zurenne?
-INSTANCE FA_MY_G_RUNTO_27 (C_FightAI)
+INSTANCE FA_MY_G_RUNTO_47 (C_FightAI)
 {
 	move[0] = MOVE_TURN;
 };
 
 // was tun, wenn ich gerade Strafe?
 // FIXME: wenn hier ATTACK eingetragen ist, müsste dann nicht nach jedem Strafe eine Attack kommen??
-INSTANCE FA_MY_G_STRAFE_27 (C_FightAI)
+INSTANCE FA_MY_G_STRAFE_47 (C_FightAI)
 {
 	move[0] = MOVE_TURN;
 	move[1] = MOVE_ATTACK;
 };
 
 // was tun, wenn ich den Gegner im Focus habe?
-INSTANCE FA_MY_G_FOCUS_27 (C_FightAI)
+INSTANCE FA_MY_G_FOCUS_47 (C_FightAI)
 {
 	move[0] = MOVE_WAIT;
 	move[1] = MOVE_WAIT;
@@ -103,13 +103,13 @@ INSTANCE FA_MY_G_FOCUS_27 (C_FightAI)
 ////////////////////////////////////
 
 // was tun, wenn ich den Gegner im Focus habe?
-INSTANCE FA_MY_FK_FOCUS_27 (C_FightAI)
+INSTANCE FA_MY_FK_FOCUS_47 (C_FightAI)
 {
 	move[0] = MOVE_WAIT;
 };
 
 // was tun, wenn ich den Gegner nicht im Focus habe? (gilt auch für G-Distanz!)
-INSTANCE FA_MY_G_FK_NOFOCUS_27 (C_FightAI)
+INSTANCE FA_MY_G_FK_NOFOCUS_47 (C_FightAI)
 {
 	move[0] = MOVE_TURN;
 };
