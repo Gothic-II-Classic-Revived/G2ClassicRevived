@@ -109,7 +109,7 @@ INSTANCE DIA_Marcos_Garond(C_INFO)
 FUNC INT DIA_Marcos_Garond_Condition()
 {	
 	if (Kapitel == 2)
-	&& (MIS_OLDWORLD == LOG_RUNNING)
+	&& (MIS_ScoutMine == LOG_RUNNING)
 	{
 		return TRUE;
 	};
