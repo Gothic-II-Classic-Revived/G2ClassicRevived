@@ -85,19 +85,23 @@ func void DIA_Baltram_Job_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Info Trick
 ///////////////////////////////////////////////////////////////////////
+var int Baltram_LieferungChapter;
+
 instance DIA_Baltram_Trick		(C_INFO)
 {
 	npc			 = 	VLK_410_Baltram;
 	nr			 = 	4;
 	condition	 = 	DIA_Baltram_Trick_Condition;
 	information	 = 	DIA_Baltram_Trick_Info;
-	permanent	 =  FALSE;
+	permanent	 =  TRUE;
 	important 	 =  TRUE;
 };
 func int DIA_Baltram_Trick_Condition ()
 {
 	if Npc_IsInState (self, ZS_Talk)
-	&& (MIS_Nagur_Bote == LOG_RUNNING)
+	&& (BaltramRatOut == FALSE)
+	&& (((MIS_Nagur_Bote == LOG_RUNNING) && (MIS_Baltram_ScoutAkil == FALSE))
+	|| ((MIS_Baltram_ScoutAkil == LOG_SUCCESS) && (Kapitel > Baltram_LieferungChapter)))
 	{
 		return TRUE;
 	};
@@ -112,8 +116,13 @@ func void DIA_Baltram_Trick_Info ()
 	AI_Output (other, self, "DIA_Baltram_Trick_15_05"); //Fine, I'm in.
 	AI_Output (self, other, "DIA_Baltram_Trick_01_06"); //Okay, just tell Akil that I sent you. He'll give you a package. Bring it to me.
 	
+	Baltram_LieferungChapter = Kapitel;
+	Lieferung_Geholt = FALSE;
 	MIS_Baltram_ScoutAkil = LOG_RUNNING;
-	B_LogEntry (TOPIC_Nagur,"Baltram has employed me as an errand-boy. Now I have to collect a delivery from Akil's farm.");
+	if (MIS_Nagur_Bote == LOG_RUNNING)
+	{
+		B_LogEntry (TOPIC_Nagur,"Baltram has employed me as an errand-boy. Now I have to collect a delivery from Akil's farm.");
+	};
 	
 	Log_CreateTopic (TOPIC_Baltram,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_Baltram,LOG_RUNNING);
@@ -208,13 +217,14 @@ instance DIA_Baltram_Lieferung	(C_INFO)
 	nr			 =  5;
 	condition	 = 	DIA_Baltram_Lieferung_Condition;
 	information	 = 	DIA_Baltram_Lieferung_Info;
-	permanent 	 =  FALSE;
+	permanent 	 =  TRUE;
 	description	 = 	"I've got Akil's delivery.";
 };
 
 func int DIA_Baltram_Lieferung_Condition ()
 {
-	if (Npc_HasItems (other, ItMi_BaltramPaket) >=1)
+	if (MIS_Baltram_ScoutAkil == LOG_RUNNING)
+	&& (Npc_HasItems (other, ItMi_BaltramPaket) >=1)
 	{
 		return TRUE;
 	};
@@ -224,20 +234,22 @@ func void DIA_Baltram_Lieferung_Info ()
 	AI_Output (other, self, "DIA_Baltram_Lieferung_15_00"); //I've got Akil's delivery.
 	AI_Output (self, other, "DIA_Baltram_Lieferung_01_01"); //Excellent. Finally I can offer fresh goods again. Here are your 50 gold pieces.
 	
-	B_GiveInvItems (other, self, ItMi_BaltramPaket,1);
-	B_GiveInvItems (self, other, ItMi_Gold,50);
+	B_GiveInvItems (other, self, ItMi_BaltramPaket, 1);
+	B_GiveInvItems (self, other, ItMi_Gold, 50);
 	
 	MIS_Baltram_ScoutAkil = LOG_SUCCESS;
 	MIS_Nagur_Bote = LOG_FAILED;
-	B_GivePlayerXP (XP_Baltram_ScoutAkil);
+	B_GivePlayerXP (XP_Baltram_ScoutAkil * Kapitel);
 	
 	Npc_RemoveInvItems (self, ItMi_BaltramPaket,1);
 	
-	CreateInvItems (self,ItFo_Cheese	,  5); 	
-	CreateInvItems (self,ItFo_Apple 	, 10); 
-	CreateInvItems (self,ItFo_Beer  	,  5);
-	CreateInvItems (self,ItFo_Bacon 	,  5);
-	CreateInvItems (self,ItFo_Sausage	,  5);
+	CreateInvItems (self,ItFo_Cheese, 5); 	
+	CreateInvItems (self,ItFo_Apple, 10); 
+	CreateInvItems (self,ITFO_REVIVED_APPLE_01, 10); 
+	CreateInvItems (self,ITFO_REVIVED_PEAR, 10); 
+	CreateInvItems (self,ItFo_Bacon, 5);
+	CreateInvItems (self,ItFo_Sausage, 5);
+	CreateInvItems (self,ITFO_REVIVED_HAM_01_RAW, 5);
 	
 };
 

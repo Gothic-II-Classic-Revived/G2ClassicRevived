@@ -223,7 +223,7 @@ instance DIA_Akil_Lieferung		(C_INFO)
 	nr			 =	20;
 	condition	 = 	DIA_Akil_Lieferung_Condition;
 	information	 = 	DIA_Akil_Lieferung_Info;
-	permanent	 =  FALSE; 	 
+	permanent	 =  TRUE;
 	description	 = 	"Baltram sent me...";
 };
 
@@ -231,6 +231,7 @@ func int DIA_Akil_Lieferung_Condition ()
 {
 	if  Npc_KnowsInfo(other, DIA_Akil_NachKampf)
 	&& (MIS_Baltram_ScoutAkil == LOG_RUNNING)
+	&& (Lieferung_Geholt == FALSE)
 	{
 		return TRUE;
 	};
@@ -244,7 +245,10 @@ func void DIA_Akil_Lieferung_Info ()
 	Lieferung_Geholt = TRUE;
 	
 	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now...");
-	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
+	if (MIS_Nagur_Bote == LOG_RUNNING)
+	{
+		B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////

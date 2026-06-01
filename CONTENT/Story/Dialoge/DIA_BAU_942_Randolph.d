@@ -104,7 +104,7 @@ instance DIA_Randolph_Baltram		(C_INFO)
 	nr			 = 	5;
 	condition	 = 	DIA_Randolph_Baltram_Condition;
 	information	 = 	DIA_Randolph_Baltram_Info;
-	permanent  	 =  FALSE;
+	permanent  	 =  TRUE;
 	description	 = 	"Baltram sent me...";
 };
 
