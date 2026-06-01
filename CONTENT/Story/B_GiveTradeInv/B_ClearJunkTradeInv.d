@@ -17,7 +17,7 @@ func void B_ClearJunkTradeInv (var C_NPC slf)
 		Npc_RemoveInvItems	(slf ,ITMW_REVIVED_ORC_AXE_04 	, Npc_HasItems (slf, ITMW_REVIVED_ORC_AXE_04 ));
 		Npc_RemoveInvItems	(slf ,ITMW_REVIVED_ORC_SWORD_01 	, Npc_HasItems (slf, ITMW_REVIVED_ORC_SWORD_01 ));
 		Npc_RemoveInvItems	(slf ,ITMW_REVIVED_ORC_SWORD_02 	, Npc_HasItems (slf, ITMW_REVIVED_ORC_SWORD_02 ));
-		Npc_RemoveInvItems	(slf ,ItMw_1h_Bau_Mace 		, Npc_HasItems (slf, ItMw_1h_Bau_Mace ));
+		Npc_RemoveInvItems	(slf ,ITMW_REVIVED_1H_BRANCH_01 		, Npc_HasItems (slf, ITMW_REVIVED_1H_BRANCH_01 ));
 
 	
 // Animaltrophies

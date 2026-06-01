@@ -31,27 +31,27 @@ func void B_RefreshAtInsert()
 		{
 			if (self.guild == GIL_MIL)	
 			{
-				CreateInvItems	(self, ItMw_1h_Bau_Mace, 1);
+				CreateInvItems	(self, ITMW_REVIVED_1H_BRANCH_01, 1);
 			};
 			
 			if (self.guild == GIL_PAL)	
 			{	
-				CreateInvItems	(self, ItMw_1h_Bau_Mace, 1);
+				CreateInvItems	(self, ITMW_REVIVED_1H_BRANCH_01, 1);
 			};
 			
 			if (self.guild == GIL_SLD)	
 			{	
-				CreateInvItems	(self, ItMw_1h_Bau_Mace, 1);
+				CreateInvItems	(self, ITMW_REVIVED_1H_BRANCH_01, 1);
 			};
 			
 			if (self.guild == GIL_BAU)
 			{	
-				CreateInvItems	(self, ItMw_1h_Bau_Mace, 1);
+				CreateInvItems	(self, ITMW_REVIVED_1H_BRANCH_01, 1);
 			};
 			
 			if (self.guild == GIL_NOV)
 			{	
-				CreateInvItems	(self, ItMw_1h_Bau_Mace, 1);
+				CreateInvItems	(self, ITMW_REVIVED_1H_BRANCH_01, 1);
 			};
 		};
 	};
