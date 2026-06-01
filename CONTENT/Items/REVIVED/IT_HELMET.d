@@ -118,5 +118,5 @@ INSTANCE ITHE_REVIVED_01 (REVIVED_HELMET)
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
 	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[5]					=	NAME_Prot_Point;		COUNT[5]				= 	value;
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };

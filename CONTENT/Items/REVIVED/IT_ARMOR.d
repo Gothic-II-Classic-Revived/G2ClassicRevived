@@ -1,44 +1,44 @@
-const int	REV_Value_BEGGAR					=	5;
+const int	REV_Value_BEGGAR					=	10;
 const int	REV_Prot_Edge_BEGGAR				=	5;
 const int	REV_Prot_Blunt_BEGGAR				=	5;
-const int	REV_Prot_Point_BEGGAR				=	0;
+const int	REV_Prot_Point_BEGGAR				=	5;
 const int	REV_Prot_Fire_BEGGAR				=	0;
 const int	REV_Prot_Magic_BEGGAR				=	0;
 //******************************************************************//
-const int	REV_Value_LEATHER_L					=	300;
+const int	REV_Value_LEATHER_L					=	250;
 const int	REV_Prot_Edge_LEATHER_L				=	25;
 const int	REV_Prot_Blunt_LEATHER_L			=	25;
 const int	REV_Prot_Point_LEATHER_L			=	20;
-const int	REV_Prot_Fire_LEATHER_L				=	10;
+const int	REV_Prot_Fire_LEATHER_L				=	5;
 const int	REV_Prot_Magic_LEATHER_L			=	0;
 //******************************************************************//
-const int	REV_Value_LEATHER_M					=	500;
+const int	REV_Value_LEATHER_M					=	450;
 const int	REV_Prot_Edge_LEATHER_M				=	30;
-const int	REV_Prot_Blunt_LEATHER_M			=	25;
-const int	REV_Prot_Point_LEATHER_M			=	20;
+const int	REV_Prot_Blunt_LEATHER_M			=	30;
+const int	REV_Prot_Point_LEATHER_M			=	30;
 const int	REV_Prot_Fire_LEATHER_M				=	10;
 const int	REV_Prot_Magic_LEATHER_M			=	0;
 //******************************************************************//
-const int	REV_Value_LEATHER_H					=	600;
+const int	REV_Value_LEATHER_H					=	650;
 const int	REV_Prot_Edge_LEATHER_H				=	40;
 const int	REV_Prot_Blunt_LEATHER_H			=	40;
 const int	REV_Prot_Point_LEATHER_H			=	40;
-const int	REV_Prot_Fire_LEATHER_H				=	25;
-const int	REV_Prot_Magic_LEATHER_H			=	5;
+const int	REV_Prot_Fire_LEATHER_H				=	15;
+const int	REV_Prot_Magic_LEATHER_H			=	0;
 //******************************************************************//
-const int	REV_Value_ARCHER					=	800;
-const int	REV_Prot_Edge_ARCHER				=	50;
-const int	REV_Prot_Blunt_ARCHER				=	40;
-const int	REV_Prot_Point_ARCHER				=	80;
-const int	REV_Prot_Fire_ARCHER				=	20;
-const int	REV_Prot_Magic_ARCHER				=	10;
+const int	REV_Value_ARCHER					=	450;
+const int	REV_Prot_Edge_ARCHER				=	30;
+const int	REV_Prot_Blunt_ARCHER				=	30;
+const int	REV_Prot_Point_ARCHER				=	30;
+const int	REV_Prot_Fire_ARCHER				=	10;
+const int	REV_Prot_Magic_ARCHER				=	0;
 //******************************************************************//
-const int	REV_Value_KNIGHT					=	10000;
+const int	REV_Value_KNIGHT					=	5000;
 const int	REV_Prot_Edge_KNIGHT				=	100;
 const int	REV_Prot_Blunt_KNIGHT				=	100;
 const int	REV_Prot_Point_KNIGHT				=	100;
-const int	REV_Prot_Fire_KNIGHT				=	100;
-const int	REV_Prot_Magic_KNIGHT				=	100;
+const int	REV_Prot_Fire_KNIGHT				=	50;
+const int	REV_Prot_Magic_KNIGHT				=	25;
 //******************************************************************//
 /* const int	REV_Value_IDKYET				=	12000;
 const int	REV_Prot_Edge_IDKYET			=	150;
@@ -51,193 +51,193 @@ const int	REV_Value_CRAWLER					=	1500;
 const int	REV_Prot_Edge_CRAWLER				=	80;
 const int	REV_Prot_Blunt_CRAWLER				=	80;
 const int	REV_Prot_Point_CRAWLER				=	80;
-const int	REV_Prot_Fire_CRAWLER				=	40;
-const int	REV_Prot_Magic_CRAWLER				=	20;
+const int	REV_Prot_Fire_CRAWLER				=	30;
+const int	REV_Prot_Magic_CRAWLER				=	5;
 //******************************************************************//
-const int	REV_Value_DEMONHUNTER				=	12000;
-const int	REV_Prot_Edge_DEMONHUNTER			=	150;
-const int	REV_Prot_Blunt_DEMONHUNTER			=	150;
-const int	REV_Prot_Point_DEMONHUNTER			=	150;
-const int	REV_Prot_Fire_DEMONHUNTER			=	100;
-const int	REV_Prot_Magic_DEMONHUNTER			=	100;
+const int	REV_Value_DEMONHUNTER				=	16000;
+const int	REV_Prot_Edge_DEMONHUNTER			=	135;
+const int	REV_Prot_Blunt_DEMONHUNTER			=	135;
+const int	REV_Prot_Point_DEMONHUNTER			=	135;
+const int	REV_Prot_Fire_DEMONHUNTER			=	90;
+const int	REV_Prot_Magic_DEMONHUNTER			=	45;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_SFB_L						=	25;
+const int	REV_Value_SFB_L						=	50;
 const int	REV_Prot_Edge_SFB_L					=	10;
 const int	REV_Prot_Blunt_SFB_L				=	10;
-const int	REV_Prot_Point_SFB_L				=	5;
+const int	REV_Prot_Point_SFB_L				=	10;
 const int	REV_Prot_Fire_SFB_L					=	5;
 const int	REV_Prot_Magic_SFB_L				=	0;
 //******************************************************************//
-const int	REV_Value_SFB_M						=	50;
-const int	REV_Prot_Edge_SFB_M					=	12;
-const int	REV_Prot_Blunt_SFB_M				=	12;
-const int	REV_Prot_Point_SFB_M				=	5;
+const int	REV_Value_SFB_M						=	100;
+const int	REV_Prot_Edge_SFB_M					=	15;
+const int	REV_Prot_Blunt_SFB_M				=	15;
+const int	REV_Prot_Point_SFB_M				=	15;
 const int	REV_Prot_Fire_SFB_M					=	5;
 const int	REV_Prot_Magic_SFB_M				=	0;
 //******************************************************************//
-const int	REV_Value_SFB_H						=	75;
-const int	REV_Prot_Edge_SFB_H					=	15;
-const int	REV_Prot_Blunt_SFB_H				=	15;
-const int	REV_Prot_Point_SFB_H				=	5;
+const int	REV_Value_SFB_H						=	150;
+const int	REV_Prot_Edge_SFB_H					=	20;
+const int	REV_Prot_Blunt_SFB_H				=	20;
+const int	REV_Prot_Point_SFB_H				=	20;
 const int	REV_Prot_Fire_SFB_H					=	5;
 const int	REV_Prot_Magic_SFB_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_STT_M						=	150;
+const int	REV_Value_STT_M						=	450;
 const int	REV_Prot_Edge_STT_M					=	30;
 const int	REV_Prot_Blunt_STT_M				=	30;
-const int	REV_Prot_Point_STT_M				=	5;
+const int	REV_Prot_Point_STT_M				=	30;
 const int	REV_Prot_Fire_STT_M					=	15;
 const int	REV_Prot_Magic_STT_M				=	0;
 //******************************************************************//
-const int	REV_Value_STT_H						=	200;
+const int	REV_Value_STT_H						=	700;
 const int	REV_Prot_Edge_STT_H					=	40;
 const int	REV_Prot_Blunt_STT_H				=	40;
-const int	REV_Prot_Point_STT_H				=	5;
+const int	REV_Prot_Point_STT_H				=	40;
 const int	REV_Prot_Fire_STT_H					=	20;
 const int	REV_Prot_Magic_STT_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_ORG_L						=	200;
+const int	REV_Value_ORG_L						=	350;
 const int	REV_Prot_Edge_ORG_L					=	30;
 const int	REV_Prot_Blunt_ORG_L				=	30;
-const int	REV_Prot_Point_ORG_L				=	5;
+const int	REV_Prot_Point_ORG_L				=	30;
 const int	REV_Prot_Fire_ORG_L					=	15;
 const int	REV_Prot_Magic_ORG_L				=	0;
 //******************************************************************//
-const int	REV_Value_ORG_M						=	300;
+const int	REV_Value_ORG_M						=	500;
 const int	REV_Prot_Edge_ORG_M					=	35;
 const int	REV_Prot_Blunt_ORG_M				=	35;
-const int	REV_Prot_Point_ORG_M				=	5;
+const int	REV_Prot_Point_ORG_M				=	35;
 const int	REV_Prot_Fire_ORG_M					=	15;
 const int	REV_Prot_Magic_ORG_M				=	0;
 //******************************************************************//
-const int	REV_Value_ORG_H						=	500;
+const int	REV_Value_ORG_H						=	700;
 const int	REV_Prot_Edge_ORG_H					=	40;
 const int	REV_Prot_Blunt_ORG_H				=	40;
-const int	REV_Prot_Point_ORG_H				=	5;
+const int	REV_Prot_Point_ORG_H				=	40;
 const int	REV_Prot_Fire_ORG_H					=	20;
 const int	REV_Prot_Magic_ORG_H				=	0;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_GRD_L						=	1000;
-const int	REV_Prot_Edge_GRD_L					=	60;
-const int	REV_Prot_Blunt_GRD_L				=	60;
-const int	REV_Prot_Point_GRD_L				=	60;
-const int	REV_Prot_Fire_GRD_L					=	40;
-const int	REV_Prot_Magic_GRD_L				=	40;
+const int	REV_Prot_Edge_GRD_L					=	45;
+const int	REV_Prot_Blunt_GRD_L				=	45;
+const int	REV_Prot_Point_GRD_L				=	45;
+const int	REV_Prot_Fire_GRD_L					=	20;
+const int	REV_Prot_Magic_GRD_L				=	0;
 //******************************************************************//
-const int	REV_Value_GRD_M						=	1000;
-const int	REV_Prot_Edge_GRD_M					=	70;
-const int	REV_Prot_Blunt_GRD_M				=	70;
-const int	REV_Prot_Point_GRD_M				=	70;
-const int	REV_Prot_Fire_GRD_M					=	40;
-const int	REV_Prot_Magic_GRD_M				=	40;
+const int	REV_Value_GRD_M						=	1600;
+const int	REV_Prot_Edge_GRD_M					=	55;
+const int	REV_Prot_Blunt_GRD_M				=	55;
+const int	REV_Prot_Point_GRD_M				=	55;
+const int	REV_Prot_Fire_GRD_M					=	25;
+const int	REV_Prot_Magic_GRD_M				=	0;
 //******************************************************************//
-const int	REV_Value_GRD_H						=	2000;
-const int	REV_Prot_Edge_GRD_H					=	80;
-const int	REV_Prot_Blunt_GRD_H				=	80;
-const int	REV_Prot_Point_GRD_H				=	80;
-const int	REV_Prot_Fire_GRD_H					=	60;
-const int	REV_Prot_Magic_GRD_H				=	60;
+const int	REV_Value_GRD_H						=	2500;
+const int	REV_Prot_Edge_GRD_H					=	70;
+const int	REV_Prot_Blunt_GRD_H				=	70;
+const int	REV_Prot_Point_GRD_H				=	70;
+const int	REV_Prot_Fire_GRD_H					=	35;
+const int	REV_Prot_Magic_GRD_H				=	0;
 //******************************************************************//
-const int	REV_Value_GRD_S						=	2000;
-const int	REV_Prot_Edge_GRD_S					=	100;
-const int	REV_Prot_Blunt_GRD_S				=	100;
-const int	REV_Prot_Point_GRD_S				=	100;
-const int	REV_Prot_Fire_GRD_S					=	60;
-const int	REV_Prot_Magic_GRD_S				=	60;
+const int	REV_Value_GRD_S						=	3000;
+const int	REV_Prot_Edge_GRD_S					=	80;
+const int	REV_Prot_Blunt_GRD_S				=	80;
+const int	REV_Prot_Point_GRD_S				=	80;
+const int	REV_Prot_Fire_GRD_S					=	40;
+const int	REV_Prot_Magic_GRD_S				=	5;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_EBR_L						=	1000;
-const int	REV_Prot_Edge_EBR_L					=	70;
-const int	REV_Prot_Blunt_EBR_L				=	70;
-const int	REV_Prot_Point_EBR_L				=	5;
-const int	REV_Prot_Fire_EBR_L					=	35;
+const int	REV_Value_EBR_L						=	800;
+const int	REV_Prot_Edge_EBR_L					=	45;
+const int	REV_Prot_Blunt_EBR_L				=	45;
+const int	REV_Prot_Point_EBR_L				=	45;
+const int	REV_Prot_Fire_EBR_L					=	25;
 const int	REV_Prot_Magic_EBR_L				=	5;
 //******************************************************************//
-const int	REV_Value_EBR_M						=	1000;
+const int	REV_Value_EBR_M						=	1500;
 const int	REV_Prot_Edge_EBR_M					=	80;
 const int	REV_Prot_Blunt_EBR_M				=	80;
-const int	REV_Prot_Point_EBR_M				=	30;
+const int	REV_Prot_Point_EBR_M				=	80;
 const int	REV_Prot_Fire_EBR_M					=	40;
-const int	REV_Prot_Magic_EBR_M				=	20;
+const int	REV_Prot_Magic_EBR_M				=	5;
 //******************************************************************//
-const int	REV_Value_EBR_H						=	1000;
-const int	REV_Prot_Edge_EBR_H					=	100;
-const int	REV_Prot_Blunt_EBR_H				=	100;
-const int	REV_Prot_Point_EBR_H				=	50;
-const int	REV_Prot_Fire_EBR_H					=	60;
-const int	REV_Prot_Magic_EBR_H				=	40;
+const int	REV_Value_EBR_H						=	2500;
+const int	REV_Prot_Edge_EBR_H					=	85;
+const int	REV_Prot_Blunt_EBR_H				=	85;
+const int	REV_Prot_Point_EBR_H				=	85;
+const int	REV_Prot_Fire_EBR_H					=	45;
+const int	REV_Prot_Magic_EBR_H				=	5;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_PAL_L						=	2000;
-const int	REV_Prot_Edge_PAL_L					=	110;
-const int	REV_Prot_Blunt_PAL_L				=	110;
-const int	REV_Prot_Point_PAL_L				=	110;
-const int	REV_Prot_Fire_PAL_L					=	100;
-const int	REV_Prot_Magic_PAL_L				=	100;
+const int	REV_Value_PAL_L						=	5000;
+const int	REV_Prot_Edge_PAL_L					=	100;
+const int	REV_Prot_Blunt_PAL_L				=	100;
+const int	REV_Prot_Point_PAL_L				=	100;
+const int	REV_Prot_Fire_PAL_L					=	50;
+const int	REV_Prot_Magic_PAL_L				=	25;
 //******************************************************************//
-const int	REV_Value_PAL_M						=	2000;
+const int	REV_Value_PAL_M						=	12000;
 const int	REV_Prot_Edge_PAL_M					=	120;
 const int	REV_Prot_Blunt_PAL_M				=	120;
 const int	REV_Prot_Point_PAL_M				=	120;
-const int	REV_Prot_Fire_PAL_M					=	100;
-const int	REV_Prot_Magic_PAL_M				=	100;
+const int	REV_Prot_Fire_PAL_M					=	75;
+const int	REV_Prot_Magic_PAL_M				=	35;
 //******************************************************************//
-const int	REV_Value_PAL_H						=	2000;
+const int	REV_Value_PAL_H						=	20000;
 const int	REV_Prot_Edge_PAL_H					=	150;
 const int	REV_Prot_Blunt_PAL_H				=	150;
 const int	REV_Prot_Point_PAL_H				=	150;
 const int	REV_Prot_Fire_PAL_H					=	100;
-const int	REV_Prot_Magic_PAL_H				=	100;
+const int	REV_Prot_Magic_PAL_H				=	50;
 //******************************************************************//
-const int	REV_Value_PAL_S						=	2000;
+const int	REV_Value_PAL_S						=	20000;
 const int	REV_Prot_Edge_PAL_S					=	150;
 const int	REV_Prot_Blunt_PAL_S				=	150;
 const int	REV_Prot_Point_PAL_S				=	150;
 const int	REV_Prot_Fire_PAL_S					=	100;
-const int	REV_Prot_Magic_PAL_S				=	100;
+const int	REV_Prot_Magic_PAL_S				=	50;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_SLD_L						=	150;
-const int	REV_Prot_Edge_SLD_L					=	30;
-const int	REV_Prot_Blunt_SLD_L				=	30;
-const int	REV_Prot_Point_SLD_L				=	30;
-const int	REV_Prot_Fire_SLD_L					=	0;
+const int	REV_Value_SLD_L						=	1000;
+const int	REV_Prot_Edge_SLD_L					=	45;
+const int	REV_Prot_Blunt_SLD_L				=	45;
+const int	REV_Prot_Point_SLD_L				=	45;
+const int	REV_Prot_Fire_SLD_L					=	20;
 const int	REV_Prot_Magic_SLD_L				=	0;
 //******************************************************************//
-const int	REV_Value_SLD_M						=	300;
-const int	REV_Prot_Edge_SLD_M					=	50;
-const int	REV_Prot_Blunt_SLD_M				=	50;
-const int	REV_Prot_Point_SLD_M				=	50;
-const int	REV_Prot_Fire_SLD_M					=	0;
-const int	REV_Prot_Magic_SLD_M				=	5;
+const int	REV_Value_SLD_M						=	1600;
+const int	REV_Prot_Edge_SLD_M					=	55;
+const int	REV_Prot_Blunt_SLD_M				=	55;
+const int	REV_Prot_Point_SLD_M				=	55;
+const int	REV_Prot_Fire_SLD_M					=	25;
+const int	REV_Prot_Magic_SLD_M				=	0;
 //******************************************************************//
-const int	REV_Value_SLD_H						=	500;
-const int	REV_Prot_Edge_SLD_H					=	80;
-const int	REV_Prot_Blunt_SLD_H				=	80;
-const int	REV_Prot_Point_SLD_H				=	80;
-const int	REV_Prot_Fire_SLD_H					=	5;
-const int	REV_Prot_Magic_SLD_H				=	10;
+const int	REV_Value_SLD_H						=	2500;
+const int	REV_Prot_Edge_SLD_H					=	70;
+const int	REV_Prot_Blunt_SLD_H				=	70;
+const int	REV_Prot_Point_SLD_H				=	70;
+const int	REV_Prot_Fire_SLD_H					=	35;
+const int	REV_Prot_Magic_SLD_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_DJG_L						=	2000;
-const int	REV_Prot_Edge_DJG_L					=	120;
-const int	REV_Prot_Blunt_DJG_L				=	120;
-const int	REV_Prot_Point_DJG_L				=	120;
-const int	REV_Prot_Fire_DJG_L					=	75;
-const int	REV_Prot_Magic_DJG_L				=	35;
+const int	REV_Value_DJG_L						=	3000;
+const int	REV_Prot_Edge_DJG_L					=	100;
+const int	REV_Prot_Blunt_DJG_L				=	100;
+const int	REV_Prot_Point_DJG_L				=	100;
+const int	REV_Prot_Fire_DJG_L					=	50;
+const int	REV_Prot_Magic_DJG_L				=	25;
 //******************************************************************//
-const int	REV_Value_DJG_M						=	3000;
+const int	REV_Value_DJG_M						=	12000;
 const int	REV_Prot_Edge_DJG_M					=	120;
 const int	REV_Prot_Blunt_DJG_M				=	120;
 const int	REV_Prot_Point_DJG_M				=	120;
 const int	REV_Prot_Fire_DJG_M					=	75;
 const int	REV_Prot_Magic_DJG_M				=	35;
 //******************************************************************//
-const int	REV_Value_DJG_H						=	3000;
+const int	REV_Value_DJG_H						=	20000;
 const int	REV_Prot_Edge_DJG_H					=	150;
 const int	REV_Prot_Blunt_DJG_H				=	150;
 const int	REV_Prot_Point_DJG_H				=	150;
@@ -246,112 +246,112 @@ const int	REV_Prot_Magic_DJG_H				=	50;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_KDF_L						=	1000;
-const int	REV_Prot_Edge_KDF_L					=	40;
-const int	REV_Prot_Blunt_KDF_L				=	40;
-const int	REV_Prot_Point_KDF_L				=	40;
-const int	REV_Prot_Fire_KDF_L					=	20;
-const int	REV_Prot_Magic_KDF_L				=	20;
+const int	REV_Prot_Edge_KDF_L					=	50;
+const int	REV_Prot_Blunt_KDF_L				=	50;
+const int	REV_Prot_Point_KDF_L				=	50;
+const int	REV_Prot_Fire_KDF_L					=	30;
+const int	REV_Prot_Magic_KDF_L				=	10;
 //******************************************************************//
-const int	REV_Value_KDF_M						=	1000;
-const int	REV_Prot_Edge_KDF_M					=	65;
-const int	REV_Prot_Blunt_KDF_M				=	65;
-const int	REV_Prot_Point_KDF_M				=	40;
-const int	REV_Prot_Fire_KDF_M					=	40;
-const int	REV_Prot_Magic_KDF_M				=	40;
+const int	REV_Value_KDF_M						=	2000;
+const int	REV_Prot_Edge_KDF_M					=	60;
+const int	REV_Prot_Blunt_KDF_M				=	60;
+const int	REV_Prot_Point_KDF_M				=	60;
+const int	REV_Prot_Fire_KDF_M					=	35;
+const int	REV_Prot_Magic_KDF_M				=	15;
 //******************************************************************//
-const int	REV_Value_KDF_H						=	1000;
-const int	REV_Prot_Edge_KDF_H					=	80;
-const int	REV_Prot_Blunt_KDF_H				=	80;
-const int	REV_Prot_Point_KDF_H				=	80;
-const int	REV_Prot_Fire_KDF_H					=	100;
-const int	REV_Prot_Magic_KDF_H				=	100;
+const int	REV_Value_KDF_H						=	3000;
+const int	REV_Prot_Edge_KDF_H					=	70;
+const int	REV_Prot_Blunt_KDF_H				=	70;
+const int	REV_Prot_Point_KDF_H				=	70;
+const int	REV_Prot_Fire_KDF_H					=	40;
+const int	REV_Prot_Magic_KDF_H				=	20;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_KDW_L						=	1000;
-const int	REV_Prot_Edge_KDW_L					=	40;
-const int	REV_Prot_Blunt_KDW_L				=	40;
-const int	REV_Prot_Point_KDW_L				=	40;
-const int	REV_Prot_Fire_KDW_L					=	20;
-const int	REV_Prot_Magic_KDW_L				=	20;
+const int	REV_Value_KDW_L						=	1300;
+const int	REV_Prot_Edge_KDW_L					=	65;
+const int	REV_Prot_Blunt_KDW_L				=	65;
+const int	REV_Prot_Point_KDW_L				=	65;
+const int	REV_Prot_Fire_KDW_L					=	40;
+const int	REV_Prot_Magic_KDW_L				=	15;
 //******************************************************************//
-const int	REV_Value_KDW_M						=	1000;
-const int	REV_Prot_Edge_KDW_M					=	65;
-const int	REV_Prot_Blunt_KDW_M				=	65;
-const int	REV_Prot_Point_KDW_M				=	40;
-const int	REV_Prot_Fire_KDW_M					=	40;
-const int	REV_Prot_Magic_KDW_M				=	40;
+const int	REV_Value_KDW_M						=	2200;
+const int	REV_Prot_Edge_KDW_M					=	75;
+const int	REV_Prot_Blunt_KDW_M				=	75;
+const int	REV_Prot_Point_KDW_M				=	75;
+const int	REV_Prot_Fire_KDW_M					=	45;
+const int	REV_Prot_Magic_KDW_M				=	20;
 //******************************************************************//
-const int	REV_Value_KDW_H						=	1000;
+const int	REV_Value_KDW_H						=	3500;
 const int	REV_Prot_Edge_KDW_H					=	80;
 const int	REV_Prot_Blunt_KDW_H				=	80;
 const int	REV_Prot_Point_KDW_H				=	80;
-const int	REV_Prot_Fire_KDW_H					=	100;
-const int	REV_Prot_Magic_KDW_H				=	100;
+const int	REV_Prot_Fire_KDW_H					=	50;
+const int	REV_Prot_Magic_KDW_H				=	25;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_NOV_M						=	150;
+const int	REV_Value_NOV_M						=	300;
 const int	REV_Prot_Edge_NOV_M					=	30;
 const int	REV_Prot_Blunt_NOV_M				=	30;
-const int	REV_Prot_Point_NOV_M				=	0;
+const int	REV_Prot_Point_NOV_M				=	30;
 const int	REV_Prot_Fire_NOV_M					=	15;
 const int	REV_Prot_Magic_NOV_M				=	0;
 //******************************************************************//
-const int	REV_Value_TPL_H						=	2000;
+const int	REV_Value_TPL_H						=	2500;
 const int	REV_Prot_Edge_TPL_H					=	70;
 const int	REV_Prot_Blunt_TPL_H				=	70;
-const int	REV_Prot_Point_TPL_H				=	60;
-const int	REV_Prot_Fire_TPL_H					=	50;
-const int	REV_Prot_Magic_TPL_H				=	25;
+const int	REV_Prot_Point_TPL_H				=	70;
+const int	REV_Prot_Fire_TPL_H					=	35;
+const int	REV_Prot_Magic_TPL_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_DMT_L						=	2000;
-const int	REV_Prot_Edge_DMT_L					=	90;
-const int	REV_Prot_Blunt_DMT_L				=	90;
-const int	REV_Prot_Point_DMT_L				=	20;
-const int	REV_Prot_Fire_DMT_L					=	60;
-const int	REV_Prot_Magic_DMT_L				=	30;
+const int	REV_Value_DMT_L						=	800;
+const int	REV_Prot_Edge_DMT_L					=	40;
+const int	REV_Prot_Blunt_DMT_L				=	40;
+const int	REV_Prot_Point_DMT_L				=	40;
+const int	REV_Prot_Fire_DMT_L					=	25;
+const int	REV_Prot_Magic_DMT_L				=	10;
 //******************************************************************//
-const int	REV_Value_DMT_M						=	2000;
-const int	REV_Prot_Edge_DMT_M					=	100;
-const int	REV_Prot_Blunt_DMT_M				=	100;
-const int	REV_Prot_Point_DMT_M				=	100;
-const int	REV_Prot_Fire_DMT_M					=	100;
-const int	REV_Prot_Magic_DMT_M				=	100;
+const int	REV_Value_DMT_M						=	3000;
+const int	REV_Prot_Edge_DMT_M					=	90;
+const int	REV_Prot_Blunt_DMT_M				=	90;
+const int	REV_Prot_Point_DMT_M				=	90;
+const int	REV_Prot_Fire_DMT_M					=	60;
+const int	REV_Prot_Magic_DMT_M				=	30;
 //******************************************************************//
-const int	REV_Value_DMT_H						=	2000;
-const int	REV_Prot_Edge_DMT_H					=	150;
-const int	REV_Prot_Blunt_DMT_H				=	150;
-const int	REV_Prot_Point_DMT_H				=	120;
-const int	REV_Prot_Fire_DMT_H					=	100;
-const int	REV_Prot_Magic_DMT_H				=	120;
+const int	REV_Value_DMT_H						=	5000;
+const int	REV_Prot_Edge_DMT_H					=	100;
+const int	REV_Prot_Blunt_DMT_H				=	100;
+const int	REV_Prot_Point_DMT_H				=	100;
+const int	REV_Prot_Fire_DMT_H					=	65;
+const int	REV_Prot_Magic_DMT_H				=	40;
 //******************************************************************//
-const int	REV_Value_DMT_S						=	2000;
-const int	REV_Prot_Edge_DMT_S					=	120;
-const int	REV_Prot_Blunt_DMT_S				=	120;
-const int	REV_Prot_Point_DMT_S				=	60;
-const int	REV_Prot_Fire_DMT_S					=	80;
-const int	REV_Prot_Magic_DMT_S				=	105;
+const int	REV_Value_DMT_S						=	5000;
+const int	REV_Prot_Edge_DMT_S					=	90;
+const int	REV_Prot_Blunt_DMT_S				=	90;
+const int	REV_Prot_Point_DMT_S				=	90;
+const int	REV_Prot_Fire_DMT_S					=	75;
+const int	REV_Prot_Magic_DMT_S				=	60;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_BDT_L						=	150;
+const int	REV_Value_BDT_L						=	350;
 const int	REV_Prot_Edge_BDT_L					=	30;
 const int	REV_Prot_Blunt_BDT_L				=	30;
 const int	REV_Prot_Point_BDT_L				=	30;
 const int	REV_Prot_Fire_BDT_L					=	0;
 const int	REV_Prot_Magic_BDT_L				=	0;
 //******************************************************************//
-const int	REV_Value_BDT_M						=	200;
-const int	REV_Prot_Edge_BDT_M					=	30;
-const int	REV_Prot_Blunt_BDT_M				=	30;
-const int	REV_Prot_Point_BDT_M				=	5;
-const int	REV_Prot_Fire_BDT_M					=	15;
+const int	REV_Value_BDT_M						=	550;
+const int	REV_Prot_Edge_BDT_M					=	35;
+const int	REV_Prot_Blunt_BDT_M				=	35;
+const int	REV_Prot_Point_BDT_M				=	35;
+const int	REV_Prot_Fire_BDT_M					=	0;
 const int	REV_Prot_Magic_BDT_M				=	0;
 //******************************************************************//
-const int	REV_Value_BDT_H						=	300;
-const int	REV_Prot_Edge_BDT_H					=	30;
-const int	REV_Prot_Blunt_BDT_H				=	30;
-const int	REV_Prot_Point_BDT_H				=	5;
-const int	REV_Prot_Fire_BDT_H					=	15;
+const int	REV_Value_BDT_H						=	2100;
+const int	REV_Prot_Edge_BDT_H					=	50;
+const int	REV_Prot_Blunt_BDT_H				=	50;
+const int	REV_Prot_Point_BDT_H				=	50;
+const int	REV_Prot_Fire_BDT_H					=	0;
 const int	REV_Prot_Magic_BDT_H				=	0;
 //******************************************************************//
 //******************************************************************//
@@ -361,8 +361,6 @@ const int	REV_Prot_Blunt_GORDONRAMSAY			=	50;
 const int	REV_Prot_Point_GORDONRAMSAY			=	50;
 const int	REV_Prot_Fire_GORDONRAMSAY			=	50;
 const int	REV_Prot_Magic_GORDONRAMSAY			=	50;
-
-
 
 
 //****************************************************************************
@@ -632,7 +630,7 @@ INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	VALUE_ITAR_PAL_SKEL;
+	value 					=	REV_Value_KNIGHT;
 
 	protection [PROT_EDGE]	=	REV_Prot_Edge_KNIGHT;
 	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KNIGHT;
@@ -673,8 +671,8 @@ INSTANCE ITAR_REVIVED_CRAWLER (C_Item)
 	on_equip				=	Equip_CRAWLER_ARMOR;
 	on_unequip				=	UnEquip_CRAWLER_ARMOR;
 
-	visual 					=	"REV_DHT.3ds";
-	visual_change 			=	"REV_ARMOR_DHT.asc";
+	visual 					=	"ItAr_Djg_Crawler.3ds";
+	visual_change 			=	"Armor_Djg_Crawler.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
@@ -909,7 +907,7 @@ INSTANCE ITAR_REVIVED_STT_M (C_Item)
 
 INSTANCE ITAR_REVIVED_STT_H (C_Item)
 {
-	name 					=	"Old Shadow's Armor";
+	name 					=	"Shadow's Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1496,13 +1494,13 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_PAL_L;
+	value 					=	REV_Value_PAL_M;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_PAL_L;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_PAL_L;
-	protection [PROT_POINT] = 	REV_Prot_Point_PAL_L;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_PAL_L;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_PAL_L;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_PAL_M;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_PAL_M;
+	protection [PROT_POINT] = 	REV_Prot_Point_PAL_M;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_PAL_M;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_PAL_M;
 
 	visual 					=	"REV_PALM.3ds";
 	visual_change 			=	"REV_ARMOR_PAL_M.asc";
@@ -1766,13 +1764,13 @@ INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_DJG_M;
+	value 					=	REV_Value_DJG_L;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_DJG_M;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DJG_M;
-	protection [PROT_POINT] = 	REV_Prot_Point_DJG_M;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DJG_M;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_DJG_M;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_DJG_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DJG_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_DJG_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DJG_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_DJG_L;
 
 	visual 					=	"REV_DJGL.3ds";
 	visual_change 			=	"REV_ARMOR_DJG_L.asc";
@@ -2255,7 +2253,7 @@ INSTANCE ITAR_REVIVED_DMT_H (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_DMT_L;
+	value 					=	REV_Value_DMT_H;
 
 	protection [PROT_EDGE]	=	REV_Prot_Edge_DMT_H;
 	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DMT_H;
