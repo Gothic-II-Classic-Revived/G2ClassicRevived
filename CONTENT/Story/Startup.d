@@ -31,7 +31,7 @@ func void INIT_GLOBAL()
 func void STARTUP_Testlevel ()
 {
 	Wld_InsertNpc	(PC_REVIVED,	"SPAWN_PC_REVIVED"); 
-	Wld_InsertNpc	(BOUNT_5007_Delta,	"SPAWN_PC_HERO"); 
+	//Wld_InsertNpc	(BOUNT_5007_Delta,	"SPAWN_PC_HERO"); 
 	
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_01");
 	REV_SetObjectRoutine_Fire ("TESTLEVEL_MOBFIRE_02");
@@ -3120,8 +3120,6 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_963_Malak, 		"BIGFARM");
 
 	Wld_InsertNpc 	(OUT_961_GAAN, 			"BIGFARM");
-
-	Wld_InsertNpc 	(Gaans_Snapper, 		"NW_FARM3_VALLEY_000");  
 
 	Wld_InsertNpc 	(BAU_962_Bauer, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_964_Bauer, 		"BIGFARM");

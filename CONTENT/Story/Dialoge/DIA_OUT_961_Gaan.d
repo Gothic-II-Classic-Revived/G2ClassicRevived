@@ -347,6 +347,7 @@ func void DIA_Gaan_TEACHHUNTING_DrgSnapperHorn()
 ///////////////////////////////////////////////////////////////////////
 //	Info jagd
 ///////////////////////////////////////////////////////////////////////
+var int GaanSnapperOnce;
 instance DIA_Gaan_JAGD		(C_INFO)
 {
 	npc		 = 	OUT_961_GAAN;
@@ -367,25 +368,29 @@ func void DIA_Gaan_JAGD_Info ()
 {
 	AI_Output			(other, self, "DIA_Gaan_JAGD_15_00"); //How's the hunting?
 
-	if ((Npc_IsDead(Gaans_Snapper))== FALSE)
-		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_01"); //The last animal I could bring down was a large rat. Not very encouraging, and bad for business.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //For several days now, some kind of snorting beast has been roaming the area.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //It not only kills everything that moves, it also interferes with my work.
-			Log_CreateTopic (TOPIC_GaanSchnaubi, LOG_MISSION);
-			Log_SetTopicStatus(TOPIC_GaanSchnaubi, LOG_RUNNING);
-			B_LogEntry (TOPIC_GaanSchnaubi,"That snorting creature's causing trouble for the hunter Gaan. Unless I defeat the beast, he can't go hunting any more."); 
-			MIS_Gaan_Snapper = LOG_RUNNING;
-		}
+	if (GaanSnapperOnce == FALSE)
+	{
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_01"); //The last animal I could bring down was a large rat. Not very encouraging, and bad for business.
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //For several days now, some kind of snorting beast has been roaming the area.
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //It not only kills everything that moves, it also interferes with my work.
+		
+		Wld_InsertNpc(Gaans_Snapper, "NW_FARM3_VALLEY_000");
+		GaanSnapperOnce = TRUE;
+
+		Log_CreateTopic (TOPIC_GaanSchnaubi, LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_GaanSchnaubi, LOG_RUNNING);
+		B_LogEntry (TOPIC_GaanSchnaubi,"That snorting creature's causing trouble for the hunter Gaan. Unless I defeat the beast, he can't go hunting any more."); 
+		MIS_Gaan_Snapper = LOG_RUNNING;
+	}
 	else if (Kapitel >= 3)
-		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_04"); //It's getting crazier out here. Meanwhile, dozens of these snorting animals have come out of the pass.
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_05"); //Under these circumstances, hunting is getting harder and harder up here.
-		}
+	{
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_04"); //It's getting crazier out here. Meanwhile, dozens of these snorting animals have come out of the pass.
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_05"); //Under these circumstances, hunting is getting harder and harder up here.
+	}
 	else
-		{
-			AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //I can't complain.
-		};
+	{
+		AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //I can't complain.
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////
