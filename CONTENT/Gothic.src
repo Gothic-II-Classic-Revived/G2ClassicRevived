@@ -168,6 +168,7 @@ AI\HUMAN\B_Human\B_SelectWeapon.d
 AI\HUMAN\B_Human\B_AssessEnemy.d
 AI\HUMAN\B_Human\B_AssessDamage.d
 AI\HUMAN\B_Human\B_AssessDrawWeapon.d
+AI\HUMAN\B_Human\B_AssessCaster.d
 AI\HUMAN\B_Human\B_AssessEnterRoom.d
 AI\HUMAN\B_Human\B_AssessFightSound.d
 AI\HUMAN\B_Human\B_AssessMurder.d

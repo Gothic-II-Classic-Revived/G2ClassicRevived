@@ -61,6 +61,8 @@ FUNC VOID InitPerceptions()
 	// Sollte in JEDEM Zustand aktiviert sein (ausser ZS_Dead)
 	Perc_SetRange		(PERC_ASSESSSTOPMAGIC	, 9999			 				); //Reichweite wird nicht vom Programm benutzt!
 	// Wird an das / die Opfer gesendet, wenn der Spell aufhört zu wirken
+	Perc_SetRange		(PERC_ASSESSCASTER		, PERC_DIST_ACTIVE_MAX			);
+	// wird beim 1. investierten Manapunkt gesendet
 
 	// --- TALK ------------------------------------------------------------------
 
@@ -94,8 +96,6 @@ FUNC VOID InitPerceptions()
 		// geht an NSC, wenn er den SC beim Taschendiebstahl erwischt (sich bewegt)
 		Perc_SetRange		(PERC_ASSESSCALL		, 100							);
 		// geht an NSC, der vom Spieler gerufen wurde (zu weit weg zum Sprechen)
-		Perc_SetRange		(PERC_ASSESSCASTER		, 100							);
-		// wird beim 1. investierten Manapunkt gesendet
 		Perc_SetRange		(PERC_NPCCOMMAND		, 100							);
 		// REIN scriptgenerierte Wahrnehmung!
 		Perc_SetRange		(PERC_OBSERVESUSPECT	, 100							);
@@ -130,6 +130,7 @@ func void Perception_Set_Normal ()				//Für Humans
 
 	// --- passiv ------------------------------------------------------------------------ //Passive Wahrnehmungen werden durch die Reihenfolge der Anmeldung priorisiert!
 	Npc_PercEnable  	(self, 	PERC_ASSESSMAGIC		,	B_AssessMagic				);
+	Npc_PercEnable  	(self, 	PERC_ASSESSCASTER		,	B_AssessCaster				); //geht in ZS_ReactToWeapon oder ZS_Flee
 	Npc_PercEnable  	(self,	PERC_ASSESSDAMAGE		,	B_AssessDamage				); //geht in ZS_Attack oder in ZS_ReactToDamage (bei Freunden)
 	Npc_PercEnable  	(self, 	PERC_ASSESSMURDER		,	B_AssessMurder				); //geht in ZS_Attack
 	Npc_PercEnable  	(self, 	PERC_ASSESSTHEFT		,	B_AssessTheft 				); //geht in ZS_Attack
@@ -158,6 +159,7 @@ func void Perception_Set_Minimal ()				//Für Männer und Frauen
 
 	// --- passiv ------------------------------------------------------------------------
 	Npc_PercEnable  	(self, 	PERC_ASSESSMAGIC		,	B_AssessMagic				);
+	Npc_PercEnable  	(self, 	PERC_ASSESSCASTER		,	B_AssessCaster				);
 	Npc_PercEnable  	(self,	PERC_ASSESSDAMAGE		,	B_AssessDamage				);
 	Npc_PercEnable  	(self, 	PERC_ASSESSMURDER		,	B_AssessMurder				);
 	Npc_PercEnable  	(self, 	PERC_ASSESSTHEFT		,	B_AssessTheft 				);
@@ -189,6 +191,7 @@ func void B_ClearPerceptions (var C_NPC slf)
 
 	// ------ Passive Wahrnehmungen der Perception_Set_Normal und Minimal disablen -------
 	Npc_PercDisable  	(slf, 	PERC_ASSESSMAGIC		);
+	Npc_PercDisable  	(slf, 	PERC_ASSESSCASTER		);
 	Npc_PercDisable  	(slf,	PERC_ASSESSDAMAGE		);
 	Npc_PercDisable  	(slf, 	PERC_ASSESSMURDER		);
 	Npc_PercDisable  	(slf, 	PERC_ASSESSTHEFT		);
@@ -216,7 +219,6 @@ func void B_ClearPerceptions (var C_NPC slf)
 	//Npc_PercDisable  	(slf, 	PERC_CATCHTHIEF			);
 	//Npc_PercDisable  	(slf, 	PERC_ASSESSDEFEAT		);
 	//Npc_PercDisable  	(slf, 	PERC_ASSESSCALL			);
-	//Npc_PercDisable  	(slf, 	PERC_ASSESSCASTER		);
 	//Npc_PercDisable  	(slf, 	PERC_NPCCOMMAND			);
 	//Npc_PercDisable  	(slf, 	PERC_OBSERVESUSPECT		);
 };
