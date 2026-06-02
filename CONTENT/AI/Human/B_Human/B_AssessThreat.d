@@ -31,6 +31,27 @@ func void B_AssessThreat ()
 
 	// FUNC 
 	
+	var int oldAttackReason;
+	oldAttackReason = self.aivar[AIV_ATTACKREASON];
+	self.aivar[AIV_ATTACKREASON] = AR_ReactToWeapon;
+
+	// ------ Schwache NSCs fliehen sofort vor gezielter Waffe ------
+	if (C_WantToFlee(self, other))
+	{
+		if (Npc_IsPlayer(other))
+		{
+			self.aivar[AIV_LastPlayerAR] = AR_ReactToWeapon;
+		};
+
+		Npc_ClearAIQueue	(self);
+		Npc_SetTarget		(self, other);
+		B_ClearPerceptions	(self);
+		AI_StartState 		(self, ZS_Flee, 0, "");
+		return;
+	};
+
+	self.aivar[AIV_ATTACKREASON] = oldAttackReason;
+
 	Npc_ClearAIQueue	(self);
 	B_ClearPerceptions	(self);
 	AI_StartState 		(self, ZS_ReactToWeapon, 0, "");

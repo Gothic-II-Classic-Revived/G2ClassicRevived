@@ -94,49 +94,61 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Bount Mage ------
 	if ((slf.guild == GIL_BOUNT) || (slf.guild == GIL_BDT))
 	&& (slf.aivar[AIV_MagicUser] == MAGIC_ALWAYS)
-	{		
-		if (self.attribute[ATR_HITPOINTS] <= self.attribute[ATR_HITPOINTS_MAX] / 2) 
+	{
+		var int BountSpellStep;
+
+		if (slf.attribute[ATR_HITPOINTS] <= slf.attribute[ATR_HITPOINTS_MAX] / 2)
+		&& (Npc_HasItems (slf, ItSc_FullHeal) > 0)
 		{
 			B_ReadySpell (slf, SPL_FullHeal, SPL_Cost_FullHeal);
 			return TRUE;
-		}
-		else
-		{
-			if (slf.aivar[AIV_SelectSpell] <= 0)
-			{
-				var int BountSPLRand; BountSPLRand = Hlp_Random(10);
-				slf.aivar[AIV_SelectSpell] += BountSPLRand;
-			};
-			
-			if (slf.aivar[AIV_SelectSpell] < 10)
-			{
-				if ((BountSPLRand <= 3) && (Npc_HasItems (slf, ItSc_InstantFireball) > 0))
-				{
-					B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball); 
-					return TRUE; 
-				}
-				else if ((BountSPLRand <= 6) && (Npc_HasItems (slf, ItSc_Firestorm) > 0))
-				{
-					B_ReadySpell (slf, SPL_Firestorm, SPL_Cost_Firestorm);
-					return TRUE;
-				}
-				else if (Npc_HasItems (slf, ItSc_Firebolt) > 0)
-				{
-					B_ReadySpell (slf, SPL_Firebolt, SPL_Cost_Firebolt);
-					return TRUE;
-				};
-			};
 		};
 
-		if (Npc_GetDistToNpc(slf, oth) > FIGHT_DIST_MELEE)
+		if (slf.aivar[AIV_SelectSpell] <= 0)
 		{
-			B_ReadySpell (slf, SPL_Firerain, SPL_Cost_Firerain);
-			return TRUE;
-		}
-		else
-		{
-			return FALSE;
+			slf.aivar[AIV_SelectSpell] = Hlp_Random(10);
 		};
+
+		BountSpellStep = slf.aivar[AIV_SelectSpell];
+
+		if (BountSpellStep < 10)
+		{
+			if ((BountSpellStep <= 3) && (Npc_HasItems (slf, ItSc_InstantFireball) > 0))
+			{
+				B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball);
+				return TRUE;
+			}
+			else if ((BountSpellStep <= 6) && (Npc_HasItems (slf, ItSc_Firestorm) > 0))
+			{
+				B_ReadySpell (slf, SPL_Firestorm, SPL_Cost_Firestorm);
+				return TRUE;
+			}
+			else if (Npc_HasItems (slf, ItSc_Firebolt) > 0)
+			{
+				B_ReadySpell (slf, SPL_Firebolt, SPL_Cost_Firebolt);
+				return TRUE;
+			};
+		}
+		else if (BountSpellStep == 10)
+		{
+			if (Npc_GetDistToNpc(slf, oth) > FIGHT_DIST_MELEE)
+			&& (Npc_HasItems (slf, ItSc_Firerain) > 0)
+			{
+				slf.aivar[AIV_SelectSpell] = 11;
+				B_ReadySpell (slf, SPL_Firerain, SPL_Cost_Firerain);
+				return TRUE;
+			}
+			else
+			{
+				slf.aivar[AIV_SelectSpell] = 0;
+			};
+		}
+		else if (BountSpellStep >= 12)
+		{
+			slf.aivar[AIV_SelectSpell] = 0;
+		};
+
+		return FALSE;
 	};
 
 	// ------ Magier ------
@@ -295,7 +307,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	};
 	
 	// ------ Sumpfgolem ------
-	if (slf.guild == GIL_FIREGOLEM)
+	if (slf.guild == GIL_SWAMPGOLEM)
 	{
 		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
 		{

@@ -14,7 +14,7 @@ func int C_PlayerIsFakePirate (var C_NPC slf, var C_NPC oth)
 	};
 	
 	
-	if (Npc_HasEquippedArmor (other) == TRUE)
+	if (Npc_HasEquippedArmor (oth) == TRUE)
 	{
 		itm = Npc_GetEquippedArmor(oth);
 		if ((Hlp_IsItem(itm, ITAR_PIR_L_Addon) == TRUE)

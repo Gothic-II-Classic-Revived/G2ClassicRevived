@@ -30,8 +30,9 @@ func void ZS_Attack ()
 	if (C_WantToFlee (self, other))					
 	{
 		Npc_ClearAIQueue	(self);
-		B_ClearPerceptions	(self);
 		Npc_SetTarget 		(self, other);
+		B_CallGuards		();
+		B_ClearPerceptions	(self);
 		AI_StartState 		(self, ZS_Flee, 0, "");
 		return;
 	};
@@ -165,6 +166,17 @@ func int ZS_Attack_Loop ()
 	};
 	
 	
+	// ------ Schwache Zivilisten brechen den Kampf ab ------
+	if (C_WantToFlee (self, other))
+	{
+		Npc_ClearAIQueue	(self);
+		Npc_SetTarget 		(self, other);
+		B_CallGuards		();
+		B_ClearPerceptions	(self);
+		AI_StartState 		(self, ZS_Flee, 0, "");
+		return LOOP_CONTINUE;
+	};
+
 	// LOOP FUNC
 	
 	// ------ Vor Attacke kurz warten (bei Angriff aus Dialog) ------

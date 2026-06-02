@@ -41,6 +41,30 @@ func void B_MM_AssessEnemy ()
 		return;
 	};
 	
+	// ------- Ulu-Mulu wird von Orks toleriert ------
+	if (Npc_IsPlayer(other))
+	&& (self.guild == GIL_ORC)
+	{
+		var C_ITEM UluMuluWeapon;
+
+		UluMuluWeapon = Npc_GetReadiedWeapon(other);
+		if (Hlp_IsValidItem(UluMuluWeapon))
+		&& (Hlp_IsItem(UluMuluWeapon, ITMW_REVIVED_ORC_ULUMULU))
+		{
+			AI_TurnToNpc	(self, other);
+			AI_LookAtNpc	(self, other);
+			return;
+		};
+
+		UluMuluWeapon = Npc_GetEquippedMeleeWeapon(other);
+		if (Hlp_IsValidItem(UluMuluWeapon))
+		&& (Hlp_IsItem(UluMuluWeapon, ITMW_REVIVED_ORC_ULUMULU))
+		{
+			AI_TurnToNpc	(self, other);
+			AI_LookAtNpc	(self, other);
+			return;
+		};
+	};
 	// ------- Mag-Golem-Lares-Hack ------------
 	var C_NPC MGO; MGO = Hlp_GetNpc(MagicGolem);
 	var C_NPC LAR; LAR = Hlp_GetNpc(SLD_449_Lares);

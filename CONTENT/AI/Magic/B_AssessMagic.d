@@ -105,6 +105,7 @@ func void B_AssessMagic ()
 		&& (self.guild != GIL_STONEGOLEM)
 		&& (self.guild != GIL_ICEGOLEM)
 		&& (self.guild != GIL_FIREGOLEM)
+		&& (self.guild != GIL_SWAMPGOLEM)
 		{
 			AI_StartState	(self, ZS_MM_Flee, 0, "");
 			return;

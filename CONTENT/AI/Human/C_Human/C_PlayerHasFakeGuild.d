@@ -15,7 +15,7 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		return FALSE;
 	};
 	
-	if (C_NpcIsGateGuard (self) == TRUE)
+	if (C_NpcIsGateGuard (slf) == TRUE)
 	{
 		return FALSE;
 	};
