@@ -123,6 +123,21 @@ func void REV_ChangeStatPercent (var int recover, var int recoverPercent)
 
 	Npc_ChangeAttribute (hero, recover, amountDelta);
 };
+
+FUNC VOID REV_Equip_PaladinWeapon()
+{
+	if (self.guild != GIL_PAL)
+	&& (Npc_GetTrueGuild(self) != GIL_PAL)
+	{
+		if (Npc_IsPlayer(self))
+		{
+			Print (PRINT_PALADIN_WEAPON_MISSING);
+		};
+		
+		AI_UnequipWeapons (self);
+	};
+};
+
 func int REV_IsRequiredKillTarget (var C_NPC slf)
 {
 	if (slf == SLD_840_Alvares)

@@ -299,6 +299,7 @@ const string PRINT_LearnBooze						= "Learn: Distill booze";
 const string PRINT_NoMorePicklocks					= "No more lock picks!";
 const string PRINT_Ranged_No_Ammo_Crossbow			= "No more bolts!";
 const string PRINT_Ranged_No_Ammo_Bow				= "No more arrows!";
+const string PRINT_PALADIN_WEAPON_MISSING			= "Only paladins can equip this weapon.";
 
 
 // ***************

@@ -721,7 +721,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_01 (C_Item)
 
 	damageTotal			= 	REV_Damage_2H_Sword_Paladin_01;
 	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Sword_Paladin_01;		
+	range    			=  	REV_Range_2H_Sword_Paladin_01;
+
+	on_equip			=	REV_Equip_PaladinWeapon;
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_Paladin_01;
@@ -745,7 +747,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_02 (C_Item)
 
 	damageTotal			= 	REV_Damage_2H_Sword_Paladin_02;
 	damagetype 			=	DAM_EDGE|DAM_MAGIC;		
-	range    			=  	REV_Range_2H_Sword_Paladin_02;		
+	range    			=  	REV_Range_2H_Sword_Paladin_02;
+
+	on_equip			=	REV_Equip_PaladinWeapon;
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_Paladin_02;
@@ -769,7 +773,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_03 (C_Item)
 
 	damageTotal			= 	REV_Damage_2H_Sword_Paladin_03;
 	damagetype 			=	DAM_EDGE|DAM_FIRE|DAM_MAGIC;		
-	range    			=  	REV_Range_2H_Sword_Paladin_03;		
+	range    			=  	REV_Range_2H_Sword_Paladin_03;
+
+	on_equip			=	REV_Equip_PaladinWeapon;
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_Paladin_03;
