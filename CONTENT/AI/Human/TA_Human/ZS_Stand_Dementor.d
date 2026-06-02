@@ -30,6 +30,7 @@ func void ZS_Stand_Dementor()
 	Npc_PercEnable  	(self, 	PERC_ASSESSWARN			, 	B_AssessWarn 		 	 	); //geht in ZS_Attack
 	Npc_PercEnable  	(self, 	PERC_ASSESSTALK			,	B_AssessTalk 				); //geht in ZS_Talk
 	Npc_PercEnable  	(self, 	PERC_MOVEMOB			,	B_MoveMob					); //öffnet Türen, die auf dem Weg liegen
+	Npc_PercEnable  	(self, 	PERC_MOVENPC			,	B_MoveNpc					); //reagiert, wenn der SC den Weg blockiert
 	
 	B_ResetAll (self);
 	

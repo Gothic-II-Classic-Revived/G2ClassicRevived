@@ -51,6 +51,7 @@ func void ZS_Guide_Player ()
 	Npc_PercEnable 		(self, 	PERC_ASSESSENEMY		,	B_AssessEnemy				); //geht in ZS_Attack
 	Npc_PercEnable	 	(self, 	PERC_ASSESSTALK			,	B_AssessTalk 				); //geht in ZS_Talk
 	Npc_PercEnable  	(self, 	PERC_MOVEMOB			,	B_MoveMob					); //öffnet Türen, die auf dem Weg liegen
+	Npc_PercEnable  	(self, 	PERC_MOVENPC			,	B_MoveNpc					); //reagiert, wenn der SC den Weg blockiert
 	Npc_PercEnable		(self,  PERC_ASSESSFIGHTSOUND	, 	B_AssessGuideFightSound		);
 };
 

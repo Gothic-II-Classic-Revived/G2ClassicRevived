@@ -81,6 +81,7 @@ func void ZS_Follow_Player ()
 	Npc_PercEnable (self, PERC_ASSESSENEMY	, B_AssessEnemy); 
 	Npc_PercEnable (self, PERC_ASSESSTALK	, B_AssessTalk); 
 	Npc_PercEnable (self, PERC_MOVEMOB		, B_MoveMob); 
+	Npc_PercEnable (self, PERC_MOVENPC		, B_MoveNpc);
 	
 	//lokale Wahrnehmungen
 	Npc_PercEnable (self, PERC_ASSESSFIGHTSOUND , B_AssessFollowFightSound);

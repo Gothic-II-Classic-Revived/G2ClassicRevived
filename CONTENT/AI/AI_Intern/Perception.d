@@ -71,10 +71,12 @@ FUNC VOID InitPerceptions()
 	Perc_SetRange		(PERC_ASSESSWARN		, PERC_DIST_INTERMEDIAT			);
 	// REIN scriptgenerierte Wahrnehmung!
 
-	// --- Türen aufmachen -------------------------------------------------------
+	// --- Türen aufmachen / blockierte Wege -------------------------------------
 
 	Perc_SetRange		(PERC_MOVEMOB			, PERC_DIST_DIALOG				);
 	// Wenn NSC eine Tür im Weg ist
+	Perc_SetRange		(PERC_MOVENPC			, PERC_DIST_DIALOG				);
+	// Wenn der SC dem NSC im Weg rumsteht
 
 	// --- SC verwandelt sich / - zurück ------------------------------------------
 	
@@ -92,8 +94,6 @@ FUNC VOID InitPerceptions()
 		// geht an NSC, wenn er den SC beim Taschendiebstahl erwischt (sich bewegt)
 		Perc_SetRange		(PERC_ASSESSCALL		, 100							);
 		// geht an NSC, der vom Spieler gerufen wurde (zu weit weg zum Sprechen)
-		Perc_SetRange		(PERC_MOVENPC			, 100							);
-		// wenn der SC dem NSC im Weg rumsteht
 		Perc_SetRange		(PERC_ASSESSCASTER		, 100							);
 		// wird beim 1. investierten Manapunkt gesendet
 		Perc_SetRange		(PERC_NPCCOMMAND		, 100							);
@@ -142,6 +142,7 @@ func void Perception_Set_Normal ()				//Für Humans
 	Npc_PercEnable  	(self, 	PERC_ASSESSWARN			, 	B_AssessWarn 		 	 	); //geht in ZS_Attack
 	Npc_PercEnable  	(self, 	PERC_ASSESSTALK			,	B_AssessTalk 				); //geht in ZS_Talk
 	Npc_PercEnable  	(self, 	PERC_MOVEMOB			,	B_MoveMob					); //öffnet Türen, die auf dem Weg liegen
+	Npc_PercEnable  	(self, 	PERC_MOVENPC			,	B_MoveNpc					); //reagiert, wenn der SC den Weg blockiert
 };
 
 
@@ -200,6 +201,7 @@ func void B_ClearPerceptions (var C_NPC slf)
 	Npc_PercDisable  	(slf, 	PERC_ASSESSWARN			);
 	Npc_PercDisable  	(slf, 	PERC_ASSESSTALK			);
 	Npc_PercDisable  	(slf, 	PERC_MOVEMOB			);
+	Npc_PercDisable  	(slf, 	PERC_MOVENPC			);
 
 	// ------ Wahrnehmungen disablen, die sonstwo benutzt werden ------
 	Npc_PercDisable  	(slf, 	PERC_ASSESSOTHERSDAMAGE	);			//wird i.d.R. nur von Monster-AI benutz (einige ZS) und lokal in ZS_WatchFight
@@ -214,7 +216,6 @@ func void B_ClearPerceptions (var C_NPC slf)
 	//Npc_PercDisable  	(slf, 	PERC_CATCHTHIEF			);
 	//Npc_PercDisable  	(slf, 	PERC_ASSESSDEFEAT		);
 	//Npc_PercDisable  	(slf, 	PERC_ASSESSCALL			);
-	//Npc_PercDisable  	(slf, 	PERC_MOVENPC			);
 	//Npc_PercDisable  	(slf, 	PERC_ASSESSCASTER		);
 	//Npc_PercDisable  	(slf, 	PERC_NPCCOMMAND			);
 	//Npc_PercDisable  	(slf, 	PERC_OBSERVESUSPECT		);

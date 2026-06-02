@@ -60,6 +60,11 @@ CLASS C_SVM
 	// ------ B_AssessTalk ------
 	var string NOTNOW;						//wenn RefuseTalk Counter aktiv
 	
+	// ------ ZS_MoveNPC ------
+	var string MakeWay;					//SC steht NSC im Weg: Aufforderung, Platz zu machen
+	var string OutOfMyWay;				//SC steht starkem NSC im Weg: aggressive Aufforderung
+	var string YouDeafOrWhat;			//SC blockiert weiter: letzte Warnung vor Angriff
+
 	// ------ ZS_Attack ------
 	var string RunCoward;					//Gegner flieht
 	
@@ -370,6 +375,9 @@ instance SVM_1 (C_SVM)
 	GoodKill					= 	"SVM_1_GoodKill"					;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_1_NOTNOW"						;//Leave me alone!
+	MakeWay					= "SVM_1_MakeWay"					;//Let me pass!
+	OutOfMyWay				= "SVM_1_OutOfMyWay"				;//Get out of the way, man!
+	YouDeafOrWhat			= "SVM_1_YouDeafOrWhat"			;//Are you deaf? MOVE IT!!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_1_RunCoward"					;//(calls loudly) Stop right there, you lowlife!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -547,7 +555,10 @@ instance SVM_1 (C_SVM)
 
 INSTANCE SVM_2	(C_SVM)	
 {
-	//leer
+
+	MakeWay					= "SVM_2_MakeWay"					;//Let me pass!
+	OutOfMyWay				= "SVM_2_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_2_YouDeafOrWhat"			;//Make yourself scarce or I'll run over you!
 };
 
 instance SVM_3 (C_SVM)
@@ -597,6 +608,9 @@ instance SVM_3 (C_SVM)
 	GoodKill					= 	"SVM_3_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_3_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_3_MakeWay"					;//Let me pass!
+	OutOfMyWay				= "SVM_3_OutOfMyWay"				;//Get out of the way, man!
+	YouDeafOrWhat			= "SVM_3_YouDeafOrWhat"			;//How many more times? Let me pass!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_3_RunCoward"				;//(calls loudly) Yes! Run as fast as you can!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -819,6 +833,9 @@ instance SVM_4 (C_SVM)
 	GoodKill					= 	"SVM_4_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_4_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_4_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_4_OutOfMyWay"				;//Get out of the way now!
+	YouDeafOrWhat			= "SVM_4_YouDeafOrWhat"			;//Out of my way or you'll be sorry!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_4_RunCoward"				;//(yells) You haven't seen the last of me!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -1042,6 +1059,9 @@ instance SVM_5 (C_SVM)
 	GoodKill					= 	"SVM_5_GoodKill"					;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_5_NOTNOW"						;//Leave me alone!
+	MakeWay					= "SVM_5_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_5_OutOfMyWay"				;//Come on, I want to pass!
+	YouDeafOrWhat			= "SVM_5_YouDeafOrWhat"			;//Are you deaf or are you looking for trouble?
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_5_RunCoward"					;//(calls loudly) Stop right there, you lowlife!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -1265,6 +1285,9 @@ instance SVM_6 (C_SVM)
 	GoodKill					= 	"SVM_6_GoodKill"				;//(calls) Yeah, give that bastard what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_6_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_6_MakeWay"					;//Let me pass!
+	OutOfMyWay				= "SVM_6_OutOfMyWay"				;//Come on, step aside!
+	YouDeafOrWhat			= "SVM_6_YouDeafOrWhat"			;//Clear off! Or do you want me to beat it into your brain?
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_6_RunCoward"				;//(calls loudly) I'll get you yet!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -1487,6 +1510,9 @@ instance SVM_7 (C_SVM)
 	GoodKill					= 	"SVM_7_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_7_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_7_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_7_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_7_YouDeafOrWhat"			;//Looking for trouble? Get out of here!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_7_RunCoward"				;//(yells) You haven't seen the last of me!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -1710,6 +1736,9 @@ instance SVM_8 (C_SVM)
 	GoodKill					= 	"SVM_8_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_8_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_8_MakeWay"					;//May I pass through here?
+	OutOfMyWay				= "SVM_8_OutOfMyWay"				;//Step aside!
+	YouDeafOrWhat			= "SVM_8_YouDeafOrWhat"			;//Do you want me to beat it into your brain? Get out of here!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_8_RunCoward"				;//(calls loudly) Yeah! Run as fast as you can!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -1936,6 +1965,9 @@ instance SVM_9 (C_SVM)
 	GoodKill					= 	"SVM_9_GoodKill"				;//(shouts) Yeah, give it to the bastard!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_9_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_9_MakeWay"					;//Let me pass!
+	OutOfMyWay				= "SVM_9_OutOfMyWay"				;//Step aside!
+	YouDeafOrWhat			= "SVM_9_YouDeafOrWhat"			;//Come on, get out of the way!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_9_RunCoward"				;//(shouts loudly) I'll get you!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -2158,6 +2190,9 @@ instance SVM_10 (C_SVM)
 	GoodKill					= 	"SVM_10_GoodKill"				;//(calls) That's what the swine deserves!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_10_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_10_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_10_OutOfMyWay"				;//Get out of my way!
+	YouDeafOrWhat			= "SVM_10_YouDeafOrWhat"			;//Do you want me to beat it into your brain? Get out of here!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_10_RunCoward"				;//(yells) You haven't seen the last of me!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -2383,6 +2418,9 @@ instance SVM_11 (C_SVM)
 	GoodKill					= 	"SVM_11_GoodKill"					;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_11_NOTNOW"						;//Leave me alone!
+	MakeWay					= "SVM_11_MakeWay"					;//May I pass through here?
+	OutOfMyWay				= "SVM_11_OutOfMyWay"				;//Step aside!
+	YouDeafOrWhat			= "SVM_11_YouDeafOrWhat"			;//Do you want me to beat it into your brain? Get out of here!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_11_RunCoward"					;//(calls loudly) Stop right there, you lowlife!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -2606,6 +2644,9 @@ instance SVM_12 (C_SVM)
 	GoodKill					= 	"SVM_12_GoodKill"				;//(shouts) Yeah, give it to the bastard!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_12_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_12_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_12_OutOfMyWay"				;//Come on, let me pass!
+	YouDeafOrWhat			= "SVM_12_YouDeafOrWhat"			;//Are you deaf or are you looking for trouble?
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_12_RunCoward"				;//(shouts loudly) I'll get you!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -2828,6 +2869,9 @@ instance SVM_13 (C_SVM)
 	GoodKill					= 	"SVM_13_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_13_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_13_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_13_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_13_YouDeafOrWhat"			;//You looking for trouble? Get out of here!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_13_RunCoward"				;//(calls loudly) Yes! Run as fast as you can!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -3051,6 +3095,9 @@ instance SVM_14 (C_SVM)
 	GoodKill					= 	"SVM_14_GoodKill"					;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_14_NOTNOW"						;//Leave me alone!
+	MakeWay					= "SVM_14_MakeWay"					;//Step aside!
+	OutOfMyWay				= "SVM_14_OutOfMyWay"				;//Let me pass.
+	YouDeafOrWhat			= "SVM_14_YouDeafOrWhat"			;//Now make yourself scarce!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_14_RunCoward"					;//(calls loudly) Stop right there, you lowlife!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -3356,6 +3403,9 @@ instance SVM_16 (C_SVM)
 	GoodKill					= 	"SVM_16_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_16_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_16_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_16_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_16_YouDeafOrWhat"			;//Are you deaf? Move it!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_16_RunCoward"				;//(calls loudly) Stop right there, you coward!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -3562,6 +3612,9 @@ instance SVM_17 (C_SVM)
 	GoodKill					= 	"SVM_17_GoodKill"				;//(calls) Yeah, give the swine what for!
 	// ------ B_AssessTalk -----------------------------------------------------------------------------------------------
 	NOTNOW						= 	"SVM_17_NOTNOW"					;//Leave me alone!
+	MakeWay					= "SVM_17_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_17_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_17_YouDeafOrWhat"			;//Are you deaf? Move it!
 	// ------ ZS_Attack ----------------------------------------------------------------------------------------------------
 	RunCoward					=	"SVM_17_RunCoward"				;//(calls loudly) Stop right there, you coward!
 	// ------ ZS_ClearRoom -------------------------------------------------------------------------------------------------
@@ -3725,6 +3778,10 @@ instance SVM_17 (C_SVM)
 INSTANCE SVM_18	(C_SVM)							
 {
 
+
+	MakeWay					= "SVM_18_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_18_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_18_YouDeafOrWhat"			;//Are you deaf? Move it!
 };
 
 // ****************
@@ -3735,6 +3792,9 @@ INSTANCE SVM_19	(C_SVM)
 {
 	DieEnemy     	= "SVM_19_DieEnemy"     	;//(hisses) There he is!
 	RunCoward    	= "SVM_19_RunCoward"    	;//(hisses) We shall get you!
+	MakeWay					= "SVM_19_MakeWay"					;//Let me pass.
+	OutOfMyWay				= "SVM_19_OutOfMyWay"				;//Get out of the way!
+	YouDeafOrWhat			= "SVM_19_YouDeafOrWhat"			;//Are you deaf? Move it!
 	Dead      		= "SVM_19_Dead"      	;//Aaaaaargl!
 	Aargh_1      	= "SVM_19_Aargh_1"     	;//Aargh
 	Aargh_2      	= "SVM_19_Aargh_2"     	;//Aargh

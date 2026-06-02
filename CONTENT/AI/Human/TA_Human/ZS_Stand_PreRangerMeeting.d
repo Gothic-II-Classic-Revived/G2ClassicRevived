@@ -17,6 +17,7 @@ func void ZS_Stand_RangerMeeting ()
 	};
 	
 	Npc_PercEnable  	(self, 	PERC_MOVEMOB			,	B_MoveMob					); //öffnet Türen, die auf dem Weg liegen
+	Npc_PercEnable  	(self, 	PERC_MOVENPC			,	B_MoveNpc					); //reagiert, wenn der SC den Weg blockiert
 	Npc_PercEnable		(self,  PERC_ASSESSFIGHTSOUND	, 	B_AssessGuideFightSound		);	
 
 	if  ((Hlp_GetInstanceID (self)) == (Hlp_GetInstanceID (Lares)))

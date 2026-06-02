@@ -182,6 +182,7 @@ STORY\B_AssignAmbientInfos\B_AssignDementorTalk.d
 STORY\B_AssignAmbientInfos\B_AssignSchiffswachenTalk.d
 AI\HUMAN\B_Human\B_AssessPlayer.d
 AI\HUMAN\B_Human\B_MoveMob.d
+AI\HUMAN\B_Human\B_MoveNpc.d
 
 AI\HUMAN\B_Human\B_RemoveWeapon.d
 
@@ -250,6 +251,7 @@ AI\HUMAN\ZS_Human\ZS_Dead.d
 AI\HUMAN\ZS_Human\ZS_Flee.d
 AI\HUMAN\ZS_Human\ZS_HealSelf.d
 AI\HUMAN\ZS_Human\ZS_ObservePlayer.d
+AI\HUMAN\ZS_Human\ZS_MoveNPC.d
 AI\HUMAN\ZS_Human\ZS_RansackBody.d
 AI\HUMAN\ZS_Human\ZS_ReactToDamage.d
 AI\HUMAN\ZS_Human\ZS_ReactToWeapon.d
