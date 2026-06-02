@@ -17,27 +17,27 @@ const int	REV_Value_Orc_Sword_03				=	50;
 const int	REV_Damage_Orc_Sword_Key_01			=	100;
 const int	REV_Condition_Orc_Sword_Key_01		=	200;
 const int	REV_Range_Orc_Sword_Key_01			=	120;
-const int	REV_Value_Orc_Sword_Key_01			=	999;
+const int	REV_Value_Orc_Sword_Key_01			=	1000;
 //******************************************************************//
 const int	REV_Damage_Orc_Sword_Key_02			=	110;
 const int	REV_Condition_Orc_Sword_Key_02		=	210;
 const int	REV_Range_Orc_Sword_Key_02			=	120;
-const int	REV_Value_Orc_Sword_Key_02			=	999;
+const int	REV_Value_Orc_Sword_Key_02			=	1000;
 //******************************************************************//
 const int	REV_Damage_Orc_Sword_Key_03			=	120;
 const int	REV_Condition_Orc_Sword_Key_03		=	220;
 const int	REV_Range_Orc_Sword_Key_03			=	120;
-const int	REV_Value_Orc_Sword_Key_03			=	999;
+const int	REV_Value_Orc_Sword_Key_03			=	1000;
 //******************************************************************//
 const int	REV_Damage_Orc_Sword_Key_04			=	130;
 const int	REV_Condition_Orc_Sword_Key_04		=	230;
 const int	REV_Range_Orc_Sword_Key_04			=	120;
-const int	REV_Value_Orc_Sword_Key_04			=	999;
+const int	REV_Value_Orc_Sword_Key_04			=	1000;
 //******************************************************************//
 const int	REV_Damage_Orc_Sword_Key_05			=	140;
 const int	REV_Condition_Orc_Sword_Key_05		=	240;
 const int	REV_Range_Orc_Sword_Key_05			=	120;
-const int	REV_Value_Orc_Sword_Key_05			=	999;
+const int	REV_Value_Orc_Sword_Key_05			=	1000;
 
 
 

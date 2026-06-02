@@ -1337,8 +1337,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Meatbug, "OW_PATH_RUIN_2");
 
 
-	Wld_InsertNpc		(Lurker,"SPAWN_OW_FIREWARAN_BEACH_01");
-	Wld_InsertNpc		(Lurker,"SPAWN_OW_FIREWARAN_BEACH_01");
+	Wld_InsertNpc		(BeachFireWaran,"SPAWN_OW_FIREWARAN_BEACH_01");
+	Wld_InsertNpc		(BeachFireWaran,"SPAWN_OW_FIREWARAN_BEACH_01");
 
 	Wld_InsertNpc		(Lurker,"SPAWN_OW_LURKER_BEACH_02");
 	Wld_InsertNpc		(Lurker,"SPAWN_OW_LURKER_BEACH_02");
@@ -1350,8 +1350,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(OrcShaman_Sit,"OW_PATH_RUIN_7");
 	Wld_InsertNpc		(OrcShaman_Sit,"OW_PATH_RUIN_7");
 
-	Wld_InsertNpc		(Stoneguardian, "OW_PATH_ORCRUIN_GOLEM");
-	Wld_InsertNpc		(Stoneguardian, "OW_PATH_ORCRUIN_GOLEM");
+	Wld_InsertNpc		(StonePuma, "OW_PATH_ORCRUIN_GOLEM");
 
 
 	// Stonehenge

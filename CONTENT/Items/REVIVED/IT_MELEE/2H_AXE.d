@@ -67,7 +67,7 @@ const int	REV_Condition_2H_Axe_Sylvio			=	90;
 const int	REV_Range_2H_Axe_Sylvio				=	130;
 const int	REV_Value_2H_Axe_Sylvio				=	540;
 //******************************************************************//
-const int	REV_Damage_2H_Axe_Torlof			=	99;
+const int	REV_Damage_2H_Axe_Torlof			=	100;
 const int	REV_Condition_2H_Axe_Torlof			=	85;
 const int	REV_Range_2H_Axe_Torlof				=	130;
 const int	REV_Value_2H_Axe_Torlof				=	550;

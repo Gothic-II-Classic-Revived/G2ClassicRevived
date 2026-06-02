@@ -19,7 +19,7 @@ instance BOUNT_5009_Tygren (Npc_Default)
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_01);
-	EquipItem			(self, ITRW_REVIVED_CROSSBOW_02);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_02);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
