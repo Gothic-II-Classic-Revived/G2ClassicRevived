@@ -16,7 +16,7 @@ instance PAL_2004_Bruder  (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	B_CreateAmbientInv 	(self);
-	EquipItem	(self, ItMw_1h_Pal_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_PALADIN_02); 
 
 	// ------ Inventory ------
 	CreateInvItems (self,ItRu_PalLight,1);

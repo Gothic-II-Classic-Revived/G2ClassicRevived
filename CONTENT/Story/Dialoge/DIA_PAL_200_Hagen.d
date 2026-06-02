@@ -767,13 +767,13 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 
 	/* if ((other.HitChance[NPC_TALENT_2H]) >= (other.HitChance[NPC_TALENT_1H])) //Damit der SC auch seine Lieblingswaffe bekommt ;-)
 	{
-		CreateInvItems (self,ItMw_2h_Pal_Sword,1);
-		B_GiveInvItems (self,other,ItMw_2h_Pal_Sword,1);
+		CreateInvItems (self,ITMW_REVIVED_2H_SWORD_PALADIN_01,1);
+		B_GiveInvItems (self,other,ITMW_REVIVED_2H_SWORD_PALADIN_01,1);
 	}
 	else
 	{
-		CreateInvItems (self,ItMw_1h_Pal_Sword,1);
-		B_GiveInvItems (self,other,ItMw_1h_Pal_Sword,1);
+		CreateInvItems (self,ITMW_REVIVED_1H_SWORD_PALADIN_01,1);
+		B_GiveInvItems (self,other,ITMW_REVIVED_1H_SWORD_PALADIN_01,1);
 	};	 */	 
 	
 	AI_UnequipArmor (other);

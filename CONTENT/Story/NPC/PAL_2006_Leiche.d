@@ -18,7 +18,7 @@ instance PAL_2006_Leiche (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem	(self, ItMw_1h_Pal_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_PALADIN_02); 
 	CreateInvItems (self, ITMI_REVIVED_OLDCOIN, 1);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
