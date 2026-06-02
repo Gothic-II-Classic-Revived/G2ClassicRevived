@@ -7,6 +7,7 @@ func void B_MM_AssessDamage ()
 	self.aivar[AIV_MM_PRIORITY] = PRIO_ATTACK;
 
 	B_BeliarsWeaponSpecialDamage (other, self);
+	REV_PalWeaponUndeadDamage (other, self);
 
 	// EXIT IF
 	

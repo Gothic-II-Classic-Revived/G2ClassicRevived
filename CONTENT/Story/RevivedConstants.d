@@ -139,6 +139,10 @@ const string NAME_Damage_Blunt			=	"Blunt Damage";
 const string NAME_Damage_Point			=	"Point Damage";
 const string NAME_Damage_Magic			=	"Magic Damage";
 const string NAME_Damage_Fire			=	"Fire Damage";
+const string NAME_UndeadDamageBonus		= 	"Undead Damage Bonus";
+
+const int REV_Damage_Undead_Blessed		= 	20;
+const int REV_Damage_Undead_Holy		= 	40;
 
 const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
 const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
