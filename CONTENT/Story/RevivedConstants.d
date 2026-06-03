@@ -125,6 +125,8 @@ const string NAME_TaintedWeapon1H		=	"One-Handed Weapon (Tainted)";
 const string NAME_TaintedWeapon2H		=	"Two-Handed Weapon (Tainted)";
 const string NAME_ForgedWeapon1H		=	"One-Handed Weapon (Forged)";
 const string NAME_ForgedWeapon2H		=	"Two-Handed Weapon (Forged)";
+const string NAME_MagicWeapon1H			=	"One-Handed Weapon (Magic)";
+const string NAME_MagicWeapon2H			=	"Two-Handed Weapon (Magic)";
 
 const string NAME_HP_needed				=	"Hitpoints required";
 
@@ -139,10 +141,11 @@ const string NAME_Damage_Blunt			=	"Blunt Damage";
 const string NAME_Damage_Point			=	"Point Damage";
 const string NAME_Damage_Magic			=	"Magic Damage";
 const string NAME_Damage_Fire			=	"Fire Damage";
-const string NAME_UndeadDamageBonus		= 	"Undead Damage Bonus";
 
-const int REV_Damage_Undead_Blessed		= 	20;
-const int REV_Damage_Undead_Holy		= 	40;
+
+const string NAME_UndeadDamageBonus		= 	"Undead Damage Bonus";
+const string NAME_CreatureDamageBonus	= 	"Creature Damage Bonus";
+
 
 const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
 const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
@@ -874,8 +877,7 @@ var int TabakBlend;
 const int	MOBSI_OREHACKEN					= 8;
 const int	MOBSI_CAULDRON					= 9;
 const int	MOBSI_PAN						= 10;	
-const int	MOBSI_PRAYADANOS				= 11;	
-
+const int	MOBSI_PRAYADANOS				= 11;
 
 
 
@@ -887,6 +889,25 @@ const int NPC_TALENT_BOWMAKING			= 10;
 const int NPC_TALENT_COOKING			= 19;
 const int NPC_TALENT_BOOZE				= 20;
 const int NPC_TALENT_TOBACCO			= 21;
+
+
+
+// ***************
+// BONUSES
+// ***************
+
+const int REV_Damage_Undead_Blessed		= 	20;
+const int REV_Damage_Undead_Holy		= 	40;
+
+const int REV_Damage_OrcWeapon_Creature_01	= 	20;
+const int REV_Damage_OrcWeapon_Creature_02	= 	40;
+const int REV_Damage_OrcWeapon_Creature_03	= 	60;
+
+
+const int REV_Bonus_Mana_ArcaneStaff_01		= 	10;
+const int REV_Bonus_Mana_ArcaneStaff_02		= 	20;
+const int REV_Bonus_Mana_ArcaneStaff_03		= 	30;
+const int REV_Bonus_Mana_ArcaneStaff_04		= 	40;
 
 
 

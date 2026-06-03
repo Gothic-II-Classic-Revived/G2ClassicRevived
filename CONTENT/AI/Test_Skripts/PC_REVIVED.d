@@ -320,6 +320,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITFO_REVIVED_WINE, 20);
 	CreateInvItems(self, ITFO_REVIVED_TURNIPBOOZE, 20);
 	CreateInvItems(self, ITFO_REVIVED_VINOBOOZE, 20);
+	CreateInvItems(self, ITFO_REVIVED_SOUTHWINE, 20);
 	CreateInvItems(self, ITFO_REVIVED_MAGEWINE, 20);
 	CreateInvItems(self, ITFO_REVIVED_MONSTERDRINK, 20);
 	CreateInvItems(self, ITFO_REVIVED_RICEBOOZE, 20);
@@ -334,28 +335,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITFO_REVIVED_MARMALADE, 20);
 	CreateInvItems(self, ITFO_REVIVED_FRUITSALAD, 20);
 	CreateInvItems(self, ITFO_REVIVED_OLDSTEW, 20);
-
-	//******************************************************************//
-
-	// IT_HELMET.d
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_01, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_02, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_03, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_04, 1);
-	CreateInvItems(self, ITHE_REVIVED_KNIGHT, 1);
-	CreateInvItems(self, ITHE_REVIVED_DJG_M, 1);
-	CreateInvItems(self, ITHE_REVIVED_DJG_H, 1);
-	CreateInvItems(self, ITHE_REVIVED_PIR, 1);
-	CreateInvItems(self, ITHE_REVIVED_PAL, 1);
-	CreateInvItems(self, ITHE_REVIVED_01, 1);
-
-	//******************************************************************//
-
-	// IT_KEYS.d
-	CreateInvItems(self, ITKE_REVIVED_STONEFORTRESS, 1);
-	CreateInvItems(self, ITKE_REVIVED_XARDAS, 1);
-	CreateInvItems(self, ITKE_REVIVED_GOMEZ, 1);
-	CreateInvItems(self, ITKE_REVIVED_GORDONRAMSAY, 1);
 
 	//******************************************************************//
 
@@ -393,6 +372,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_1H_MACE_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_MACE_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_MACE_03, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_MACE_04, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_MACE_WAR_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_MACE_WAR_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_MACE_WAR_03, 1);
@@ -449,18 +429,19 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_BASTARD_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_BASTARD_03, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_BASTARD_04, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_DEMONSLAYER, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_URIZIEL_01, 1);
-	CreateInvItems(self, ITMW_REVIVED_1H_URIZIEL_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_BANDIT_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_BANDIT_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_HACKER_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_HACKER_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PIRATE_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PIRATE_02, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_SABRE_01, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_DEMONSLAYER, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_URIZIEL_01, 1);
+	CreateInvItems(self, ITMW_REVIVED_1H_URIZIEL_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_ALRIK, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_SCAR, 1);
 	CreateInvItems(self, ITMW_REVIVED_1H_SWORD_ARTO, 1);
@@ -509,6 +490,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 
 	// IT_MELEE\2H_MISC.d
 	CreateInvItems(self, ITMW_REVIVED_2H_PICKAXE, 1);
+	CreateInvItems(self, ITMW_REVIVED_2H_LUMBERJACK, 1);
 
 	//******************************************************************//
 
@@ -540,6 +522,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_2H_DEMONSLAYER, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_URIZIEL_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_URIZIEL_02, 1);
+	CreateInvItems(self, ITMW_REVIVED_2H_BIG_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_SWORD_SMITH_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_SWORD_SMITH_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_SWORD_SMITH_03, 1);
@@ -623,37 +606,30 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMI_REVIVED_JOINT_APPLEDOUBLE, 10);
 	CreateInvItems(self, ITMI_REVIVED_JOINT_HONEY, 10);
 	CreateInvItems(self, ITMI_REVIVED_JOINT_MUSHROOM, 10);
-	CreateInvItems(self, ITMI_REVIVED_SALT, 10);
-	CreateInvItems(self, ITMI_REVIVED_SUGAR, 10);
-	CreateInvItems(self, ITMI_REVIVED_SYRIANOIL, 10);
-	CreateInvItems(self, ITMI_REVIVED_STONEOIL, 10);
-	CreateInvItems(self, ITMI_REVIVED_PUREALCOHOL, 10);
-	CreateInvItems(self, ITMI_REVIVED_VINEGAR, 10);
-	CreateInvItems(self, ITMI_REVIVED_MAGICWATER, 10);
-	CreateInvItems(self, ITMI_REVIVED_WARHORN, 10);
-	CreateInvItems(self, ITMI_REVIVED_OLDCOIN, 10);
-	CreateInvItems(self, ITMI_REVIVED_MAGICORE, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_AMPHORE, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_CUP_01, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_CUP_02, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_MUG, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_PLATE, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_SILVERWARE, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_PIPE, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_IDOL_01, 10);
-	CreateInvItems(self, ITMI_REVIVED_STUFF_IDOL_02, 10);
 
 	//******************************************************************//
 
 	// IT_MISSION.d
 	CreateInvItems(self, ITMS_REVIVED_BALTRAMPACKAGE_PIRATES, 1);
+	CreateInvItems(self, ITWR_REVIVED_VATRASMESSAGE_COPY, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_Q, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_RELIOPS, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_DREXAR, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_MIST, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_ZERRIT, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_FARRIC, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_6, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_7, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_8, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_9, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_10, 1);
 
 	//******************************************************************//
 
 	// IT_PLANTS.d
-	CreateInvItems(self, ITPL_REVIVED_BERRIES, 20);
-	CreateInvItems(self, ITPL_REVIVED_GRAPES, 20);
-	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 20);
+	CreateInvItems(self, ITPL_REVIVED_BERRIES, 1);
+	CreateInvItems(self, ITPL_REVIVED_GRAPES, 1);
+	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 1);
 
 	//******************************************************************//
 
@@ -739,31 +715,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 
 	//******************************************************************//
 
-	// IT_RINGS.d
-	CreateInvItems(self, ITRI_REVIVED_PROT_ARROW_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MELEE_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MELEE_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_WEAPON_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_WEAPON_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_FIRE, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_TOTAL_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_PROT_TOTAL_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_HP_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_HP_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_MP_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_MP_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_HP_MP_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_DEX_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_DEX_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_STR_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_STR_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_STR_DEX_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_MELEE_01, 1);
-
-	//******************************************************************//
-
 	// IT_RUNES.d
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_OC, 1);
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_NC, 1);
@@ -796,11 +747,11 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MEATBUG, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MOLERAT, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_BLOODFLY, 10);
-	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_SWAMPDRONE, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MINECRAWLER, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_ORCDOG, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_SWAMPDRONE, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MANTIS, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_BOAR, 10);
-	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_ORCDOG, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_RAZOR, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_CHOMPER, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_BLOODHOUND, 10);
@@ -811,16 +762,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_HARPY, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_TROLL, 10);
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_GOBLIN, 10);
-
-	//******************************************************************//
-
-	// IT_SPECIAL.d
-	CreateInvItems(self, REVIVED_LEARN_ALCHEMY_ALL, 1);
-	CreateInvItems(self, REVIVED_LEARN_SMITHING_ALL, 1);
-	CreateInvItems(self, REVIVED_LEARN_BOWMAKING_ALL, 1);
-	CreateInvItems(self, REVIVED_LEARN_RUNES_ALL, 1);
-	CreateInvItems(self, REVIVED_LEARN_TROPHIES_ALL, 1);
-	CreateInvItems(self, REVIVED_LEARN_TALENTS_ALL, 1);
 
 	//******************************************************************//
 

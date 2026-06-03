@@ -14,6 +14,9 @@ INSTANCE ITMW_REVIVED_ORC_MACE_01 (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Mace_01;
 
 	damageTotal			= 	REV_Damage_Orc_Mace_01;
@@ -25,6 +28,7 @@ INSTANCE ITMW_REVIVED_ORC_MACE_01 (C_Item)
 	visual 				=	"ItMw_2H_OrcMace_01.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_02;
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;

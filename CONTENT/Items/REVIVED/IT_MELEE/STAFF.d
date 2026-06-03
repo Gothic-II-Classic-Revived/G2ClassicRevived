@@ -105,7 +105,63 @@ const int	REV_Condition_2H_MageStaff_Great_01		=	200;
 const int	REV_Range_2H_MageStaff_Great_01			=	140;
 const int	REV_Value_2H_MageStaff_Great_01			=	2000;
 
+//******************************************************************//
 
+func void REV_AddArcaneStaffMana(var int points)
+{
+	if (Npc_IsPlayer(self))
+	{
+		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + points;
+	};
+};
+
+func void REV_RemoveArcaneStaffMana(var int points)
+{
+	if (Npc_IsPlayer(self))
+	{
+		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - points;
+	};
+};
+
+func void Equip_REV_ArcaneStaff_01()
+{
+	REV_AddArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_01);
+};
+
+func void UnEquip_REV_ArcaneStaff_01()
+{
+	REV_RemoveArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_01);
+};
+
+func void Equip_REV_ArcaneStaff_02()
+{
+	REV_AddArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_02);
+};
+
+func void UnEquip_REV_ArcaneStaff_02()
+{
+	REV_RemoveArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_02);
+};
+
+func void Equip_REV_ArcaneStaff_03()
+{
+	REV_AddArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_03);
+};
+
+func void UnEquip_REV_ArcaneStaff_03()
+{
+	REV_RemoveArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_03);
+};
+
+func void Equip_REV_ArcaneStaff_04()
+{
+	REV_AddArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_04);
+};
+
+func void UnEquip_REV_ArcaneStaff_04()
+{
+	REV_RemoveArcaneStaffMana(REV_Bonus_Mana_ArcaneStaff_04);
+};
 
 //****************************************************************************
 //			STAFFS
@@ -264,7 +320,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_YBERION (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -309,6 +365,9 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 	flags 				=	ITEM_2HD_AXE;
 	material 			=	MAT_WOOD;
 
+	on_equip			= 	Equip_REV_ArcaneStaff_01;
+	on_unequip			= 	UnEquip_REV_ArcaneStaff_01;
+
 	value 				=	REV_Value_2H_MageStaff_Normal_01;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Normal_01;
@@ -322,9 +381,10 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
+	TEXT[0]				= NAME_Bonus_ManaMax;			COUNT[0]	= REV_Bonus_Mana_ArcaneStaff_01;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -351,7 +411,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_02 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -378,7 +438,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -390,6 +450,9 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
 	material 			=	MAT_WOOD;
+
+	on_equip			= 	Equip_REV_ArcaneStaff_02;
+	on_unequip			= 	UnEquip_REV_ArcaneStaff_02;
 
 	value 				=	REV_Value_2H_MageStaff_Ball_01;
 
@@ -404,9 +467,10 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
+	TEXT[0]				= NAME_Bonus_ManaMax;			COUNT[0]	= REV_Bonus_Mana_ArcaneStaff_02;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -433,7 +497,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_02 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -460,7 +524,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_03 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -472,6 +536,9 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
 	material 			=	MAT_WOOD;
+
+	on_equip			= 	Equip_REV_ArcaneStaff_03;
+	on_unequip			= 	UnEquip_REV_ArcaneStaff_03;
 
 	value 				=	REV_Value_2H_MageStaff_Good_01;
 
@@ -486,9 +553,10 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF3";
 
 	description			= name;
+	TEXT[0]				= NAME_Bonus_ManaMax;			COUNT[0]	= REV_Bonus_Mana_ArcaneStaff_03;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -515,7 +583,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_02 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -542,7 +610,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_03 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -554,6 +622,9 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
 	material 			=	MAT_WOOD;
+
+	on_equip			= 	Equip_REV_ArcaneStaff_04;
+	on_unequip			= 	UnEquip_REV_ArcaneStaff_04;
 
 	value 				=	REV_Value_2H_MageStaff_Blades_01;
 
@@ -568,9 +639,10 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 	effect				=	"SPELLFX_ITEMSTARS_YELLOW";
 
 	description			= name;
+	TEXT[0]				= NAME_Bonus_ManaMax;			COUNT[0]	= REV_Bonus_Mana_ArcaneStaff_04;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -597,7 +669,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_02 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -624,7 +696,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
@@ -656,6 +728,6 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GREAT_01 (C_Item)
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
-	TEXT[4] 			= NAME_TwoHanded;
+	TEXT[4] 			= NAME_MagicWeapon2H;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };

@@ -958,6 +958,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_01 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_02;
+	on_unequip			= 	UnEquip_2H_02;
+
 	value 				=	REV_Value_2H_Sword_Smith_01;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Smith_01;
@@ -969,6 +972,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_01 (C_Item)
 	visual 				=	"REV_2H_SWORD_SMITH_01.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_02;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -983,6 +987,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_02 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_03;
+	on_unequip			= 	UnEquip_2H_03;
+
 	value 				=	REV_Value_2H_Sword_Smith_02;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Smith_02;
@@ -994,6 +1001,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_02 (C_Item)
 	visual 				=	"REV_2H_SWORD_SMITH_02.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_03;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1008,6 +1016,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_03 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_04;
+	on_unequip			= 	UnEquip_2H_04;
+
 	value 				=	REV_Value_2H_Sword_Smith_03;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Smith_03;
@@ -1019,6 +1030,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_03 (C_Item)
 	visual 				=	"REV_2H_SWORD_SMITH_03.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_04;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1033,6 +1045,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_04 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_05;
+	on_unequip			= 	UnEquip_2H_05;
+
 	value 				=	REV_Value_2H_Sword_Smith_04;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Smith_04;
@@ -1044,6 +1059,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_04 (C_Item)
 	visual 				=	"REV_2H_SWORD_SMITH_04.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_05;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1058,6 +1074,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_05 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_06;
+	on_unequip			= 	UnEquip_2H_06;
+
 	value 				=	REV_Value_2H_Sword_Smith_05;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Smith_05;
@@ -1069,6 +1088,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_05 (C_Item)
 	visual 				=	"REV_2H_SWORD_SMITH_05.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_06;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1088,6 +1108,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_01 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_05;
+	on_unequip			= 	UnEquip_2H_05;
+
 	value 				=	REV_Value_2H_Sword_Ore_01;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Ore_01;
@@ -1099,6 +1122,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_01 (C_Item)
 	visual 				=	"REV_2H_SWORD_ORE_01.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_05;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1113,6 +1137,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_02 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_06;
+	on_unequip			= 	UnEquip_2H_06;
+
 	value 				=	REV_Value_2H_Sword_Ore_02;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Ore_02;
@@ -1124,6 +1151,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_02 (C_Item)
 	visual 				=	"REV_2H_SWORD_ORE_02.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_06;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1138,6 +1166,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_03 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_07;
+	on_unequip			= 	UnEquip_2H_07;
+
 	value 				=	REV_Value_2H_Sword_Ore_03;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Ore_03;
@@ -1149,6 +1180,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_03 (C_Item)
 	visual 				=	"REV_2H_SWORD_ORE_03.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_07;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1163,6 +1195,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_04 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_08;
+	on_unequip			= 	UnEquip_2H_08;
+
 	value 				=	REV_Value_2H_Sword_Ore_04;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Ore_04;
@@ -1174,6 +1209,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_04 (C_Item)
 	visual 				=	"REV_2H_SWORD_ORE_04.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_08;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;
@@ -1188,6 +1224,9 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_05 (C_Item)
 	flags 				=	ITEM_2HD_SWD;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	Equip_2H_10;
+	on_unequip			= 	UnEquip_2H_10;
+
 	value 				=	REV_Value_2H_Sword_Ore_05;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Ore_05;
@@ -1199,6 +1238,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ORE_05 (C_Item)
 	visual 				=	"REV_2H_SWORD_ORE_05.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_ADDON_BONUS_2H;			COUNT[0]	= Waffenbonus_10;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_ForgedWeapon2H;

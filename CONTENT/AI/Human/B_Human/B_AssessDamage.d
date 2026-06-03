@@ -9,6 +9,7 @@ func void B_AssessDamage ()
 {
 	B_BeliarsWeaponSpecialDamage (other, self);
 	REV_PalWeaponUndeadDamage (other, self);
+	REV_OrcWeaponCreatureDamage (other, self);
 
 	// AIVARS
 

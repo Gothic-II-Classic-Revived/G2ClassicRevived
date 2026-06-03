@@ -79,6 +79,7 @@ AI\MAGIC\B_MagicHurtNpc.d
 
 STORY\B_Content\B_BeliarsWeaponSpecialDamage.d
 STORY\B_Content\B_InnosWeaponSpecialDamage.d
+STORY\B_Content\B_OrcWeaponSpecialDamage.d
 
 
 AI\MONSTER\B_Monster\B_MM_WispDetect.d

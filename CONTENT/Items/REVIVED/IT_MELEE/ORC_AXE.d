@@ -30,6 +30,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_01 (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_01;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_01;
@@ -41,6 +44,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_01 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_01.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_01;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
@@ -55,6 +59,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_02 (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_02;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_02;
@@ -66,6 +73,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_02 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_02.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_02;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
@@ -80,6 +88,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_03 (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_03;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_03;
@@ -91,6 +102,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_03 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_03.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_02;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
@@ -105,6 +117,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_04 (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_04;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_04;
@@ -116,6 +131,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_04 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_04.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_03;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
@@ -134,6 +150,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_01_R (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_01;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_01;
@@ -145,6 +164,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_01_R (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_01.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_01;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeaponFix;
@@ -159,6 +179,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_02_R (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_02;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_02;
@@ -170,6 +193,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_02_R (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_02.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_02;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeaponFix;
@@ -184,6 +208,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_03_R (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip	= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_03;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_03;
@@ -195,6 +222,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_03_R (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_03.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_02;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeaponFix;
@@ -209,6 +237,9 @@ INSTANCE ITMW_REVIVED_ORC_AXE_04_R (C_Item)
 	flags 				=	ITEM_2HD_AXE;	
 	material 			=	MAT_METAL;
 
+	on_equip			= 	UnEquip_2H_10;
+	on_unequip			= 	Equip_2H_10;
+
 	value 				=	REV_Value_Orc_Axe_04;
 
 	damageTotal			= 	REV_Damage_Orc_Axe_04;
@@ -220,6 +251,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_04_R (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_04.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_03;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeaponFix;

@@ -8,6 +8,7 @@ func void B_MM_AssessDamage ()
 
 	B_BeliarsWeaponSpecialDamage (other, self);
 	REV_PalWeaponUndeadDamage (other, self);
+	REV_OrcWeaponCreatureDamage (other, self);
 
 	// EXIT IF
 	
