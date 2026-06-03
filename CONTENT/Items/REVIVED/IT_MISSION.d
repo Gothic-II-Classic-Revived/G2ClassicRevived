@@ -73,7 +73,7 @@ INSTANCE ITWR_REVIVED_BOUNTY_Q (C_Item)
 
 	description		=	name;
 	TEXT[2]			= 	"It's a bounty letter";
-	TEXT[3]			= 	"for a person titled 'Q'.";
+	TEXT[3]			= 	"for a person named 'Q'.";
 };
 
 FUNC VOID UseBountyLetter0()
@@ -82,14 +82,14 @@ FUNC VOID UseBountyLetter0()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_Q.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "'Q'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty0)
@@ -124,14 +124,14 @@ FUNC VOID UseBountyLetter1()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_RELIOPS.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Reliops 'Eight Fingers'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty1)
@@ -166,14 +166,14 @@ FUNC VOID UseBountyLetter2()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_DREXAR.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Drexar 'The Duelist'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty2)
@@ -250,14 +250,14 @@ FUNC VOID UseBountyLetter4()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_ZERRIT.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Zerrit 'The Beastmaster'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty4)
@@ -292,14 +292,14 @@ FUNC VOID UseBountyLetter5()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_FARRIC.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Farric 'The Twisted Blade'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty5)
@@ -309,7 +309,7 @@ FUNC VOID UseBountyLetter5()
 	};
 };
 /******************************************************************************************/
-INSTANCE ITWR_REVIVED_BOUNTY_6 (C_Item)
+INSTANCE ITWR_REVIVED_BOUNTY_SALAZAR (C_Item)
 {	
 	name 			=	"Bounty letter";
 	
@@ -334,14 +334,14 @@ FUNC VOID UseBountyLetter6()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_SALAZAR.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Salazar 'The Sailor'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty6)
@@ -351,7 +351,7 @@ FUNC VOID UseBountyLetter6()
 	};
 };
 /******************************************************************************************/
-INSTANCE ITWR_REVIVED_BOUNTY_7 (C_Item)
+INSTANCE ITWR_REVIVED_BOUNTY_DELTA (C_Item)
 {	
 	name 			=	"Bounty letter";
 	
@@ -376,14 +376,14 @@ FUNC VOID UseBountyLetter7()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_DELTA.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Delta 'The Warlock'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty7)
@@ -393,7 +393,7 @@ FUNC VOID UseBountyLetter7()
 	};
 };
 /******************************************************************************************/
-INSTANCE ITWR_REVIVED_BOUNTY_8 (C_Item)
+INSTANCE ITWR_REVIVED_BOUNTY_REKO (C_Item)
 {	
 	name 			=	"Bounty letter";
 	
@@ -418,14 +418,14 @@ FUNC VOID UseBountyLetter8()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_REKO.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Reko 'The Joker'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty8)
@@ -435,7 +435,7 @@ FUNC VOID UseBountyLetter8()
 	};
 };
 /******************************************************************************************/
-INSTANCE ITWR_REVIVED_BOUNTY_9 (C_Item)
+INSTANCE ITWR_REVIVED_BOUNTY_TYGREN (C_Item)
 {	
 	name 			=	"Bounty letter";
 	
@@ -460,14 +460,14 @@ FUNC VOID UseBountyLetter9()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_TYGREN.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Tygren 'The Traitor'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty9)
@@ -477,7 +477,7 @@ FUNC VOID UseBountyLetter9()
 	};
 };
 /******************************************************************************************/
-INSTANCE ITWR_REVIVED_BOUNTY_10 (C_Item)
+INSTANCE ITWR_REVIVED_BOUNTY_REGAN (C_Item)
 {	
 	name 			=	"Bounty letter";
 	
@@ -502,14 +502,14 @@ FUNC VOID UseBountyLetter10()
 	
 	nDocID = 	Doc_Create		();								 
 				Doc_SetPages	(nDocID,  1);                         
-				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
+				Doc_SetPage 	(nDocID,  0, "BOUNTY_REGAN.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
 				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine	(nDocID,  0, "Regan 'The Barbarian'");
+				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
+				Doc_PrintLines	(nDocID,  0, "");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty10)

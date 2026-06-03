@@ -618,11 +618,11 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITWR_REVIVED_BOUNTY_MIST, 1);
 	CreateInvItems(self, ITWR_REVIVED_BOUNTY_ZERRIT, 1);
 	CreateInvItems(self, ITWR_REVIVED_BOUNTY_FARRIC, 1);
-	CreateInvItems(self, ITWR_REVIVED_BOUNTY_6, 1);
-	CreateInvItems(self, ITWR_REVIVED_BOUNTY_7, 1);
-	CreateInvItems(self, ITWR_REVIVED_BOUNTY_8, 1);
-	CreateInvItems(self, ITWR_REVIVED_BOUNTY_9, 1);
-	CreateInvItems(self, ITWR_REVIVED_BOUNTY_10, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_SALAZAR, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_DELTA, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_REKO, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_TYGREN, 1);
+	CreateInvItems(self, ITWR_REVIVED_BOUNTY_REGAN, 1);
 
 	//******************************************************************//
 

@@ -19,8 +19,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_01(C_Item)
 	scemeName				=	"MAP";	
 	description				=	"The First Circle of Magic";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Book_Circle_01;
 };
 	
@@ -39,8 +38,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_02(C_Item)
 	scemeName				=	"MAP";	
 	description				=	"The Second Circle of Magic";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Book_Circle_02;
 };
 						
@@ -59,8 +57,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_03 (C_Item)
 	scemeName				=	"MAP";
 	description				=	"The Third Circle of Magic";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Book_Circle_03;
 };
 	
@@ -79,8 +76,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 	scemeName				=	"MAP";
 	description				=	"The Fourth Circle of Magic";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Book_Circle_04;
 };
 
@@ -99,8 +95,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 	scemeName				=	"MAP";
 	description				=	"The Fifth Circle of Magic";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Book_Circle_05;
 };
 
@@ -119,8 +114,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 	scemeName				=	"MAP";
 	description				=	"Sixth Circle of Magic";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Book_Circle_06;
 };
 
@@ -141,8 +135,7 @@ INSTANCE ITWR_REVIVED_GIFTFROMTHEGODS(C_Item)
 
 	scemeName				=	"MAP";	
 	description				=	"A Gift from the Gods";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_MAGIC5_S1;
 };
 
@@ -162,8 +155,7 @@ INSTANCE ITWR_REVIVED_SECRETSOFMAGIC(C_Item)
 
 	scemeName				=	"MAP";	
 	description				=	"The Secrets of Magic";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_MAGIC4_S1;
 };
 
@@ -183,8 +175,7 @@ INSTANCE ITWR_REVIVED_POWERFULART (C_Item)
 
 	scemeName				=	"MAP";
 	description				=	"A Powerful Art";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_MAGIC7_S1;
 };
 
@@ -204,8 +195,7 @@ INSTANCE ITWR_REVIVED_ELEMENTARYARCANUM (C_Item)
 
 	scemeName				=	"MAP";
 	description				=	"Elementary Arcanum";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_MAGIC2_S1;
 };
 
@@ -225,8 +215,7 @@ INSTANCE ITWR_REVIVED_TRUEPOWER (C_Item)
 
 	scemeName				=	"MAP";
 	description				=	"True Power";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_MAGIC3_S1;
 };
 
@@ -246,8 +235,7 @@ INSTANCE ITWR_REVIVED_MAGICORE (C_Item)
 
 	scemeName				=	"MAP";
 	description				=	"Magic Ore";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_HISTORY1_S1;
 };
 
@@ -267,8 +255,7 @@ INSTANCE ITWR_REVIVED_ASTRONOMY (C_ITEM)
 
 	scemeName				=	"MAP";
 	description				=	"Astronomy";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_BookstandRevived_ASTRONOMY1_S1;
 };
 
@@ -320,10 +307,9 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_01 (C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description			= "Words of the Gods";
-	TEXT[0]				= "Volume 1";
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	description				= "Words of the Gods";
+	TEXT[0]					= "Volume 1";
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseLehren_der_Goetter1;
 };
 
@@ -340,10 +326,9 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_02 (C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description			= "Words of the Gods";
-	TEXT[0]				= "Volume 2";
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	description				= "Words of the Gods";
+	TEXT[0]					= "Volume 2";
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseLehren_der_Goetter2;
 };
 
@@ -363,8 +348,7 @@ INSTANCE ITWR_REVIVED_WORDSOFGODS_03 (C_ITEM)
 	description				=	"Words of the Gods";
 	TEXT[0]					=	"Volume 3";
 
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseLehren_der_Goetter3;
 };
 
@@ -383,10 +367,9 @@ INSTANCE ITWR_REVIVED_VARANT_01 (C_Item)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description			= "The Battle of Varant";
-	TEXT[0]				= "Volume 1";
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	description				= "The Battle of Varant";
+	TEXT[0]					= "Volume 1";
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseSchlacht_um_Varant1;
 };
 
@@ -403,10 +386,9 @@ INSTANCE ITWR_REVIVED_VARANT_02(C_Item)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description			= "The Battle of Varant";
-	TEXT[0]				= "Volume 2";
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	description				= "The Battle of Varant";
+	TEXT[0]					= "Volume 2";
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseSchlacht_um_Varant2;
 };
 
@@ -425,10 +407,9 @@ INSTANCE ITWR_REVIVED_MYRTANAPOETRY (C_Item)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description			= "Myrtana's Poetry";
+	description				= "Myrtana's Poetry";
 
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseMyrtanas_Lyrik;
 };
 
@@ -504,8 +485,7 @@ INSTANCE ITWR_REVIVED_HUNTANDPREY (C_ITEM)
 
 	scemeName				=	"MAP";
 	description				=	"Hunt and Prey";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseJagd_und_Beute;
 };
 
@@ -526,8 +506,7 @@ INSTANCE ITWR_REVIVED_BLOODFLIES (C_Item)
 	scemeName				=	"MAP";	
 	description				=	"The Bloodflies";
 	
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseItWr_Bloodfly_01;
 };
 
@@ -547,8 +526,7 @@ INSTANCE ITWR_REVIVED_ARTOFFIGHTING (C_ITEM)
 
 	scemeName				=	"MAP";
 	description				=	"The Art of Fighting";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseKampfkunst;
 };
 
@@ -569,8 +547,7 @@ INSTANCE ITWR_REVIVED_RECIPES_01 (C_ITEM)
 	scemeName				=	"MAP";
 	description				=	"Recipes";
 	TEXT[0]					=	"Volume 1";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseRezepturen;
 };
 
@@ -619,8 +596,7 @@ INSTANCE ITWR_REVIVED_RECIPES_02 (C_ITEM)
 	scemeName				=	"MAP";
 	description				=	"Recipes";
 	TEXT[0]					=	"Volume 2";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	UseRezepturen2;
 };
 
@@ -672,8 +648,7 @@ INSTANCE ITWR_REVIVED_KALOMSRECIPE (C_Item)
 	scemeName				=	"MAP";
 	description				=	name;
 	TEXT[0]					=	"The recipe for a healing potion.";
-	TEXT[5]					=	NAME_Value;
-	COUNT[5]				=	value;
+	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
 	on_state[0]				=	Use_KalomsRecipe;
 };
 
@@ -1571,8 +1546,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY (C_Item)
 	description	= name;
 	TEXT[0]		= "Ur-Shak, the Orc shaman, has sketched in";
 	TEXT[1]		= "the Orc territory!";
-	TEXT[5]		= NAME_Value;
-	COUNT[5]	= value;
+	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
 	func void Use_ITWR_REVIVED_MAP_VALLEY()
@@ -1608,8 +1582,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_NOORC (C_Item)
 	description	= name;
 	TEXT[0]		= "Unfortunately, a big territory in the";
 	TEXT[1]		= "southwest is missing.";
-	TEXT[5]		= NAME_Value;
-	COUNT[5]	= value;
+	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
 	func void Use_ITWR_REVIVED_MAP_VALLEY_NOORC()
@@ -1635,7 +1608,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
 
-	value 		= 350;
+	value 		= 150;
 
 	visual 		= "ItWr_Map_01.3DS";
 	material 	= MAT_LEATHER;
@@ -1646,8 +1619,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 	description	= name;
 	TEXT[0]		= "It's only part of the full map";
 	TEXT[1]		= "";
-	TEXT[5]		= NAME_Value;
-	COUNT[5]	= value;
+	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
 	func void Use_ITWR_REVIVED_MAP_VALLEY_GAROND()
@@ -1684,8 +1656,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
 	description	= name;
 	TEXT[0]		= "The placement of the orc symbols";
 	TEXT[1]		= "are oddly familiar";
-	TEXT[5]		= NAME_Value;
-	COUNT[5]	= value;
+	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
 	func void Use_ITWR_REVIVED_MAP_VALLEY_DRAGONS()
@@ -1722,8 +1693,7 @@ INSTANCE ITWR_REVIVED_MAP_VALLEY_CAVES (C_Item)
 	description	= name;
 	TEXT[0]		= "";
 	TEXT[1]		= "";
-	TEXT[5]		= NAME_Value;
-	COUNT[5]	= value;
+	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
 	func void Use_ITWR_REVIVED_MAP_VALLEY_CAVES()
@@ -1821,8 +1791,7 @@ INSTANCE ITWR_REVIVED_CRYPT (C_ITEM)
 	scemeName			=	"MAP";
 	on_state[0]			= 	UseItWrCryptbuch;
 	description			= "The Crypt";
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	TEXT[5]				= NAME_Value;			COUNT[5]	= value;
 };
 
 //****************************************************************************

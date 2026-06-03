@@ -429,20 +429,18 @@ INSTANCE ITAM_REVIVED_HP_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Lebensamulett;
 	on_unequip		=	UnEquip_REV_Lebensamulett;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_HP;
-	COUNT[2]		= 30;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_HP;		COUNT[2]	= 30;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Lebensamulett()
@@ -481,20 +479,18 @@ INSTANCE ITAM_REVIVED_MP_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Amulett_der_Magie;
 	on_unequip		=	UnEquip_REV_Amulett_der_Magie;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_Mana;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_Mana;		COUNT[2]	= 10;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Amulett_der_Magie()
@@ -524,22 +520,19 @@ INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Amulett_der_Erleuchtung;
 	on_unequip		=	UnEquip_REV_Amulett_der_Erleuchtung;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_HP;
-	COUNT[2]		= 25;
-	TEXT[3] 		= NAME_Bonus_Mana;
-	COUNT[3]		= 25;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_HP;		COUNT[2]	= 25;
+	TEXT[3]			= NAME_Bonus_Mana;		COUNT[3]	= 25;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Amulett_der_Erleuchtung()
@@ -584,20 +577,18 @@ INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Gewandtheitsamulett;
 	on_unequip		=	UnEquip_REV_Gewandtheitsamulett;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_Dex;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_Dex;		COUNT[2]	= 10;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Gewandtheitsamulett()
@@ -625,20 +616,18 @@ INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Gewandtheitsamulett2;
 	on_unequip		=	UnEquip_REV_Gewandtheitsamulett2;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_Dex;
-	COUNT[2]		= 20;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_Dex;		COUNT[2]	= 20;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Gewandtheitsamulett2()
@@ -666,20 +655,18 @@ INSTANCE ITAM_REVIVED_STR_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Staerkeamulett;
 	on_unequip		=	UnEquip_REV_Staerkeamulett;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_Str;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_Str;		COUNT[2]	= 10;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Staerkeamulett()
@@ -706,20 +693,18 @@ INSTANCE ITAM_REVIVED_STR_02(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Staerkeamulett2;
 	on_unequip		=	UnEquip_REV_Staerkeamulett2;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_Str;
-	COUNT[2]		= 20;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_Str;		COUNT[2]	= 20;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Staerkeamulett2()
@@ -748,22 +733,19 @@ INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Amulett_der_Macht;
 	on_unequip		=	UnEquip_REV_Amulett_der_Macht;
 
 	description		= name;
-	TEXT[2]			= NAME_Bonus_Dex;
-	COUNT[2]		= 7;
-	TEXT[3] 		= NAME_Bonus_Str;
-	COUNT[3]		= 7;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[2]			= NAME_Bonus_Dex;		COUNT[2]	= 7;
+	TEXT[3]			= NAME_Bonus_Str;		COUNT[3]	= 7;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Amulett_der_Macht()
@@ -798,12 +780,11 @@ INSTANCE ITAM_REVIVED_PSI(C_Item)
 	material 		=	MAT_METAL;
 
 	description		= name;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 /******************************************************************************************/
@@ -823,12 +804,11 @@ INSTANCE ITAM_REVIVED_KDW(C_Item)
 	material 		=	MAT_METAL;
 
 	description		= name;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	TEXT[5]			= NAME_Value;			COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 /******************************************************************************************/
@@ -849,19 +829,21 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 
 	visual 			=	"ITAM_AMULET_DEMON.3ds";
 
-	visual_skin 		=	0;
+	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 	on_equip		=	Equip_REV_Beschworungsamulett;
 	on_unequip		=	UnEquip_REV_Beschworungsamulett;
+
 	description		= name;
 	TEXT[1]			= "Black haunts the Soul";
 	TEXT[2]			= "Black shrouds the Night";
 	TEXT[3]			= "Black corrupts the Heart";
 	TEXT[4] 		= "Black bestows Power";
+	TEXT[5]			= NAME_Value;				COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ		= INVCAM_Z_RING_STANDARD;
+	INV_ROTX		= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_REV_Beschworungsamulett()

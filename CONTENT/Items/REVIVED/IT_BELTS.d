@@ -16,14 +16,10 @@ INSTANCE ITBE_REVIVED_ARCHER (C_Item)
 
 	description		=  name;
 
-	TEXT[1]			=	NAME_Prot_Edge;			
-	COUNT[1]		= 	Belt_Prot_01;
-	TEXT[2]			=	NAME_Prot_Point;		
-	COUNT[2]		= 	Belt_Prot_01;
-	TEXT[3]			=	NAME_Addon_BeArArcher;
-	COUNT[3]		= 	BA_Bonus01;
-	TEXT[5]			=   NAME_Value;
-	COUNT[5]		=   value;
+	TEXT[1]			= NAME_Prot_Edge;			COUNT[1]	= Belt_Prot_01;
+	TEXT[2]			= NAME_Prot_Point;			COUNT[2]	= Belt_Prot_01;
+	TEXT[3]			= NAME_Addon_BeArArcher;	COUNT[3]	= BA_Bonus01;
+	TEXT[5]			= NAME_Value;				COUNT[5]	= value;
 
 	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
 	inv_rotx		= INVCAM_ENTF_MISC2_STANDARD;

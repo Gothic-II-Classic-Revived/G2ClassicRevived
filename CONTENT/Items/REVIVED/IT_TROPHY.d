@@ -36,7 +36,7 @@ INSTANCE ITAT_REVIVED_DAMLURKER (C_Item)
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_CRAWLEREGG(C_Item)
@@ -90,7 +90,7 @@ INSTANCE ITAT_REVIVED_FUR_HELLHOUND (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_FUR_ORCDOG (C_Item)
@@ -106,7 +106,7 @@ INSTANCE ITAT_REVIVED_FUR_ORCDOG (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_FUR_ICEWOLF (C_Item)
@@ -122,7 +122,7 @@ INSTANCE ITAT_REVIVED_FUR_ICEWOLF (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_FUR_BLACKWOLF (C_Item)
@@ -138,7 +138,7 @@ INSTANCE ITAT_REVIVED_FUR_BLACKWOLF (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_FUR_PANTHER (C_Item)
@@ -154,7 +154,7 @@ INSTANCE ITAT_REVIVED_FUR_PANTHER (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 /******************************************************************************************/
@@ -172,7 +172,7 @@ INSTANCE ITAT_REVIVED_SKIN_SNAPPER (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_SKIN_DRAGONSNAPPER (C_Item)
@@ -188,7 +188,7 @@ INSTANCE ITAT_REVIVED_SKIN_DRAGONSNAPPER (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_SKIN_RAZOR (C_Item)
@@ -204,7 +204,7 @@ INSTANCE ITAT_REVIVED_SKIN_RAZOR (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_SKIN_BITER (C_Item)
@@ -220,7 +220,7 @@ INSTANCE ITAT_REVIVED_SKIN_BITER (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_SKIN_WARAN (C_Item)
@@ -236,7 +236,7 @@ INSTANCE ITAT_REVIVED_SKIN_WARAN (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_SKIN_FIREWARAN (C_Item)
@@ -252,7 +252,7 @@ INSTANCE ITAT_REVIVED_SKIN_FIREWARAN (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_SKIN_ALLIGATOR (C_Item)
@@ -268,7 +268,7 @@ INSTANCE ITAT_REVIVED_SKIN_ALLIGATOR (C_Item)
 	material 			=	MAT_LEATHER;
 
 	description				=	name;
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 /******************************************************************************************/
@@ -326,7 +326,7 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_FIRE (C_Item)
 	TEXT[0]					=	"This is a fragment of";
 	TEXT[1]					=	"a defeated fire golem.";
 	TEXT[2]					=	"It has the power to burn a foe.";
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_GOLEMHEART_ICE (C_Item)
@@ -348,7 +348,7 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_ICE (C_Item)
 	TEXT[0]					=	"This is a fragment of";
 	TEXT[1]					=	"a defeated ice golem.";
 	TEXT[2]					=	"It has the power to freeze a foe.";
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_GOLEMHEART_ROCK (C_Item)
@@ -370,7 +370,7 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_ROCK (C_Item)
 	TEXT[0]					=	"This is a fragment of";
 	TEXT[1]					=	"a defeated stone golem.";
 	TEXT[2]					=	"It has the power to zap a foe.";
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITAT_REVIVED_GOLEMHEART_SWAMP (C_Item)
@@ -392,7 +392,7 @@ INSTANCE ITAT_REVIVED_GOLEMHEART_SWAMP (C_Item)
 	TEXT[0]					=	"This is a fragment of";
 	TEXT[1]					=	"a defeated swamp golem.";
 	TEXT[2]					=	"It has the power to punch a foe.";
-	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
 
 /******************************************************************************************/
