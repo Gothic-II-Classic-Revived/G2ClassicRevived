@@ -274,16 +274,16 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		//---------------------------------------------------------------
 
 		//Vom OC zur Newmine
-		Wld_InsertNpc		(Warg,"OC3");	
+		Wld_InsertNpc		(Warg,"OC_ROUND_21");	
 	
 		Wld_InsertNpc		(OrcWarrior_Roam,"OW_SCAVENGER_SPAWN_TREE");
 		Wld_InsertNpc		(OrcElite_Roam,"OW_SCAVENGER_SPAWN_TREE");
 	
-		Wld_InsertNpc		(OrcWarrior_Roam,"OC4");	
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_033");	
 		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_AL_ORC");
 		
-		Wld_InsertNpc		(OrcWarrior_Roam,"OC5");	
-		Wld_InsertNpc		(OrcWarrior_Roam,"OC6");	
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_18");	
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_18");	
 		
 		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_PATH_GUARD1");
 				
@@ -319,19 +319,19 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc		(Warg,"OW_PATH_099");
 		Wld_InsertNpc		(Warg,"SPAWN_OW_WARAN_ORC_01");
 		//Umgebung OC
-		Wld_InsertNpc		(OrcWarrior_Roam,"OC11");	
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORK_OC_27");	
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_11");	
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_12");	
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_10");	
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_10");	
+		Wld_InsertNpc		(OrcElite_Roam,"OC2");	
+		Wld_InsertNpc		(Warg,"OC2");	
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_07");	
-		Wld_InsertNpc		(OrcWarrior_Roam,"OC9");	
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_28");	
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_16");	
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_13");	
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_10");	
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_09");	
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_CAMPFIRE_ORK_OC_17");	
+		Wld_InsertNpc		(OrcElite_Roam,"OC_ROUND_13");	
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_13");	
+		Wld_InsertNpc		(Warg,"OC_ROUND_13");	
+		Wld_InsertNpc		(OrcElite_Roam,"PATH_OC_PSI_01");	
+		Wld_InsertNpc		(OrcElite_Roam,"PATH_OC_PSI_01");	
+		Wld_InsertNpc		(OrcElite_Roam,"OCR_HUT_15_OUTSIDE");	
+		Wld_InsertNpc		(OrcElite_Roam,"OCR_HUT_15_OUTSIDE");	
+		Wld_InsertNpc		(OrcWarrior_Sit,"FP_CAMPFIRE_OCROUND_000");	
 		
 		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_SCAVENGER_06_03");
 		Wld_InsertNpc		(OrcShaman_Sit,"FP_ROAM_OW_SCAVENGER_06_05");
@@ -339,47 +339,54 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_SCAVENGER_06_04");
 		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_OW_SCAVENGER_06_07");
 			
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_21");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_22");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_11");
+		Wld_InsertNpc		(OrcElite_Roam,"OC_ROUND_18");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SCAVENGER_AL_ORC");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SCAVENGER_AL_ORC");
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_15");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_14");
+		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_OCROUND_023");
+		Wld_InsertNpc		(Warg,"FP_ROAM_OW_OCROUND_023");
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_WARG_OC_02");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_WARG_OC_02");
+		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_OCROUND_025");
+		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_OW_OCROUND_025");
 
-		Wld_InsertNpc		(OrcElite_Roam,"OC_PATH_04");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_WARG_OC_04");
+		Wld_InsertNpc		(OrcElite_Roam,"OC1");
+		Wld_InsertNpc		(OrcWarrior_Roam,"OC_MOAT_18");
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_04");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_03");
-		Wld_InsertNpc		(OrcShaman_Sit,"FP_ROAM_ORK_OC_03");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORK_OC_30");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORK_OC_31");
+		Wld_InsertNpc		(OrcElite_Roam,"OW_PATH_1");
+		Wld_InsertNpc		(Warg,"OW_PATH_1");
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_WARG_OC_09");
-		Wld_InsertNpc		(Warg,"FP_ROAM_WARG_OC_05");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_WARG_OC_07");
-		Wld_InsertNpc		(Warg,"FP_ROAM_WARG_OC_06");
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_WARG_OC_08");
-		Wld_InsertNpc		(Warg,"OC_PATH_02");
-		Wld_InsertNpc		(OrcElite_Roam,"OC_PATH_02");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_02");
+		Wld_InsertNpc		(OrcShaman_Sit,"FP_CAMPFIRE_OCROUND_001");
+		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_ORCBRIDGE");
+		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_ORCBRIDGE");
+		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_ORCBRIDGE");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_ORCBRIDGE");
+
+		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_OCROUND_031");
+		Wld_InsertNpc		(Warg,"FP_ROAM_OW_OCROUND_031");
+		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_OCROUND_039");
+		Wld_InsertNpc		(Warg,"FP_ROAM_OW_OCROUND_039");
+		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_OW_OCROUND_043");
+		Wld_InsertNpc		(Warg,"FP_ROAM_OW_OCROUND_043");
 		
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_16");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_01");
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_23");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_24");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SMALLCAVE01_MOLERAT");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SMALLCAVE01_MOLERAT");
+		Wld_InsertNpc		(OrcElite_Roam,"SPAWN_OW_SMALLCAVE01_MOLERAT");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SMALLCAVE01_MOLERAT");
 	
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_WARG_OC_11");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_12");
+		Wld_InsertNpc		(OrcElite_Roam,"OC_MOAT_23");
+		Wld_InsertNpc		(Warg,"OC_MOAT_23");
 
 		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_06");
 		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_05");
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_07");
-		Wld_InsertNpc		(OrcShaman_Sit,"FP_ROAM_ORK_OC_08");
+		Wld_InsertNpc		(OrcElite_Roam,"OC_MOAT_07");
+		Wld_InsertNpc		(Warg,"OC_MOAT_07");
+
+		Wld_InsertNpc		(Warg,"OC_MOAT_10");
+		Wld_InsertNpc		(Warg,"OC_MOAT_10");
+
+		Wld_InsertNpc		(Warg,"OC_MOAT_09");
+		Wld_InsertNpc		(Warg,"OC_MOAT_09");
 
 		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORK_OC_05");
 		
@@ -391,25 +398,25 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc		(Warg,"FP_CAMPFIRE_ORK_OC_09");
 		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORK_OC_26");
 
-		Wld_InsertNpc		(OrcElite_Roam,"FP_ROAM_ORK_OC_10");
+		Wld_InsertNpc		(OrcElite_Roam,"OCR_ARENABATTLE");
 
-		Wld_InsertNpc		(Warg,"FP_ROAM_WARG_OC_14");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_WARG_OC_15");
+		Wld_InsertNpc		(Warg,"OCR_LAKE_OUTSIDE");
+		Wld_InsertNpc		(OrcWarrior_Roam,"OCR_LAKE_OUTSIDE");
 
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_WARG_OC_11");
-		Wld_InsertNpc		(Warg,"FP_ROAM_WARG_OC_12");
+		Wld_InsertNpc		(OrcWarrior_Roam,"OCR_LAKE_OUTSIDE");
+		Wld_InsertNpc		(Warg,"OCR_LAKE_OUTSIDE");
 
-		Wld_InsertNpc		(OrcWarrior_Roam,"OC_ROUND_28");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_13");
-		Wld_InsertNpc		(Warg,"FP_ROAM_ORK_OC_14");
-		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORK_OC_12");
+		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_06_04");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SCAVENGER_06_04");
+		Wld_InsertNpc		(Warg,"SPAWN_OW_SCAVENGER_06_04");
+		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_SCAVENGER_06_04");
 
 		// Hosh Pak
 		
-		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_02");	
-		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_04");	
-		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_05");	
-		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_06");	
+		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_004");	
+		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_006");	
+		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_008");	
+		Wld_InsertNpc   (OrcWarrior_Roam,"FP_ROAM_HOSHPAK_010");	
 		
 		//Ehemaliger Kapitel 2 Korridor 
 		//-------------------------------
@@ -466,9 +473,9 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(OrcWarrior_Roam,"FP_ROAM_OW_SNAPPER_OW_ORC");
 		Wld_InsertNpc	(Warg,"FP_ROAM_OW_SNAPPER_OW_ORC");
 	
-		Wld_InsertNpc	(OrcWarrior_Roam,"FP_ROAM_ORC_01");
-		Wld_InsertNpc	(OrcWarrior_Roam,"FP_ROAM_ORC_02");
-		Wld_InsertNpc	(OrcShaman_Sit,"FP_ROAM_ORC_02");
+		Wld_InsertNpc	(OrcWarrior_Roam,"FP_ROAM_OW_ORCBARRIER_003");
+		Wld_InsertNpc	(OrcWarrior_Roam,"FP_ROAM_OW_ORCBARRIER_003");
+		Wld_InsertNpc	(OrcShaman_Sit,"FP_CAMPFIRE_OW_ORCBARRIER_000");
 		
 		Wld_InsertNpc	(Warg,"CASTLE_2"); 
 	
@@ -497,8 +504,8 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(DragonSnapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
 		Wld_InsertNpc	(DragonSnapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
 		
-		Wld_InsertNpc	(Minecrawlerwarrior,"OW_MINE3_LEFT_05");
-		Wld_InsertNpc	(DragonSnapper,"OW_MINE3_LEFT_07");
+		Wld_InsertNpc	(Minecrawlerwarrior,"OW_SILVESTROMINE_004");
+		Wld_InsertNpc	(DragonSnapper,"OW_SILVESTROMINE_ENTRANCE");
 		
 		Wld_InsertItem 	(ItMi_GoldChalice,"FP_OW_ITEM_10");
 	
@@ -516,7 +523,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Warg,"OW_PATH_195");
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_210");
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_210");
-		Wld_InsertNpc	(Waran,"MT15");
+		Wld_InsertNpc	(Waran,"MT05_003");
 		
 		Wld_InsertNpc	(DragonSnapper,"OW_ORC_LOOKOUT_2_02");
 		Wld_InsertNpc	(DragonSnapper,"OW_ORC_LOOKOUT_2_02");
@@ -542,7 +549,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Firewaran,"FP_ROAM_OW_SCA_01_BADITS2");
 		Wld_InsertNpc	(Firewaran,"FP_ROAM_OW_SCA_01_BADITS");
 
-		Wld_InsertNpc	(Gobbo_Elite,"FP_ROAM_OW_GOBBO_07_06");
+		Wld_InsertNpc	(Gobbo_Elite,"FP_ROAM_OW_GOBBO_07_04");
 		Wld_InsertNpc	(Gobbo_Elite,"FP_ROAM_OW_GOBBO_07_03");
 
 		Wld_InsertNpc	(DragonSnapper,"FP_ROAM_OW_SNAPPER_WOOD05_02");
@@ -563,21 +570,21 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Lurker,"OW_LAKE_NC_BLOODFLY_SPAWN01");
 		Wld_InsertNpc	(Lurker,"OW_LAKE_NC_BLOODFLY_SPAWN01");
 
-		Wld_InsertNpc	(Troll,"OW_ICEREGION_PATH_11w");
-		Wld_InsertNpc	(Troll,"LOCATION_11_08");
+		Wld_InsertNpc	(Troll,"SPAWN_OW_GOBBO_01_01");
+		Wld_InsertNpc	(Troll,"LOCATION_11_017");
 		Wld_InsertNpc	(Troll,"OW_PATH_2_08");
 		
 		
 		//Plateau Felsenfestung
-		Wld_InsertNpc	(Firewaran,"PLATEAU_ROUND02_CAVE");
+		Wld_InsertNpc	(Draconian,"PLATEAU_ROUND02_CAVE");
 		Wld_InsertNpc	(Draconian,"PLATEAU_ROUND02_CAVE_MOVE");
 		Wld_InsertNpc	(Draconian,"PLATEAU_ROUND02_CAVE_MOVE");
 
 		Wld_InsertItem 	(ItMi_GoldChest,"FP_OW_ITEM_12");
 		
-		Wld_InsertNpc	(Draconian,"LOCATION_18_OUT");
-		Wld_InsertNpc	(Draconian,"LOCATION_18_OUT");
-		Wld_InsertNpc	(Draconian,"FP_ROAM_OW_ROCK_DRACONIAN_07");
+		Wld_InsertNpc	(Draconian,"PATH_TO_PLATEAU04_B");
+		Wld_InsertNpc	(Draconian,"PATH_TO_PLATEAU04_B");
+		Wld_InsertNpc	(Draconian,"PATH_TO_PLATEAU04_B");
 		Wld_InsertItem 	(ItSc_Firestorm,"FP_OW_ITEM_13");
 	
 		//Orkbarriere
@@ -591,14 +598,14 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(DragonSnapper,"SPAWN_OW_SNAPPER_OCWOOD1_05_02");
 
 
-		Wld_InsertNpc	(OrcElite_Roam,"OW_ORCBARRIER_19");
-		Wld_InsertNpc	(OrcElite_Roam,"OW_ORCBARRIER_12");
+		Wld_InsertNpc	(OrcElite_Roam,"FP_ROAM_OW_ORCBARRIER_006");
+		Wld_InsertNpc	(OrcElite_Roam,"FP_ROAM_OW_ORCBARRIER_006");
+
 		Wld_InsertNpc	(OrcElite_Roam,"LOCATION_29_04");
 		Wld_InsertNpc	(OrcElite_Roam,"OW_PATH_166");
 		
-		Wld_InsertNpc	(OrcWarrior_Roam,"PATH_TO_PLATEAU07");
-
-		Wld_InsertNpc	(OrcWarrior_Roam,"PATH_TO_PLATEAU07");
+		Wld_InsertNpc	(OrcWarrior_Roam,"PATH_TO_PLATEAU01_001");
+		Wld_InsertNpc	(OrcWarrior_Roam,"PATH_TO_PLATEAU01_001");
 
 		Wld_InsertNpc		(Warg,"SPAWN_OW_SHADOWBEAST_NEAR_SHADOW4");
 		Wld_InsertNpc		(Warg,"SPAWN_OW_SHADOWBEAST_NEAR_SHADOW4");
@@ -616,7 +623,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 			if (Talbin_FollowsThroughPass == LOG_OBSOLETE)
 				{
 					B_KillNpc 		(OUT_4130_TALBIN);
-					Wld_InsertNpc	(Dragonsnapper, "START");
+					Wld_InsertNpc	(Dragonsnapper, "WP_INTRO06_TREES");
 					Talbin_FollowsThroughPass = LOG_FAILED;
 				}
 			else if (Talbin_FollowsThroughPass == LOG_SUCCESS)

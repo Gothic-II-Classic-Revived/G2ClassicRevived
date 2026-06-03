@@ -11,15 +11,16 @@ PROTOTYPE Mst_Default_MinecrawlerQueen(C_Npc)
 	
 	//----- Attribute ----
 	B_SetMonsterAttributesForLevel(self, 30);
-	level = 50;
+	slf.attribute[ATR_HITPOINTS_MAX] 	= 1000;
+	slf.attribute[ATR_HITPOINTS] 		= 1000;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	80;
-	protection	[PROT_EDGE]			=	80;
-	protection	[PROT_POINT]		=	60;
-	protection	[PROT_FIRE]			=	40;
-	protection	[PROT_FLY]			=	0;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	protection	[PROT_POINT]		=	100;
+	protection	[PROT_FIRE]			=	100;
+	protection	[PROT_FLY]			=	IMMUNE;
+	protection	[PROT_MAGIC]		=	100;
 //------------------------------------------------------
 	damagetype 						=	DAM_EDGE;
 //------------------------------------------------------
