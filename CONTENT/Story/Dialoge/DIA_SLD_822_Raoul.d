@@ -315,6 +315,39 @@ func void DIA_Raoul_PERM_Info ()
 };
 
 
+//#####################################################################
+//##
+//##
+//##							KAPITEL 3
+//##
+//##
+//#####################################################################
+
+// ************************************************************
+// 	  				   EXIT KAP3
+// ************************************************************
+
+INSTANCE DIA_Raoul_KAP3_EXIT(C_INFO)
+{
+	npc			= Sld_822_Raoul;
+	nr			= 999;
+	condition	= DIA_Raoul_KAP3_EXIT_Condition;
+	information	= DIA_Raoul_KAP3_EXIT_Info;
+	permanent	= TRUE;
+	description = DIALOG_ENDE;
+};                       
+FUNC INT DIA_Raoul_KAP3_EXIT_Condition()
+{
+	if (Kapitel == 3)	
+	{
+		return TRUE;
+	};
+};
+FUNC VOID DIA_Raoul_KAP3_EXIT_Info()
+{	
+	AI_StopProcessInfos	(self);
+};
+
 ///////////////////////////////////////////////////////////////////////
 //	Info Troll
 ///////////////////////////////////////////////////////////////////////
@@ -331,6 +364,7 @@ instance DIA_Raoul_TROLL		(C_INFO)
 func int DIA_Raoul_TROLL_Condition ()
 {
 	if (hero.guild != GIL_NONE)
+	&& (Kapitel >= 3)
 	{
 		return TRUE;
 	};
@@ -589,39 +623,6 @@ func void DIA_Raoul_GotTrollFurBack_Info ()
 	AI_Output			(self, other, "DIA_Raoul_GotTrollFurBack_01_01"); //All right. You know how things work around here, don't you? So calm down.
 	MIS_Raoul_DoesntPayTrollFur = LOG_SUCCESS;
 	AI_StopProcessInfos (self);
-};
-
-//#####################################################################
-//##
-//##
-//##							KAPITEL 3
-//##
-//##
-//#####################################################################
-
-// ************************************************************
-// 	  				   EXIT KAP3
-// ************************************************************
-
-INSTANCE DIA_Raoul_KAP3_EXIT(C_INFO)
-{
-	npc			= Sld_822_Raoul;
-	nr			= 999;
-	condition	= DIA_Raoul_KAP3_EXIT_Condition;
-	information	= DIA_Raoul_KAP3_EXIT_Info;
-	permanent	= TRUE;
-	description = DIALOG_ENDE;
-};                       
-FUNC INT DIA_Raoul_KAP3_EXIT_Condition()
-{
-	if (Kapitel == 3)	
-	{
-		return TRUE;
-	};
-};
-FUNC VOID DIA_Raoul_KAP3_EXIT_Info()
-{	
-	AI_StopProcessInfos	(self);
 };
 
 //#####################################################################
