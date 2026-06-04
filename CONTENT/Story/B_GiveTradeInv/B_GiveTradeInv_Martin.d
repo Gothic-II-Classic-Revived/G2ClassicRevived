@@ -9,6 +9,7 @@ FUNC VOID B_GiveTradeInv_Martin (var C_NPC slf)
 	if ((Kapitel >= 1)
 	&& (Martin_ItemsGiven_Chapter_1 == FALSE))
 	{
+		CreateInvItems (slf, ItMi_Gold, 100);
 		CreateInvItems (slf, ItSc_PalHolyBolt, 2); 
 		CreateInvItems (slf, ItSc_PalMediumHeal, 1);
 		CreateInvItems (slf, ItSc_PalLight, 10); 
@@ -24,6 +25,7 @@ FUNC VOID B_GiveTradeInv_Martin (var C_NPC slf)
 	if ((Kapitel >= 2)
 	&& (Martin_ItemsGiven_Chapter_2 == FALSE))
 	{
+		CreateInvItems (slf, ItMi_Gold, 200);
 		CreateInvItems (slf, ItSc_PalHolyBolt, 2); 
 		CreateInvItems (slf, ItSc_PalMediumHeal, 1);
 		CreateInvItems (slf, ItSc_PalRepelEvil, 1);
@@ -37,6 +39,7 @@ FUNC VOID B_GiveTradeInv_Martin (var C_NPC slf)
 	if ((Kapitel >= 3)
 	&& (Martin_ItemsGiven_Chapter_3 == FALSE))
 	{
+		CreateInvItems (slf, ItMi_Gold, 300);
 		CreateInvItems (slf, ItSc_PalHolyBolt, 2); 
 		CreateInvItems (slf, ItSc_PalMediumHeal, 1);
 		CreateInvItems (slf, ItSc_PalRepelEvil, 1);
@@ -48,6 +51,7 @@ FUNC VOID B_GiveTradeInv_Martin (var C_NPC slf)
 	if ((Kapitel >= 4)
 	&& (Martin_ItemsGiven_Chapter_4 == FALSE))
 	{
+		CreateInvItems (slf, ItMi_Gold, 400);
 		CreateInvItems (slf, ItSc_PalHolyBolt, 2); 
 		CreateInvItems (slf, ItSc_PalMediumHeal, 1);
 		CreateInvItems (slf, ItSc_PalDestroyEvil, 1);
@@ -60,6 +64,7 @@ FUNC VOID B_GiveTradeInv_Martin (var C_NPC slf)
 	if ((Kapitel >= 5)
 	&& (Martin_ItemsGiven_Chapter_5 == FALSE))
 	{
+		CreateInvItems (slf, ItMi_Gold, 500);
 		CreateInvItems (slf, ItSc_PalHolyBolt, 2); 
 		CreateInvItems (slf, ItSc_PalMediumHeal, 1);
 		CreateInvItems (slf, ItSc_PalDestroyEvil, 2);

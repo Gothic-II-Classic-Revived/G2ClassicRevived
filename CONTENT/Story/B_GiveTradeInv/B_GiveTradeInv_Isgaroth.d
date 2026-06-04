@@ -18,6 +18,7 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 
 		CreateInvItems (slf, ItSc_Light, 5);
 		CreateInvItems (slf, ItSc_Firebolt, 5);
+		CreateInvItems (slf, ItSc_LightHeal, 3);
 
 		Isgaroth_ItemsGiven_Chapter_1 = TRUE;
 	};

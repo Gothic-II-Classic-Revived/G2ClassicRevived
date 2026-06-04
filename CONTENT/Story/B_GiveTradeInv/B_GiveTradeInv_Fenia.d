@@ -13,6 +13,8 @@ FUNC VOID B_GiveTradeInv_Fenia (var C_NPC slf)
 		CreateInvItems (slf, ItFo_Bread, 8);
 		CreateInvItems (slf, ItFo_Cheese, 6);
 		CreateInvItems (slf, ItFo_Water, 5);
+		CreateInvItems (slf, ITFO_REVIVED_MEATSTEW, 2);
+		CreateInvItems (slf, ITFO_REVIVED_FISHSOUP, 2);
 		
 		CreateInvItems (slf, ITWR_REVIVED_RECIPE_MEATSTEW, 1); 
 		CreateInvItems (slf, ITWR_REVIVED_RECIPE_FISHSOUP, 1); 

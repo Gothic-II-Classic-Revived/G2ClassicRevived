@@ -11,10 +11,13 @@ FUNC VOID B_GiveTradeInv_Canthar (var C_NPC slf)
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItPl_Beet, 8);
+		CreateInvItems (slf, ItFo_Bread, 2);
 		CreateInvItems (slf, ItFo_Wine, 3);
+		CreateInvItems (slf, ITFO_REVIVED_TURNIPBOOZE, 2);
 		CreateInvItems (slf, ItMi_Pan, 1);
 		CreateInvItems (slf, ItMi_Flask, 4);
 		CreateInvItems (slf, ItMi_Saw, 1);
+		CreateInvItems (slf, ItKE_Lockpick, 1);
 
 		CreateInvItems (slf, ITMW_REVIVED_1H_SICKLE_01, 1); 
 		CreateInvItems (slf, ITMW_REVIVED_1H_SCYTHE_01, 1); 
