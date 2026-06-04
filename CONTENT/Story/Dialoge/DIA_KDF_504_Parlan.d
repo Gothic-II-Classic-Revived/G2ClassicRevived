@@ -1013,28 +1013,10 @@ func void DIA_Parlan_TEACH_Info ()
 		Info_AddChoice 	  (DIA_Parlan_TEACH,B_BuildLearnString (NAME_SPL_LIGHT, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LIGHT)),DIA_Parlan_TEACH_LIGHT);
 		abletolearn = (abletolearn +1);
 	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
-	&& (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_Parlan_TEACH_WINDFIST);
-		abletolearn = (abletolearn +1);
-	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
-	&& (PLAYER_TALENT_RUNES [SPL_Sleep] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Sleep, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Sleep)) ,DIA_Parlan_TEACH_Sleep);
-		abletolearn = (abletolearn +1);
-	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
 	&& (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,DIA_Parlan_TEACH_MediumHeal);
-		abletolearn = (abletolearn +1);
-	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
-	&& (PLAYER_TALENT_RUNES [SPL_Fear] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_Fear, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Fear)) ,DIA_Parlan_TEACH_Fear);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
@@ -1066,21 +1048,9 @@ FUNC VOID DIA_Parlan_TEACH_LIGHT()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_LIGHT);	
 };
-FUNC VOID DIA_Parlan_TEACH_WINDFIST()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
-};
-FUNC VOID DIA_Parlan_TEACH_Sleep()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Sleep);	
-};
 FUNC VOID DIA_Parlan_TEACH_MediumHeal()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);	
-};
-FUNC VOID DIA_Parlan_TEACH_Fear()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Fear);	
 };
 FUNC VOID DIA_Parlan_TEACH_DestroyUndead()
 {

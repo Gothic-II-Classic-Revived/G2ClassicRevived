@@ -4,7 +4,7 @@
 //-------------------------------------------------------------------------------------
 //				Runen des ersten Kreises und ihre Ingredenzien
 //-------------------------------------------------------------------------------------
-FUNC VOID Use_Runemaking_KDW_CIRC1_S1()		
+FUNC VOID Use_Runemaking_KDW_Text()		
 {
 	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
 	
@@ -60,24 +60,89 @@ FUNC VOID Use_Runemaking_KDW_CIRC1_S1()
 	};
 };
 
+FUNC VOID Use_Runemaking_KDW_CIRC1_S1()		
+{
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Use_Runemaking_KDW_Text();
+		if (RevivedBookstandRead_MagicCircle7 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle7 = TRUE;
+					};
+	};
+};
+
 FUNC VOID Use_Runemaking_KDW_CIRC2_S1()		
 {
-	Use_Runemaking_KDW_CIRC1_S1();
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Use_Runemaking_KDW_Text();
+		if (RevivedBookstandRead_MagicCircle8 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle8 = TRUE;
+					};
+	};
 };
 FUNC VOID Use_Runemaking_KDW_CIRC3_S1()		
 {
-	Use_Runemaking_KDW_CIRC1_S1();
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Use_Runemaking_KDW_Text();
+		if (RevivedBookstandRead_MagicCircle9 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle9 = TRUE;
+					};
+	};
 };
 FUNC VOID Use_Runemaking_KDW_CIRC4_S1()		
 {
-	Use_Runemaking_KDW_CIRC1_S1();
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Use_Runemaking_KDW_Text();
+		if (RevivedBookstandRead_MagicCircle10 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle10 = TRUE;
+					};
+	};
 };
 FUNC VOID Use_Runemaking_KDW_CIRC5_S1()		
 {
-	Use_Runemaking_KDW_CIRC1_S1();
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Use_Runemaking_KDW_Text();
+		if (RevivedBookstandRead_MagicCircle11 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle11 = TRUE;
+					};
+	};
 };
 FUNC VOID Use_Runemaking_KDW_CIRC6_S1()		
 {
-	Use_Runemaking_KDW_CIRC1_S1();
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Use_Runemaking_KDW_Text();
+		if (RevivedBookstandRead_MagicCircle12 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle12 = TRUE;
+					};
+	};
 };
 

@@ -14,60 +14,44 @@ func void REV_ReadBook(var int bookType)
 				PLAYER_TALENT_ALCHEMY[POTION_Mana_04] = TRUE;
 				B_LogEntry(TOPIC_TalentAlchemy, LOGENTRY_RECIPE_MANA_04);
 
-				PrintScreen (Print_TalentFromBookstand, -1, 65, FONT_Screen, 2);
-				Snd_Play ("MFX_Light_Cast");
+				PrintScreen(Print_TalentFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
 
 				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandAlchemy);
+				B_GivePlayerXP(XP_BookstandAlchemy);
 			};
 		};
 	}
-	else if(bookType == BookType_Runemaking)
+	else if(bookType == BookType_MagicCircles)
 	{
-		if(Read_BookstandRunemaking < Read_BookstandRunemaking_Max)
+		if(Read_BookstandMagicCircles < Read_BookstandMagicCircles_Max)
 		{
-			Read_BookstandRunemaking += 1;
+			Read_BookstandMagicCircles += 1;
 
-			if(Read_BookstandRunemaking == Read_BookstandRunemaking_Max)
-			{
-				// Runemaking Bonus
-			}
-			else 
-			{
-				B_GivePlayerXP (XP_BookstandRunemaking);
-			};
-		};
-	}
-	else if(bookType == BookType_Runes)
-	{
-		if(Read_BookstandRunes < Read_BookstandRunes_Max)
-		{
-			Read_BookstandRunes += 1;
-
-			if(Read_BookstandRunes == Read_BookstandRunes_Max)
+			if(Read_BookstandMagicCircles == Read_BookstandMagicCircles_Max)
 			{
 				var int HeroTalentMage; HeroTalentMage = Npc_GetTalentSkill(hero, NPC_TALENT_MAGE);
 				if(HeroTalentMage <= 5)
 				{
-					Npc_SetTalentSkill	(hero, NPC_TALENT_MAGE, HeroTalentMage + 1);
-					PrintScreen (Print_TalentFromBookstand, -1, 65, FONT_Screen, 2);
+					Npc_SetTalentSkill(hero, NPC_TALENT_MAGE, HeroTalentMage + 1);
+					PrintScreen(Print_TalentFromBookstand, -1, 65, FONT_Screen, 2);
 				}
 				else
 				{
-					B_RaiseAttribute (hero, ATR_MANA_MAX, 30);
-					PrintScreen (Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
+					B_RaiseAttribute(hero, ATR_MANA_MAX, 30);
+					PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
 				};
 							
-				Snd_Play ("MFX_Light_Cast");
+				Snd_Play("MFX_Light_Cast");
 
 				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandRunes);
+				B_GivePlayerXP(XP_BookstandMagicCircles);
 			};
 		};
 	}
@@ -79,11 +63,15 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandAstronomy == Read_BookstandAstronomy_Max)
 			{
-				// Astronomy Bonus
+				B_RaiseAttribute(hero, ATR_MANA_MAX, 5);
+				PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
+
+				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandAstronomy);
+				B_GivePlayerXP(XP_BookstandAstronomy);
 			};
 		};
 	}
@@ -95,16 +83,15 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandMagic == Read_BookstandMagic_Max)
 			{
-				B_RaiseAttribute (hero, ATR_MANA_MAX, 20);
-							
-				PrintScreen (Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
-				Snd_Play ("MFX_Light_Cast");
+				B_RaiseAttribute(hero, ATR_MANA_MAX, 20);
+				PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
 
 				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandMagic);
+				B_GivePlayerXP(XP_BookstandMagic);
 			};
 		};
 	}
@@ -116,11 +103,15 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandHunting == Read_BookstandHunting_Max)
 			{
-				// Hunting Bonus
+				B_RaiseAttribute(hero, ATR_DEXTERITY, 5);
+				PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
+
+				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandHunting);
+				B_GivePlayerXP(XP_BookstandHunting);
 			};
 		};
 	}
@@ -137,14 +128,14 @@ func void REV_ReadBook(var int bookType)
 				B_RaiseFightTalent(hero, NPC_TALENT_BOW, 5);
 				B_RaiseFightTalent(hero, NPC_TALENT_CROSSBOW, 5);
 							
-				PrintScreen (Print_TalentFromBookstand, -1, 65, FONT_Screen, 2);
-				Snd_Play ("MFX_Light_Cast");
+				PrintScreen(Print_TalentFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
 
 				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandCombat);
+				B_GivePlayerXP(XP_BookstandCombat);
 			};
 		};
 	}
@@ -156,16 +147,15 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandHistory == Read_BookstandHistory_Max)
 			{
-				B_GivePlayerXP (3000 * Kapitel);
-							
-				PrintScreen (Print_XPFromBookstand, -1, 65, FONT_Screen, 2);
-				Snd_Play ("MFX_Light_Cast");
+				B_GivePlayerXP(3000 * Kapitel);
+				PrintScreen(Print_XPFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
 
 				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandHistory);
+				B_GivePlayerXP(XP_BookstandHistory);
 			};
 		};
 	}
@@ -177,27 +167,15 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandTeachings == Read_BookstandTeachings_Max)
 			{
-				// Teachings Bonus
-			}
-			else 
-			{
-				B_GivePlayerXP (XP_BookstandTeachings);
-			};
-		};
-	}
-	else if(bookType == BookType_Special)
-	{
-		if(Read_BookstandSpecial < Read_BookstandSpecial_Max)
-		{
-			Read_BookstandSpecial += 1;
+				B_RaiseAttribute(hero, ATR_HITPOINTS_MAX, 20);
+				PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
 
-			if(Read_BookstandSpecial == Read_BookstandSpecial_Max)
-			{
-				// Special Bonus
+				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandSpecial);
+				B_GivePlayerXP(XP_BookstandTeachings);
 			};
 		};
 	}
@@ -209,11 +187,18 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandPersonal == Read_BookstandPersonal_Max)
 			{
-				// Personal Bonus
+				var string concatText;
+
+				hero.lp = hero.lp + 3;
+				concatText = ConcatStrings(PRINT_LearnLP, IntToString(3));
+				PrintScreen(concatText, -1, 65, FONT_Screen, 2);
+				Snd_Play("MFX_Light_Cast");
+
+				B_Say(hero, hero, "$VERSTEHE");
 			}
 			else 
 			{
-				B_GivePlayerXP (XP_BookstandPersonal);
+				B_GivePlayerXP(XP_BookstandPersonal);
 			};
 		};
 	};

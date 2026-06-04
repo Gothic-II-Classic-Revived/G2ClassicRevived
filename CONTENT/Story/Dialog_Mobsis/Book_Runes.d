@@ -57,11 +57,10 @@ FUNC VOID Use_Bookstand_Kreise_01_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
 					Doc_Show		( nDocID );
-					
-					if (RevivedBookstandRead_Runemaking1 == FALSE)
+					if (RevivedBookstandRead_MagicCircle1 == FALSE)
 					{
-						REV_ReadBook(BookType_Runemaking);
-						RevivedBookstandRead_Runemaking1 = TRUE;
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle1 = TRUE;
 					};
 	};
 };
@@ -121,11 +120,10 @@ FUNC VOID Use_Bookstand_Kreise_02_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
 					Doc_Show		( nDocID );
-					
-					if (RevivedBookstandRead_Runemaking2 == FALSE)
+					if (RevivedBookstandRead_MagicCircle2 == FALSE)
 					{
-						REV_ReadBook(BookType_Runemaking);
-						RevivedBookstandRead_Runemaking2 = TRUE;
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle2 = TRUE;
 					};
 	
 	};
@@ -194,11 +192,10 @@ FUNC VOID Use_Bookstand_Kreise_03_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
 					Doc_Show		( nDocID );
-					
-					if (RevivedBookstandRead_Runemaking3 == FALSE)
+					if (RevivedBookstandRead_MagicCircle3 == FALSE)
 					{
-						REV_ReadBook(BookType_Runemaking);
-						RevivedBookstandRead_Runemaking3 = TRUE;
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle3 = TRUE;
 					};
 		
 	};
@@ -259,11 +256,10 @@ FUNC VOID Use_Bookstand_Kreise_04_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
 					Doc_Show		( nDocID );
-					
-					if (RevivedBookstandRead_Runemaking4 == FALSE)
+					if (RevivedBookstandRead_MagicCircle4 == FALSE)
 					{
-						REV_ReadBook(BookType_Runemaking);
-						RevivedBookstandRead_Runemaking4 = TRUE;
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle4 = TRUE;
 					};
 		
 	};
@@ -321,11 +317,10 @@ FUNC VOID Use_Bookstand_Kreise_05_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
 					Doc_Show		( nDocID );
-					
-					if (RevivedBookstandRead_Runemaking5 == FALSE)
+					if (RevivedBookstandRead_MagicCircle5 == FALSE)
 					{
-						REV_ReadBook(BookType_Runemaking);
-						RevivedBookstandRead_Runemaking5 = TRUE;
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle5 = TRUE;
 					};
 		
 	};
@@ -396,11 +391,10 @@ FUNC VOID Use_Bookstand_Kreise_06_S1()
 					Doc_PrintLine	( nDocID,  1, ""					);
 					Doc_PrintLines	( nDocID,  1, "Only when these prerequisites are fulfilled can he set to work on the rune table."					);
 					Doc_Show		( nDocID );
-					
-					if (RevivedBookstandRead_Runemaking6 == FALSE)
+					if (RevivedBookstandRead_MagicCircle6 == FALSE)
 					{
-						REV_ReadBook(BookType_Runemaking);
-						RevivedBookstandRead_Runemaking6 = TRUE;
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle6 = TRUE;
 					};
 		
 	};
@@ -447,13 +441,7 @@ FUNC VOID UseItWr_Book_Circle_01()
 				Doc_PrintLines	( nDocID,  1,"A missile of magic Fire.");
 				Doc_PrintLine	( nDocID,  1,  "");
 
-				Doc_Show		( nDocID );
-					
-				if (RevivedBookstandRead_Runes1 == FALSE)
-				{
-					REV_ReadBook(BookType_Runes);
-					RevivedBookstandRead_Runes1 = TRUE;
-				};	  
+				Doc_Show		( nDocID );	  
 };
 
 FUNC VOID UseItWr_Book_Circle_02()
@@ -492,13 +480,7 @@ FUNC VOID UseItWr_Book_Circle_02()
 				Doc_PrintLine	( nDocID,  1, "");
 				Doc_PrintLine	( nDocID,  1, "");
 				
-				Doc_Show		( nDocID );
-					
-			if (RevivedBookstandRead_Runes2 == FALSE)
-			{
-				REV_ReadBook(BookType_Runes);
-				RevivedBookstandRead_Runes2 = TRUE;
-			};	  
+				Doc_Show		( nDocID );	  
 };
 
 FUNC VOID UseItWr_Book_Circle_03()
@@ -540,13 +522,7 @@ FUNC VOID UseItWr_Book_Circle_03()
 				Doc_PrintLines	( nDocID,  1,"A ball of magic power.");
 				Doc_PrintLine	( nDocID,  1,  "");
 
-				Doc_Show		( nDocID );
-					
-			if (RevivedBookstandRead_Runes3 == FALSE)
-			{
-				REV_ReadBook(BookType_Runes);
-				RevivedBookstandRead_Runes3 = TRUE;
-			};	  
+				Doc_Show		( nDocID );	  
 };
 
 FUNC VOID UseItWr_Book_Circle_04()
@@ -590,12 +566,11 @@ FUNC VOID UseItWr_Book_Circle_04()
 				Doc_PrintLine	( nDocID,  1, "");
 					
 				Doc_Show		( nDocID );
-					
-			if (RevivedBookstandRead_Runes4 == FALSE)
-			{
-				REV_ReadBook(BookType_Runes);
-				RevivedBookstandRead_Runes4 = TRUE;
-			};	  
+			if (RevivedBookstandRead_MagicCircle13 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle13 = TRUE;
+					};	  
 };
 
 FUNC VOID UseItWr_Book_Circle_05()
@@ -628,12 +603,11 @@ FUNC VOID UseItWr_Book_Circle_05()
 				Doc_PrintLine	( nDocID,  1, "");
 
 				Doc_Show		( nDocID );
-					
-			if (RevivedBookstandRead_Runes5 == FALSE)
-			{
-				REV_ReadBook(BookType_Runes);
-				RevivedBookstandRead_Runes5 = TRUE;
-			};	  
+			if (RevivedBookstandRead_MagicCircle14 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle14 = TRUE;
+					};	  
 };
 
 FUNC VOID UseItWr_Book_Circle_06()
@@ -669,10 +643,9 @@ FUNC VOID UseItWr_Book_Circle_06()
 				Doc_PrintLine	( nDocID,  1, "");
 			
 				Doc_Show		( nDocID );
-					
-			if (RevivedBookstandRead_Runes6 == FALSE)
-			{
-				REV_ReadBook(BookType_Runes);
-				RevivedBookstandRead_Runes6 = TRUE;
-			};	  
+			if (RevivedBookstandRead_MagicCircle15 == FALSE)
+					{
+						REV_ReadBook(BookType_MagicCircles);
+						RevivedBookstandRead_MagicCircle15 = TRUE;
+					};	  
 };

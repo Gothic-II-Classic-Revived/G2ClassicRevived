@@ -792,17 +792,9 @@ FUNC VOID DIA_MiltenNW_Teach_Info()
 		Info_ClearChoices (DIA_MiltenNW_Teach);
 		Info_AddChoice (DIA_MiltenNW_Teach,DIALOG_BACK,DIA_MiltenNW_Teach_BACK);
 		
-		if (PLAYER_TALENT_RUNES [SPL_WINDFIST] == FALSE) 
-		{
-			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_WINDFIST, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_WINDFIST)) ,DIA_MiltenNW_Teach_Windfist);
-		};
 		if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 		{
 			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenNW_Teach_Feuerball);
-		};
-		if (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE) 
-		{
-			Info_AddChoice	(DIA_MiltenNW_Teach, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_MiltenNW_Teach_Eispfeil);
 		};
 	}
 	else

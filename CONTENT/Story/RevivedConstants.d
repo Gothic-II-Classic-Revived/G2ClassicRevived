@@ -571,7 +571,7 @@ var int BaltramPackage5;
 // Books and Notes
 // ***************
 
-var int 	BookType_Alchemy;
+const int 	BookType_Alchemy = 0;
 var int 	Read_BookstandAlchemy;
 var int		RevivedBookstandRead_Alchemy1;
 var int		RevivedBookstandRead_Alchemy2;
@@ -580,33 +580,32 @@ var int		RevivedBookstandRead_Alchemy4;
 var int		RevivedBookstandRead_Alchemy5;
 const int	Read_BookstandAlchemy_Max = 5;
 
-var int 	BookType_Runemaking;
-var int 	Read_BookstandRunemaking;
-var int		RevivedBookstandRead_Runemaking1;
-var int		RevivedBookstandRead_Runemaking2;
-var int		RevivedBookstandRead_Runemaking3;
-var int		RevivedBookstandRead_Runemaking4;
-var int		RevivedBookstandRead_Runemaking5;
-var int		RevivedBookstandRead_Runemaking6;
-const int	Read_BookstandRunemaking_Max = 6;
+const int 	BookType_MagicCircles = 1;
+var int 	Read_BookstandMagicCircles;
+var int		RevivedBookstandRead_MagicCircle1;
+var int		RevivedBookstandRead_MagicCircle2;
+var int		RevivedBookstandRead_MagicCircle3;
+var int		RevivedBookstandRead_MagicCircle4;
+var int		RevivedBookstandRead_MagicCircle5;
+var int		RevivedBookstandRead_MagicCircle6;
+var int		RevivedBookstandRead_MagicCircle7;
+var int		RevivedBookstandRead_MagicCircle8;
+var int		RevivedBookstandRead_MagicCircle9;
+var int		RevivedBookstandRead_MagicCircle10;
+var int		RevivedBookstandRead_MagicCircle11;
+var int		RevivedBookstandRead_MagicCircle12;
+var int		RevivedBookstandRead_MagicCircle13;
+var int		RevivedBookstandRead_MagicCircle14;
+var int		RevivedBookstandRead_MagicCircle15;
+const int	Read_BookstandMagicCircles_Max = 15;
 
-var int 	BookType_Runes;
-var int 	Read_BookstandRunes;
-var int		RevivedBookstandRead_Runes1;
-var int		RevivedBookstandRead_Runes2;
-var int		RevivedBookstandRead_Runes3;
-var int		RevivedBookstandRead_Runes4;
-var int		RevivedBookstandRead_Runes5;
-var int		RevivedBookstandRead_Runes6;
-const int	Read_BookstandRunes_Max = 6;
-
-var int 	BookType_Astronomy;
+const int 	BookType_Astronomy = 2;
 var int 	Read_BookstandAstronomy;
 var int		RevivedBookstandRead_Astronomy1;
 var int		RevivedBookstandRead_Astronomy2;
 const int	Read_BookstandAstronomy_Max = 2;
 
-var int 	BookType_Magic;
+const int 	BookType_Magic = 3;
 var int 	Read_BookstandMagic;
 var int		RevivedBookstandRead_Magic1;
 var int		RevivedBookstandRead_Magic2;
@@ -619,7 +618,7 @@ var int		RevivedBookstandRead_Magic8;
 var int		RevivedBookstandRead_Magic9;
 const int	Read_BookstandMagic_Max = 9;
 
-var int 	BookType_Hunting;
+const int 	BookType_Hunting = 4;
 var int 	Read_BookstandHunting;
 var int		RevivedBookstandRead_Hunting1;
 var int		RevivedBookstandRead_Hunting2;
@@ -628,7 +627,7 @@ var int		RevivedBookstandRead_Hunting4;
 var int		RevivedBookstandRead_Hunting5;
 const int	Read_BookstandHunting_Max = 5;
 
-var int 	BookType_Combat;
+const int 	BookType_Combat = 5;
 var int 	Read_BookstandCombat;
 var int		RevivedBookstandRead_Combat1;
 var int		RevivedBookstandRead_Combat2;
@@ -636,36 +635,31 @@ var int		RevivedBookstandRead_Combat3;
 var int		RevivedBookstandRead_Combat4;
 const int	Read_BookstandCombat_Max = 4;
 
-var int 	BookType_History;
+const int 	BookType_History = 6;
 var int 	Read_BookstandHistory;
 var int		RevivedBookstandRead_History1;
 var int		RevivedBookstandRead_History2;
 var int		RevivedBookstandRead_History3;
 var int		RevivedBookstandRead_History4;
 var int		RevivedBookstandRead_History5;
-var int		RevivedBookstandRead_History6;
-const int	Read_BookstandHistory_Max = 6;
+const int	Read_BookstandHistory_Max = 5;
 
-var int 	BookType_Teachings;
+const int 	BookType_Teachings = 7;
 var int 	Read_BookstandTeachings;
 var int		RevivedBookstandRead_Teachings1;
 var int		RevivedBookstandRead_Teachings2;
 var int		RevivedBookstandRead_Teachings3;
 const int	Read_BookstandTeachings_Max = 3;
 
-var int 	BookType_Special;
-var int 	Read_BookstandSpecial;
-var int		RevivedBookstandRead_Special1;
-var int		RevivedBookstandRead_Special2;
-const int	Read_BookstandSpecial_Max = 2;
-
-var int 	BookType_Personal;
+const int 	BookType_Personal = 8;
 var int 	Read_BookstandPersonal;
+var int		RevivedBookstandRead_PersonalSpecial1;
+var int		RevivedBookstandRead_PersonalSpecial2;
 var int		RevivedBookstandRead_Personal1;
 var int		RevivedBookstandRead_Personal2;
 var int		RevivedBookstandRead_Personal3;
 var int		RevivedBookstandRead_Personal4;
-const int	Read_BookstandPersonal_Max = 4;
+const int	Read_BookstandPersonal_Max = 6;
 
 
 // ***************
@@ -678,16 +672,13 @@ const int 	XP_AllOWTeleportStones		= 400;
 const int 	XP_AllPassTeleportStones	= 400;
 
 const int	XP_BookstandAlchemy				= 25;
-const int	XP_BookstandRunemaking			= 25;
-const int	XP_BookstandRunes				= 25;
+const int	XP_BookstandMagicCircles		= 25;
 const int	XP_BookstandAstronomy			= 25;
 const int	XP_BookstandMagic				= 25;
 const int	XP_BookstandHunting				= 25;
 const int	XP_BookstandCombat				= 25;
 const int	XP_BookstandHistory				= 25;
 const int	XP_BookstandTeachings			= 25;
-
-const int	XP_BookstandSpecial				= 50;
 const int	XP_BookstandPersonal			= 50;
 
 const int	XP_BookstandFireContest			= 50;

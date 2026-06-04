@@ -298,11 +298,9 @@ FUNC VOID DIA_Milten_DI_TeachMagic_RUNES ()
 	
 	AI_Output (self ,other,"DIA_Milten_DI_TeachMagic_RUNES_03_00"); //Oh, no! That's really not my specialty, but we'll manage somehow.
 
-	if (hero.guild == GIL_PAL)
-	{
-		Info_AddChoice	  (DIA_Milten_DI_TeachMagic,"Paladin Runes", DIA_Milten_DI_TeachMagic_Runen_Paladin);
-	}
-	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 4)
+
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 4)
+
 	{
 		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Fourth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_4);
 	}
@@ -331,35 +329,6 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Paladin ()
 {
 	Info_ClearChoices 	(DIA_Milten_DI_TeachMagic);
 	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
-	
-	if (PLAYER_TALENT_RUNES [SPL_PalLight] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Light", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLight)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLight);
-	};
-	if	(PLAYER_TALENT_RUNES [SPL_PalLightHeal] == FALSE)
-	{ 
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Healing", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalLightHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLightHeal);
-	};
-	if	(PLAYER_TALENT_RUNES [SPL_PalHolyBolt] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Holy Arrow", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalHolyBolt)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalHolyBolt);
-	};
-	if 	(PLAYER_TALENT_RUNES [SPL_PalMediumHeal] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Large Healing", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalMediumHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalMediumHeal);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_PalRepelEvil] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Damage Evil", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalRepelEvil)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalRepelEvil);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_PalFullHeal] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Total Healing", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalFullHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalFullHeal);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_PalDestroyEvil] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString ("Destroy Evil", B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_PalDestroyEvil)) ,DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalDestroyEvil);
-	};
 };
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalLight()
 {
@@ -407,18 +376,6 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4()
 	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
 	
 	
-	if (PLAYER_TALENT_RUNES [SPL_SummonGolem] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_SummonGolem, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonGolem)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_SummonGolem);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_DestroyUndead, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_DestroyUndead)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_DestroyUndead);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_LightningFlash] == FALSE) 
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_LightningFlash);
-	};
 	if (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
 	{
 		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_ChargeFireball);
@@ -451,18 +408,6 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5()
 	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
 	
 	
-	if (PLAYER_TALENT_RUNES [SPL_IceWave] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_IceWave);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_SummonDemon] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_SummonDemon, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_SummonDemon)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_SummonDemon);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_FullHeal] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_FullHeal);
-	};
 	if (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE)
 	{
 		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Pyrokinesis);
@@ -497,22 +442,6 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6()
 	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
 	{
 		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Firerain);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_BreathOfDeath] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_BreathOfDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_BreathOfDeath)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_BreathOfDeath);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_MassDeath] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_MassDeath, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MassDeath)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_MassDeath);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_ArmyOfDarkness] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ArmyOfDarkness, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ArmyOfDarkness)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_ArmyOfDarkness);
-	};
-	if (PLAYER_TALENT_RUNES [SPL_Shrink] == FALSE)
-	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Shrink, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Shrink)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Shrink);
 	};
 };
 

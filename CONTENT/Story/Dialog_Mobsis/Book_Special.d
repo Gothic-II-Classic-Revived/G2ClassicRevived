@@ -184,10 +184,10 @@ FUNC VOID UseItWrFokusbuch()
 					
 			Doc_Show		( nDocID );
 					
-				if (RevivedBookstandRead_Special1 == FALSE)
+				if (RevivedBookstandRead_PersonalSpecial1 == FALSE)
 				{
-					REV_ReadBook(BookType_Special);
-					RevivedBookstandRead_Special1 = TRUE;
+					REV_ReadBook(BookType_Personal);
+					RevivedBookstandRead_PersonalSpecial1 = TRUE;
 				};	  
 };
 
@@ -221,9 +221,9 @@ FUNC VOID UseItWrCryptbuch()
 					
 			Doc_Show		( nDocID );
 					
-				if (RevivedBookstandRead_Special2 == FALSE)
+				if (RevivedBookstandRead_PersonalSpecial2 == FALSE)
 				{
-					REV_ReadBook(BookType_Special);
-					RevivedBookstandRead_Special2 = TRUE;
+					REV_ReadBook(BookType_Personal);
+					RevivedBookstandRead_PersonalSpecial2 = TRUE;
 				};	  
 };

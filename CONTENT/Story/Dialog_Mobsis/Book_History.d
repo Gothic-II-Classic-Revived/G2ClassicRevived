@@ -38,10 +38,10 @@ FUNC VOID Use_BookstandHistory2_S1()		//Geschichtsbücher
 					
 					Doc_Show		( nDocID );
 					
-					if (RevivedBookstandRead_History2 == FALSE)
+					if (RevivedBookstandRead_History1 == FALSE)
 					{
 						REV_ReadBook(BookType_History);
-						RevivedBookstandRead_History2 = TRUE;
+						RevivedBookstandRead_History1 = TRUE;
 					};
 	};
 };
@@ -84,10 +84,10 @@ FUNC VOID Use_BookstandHistory3_S1()		//Geschichtsbücher
 					Doc_PrintLines	( nDocID,  1, ""						);
 					Doc_Show		( nDocID );
 					
-					if (RevivedBookstandRead_History3 == FALSE)
+					if (RevivedBookstandRead_History2 == FALSE)
 					{
 						REV_ReadBook(BookType_History);
-						RevivedBookstandRead_History3 = TRUE;
+						RevivedBookstandRead_History2 = TRUE;
 					};
 	};
 };
@@ -129,10 +129,10 @@ FUNC VOID Use_BookstandRevived_HISTORY1_S1()
 					
 					Doc_Show		( nDocID );
 					
-					if (RevivedBookstandRead_History4 == FALSE)
+					if (RevivedBookstandRead_History3 == FALSE)
 					{
 						REV_ReadBook(BookType_History);
-						RevivedBookstandRead_History4 = TRUE;
+						RevivedBookstandRead_History3 = TRUE;
 					};	  
 	};
 };
@@ -160,10 +160,10 @@ FUNC VOID UseSchlacht_um_Varant1()
 				
 				Doc_Show		( nDocID );
 					
-				if (RevivedBookstandRead_History5 == FALSE)
+				if (RevivedBookstandRead_History4 == FALSE)
 				{
 					REV_ReadBook(BookType_History);
-					RevivedBookstandRead_History5 = TRUE;
+					RevivedBookstandRead_History4 = TRUE;
 				};	  
 };
 
@@ -187,9 +187,9 @@ FUNC VOID UseSchlacht_um_Varant2()
 					
 				Doc_Show		( nDocID );
 					
-				if (RevivedBookstandRead_History6 == FALSE)
+				if (RevivedBookstandRead_History5 == FALSE)
 				{
 					REV_ReadBook(BookType_History);
-					RevivedBookstandRead_History6 = TRUE;
+					RevivedBookstandRead_History5 = TRUE;
 				};	  
 };

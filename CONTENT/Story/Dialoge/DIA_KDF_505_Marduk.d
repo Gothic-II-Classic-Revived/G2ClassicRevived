@@ -40,6 +40,12 @@ func void DIA_Marduk_JOB_Info ()
 {
 	AI_Output (other, self, "DIA_Marduk_JOB_15_00"); //What's your job here?
 	AI_Output (self, other, "DIA_Marduk_JOB_05_01"); //I prepare the paladins for their fight against Evil.
+	
+	AI_Output (other, self, "DIA_Marduk_Evil_15_00"); //What is 'Evil'?
+	AI_Output (self ,other, "DIA_Marduk_Evil_05_01"); //Evil is everywhere. It is the power of Beliar, the eternal adversary of Innos.
+	AI_Output (self ,other, "DIA_Marduk_Evil_05_02"); //It is the all-encompassing blackness which seeks to blot out the Light of Innos forever.
+	AI_Output (self ,other, "DIA_Marduk_Evil_05_03"); //Beliar is the Lord of Darkness, of Hate and Destruction.
+	AI_Output (self ,other, "DIA_Marduk_Evil_05_04"); //Only those among us in whose hearts blazes the Holy Fire of Innos will bear the radiant Light of Innos into the world and banish the darkness.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Arbeit
@@ -102,32 +108,6 @@ func void DIA_Marduk_Gebetet_Info ()
 	B_StartOtherRoutine (Sergio,"START");
 };
 ///////////////////////////////////////////////////////////////////////
-//	Info Das Böse
-///////////////////////////////////////////////////////////////////////
-instance DIA_Marduk_Evil		(C_INFO)
-{
-	npc			 = 	KDF_505_Marduk;
-	condition	 = 	DIA_Marduk_Evil_Condition;
-	information	 = 	DIA_Marduk_Evil_Info;
-	permanent	 =	TRUE;
-	description	 = 	"What is 'Evil'?";
-};
-func int DIA_Marduk_Evil_Condition ()
-{
-	if Npc_KnowsInfo (hero,DIA_Marduk_JOB)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Marduk_Evil_Info ()
-{
-	AI_Output (other, self, "DIA_Marduk_Evil_15_00"); //What is 'Evil'?
-	AI_Output (self ,other, "DIA_Marduk_Evil_05_01"); //Evil is everywhere. It is the power of Beliar, the eternal adversary of Innos.
-	AI_Output (self ,other, "DIA_Marduk_Evil_05_02"); //It is the all-encompassing blackness which seeks to blot out the Light of Innos forever.
-	AI_Output (self ,other, "DIA_Marduk_Evil_05_03"); //Beliar is the Lord of Darkness, of Hate and Destruction.
-	AI_Output (self ,other, "DIA_Marduk_Evil_05_04"); //Only those among us in whose hearts blazes the Holy Fire of Innos will bear the radiant Light of Innos into the world and banish the darkness.
-};
-///////////////////////////////////////////////////////////////////////
 //	Info Paladine
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Marduk_Pal		(C_INFO)
@@ -152,141 +132,6 @@ func void DIA_Marduk_Pal_Info ()
 	AI_Output (self, other, "DIA_Marduk_Pal_05_02"); //... the paladins honor the great deeds of our Lord, above all else.
 	AI_Output (self, other, "DIA_Marduk_Pal_05_03"); //We are the representatives of Innos, but the paladins are his warriors, who go into battle in his name and increase his glory.
 };
-///////////////////////////////////////////////////////////////////////
-//	Info BEFORETEACH
-///////////////////////////////////////////////////////////////////////
-instance DIA_Marduk_BEFORETEACH		(C_INFO)
-{
-	npc			 = 	KDF_505_Marduk;
-	nr			 = 	3;
-	condition	 = 	DIA_Marduk_BEFORETEACH_Condition;
-	information	 = 	DIA_Marduk_BEFORETEACH_Info;
-	permanent	 = 	FALSE;
-	description	 = 	"Is there anything you can teach me?";
-};
-func int DIA_Marduk_BEFORETEACH_Condition ()
-{	
-	if Npc_KnowsInfo (hero,DIA_Marduk_JOB)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Marduk_BEFORETEACH_Info ()
-{
-	AI_Output (other, self, "DIA_Marduk_BEFORETEACH_15_00"); //Is there anything you can teach me?
-	AI_Output (self, other, "DIA_Marduk_BEFORETEACH_05_01"); //I am an expert in the magics of ice and thunder. I can teach you their power.
-	
-	if (other.guild != GIL_KDF)
-	{
-		AI_Output (self, other, "DIA_Marduk_BEFORETEACH_05_02"); //However, I only instruct magicians.
-	};
-	
-};
-///////////////////////////////////////////////////////////////////////
-//	Info TEACH
-///////////////////////////////////////////////////////////////////////
-instance DIA_Marduk_TEACH		(C_INFO)
-{
-	npc			 = 	KDF_505_Marduk;
-	nr			 =  10;
-	condition	 = 	DIA_Marduk_TEACH_Condition;
-	information	 = 	DIA_Marduk_TEACH_Info;
-	permanent	 = 	TRUE;
-	description	 = 	"Teach me (create runes).";
-};
-func int DIA_Marduk_TEACH_Condition ()
-{	
-	if Npc_KnowsInfo (hero,DIA_Marduk_BEFORETEACH)
-	&& (other.guild == GIL_KDF)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Marduk_TEACH_Info ()
-{
-		var int abletolearn;
-		
-		abletolearn = 0;
-		
-		AI_Output (other, self, "DIA_Marduk_TEACH_15_00"); //Teach me.
-
-		Info_ClearChoices 	(DIA_Marduk_TEACH);
-		Info_AddChoice 		(DIA_Marduk_TEACH,DIALOG_BACK,DIA_Marduk_TEACH_BACK);
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
-		&& (PLAYER_TALENT_RUNES [SPL_Zap] == FALSE) 
-		{
-			Info_AddChoice 		(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Zap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Zap)),DIA_Marduk_TEACH_ZAP);
-			abletolearn = (abletolearn +1);
-		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
-		&& (PLAYER_TALENT_RUNES [SPL_Icebolt] == FALSE)
-		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_Icebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Icebolt)) ,DIA_Marduk_TEACH_Icebolt);
-			abletolearn = (abletolearn +1);
-		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3) 
-		&& (PLAYER_TALENT_RUNES [SPL_IceCube] == FALSE) 
-		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_IceCube, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceCube)) ,DIA_Marduk_TEACH_IceCube);
-			abletolearn = (abletolearn +1);
-		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
-		&& (PLAYER_TALENT_RUNES [SPL_ChargeZap] == FALSE) 
-		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_ChargeZap, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeZap)) ,DIA_Marduk_TEACH_ThunderBall);
-			abletolearn = (abletolearn +1);
-		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4) 
-		&& (PLAYER_TALENT_RUNES [SPL_LightningFlash] == FALSE) 
-		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_LightningFlash, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightningFlash)) ,DIA_Marduk_TEACH_LightningFlash);
-			abletolearn = (abletolearn +1);
-		};
-		if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
-		&& (PLAYER_TALENT_RUNES [SPL_IceWave] == FALSE)
-		{
-			Info_AddChoice	(DIA_Marduk_TEACH, B_BuildLearnString (NAME_SPL_IceWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_IceWave)) ,DIA_Marduk_TEACH_IceWave);
-			abletolearn = (abletolearn +1);
-		};
-		if (abletolearn < 1)
-		{
-			AI_Output (self, other, "DIA_Marduk_TEACH_05_01"); //At the moment I cannot teach you.
-			Info_ClearChoices 	(DIA_Marduk_TEACH);
-		};
-	
-};
-FUNC VOID DIA_Marduk_TEACH_BACK()
-{
-	Info_ClearChoices 	(DIA_Marduk_TEACH);
-};
-///////////////////////////////////////////////////////////////////////
-//	MAGIER ZAUBER 
-///////////////////////////////////////////////////////////////////////
-FUNC VOID DIA_Marduk_TEACH_ZAP()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Zap);	
-};
-FUNC VOID DIA_Marduk_TEACH_Icebolt()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
-};
-FUNC VOID DIA_Marduk_TEACH_LightningFlash()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);	
-};
-FUNC VOID DIA_Marduk_TEACH_IceCube()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceCube);	
-};
-FUNC VOID DIA_Marduk_TEACH_ThunderBall()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeZap);	
-};
-FUNC VOID DIA_Marduk_TEACH_IceWave()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceWave);	
-};
-
 
 //#####################################################################
 //##
