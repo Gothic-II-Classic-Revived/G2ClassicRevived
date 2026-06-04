@@ -784,6 +784,8 @@ instance REV_ITRI_RINGOFWATER (REVIVED_RING_T1)
 	name 					=	"Aquamarine ring";
 
 	visual 					=	"ItRi_Hp_Mana_01.3ds";
+
+	description				=	name;
 		
 	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
 	INV_ROTZ				= INVCAM_Z_RING_STANDARD;

@@ -31,7 +31,10 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 // NPC Names
 const string NAME_DementorNovice		=	"Seeker Novice";
 const string NAME_Templar				=	"Apocalyptic Templar";
+
 const string NAME_JudgeGuard			=	"Judge's House Guard";
+const string NAME_TowerGuard			=	"Tower Guard";
+
 const string NAME_LOAFER				=	"Loafer";
 const string NAME_HIGHWAYMAN			=	"Highwayman";
 

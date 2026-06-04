@@ -125,6 +125,13 @@ func void STARTUP_OLDCAMP ()
 	Wld_InsertNpc	(PAL_265_Wache,"OC1"); 
 	Wld_InsertNpc	(PAL_266_Ritter,"OC1"); 
 	
+	// Turmwachen
+	//------------------------------------------
+	Wld_InsertNpc	(GRD_4153_TurmWache,"OC1"); 
+	Wld_InsertNpc	(GRD_4154_TurmWache,"OC1"); 
+	Wld_InsertNpc	(GRD_4155_TurmWache,"OC1"); 
+	Wld_InsertNpc	(GRD_4156_TurmWache,"OC1"); 
+	
 	// Magier
 	//------------------------------------------
 	Wld_InsertNpc	(PC_Mage_OW,"OC1"); 

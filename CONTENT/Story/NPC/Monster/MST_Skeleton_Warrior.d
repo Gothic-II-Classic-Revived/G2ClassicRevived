@@ -52,7 +52,7 @@ func void B_SetVisuals_Shadow_Warrior()
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, 0, ITAR_Raven_Addon);
+	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, 0, ITAR_MayaZombie_Addon);
 };
 
 
