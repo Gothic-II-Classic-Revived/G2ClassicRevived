@@ -802,6 +802,15 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_04, 1);
 	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_05, 1);
 	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_06, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDW_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDW_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDW_03, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDW_04, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDW_05, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDW_06, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_BELIAR_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_BELIAR_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_BELIAR_03, 1);
 	CreateInvItems(self, ITWR_REVIVED_GIFTFROMTHEGODS, 1);
 	CreateInvItems(self, ITWR_REVIVED_SECRETSOFMAGIC, 1);
 	CreateInvItems(self, ITWR_REVIVED_POWERFULART, 1);
