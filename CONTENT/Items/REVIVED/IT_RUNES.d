@@ -109,3 +109,35 @@ INSTANCE ITRU_REVIVED_TELEPORT_DT (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
+
+//****************************************************************************
+//			PSI SPELLS
+//****************************************************************************
+
+const int REV_Value_PSI_RUNE = 700;
+
+INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
+{
+	name 				= 	NAME_SPL_Pyrokinesis;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	0;
+
+	value 				= 	REV_Value_PSI_RUNE;
+
+	visual				= 	"ItRu_Pyrokinesis.3ds";
+	material			= 	MAT_STONE;
+
+	spell				= 	SPL_Pyrokinesis;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_Pyrokinesis;
+
+	TEXT	[1]			= 	NAME_DamagePerSec;
+	COUNT	[1]			= 	SPL_PYRO_DAMAGE_PER_SEC;
+	TEXT	[4]			= 	NAME_Spell_Invest;
+	TEXT	[5]			= 	NAME_Value;
+	COUNT	[5]			= 	value;
+};

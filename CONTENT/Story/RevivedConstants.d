@@ -838,6 +838,10 @@ const string NAME_SPL_SummonStonepuma 	= "Summon Stonepuma";
 const int	SPL_SummonWisp				= 121;
 const string NAME_SPL_SummonWisp		= "Summon Wisp";
 
+const int	SPL_Pyrokinesis			= 122;
+const string NAME_SPL_Pyrokinesis	= "Pyrokinesis";
+const int	SPL_PYRO_DAMAGE_PER_SEC		= 20;
+
 
 
 // ***************

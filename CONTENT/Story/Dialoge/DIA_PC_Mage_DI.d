@@ -408,15 +408,15 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5()
 	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
 	
 	
-	if (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE)
+	if (PLAYER_TALENT_RUNES [SPL_LargeFireStorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Pyrokinesis);
+		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_LargeFireStorm);
 	};
 };
 
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_Pyrokinesis()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_LargeFireStorm()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);	
+	B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm);
 };
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_IceWave()
 {

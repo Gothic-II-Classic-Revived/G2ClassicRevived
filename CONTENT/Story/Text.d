@@ -290,7 +290,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	// Kreis 4
 	"Create Golem",			// 35	SPL_SummonGolem
 	"Destroy Undead",		// 36	SPL_DestroyUndead
-	"Large Fire Storm",		// 37	SPL_Pyrokinesis
+	"Large Fire Storm",		// 37	SPL_LargeFireStorm
 
 	// Kreis 5
 	"Small Fire Storm",		// 38	SPL_Firestorm
@@ -393,7 +393,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Transform into Goblin",		// 99	SPL_REV_Reserved_119
 	"TXT_REV_RESERVED_120",		// 99	SPL_REV_Reserved_120
 	"TXT_REV_RESERVED_121",		// 99	SPL_REV_Reserved_121
-	"TXT_REV_RESERVED_122",		// 99	SPL_REV_Reserved_122
+	"Pyrokinesis",				// 122	SPL_Pyrokinesis
 	"TXT_REV_RESERVED_123",		// 99	SPL_REV_Reserved_123
 	"TXT_REV_RESERVED_124",		// 99	SPL_REV_Reserved_124
 	"TXT_REV_RESERVED_125",		// 99	SPL_REV_Reserved_125
@@ -470,7 +470,7 @@ const string NAME_SPL_DestroyUndead			= "Destroy Undead";
 const string NAME_SPL_ChargeFireball		= "Large Fireball";
 
 // Kreis 5
-const string NAME_SPL_Pyrokinesis			= "Large Fire Storm";
+const string NAME_SPL_LargeFireStorm			= "Large Fire Storm";
 const string NAME_SPL_IceWave				= "Ice Wave";
 const string NAME_SPL_SummonDemon			= "Summon Demon";
 const string NAME_SPL_FullHeal				= "Heal Heavy Wounds";

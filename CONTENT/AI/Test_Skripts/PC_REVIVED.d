@@ -197,7 +197,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	PLAYER_TALENT_RUNES[SPL_ChargeZap] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_SummonGolem] 			= TRUE;
 	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Pyrokinesis] 			= TRUE;
+	PLAYER_TALENT_RUNES[SPL_LargeFireStorm] 			= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_IceWave] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_SummonDemon] 			= TRUE;
@@ -720,6 +720,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_NC, 1);
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_PSI, 1);
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_DT, 1);
+	CreateInvItems(self, ITRU_REVIVED_PYROKINESIS, 1);
 
 	//******************************************************************//
 
@@ -732,6 +733,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITSC_REVIVED_TELEPORT_ORC, 10);
 	CreateInvItems(self, ITSC_REVIVED_TELEKINESIS, 10);
 	CreateInvItems(self, ITSC_REVIVED_CONTROL, 10);
+	CreateInvItems(self, ITSC_REVIVED_PYROKINESIS, 10);
 	CreateInvItems(self, ItSc_TrfSheep, 10);
 	CreateInvItems(self, ItSc_TrfScavenger, 10);
 	CreateInvItems(self, ItSc_TrfGiantRat, 10);

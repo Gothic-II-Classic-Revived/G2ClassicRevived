@@ -32,6 +32,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEKINESIS, 1);
 		CreateInvItems (slf, ITSC_REVIVED_CONTROL, 1);
+		CreateInvItems (slf, ITSC_REVIVED_PYROKINESIS, 1);
 
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_MEATBUG, 2);
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_BOAR, 1);
@@ -51,6 +52,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEKINESIS, 2);
 		CreateInvItems (slf, ITSC_REVIVED_CONTROL, 2);
+		CreateInvItems (slf, ITSC_REVIVED_PYROKINESIS, 2);
 
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_MEATBUG, 2);
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_MANTIS, 1);
@@ -70,6 +72,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEKINESIS, 2);
 		CreateInvItems (slf, ITSC_REVIVED_CONTROL, 2);
+		CreateInvItems (slf, ITSC_REVIVED_PYROKINESIS, 2);
 
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_MEATBUG, 2);
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_ALLIGATOR, 1);
@@ -89,6 +92,7 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEKINESIS, 2);
 		CreateInvItems (slf, ITSC_REVIVED_CONTROL, 2);
+		CreateInvItems (slf, ITSC_REVIVED_PYROKINESIS, 2);
 
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_MEATBUG, 2);
 		CreateInvItems (slf, ITSC_REVIVED_TRANSFORM_HARPY, 1);

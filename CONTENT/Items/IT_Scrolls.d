@@ -34,7 +34,7 @@ const int 	Value_Sc_IceCube			=	100;
 const int 	Value_Sc_ThunderBall		=	75;
 const int 	Value_Sc_SumGol				=	150;
 const int 	Value_Sc_HarmUndead			=	75;
-const int 	Value_Sc_Pyrokinesis		=	150;
+const int 	Value_Sc_LargeFireStorm		=	150;
 
 const int 	Value_Sc_Firestorm			=	100;
 const int 	Value_Sc_IceWave			=	200;
@@ -981,26 +981,26 @@ INSTANCE ItSc_HarmUndead (C_Item)
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
-INSTANCE ItSc_Pyrokinesis (C_Item)
+INSTANCE ItSc_LargeFireStorm (C_Item)
 {
-	name 				=	NAME_SPL_Pyrokinesis;
+	name 				=	NAME_SPL_LargeFireStorm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Sc_Pyrokinesis;
+	value 				=	Value_Sc_LargeFireStorm;
 
-	visual				=	"ItSc_Pyrokinesis.3DS";
+	visual				=	"ItSc_Firestorm.3DS";
 	material			=	MAT_LEATHER;
 
-	spell				= 	SPL_PYROKINESIS;
+	spell				= 	SPL_LargeFireStorm;
 	cond_atr[2]   		=	ATR_MANA_MAX;
 	cond_value[2]  		=	STEP_Firestorm;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
 
-	description			=	NAME_SPL_Pyrokinesis;
+	description			=	NAME_SPL_LargeFireStorm;
 	
 	TEXT	[0]			=	Name_MageScroll	;
 	

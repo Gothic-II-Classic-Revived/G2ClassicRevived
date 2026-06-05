@@ -45,7 +45,7 @@ const	int	Value_Ru_ChargeFireball		=	2000;// Lehrer Hyglas
 const	int	Value_Ru_IceWave			=	2500;// Lehrer Marduk
 const	int	Value_Ru_SumDemon			=	2500;// Lehrer Karras
 const	int	Value_Ru_FullHeal			=	2500;// Lehrer Parlan
-const	int	Value_Ru_Pyrokinesis		=	2500;// Lehrer Hyglas
+const	int	Value_Ru_LargeFireStorm		=	2500;// Lehrer Hyglas
 // Kreis 6 		
 const	int	Value_Ru_Firerain			=	3000;// Lehrer Hyglas
 const	int	Value_Ru_BreathOfDeath		=	3000;
@@ -1262,25 +1262,25 @@ INSTANCE ItRu_HarmUndead (C_Item)
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
-INSTANCE ItRu_Pyrokinesis (C_Item)
+INSTANCE ItRu_LargeFireStorm (C_Item)
 {
-	name 				=	NAME_SPL_Pyrokinesis;
+	name 				=	NAME_SPL_LargeFireStorm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
 
-	value 				=	Value_Ru_Pyrokinesis;
+	value 				=	Value_Ru_LargeFireStorm;
 
-	visual				=	"ItRu_Pyrokinesis.3ds";
+	visual				=	"ItRu_Firestorm.3ds";
 	material			=	MAT_STONE;
 
-	spell				= 	SPL_PYROKINESIS;
+	spell				= 	SPL_LargeFireStorm;
 	mag_circle 			=	5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
 
-	description			=	NAME_SPL_Pyrokinesis;
+	description			=	NAME_SPL_LargeFireStorm;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
 	COUNT	[0]			=	mag_circle;						

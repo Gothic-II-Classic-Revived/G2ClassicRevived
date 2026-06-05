@@ -304,9 +304,9 @@ func void DIA_Hyglas_TEACH_Info ()
 	
 	
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5) 
-	&& (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE) 
+	&& (PLAYER_TALENT_RUNES [SPL_LargeFireStorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,DIA_Hyglas_TEACH_Pyrokinesis);
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)) ,DIA_Hyglas_TEACH_LargeFireStorm);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6) 
@@ -333,9 +333,9 @@ FUNC VOID DIA_Hyglas_TEACH_ChargeFireball()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);	
 };
-FUNC VOID DIA_Hyglas_TEACH_Pyrokinesis()
+FUNC VOID DIA_Hyglas_TEACH_LargeFireStorm()
 {	
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);	
+	B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm);
 };
 FUNC VOID DIA_Hyglas_TEACH_Firestorm()
 {

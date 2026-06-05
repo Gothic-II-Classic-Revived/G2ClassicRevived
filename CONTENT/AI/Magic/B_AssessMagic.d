@@ -84,6 +84,20 @@ func void B_AssessMagic ()
 		return;
 	};
 
+    // ------ Gothic 1 psionic Pyrokinesis ------
+    if (Npc_GetLastHitSpellID(self) == SPL_Pyrokinesis)
+    || (Npc_GetActiveSpell(other) == SPL_Pyrokinesis)
+    {
+        Npc_ClearAIQueue    (self);
+        B_ClearPerceptions  (self);
+        if (!Npc_IsDead(self))
+        && (!Npc_IsInState(self, ZS_Unconscious))
+        {
+            AI_StartState   (self, ZS_Pyro, 0, "");
+        };
+        return;
+    };
+
 	// ------ Fear ------
 	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	
 	{

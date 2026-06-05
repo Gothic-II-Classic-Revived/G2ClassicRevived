@@ -339,6 +339,30 @@ if (spellType == SPL_WINDFIST)
 			};
 		};
 	
+
+//----- Gothic 1 psionic Pyrokinesis -----
+
+    if (spellType == SPL_Pyrokinesis)
+    {
+        if (C_NpcIsDown(self))
+        || (C_BodyStateContains(self, BS_SWIM))
+        || (C_BodyStateContains(self, BS_DIVE))
+        || (self.flags == NPC_FLAG_IMMORTAL)
+        || (C_NpcIsUndead(self))
+        || (self.guild == GIL_STONEGOLEM)
+        || (self.guild == GIL_ICEGOLEM)
+        || (self.guild == GIL_FIREGOLEM)
+        || (self.guild == GIL_SWAMPGOLEM)
+        || (self.guild == GIL_SUMMONED_GOLEM)
+        || (self.guild == GIL_DEMON)
+        || (self.guild == GIL_SUMMONED_DEMON)
+        {
+            return COLL_DONOTHING;
+        };
+
+        return COLL_DOEVERYTHING;
+    };
+
 //----- Feuer -----	
 	
 	if (spellType 	== SPL_ChargeFireball)
@@ -346,7 +370,7 @@ if (spellType == SPL_WINDFIST)
 	|| (spellType  	== SPL_Firerain)		
 	|| (spellType 	== SPL_Firebolt)		
 	|| (spellType 	== SPL_Firestorm)
-	|| (spellType   == SPL_Pyrokinesis)
+	|| (spellType   == SPL_LargeFireStorm)
 	|| (spellType	== SPL_Deathbolt)
 	|| (spellType 	== SPL_Deathball)
 	{

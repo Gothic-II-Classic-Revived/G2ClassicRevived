@@ -563,7 +563,7 @@ const int SPL_IceCube				= 33;
 const int SPL_ChargeZap				= 34;
 const int SPL_SummonGolem			= 35;
 const int SPL_DestroyUndead			= 36;
-const int SPL_Pyrokinesis			= 37;
+const int SPL_LargeFireStorm			= 37;
 
 // Kreis 5
 const int SPL_Firestorm				= 38;
@@ -664,7 +664,7 @@ const int SPL_REV_Reserved_118		= 118;
 const int SPL_REV_Reserved_119		= 119;
 const int SPL_REV_Reserved_120		= 120;
 const int SPL_REV_Reserved_121		= 121;
-const int SPL_REV_Reserved_122		= 122;
+const int SPL_REV_Pyrokinesis	= 122;
 const int SPL_REV_Reserved_123		= 123;
 const int SPL_REV_Reserved_124		= 124;
 const int SPL_REV_Reserved_125		= 125;
@@ -742,7 +742,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"ChargeZap",  			// 34	SPL_ChargeZap
 	"SummonGolem",  		// 53	SPL_SummonGolem
 	"DestroyUndead",  		// 36	SPL_DestroyUndead
-	"Pyrokinesis",  		// 37	SPL_Pyrokinesis
+	"LargeFireStorm",		// 37	SPL_LargeFireStorm
 
 	// Kreis 5
 	"Firestorm", 			// 38	SPL_Firestorm
@@ -845,7 +845,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Transform",			// 119	SPL_REV_Reserved_119
 	"SummonGuardian",		// 120	SPL_REV_Reserved_120
 	"SummonGuardian",		// 121	SPL_REV_Reserved_121
-	"XXX",					// 122	SPL_REV_Reserved_122
+	"Pyrokinesis",			// 122	SPL_Pyrokinesis
 	"XXX",					// 123	SPL_REV_Reserved_123
 	"XXX",					// 124	SPL_REV_Reserved_124
 	"XXX",					// 125	SPL_REV_Reserved_125
@@ -922,7 +922,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	// Kreis 4
 	"SUM",  				// 35	SPL_SummonGolem
 	"FIB",  				// 36	SPL_DestroyUndead
-	"FIB",  				// 37	SPL_Pyrokinesis
+	"FIB",  				// 37	SPL_LargeFireStorm
 
 	// Kreis 5
 	"FIB",  				// 38	SPL_Firestorm
@@ -1025,7 +1025,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"TRF",					// 119	SPL_REV_Reserved_119
 	"SUM",					// 120	SPL_REV_Reserved_120
 	"SUM",					// 121	SPL_REV_Reserved_121
-	"XXX",					// 122	SPL_REV_Reserved_122
+	"PYR",					// 122	SPL_Pyrokinesis
 	"XXX",					// 123	SPL_REV_Reserved_123
 	"XXX",					// 124	SPL_REV_Reserved_124
 	"XXX",					// 125	SPL_REV_Reserved_125

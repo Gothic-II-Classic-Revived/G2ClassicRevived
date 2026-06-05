@@ -92,7 +92,7 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	PLAYER_TALENT_RUNES[SPL_ChargeZap] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_SummonGolem] 			= TRUE;
 	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Pyrokinesis] 			= TRUE;
+	PLAYER_TALENT_RUNES[SPL_LargeFireStorm] 			= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_IceWave] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_SummonDemon] 			= TRUE;
@@ -309,7 +309,7 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItem(self,ItRu_ThunderBall);
 	CreateInvItem(self,ItRu_SumGol);
 	CreateInvItem(self,ItRu_HarmUndead);
-	CreateInvItem(self,ItRu_Pyrokinesis);
+	CreateInvItem(self,ItRu_LargeFireStorm);
 	CreateInvItem(self,ItRu_Firestorm);
 	CreateInvItem(self,ItRu_IceWave);
 	CreateInvItem(self,ItRu_SumDemon);
@@ -352,7 +352,7 @@ INSTANCE PC_Rockefeller(NPC_DEFAULT)
 	CreateInvItem(self,ItSc_ThunderBall);
 	CreateInvItem(self,ItSc_SumGol);
 	CreateInvItem(self,ItSc_HarmUndead);
-	CreateInvItem(self,ItSc_Pyrokinesis);
+	CreateInvItem(self,ItSc_LargeFireStorm);
 	CreateInvItem(self,ItSc_Firestorm);
 	CreateInvItem(self,ItSc_IceWave);
 	CreateInvItem(self,ItSc_SumDemon);

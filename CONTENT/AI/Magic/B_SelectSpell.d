@@ -374,7 +374,7 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
-			B_ReadySpell (slf, SPL_Pyrokinesis, REV_SPL_COST_DRAGONHEART);
+			B_ReadySpell (slf, SPL_LargeFireStorm, REV_SPL_COST_DRAGONHEART);
 			return TRUE;
 		}
 		else

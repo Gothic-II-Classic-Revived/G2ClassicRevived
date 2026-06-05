@@ -432,7 +432,7 @@ INSTANCE ITAT_REVIVED_DRAGONHEART_FIRE (C_Item)
 
 	value 				=	REV_VALUE_DRAGONHEART;
 
-	spell					=		SPL_Pyrokinesis; //SPL_FIRESTORM;
+	spell					=		SPL_LargeFireStorm; //SPL_FIRESTORM;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	REV_SPL_COST_DRAGONHEART;
 

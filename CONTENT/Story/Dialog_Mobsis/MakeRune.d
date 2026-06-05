@@ -293,7 +293,7 @@ FUNC INT PC_Circle_05_Condition ()
 	&& ( (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == TRUE) ) )
+	||   (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE) ) )
 	{
 		return TRUE;
 	};
@@ -316,9 +316,9 @@ FUNC VOID PC_Circle_05_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_FullHeal,PC_ItRu_FullHeal_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_Pyrokinesis,PC_ItRu_Pyrokinesis_Info);
+		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_LargeFireStorm,PC_ItRu_LargeFireStorm_Info);
 	};
 };			
 FUNC VOID PC_Circle_05_BACK()
@@ -839,17 +839,17 @@ FUNC VOID PC_ItRu_HarmUndead_Info ()
 	B_ENDPRODUCTIONDIALOG ();
 };
 //*******************************************************
-FUNC VOID PC_ItRu_Pyrokinesis_Info ()
+FUNC VOID PC_ItRu_LargeFireStorm_Info ()
 {
-	if (Npc_HasItems (hero, ItSc_Pyrokinesis) >= 1)
+	if (Npc_HasItems (hero, ItSc_LargeFireStorm) >= 1)
 	&& (Npc_HasItems (hero, ItMi_Sulfur) >= 1)
 	&& (Npc_HasItems (hero, ItAt_WaranFiretongue) >= 1)		
 	{
-		Npc_RemoveInvItems  (hero,ItSc_Pyrokinesis, 1);
+		Npc_RemoveInvItems  (hero,ItSc_LargeFireStorm, 1);
 		Npc_RemoveInvItems  (hero,ItMi_Sulfur,1	);
 		Npc_RemoveInvItems  (hero,ItAt_WaranFiretongue,1);
 		
-		CreateInvItems 	   (hero,ItRu_Pyrokinesis,1); 
+		CreateInvItems 	   (hero,ItRu_LargeFireStorm,1);
 		Print (PRINT_RunESuccess);
 	}
 	else 

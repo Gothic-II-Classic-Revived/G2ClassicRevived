@@ -101,7 +101,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune `Awaken Golem`:1 Heart of a Stonegolem.");	};	
 	if (spell == SPL_DestroyUndead)			{	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_HarmUndead, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Destroy Undead´:1 Holy Water .");	};		
-	if (spell == SPL_Pyrokinesis)			{	PLAYER_TALENT_RUNES[SPL_Pyrokinesis] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_Pyrokinesis, 1);				
+	if (spell == SPL_LargeFireStorm)			{	PLAYER_TALENT_RUNES[SPL_LargeFireStorm] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_LargeFireStorm, 1);
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune `Large Fire Storm´: 1 Sulfur and 1 Tongue of a Fire Lizard.");	};		
 	if (spell == SPL_Firestorm)				{	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firestorm, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Small Fire Storm´: 1 Sulfur and 1 Pitch.");	};		

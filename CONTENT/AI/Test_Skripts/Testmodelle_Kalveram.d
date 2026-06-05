@@ -308,7 +308,7 @@ instance Itemhoshi (Npc_Default)
 	CreateInvItems(self,ItRu_ThunderBall,1);
 	CreateInvItems(self,ItRu_SumGol,1);
 	CreateInvItems(self,ItRu_HarmUndead,1);
-	CreateInvItems(self,ItRu_Pyrokinesis,1);
+	CreateInvItems(self,ItRu_LargeFireStorm,1);
 	CreateInvItems(self,ItRu_Firestorm,1);
 	CreateInvItems(self,ItRu_IceWave,1);
 	CreateInvItems(self,ItRu_SumDemon,1);
@@ -365,7 +365,7 @@ instance Itemhoshi (Npc_Default)
 	CreateInvItems(self,ItSc_ThunderBall,10);
 	CreateInvItems(self,ItSc_SumGol,10);
 	CreateInvItems(self,ItSc_HarmUndead,10);
-	CreateInvItems(self,ItSc_Pyrokinesis,10);
+	CreateInvItems(self,ItSc_LargeFireStorm,10);
 	CreateInvItems(self,ItSc_Firestorm,10);
 	CreateInvItems(self,ItSc_IceWave,10);
 	CreateInvItems(self,ItSc_SumDemon,10);
@@ -1659,7 +1659,7 @@ func void UsePatrickHelper ()
 	PLAYER_TALENT_RUNES[SPL_ChargeZap] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_SummonGolem] 			= TRUE;
 	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Pyrokinesis] 			= TRUE;
+	PLAYER_TALENT_RUNES[SPL_LargeFireStorm] 			= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_IceWave] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_SummonDemon] 			= TRUE;

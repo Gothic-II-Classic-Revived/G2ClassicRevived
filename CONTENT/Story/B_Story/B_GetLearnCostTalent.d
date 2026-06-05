@@ -247,7 +247,7 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == SPL_ChargeZap			) 	{	kosten = (10);	}
 		else if (skill == SPL_SummonGolem	    ) 	{	kosten = (15);	}
 		else if (skill == SPL_DestroyUndead		) 	{	kosten = (10);	}
-		else if (skill == SPL_Pyrokinesis	    ) 	{	kosten = (10);	}
+		else if (skill == SPL_LargeFireStorm	    ) 	{	kosten = (10);	}
 		else if (skill == SPL_WaterFist			) 	{	kosten = (10);	}   
 		// 5                                                            
 		else if (skill == SPL_Firestorm			) 	{	kosten = (15);	}

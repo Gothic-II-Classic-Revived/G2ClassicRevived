@@ -257,7 +257,7 @@ FUNC VOID B_SetKDFRunes ()
 	}
 	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 5)
 	{
-		CreateInvItems(hero,ItRu_Pyrokinesis,1);
+		CreateInvItems(hero,ItRu_LargeFireStorm,1);
 		CreateInvItems(hero,ItRu_IceWave,1);
 		CreateInvItems(hero,ItRu_SumDemon,1);
 		CreateInvItems(hero,ItRu_FullHeal,1);
@@ -2219,9 +2219,9 @@ FUNC VOID CH_Training_Runen_Circle_4_SPL_DestroyUndead()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);		
 };
-FUNC VOID CH_Training_Runen_Circle_4_SPL_Pyrokinesis()
+FUNC VOID CH_Training_Runen_Circle_4_SPL_LargeFireStorm()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis);		
+	B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm);
 };
 //**********************************************************
 // Fünfter Kreis 
@@ -2245,9 +2245,9 @@ FUNC VOID DIA_CH_Runen_5()
 	{
 		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_FullHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FullHeal)) ,CH_Training_Runen_Circle_5_SPL_FullHeal);
 	};
-	if (PLAYER_TALENT_RUNES [SPL_Pyrokinesis] == FALSE) 
+	if (PLAYER_TALENT_RUNES [SPL_LargeFireStorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)) ,CH_Training_Runen_Circle_4_SPL_Pyrokinesis);
+		Info_AddChoice	(DIA_CH_Runen, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)) ,CH_Training_Runen_Circle_4_SPL_LargeFireStorm);
 	};
 };
 //**********************************************************

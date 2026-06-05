@@ -31,7 +31,7 @@ func void B_ClearRuneInv (var C_NPC slf)
 		Npc_RemoveInvItems	(slf ,ItRu_ThunderBall 		, Npc_HasItems (slf, ItRu_ThunderBall ));
 		Npc_RemoveInvItems	(slf ,ItRu_SumGol 			, Npc_HasItems (slf, ItRu_SumGol ));
 		Npc_RemoveInvItems	(slf ,ItRu_HarmUndead 		, Npc_HasItems (slf, ItRu_HarmUndead ));
-		Npc_RemoveInvItems	(slf ,ItRu_Pyrokinesis 		, Npc_HasItems (slf, ItRu_Pyrokinesis ));
+		Npc_RemoveInvItems	(slf ,ItRu_LargeFireStorm 		, Npc_HasItems (slf, ItRu_LargeFireStorm ));
 		Npc_RemoveInvItems	(slf ,ItRu_Firestorm 		, Npc_HasItems (slf, ItRu_Firestorm ));
 		Npc_RemoveInvItems	(slf ,ItRu_IceWave 			, Npc_HasItems (slf, ItRu_IceWave ));
 		Npc_RemoveInvItems	(slf ,ItRu_SumDemon 		, Npc_HasItems (slf, ItRu_SumDemon ));

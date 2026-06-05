@@ -198,6 +198,32 @@ INSTANCE ITSC_REVIVED_CONTROL (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
+INSTANCE ITSC_REVIVED_PYROKINESIS (C_Item)
+{
+	name 				= 	NAME_SPL_Pyrokinesis;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_PSI_SCROLL;
+
+	visual				= 	"ItSc_Pyrokinesis.3DS";
+
+	spell			    = 	SPL_Pyrokinesis;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_DamagePerSec;				COUNT[1]	= SPL_PYRO_DAMAGE_PER_SEC;
+	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
+	TEXT[4]				= 	NAME_Spell_Invest;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
 //****************************************************************************
 //			TRANSFORM (From G2)
 //****************************************************************************

@@ -13,10 +13,12 @@ func int Spell_ProcessMana_Release (var int manaInvested)
 	var int activeSpell; activeSpell = Npc_GetActiveSpell(self);
 	
 	// ------ Spells, die beim loslassen der Taste gecastet werden ------
-	if (activeSpell == SPL_Pyrokinesis		)	{	return	SPL_SENDCAST;	}; //ALIAS CHARGE FIRESTORM!!!
+	if (activeSpell == SPL_LargeFireStorm		)	{	return	SPL_SENDCAST;	}; //ALIAS CHARGE FIRESTORM!!!
 	if (activeSpell == SPL_ChargeFireball	)	{	return	SPL_SENDCAST;	};
 	if (activeSpell == SPL_ChargeZap		)	{	return	SPL_SENDCAST;	};
 	if (activeSpell == SPL_WINDFIST			)	{	return	SPL_SENDCAST;	};
+
+	if (activeSpell == SPL_Pyrokinesis	)	{	Npc_SendSinglePerc	(self, other, PERC_ASSESSSTOPMAGIC); return	SPL_SENDSTOP;	};
 
 	// ------ Alle anderen Spells (Aufrechterhaltung oder Loslassen OHNE gecastet zu haben (zu wenig investiert) ------	
 	return SPL_SENDSTOP;

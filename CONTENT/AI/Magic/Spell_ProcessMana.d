@@ -56,7 +56,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_ChargeZap	    	) 	{	return	Spell_Logic_ChargeZap		(manaInvested);	};
 	if (activeSpell == SPL_SummonGolem   		) 	{	return	Spell_Logic_SummonGolem		(manaInvested);	};
 	if (activeSpell == SPL_DestroyUndead 		)	{	return	Spell_Logic_DestroyUndead	(manaInvested);	};
-	if (activeSpell == SPL_Pyrokinesis	    	) 	{	return	Spell_Logic_Pyrokinesis		(manaInvested);	};
+	if (activeSpell == SPL_LargeFireStorm	    	) 	{	return	Spell_Logic_LargeFireStorm		(manaInvested);	};
 	//Kreis 5
 	if (activeSpell == SPL_Firestorm       		) 	{	return	Spell_Logic_Firestorm		(manaInvested);	};
 	if (activeSpell == SPL_IceWave        		) 	{	return	Spell_Logic_IceWave			(manaInvested);	};
@@ -112,6 +112,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	
 	if (activeSpell == SPL_Telekinesis	    )		{	return	Spell_Logic_Telekinesis	 		(manaInvested);	};
 	if (activeSpell == SPL_Control	    	)		{	return	Spell_Logic_Control		 		(manaInvested);	};
+	if (activeSpell == SPL_Pyrokinesis	)		{	return	Spell_Logic_Pyrokinesis		(manaInvested);	};
 
 	if (activeSpell == SPL_TrfMeatbug	    )		{	return	Spell_Logic_TransformMeatbug	 		(manaInvested);	};
 	if (activeSpell == SPL_TrfMolerat	    )		{	return	Spell_Logic_TransformMolerat	 		(manaInvested);	};
