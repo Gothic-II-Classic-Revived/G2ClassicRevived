@@ -158,7 +158,7 @@ FUNC VOID UseItWr_Bloodfly_01()
 				Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga",	0		);
 
- 				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+ 				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
  				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
  				Doc_PrintLine	( nDocID,  0,"Bloodflies");
   				Doc_PrintLine	( nDocID,  0,"");

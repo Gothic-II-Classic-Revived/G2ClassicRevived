@@ -112,7 +112,7 @@ FUNC VOID Use_BookstandRevived_HISTORY1_S1()
 					Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 	); 
 					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0	);
 					
-					Doc_SetFont 	( nDocID, -1, "font_15_book.tga"); 	// -1 -> all pages 
+					Doc_SetFont 	( nDocID, -1, FONT_Book2); 	// -1 -> all pages 
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1);  //  0 -> margins are in pixels
 					
 					Doc_PrintLine	( nDocID,  0, "");

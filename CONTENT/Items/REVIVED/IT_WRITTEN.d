@@ -13,7 +13,7 @@ const int	REV_VALUE_CIRCLE_SIXTH		=	300;
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_01(C_Item)
 {	
-	name 					=	"The First Circle";
+	name 					=	"The First Fire Circle";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -26,7 +26,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_01(C_Item)
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_01;
 
-	description				=	"The First Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_01()
@@ -36,21 +36,30 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_01()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE FIRST CIRCLE OF FIRE");
+	Doc_PrintLines(nDocID, 0, "THE FIRST CIRCLE OF FIRE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The first Circle teaches restraint. Fire obeys a clear will, not anger. A novice who cannot hold a spark steady should not be trusted with flame.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Fire Arrow");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
+	Doc_PrintLines(nDocID, 0, "When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Fire Arrow binds a short burst of Innos' flame into a straight missile. It is weak beside the higher arts, but it teaches aim, breath, and control.");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "The scroll and blank runestone must be prepared before the formula is cut.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Light");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Innos' first gift to mankind. A shining ball appears over the magician.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Fire Bolt");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A missile of magic Fire.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle1 == FALSE)
 	{
@@ -61,7 +70,7 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_01()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_02(C_Item)
 {	
-	name 					=	"The Second Circle";
+	name 					=	"The Second Fire Circle";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -74,7 +83,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_02(C_Item)
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_02;
 
-	description				=	"The Second Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_02()
@@ -84,22 +93,26 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_02()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE SECOND CIRCLE OF FIRE");
+	Doc_PrintLines(nDocID, 0, "THE SECOND CIRCLE OF FIRE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The second Circle gives fire a body. The mage gathers heat, breathes into it, and releases it before the flame can turn back on its creator.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Fireball");
-	Doc_PrintLine(nDocID, 0, "Pitch");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
+	Doc_PrintLines(nDocID, 0, "All magic originates from the magic powers of the user. The user is called a magician.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Fireball");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Fireball carries more force than Fire Arrow. The flame remains compact until it strikes, where it breaks open and burns the target.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "Never carve this rune with damp pitch. The matrix will splinter.");
+	Doc_PrintLines(nDocID, 1, "Innos' second gift to the children of Fire. A ball of fire, which burns its victims.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle2 == FALSE)
 	{
@@ -110,7 +123,7 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_02()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_03 (C_Item)
 {	
-	name 					=	"The Third Circle";
+	name 					=	"The Third Fire Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -123,7 +136,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_03 (C_Item)
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_03;
 
-	description				=	"The Third Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_03()
@@ -133,22 +146,25 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_03()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE THIRD CIRCLE OF FIRE");
+	Doc_PrintLines(nDocID, 0, "THE THIRD CIRCLE OF FIRE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The third Circle bends fire after impact. The flame does not merely strike; it spreads, searches, and punishes those who stand too close together.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Small Fire Storm");
-	Doc_PrintLine(nDocID, 0, "Pitch");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
+	Doc_PrintLines(nDocID, 0, "Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Storm of Fire");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Small Fire Storm is still aimed at one enemy, but its heat can lash outward. It should be used with distance and a clear field of view.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "A careless mage will burn friend and foe alike.");
+	Doc_PrintLines(nDocID, 1, "Like the fireball, this spell affects one foe, but then leaps to other foes as well.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle3 == FALSE)
 	{
@@ -156,10 +172,10 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_03()
 		RevivedBookstandRead_MagicCircle3 = TRUE;
 	};
 };
-	
+
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 {	
-	name 					=	"The Fourth Circle";
+	name 					=	"The Fourth Fire Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -172,7 +188,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_04;
 
-	description				=	"The Fourth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_04()
@@ -182,22 +198,25 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_04()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE FOURTH CIRCLE OF FIRE");
+	Doc_PrintLines(nDocID, 0, "THE FOURTH CIRCLE OF FIRE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The fourth Circle teaches compression. A greater flame is pressed into a smaller shell, then released as a heavy bolt of fire.");
+	Doc_PrintLine(nDocID, 0, "The Magic");
+	Doc_PrintLine(nDocID, 0, "of Teleportation");
+	Doc_PrintLine(nDocID, 0, "---------------");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Large Fireball");
-	Doc_PrintLine(nDocID, 0, "Pitch");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
+	Doc_PrintLines(nDocID, 0, "The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Death to the Undead");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Large Fireball is slower to shape than the lower flame, but it carries greater force and is suited for hard targets.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "The rune must be carved without hesitation once the inner ring is opened.");
+	Doc_PrintLines(nDocID, 1, "This spell banishes undead creatures of darkness.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle4 == FALSE)
 	{
@@ -208,7 +227,7 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_04()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 {	
-	name 					=	"The Fifth Circle";
+	name 					=	"The Fifth Fire Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -221,7 +240,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_05;
 
-	description				=	"The Fifth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_05()
@@ -231,22 +250,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_05()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE FIFTH CIRCLE OF FIRE");
+	Doc_PrintLines(nDocID, 0, "THE FIFTH CIRCLE OF FIRE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The fifth Circle turns flame into judgment. Fire rolls through the air in layers, each one feeding the next.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Large Fire Storm");
-	Doc_PrintLine(nDocID, 0, "Tongue of Fire");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
+	Doc_PrintLine(nDocID, 0, "Rain of Fire");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "The power of divine Fire hits every creature within range of the magician.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Large Fire Storm is a rite of momentum. Once cast, the flame seeks new air and new fuel, spreading its violence beyond the first victim.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "The caster must keep his mind still while the storm moves.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle5 == FALSE)
 	{
@@ -257,7 +275,7 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_05()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 {	
-	name 					=	"The Sixth Circle";
+	name 					=	"The Sixth Fire Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
@@ -270,7 +288,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_06;
 
-	description				=	"The Sixth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_06()
@@ -280,23 +298,22 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_06()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE SIXTH CIRCLE OF FIRE");
+	Doc_PrintLines(nDocID, 0, "THE SIXTH CIRCLE OF FIRE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The sixth Circle no longer asks the mage to throw fire. It asks him to call it down. Only a master may open so broad a path to Innos' flame.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Fire Rain");
-	Doc_PrintLine(nDocID, 0, "Pitch");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
-	Doc_PrintLine(nDocID, 0, "Tongue of Fire");
+	Doc_PrintLines(nDocID, 0, "Innos gave mankind the power to hear him and speak to him. He gave mankind the power to perform great miracles, and he called them magic. With this power, the people were able to design the world after their will.");
+	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "The Word of Innos");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Fire Rain consumes a battlefield in falling flame. The rune is never to be cut for pride, spectacle, or anger.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "If the caster cannot name every ally near him, he must not cast it.");
+	Doc_PrintLines(nDocID, 1, "For I am the rising sun, the light, and the life. And all that is contrary to the sun is contrary to me, and shall be banished to the shadows forever more.");
+	Doc_PrintLine(nDocID, 0, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle6 == FALSE)
 	{
@@ -305,24 +322,24 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_06()
 	};
 };
 
-	//******************************************************************//
+/******************************************************************************************/
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_01(C_Item)
 {	
-	name 					=	"The First Circle";
+	name 					=	"The First Water Circle";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIRST;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_04.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_01;
 
-	description				=	"The First Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_01()
@@ -332,21 +349,23 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_01()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "THE FIRST CIRCLE OF WATER");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The first lesson of Adanos is balance. Water yields, but it does not surrender. It waits for the opening and answers with precision.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Small Lightning");
-	Doc_PrintLine(nDocID, 0, "Rock Crystal");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Ice Bolt");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Small Lightning is the first controlled discharge. It is brief, sharp, and useful for teaching a mage how unstable power behaves.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "Never carve this rune near open water.");
+	Doc_PrintLines(nDocID, 1, "A missile of magic energy.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 0, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle7 == FALSE)
 	{
@@ -357,20 +376,20 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_01()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_02(C_Item)
 {	
-	name 					=	"The Second Circle";
+	name 					=	"The Second Water Circle";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SECOND;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_04.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_02;
 
-	description				=	"The Second Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_02()
@@ -380,23 +399,22 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_02()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "THE SECOND CIRCLE OF WATER");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The second Circle teaches motion and cold. The mage learns to draw heat away, to twist air, and to send water's edge forward.");
+	Doc_PrintLines(nDocID, 0, "All magic originates from the magic powers of the user. The user is called a magician.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Ice Arrow");
-	Doc_PrintLine(nDocID, 0, "Glacier Quartz");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Dust Devil");
-	Doc_PrintLine(nDocID, 0, "Wings of a bloodfly");
+	Doc_PrintLines(nDocID, 0, "Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Ice Lance");
-	Doc_PrintLine(nDocID, 1, "Glacier Quartz");
+	Doc_PrintLine(nDocID, 1, "Healing");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Adanos saw that the humans died and that it was the will of Beliar that it should be that way. And he spoke: I will not oppose the will of Beliar, but I shall give mankind the power of healing.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "Ice Arrow and Ice Lance focus cold into a narrow path. Dust Devil answers with air, disorienting the enemy instead of piercing him.");
+	Doc_PrintLines(nDocID, 1, "This spell has the power of healing the magician.");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle8 == FALSE)
 	{
@@ -407,20 +425,20 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_02()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_03 (C_Item)
 {	
-	name 					=	"The Third Circle";
+	name 					=	"The Third Water Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_THIRD;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_04.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_03;
 
-	description				=	"The Third Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_03()
@@ -430,27 +448,16 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_03()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "THE THIRD CIRCLE OF WATER");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The third Circle binds water, air, and lightning into changing forms. It is the Circle where a Water Mage stops reacting and begins shaping the field.");
+	Doc_PrintLines(nDocID, 0, "Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Ice Block");
-	Doc_PrintLine(nDocID, 0, "Glacier Quartz");
-	Doc_PrintLine(nDocID, 0, "Aquamarine");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Ball Lightning");
-	Doc_PrintLine(nDocID, 0, "Rock Crystal");
-	Doc_PrintLine(nDocID, 0, "Sulfur");
+	Doc_PrintLines(nDocID, 0, "Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Geyser");
-	Doc_PrintLine(nDocID, 1, "Aquamarine");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Storm");
-	Doc_PrintLine(nDocID, 1, "Glacier Quartz");
-	Doc_PrintLine(nDocID, 1, "Wings of a bloodfly");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle9 == FALSE)
 	{
@@ -458,23 +465,23 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_03()
 		RevivedBookstandRead_MagicCircle9 = TRUE;
 	};
 };
-	
+
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_04 (C_Item)
 {	
-	name 					=	"The Fourth Circle";
+	name 					=	"The Fourth Water Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FOURTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_04.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_04;
 
-	description				=	"The Fourth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_04()
@@ -484,22 +491,30 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_04()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "THE FOURTH CIRCLE OF WATER");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The fourth Circle gives the mage force. Water can become a fist, and lightning can become a clean line through armor, bone, and nerve.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Lightning");
-	Doc_PrintLine(nDocID, 0, "Rock Crystal");
-	Doc_PrintLine(nDocID, 0, "Glacier Quartz");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "Chain Lightning");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "The spell is leaping to more targets, the longer it is working. The power of lightning is hard to control. Thus, the caster himself may become a target.");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Waterfist");
-	Doc_PrintLine(nDocID, 1, "Aquamarine");
-	Doc_PrintLine(nDocID, 1, "Rock Crystal");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "Lightning punishes distance. Waterfist punishes certainty. Both formulas should be used to break an enemy's rhythm.");
+	Doc_PrintLine(nDocID, 1, "Ice Block");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "The victim is enclosed in a block of ice. A spell from the temple of the Magicians of Water.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Ball Lightning");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A ball of magic power.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle10 == FALSE)
 	{
@@ -510,20 +525,20 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_04()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_05(C_Item)
 {	
-	name 					=	"The Fifth Circle";
+	name 					=	"The Fifth Water Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIFTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_04.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_05;
 
-	description				=	"The Fifth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_05()
@@ -533,22 +548,27 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_05()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "THE FIFTH CIRCLE OF WATER");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The fifth Circle is the Circle of stillness. The battlefield is not conquered by noise, but by ending motion at the exact moment it matters.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Ice Wave");
-	Doc_PrintLine(nDocID, 0, "Glacier Quartz");
-	Doc_PrintLine(nDocID, 0, "Aquamarine");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "Wave of Ice");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A magic Wave of Ice extends over any foes and freezes them for a short period of time. During this period, the victims are paralyzed and damaged.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Formula");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Ice Wave spreads cold through the ground and air. Enemies caught in it are held in place while the mage decides what follows.");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "A Water Mage should know when not to finish a helpless enemy.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Temple of Water");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A spell from the temple of the Magicians of Water.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle11 == FALSE)
 	{
@@ -559,20 +579,20 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_05()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_06(C_Item)
 {	
-	name 					=	"The Sixth Circle";
+	name 					=	"The Sixth Water Circle";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SIXTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_04.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_06;
 
-	description				=	"The Sixth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_06()
@@ -582,22 +602,24 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_06()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "THE SIXTH CIRCLE OF WATER");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The sixth Circle of Water is rarely written in Khorinis. Its formulas are kept as warnings as much as weapons, for they turn balance into judgment.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "The Closed Formula");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "The Word of Adanos");
 	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "No common sixth-circle Water rune is copied in the public records of Khorinis. The old texts describe principles, not a recipe.");
+	Doc_PrintLines(nDocID, 0, "Work and live, for the day was created so that man may work. Seek learning and knowledge so that you may pass it on, for it is for that purpose that you were created.");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Doctrine");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A master of Water does not chase power for its own sake. The highest Circle is studied to understand limits, cost, and consequence.");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "Only the Ring's oldest records speak of this Circle openly.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "The Magicians of Water");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Those who followed Adanos were called Magicians of the Circle of Water, while the priests of Innos became known as the Magicians of the Circle of Fire.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle12 == FALSE)
 	{
@@ -606,51 +628,60 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_06()
 	};
 };
 
-	//******************************************************************//
+/******************************************************************************************/
 
 INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_01(C_Item)
 {	
-	name 					=	"Dark Formulas I";
+	name 					=	"The Forbidden Spells - Volume I";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_THIRD;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_05.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_01;
 
-	description				=	"The Sixth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
-FUNC VOID UseItWr_Book_BeliarCircle_01()
+FUNC VOID Use_BOOK_CIRCLE_BELIAR_01()
 {
 	var int nDocID;
 	nDocID = Doc_Create();
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "DARK FORMULAS I");
+	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume I");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Beliar's lesser formulas do not ask the mage to master the world. They ask him to wound it, drain it, or bind it long enough to survive.");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 0, "Root Snare");
-	Doc_PrintLine(nDocID, 0, "Swampweed");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A grasping curse that calls roots from the ground and binds the victim where he stands.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 0, "Steal Energy");
-	Doc_PrintLine(nDocID, 0, "Black Pearl");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "The caster tears strength from the enemy and turns the stolen force back into his own life.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Beliar's Wrath");
-	Doc_PrintLine(nDocID, 1, "Coal");
-	Doc_PrintLine(nDocID, 1, "Black Pearl");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "These spells are usually preserved as scroll formulas. A rune matrix must not be trusted unless its source is known.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Beliar's Wrath");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A dark missile of punishment. It carries no lesson and no warning, only Beliar's answer to defiance.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle13 == FALSE)
 	{
@@ -661,47 +692,55 @@ FUNC VOID UseItWr_Book_BeliarCircle_01()
 
 INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_02(C_Item)
 {	
-	name 					=	"Dark Formulas II";
+	name 					=	"The Forbidden Spells - Volume II";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIFTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_05.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_02;
 
-	description				=	"The Sixth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
-FUNC VOID UseItWr_Book_BeliarCircle_02()
+FUNC VOID Use_BOOK_CIRCLE_BELIAR_02()
 {
 	var int nDocID;
 	nDocID = Doc_Create();
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "DARK FORMULAS II");
+	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume II");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The summoning formulas of Beliar are bargains written in bone and fear. They open a door, and every door remembers who opened it.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Insect Swarm");
-	Doc_PrintLine(nDocID, 0, "Wings of a bloodfly");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 0, "Create Guardian");
-	Doc_PrintLine(nDocID, 0, "Stone Golem Heart");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "This formula calls a stone guardian into service. The creature obeys the summoner, but not out of loyalty.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "Insect Swarm");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A black cloud of biting insects descends on the target, worrying flesh and breaking concentration.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Create Zombie");
-	Doc_PrintLine(nDocID, 1, "Skeleton's Bone");
-	Doc_PrintLine(nDocID, 1, "Black Pearl");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "A summoner who mistakes obedience for loyalty has already lost control.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Create Zombie");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A dead servant is raised and bound to the caster's will. Such obedience ends only with destruction.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle14 == FALSE)
 	{
@@ -712,50 +751,54 @@ FUNC VOID UseItWr_Book_BeliarCircle_02()
 
 INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_03(C_Item)
 {	
-	name 					=	"Dark Formulas III";
+	name 					=	"The Forbidden Spells - Volume III";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SIXTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"itwr_book_02_05.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_03;
 
-	description				=	"The Sixth Circle of Magic";
+	description				=	name;
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
-FUNC VOID UseItWr_Book_BeliarCircle_03()
+FUNC VOID Use_BOOK_CIRCLE_BELIAR_03()
 {
 	var int nDocID;
 	nDocID = Doc_Create();
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "DARK FORMULAS III");
+	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume III");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The greater dark formulas are not teachings for apprentices. They are records of what must be recognized before it is resisted.");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 0, "Cry of the Dead");
-	Doc_PrintLine(nDocID, 0, "Black Pearl");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Breath of Death");
-	Doc_PrintLine(nDocID, 0, "Coal");
-	Doc_PrintLine(nDocID, 0, "Black Pearl");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "The dead answer in a single terrible cry. The spell gives no mercy to the target and little mercy to the caster.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Wave of Death");
-	Doc_PrintLine(nDocID, 1, "Skeleton's Bone");
-	Doc_PrintLine(nDocID, 1, "Black Pearl");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Shrink Monster");
-	Doc_PrintLine(nDocID, 1, "Troll Tusk");
-	Doc_PrintLine(nDocID, 1, "Goblin's Bone");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Last Formula");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "This is not a spell for testing, threat, or display. The caster gives himself wholly to the formula before the skull is released.");
+	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "No sixth-circle Beliar rune is preserved in these records.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle15 == FALSE)
 	{
@@ -763,8 +806,6 @@ FUNC VOID UseItWr_Book_BeliarCircle_03()
 		RevivedBookstandRead_MagicCircle15 = TRUE;
 	};
 };
-
-
 
 /******************************************************************************************/
 
@@ -2472,7 +2513,7 @@ FUNC VOID UseUrkunde()
 				Doc_SetPages	(nDocID,  1 );                         
 				Doc_SetPage 	(nDocID,  0, "letters.TGA"  , 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0,"Certificate");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");

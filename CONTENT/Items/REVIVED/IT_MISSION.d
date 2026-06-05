@@ -84,7 +84,7 @@ FUNC VOID UseBountyLetter0()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_Q.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -126,7 +126,7 @@ FUNC VOID UseBountyLetter1()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_RELIOPS.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -168,7 +168,7 @@ FUNC VOID UseBountyLetter2()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_DREXAR.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -210,7 +210,7 @@ FUNC VOID UseBountyLetter3()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "letters.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "Mist 'The Executioner'");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -252,7 +252,7 @@ FUNC VOID UseBountyLetter4()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_ZERRIT.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -294,7 +294,7 @@ FUNC VOID UseBountyLetter5()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_FARRIC.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -336,7 +336,7 @@ FUNC VOID UseBountyLetter6()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_SALAZAR.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -378,7 +378,7 @@ FUNC VOID UseBountyLetter7()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_DELTA.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -420,7 +420,7 @@ FUNC VOID UseBountyLetter8()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_REKO.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -462,7 +462,7 @@ FUNC VOID UseBountyLetter9()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_TYGREN.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
@@ -504,7 +504,7 @@ FUNC VOID UseBountyLetter10()
 				Doc_SetPages	(nDocID,  1);                         
 				Doc_SetPage 	(nDocID,  0, "BOUNTY_REGAN.TGA", 0); 
 				Doc_SetMargins	(nDocID, -1, 50, 50, 50, 50, 1);  
-				Doc_SetFont 	(nDocID, -1, "font_15_book.tga");
+				Doc_SetFont 	(nDocID, -1, FONT_Book2);
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");

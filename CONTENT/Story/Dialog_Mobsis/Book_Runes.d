@@ -416,7 +416,7 @@ FUNC VOID UseItWr_Book_Circle_01()
 				Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 
-				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_PrintLine	( nDocID,  0,"The First Circle");
 				Doc_PrintLine	( nDocID,  0,"---------------");
@@ -453,7 +453,7 @@ FUNC VOID UseItWr_Book_Circle_02()
 				Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 					
-				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_PrintLine	( nDocID,  0,"The Second Circle");
 				Doc_PrintLine	( nDocID,  0,"---------------");
@@ -492,7 +492,7 @@ FUNC VOID UseItWr_Book_Circle_03()
 				Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 
-				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_PrintLine	( nDocID,  0,"The Third Circle");
 				Doc_PrintLine	( nDocID,  0,"---------------");
@@ -534,7 +534,7 @@ FUNC VOID UseItWr_Book_Circle_04()
 				Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 
-				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_PrintLine	( nDocID,  0,"The Fourth Circle");
 				Doc_PrintLine	( nDocID,  0,"---------------");
@@ -582,7 +582,7 @@ FUNC VOID UseItWr_Book_Circle_05()
 				Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 
-				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_PrintLine	( nDocID,  0,"The Fifth Circle");
 				Doc_PrintLine	( nDocID,  0,"---------------");
@@ -619,7 +619,7 @@ FUNC VOID UseItWr_Book_Circle_06()
 				Doc_SetPage 	( nDocID,  0, "Book_Mage_L.tga", 	0 		); 
 				Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0		);
 
-  				Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   			); 
+  				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
   				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
 				Doc_PrintLine	( nDocID,  0,"The Sixth Circle");
 				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 

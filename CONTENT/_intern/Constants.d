@@ -11,6 +11,7 @@
 const string FONT_Screen					= "FONT_OLD_20_WHITE.TGA";
 const string FONT_ScreenSmall				= "FONT_OLD_10_WHITE.TGA";
 const string FONT_Book						= "FONT_10_BOOK.TGA";
+const string FONT_Book2						= "FONT_15_BOOK.TGA";
 const string FONT_BookHeadline				= "FONT_20_BOOK.TGA";
 
 
