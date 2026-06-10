@@ -6172,11 +6172,11 @@ INSTANCE MFX_SLEEP_TARGET (C_PARTICLEFX)
 
 INSTANCE MFX_PYROKINESIS_INIT (C_PARTICLEFX)
 {
-     ppsvalue = 50;
+     ppsvalue = 800.000000000;
      ppsscalekeys_s = "1";
      ppsislooping = 1;
      ppsissmooth = 1;
-     ppsfps = 1;
+     ppsfps = 1.000000000;
      shptype_s = "SPHERE";
      shpfor_s = "object";
      shpoffsetvec_s = "0 0 0";
@@ -6185,28 +6185,28 @@ INSTANCE MFX_PYROKINESIS_INIT (C_PARTICLEFX)
      shpscalekeys_s = "1";
      shpscaleislooping = 1;
      shpscaleissmooth = 1;
-     shpscalefps = 2;
+     shpscalefps = 2.000000000;
      dirmode_s = "NONE";
      dirfor_s = "object";
      dirmodetargetfor_s = "OBJECT";
      dirmodetargetpos_s = "0 0 0";
-     dirangleheadvar = 180;
-     dirangleelevvar = 180;
-     velavg = 0.00999999978;
-     lsppartavg = 500;
-     lsppartvar = 200;
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     velavg = 0.010000000;
+     lsppartavg = 150.000000000;
      flygravity_s = "0 0 0";
-     visname_s = "MFX_MAGICCLOUD.TGA";
+     flycolldet_b = 0;
+     visname_s = "HUMANBURN.TGA";
      visorientation_s = "VELO";
      vistexisquadpoly = 1;
-     vistexanifps = 18;
+     vistexanifps = 18.000000000;
      vistexaniislooping = 1;
-     vistexcolorstart_s = "255 255 50";
-     vistexcolorend_s = "255 0 0";
+     vistexcolorstart_s = "255 255 255";
+     vistexcolorend_s = "255 150 0";
      vissizestart_s = "5 5";
-     vissizeendscale = 12;
+     vissizeendscale = 8.000000000;
      visalphafunc_s = "ADD";
-     visalphastart = 255;
+     visalphastart = 255.000000000;
 };
 
 INSTANCE MFX_PYROKINESIS_BRIDGE (C_PARTICLEFX)
@@ -6291,44 +6291,44 @@ INSTANCE MFX_PYROKINESIS_ORIGIN (C_PARTICLEFX)
 
 INSTANCE MFX_PYROKINESIS_TARGET (C_PARTICLEFX)
 {
-     ppsvalue = 500;
+     ppsvalue = 50.000000000;
      ppsscalekeys_s = "1";
      ppsislooping = 1;
      ppsissmooth = 1;
-     ppsfps = 2;
+     ppsfps = 2.000000000;
      shptype_s = "SPHERE";
      shpfor_s = "WORLD";
      shpoffsetvec_s = "0 0 0";
      shpdistribtype_s = "RAND";
-     shpdim_s = "400";
+     shpdim_s = "200";
      shpscalekeys_s = "1";
      shpscaleislooping = 1;
      shpscaleissmooth = 1;
-     shpscalefps = 2;
+     shpscalefps = 2.000000000;
      dirmode_s = "TARGET";
      dirfor_s = "object";
      dirmodetargetfor_s = "OBJECT";
      dirmodetargetpos_s = "0 0 0";
-     dirangleheadvar = 180;
-     dirangleelevvar = 180;
-     velavg = 0.5;
-     lsppartavg = 1000;
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     velavg = 0.300000012;
+     lsppartavg = 1000.000000000;
      flygravity_s = "0 0 0";
-     visname_s = "MFX_MAGICCLOUD.TGA";
-     visorientation_s = "VELO";
-     vistexisquadpoly = 1;
-     vistexanifps = 18;
+     flycolldet_b = 0;
+     visname_s = "FIREFLARE.TGA";
+     visorientation_s = "NONE";
+     vistexanifps = 18.000000000;
      vistexaniislooping = 1;
-     vistexcolorstart_s = "0 0 0";
-     vistexcolorend_s = "0 0 0";
-     vissizestart_s = "2 2";
-     vissizeendscale = 20;
+     vistexcolorstart_s = "20 0 0";
+     vistexcolorend_s = "255 200 200";
+     vissizestart_s = "10 10";
+     vissizeendscale = 20.000000000;
      visalphafunc_s = "ADD";
-     visalphastart = 255;
-     visalphaend = 255;
-     trlfadespeed = 1;
-     trltexture_s = "MFX_PYROTRAIL.TGA";
-     trlwidth = 10;
+     visalphastart = 255.000000000;
+     visalphaend = 50.000000000;
+     trlfadespeed = 0.400000006;
+     trltexture_s = "MFX_PYROKINESIS_TARGETTRAIL.TGA";
+     trlwidth = 4.000000000;
 };
 
 

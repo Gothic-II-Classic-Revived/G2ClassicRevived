@@ -38,7 +38,21 @@ func int Spell_Logic_Pyrokinesis(var int manaInvested)
 	|| (other.guild == GIL_DEMON)
 	|| (other.guild == GIL_SUMMONED_DEMON)
 	{
+		Npc_SendSinglePerc(self, other, PERC_ASSESSSTOPMAGIC);
 		return SPL_SENDSTOP;
+	};
+
+	if (self.attribute[ATR_MANA] < SPL_PYRO_MANA_PER_INVEST)
+	{
+		Npc_SendSinglePerc(self, other, PERC_ASSESSSTOPMAGIC);
+		return SPL_SENDSTOP;
+	};
+
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_PYRO_MANA_PER_INVEST;
+
+	if (self.attribute[ATR_MANA] < 0)
+	{
+		self.attribute[ATR_MANA] = 0;
 	};
 
 	return SPL_NEXTLEVEL;

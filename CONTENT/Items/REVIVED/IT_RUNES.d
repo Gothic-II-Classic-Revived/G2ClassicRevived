@@ -137,6 +137,8 @@ INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
 
 	TEXT	[1]			= 	NAME_DamagePerSec;
 	COUNT	[1]			= 	SPL_PYRO_DAMAGE_PER_SEC;
+	TEXT	[2]			= 	NAME_ManaPerSec;
+	COUNT	[2]			= 	SPL_PYRO_MANA_PER_SEC;
 	TEXT	[4]			= 	NAME_Spell_Invest;
 	TEXT	[5]			= 	NAME_Value;
 	COUNT	[5]			= 	value;
