@@ -1672,10 +1672,9 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
 	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
 	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
-
-	Wld_InsertNpc		(Alligator,"OW_OC_PSI_MOVEMENT1");
-	Wld_InsertNpc		(Alligator,"OW_OC_PSI_MOVEMENT1");
-	Wld_InsertNpc		(Alligator,"OW_OC_PSI_MOVEMENT1");
+	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
+	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
+	Wld_InsertNpc		(BeachWaran,"SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01");
 
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_GOBBO_LOCATION_29_03");
 	Wld_InsertNpc		(Gobbo_Warrior,"SPAWN_GOBBO_LOCATION_29_03");
