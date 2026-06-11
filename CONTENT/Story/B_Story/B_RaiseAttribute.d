@@ -11,6 +11,16 @@ func void B_RaiseRealAttributeLearnCounter (var C_NPC oth, var int attrib, var i
 };
 
 // ---------------------------------------
+func int B_GetRealAttribute (var C_NPC oth, var int attrib)
+{
+	if 		(attrib == ATR_STRENGTH)	{	return oth.aivar[REAL_STRENGTH];	}
+	else if (attrib == ATR_DEXTERITY)	{	return oth.aivar[REAL_DEXTERITY];	}
+	else if (attrib == ATR_MANA_MAX)	{	return oth.aivar[REAL_MANA_MAX];	};
+
+	return 0;
+};
+
+// ---------------------------------------
 func void B_RaiseAttribute (var C_NPC oth, var int attrib, var int points)
 {
 	var string concatText;
@@ -57,6 +67,4 @@ func void B_RaiseAttribute (var C_NPC oth, var int attrib, var int points)
 		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(points));
 		PrintScreen	(concatText, -1, -1, FONT_SCREEN, 2);
 	};
-	
-	B_RaiseRealAttributeLearnCounter (oth, attrib, points);
 };

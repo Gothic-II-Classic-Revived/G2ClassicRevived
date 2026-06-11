@@ -26,9 +26,7 @@ func int B_TeachAttributePoints (var C_NPC slf, var C_NPC oth, var int attrib, v
 	
 	// ------ Lernen NICHT über teacherMax ------
 	var int realAttribute;
-	if 		(attrib == ATR_STRENGTH)	{	realAttribute = oth.attribute[ATR_STRENGTH];	}	// Umwandeln von const-Parameter in VAR für folgende If-Abfrage
-	else if (attrib == ATR_DEXTERITY)	{	realAttribute = oth.attribute[ATR_DEXTERITY];	}
-	else if (attrib == ATR_MANA_MAX)	{	realAttribute = oth.attribute[ATR_MANA_MAX];	};
+	realAttribute = B_GetRealAttribute (oth, attrib);
 	
 	if (realAttribute >= teacherMAX)				//Wenn der Spieler schon das teacherMAX erreicht oder überschritten hat
 	{
@@ -63,6 +61,7 @@ func int B_TeachAttributePoints (var C_NPC slf, var C_NPC oth, var int attrib, v
 	// ------ Lernpunkte abziehen ------			
 	oth.lp = oth.lp - kosten;
 		
+	B_RaiseRealAttributeLearnCounter (oth, attrib, points);
 	B_RaiseAttribute (oth, attrib, points);
 	
 	return TRUE;
