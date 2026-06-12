@@ -159,8 +159,7 @@ func void DIA_Gestath_TEACHHUNTING_Info ()
 {
 	AI_Output			(other, self, "DIA_Gestath_TEACHHUNTING_15_00"); //Teach me how to gut animals.
 	if 	(
-			(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_FireTongue] == FALSE)
-			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_CrawlerPlate] == FALSE)
+			(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_CrawlerPlate] == FALSE)
 			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Mandibles] == FALSE)
 			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE)
 			||	(
@@ -184,10 +183,6 @@ func void DIA_Gestath_TEACHHUNTING_Info ()
 	
 				Info_AddChoice		(DIA_Gestath_TEACHHUNTING, DIALOG_BACK, DIA_Gestath_TEACHHUNTING_BACK);
 			
-				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_FireTongue] == FALSE)
-				{ 
-					Info_AddChoice	(DIA_Gestath_TEACHHUNTING, B_BuildLearnString ("Tongue of fire",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_FireTongue)),  DIA_Gestath_TEACHHUNTING_FireTongue);
-				};
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_CrawlerPlate] == FALSE)
 				{ 
 					Info_AddChoice	(DIA_Gestath_TEACHHUNTING, B_BuildLearnString ("Remove crawler plates",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_CrawlerPlate)),  DIA_Gestath_TEACHHUNTING_CrawlerPlate	);
@@ -221,15 +216,6 @@ func void DIA_Gestath_TEACHHUNTING_Info ()
 
 func void DIA_Gestath_TEACHHUNTING_BACK()
 {
-	Info_ClearChoices	(DIA_Gestath_TEACHHUNTING);
-};
-
-func void DIA_Gestath_TEACHHUNTING_FireTongue()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_FireTongue))
-		{
-			AI_Output			(self, other, "DIA_Gestath_TEACHHUNTING_FireTongue_09_00"); //You cut a fire lizard's tongue out of its mouth with one stroke of the knife, while you hold it with your other hand.
-		};
 	Info_ClearChoices	(DIA_Gestath_TEACHHUNTING);
 };
 

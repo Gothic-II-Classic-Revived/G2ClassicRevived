@@ -24,6 +24,13 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
 		CreateInvItems (slf, ITRI_REVIVED_DEX_02, 1); 
 		
+		// ------ Bestiaries ------
+		CreateInvItems (slf, ITWR_REVIVED_BESTIARY_SWAMPSHARK, 1); 
+		CreateInvItems (slf, ITWR_REVIVED_BESTIARY_GOLEM, 1); 
+		CreateInvItems (slf, ITWR_REVIVED_BESTIARY_FIRELIZARD, 1); 
+		CreateInvItems (slf, ITWR_REVIVED_BESTIARY_BLACKTROLL, 1); 
+		CreateInvItems (slf, ITWR_REVIVED_BESTIARY_MANTIS, 1); 
+		
 		
 		Bosper_ItemsGiven_Chapter_1 = TRUE;
 	};

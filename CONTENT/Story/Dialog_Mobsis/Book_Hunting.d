@@ -29,14 +29,14 @@ FUNC VOID Use_BookstandAnimals1_S1()		//Tierbücher
 					Doc_PrintLines	( nDocID,  0, "An experienced hunter knows all about the trophies of the prey and how to gut them.");
 					Doc_PrintLine	( nDocID,  0, ""						);
 					Doc_PrintLine	( nDocID,  0, "Extract Teeth"						);
-					Doc_PrintLines	( nDocID,  0, "Teeth are the weapons of many beasts and creatures. If you know how to extract them from your prey, wolves, snappers, shadowbeasts, swampsharks and trolls are the best targets."						);
+					Doc_PrintLines	( nDocID,  0, "Teeth are the weapons of many beasts and creatures. If you know how to extract them from your prey, wolves, snappers, shadowbeasts and trolls are the best targets."						);
 				
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, "Skinning"						);
 					Doc_PrintLines	( nDocID,  1, "A talent experienced hunters value greatly, for many animals have pelts - sheep, wolves and shadowbeats, for example."						); 
-					Doc_PrintLines	( nDocID,  1, "A hunter with this skill can also skin swampsharks and lurkers."						);
+					Doc_PrintLines	( nDocID,  1, "A hunter with this skill can also skin lurkers and other reptiles."						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, ""						);
 					Doc_PrintLine	( nDocID,  1, "Extract Claws"						);
@@ -194,6 +194,7 @@ FUNC VOID UseItWr_Bloodfly_01()
 					PrintScreen	("Learn: Remove sting", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 					}; */
 };
+
 
 FUNC VOID UseJagd_und_Beute()
 {   
