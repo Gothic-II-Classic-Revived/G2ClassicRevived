@@ -3426,12 +3426,65 @@ INSTANCE spellFX_MassDeath_COLLIDEDYNFX		(CFx_Base_Proto)
 		sfxid					= "MFX_MassdeatH_Target";
 };
 
-///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-///   													XX  D E S T R O Y   U N D E A D  XX
-///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///   											XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///   											XX  P A L A D I N   D E A T H W A V E  XX
+///    											XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///   												XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///   												XX  P A L A D I N   D E A T H W A V E  XX
+///    											XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+INSTANCE spellFX_PalWaveOfDeath(CFx_Base_Proto)
+{
+	visname_S 				= "MFX_PALWAVEOFDEATH_INIT";
+	emtrjmode_s 			= "FIXED";
+	emTrjOriginNode 		= "ZS_RIGHTHAND";
+	emtrjloopmode_s 		= "NONE";
+	emFXCreatedOwnTrj 		= 0;
+};
 
+INSTANCE spellFX_PalWaveOfDeath_KEY_INIT(C_ParticleFXEmitKey)
+{
+	visname_S 				= "MFX_PALWAVEOFDEATH_INIT";
+};
 
+INSTANCE spellFX_PalWaveOfDeath_KEY_CAST(C_ParticleFXEmitKey)
+{
+	emCreateFXID			= "spellFX_PalWaveOfDeath_WAVE";
+	pfx_ppsIsLoopingChg	= 1;
+	sfxid					= "MFX_PalWaveOfDeath_Cast";
+	sfxisambient			= 1;
+};
 
+INSTANCE spellFX_PalWaveOfDeath_WAVE(CFx_Base_Proto)
+{
+	visname_S 				= "MFX_PALWAVEOFDEATH_WAVE";
+	visAlpha				= 1;
+	emtrjmode_s 			= "FIXED";
+	emTrjOriginNode 		= "BIP01 R Foot";
+	emActionCollDyn_S		= "CREATEONCE";
+	emFXCollDyn_S			= "spellFX_PalWaveOfDeath_COLLIDEDYNFX";
+	emFXCollDynAlign_S		= "COLLISIONNORMAL";
+	emCheckCollision		= 1;
+	emtrjloopmode_s 		= "NONE";
+	LightPresetName			= "AURA";
+};
+
+INSTANCE spellFX_PalWaveOfDeath_COLLIDEDYNFX(CFx_Base_Proto)
+{
+	emTrjOriginNode 		= "BIP01";
+	visname_S 				= "MFX_PALWAVEOFDEATH_COLLIDE";
+	emtrjmode_s 			= "FIXED";
+	emtrjdynupdatedelay 	= 0.;
+	lightpresetname			= "AURA";
+	sfxid					= "MFX_PalWaveOfDeath_Collide";
+	sfxisambient			= 1;
+};
+
+INSTANCE spellFX_PalWaveOfDeath_SUB(CFx_Base_Proto)
+{
+	visname_S 				= "";
+	emtrjmode_s 			= "FIXED";
+	emTrjOriginNode 		= "BIP01 HEAD";
+};
 INSTANCE spellFX_DestroyUndead(CFx_Base_Proto)
 {
 

@@ -226,6 +226,41 @@ INSTANCE ITSC_REVIVED_PYROKINESIS (C_Item)
 };
 
 //****************************************************************************
+//			PALADIN SPELLS
+//****************************************************************************
+
+const int REV_Value_PAL_WAVE_OF_DEATH_SCROLL = 1000;
+
+INSTANCE ItSc_PalWaveOfDeath (C_Item)
+{
+	name 				= 	NAME_SPL_PalWaveOfDeath;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_PAL_WAVE_OF_DEATH_SCROLL;
+
+	visual				= 	"ItSc_PalDestroyEvil.3DS";
+
+	spell				= 	SPL_PalWaveOfDeath;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_PalWaveOfDeath;
+	TEXT	[0]			= 	NAME_Paladin;
+	TEXT	[1]			= 	NAME_Spruchrolle;
+	TEXT	[2]			= 	NAME_Mana_needed;
+	COUNT	[2]			= 	SPL_Cost_Scroll;
+	TEXT	[3]			= 	NAME_Dam_Magic;
+	COUNT	[3]			= 	SPL_Damage_MassDeath;
+	TEXT	[5]			= 	NAME_Value;
+	COUNT	[5]			= 	value;
+};
+//****************************************************************************
 //			TRANSFORM (From G2)
 //****************************************************************************
 

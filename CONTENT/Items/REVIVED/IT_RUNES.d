@@ -143,3 +143,38 @@ INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
 	TEXT	[5]			= 	NAME_Value;
 	COUNT	[5]			= 	value;
 };
+
+//****************************************************************************
+//			PALADIN SPELLS
+//****************************************************************************
+
+const int REV_Value_PAL_WAVE_OF_DEATH_RUNE = 3000;
+
+INSTANCE ItRu_PalWaveOfDeath (C_Item)
+{
+	name 				= 	NAME_SPL_PalWaveOfDeath;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	0;
+
+	value 				= 	REV_Value_PAL_WAVE_OF_DEATH_RUNE;
+
+	visual				= 	"ItRu_PalDestroyEvil.3DS";
+	material			= 	MAT_STONE;
+
+	spell				= 	SPL_PalWaveOfDeath;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_PalWaveOfDeath;
+
+	TEXT	[0]			= 	NAME_Paladin;
+	TEXT	[1]			= 	NAME_Rune;
+	TEXT	[2]			= 	NAME_Manakosten;
+	COUNT	[2]			= 	SPL_Cost_MassDeath;
+	TEXT	[3]			= 	NAME_Dam_Magic;
+	COUNT	[3]			= 	SPL_Damage_MassDeath;
+	TEXT	[5]			= 	NAME_Value;
+	COUNT	[5]			= 	value;
+};

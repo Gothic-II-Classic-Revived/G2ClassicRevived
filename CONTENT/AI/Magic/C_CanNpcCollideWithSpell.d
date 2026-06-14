@@ -22,9 +22,20 @@ const int COLL_APPLYVICTIMSTATE		= 1<<4;
 const int COLL_DONTKILL				= 1<<5;
 
 
+func int C_NpcIsPalWaveOfDeathTarget(var C_NPC slf)
+{
+	if (C_NpcIsUndead(slf))
+	|| (slf.guild == GIL_DMT)
+	|| (slf.guild == GIL_DEMON)
+	|| (slf.guild == GIL_SUMMONED_DEMON)
+	|| (slf.guild == GIL_SummonedZombie)
+	{
+		return TRUE;
+	};
+	return FALSE;
+};
 func int C_CanNpcCollideWithSpell(var int spellType)
 {
-
 //#################
 //###	Addon	###
 //#################
@@ -540,8 +551,28 @@ if (spellType == SPL_WINDFIST)
 		return COLL_DONOTHING;
 	};
 
+// ---- Paladin-Todeswelle ----
+
+	if (spellType == SPL_PalWaveOfDeath)
+	{
+		if (Npc_IsDead(self))
+		|| (C_BodyStateContains(self,BS_SWIM))
+		|| (C_BodyStateContains(self,BS_DIVE))
+		|| (self.flags == NPC_FLAG_IMMORTAL)
+		{
+			return COLL_DONOTHING;
+		};
+
+		if (C_NpcIsPalWaveOfDeathTarget(self))
+		{
+			return COLL_DOEVERYTHING;
+		};
+
+		return COLL_DONOTHING;
+	};
+
 // ---- Finaler Spruch ----
-	
+
 	if (spellType 	== SPL_MasterOfDisaster)
 	{
 		if (!C_NpcIsDown(self))

@@ -171,7 +171,8 @@ INSTANCE Piss_End     			    	(C_SFX_DEF) {file= "piss_end.wav";			vol = 10;			}
 
 /* Destr.UD */	INSTANCE MFX_DestroyUndead_Cast			(C_SFX_DEF) {file= "MFX_DestroyUndead_Cast.wav";	vol = 127;			};
 				INSTANCE MFX_DestroyUndead_Collide		(C_SFX_DEF) {file= "MFX_DestroyUndead_Collide.wav";	vol = 127;			};
-
+/* PalWave */	INSTANCE MFX_PalWaveOfDeath_Cast		(C_SFX_DEF) {file= "MFX_DestroyUndead_Cast.wav";		vol = 127;			};
+				INSTANCE MFX_PalWaveOfDeath_Collide	(C_SFX_DEF) {file= "MFX_DestroyUndead_Collide.wav";	vol = 127;			};
 /* EarthQuake*/	INSTANCE MFX_EarthQuake					(C_SFX_DEF) {file= "EarthQuake.wav";				vol = 127;			};
 
 /* Fear */		INSTANCE MFX_Fear_Cast					(C_SFX_DEF) {file= "MFX_Fear_Cast.wav";				vol = 127;			};

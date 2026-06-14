@@ -849,6 +849,9 @@ const int	SPL_PYRO_DAMAGE_PER_SEC		= 20;
 const int	SPL_PYRO_MANA_PER_INVEST	= 1;
 const int	SPL_PYRO_MANA_PER_SEC		= 4;
 
+const int	SPL_PalWaveOfDeath		= 123;
+const string NAME_SPL_PalWaveOfDeath	= "Wave of Banishment";
+
 
 
 // ***************

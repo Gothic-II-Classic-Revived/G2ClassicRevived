@@ -6579,7 +6579,6 @@ INSTANCE MFX_ICEWAVE_WAVE (C_PARTICLEFX)
      ppsissmooth = 1;
      ppsfps = 40;
      ppscreateem_s = "MFX_ICEWAVE_WAVE2";
-     ppscreateemdelay = 3000;
      shptype_s = "CIRCLE";
      shpfor_s = "world";
      shpoffsetvec_s = "0 -50 0";
@@ -7553,6 +7552,125 @@ INSTANCE MFX_MASTEROFDISASTER_COLLIDE (C_PARTICLEFX)
 };
 
 
+
+///    											XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///    											XX  P A L A D I N   D E A T H W A V E  XX
+///    											XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+INSTANCE MFX_PALWAVEOFDEATH_INIT (C_PARTICLEFX)
+{
+     ppsvalue = 50.000000000;
+     ppsscalekeys_s = "1";
+     ppsislooping = 1;
+     ppsissmooth = 1;
+     ppsfps = 1.000000000;
+     shptype_s = "SPHERE";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "15";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2.000000000;
+     dirmode_s = "TARGET";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     velavg = 0.001000000;
+     lsppartavg = 800.000000000;
+     lsppartvar = 100.000000000;
+     flygravity_s = "0 0 0";
+     flycolldet_b = 0;
+     visname_s = "DESTROYUNDEAD3.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 230 120";
+     vistexcolorend_s = "80 180 255";
+     vissizestart_s = "3 3";
+     vissizeendscale = 20.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+};
+
+INSTANCE MFX_PALWAVEOFDEATH_WAVE (C_PARTICLEFX)
+{
+     ppsvalue = 50;
+     ppsscalekeys_s = "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40";
+     ppsissmooth = 1;
+     ppsfps = 40;
+     shptype_s = "CIRCLE";
+     shpfor_s = "world";
+     shpoffsetvec_s = "0 -50 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "20";
+     shpscalekeys_s = "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40";
+     shpscalefps = 40;
+     dirmode_s = "RAND";
+     dirfor_s = "object";
+     diranglehead = 90;
+     dirangleheadvar = 45;
+     dirangleelev = 90;
+     dirangleelevvar = 45;
+     velavg = 0.00100000005;
+     lsppartavg = 2350;
+     flygravity_s = "0";
+     visname_s = "DESTROYUNDEAD3.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 230 120";
+     vistexcolorend_s = "80 180 255";
+     vissizestart_s = "40 40";
+     vissizeendscale = 1;
+     visalphafunc_s = "ADD";
+     visalphastart = 255;
+     visalphaend = 255;
+     trltexture_s = "DESTROYUNDEAD2.TGA";
+};
+
+INSTANCE MFX_PALWAVEOFDEATH_COLLIDE (C_PARTICLEFX)
+{
+     ppsvalue = 100.000000000;
+     ppsscalekeys_s = "1";
+     ppsfps = 5.000000000;
+     shptype_s = "SPHERE";
+     shpfor_s = "object";
+     shpoffsetvec_s = "0 0 0";
+     shpdistribtype_s = "RAND";
+     shpdim_s = "15";
+     shpscalekeys_s = "1";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 2.000000000;
+     dirmode_s = "TARGET";
+     dirfor_s = "object";
+     dirmodetargetfor_s = "OBJECT";
+     dirmodetargetpos_s = "0 0 0";
+     dirangleheadvar = 180.000000000;
+     dirangleelevvar = 180.000000000;
+     velavg = 0.001000000;
+     lsppartavg = 800.000000000;
+     lsppartvar = 100.000000000;
+     flygravity_s = "0 0 0";
+     flycolldet_b = 0;
+     visname_s = "DESTROYUNDEAD3.TGA";
+     visorientation_s = "VELO";
+     vistexisquadpoly = 1;
+     vistexanifps = 18.000000000;
+     vistexaniislooping = 1;
+     vistexcolorstart_s = "255 230 120";
+     vistexcolorend_s = "80 180 255";
+     vissizestart_s = "3 3";
+     vissizeendscale = 200.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+};
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ///   													XX  D E S T R O Y   U N D E A D  XX
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

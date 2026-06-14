@@ -66,6 +66,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_Firerain				)	{	return	Spell_Logic_Firerain		(manaInvested);	};
 	if (activeSpell == SPL_BreathOfDeath		)	{	return	Spell_Logic_BreathOfDeath	(manaInvested);	};
 	if (activeSpell == SPL_MassDeath			)	{	return	Spell_Logic_MassDeath		(manaInvested);	};
+	if (activeSpell == SPL_PalWaveOfDeath		)	{	return	Spell_Logic_PalWaveOfDeath	(manaInvested);	};
 	if (activeSpell == SPL_ArmyOfDarkness		)	{	return	Spell_Logic_ArmyOfDarkness	(manaInvested);	};
 	if (activeSpell == SPL_Shrink				)	{	return	Spell_Logic_Shrink			(manaInvested);	};
 	//Scrolls
