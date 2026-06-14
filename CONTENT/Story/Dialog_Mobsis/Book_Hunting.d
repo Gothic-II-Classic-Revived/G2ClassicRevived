@@ -149,52 +149,6 @@ FUNC VOID Use_BookstandAnimals3_S1()		//Tierbücher
 //##
 //##########################################################################
 
-FUNC VOID UseItWr_Bloodfly_01()
-{   
-	var int nDocID;
-	nDocID = 	Doc_Create		()			  ;	 
-				Doc_SetPages	( nDocID,  2 );
-
-				Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga", 	0 		); 
-				Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga",	0		);
-
- 				Doc_SetFont 	( nDocID, -1, FONT_Book2	   			); 
- 				Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);
- 				Doc_PrintLine	( nDocID,  0,"Bloodflies");
-  				Doc_PrintLine	( nDocID,  0,"");
-				Doc_PrintLine	( nDocID,  0," ");
-				Doc_SetFont 	( nDocID, -1, "font_10_book.TGA"	   			); 
-				Doc_PrintLine	( nDocID,  0,"About the Flies");
-				Doc_PrintLine	( nDocID,  0,"");
-				Doc_PrintLines	( nDocID,  0,"But in that place, where the soil is damp and the air is humid, the flies gather, attracted by the sweat of all kinds of beings. They use their stings to kill their victims and feast on their blood.");
-				Doc_PrintLine	( nDocID,  0,"");
-
-				Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
-				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLines	( nDocID,  1,"To take such a sting is the art of many hunters in the swamp. Make a deep cut into the creature's abdomen, then cut in a zigzag line around the sting and remove it carefully, together with the tissue surrounding it. Let it bleed and scrape off the inedible meat.");	
-				Doc_PrintLine	( nDocID,  1,"");
-				Doc_PrintLine	( nDocID,  1,"");
-				
-				Doc_Show		( nDocID );
-					
-				if (RevivedBookstandRead_Hunting4 == FALSE)
-				{
-					REV_ReadBook(BookType_Hunting);
-					RevivedBookstandRead_Hunting4 = TRUE;
-				};
-/* 					
-					if Knows_GetBFSting ==  FALSE
-					{
-					Knows_GetBFSting = TRUE;
-					Log_CreateTopic (GE_AnimalTrophies,LOG_NOTE);
-					B_LogEntry (GE_AnimalTrophies,"How to remove stings - bloodflies");	
-					PrintScreen	("Learn: Remove sting", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
-					}; */
-};
-
 
 FUNC VOID UseJagd_und_Beute()
 {   

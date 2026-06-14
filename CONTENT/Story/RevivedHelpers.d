@@ -150,20 +150,3 @@ func int REV_IsRequiredKillTarget (var C_NPC slf)
 
 	return FALSE;
 };
-
-
-FUNC VOID REV_LearnBestiaryTrophy(var int trophy, var string logText)
-{
-	var C_NPC her;
-	her = Hlp_GetNpc(PC_Hero);
-
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[trophy] == FALSE)
-	{
-		PLAYER_TALENT_TAKEANIMALTROPHY[trophy] = TRUE;
-		Log_CreateTopic (TOPIC_TalentAnimalTrophy,LOG_NOTE);
-		B_LogEntry (TOPIC_TalentAnimalTrophy,"Now I can:");
-		B_LogEntry (TOPIC_TalentAnimalTrophy,logText);
-		PrintScreen (PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
-		Npc_SetTalentSkill (her, NPC_TALENT_TAKEANIMALTROPHY, 1);
-	};
-};

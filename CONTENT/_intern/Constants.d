@@ -1190,16 +1190,9 @@ const int TROPHY_DrgSnapperHorn			= 10;
 const int TROPHY_DragonScale			= 11;
 const int TROPHY_DragonBlood			= 12;
 const int TROPHY_ReptileSkin			= 13;
-const int TROPHY_SwampsharkTeeth		= 14;
-const int TROPHY_SwampsharkSkin		= 15;
-const int TROPHY_GolemHeart			= 16;
-const int TROPHY_FireLizardTongue		= 17;
-const int TROPHY_BlackTrollSkin		= 18;
-const int TROPHY_MantisHead			= 19;
 
-const int MAX_TROPHIES					= 20;
-
-var int PLAYER_TALENT_TAKEANIMALTROPHY[MAX_TROPHIES];
+//const int MAX_TROPHIES					= 14;
+//var int PLAYER_TALENT_TAKEANIMALTROPHY[MAX_TROPHIES];
 
 
 // ****************************************

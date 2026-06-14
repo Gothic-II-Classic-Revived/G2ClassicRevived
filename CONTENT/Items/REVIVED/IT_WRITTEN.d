@@ -1192,10 +1192,37 @@ INSTANCE ITWR_REVIVED_BLOODFLIES (C_Item)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";	
-	description				=	"The Bloodflies";
+	description				=	name;
 	
-	TEXT[5]					= NAME_Value;			COUNT[5]	= value;
-	on_state[0]				=	UseItWr_Bloodfly_01;
+	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
+	on_state[0]				=	UseItWr_Bestiary_Bloodfly;
+};
+
+FUNC VOID UseItWr_Bestiary_Bloodfly()
+{   
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Brown_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Brown_R.tga", 0);
+	Doc_SetFont(nDocID, -1, FONT_Book2);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_PrintLine(nDocID, 0, "The Bloodflies");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "But in that place, where the soil is damp and the air is humid, the flies gather, attracted by the sweat of all kinds of beings. They use their stings to kill their victims and feast on their blood.");
+	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "To take such a sting is the art of many hunters in the swamp. Make a deep cut into the creature's abdomen, then cut in a zigzag line around the sting and remove it carefully, together with the tissue surrounding it. Let it bleed and scrape off the inedible meat.");
+	Doc_Show(nDocID);
+
+	if (RevivedBookstandRead_Hunting4 == FALSE)
+	{
+		REV_ReadBook(BookType_Hunting);
+		RevivedBookstandRead_Hunting4 = TRUE;
+	};
 };
 
 /******************************************************************************************/
@@ -1228,18 +1255,32 @@ FUNC VOID UseItWr_Bestiary_Swampshark()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "The Swampsharks");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_SetFont(nDocID, -1, "font_10_book.TGA");
-	Doc_PrintLines(nDocID, 0, "Swampsharks live in warm marshes and muddy water. Their size makes them slow on dry ground, but in their own territory they are dangerous hunters.");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "The jaws are the safest trophy to take first. Cut behind the gum and loosen each tooth from the base instead of striking the skull.");
+	Doc_PrintLines(nDocID, 0, "Swampsharks live in warm marshes and muddy water. Their size makes them slow on dry ground, but in their own territory they are dangerous hunters.");
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "The jaws are the safest trophy to take first. Cut behind the gum and loosen each tooth from the base instead of striking the skull.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLines(nDocID, 1, "The hide is thick and tears easily near the belly. Start behind the forelegs, keep the knife flat, and pull the skin away in one piece.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 
-	REV_LearnBestiaryTrophy(TROPHY_SwampsharkTeeth, "...remove swampshark teeth.");
-	REV_LearnBestiaryTrophy(TROPHY_SwampsharkSkin, "...skin dead swampsharks.");
+	if (RevivedBookstandRead_Hunting6 == FALSE)
+	{
+		REV_ReadBook(BookType_Hunting);
+		RevivedBookstandRead_Hunting6 = TRUE;
+
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_SwampsharkTeeth] = TRUE;
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_SwampsharkSkin] = TRUE;
+
+		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "...remove swampshark teeth.");
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "...skin dead swampsharks.");
+		PrintScreen (PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TAKEANIMALTROPHY, 1);
+	};
 };
 
 /******************************************************************************************/
@@ -1272,17 +1313,30 @@ FUNC VOID UseItWr_Bestiary_Golem()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "The Golems");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_SetFont(nDocID, -1, "font_10_book.TGA");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLines(nDocID, 0, "A golem is not flesh, but animated matter bound around a core. Stone, fire, ice and swamp golems differ in body, but not in principle.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Do not search for organs. Break open the chest cavity and remove the charged heart before the body collapses completely.");
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "Do not search for organs. Break open the chest cavity and remove the charged heart before the body collapses completely.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLines(nDocID, 1, "The heart carries the nature of the golem. Keep it wrapped and away from water, flame or frost unless you know exactly what it is.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 
-	REV_LearnBestiaryTrophy(TROPHY_GolemHeart, "...remove hearts from dead golems.");
+	if (RevivedBookstandRead_Hunting7 == FALSE)
+	{
+		REV_ReadBook(BookType_Hunting);
+		RevivedBookstandRead_Hunting7 = TRUE;
+
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_GolemHeart] = TRUE;
+
+		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "...remove hearts from dead golems.");
+		PrintScreen (PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TAKEANIMALTROPHY, 1);
+	};
 };
 
 /******************************************************************************************/
@@ -1315,17 +1369,30 @@ FUNC VOID UseItWr_Bestiary_FireLizard()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "The Fire Lizards");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_SetFont(nDocID, -1, "font_10_book.TGA");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLines(nDocID, 0, "Fire lizards are warans changed by heat and magic. The glands in the throat feed their flame, and the tongue is hardened by it.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Let the carcass cool before cutting. Hold the lower jaw open and sever the tongue at the root with one clean stroke.");
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "Let the carcass cool before cutting. Hold the lower jaw open and sever the tongue at the root with one clean stroke.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLines(nDocID, 1, "If the cut is shallow, the tongue tears and loses its value. A hunter should use a sharp knife and avoid the throat glands.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 
-	REV_LearnBestiaryTrophy(TROPHY_FireLizardTongue, "...remove tongues from dead fire lizards.");
+	if (RevivedBookstandRead_Hunting8 == FALSE)
+	{
+		REV_ReadBook(BookType_Hunting);
+		RevivedBookstandRead_Hunting8 = TRUE;
+
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireLizardTongue] = TRUE;
+
+		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "...remove tongues from dead fire lizards.");
+		PrintScreen (PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TAKEANIMALTROPHY, 1);
+	};
 };
 
 /******************************************************************************************/
@@ -1358,17 +1425,30 @@ FUNC VOID UseItWr_Bestiary_BlackTroll()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "The Black Troll");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_SetFont(nDocID, -1, "font_10_book.TGA");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLines(nDocID, 0, "The black troll is larger, older and tougher than common trolls. Its hide is heavy enough to turn a poor blade.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Begin at the neck where the fur parts naturally. Work slowly along the spine and keep the hide stretched while cutting.");
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "Begin at the neck where the fur parts naturally. Work slowly along the spine and keep the hide stretched while cutting.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLines(nDocID, 1, "The skin is prized because it is rare and dense. Torn pieces are almost worthless, so the first cut matters more than strength.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 
-	REV_LearnBestiaryTrophy(TROPHY_BlackTrollSkin, "...skin dead black trolls.");
+	if (RevivedBookstandRead_Hunting9 == FALSE)
+	{
+		REV_ReadBook(BookType_Hunting);
+		RevivedBookstandRead_Hunting9 = TRUE;
+
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BlackTrollSkin] = TRUE;
+
+		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "...skin dead black trolls.");
+		PrintScreen (PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TAKEANIMALTROPHY, 1);
+	};
 };
 
 /******************************************************************************************/
@@ -1401,17 +1481,30 @@ FUNC VOID UseItWr_Bestiary_Mantis()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_PrintLine(nDocID, 0, "The Mantises");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_SetFont(nDocID, -1, "font_10_book.TGA");
+	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLines(nDocID, 0, "Mantises strike with their forelegs and protect the head with hard plates. The trophy is delicate despite the armor.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Cut below the first neck plate and do not crush the mandibles. A cleanly separated head is the only part worth carrying.");
 	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "Cut below the first neck plate and do not crush the mandibles. A cleanly separated head is the only part worth carrying.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLines(nDocID, 1, "Hunters should wrap the head at once. The chitin splits if it dries too quickly in the sun.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 
-	REV_LearnBestiaryTrophy(TROPHY_MantisHead, "...remove heads from dead mantises.");
+	if (RevivedBookstandRead_Hunting10 == FALSE)
+	{
+		REV_ReadBook(BookType_Hunting);
+		RevivedBookstandRead_Hunting10 = TRUE;
+
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_MantisHead] = TRUE;
+
+		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
+		B_LogEntry (TOPIC_TalentAnimalTrophy, "...remove heads from dead mantises.");
+		PrintScreen (PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TAKEANIMALTROPHY, 1);
+	};
 };
 
 /******************************************************************************************/

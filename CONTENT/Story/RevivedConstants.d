@@ -625,7 +625,12 @@ var int		RevivedBookstandRead_Hunting2;
 var int		RevivedBookstandRead_Hunting3;
 var int		RevivedBookstandRead_Hunting4;
 var int		RevivedBookstandRead_Hunting5;
-const int	Read_BookstandHunting_Max = 5;
+var int		RevivedBookstandRead_Hunting6;
+var int		RevivedBookstandRead_Hunting7;
+var int		RevivedBookstandRead_Hunting8;
+var int		RevivedBookstandRead_Hunting9;
+var int		RevivedBookstandRead_Hunting10;
+const int	Read_BookstandHunting_Max = 10;
 
 const int 	BookType_Combat = 5;
 var int 	Read_BookstandCombat;
@@ -1009,6 +1014,21 @@ const string NAME_CBOW_REVIVED_04		= "Ore Bastard Sword";
 
 const int MAX_WEAPONS_RANGED 			= 9;
 var int PLAYER_TALENT_BOWYER[MAX_WEAPONS_RANGED];
+
+
+
+// ***************
+// Trophies
+// ***************
+const int TROPHY_SwampsharkTeeth		= 14;
+const int TROPHY_SwampsharkSkin			= 15;
+const int TROPHY_GolemHeart				= 16;
+const int TROPHY_FireLizardTongue		= 17;
+const int TROPHY_BlackTrollSkin			= 18;
+const int TROPHY_MantisHead				= 19;
+
+const int MAX_TROPHIES					= 20;
+var int PLAYER_TALENT_TAKEANIMALTROPHY[MAX_TROPHIES];
 
 
 

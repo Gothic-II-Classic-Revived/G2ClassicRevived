@@ -103,7 +103,7 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandHunting == Read_BookstandHunting_Max)
 			{
-				B_RaiseAttribute(hero, ATR_DEXTERITY, 5);
+				B_RaiseAttribute(hero, ATR_DEXTERITY, 10);
 				PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
 				Snd_Play("MFX_Light_Cast");
 
