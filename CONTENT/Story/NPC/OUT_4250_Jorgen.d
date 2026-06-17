@@ -43,8 +43,8 @@ FUNC VOID Rtn_Kloster_4250 ()
 };
 FUNC VOID Rtn_RausAusKloster_4250 ()
 {
-	TA_Stand_ArmsCrossed 			(08,00,20,00,"NW_BIGFARM_KITCHEN_OUT_06");
-    TA_Stand_ArmsCrossed 			(20,00,08,00,"NW_BIGFARM_KITCHEN_OUT_06");		
+	TA_Sit_Chair 			(08,00,20,00,"NW_BIGFARM_KITCHEN_SYLVIO");
+    TA_Sit_Chair 			(20,00,08,00,"NW_BIGFARM_KITCHEN_SYLVIO");		
 };
 
 FUNC VOID Rtn_WaitForShipCaptain_4250 ()

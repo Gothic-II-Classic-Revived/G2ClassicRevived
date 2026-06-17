@@ -33,9 +33,9 @@ instance SLD_806_Sylvio (Npc_Default)
 
 FUNC VOID Rtn_Start_806 ()
 {
-	TA_Sit_Chair				(08,00,20,00,"NW_BIGFARM_KITCHEN_BULLCO");
+	TA_Sit_Chair				(08,00,20,00,"NW_BIGFARM_KITCHEN_SYLVIO");
 	TA_Pee						(20,00,20,15,"NW_BIGFARM_TREE_PISS");
-    TA_Sit_Chair				(20,15,08,00,"NW_BIGFARM_KITCHEN_BULLCO");		
+    TA_Sit_Chair				(20,15,08,00,"NW_BIGFARM_KITCHEN_SYLVIO");		
 };
 
 

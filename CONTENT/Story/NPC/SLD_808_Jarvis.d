@@ -33,7 +33,7 @@ instance SLD_808_Jarvis (Npc_Default)
 
 FUNC VOID Rtn_Start_808 ()
 {
-    TA_Sit_Chair 		(07,05,00,05,"NW_BIGFARM_KITCHEN_07");
+    TA_Sit_Chair 		(07,05,00,05,"NW_BIGFARM_KITCHEN_09");
     TA_Sleep			(00,05,07,05,"NW_BIGFARM_HOUSE_08");
 };
 

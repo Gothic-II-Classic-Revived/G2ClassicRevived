@@ -552,7 +552,7 @@ func int DIA_Rosi_ANGEKOMMEN_Condition ()
 	&& (Rosi_FleeFromSekob_Kap5 == TRUE)
 	&&	(
 			(	(Npc_GetDistToWP(self,"CITY2")<6000) 	&& (hero.guild == GIL_PAL)	)
-		||	(	(Npc_GetDistToWP(self,"NW_BIGFARM_KITCHEN_02")<6000) 	&& (hero.guild == GIL_DJG)	)
+		||	(	(Npc_GetDistToWP(self,"NW_BIGFARM_PATH_04")<6000) 	&& (hero.guild == GIL_DJG)	)
 		||	(	(Npc_GetDistToWP(self,"KLOSTER")<6000)  && (hero.guild == GIL_KDF)	)
 		)
 			{

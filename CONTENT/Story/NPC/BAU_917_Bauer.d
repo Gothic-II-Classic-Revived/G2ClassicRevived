@@ -33,7 +33,7 @@ instance BAU_917_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_917 ()
 {	
-	TA_Smalltalk		(08,05,22,05,"NW_BIGFARM_KITCHEN_02");
-	TA_Smalltalk		(22,05,08,05,"NW_BIGFARM_KITCHEN_02");
+	TA_Smalltalk		(08,05,22,05,"NW_BIGFARM_KITCHEN_03");
+	TA_Smalltalk		(22,05,08,05,"NW_BIGFARM_KITCHEN_03");
 };
 

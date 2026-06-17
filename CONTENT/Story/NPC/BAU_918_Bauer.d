@@ -32,6 +32,6 @@ instance BAU_918_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_918 ()
 {	
-	TA_Smalltalk		(08,00,22,00,"NW_BIGFARM_KITCHEN_09");
+	TA_Sit_Chair		(08,00,22,00,"NW_BIGFARM_KITCHEN_02");
     TA_Smalltalk		(22,00,08,00,"NW_BIGFARM_STABLE_09");
 };

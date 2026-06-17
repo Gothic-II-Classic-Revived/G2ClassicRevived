@@ -34,7 +34,7 @@ instance BAU_904_Bauer (Npc_Default)
 FUNC VOID Rtn_Start_904 ()
 {	
 	TA_Saw					(09,00,23,00,"NW_BIGFARM_KITCHEN_OUT_01");
-    TA_Sit_Chair			(23,00,09,00,"NW_BIGFARM_KITCHEN_09");
+    TA_Sit_Chair			(23,00,09,00,"NW_BIGFARM_KITCHEN_04");
 };
 
 

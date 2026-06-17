@@ -76,6 +76,6 @@ FUNC VOID Rtn_Start_913 ()
 	TA_Cook_Stove		(21,30,22,00,"NW_BIGFARM_KITCHEN_COOK");
  
     TA_Stand_Guarding	(22,00,00,00,"NW_BIGFARM_KITCHEN_BARKEEPER");
-	TA_Stand_Sweeping	(00,00,08,00,"NW_BIGFARM_KITCHEN_04");
+	TA_Stand_Sweeping	(00,00,08,00,"NW_BIGFARM_KITCHEN_BAR");
 };
 

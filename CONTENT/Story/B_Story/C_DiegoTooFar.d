@@ -55,7 +55,7 @@ func int C_DiegoTooFar(var int tolerance) //tolerance wichtig in Dialog, sonst m
 	{
 		return LOC_GRIMESMINE;
 	}
-	else if (Npc_GetDistToWP (hero, "OCC_GATE_INSIDE_SMALLTALK") < (12000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OCC_MAINGATE_TALK") < (12000 + tolerance))
 	||		(Npc_GetDistToWP (hero, "OCC_FIGHTTRAINING") < (12000 + tolerance))
 	{
 		return LOC_BURG;

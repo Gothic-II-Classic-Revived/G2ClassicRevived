@@ -32,7 +32,7 @@ instance PAL_273_Ritter (Npc_Default)
 
 FUNC VOID Rtn_Start_273 ()
 {	
-    TA_Smalltalk				(08,00,22,00,"OCC_GATE_INSIDE_SMALLTALK");
+    TA_Smalltalk				(08,00,22,00,"OCC_MAINGATE_TALK");
 	TA_Practice_Sword			(22,00,08,00,"OCC_FIGHTTRAINING_002");
 };
 

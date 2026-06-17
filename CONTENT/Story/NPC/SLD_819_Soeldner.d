@@ -33,7 +33,7 @@ instance SLD_819_Soeldner (Npc_Default)
 
 FUNC VOID Rtn_Start_819 ()
 {
-	TA_Stand_Drinking 			(07,45,23,45,"NW_BIGFARM_KITCHEN_03");
+	TA_Stand_Drinking 			(07,45,23,45,"NW_BIGFARM_KITCHEN_06");
     TA_Sleep					(23,45,07,45,"NW_BIGFARM_MERCHUT_SLEEP_03");		
 };
 

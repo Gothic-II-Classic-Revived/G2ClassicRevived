@@ -33,6 +33,6 @@ instance SLD_826_Soeldner (Npc_Default)
 FUNC VOID Rtn_Start_826 ()
 {
 	TA_Smalltalk 		(08,00,22,00,"NW_BIGFARM_HOUSE_08");
-    TA_Smalltalk		(22,00,08,00,"NW_BIGFARM_HOUSE_08");		
+    TA_Stand_Drinking	(22,00,08,00,"NW_BIGFARM_KITCHEN_04");		
 };
 

@@ -62,8 +62,8 @@ FUNC VOID Rtn_FollowCity_931 ()
 
 FUNC VOID Rtn_FollowBigfarm_931 ()
 {	
-	TA_Follow_Player 	(08,00,22,00,"NW_BIGFARM_KITCHEN_02"); 
-    TA_Follow_Player	(22,00,08,00,"NW_BIGFARM_KITCHEN_02");
+	TA_Follow_Player 	(08,00,22,00,"NW_BIGFARM_PATH_04"); 
+    TA_Follow_Player	(22,00,08,00,"NW_BIGFARM_PATH_04");
 };
 
 FUNC VOID Rtn_FollowKloster_931 ()
@@ -80,8 +80,8 @@ FUNC VOID Rtn_City_931 ()
 
 FUNC VOID Rtn_Bigfarm_931 ()
 {	
-	TA_Sit_Chair  	(08,00,22,00,"NW_BIGFARM_KITCHEN_02"); 
-    TA_Sit_Chair	(22,00,08,00,"NW_BIGFARM_KITCHEN_02");
+	TA_Stand_Eating  	(08,00,22,00,"NW_BIGFARM_BENCH_ROSI"); 
+    TA_Stand_Eating		(22,00,08,00,"NW_BIGFARM_BENCH_ROSI");
 };
 
 FUNC VOID Rtn_Kloster_931 ()
