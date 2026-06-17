@@ -412,10 +412,10 @@ FUNC INT PC_PrayInnos_BlessSword_Final_Condition ()
 	&& (hero.guild == GIL_PAL)
 	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500) 
 	&& (PAL_KnowsAbout_FINAL_BLESSING == TRUE)  
-	&& ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)
+	&& (((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)
 	||  (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01) >= 1))
-	&& ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02) >= 1)
-	||  (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02) >= 1))
+	|| ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02) >= 1)
+	||  (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02) >= 1)))
 	{	
 		return TRUE;
 	};
