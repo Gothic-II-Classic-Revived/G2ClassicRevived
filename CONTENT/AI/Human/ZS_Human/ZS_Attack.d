@@ -85,8 +85,11 @@ func int ZS_Attack_Loop ()
 {			
 	// ----- NICHT unten, sonst bei LOAD Game other trotz B_ValidateOther verloren! Warum??? -----
 	Npc_GetTarget (self); // other = target
-	
-	
+
+	if (C_BerzerkAttackExpired(self))
+	{
+		return LOOP_END;
+	};
 	// EXIT LOOP IF...
 	
 	// ------ Kampfabbruch, wenn zu weit weg ------
@@ -314,6 +317,15 @@ func int ZS_Attack_Loop ()
 
 func void ZS_Attack_End ()
 {
+	if (Npc_WasInState(self, ZS_Berzerk))
+	{
+		other = Hlp_GetNpc(self.aivar[AIV_LASTTARGET]);
+		B_BerzerkIgnoreIfDown(self, other);
+		self.aivar[AIV_BerzerkStateTime] += Npc_GetStateTime(self);
+		AI_StartState(self, ZS_Berzerk, 0, "");
+		return;
+	};
+
 	// ------ other wieder holen, ist hier auf jeden Fall gelöscht! ------
 	other = Hlp_GetNpc(self.aivar[AIV_LASTTARGET]);	
 	

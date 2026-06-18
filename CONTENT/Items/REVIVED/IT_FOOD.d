@@ -33,9 +33,12 @@ const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	15;
 const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	10;
 const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	20;
 const int	REV_Value_Rice				=	 5;		const int	REV_HP_Rice				=	5;
+const int	REV_Value_HerbPie			=   45;		const int	REV_HP_HerbPie			=	280;
+const int	REV_Value_MushroomPie		=   45;		const int	REV_HP_MushroomPie		=	280;
 const int	REV_Value_Marmalade			=	25;		const int	REV_HP_Marmalade		=	20;
 const int	REV_Value_FruitSalad		=	20;		const int	REV_HP_FruitSalad		=	15;
 const int	REV_Value_OldStew			=	 1;		const int	REV_HP_OldStew			=	5;
+
 
 
 //****************************************************************************
@@ -879,6 +882,58 @@ INSTANCE ITFO_REVIVED_RICE (C_Item)
 /******************************************************************************************/
 /******************************************************************************************/
 
+INSTANCE ITFO_REVIVED_HERBPIE (C_Item)
+{
+	name 				= 	"Herb Pie";
+
+	mainflag 			= 	ITEM_KAT_FOOD;
+	flags 				= 	ITEM_MULTI;
+
+	value 				= 	REV_Value_HerbPie;
+
+	visual 				= 	"ItFo_HerbPie.3ds";
+	material 			= 	MAT_LEATHER;
+	scemeName			= 	"RICE";
+	on_state[0]			= 	Use_HerbPie;
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_Bonus_HP;				COUNT[1]	= REV_HP_HerbPie;
+	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
+};
+
+func void Use_HerbPie()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, REV_HP_HerbPie);
+};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_MUSHROOMPIE (C_Item)
+{
+	name 				= 	"Mushroom Pie";
+
+	mainflag 			= 	ITEM_KAT_FOOD;
+	flags 				= 	ITEM_MULTI;
+
+	value 				= 	REV_Value_MushroomPie;
+
+	visual 				= 	"ItFo_MushroomPie.3ds";
+	material 			= 	MAT_LEATHER;
+	scemeName			= 	"RICE";
+	on_state[0]			= 	Use_MushroomPie;
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_Bonus_HP;				COUNT[1]	= REV_HP_MushroomPie;
+	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
+};
+
+func void Use_MushroomPie()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, REV_HP_MushroomPie);
+};
+
+
+/******************************************************************************************/
 INSTANCE ITFO_REVIVED_MARMALADE (C_Item)
 {	
 	name 				=	"Berry marmalade";

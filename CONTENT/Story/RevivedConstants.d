@@ -849,6 +849,15 @@ const int	SPL_PYRO_DAMAGE_PER_SEC		= 20;
 const int	SPL_PYRO_MANA_PER_INVEST	= 1;
 const int	SPL_PYRO_MANA_PER_SEC		= 4;
 
+const int	SPL_Berzerk				= 123;
+const int	SPL_Berserk				= 123;
+const string NAME_SPL_Berserk		= "Berserk";
+const string NAME_Berzerk			= "Berserk";
+const int	SPL_SENDCAST_BERZERK	= 10;
+const int	SPL_SENDCAST_BERSERK	= 10;
+const int	SPL_TIME_BERZERK		= 30;
+const int	SPL_TIME_BERSERK		= 30;
+
 
 
 // ***************

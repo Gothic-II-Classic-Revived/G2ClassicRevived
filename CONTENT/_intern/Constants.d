@@ -665,7 +665,7 @@ const int SPL_REV_Reserved_119		= 119;
 const int SPL_REV_Reserved_120		= 120;
 const int SPL_REV_Reserved_121		= 121;
 const int SPL_REV_Pyrokinesis	= 122;
-const int SPL_REV_Reserved_123		= 123;
+const int SPL_REV_Berzerk		= 123;
 const int SPL_REV_Reserved_124		= 124;
 const int SPL_REV_Reserved_125		= 125;
 const int SPL_REV_Reserved_126		= 126;
@@ -846,7 +846,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"SummonGuardian",		// 120	SPL_REV_Reserved_120
 	"SummonGuardian",		// 121	SPL_REV_Reserved_121
 	"Pyrokinesis",			// 122	SPL_Pyrokinesis
-	"XXX",					// 123	SPL_REV_Reserved_123
+	"Berzerk",				// 123	SPL_Berzerk
 	"XXX",					// 124	SPL_REV_Reserved_124
 	"XXX",					// 125	SPL_REV_Reserved_125
 	"XXX",					// 126	SPL_REV_Reserved_126
@@ -1026,7 +1026,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"SUM",					// 120	SPL_REV_Reserved_120
 	"SUM",					// 121	SPL_REV_Reserved_121
 	"PYR",					// 122	SPL_Pyrokinesis
-	"XXX",					// 123	SPL_REV_Reserved_123
+	"SLE",					// 123	SPL_Berzerk
 	"XXX",					// 124	SPL_REV_Reserved_124
 	"XXX",					// 125	SPL_REV_Reserved_125
 	"XXX",					// 126	SPL_REV_Reserved_126

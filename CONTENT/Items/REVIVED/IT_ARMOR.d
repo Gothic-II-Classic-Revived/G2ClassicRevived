@@ -61,6 +61,20 @@ const int	REV_Prot_Point_DEMONHUNTER			=	135;
 const int	REV_Prot_Fire_DEMONHUNTER			=	90;
 const int	REV_Prot_Magic_DEMONHUNTER			=	45;
 //******************************************************************//
+const int	REV_Value_DEMONHUNTER_L			=   8000;
+const int	REV_Prot_Edge_DEMONHUNTER_L		=   100;
+const int	REV_Prot_Blunt_DEMONHUNTER_L	=   100;
+const int	REV_Prot_Point_DEMONHUNTER_L	=   100;
+const int	REV_Prot_Fire_DEMONHUNTER_L		=   60;
+const int	REV_Prot_Magic_DEMONHUNTER_L	=   30;
+//******************************************************************//
+const int	REV_Value_DEMONHUNTER_M			=   12000;
+const int	REV_Prot_Edge_DEMONHUNTER_M		=   120;
+const int	REV_Prot_Blunt_DEMONHUNTER_M	=   120;
+const int	REV_Prot_Point_DEMONHUNTER_M	=   120;
+const int	REV_Prot_Fire_DEMONHUNTER_M		=   75;
+const int	REV_Prot_Magic_DEMONHUNTER_M	=   35;
+//******************************************************************//
 //******************************************************************//
 const int	REV_Value_SFB_L						=	50;
 const int	REV_Prot_Edge_SFB_L					=	10;
@@ -716,6 +730,67 @@ FUNC VOID UnEquip_CRAWLER_ARMOR()
 		};
 	};			
 };
+/******************************************************************************************/
+INSTANCE ITAR_REVIVED_DEMONHUNTER_L (C_Item)
+{
+    name                    = "Light Demon Hunter Armor";
+
+    mainflag                = ITEM_KAT_ARMOR;
+    flags                   = 0;
+    material                = MAT_METAL;
+
+    value                   = REV_Value_DEMONHUNTER_L;
+
+    protection [PROT_EDGE]  = REV_Prot_Edge_DEMONHUNTER_L;
+    protection [PROT_BLUNT] = REV_Prot_Blunt_DEMONHUNTER_L;
+    protection [PROT_POINT] = REV_Prot_Point_DEMONHUNTER_L;
+    protection [PROT_FIRE]  = REV_Prot_Fire_DEMONHUNTER_L;
+    protection [PROT_MAGIC] = REV_Prot_Magic_DEMONHUNTER_L;
+
+    visual                  = "grdi.3ds";
+    visual_change           = "Hum_DHTL_ARMOR.asc";
+    visual_skin             = 0;
+    wear                    = WEAR_TORSO;
+
+    description             = name;
+    TEXT[0]                 = NAME_Prot_Edge;         COUNT[0] = protection[PROT_EDGE];
+    TEXT[1]                 = NAME_Prot_Blunt;        COUNT[1] = protection[PROT_BLUNT];
+    TEXT[2]                 = NAME_Prot_Point;        COUNT[2] = protection[PROT_POINT];
+    TEXT[3]                 = NAME_Prot_Fire;         COUNT[3] = protection[PROT_FIRE];
+    TEXT[4]                 = NAME_Prot_Magic;        COUNT[4] = protection[PROT_MAGIC];
+    TEXT[5]                 = NAME_Value;             COUNT[5] = value;
+};
+
+INSTANCE ITAR_REVIVED_DEMONHUNTER_M (C_Item)
+{
+    name                    = "Medium Demon Hunter Armor";
+
+    mainflag                = ITEM_KAT_ARMOR;
+    flags                   = 0;
+    material                = MAT_METAL;
+
+    value                   = REV_Value_DEMONHUNTER_M;
+
+    protection [PROT_EDGE]  = REV_Prot_Edge_DEMONHUNTER_M;
+    protection [PROT_BLUNT] = REV_Prot_Blunt_DEMONHUNTER_M;
+    protection [PROT_POINT] = REV_Prot_Point_DEMONHUNTER_M;
+    protection [PROT_FIRE]  = REV_Prot_Fire_DEMONHUNTER_M;
+    protection [PROT_MAGIC] = REV_Prot_Magic_DEMONHUNTER_M;
+
+    visual                  = "grdi.3ds";
+    visual_change           = "Hum_DHTM_ARMOR.asc";
+    visual_skin             = 0;
+    wear                    = WEAR_TORSO;
+
+    description             = name;
+    TEXT[0]                 = NAME_Prot_Edge;         COUNT[0] = protection[PROT_EDGE];
+    TEXT[1]                 = NAME_Prot_Blunt;        COUNT[1] = protection[PROT_BLUNT];
+    TEXT[2]                 = NAME_Prot_Point;        COUNT[2] = protection[PROT_POINT];
+    TEXT[3]                 = NAME_Prot_Fire;         COUNT[3] = protection[PROT_FIRE];
+    TEXT[4]                 = NAME_Prot_Magic;        COUNT[4] = protection[PROT_MAGIC];
+    TEXT[5]                 = NAME_Value;             COUNT[5] = value;
+};
+
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 {

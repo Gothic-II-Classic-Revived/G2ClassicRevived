@@ -113,6 +113,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_Telekinesis	    )		{	return	Spell_Logic_Telekinesis	 		(manaInvested);	};
 	if (activeSpell == SPL_Control	    	)		{	return	Spell_Logic_Control		 		(manaInvested);	};
 	if (activeSpell == SPL_Pyrokinesis	)		{	return	Spell_Logic_Pyrokinesis		(manaInvested);	};
+	if (activeSpell == SPL_Berzerk	)		{	return	Spell_Logic_Berzerk			(manaInvested);	};
 
 	if (activeSpell == SPL_TrfMeatbug	    )		{	return	Spell_Logic_TransformMeatbug	 		(manaInvested);	};
 	if (activeSpell == SPL_TrfMolerat	    )		{	return	Spell_Logic_TransformMolerat	 		(manaInvested);	};

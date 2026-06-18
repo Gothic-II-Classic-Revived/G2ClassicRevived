@@ -337,6 +337,8 @@ const int REAL_TALENT_BOW					= 86;
 const int REAL_TALENT_CROSSBOW				= 87;
 
 const int AIV_SpellLevel 					= 88;
+const int AIV_BerzerkStateTime				= 89;
+const int AIV_BerzerkIgnoreTarget			= 90;
 
 // ***************************************************
 // Globalvariablen für Petzen/Absolution/News - System

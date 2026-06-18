@@ -3861,6 +3861,36 @@ instance spellFX_Sleep_TARGET	(CFx_Base_Proto)
 		//sendAssessMagic	= 1;
 };
 
+///                                                       XXXXXXXXXXXXXXXXXXXXX
+///                                                       XX  B E R Z E R K  XX
+///                                                       XXXXXXXXXXXXXXXXXXXXX
+
+INSTANCE spellFX_Berzerk(CFx_Base_Proto)
+{
+    visname_S = "MFX_BERZERK_INIT";
+    emtrjoriginnode = "ZS_RIGHTHAND";
+    emtrjmode_s = "fixed";
+    emtrjloopmode_s = "NONE";
+    emtrjeasefunc_s = "LINEAR";
+    emtrjdynupdatedelay = 0.;
+};
+
+INSTANCE spellFX_Berzerk_KEY_CAST(C_ParticleFXEmitKey)
+{
+    visname_S = "MFX_BERZERK_ORIGIN";
+    emtrjmode_s = "TARGET";
+    emtrjeasevel = 1400.;
+    sfxid = "MFX_Berzerk_Cast";
+    sfxisambient = 1;
+};
+
+instance spellFX_Berzerk_ORIGIN(CFx_Base_Proto)
+{
+    visname_S = "MFX_BERZERK_ORIGIN";
+    emtrjmode_s = "FIXED";
+    emtrjoriginnode = "ZS_RIGHTHAND";
+    emtrjdynupdatedelay = 0.0;
+};
 ///   													XXXXXXXXXXXXXXXXX
 ///   													XX  C H A R M  XX
 ///   													XXXXXXXXXXXXXXXXX

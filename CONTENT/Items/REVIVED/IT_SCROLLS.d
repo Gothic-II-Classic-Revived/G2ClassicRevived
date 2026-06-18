@@ -198,6 +198,30 @@ INSTANCE ITSC_REVIVED_CONTROL (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
+INSTANCE ITSC_REVIVED_BERSERK (C_Item)
+{
+    name                = NAME_SPL_Berserk;
+
+    mainflag            = ITEM_KAT_RUNE;
+    flags               = ITEM_MULTI;
+    material            = MAT_LEATHER;
+
+    value               = REV_Value_PSI_SCROLL;
+
+    visual              = "ItAr_Scroll_22.3DS";
+
+    spell               = SPL_Berzerk;
+    cond_atr[2]         = ATR_MANA_MAX;
+    cond_value[2]       = SPL_SENDCAST_BERZERK;
+
+    wear                = WEAR_EFFECT;
+    effect              = "SPELLFX_WEAKGLIMMER";
+
+    description         = NAME_SPL_Berserk;
+    TEXT[2]             = NAME_Manakosten;                COUNT[2] = cond_value[2];
+    TEXT[5]             = NAME_Value;                     COUNT[5] = value;
+};
+
 INSTANCE ITSC_REVIVED_PYROKINESIS (C_Item)
 {
 	name 				= 	NAME_SPL_Pyrokinesis;

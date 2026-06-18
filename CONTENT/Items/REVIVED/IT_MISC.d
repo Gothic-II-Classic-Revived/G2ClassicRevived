@@ -1,6 +1,7 @@
 const int	REV_Value_Joint				= 60;
 const int	REV_Value_Nugget			= 100;
 const int	REV_Value_Stuff				= 10;
+const int	REV_Value_BloodOreNugget	= 10;
 
 const int	REV_Value_Salt					=	50;
 const int	REV_Value_Sugar					=	60;
@@ -327,6 +328,44 @@ func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 //			COMPONENTS
 //****************************************************************************
 
+INSTANCE ITMI_REVIVED_WOOD (REVIVED_MISC)
+{
+    name                = "Wood for fletching";
+    value               = 0;
+
+    visual              = "ItMi_FletcherWood.3DS";
+    material            = MAT_WOOD;
+
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
+};
+
+INSTANCE ITMI_REVIVED_FLETCHER_KNIFE (REVIVED_MISC)
+{
+    name                = "Fletcher's Knife";
+    value               = 0;
+
+    visual              = "ItMi_FletcherKnife.3DS";
+    material            = MAT_METAL;
+
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
+};
+
+INSTANCE ITMI_REVIVED_BOW_WOOD (REVIVED_MISC)
+{
+    name                = "Bow Wood";
+    value               = 0;
+
+    visual              = "BOWWOOD.mms";
+    material            = MAT_WOOD;
+
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
+};
+
+/******************************************************************************************/
+
 INSTANCE ITMI_REVIVED_SALT (REVIVED_MISC)
 {
 	name 				=	"Salt";
@@ -441,6 +480,32 @@ INSTANCE ITMI_REVIVED_MAGICORE (REVIVED_MISC)
 	INV_ZBIAS			=	INVCAM_ENTF_MISC2_STANDARD;
 
 	description			= 	name;
+};
+
+INSTANCE ITMI_REVIVED_BLOODORE (REVIVED_MISC)
+{
+    name                = "Blood Ore Nugget";
+    value               = REV_Value_BloodOreNugget;
+
+    visual              = "ItMi_Nugget_02.3ds";
+    material            = MAT_METAL;
+    INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
+
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
+};
+
+INSTANCE ITMI_REVIVED_SILVER (REVIVED_MISC)
+{
+    name                = "Silver Coin";
+    value               = 0;
+
+    visual              = "ItMi_Stuff_OldCoin_01.3DS";
+    material            = MAT_METAL;
+    INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
+
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_AMPHORE (REVIVED_MISC)

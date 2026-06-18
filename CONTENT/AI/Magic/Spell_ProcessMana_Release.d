@@ -19,6 +19,7 @@ func int Spell_ProcessMana_Release (var int manaInvested)
 	if (activeSpell == SPL_WINDFIST			)	{	return	SPL_SENDCAST;	};
 
 	if (activeSpell == SPL_Pyrokinesis	)	{	Npc_SendSinglePerc	(self, other, PERC_ASSESSSTOPMAGIC); return	SPL_SENDSTOP;	};
+	if (activeSpell == SPL_Berzerk	)	{	return	SPL_SENDSTOP;	};
 
 	// ------ Alle anderen Spells (Aufrechterhaltung oder Loslassen OHNE gecastet zu haben (zu wenig investiert) ------	
 	return SPL_SENDSTOP;

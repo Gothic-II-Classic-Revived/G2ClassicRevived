@@ -56,7 +56,11 @@ func void ZS_MM_Attack ()
 func int ZS_MM_Attack_Loop ()
 {
 	Npc_GetTarget (self); // other = target
-	
+
+	if (C_BerzerkAttackExpired(self))
+	{
+		return LOOP_END;
+	};
 	// ------ Regeneration ------
 	if (self.guild == GIL_DRAGON)
 	{
@@ -266,6 +270,15 @@ func int ZS_MM_Attack_Loop ()
 
 func void ZS_MM_Attack_End ()
 {
+	if (Npc_WasInState(self, ZS_Berzerk))
+	{
+		other = Hlp_GetNpc(self.aivar[AIV_LASTTARGET]);
+		B_BerzerkIgnoreIfDown(self, other);
+		self.aivar[AIV_BerzerkStateTime] += Npc_GetStateTime(self);
+		AI_StartState(self, ZS_Berzerk, 0, "");
+		return;
+	};
+
 	// ------ other wieder holen, ist hier auf jeden Fall gelöscht! ------
 	other = Hlp_GetNpc(self.aivar[AIV_LASTTARGET]);
 

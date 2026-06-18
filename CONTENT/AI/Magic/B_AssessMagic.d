@@ -14,6 +14,21 @@
 // ******************************************************************
 
 
+func void B_AssessMagic_Berzerk()
+{
+	// Damit andere NSCs den Angriff wahrnehmen koennen.
+	Npc_SendPassivePerc(self, PERC_ASSESSFIGHTSOUND, self, other);
+	Npc_ClearAIQueue(self);
+
+	if (!Npc_IsDead(self))
+	&& (!Npc_IsInState(self, ZS_Unconscious))
+	{
+		self.aivar[AIV_BerzerkStateTime] = 0;
+		self.aivar[AIV_BerzerkIgnoreTarget] = -1;
+		AI_StartState(self, ZS_Berzerk, 0, "");
+	};
+};
+
 func void B_AssessMagic ()
 {
 	// ------ Bei ALLEN Spells. Damit andere NSCs den Angriff wahrnehmen können ------
@@ -97,6 +112,13 @@ func void B_AssessMagic ()
         };
         return;
     };
+
+	// ------ Sequel psionic Berserk ------
+	if (Npc_GetActiveSpell(other) == SPL_Berzerk)
+	{
+		B_AssessMagic_Berzerk();
+		return;
+	};
 
 	// ------ Fear ------
 	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	

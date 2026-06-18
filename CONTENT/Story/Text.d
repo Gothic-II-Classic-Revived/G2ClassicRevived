@@ -394,7 +394,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"TXT_REV_RESERVED_120",		// 99	SPL_REV_Reserved_120
 	"TXT_REV_RESERVED_121",		// 99	SPL_REV_Reserved_121
 	"Pyrokinesis",				// 122	SPL_Pyrokinesis
-	"TXT_REV_RESERVED_123",		// 99	SPL_REV_Reserved_123
+	"Berserk",					// 123	SPL_Berzerk
 	"TXT_REV_RESERVED_124",		// 99	SPL_REV_Reserved_124
 	"TXT_REV_RESERVED_125",		// 99	SPL_REV_Reserved_125
 	"TXT_REV_RESERVED_126",		// 99	SPL_REV_Reserved_126
