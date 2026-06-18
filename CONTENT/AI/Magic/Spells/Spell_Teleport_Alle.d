@@ -79,31 +79,7 @@ func void Spell_Cast_TeleportSeaport()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	var int random;	random = Hlp_Random (6);
-	if (random == 0)
-	{
-		AI_Teleport		(self, "NW_CITY_HABOUR_SHIP_01");
-	}
-	else if (random == 1)
-	{
-		AI_Teleport		(self, "NW_CITY_PALCAMP_03");
-	} 
-	else if (random == 2)
-	{
-		AI_Teleport		(self, "NW_CITY_HABOUR_KASERN_12");
-	} 
-	else if (random == 3)
-	{
-		AI_Teleport		(self, "NW_CITY_MERCHANT_TEMPLE_PLACE_01");
-	} 
-	else if (random == 4)
-	{
-		AI_Teleport		(self, "NW_CITY_WAY_TO_SHIP_06");
-	} 
-	else if (random == 5)
-	{
-		AI_Teleport		(self, "NW_CITY_MAINSTREET_02");
-	};
+	AI_Teleport		(self, "NW_CITY_MERCHANT_TEMPLE_IN");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 
@@ -201,7 +177,15 @@ func void Spell_Cast_TeleportPassOW()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	AI_Teleport		(self, "SPAWN_MOLERAT02_SPAWN01");
+	var int random;	random = Hlp_Random (2);
+	if (random == 0)
+	{
+		AI_Teleport		(self, "OW_PATH_ORETRAIL_2_DJGCAMP_03");
+	}
+	else if (random == 1)
+	{
+		AI_Teleport		(self, "SPAWN_MOLERAT02_SPAWN01");
+	};
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 
