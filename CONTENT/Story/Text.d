@@ -395,10 +395,10 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"TXT_REV_RESERVED_121",		// 99	SPL_REV_Reserved_121
 	"Pyrokinesis",				// 122	SPL_Pyrokinesis
 	"Berserk",					// 123	SPL_Berzerk
-	"TXT_REV_RESERVED_124",		// 99	SPL_REV_Reserved_124
-	"TXT_REV_RESERVED_125",		// 99	SPL_REV_Reserved_125
-	"TXT_REV_RESERVED_126",		// 99	SPL_REV_Reserved_126
-	"TXT_REV_RESERVED_127",		// 99	SPL_REV_Reserved_127
+	"Heal Other",				// 124	SPL_HealOther
+	"Explode",					// 125	SPL_Explode
+	"Mana Recovery",			// 126	SPL_ManaRecovery
+	"Extricate",				// 127	SPL_Extricate
 	"TXT_REV_RESERVED_128",		// 99	SPL_REV_Reserved_128
 	"TXT_REV_RESERVED_129",		// 99	SPL_REV_Reserved_129
 	"TXT_REV_RESERVED_130",		// 99	SPL_REV_Reserved_130

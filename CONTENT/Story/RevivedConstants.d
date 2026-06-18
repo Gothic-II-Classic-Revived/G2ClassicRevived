@@ -857,6 +857,30 @@ const int	SPL_SENDCAST_BERZERK	= 10;
 const int	SPL_SENDCAST_BERSERK	= 10;
 const int	SPL_TIME_BERZERK		= 30;
 const int	SPL_TIME_BERSERK		= 30;
+const int	SPL_HealOther			= 124;
+const string NAME_SPL_HealOther	= "Heal Other";
+const int	SPL_Cost_HealOther		= 30;
+const int	SPL_Heal_HealOther		= 150;
+
+const int	SPL_Explode			= 125;
+const string NAME_SPL_Explode		= "Explode";
+const int	SPL_Cost_Explode		= 35;
+const int	SPL_Damage_Explode	= 165;
+
+const int	SPL_ManaRecovery		= 126;
+const string NAME_SPL_ManaRecovery	= "Mana Recovery";
+const int	SPL_ManaRecovery_RELATION	= 2;
+const int	SPL_ManaRecovery_MINHP		= 20;
+const int	SPL_ManaRecovery_MAXHP		= 250;
+const int	SPL_ManaRecovery_SAYTIME		= 50;
+
+const int	SPL_Extricate			= 127;
+const string NAME_SPL_Extricate	= "Extricate";
+const int	SPL_Cost_Extricate	= 20;
+const int	SPL_Damage_Extricate	= 80;
+
+const int	SPL_Cost_Earthquake		= 5;
+const int	SPL_Damage_Earthquake	= 100;
 
 
 

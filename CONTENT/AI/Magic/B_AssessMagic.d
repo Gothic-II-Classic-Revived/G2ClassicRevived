@@ -120,6 +120,21 @@ func void B_AssessMagic ()
 		return;
 	};
 
+	// ------ Extricate ------
+	if (Npc_GetLastHitSpellID(self) == SPL_Extricate)
+	{
+		if (self.guild < GIL_SEPERATOR_HUM)
+		{
+			Npc_ClearAIQueue(self);
+			B_ClearPerceptions(self);
+			Npc_SetTarget(self, other);
+			B_AssessDamage();
+		};
+
+		Npc_SetTarget(self, other);
+		Npc_SetTempAttitude(self, ATT_HOSTILE);
+		return;
+	};
 	// ------ Fear ------
 	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	
 	{

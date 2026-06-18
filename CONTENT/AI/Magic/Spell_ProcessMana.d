@@ -114,6 +114,11 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_Control	    	)		{	return	Spell_Logic_Control		 		(manaInvested);	};
 	if (activeSpell == SPL_Pyrokinesis	)		{	return	Spell_Logic_Pyrokinesis		(manaInvested);	};
 	if (activeSpell == SPL_Berzerk	)		{	return	Spell_Logic_Berzerk			(manaInvested);	};
+	if (activeSpell == SPL_Earthquake	)		{	return	Spell_Logic_Earthquake		(manaInvested);	};
+	if (activeSpell == SPL_HealOther	)		{	return	Spell_Logic_HealOther		(manaInvested);	};
+	if (activeSpell == SPL_Explode	)		{	return	Spell_Logic_Explode		(manaInvested);	};
+	if (activeSpell == SPL_ManaRecovery	)		{	return	Spell_Logic_ManaRecovery	(manaInvested);	};
+	if (activeSpell == SPL_Extricate	)		{	return	Spell_Logic_Extricate		(manaInvested);	};
 
 	if (activeSpell == SPL_TrfMeatbug	    )		{	return	Spell_Logic_TransformMeatbug	 		(manaInvested);	};
 	if (activeSpell == SPL_TrfMolerat	    )		{	return	Spell_Logic_TransformMolerat	 		(manaInvested);	};

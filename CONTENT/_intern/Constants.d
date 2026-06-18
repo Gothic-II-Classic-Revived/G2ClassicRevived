@@ -802,7 +802,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Fear",					// 80	SPL_Plague
 	"Swarm",				// 81	SPL_Swarm
 	"Greententacle",		// 82	SPL_GreenTentacle
-	"Firerain",				// 83	SPL_Earthquake
+	"Earthquake",			// 83	SPL_Earthquake
 	"SummonGuardian",		// 84	SPL_SummonGuardian
 	"Energyball",			// 85	SPL_Energyball
 	"SuckEnergy",			// 86	SPL_SuckEnergy
@@ -847,10 +847,10 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"SummonGuardian",		// 121	SPL_REV_Reserved_121
 	"Pyrokinesis",			// 122	SPL_Pyrokinesis
 	"Berzerk",				// 123	SPL_Berzerk
-	"XXX",					// 124	SPL_REV_Reserved_124
-	"XXX",					// 125	SPL_REV_Reserved_125
-	"XXX",					// 126	SPL_REV_Reserved_126
-	"XXX",					// 127	SPL_REV_Reserved_127
+	"HealOther",			// 124	SPL_HealOther
+	"Explode",				// 125	SPL_Explode
+	"ManaRecovery",			// 126	SPL_ManaRecovery
+	"Extricate",			// 127	SPL_Extricate
 	"XXX",					// 128	SPL_REV_Reserved_128
 	"XXX",					// 129	SPL_REV_Reserved_129
 	"XXX",					// 130	SPL_REV_Reserved_130
@@ -982,7 +982,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FBT",  				// 80	SPL_Plague
 	"FBT",  				// 81	SPL_Swarm			
 	"FRZ",  				// 82	SPL_GreenTentacle
-	"FEA",  				// 83	SPL_Earthquake
+	"FOT",  				// 83	SPL_Earthquake
 	"SUM",  				// 84	SPL_SummonGuardian
 	"WND",  				// 85	SPL_Energyball
 	"WND",  				// 86	SPL_SuckEnergy
@@ -1027,10 +1027,10 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"SUM",					// 121	SPL_REV_Reserved_121
 	"PYR",					// 122	SPL_Pyrokinesis
 	"SLE",					// 123	SPL_Berzerk
-	"XXX",					// 124	SPL_REV_Reserved_124
-	"XXX",					// 125	SPL_REV_Reserved_125
-	"XXX",					// 126	SPL_REV_Reserved_126
-	"XXX",					// 127	SPL_REV_Reserved_127
+	"HEA",					// 124	SPL_HealOther
+	"FRZ",					// 125	SPL_Explode
+	"SAC",					// 126	SPL_ManaRecovery
+	"EXP",					// 127	SPL_Extricate
 	"XXX",					// 128	SPL_REV_Reserved_128
 	"XXX",					// 129	SPL_REV_Reserved_129
 	"XXX",					// 130	SPL_REV_Reserved_130

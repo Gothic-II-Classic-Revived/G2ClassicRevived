@@ -2690,3 +2690,20 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 
 
 
+//============================================================================================================================
+// MUDFREAK MAGIC
+//============================================================================================================================
+
+// Quake
+                INSTANCE MFX_EARTHQUAKE_INVEST                 (C_SFX_DEF) {file= "MFX_QUAKE_INVEST.WAV";          vol = 90;           };
+                INSTANCE MFX_EARTHQUAKE_STOMP                (C_SFX_DEF) {file= "M_STEP_HUGE01.WAV";             vol = 127;      pitchOff=-50;   };
+                INSTANCE MFX_EARTHQUAKE_RUMBLE           (C_SFX_DEF) {file= "CS_PRAYER_MINECOLLIDE02.WAV";   vol = 110;          };
+
+// ManaForLife
+                INSTANCE MFX_MANARECOVERY_HEARTBEAT      (C_SFX_DEF) {file= "MFX_HEARTBEAT.WAV";             vol = 127;       loop=1;       };
+
+
+
+// Explode
+                INSTANCE MFX_EXPLODE_COLLIDE          (C_SFX_DEF) {file= "MFX_BARRIERE_SHOOT.WAV";        vol = 127;      pitchOff=-50; };
+                INSTANCE MFX_EXPLODE_SPHERE           (C_SFX_DEF) {file= "CS_PRAYER_FOKUSFINAL.WAV";      vol = 127;          };
