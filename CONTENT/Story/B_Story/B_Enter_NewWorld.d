@@ -11,6 +11,10 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_1 ()
 		// ------ TAs ändern ------
 
 		// ------ Respawn ------
+
+		// ------ VOBTREES ------
+			Ext_InsertVobTree("VOBTREE/NW_JACKLIGHTHOUSE_BANDITS.ZEN");
+			
 };
 
 // B_ENTER_NEWWORLD_Kapitel_2
@@ -374,7 +378,14 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		{
 			IntroduceChapter (KapWechsel_3,KapWechsel_3_Text,"chapter3_SLD.tga","chapter_01.wav", 6000);
 		};
+
+		// ------ VOBTREES ------
+		Ext_RemoveVobTree("NW_JACKLIGHTHOUSE_BANDITS");
+		Ext_InsertVobTree("VOBTREE/NW_JACKLIGHTHOUSE_CLEANED.ZEN");
  
+		REV_SetObjectRoutine_Fire ("FIREPLACE_LIGHTHOUSE_01");
+		REV_SetObjectRoutine_Fire ("FIREPLACE_LIGHTHOUSE_02");
+		REV_SetObjectRoutine_Fire ("FIREPLACE_LIGHTHOUSE_03");
  
 		EnterNW_Kapitel3 = TRUE;
 	};

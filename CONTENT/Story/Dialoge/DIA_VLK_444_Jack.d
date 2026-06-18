@@ -110,11 +110,11 @@ func int DIA_Jack_Job_Condition ()
 func void DIA_Jack_Job_Info ()
 {
 	AI_Output			(other, self, "DIA_Jack_Job_15_00"); //What are you doing here?
-	//AI_Output			(self, other, "DIA_Jack_Job_14_01"); //Back when I was a young man, I went to sea and rode through many a big storm.
-	//AI_Output			(self, other, "DIA_Jack_Job_14_02"); //Many years ago, I settled here and took care of the Khorinis lighthouse for a long time.
-	//AI_Output			(self, other, "DIA_Jack_Job_14_03"); //No big deal. Not at all. But that old tower came closest to what I would call a home.
-	//AI_Output			(self, other, "DIA_Jack_Job_14_04"); //I haven't been up there in ages.
-	//AI_Output			(other, self, "DIA_Jack_Job_15_05"); //Why not?
+	AI_Output			(self, other, "DIA_Jack_Job_14_01"); //Back when I was a young man, I went to sea and rode through many a big storm.
+	AI_Output			(self, other, "DIA_Jack_Job_14_02"); //Many years ago, I settled here and took care of the Khorinis lighthouse for a long time.
+	AI_Output			(self, other, "DIA_Jack_Job_14_03"); //No big deal. Not at all. But that old tower came closest to what I would call a home.
+	AI_Output			(self, other, "DIA_Jack_Job_14_04"); //I haven't been up there in ages.
+	AI_Output			(other, self, "DIA_Jack_Job_15_05"); //Why not?
 	AI_Output			(self ,other, "DIA_Jack_Job_14_06"); //Ever since those scallywags took over my lighthouse, I haven't dared get closer to it than twenty feet. Really bad rabble, that.
 	AI_Output			(self ,other, "DIA_Jack_Job_14_07"); //They're criminals from the Valley of Mines, you know.
 	AI_Output			(self ,other, "DIA_Jack_Job_14_08"); //There was this big bang on the other side of the mountains, and then they swarmed all over the land like flies. Now they're hiding out everywhere - even in my lighthouse.
@@ -251,6 +251,7 @@ func void DIA_Jack_BANDITENWEG_Info ()
 	AI_Output			(other, self, "DIA_Jack_BANDITENWEG_15_00"); //The bandits that were haunting your lighthouse are gone.
 	AI_Output			(self, other, "DIA_Jack_BANDITENWEG_14_01"); //Is that really true? Finally I can get back to my work.
 	AI_Output			(self, other, "DIA_Jack_BANDITENWEG_14_02"); //Come with me to the lighthouse. You get an incredible view of the sea up there.
+	
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Lighthouse");
 	MIS_Jack_KillLighthouseBandits = LOG_SUCCESS;
