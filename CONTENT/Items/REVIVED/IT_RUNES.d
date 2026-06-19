@@ -115,6 +115,8 @@ INSTANCE ITRU_REVIVED_TELEPORT_DT (C_Item)
 //****************************************************************************
 
 const int REV_Value_PSI_RUNE = 700;
+const int REV_Value_PSI_CONTROL_RUNE = 900;
+const int REV_Value_PSI_BERSERK_RUNE = 900;
 
 INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
 {
@@ -144,6 +146,90 @@ INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
 	COUNT	[5]			= 	value;
 };
 
+INSTANCE ITRU_REVIVED_TELEKINESIS (C_Item)
+{
+	name 				= 	NAME_SPL_Telekinesis;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	0;
+
+	value 				= 	REV_Value_PSI_RUNE;
+
+	visual				= 	"ItAr_Rune_05.3ds";
+	material			= 	MAT_STONE;
+
+	spell				= 	SPL_Telekinesis;
+	mag_circle			= 	2;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_Telekinesis;
+
+	TEXT	[0]			= 	NAME_Mag_Circle;
+	COUNT	[0]			= 	mag_circle;
+	TEXT	[1]			= 	NAME_ManaPerSec;
+	COUNT	[1]			= 	1;
+	TEXT	[4]			= 	NAME_Spell_Invest;
+	TEXT	[5]			= 	NAME_Value;
+	COUNT	[5]			= 	value;
+};
+
+INSTANCE ITRU_REVIVED_CONTROL (C_Item)
+{
+	name 				= 	NAME_SPL_Control;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	0;
+
+	value 				= 	REV_Value_PSI_CONTROL_RUNE;
+
+	visual				= 	"ItAr_Rune_02.3ds";
+	material			= 	MAT_STONE;
+
+	spell				= 	SPL_Control;
+	mag_circle			= 	4;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_Control;
+
+	TEXT	[0]			= 	NAME_Mag_Circle;
+	COUNT	[0]			= 	mag_circle;
+	TEXT	[4]			= 	NAME_Spell_Invest;
+	TEXT	[5]			= 	NAME_Value;
+	COUNT	[5]			= 	value;
+};
+
+INSTANCE ITRU_REVIVED_BERSERK (C_Item)
+{
+	name 				= 	NAME_SPL_Berserk;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	0;
+
+	value 				= 	REV_Value_PSI_BERSERK_RUNE;
+
+	visual				= 	"ItAr_Rune_02.3ds";
+	material			= 	MAT_STONE;
+
+	spell				= 	SPL_Berzerk;
+	mag_circle			= 	4;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	NAME_SPL_Berserk;
+
+	TEXT	[0]			= 	NAME_Mag_Circle;
+	COUNT	[0]			= 	mag_circle;
+	TEXT	[1]			= 	NAME_Manakosten;
+	COUNT	[1]			= 	SPL_SENDCAST_BERZERK;
+	TEXT	[4]			= 	NAME_Spell_Invest;
+	TEXT	[5]			= 	NAME_Value;
+	COUNT	[5]			= 	value;
+};
 //****************************************************************************
 //			MUDFREAK SPELLS
 //****************************************************************************
@@ -301,6 +387,8 @@ INSTANCE ITRU_REVIVED_MANARECOVERY (C_Item)
 const int REV_Value_FIREFIST_RUNE = 1500;
 const int REV_Value_FIREWAVE_RUNE = 2500;
 const int REV_Value_CONCUSSIONBOLT_RUNE = 1500;
+const int REV_Value_INFLATE_RUNE = 2500;
+const int REV_Value_SUMMONSKELETONS_RUNE = 2000;
 
 INSTANCE ITRU_REVIVED_FIREFIST (C_Item)
 {
@@ -363,6 +451,7 @@ INSTANCE ITRU_REVIVED_FIREWAVE (C_Item)
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };
+
 INSTANCE ITRU_REVIVED_CONCUSSIONBOLT (C_Item)
 {
     name                =   NAME_SPL_ConcussionBolt;
@@ -388,6 +477,62 @@ INSTANCE ITRU_REVIVED_CONCUSSIONBOLT (C_Item)
     COUNT   [1]         =   SPL_Cost_Concussionbolt;
     TEXT    [2]         =   NAME_Dam_Magic;
     COUNT   [2]         =   SPL_Damage_Concussionbolt;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITRU_REVIVED_INFLATE (C_Item)
+{
+    name                =   NAME_SPL_Inflate;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   0;
+
+    value               =   REV_Value_INFLATE_RUNE;
+
+    visual              =   "ItRu_Water05.3DS";
+    material            =   MAT_STONE;
+
+    spell               =   SPL_Inflate;
+    mag_circle          =   4;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER_BLUE";
+
+    description         =   NAME_SPL_Inflate;
+    TEXT    [0]         =   NAME_Mag_Circle;
+    COUNT   [0]         =   mag_circle;
+    TEXT    [1]         =   NAME_Manakosten;
+    COUNT   [1]         =   SPL_Cost_Inflate;
+    TEXT    [2]         =   NAME_Damage;
+    COUNT   [2]         =   SPL_Inflate_Damage;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITRU_REVIVED_SUMMONSKELETONS (C_Item)
+{
+    name                =   NAME_SPL_SummonSkeletons;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   0;
+
+    value               =   REV_Value_SUMMONSKELETONS_RUNE;
+
+    visual              =   "ItRu_SumSkel.3DS";
+    material            =   MAT_STONE;
+
+    spell               =   SPL_SummonSkeletons;
+    mag_circle          =   3;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   NAME_SPL_SummonSkeletons;
+    TEXT    [0]         =   NAME_Mag_Circle;
+    COUNT   [0]         =   mag_circle;
+    TEXT    [1]         =   NAME_Manakosten;
+    COUNT   [1]         =   SPL_Cost_SummonSkeletons;
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };

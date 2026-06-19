@@ -51,6 +51,8 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_FireFist			) 	{	return	Spell_Logic_FireFist		(manaInvested);	};
 	if (activeSpell == SPL_ChargeZap		    ) 	{	return	Spell_Logic_ChargeZap		(manaInvested);	};
 	if (activeSpell == SPL_SummonSkeleton	    ) 	{	return	Spell_Logic_SummonSkeleton	(manaInvested);	};
+
+	if (activeSpell == SPL_SummonSkeletons    ) 	{	return	Spell_Logic_SummonSkeletons	(manaInvested);	};
 	if (activeSpell == SPL_Fear	    			) 	{	return	Spell_Logic_Fear			(manaInvested);	};
 	if (activeSpell == SPL_IceCube	    		) 	{	return	Spell_Logic_IceCube			(manaInvested);	};
 	//Kreis 4

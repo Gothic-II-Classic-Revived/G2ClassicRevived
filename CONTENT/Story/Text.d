@@ -329,7 +329,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Concussion Bolt",		// 63	SPL_ConcussionBolt
 	"Fire Fist",			// 64	SPL_FireFist
 	"Fire Wave",			// 65	SPL_FireWave
-	"TXT_SPL_RESERVED_66",		// 66	SPL_Reserved_66
+	"Summon Skeletons",		// 66	SPL_SummonSkeletons
 	"TXT_SPL_RESERVED_67",		// 67	SPL_Reserved_67
   	"TXT_SPL_RESERVED_68",		// 68	SPL_Reserved_68
   	"TXT_SPL_RESERVED_69",		// 69	SPL_Reserved_69
@@ -506,7 +506,7 @@ const string NAME_SPL_Deathball				= "NAME_SPL_DEATHBALL";
 const string NAME_SPL_ConcussionBolt        = "Concussion Bolt";
 const string NAME_SPL_FireFist			= "Fire Fist";
 const string NAME_SPL_FireWave			= "Fire Wave";
-const string NAME_SPL_Reserved_66			= "NAME_SPL_RESERVED_66";
+const string NAME_SPL_SummonSkeletons		= "Summon Skeletons";
 const string NAME_SPL_Reserved_67			= "NAME_SPL_RESERVED_67";
 const string NAME_SPL_Reserved_68			= "NAME_SPL_RESERVED_68";
 const string NAME_SPL_Reserved_69			= "NAME_SPL_RESERVED_69";

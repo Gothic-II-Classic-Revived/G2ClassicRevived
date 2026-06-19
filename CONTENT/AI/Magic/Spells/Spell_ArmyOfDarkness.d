@@ -50,11 +50,13 @@ func void Spell_Cast_ArmyOfDarkness(var int spellLevel)
 	
 	if (Npc_IsPlayer(self))
 	{
-	    Wld_SpawnNpcRange	(self,	Summoned_Skeleton,			6,	800);
+	    Wld_SpawnNpcRange	(self,	Summoned_Skeleton,			3,	800);
+	    Wld_SpawnNpcRange	(self,	Summoned_SkeletonWarrior,	3,	800);
 	}
 	else
 	{
-	    Wld_SpawnNpcRange	(self,	Skeleton,			6,	800);
+	    Wld_SpawnNpcRange	(self,	Lesser_Skeleton,			3,	800);
+	    Wld_SpawnNpcRange	(self,	Skeleton,			3,	800);
 	};
 	
 	self.aivar[AIV_SelectSpell] += 1;

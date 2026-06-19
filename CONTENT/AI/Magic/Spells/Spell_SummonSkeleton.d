@@ -46,6 +46,6 @@ func void Spell_Cast_SummonSkeleton()
 	}
 	else
 	{
-		Wld_SpawnNpcRange	(self,	Skeleton,			1,	500);
+		Wld_SpawnNpcRange	(self,	Lesser_Skeleton,			1,	500);
 	};
 };

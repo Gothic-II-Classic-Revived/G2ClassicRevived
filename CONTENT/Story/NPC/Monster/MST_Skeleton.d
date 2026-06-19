@@ -80,48 +80,6 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 };
 
 //**************
-//	Skeleton    
-//**************
-
-INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
-{
-	name							=	"Summoned Skeleton";
-	guild							=	GIL_SUMMONED_SKELETON;
-	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
-	level							=	0; //30
-
-	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	150;
-	attribute	[ATR_HITPOINTS]		=	150;
-	attribute	[ATR_MANA_MAX] 		=	0;
-	attribute	[ATR_MANA] 			=	0;
-
-	//----- Protection ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	175; 
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	
-	fight_tactic	=	FAI_HUMAN_NORMAL;
-	
-	// ------ visual ------
-	B_SetVisuals_Lesser_Skeleton();
-	
-	aivar[AIV_PARTYMEMBER] = TRUE;
-	B_SetAttitude (self, ATT_FRIENDLY); 
-	
-	start_aistate = ZS_MM_Rtn_Summoned;
-	
-	B_SetVisuals_Lesser_Skeleton();
-
-	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
-	EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
-};
-
-//**************
 //	Lesser Skeleton    
 //**************
 
@@ -291,6 +249,82 @@ INSTANCE Skeleton_Mario4	(Mst_Default_Skeleton)
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	B_SetVisuals_Skeleton();
+
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
+};
+
+
+//**************
+//	Summons    
+//**************
+
+INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
+{
+	name							=	"Summoned Skeleton";
+	guild							=	GIL_SUMMONED_SKELETON;
+	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
+	level							=	0; //30
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
+	attribute	[ATR_DEXTERITY]		=	150;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	125;
+	protection	[PROT_EDGE]			=	125;
+	protection	[PROT_POINT]		=	175; 
+	protection	[PROT_FIRE]			=	125;
+	protection	[PROT_FLY]			=	125;
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Lesser_Skeleton();
+	
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
+
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
+	//EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
+};
+
+INSTANCE Summoned_SkeletonWarrior (Mst_Default_Skeleton)
+{
+	name							=	"Summoned Skeleton";
+	guild							=	GIL_SUMMONED_SKELETON;
+	aivar[AIV_MM_REAL_ID]			= 	ID_SUMMONED_SKELETON;
+	level							=	0; //30
+
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	100; //+50 Waffe
+	attribute	[ATR_DEXTERITY]		=	150;
+	attribute	[ATR_HITPOINTS_MAX]	=	150;
+	attribute	[ATR_HITPOINTS]		=	150;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	//----- Protection ----
+	protection	[PROT_BLUNT]		=	125;
+	protection	[PROT_EDGE]			=	125;
+	protection	[PROT_POINT]		=	175; 
+	protection	[PROT_FIRE]			=	125;
+	protection	[PROT_FLY]			=	125;
+	
+	fight_tactic	=	FAI_HUMAN_NORMAL;
+	
+	// ------ visual ------
+	B_SetVisuals_Skeleton();
+	
+	aivar[AIV_PARTYMEMBER] = TRUE;
+	B_SetAttitude (self, ATT_FRIENDLY); 
+	
+	start_aistate = ZS_MM_Rtn_Summoned;
 
 	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };

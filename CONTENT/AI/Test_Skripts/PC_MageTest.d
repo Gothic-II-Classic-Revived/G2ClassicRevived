@@ -2,77 +2,74 @@ INSTANCE PC_MageTest(NPC_DEFAULT)
 // PlayerInstanz
 {
 	//-------- primary data --------
-	name 			= "Magic dude";
+	name 			= "Magic Dude";
 	Npctype			= NPCTYPE_MAIN;
 	guild			= GIL_NONE;
-	level			= 30;
 	voice			= 15;
 	id				= 0;
 	
-	//--------- abilities --------
-	attribute[ATR_STRENGTH] =		1000;
-	attribute[ATR_DEXTERITY] =		100;
-	attribute[ATR_MANA_MAX] =		400;
-	attribute[ATR_MANA] =			400;
-	attribute[ATR_HITPOINTS_MAX] =	400;
-	attribute[ATR_HITPOINTS] =		400;
+	self.aivar[AIV_INVINCIBLE] = true;
 	
-	exp				= (500*((level+1)/2)*(level+1));
-	exp_next		= (500*((level+2)/2)*(level+1));
+	//--------- abilities --------
+	B_SetAttributesForLevel(self, 500);	
+	bodyStateInterruptableOverride = TRUE;
 
 	//-------- visuals --------
 	// 						animations
 	Mdl_SetVisual		(self,"HUMANS.MDS");
 	//							Body-Mesh			Body-Tex		Skin-Color	Head-MMS    		Head-Tex		Teeth-Tex 	Armor-Tex
-	Mdl_SetVisualBody (self,	"hum_body_Naked0", 	BodyTex_Player,	0,			"Hum_Head_Pony", 	FACE_N_Player,	0, 			ITAR_PAL_H);
+	Mdl_SetVisualBody (self,	"hum_body_Naked0", 	BodyTex_Player,	0,			"Hum_Head_Pony", 	FACE_N_Player,	0, 			ITAR_REVIVED_DMT_H);
 	
 	Npc_SetTalentSkill	(self, NPC_TALENT_MAGE, 			6);
-	Npc_SetTalentSkill	(self, NPC_TALENT_PICKLOCK, 		1); //hängt ab von DEX (auf Programmebene)
+	Npc_SetTalentSkill	(self, NPC_TALENT_PICKLOCK, 		1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_SNEAK, 			1);
-	Npc_SetTalentSkill	(self, NPC_TALENT_ACROBAT, 			0);
+	Npc_SetTalentSkill	(self, NPC_TALENT_ACROBAT, 			1);
 	
-	Npc_SetTalentSkill	(self, NPC_TALENT_PICKPOCKET, 		1);	//hängt ab von DEX (auf Scriptebene)
+	Npc_SetTalentSkill	(self, NPC_TALENT_PICKPOCKET, 		1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_SMITH, 			1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_RUNES, 			1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_ALCHEMY, 			1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_TAKEANIMALTROPHY,	1);
-	
-	PLAYER_TALENT_ALCHEMY[POTION_Health_01]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Health_02]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Health_03]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Mana_01]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Mana_02]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Mana_03]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Speed]			= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Perm_STR]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Perm_Mana]		= TRUE; 
-	PLAYER_TALENT_ALCHEMY[POTION_Perm_Health]	= TRUE; 
 
-	PLAYER_TALENT_SMITH[WEAPON_Common] 			= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_02]	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;
+	PLAYER_TALENT_ALCHEMY[CHARGE_Innoseye] = TRUE;
 
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] 			= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws]			= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] 				= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] 			= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] 		= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] 		= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] 			= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] 			= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] 		= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] 	= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] 	= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] 		= TRUE;
-	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] 		= TRUE;
-	
+	PLAYER_TALENT_ALCHEMY[POTION_Health_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Health_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Health_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Health_04] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Mana_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Mana_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Mana_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Mana_04] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Speed] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_STR] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_Mana] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_Health] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_MegaDrink] = TRUE;
+
+	PLAYER_TALENT_ALCHEMY[POTION_Special_Experience] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Special_DragonDrink] = TRUE;
+
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_SPEED_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_SPEED_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_SPEED_03] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_01] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_02] = TRUE;
+	PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_03] = TRUE;
+
 	PLAYER_TALENT_RUNES[SPL_LIGHT] 					= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Firebolt] 				= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Icebolt] 				= TRUE;
@@ -103,44 +100,170 @@ INSTANCE PC_MageTest(NPC_DEFAULT)
 	PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] 		= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Shrink] 				= TRUE;
 	
-	
-	PLAYER_TALENT_RUNES[SPL_Thunderstorm] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Whirlwind] 				= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Geyser] 				= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Greententacle] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Swarm] 					= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Waterfist] 				= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Icelance] 				= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Energyball] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_SuckEnergy] 			= TRUE;
-	PLAYER_TALENT_RUNES[SPL_Skull] 			= TRUE;
-		
-	B_SetFightSkills (self, 100); //Grenzen für Talent-Level liegen bei 30 und 60
-	
 	//-------- inventory --------
-	EquipItem (self, ItMw_2h_Pal_Sword);
-	
-	
-	//bodyStateInterruptableOverride = TRUE;
+	EquipItem (self, ITMW_REVIVED_2H_MAGESTAFF_GREAT_01);
 
-	CreateInvItem(self,ItRu_Thunderstorm);
-	CreateInvItem(self,ItRu_Whirlwind);
-	CreateInvItem(self,ItRu_Geyser);
-	CreateInvItem(self,ItRu_Greententacle);
-	CreateInvItem(self,ItRu_Swarm);
-	CreateInvItem(self,ItRu_Waterfist);
-	CreateInvItem(self,ItRu_Icelance);
-	CreateInvItem(self,ItRu_BeliarsRage);
-	CreateInvItem(self,ItRu_SuckEnergy);
-	CreateInvItem(self,ItRu_Skull);
+	//******************************************************************//
+
+	CreateInvItems(self,ItRu_PalLight, 1);
+	CreateInvItems(self,ItRu_PalLightHeal, 1);
+	CreateInvItems(self,ItRu_PalHolyBolt, 1);
+	CreateInvItems(self,ItRu_PalMediumHeal, 1);
+	CreateInvItems(self,ItRu_PalRepelEvil, 1);
+	CreateInvItems(self,ItRu_PalFullHeal, 1);
+	CreateInvItems(self,ItRu_PalDestroyEvil, 1);
 	
+	CreateInvItems(self,ItRu_TeleportSeaport, 1);
+	CreateInvItems(self,ItRu_TeleportMonastery, 1);
+	CreateInvItems(self,ItRu_TeleportFarm, 1);
+	CreateInvItems(self,ItRu_TeleportXardas, 1);
+	CreateInvItems(self,ItRu_TeleportPassNW, 1);
+	CreateInvItems(self,ItRu_TeleportPassOW, 1);
+	CreateInvItems(self,ItRu_TeleportOC, 1);
+	//CreateInvItems(self,ItRu_Teleport_1, 1);
+	//CreateInvItems(self,ItRu_Teleport_2, 1);
+	CreateInvItems(self,ItRu_Teleport_3, 1);
+	CreateInvItems(self,ItRu_Light, 1);
+	CreateInvItems(self,ItRu_Firebolt, 1);
+	CreateInvItems(self,ItRu_Icebolt, 1);
+	CreateInvItems(self,ItRu_LightHeal, 1);
+	CreateInvItems(self,ItRu_SumGobSkel, 1);
+	CreateInvItems(self,ItRu_InstantFireball, 1);
+	CreateInvItems(self,ItRu_Zap, 1);
+	CreateInvItems(self,ItRu_SumWolf, 1);
+	CreateInvItems(self,ItRu_Windfist, 1);
+	CreateInvItems(self,ItRu_Sleep, 1);
+	CreateInvItems(self,ItRu_MediumHeal, 1);
+	CreateInvItems(self,ItRu_LightningFlash, 1);
+	CreateInvItems(self,ItRu_ChargeFireball, 1);
+	CreateInvItems(self,ItRu_SumSkel, 1);
+	CreateInvItems(self,ItRu_Fear, 1);
+	CreateInvItems(self,ItRu_IceCube, 1);
+	CreateInvItems(self,ItRu_ThunderBall, 1);
+	CreateInvItems(self,ItRu_SumGol, 1);
+	CreateInvItems(self,ItRu_HarmUndead, 1);
+	CreateInvItems(self,ItRu_LargeFireStorm, 1);
+	CreateInvItems(self,ItRu_Firestorm, 1);
+	CreateInvItems(self,ItRu_IceWave, 1);
+	CreateInvItems(self,ItRu_SumDemon, 1);
+	CreateInvItems(self,ItRu_FullHeal, 1);
+	CreateInvItems(self,ItRu_Firerain, 1);
+	CreateInvItems(self,ItRu_BreathOfDeath, 1);
+	CreateInvItems(self,ItRu_MassDeath, 1);
+	CreateInvItems(self,ItRu_MasterOfDisaster, 1);
+	CreateInvItems(self,ItRu_ArmyOfDarkness, 1);
+	CreateInvItems(self,ItRu_Shrink, 1);
+
+	//******************************************************************//
+
+	CreateInvItems(self,ItSc_PalLight, 10);
+	CreateInvItems(self,ItSc_PalLightHeal, 10);
+	CreateInvItems(self,ItSc_PalHolyBolt, 10);
+	CreateInvItems(self,ItSc_PalMediumHeal, 10);
+	CreateInvItems(self,ItSc_PalRepelEvil, 10);
+	CreateInvItems(self,ItSc_PalFullHeal, 10);
+	CreateInvItems(self,ItSc_PalDestroyEvil, 10);
+	
+	CreateInvItems(self,ItSc_Charm, 10);
+	CreateInvItems(self,ItSc_Light, 10);
+	CreateInvItems(self,ItSc_Firebolt, 10);
+	CreateInvItems(self,ItSc_Icebolt, 10);
+	CreateInvItems(self,ItSc_LightHeal, 10);
+	CreateInvItems(self,ItSc_SumGobSkel, 10);
+	CreateInvItems(self,ItSc_InstantFireball, 10);
+	CreateInvItems(self,ItSc_Zap, 10);
+	CreateInvItems(self,ItSc_SumWolf, 10);
+	CreateInvItems(self,ItSc_Windfist, 10);
+	CreateInvItems(self,ItSc_Sleep, 10);
+	CreateInvItems(self,ItSc_MediumHeal, 10);
+	CreateInvItems(self,ItSc_LightningFlash, 10);
+	CreateInvItems(self,ItSc_ChargeFireball, 10);
+	CreateInvItems(self,ItSc_SumSkel, 10);
+	CreateInvItems(self,ItSc_Fear, 10);
+	CreateInvItems(self,ItSc_IceCube, 10);
+	CreateInvItems(self,ItSc_ThunderBall, 10);
+	CreateInvItems(self,ItSc_SumGol, 10);
+	CreateInvItems(self,ItSc_HarmUndead, 10);
+	CreateInvItems(self,ItSc_LargeFireStorm, 10);
+	CreateInvItems(self,ItSc_Firestorm, 10);
+	CreateInvItems(self,ItSc_IceWave, 10);
+	CreateInvItems(self,ItSc_SumDemon, 10);
+	CreateInvItems(self,ItSc_FullHeal, 10);
+	CreateInvItems(self,ItSc_Firerain, 10);
+	CreateInvItems(self,ItSc_BreathOfDeath, 10);
+	CreateInvItems(self,ItSc_MassDeath, 10);
+	CreateInvItems(self,ItSc_ArmyOfDarkness, 10);
+	CreateInvItems(self,ItSc_Shrink, 10);
+
+	//******************************************************************//
+
+	// IT_RUNES.d
+	CreateInvItems(self, ITRU_REVIVED_TELEPORT_OC, 1);
+	CreateInvItems(self, ITRU_REVIVED_TELEPORT_NC, 1);
+	CreateInvItems(self, ITRU_REVIVED_TELEPORT_PSI, 1);
+	CreateInvItems(self, ITRU_REVIVED_TELEPORT_DT, 1);
+	CreateInvItems(self, ITRU_REVIVED_PYROKINESIS, 1);
+	CreateInvItems(self, ITRU_REVIVED_HEALOTHER, 1);
+	CreateInvItems(self, ITRU_REVIVED_EXPLODE, 1);
+	CreateInvItems(self, ITRU_REVIVED_EXTRICATE, 1);
+	CreateInvItems(self, ITRU_REVIVED_EARTHQUAKE, 1);
+	CreateInvItems(self, ITRU_REVIVED_MANARECOVERY, 1);
+	CreateInvItems(self, ITRU_REVIVED_FIREFIST, 1);
+	CreateInvItems(self, ITRU_REVIVED_FIREWAVE, 1);
+	CreateInvItems(self, ITRU_REVIVED_CONCUSSIONBOLT, 1);
+	CreateInvItems(self, ITRU_REVIVED_INFLATE, 1);
+	CreateInvItems(self, ITRU_REVIVED_SUMMONSKELETONS, 1);
+
+	//******************************************************************//
+
+	// IT_SCROLLS.d
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_CITY, 10);
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_MONASTERY, 10);
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_BIGFARM, 10);
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_XARDAS, 10);
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_TAVERNE, 10);
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_ORC, 10);
+	CreateInvItems(self, ITSC_REVIVED_TELEKINESIS, 10);
+	CreateInvItems(self, ITSC_REVIVED_CONTROL, 10);
+	CreateInvItems(self, ITSC_REVIVED_PYROKINESIS, 10);
+	CreateInvItems(self, ITSC_REVIVED_HEALOTHER, 10);
+	CreateInvItems(self, ITSC_REVIVED_EXPLODE, 10);
+	CreateInvItems(self, ITSC_REVIVED_EXTRICATE, 10);
+	CreateInvItems(self, ITSC_REVIVED_EARTHQUAKE, 10);
+	CreateInvItems(self, ITSC_REVIVED_MANARECOVERY, 10);
+	CreateInvItems(self, ITSC_REVIVED_FIREFIST, 10);
+	CreateInvItems(self, ITSC_REVIVED_FIREWAVE, 10);
+	CreateInvItems(self, ITSC_REVIVED_CONCUSSIONBOLT, 10);
+	CreateInvItems(self, ITSC_REVIVED_INFLATE, 10);
+	CreateInvItems(self, ITSC_REVIVED_SUMMONSKELETONS, 10);
+	CreateInvItems(self, ItSc_TrfSheep, 10);
+	CreateInvItems(self, ItSc_TrfScavenger, 10);
+	CreateInvItems(self, ItSc_TrfGiantRat, 10);
+	CreateInvItems(self, ItSc_TrfGiantBug, 10);
+	CreateInvItems(self, ItSc_TrfWolf, 10);
+	CreateInvItems(self, ItSc_TrfWaran, 10);
+	CreateInvItems(self, ItSc_TrfSnapper, 10);
+	CreateInvItems(self, ItSc_TrfWarg, 10);
+	CreateInvItems(self, ItSc_TrfFireWaran, 10);
+	CreateInvItems(self, ItSc_TrfLurker, 10);
+	CreateInvItems(self, ItSc_TrfShadowbeast, 10);
+	CreateInvItems(self, ItSc_TrfDragonSnapper, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MEATBUG, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MOLERAT, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_BLOODFLY, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MINECRAWLER, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_ORCDOG, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_SWAMPDRONE, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MANTIS, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_BOAR, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_RAZOR, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_CHOMPER, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_BLOODHOUND, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_HELLHOUND, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_PANTHER, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_ALLIGATOR, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_SWAMPSHARK, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_HARPY, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_TROLL, 10);
+	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_GOBLIN, 10);
 };
-
-
-
-
-
-
-
-
-

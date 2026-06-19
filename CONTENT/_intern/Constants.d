@@ -602,7 +602,7 @@ const int SPL_Deathball				= 62;
 const int SPL_ConcussionBolt		= 63;
 const int SPL_FireFist				= 64;
 const int SPL_FireWave				= 65;
-const int SPL_Reserved_66	        = 66;	// SPL_G
+const int SPL_SummonSkeletons	= 66;
 const int SPL_Reserved_67	        = 67;	// SPL_H
 const int SPL_Reserved_68			= 68;	// MAX_SPELL (Gothic2)
 const int SPL_Reserved_69			= 69;
@@ -781,7 +781,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Concussionbolt", 		// 63	SPL_Concussionbolt
 	"FireFist",			// 64	SPL_FireFist
 	"FireWave",			// 65	SPL_FireWave
-	"Light",  				// 66	SPL_Reserved_66
+	"SummonSkeletons",		// 66	SPL_SummonSkeletons
 	"Light",				// 67	SPL_Reserved_67
 	"Light",				// 68	SPL_Reserved_68
 	"Light",				// 69	SPL_Reserved_69
@@ -791,7 +791,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Whirlwind",			// 71	SPL_Whirlwind
 	"Waterfist",			// 72	SPL_WaterFist
 	"IceLance",				// 73	SPL_IceLance
-	"Sleep",				// 74	SPL_Inflate
+	"Charm",				// 74	SPL_Inflate
 	"Geyser",				// 75	SPL_Geyser
 	"Firerain",				// 76	SPL_Waterwall
 	"Light",				// 77	SPL_Reserved_77
@@ -961,7 +961,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FBT",  				// 63	SPL_Concussionbolt
 	"WND",  				// 64	SPL_FireFist
 	"FEA",  				// 65	SPL_FireWave
-	"XXX",  				// 66	SPL_Reserved_66
+	"SUM",  				// 66	SPL_SummonSkeletons
 	"XXX",					// 67	SPL_Reserved_67
  	"XXX",					// 68	SPL_Reserved_68
 	"XXX",					// 69	SPL_Reserved_69
@@ -971,7 +971,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"WHI",  				// 71	SPL_Whirlwind		
 	"WND",  				// 72	SPL_WaterFist
 	"FBT",  				// 73	SPL_IceLance
-	"SLE",  				// 74	SPL_Inflate			
+	"FIB",  				// 74	SPL_Inflate			
 	"WND",  				// 75	SPL_Geyser			
 	"FEA",  				// 76	SPL_Waterwall
 	"XXX",					// 77	SPL_Reserved_77

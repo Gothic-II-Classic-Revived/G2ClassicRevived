@@ -3149,6 +3149,41 @@ instance spellFX_SummonSkeleton		(CFx_Base_Proto)
 			pfx_ppsisloopingchg = 1;
 };
 
+///                                                     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///                                                     XX  S U M M O N    S K E L E T O N S XX
+///                                                     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+instance spellFX_SummonSkeletons (CFx_Base_Proto)
+{
+        visname_S           = "MFX_ArmyOfDarkness_INIT";
+        visAlpha            = 1;
+
+        emtrjmode_s         = "FIXED";
+        emTrjOriginNode     = "ZS_RIGHTHAND";
+        LightPresetname     = "REDAMBIENCE";
+
+        };
+
+        instance spellFX_SummonSkeletons_KEY_OPEN(C_ParticleFXEmitKey)
+        {
+                LightRange = 0.01;
+        };
+
+        instance spellFX_SummonSkeletons_KEY_INIT (C_ParticleFXEmitKey)
+        {
+                LightRange = 0.01;
+        };
+
+        instance spellFX_SummonSkeletons_KEY_INVEST_1 (C_ParticleFXEmitKey)
+        {
+            LightRange = 200;
+            emCreateFXID =  "FX_EarthQuake";
+        };
+        instance spellFX_SummonSkeletons_KEY_CAST (C_ParticleFXEmitKey)
+        {
+            emCreateFXID        = "spellFX_SummonCreature_ORIGIN";
+            pfx_ppsisloopingchg = 1;
+};
 
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ///   													XX  S U M M O N    G O B L I N S K   XX

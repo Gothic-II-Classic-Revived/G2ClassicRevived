@@ -147,241 +147,6 @@ INSTANCE ITSC_REVIVED_TELEPORT_ORC (C_Item)
 };
 
 //****************************************************************************
-//			PSI SPELLS
-//****************************************************************************
-
-INSTANCE ITSC_REVIVED_TELEKINESIS (C_Item)
-{
-	name 				=	NAME_SPL_Telekinesis;
-
-	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	ITEM_MULTI;
-	material			=	MAT_LEATHER;
-
-	value 				=	REV_Value_PSI_SCROLL;
-
-	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
-
-	spell			    = 	SPL_Telekinesis;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
-
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_CONTROL (C_Item)
-{
-	name 				=	NAME_SPL_Control;
-
-	mainflag 			=	ITEM_KAT_RUNE;
-	flags 				=	ITEM_MULTI;
-	material			=	MAT_LEATHER;
-
-	value 				=	REV_Value_PSI_SCROLL;
-
-	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
-
-	spell			    = 	SPL_Control;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
-
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_BERSERK (C_Item)
-{
-    name                = NAME_SPL_Berserk;
-
-    mainflag            = ITEM_KAT_RUNE;
-    flags               = ITEM_MULTI;
-    material            = MAT_LEATHER;
-
-    value               = REV_Value_PSI_SCROLL;
-
-    visual              = "ItAr_Scroll_22.3DS";
-
-    spell               = SPL_Berzerk;
-    cond_atr[2]         = ATR_MANA_MAX;
-    cond_value[2]       = SPL_SENDCAST_BERZERK;
-
-    wear                = WEAR_EFFECT;
-    effect              = "SPELLFX_WEAKGLIMMER";
-
-    description         = NAME_SPL_Berserk;
-    TEXT[2]             = NAME_Manakosten;                COUNT[2] = cond_value[2];
-    TEXT[5]             = NAME_Value;                     COUNT[5] = value;
-};
-
-INSTANCE ITSC_REVIVED_PYROKINESIS (C_Item)
-{
-	name 				= 	NAME_SPL_Pyrokinesis;
-
-	mainflag 			= 	ITEM_KAT_RUNE;
-	flags 				= 	ITEM_MULTI;
-	material			= 	MAT_LEATHER;
-
-	value 				= 	REV_Value_PSI_SCROLL;
-
-	visual				= 	"ItSc_Pyrokinesis.3DS";
-
-	spell			    = 	SPL_Pyrokinesis;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
-
-	wear				= 	WEAR_EFFECT;
-	effect				= 	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[1]				= 	NAME_DamagePerSec;				COUNT[1]	= SPL_PYRO_DAMAGE_PER_SEC;
-	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
-	TEXT[3]				= 	NAME_ManaPerSec;				COUNT[3]	= SPL_PYRO_MANA_PER_SEC;
-	TEXT[4]				= 	NAME_Spell_Invest;
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-//****************************************************************************
-//			MUDFREAK SPELLS
-//****************************************************************************
-
-const int REV_Value_ZP_SCROLL = 200;
-
-INSTANCE ITSC_REVIVED_HEALOTHER (C_Item)
-{
-	name 				= 	NAME_SPL_HealOther;
-
-	mainflag 			= 	ITEM_KAT_RUNE;
-	flags 				= 	ITEM_MULTI;
-	material			= 	MAT_LEATHER;
-
-	value 				= 	REV_Value_ZP_SCROLL;
-
-	visual				= 	"ItSc_HealOther.3DS";
-	spell				= 	SPL_HealOther;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
-
-	wear				= 	WEAR_EFFECT;
-	effect				= 	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[0]				= 	Name_MageScroll;
-	TEXT[1]				= 	NAME_HealingPerCast;			COUNT[1]	= SPL_Heal_HealOther;
-	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_EXPLODE (C_Item)
-{
-	name 				= 	NAME_SPL_Explode;
-
-	mainflag 			= 	ITEM_KAT_RUNE;
-	flags 				= 	ITEM_MULTI;
-	material			= 	MAT_LEATHER;
-
-	value 				= 	REV_Value_ZP_SCROLL;
-
-	visual				= 	"ItSc_Explosion.3DS";
-	spell				= 	SPL_Explode;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
-
-	wear				= 	WEAR_EFFECT;
-	effect				= 	"SPELLFX_WEAKGLIMMER_YELLOW";
-
-	description			= 	name;
-	TEXT[0]				= 	Name_MageScroll;
-	TEXT[1]				= 	NAME_Damage;					COUNT[1]	= SPL_Damage_Explode;
-	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_EXTRICATE (C_Item)
-{
-	name 				= 	NAME_SPL_Extricate;
-
-	mainflag 			= 	ITEM_KAT_RUNE;
-	flags 				= 	ITEM_MULTI;
-	material			= 	MAT_LEATHER;
-
-	value 				= 	REV_Value_ZP_SCROLL;
-
-	visual				= 	"ItSc_Firestorm.3DS";
-	spell				= 	SPL_Extricate;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
-
-	wear				= 	WEAR_EFFECT;
-	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
-
-	description			= 	name;
-	TEXT[0]				= 	Name_MageScroll;
-	TEXT[1]				= 	NAME_Damage;					COUNT[1]	= SPL_Damage_Extricate;
-	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_EARTHQUAKE (C_Item)
-{
-	name 				= 	NAME_SPL_Earthquake;
-
-	mainflag 			= 	ITEM_KAT_RUNE;
-	flags 				= 	ITEM_MULTI;
-	material			= 	MAT_LEATHER;
-
-	value 				= 	REV_Value_ZP_SCROLL;
-
-	visual				= 	"ItSc_Quake.3DS";
-	spell				= 	SPL_Earthquake;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	SPL_Cost_Scroll;
-
-	wear				= 	WEAR_EFFECT;
-	effect				= 	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[0]				= 	Name_MageScroll;
-	TEXT[1]				= 	NAME_Damage;					COUNT[1]	= SPL_Damage_Earthquake;
-	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-INSTANCE ITSC_REVIVED_MANARECOVERY (C_Item)
-{
-	name 				= 	NAME_SPL_ManaRecovery;
-
-	mainflag 			= 	ITEM_KAT_RUNE;
-	flags 				= 	ITEM_MULTI;
-	material			= 	MAT_LEATHER;
-
-	value 				= 	REV_Value_ZP_SCROLL;
-
-	visual				= 	"ItSc_ManaForLife.3DS";
-	spell				= 	SPL_ManaRecovery;
-	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	1;
-
-	wear				= 	WEAR_EFFECT;
-	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
-
-	description			= 	name;
-	TEXT[0]				= 	Name_MageScroll;
-	TEXT[1]				= 	NAME_Spell_Invest;
-	TEXT[2]				= 	ConcatStrings(PRINT_Beliarshitpoints_MAX, "1");
-	TEXT[3]				= 	ConcatStrings(PRINT_LearnMANA_MAX, IntToString(SPL_ManaRecovery_RELATION));
-	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
-};
-
-//****************************************************************************
 //			TRANSFORM (From G2)
 //****************************************************************************
 
@@ -1115,12 +880,249 @@ INSTANCE ITSC_REVIVED_TRANSFORM_GOBLIN (C_Item)
 };
 
 //****************************************************************************
+//			PSI SPELLS
+//****************************************************************************
+
+INSTANCE ITSC_REVIVED_TELEKINESIS (C_Item)
+{
+	name 				=	NAME_SPL_Telekinesis;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+	material			=	MAT_LEATHER;
+
+	value 				=	REV_Value_PSI_SCROLL;
+
+	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
+
+	spell			    = 	SPL_Telekinesis;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_CONTROL (C_Item)
+{
+	name 				=	NAME_SPL_Control;
+
+	mainflag 			=	ITEM_KAT_RUNE;
+	flags 				=	ITEM_MULTI;
+	material			=	MAT_LEATHER;
+
+	value 				=	REV_Value_PSI_SCROLL;
+
+	visual				=	"ITSC_TRANSFORM_MEATBUG.3DS";
+
+	spell			    = 	SPL_Control;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
+
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_BERSERK (C_Item)
+{
+    name                = NAME_SPL_Berserk;
+
+    mainflag            = ITEM_KAT_RUNE;
+    flags               = ITEM_MULTI;
+    material            = MAT_LEATHER;
+
+    value               = REV_Value_PSI_SCROLL;
+
+    visual              = "ItAr_Scroll_22.3DS";
+
+    spell               = SPL_Berzerk;
+    cond_atr[2]         = ATR_MANA_MAX;
+    cond_value[2]       = SPL_SENDCAST_BERZERK;
+
+    wear                = WEAR_EFFECT;
+    effect              = "SPELLFX_WEAKGLIMMER";
+
+    description         = NAME_SPL_Berserk;
+    TEXT[2]             = NAME_Manakosten;                COUNT[2] = cond_value[2];
+    TEXT[5]             = NAME_Value;                     COUNT[5] = value;
+};
+
+INSTANCE ITSC_REVIVED_PYROKINESIS (C_Item)
+{
+	name 				= 	NAME_SPL_Pyrokinesis;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_PSI_SCROLL;
+
+	visual				= 	"ItSc_Pyrokinesis.3DS";
+
+	spell			    = 	SPL_Pyrokinesis;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	REV_Cost_PSI_SCROLL;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_DamagePerSec;				COUNT[1]	= SPL_PYRO_DAMAGE_PER_SEC;
+	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
+	TEXT[3]				= 	NAME_ManaPerSec;				COUNT[3]	= SPL_PYRO_MANA_PER_SEC;
+	TEXT[4]				= 	NAME_Spell_Invest;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+//****************************************************************************
+//			MUDFREAK SPELLS
+//****************************************************************************
+
+const int REV_Value_ZP_SCROLL = 200;
+
+INSTANCE ITSC_REVIVED_HEALOTHER (C_Item)
+{
+	name 				= 	NAME_SPL_HealOther;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_ZP_SCROLL;
+
+	visual				= 	"ItSc_HealOther.3DS";
+	spell				= 	SPL_HealOther;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[0]				= 	Name_MageScroll;
+	TEXT[1]				= 	NAME_HealingPerCast;			COUNT[1]	= SPL_Heal_HealOther;
+	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_EXPLODE (C_Item)
+{
+	name 				= 	NAME_SPL_Explode;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_ZP_SCROLL;
+
+	visual				= 	"ItSc_Explosion.3DS";
+	spell				= 	SPL_Explode;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER_YELLOW";
+
+	description			= 	name;
+	TEXT[0]				= 	Name_MageScroll;
+	TEXT[1]				= 	NAME_Damage;					COUNT[1]	= SPL_Damage_Explode;
+	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_EXTRICATE (C_Item)
+{
+	name 				= 	NAME_SPL_Extricate;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_ZP_SCROLL;
+
+	visual				= 	"ItSc_Firestorm.3DS";
+	spell				= 	SPL_Extricate;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
+
+	description			= 	name;
+	TEXT[0]				= 	Name_MageScroll;
+	TEXT[1]				= 	NAME_Damage;					COUNT[1]	= SPL_Damage_Extricate;
+	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_EARTHQUAKE (C_Item)
+{
+	name 				= 	NAME_SPL_Earthquake;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_ZP_SCROLL;
+
+	visual				= 	"ItSc_Quake.3DS";
+	spell				= 	SPL_Earthquake;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	SPL_Cost_Scroll;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER";
+
+	description			= 	name;
+	TEXT[0]				= 	Name_MageScroll;
+	TEXT[1]				= 	NAME_Damage;					COUNT[1]	= SPL_Damage_Earthquake;
+	TEXT[2]				= 	NAME_Mana_needed;				COUNT[2]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITSC_REVIVED_MANARECOVERY (C_Item)
+{
+	name 				= 	NAME_SPL_ManaRecovery;
+
+	mainflag 			= 	ITEM_KAT_RUNE;
+	flags 				= 	ITEM_MULTI;
+	material			= 	MAT_LEATHER;
+
+	value 				= 	REV_Value_ZP_SCROLL;
+
+	visual				= 	"ItSc_ManaForLife.3DS";
+	spell				= 	SPL_ManaRecovery;
+	cond_atr[2]   		= 	ATR_MANA_MAX;
+	cond_value[2]  		= 	1;
+
+	wear				= 	WEAR_EFFECT;
+	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
+
+	description			= 	name;
+	TEXT[0]				= 	Name_MageScroll;
+	TEXT[1]				= 	NAME_Spell_Invest;
+	TEXT[2]				= 	ConcatStrings(PRINT_Beliarshitpoints_MAX, "1");
+	TEXT[3]				= 	ConcatStrings(PRINT_LearnMANA_MAX, IntToString(SPL_ManaRecovery_RELATION));
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+//****************************************************************************
 //          REVIVED SPELLS
 //****************************************************************************
 
 const int REV_Value_FIREFIST_SCROLL = 75;
 const int REV_Value_FIREWAVE_SCROLL = 200;
 const int REV_Value_CONCUSSIONBOLT_SCROLL = 75;
+const int REV_Value_INFLATE_SCROLL = 200;
+const int REV_Value_SUMMONSKELETONS_SCROLL = 350;
 
 INSTANCE ITSC_REVIVED_FIREFIST (C_Item)
 {
@@ -1181,6 +1183,7 @@ INSTANCE ITSC_REVIVED_FIREWAVE (C_Item)
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };
+
 INSTANCE ITSC_REVIVED_CONCUSSIONBOLT (C_Item)
 {
     name                =   NAME_SPL_ConcussionBolt;
@@ -1205,6 +1208,60 @@ INSTANCE ITSC_REVIVED_CONCUSSIONBOLT (C_Item)
     COUNT   [1]         =   cond_value[2];
     TEXT    [2]         =   NAME_Dam_Magic;
     COUNT   [2]         =   SPL_Damage_ConcussionBolt;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_INFLATE (C_Item)
+{
+    name                =   NAME_SPL_Inflate;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_INFLATE_SCROLL;
+
+    visual              =   "ItSc_Water05.3DS";
+    spell               =   SPL_Inflate;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER_BLUE";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [2]         =   NAME_Damage;
+    COUNT   [2]         =   SPL_Inflate_Damage;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_SUMMONSKELETONS (C_Item)
+{
+    name                =   NAME_SPL_SummonSkeletons;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_SUMMONSKELETONS_SCROLL;
+
+    visual              =   "ItSc_SumSkel.3DS";
+    spell               =   SPL_SummonSkeletons;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };
