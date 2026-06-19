@@ -716,6 +716,14 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_PSI, 1);
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_DT, 1);
 	CreateInvItems(self, ITRU_REVIVED_PYROKINESIS, 1);
+	CreateInvItems(self, ITRU_REVIVED_HEALOTHER, 1);
+	CreateInvItems(self, ITRU_REVIVED_EXPLODE, 1);
+	CreateInvItems(self, ITRU_REVIVED_EXTRICATE, 1);
+	CreateInvItems(self, ITRU_REVIVED_EARTHQUAKE, 1);
+	CreateInvItems(self, ITRU_REVIVED_MANARECOVERY, 1);
+	CreateInvItems(self, ITRU_REVIVED_FIREFIST, 1);
+	CreateInvItems(self, ITRU_REVIVED_FIREWAVE, 1);
+	CreateInvItems(self, ITRU_REVIVED_CONCUSSIONBOLT, 1);
 
 	//******************************************************************//
 
@@ -729,6 +737,14 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITSC_REVIVED_TELEKINESIS, 10);
 	CreateInvItems(self, ITSC_REVIVED_CONTROL, 10);
 	CreateInvItems(self, ITSC_REVIVED_PYROKINESIS, 10);
+	CreateInvItems(self, ITSC_REVIVED_HEALOTHER, 10);
+	CreateInvItems(self, ITSC_REVIVED_EXPLODE, 10);
+	CreateInvItems(self, ITSC_REVIVED_EXTRICATE, 10);
+	CreateInvItems(self, ITSC_REVIVED_EARTHQUAKE, 10);
+	CreateInvItems(self, ITSC_REVIVED_MANARECOVERY, 10);
+	CreateInvItems(self, ITSC_REVIVED_FIREFIST, 10);
+	CreateInvItems(self, ITSC_REVIVED_FIREWAVE, 10);
+	CreateInvItems(self, ITSC_REVIVED_CONCUSSIONBOLT, 10);
 	CreateInvItems(self, ItSc_TrfSheep, 10);
 	CreateInvItems(self, ItSc_TrfScavenger, 10);
 	CreateInvItems(self, ItSc_TrfGiantRat, 10);

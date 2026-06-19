@@ -176,7 +176,9 @@ FUNC INT PC_Circle_03_Condition ()
 	||   (PLAYER_TALENT_RUNES[SPL_Fear] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_IceCube] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_ChargeZap] == TRUE)
+	||   (PLAYER_TALENT_RUNES[SPL_ConcussionBolt] == TRUE)
 	||	 (PLAYER_TALENT_RUNES[SPL_Firestorm] == TRUE)
+	||	 (PLAYER_TALENT_RUNES[SPL_FireFist] == TRUE)
 	||	 (PLAYER_TALENT_RUNES[SPL_Geyser] == TRUE)
 	||	 (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)) )
 	{
@@ -208,9 +210,17 @@ FUNC VOID PC_Circle_03_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_ChargeZap,PC_ItRu_ThunderBall_Info);
 	};
+	if (PLAYER_TALENT_RUNES[SPL_ConcussionBolt] == TRUE)
+	{
+		Info_AddChoice     (PC_Circle_03,NAME_SPL_ConcussionBolt,PC_ItRu_ConcussionBolt_Info);
+	};
 	if (PLAYER_TALENT_RUNES[SPL_Firestorm] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Firestorm,PC_ItRu_Firestorm_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_FireFist] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_FireFist,PC_ItRu_FireFist_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_Geyser] == TRUE)
 	{
@@ -291,6 +301,7 @@ FUNC INT PC_Circle_05_Condition ()
 {
 	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
 	&& ( (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
+	||   (PLAYER_TALENT_RUNES[SPL_FireWave] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
 	||   (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE) ) )
@@ -307,6 +318,10 @@ FUNC VOID PC_Circle_05_Info()
 	if (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_IceWave,PC_ItRu_IceWave_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_FireWave] == TRUE)
+	{
+		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_FireWave,PC_ItRu_FireWave_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE)
 	{
@@ -641,6 +656,27 @@ FUNC VOID PC_ItRu_Windfist_Info ()
 	B_ENDPRODUCTIONDIALOG ();
 };
 //*******************************************************
+FUNC VOID PC_ItRu_FireFist_Info ()
+{
+	if (Npc_HasItems (hero, ITSC_REVIVED_FIREFIST) >= 1)
+	&& (Npc_HasItems (hero, ItMi_Coal) >= 1)
+	&& (Npc_HasItems (hero, ItMi_Pitch) >= 1)
+	{
+		Npc_RemoveInvItems  (hero, ITSC_REVIVED_FIREFIST, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Coal, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Pitch, 1);
+
+		CreateInvItems     (hero, ITRU_REVIVED_FIREFIST, 1);
+		Print (PRINT_RuneSuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank,1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
+};
+//*******************************************************
 FUNC VOID PC_ItRu_Sleep_Info ()
 {
 	if (Npc_HasItems (hero, ItSc_Sleep) >= 1)
@@ -800,6 +836,27 @@ FUNC VOID PC_ItRu_ThunderBall_Info ()
 	B_ENDPRODUCTIONDIALOG ();
 };
 //*******************************************************
+FUNC VOID PC_ItRu_ConcussionBolt_Info ()
+{
+    if (Npc_HasItems (hero, ITSC_REVIVED_CONCUSSIONBOLT) >= 1)
+    && (Npc_HasItems (hero, ItMi_Rockcrystal) >= 1)
+    && (Npc_HasItems (hero, ItMi_Sulfur) >= 1)
+    {
+        Npc_RemoveInvItems  (hero, ITSC_REVIVED_CONCUSSIONBOLT, 1);
+        Npc_RemoveInvItems  (hero, ItMi_Rockcrystal, 1);
+        Npc_RemoveInvItems  (hero, ItMi_Sulfur, 1);
+
+        CreateInvItems      (hero, ITRU_REVIVED_CONCUSSIONBOLT, 1);
+        Print (PRINT_RunESuccess);
+    }
+    else
+    {
+        Print (PRINT_ProdItemsMissing);
+        CreateInvItems (self, ItMi_RuneBlank, 1);
+    };
+    B_ENDPRODUCTIONDIALOG ();
+};
+//*******************************************************
 FUNC VOID PC_ItRu_SumGol_Info ()
 {
 	if (Npc_HasItems (hero, ItSc_SumGol) >= 1)
@@ -900,6 +957,27 @@ FUNC VOID PC_ItRu_IceWave_Info ()
 		CreateInvItems (self, ItMi_RuneBlank,1);
 	};	
 	B_ENDPRODUCTIONDIALOG ();	
+};
+//*******************************************************
+FUNC VOID PC_ItRu_FireWave_Info ()
+{
+	if (Npc_HasItems (hero, ITSC_REVIVED_FIREWAVE) >= 1)
+	&& (Npc_HasItems (hero, ItMi_Sulfur) >= 1)
+	&& (Npc_HasItems (hero, ItAt_WaranFiretongue) >= 1)
+	{
+		Npc_RemoveInvItems  (hero, ITSC_REVIVED_FIREWAVE, 1);
+		Npc_RemoveInvItems  (hero, ItMi_Sulfur, 1);
+		Npc_RemoveInvItems  (hero, ItAt_WaranFiretongue, 1);
+
+		CreateInvItems     (hero, ITRU_REVIVED_FIREWAVE, 1);
+		Print (PRINT_RunESuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank,1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
 };
 //*******************************************************
 FUNC VOID PC_ItRu_SumDemon_Info ()

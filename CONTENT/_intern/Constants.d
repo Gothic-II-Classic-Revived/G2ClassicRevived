@@ -600,8 +600,8 @@ const int SPL_MasterOfDisaster		= 60;
 const int SPL_Deathbolt				= 61;
 const int SPL_Deathball				= 62;
 const int SPL_ConcussionBolt		= 63;
-const int SPL_Reserved_64			= 64;	// SPL_E
-const int SPL_Reserved_65		    = 65;	// SPL_F
+const int SPL_FireFist				= 64;
+const int SPL_FireWave				= 65;
 const int SPL_Reserved_66	        = 66;	// SPL_G
 const int SPL_Reserved_67	        = 67;	// SPL_H
 const int SPL_Reserved_68			= 68;	// MAX_SPELL (Gothic2)
@@ -779,8 +779,8 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Deathbolt",  			// 61	SPL_Deathbolt
 	"Deathball", 			// 62	SPL_Deathball
 	"Concussionbolt", 		// 63	SPL_Concussionbolt
-	"Transform",			// 64	SPL_TrfMeatbug
-	"Light",  				// 65	SPL_Reserved_65
+	"FireFist",			// 64	SPL_FireFist
+	"FireWave",			// 65	SPL_FireWave
 	"Light",  				// 66	SPL_Reserved_66
 	"Light",				// 67	SPL_Reserved_67
 	"Light",				// 68	SPL_Reserved_68
@@ -959,8 +959,8 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FBT",  				// 61	SPL_Deathbolt
 	"FBT",  				// 62	SPL_Deathball
 	"FBT",  				// 63	SPL_Concussionbolt
-	"XXX",  				// 64	SPL_Reserved_64
-	"XXX",  				// 65	SPL_Reserved_65
+	"WND",  				// 64	SPL_FireFist
+	"FEA",  				// 65	SPL_FireWave
 	"XXX",  				// 66	SPL_Reserved_66
 	"XXX",					// 67	SPL_Reserved_67
  	"XXX",					// 68	SPL_Reserved_68

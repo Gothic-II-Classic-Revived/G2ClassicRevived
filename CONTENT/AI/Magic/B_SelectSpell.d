@@ -37,8 +37,8 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	{
 			// ------- in die Taschen -------
 			if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)	{	CreateInvItems (slf, ItRu_InstantFireball, 1);	};
-			if (Npc_HasItems (slf, ItRu_Deathbolt) == 0) 		{	CreateInvItems (slf, ItRu_Deathbolt, 1); };
-			if (Npc_HasItems (slf, ItRu_Deathball) == 0) 		{	CreateInvItems (slf, ItRu_Deathball, 1); };
+			if (Npc_HasItems (slf, ItRu_SuckEnergy) == 0) 		{	CreateInvItems (slf, ItRu_SuckEnergy, 1); };
+			if (Npc_HasItems (slf, ItRu_BeliarsRage) == 0) 		{	CreateInvItems (slf, ItRu_BeliarsRage, 1); };
 			if (Npc_HasItems (slf, ItRu_Firerain) == 0) 		{	CreateInvItems (slf, ItRu_Firerain, 1); };
 			if (Npc_HasItems (slf, ItRu_Thunderstorm) == 0) 	{	CreateInvItems (slf, ItRu_Thunderstorm, 1); };
 			if (Npc_HasItems (slf, ItRu_LightningFlash) == 0) 	{	CreateInvItems (slf, ItRu_LightningFlash, 1); };
@@ -69,8 +69,8 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 			if (slf.aivar[AIV_SelectSpell] < 10)
 			{
 				if 		(Kapitel <= 3)	{	B_ReadySpell (slf, SPL_InstantFireball , SPL_Cost_InstantFireball); return TRUE; }
-				else if (Kapitel <= 4)	{	B_ReadySpell (slf, SPL_DeathBolt , SPL_Cost_DeathBolt);				return TRUE; }
-				else /*Kap 5+*/			{	B_ReadySpell (slf, SPL_DeathBall , SPL_Cost_DeathBall);				return TRUE; };
+				else if (Kapitel <= 4)	{	B_ReadySpell (slf, SPL_SuckEnergy , SPL_Cost_SuckEnergy);				return TRUE; }
+				else /*Kap 5+*/			{	B_ReadySpell (slf, SPL_EnergyBall , SPL_Cost_EnergyBall);				return TRUE; };
 			}
 			else if (slf.aivar[AIV_SelectSpell] == 10)
 			{	

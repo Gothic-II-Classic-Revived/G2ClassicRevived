@@ -363,6 +363,46 @@ if (spellType == SPL_WINDFIST)
         return COLL_DOEVERYTHING;
     };
 
+//----- Fire Wave -----
+
+    if (spellType == SPL_FireWave)
+    {
+        if (C_NpcIsDown(self))
+        || (C_BodyStateContains(self,BS_SWIM))
+        || (C_BodyStateContains(self,BS_DIVE))
+        {
+            return COLL_DONOTHING;
+        };
+
+        if (self.guild == GIL_FIREGOLEM)
+        || (self.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN)
+        || (self.guild == GIL_GARGOYLE)
+        || (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)
+        {
+            return COLL_APPLYHALVEDAMAGE;
+        };
+
+        if (self.guild == GIL_ICEGOLEM)
+        || (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)
+        || (self.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)
+        {
+            return COLL_APPLYDOUBLEDAMAGE;
+        };
+
+        if (self.guild == GIL_STONEGOLEM)
+        || (self.guild == GIL_SWAMPGOLEM)
+        || (self.guild == GIL_SUMMONED_GOLEM)
+        || (self.guild == GIL_DEMON)
+        || (self.guild == GIL_SUMMONED_DEMON)
+        || (self.guild == GIL_TROLL)
+        || (self.guild == GIL_DRAGON)
+        {
+            return COLL_APPLYDAMAGE;
+        };
+
+        return COLL_DOEVERYTHING;
+    };
+
 //----- Feuer -----	
 	
 	if (spellType 	== SPL_ChargeFireball)
@@ -370,6 +410,7 @@ if (spellType == SPL_WINDFIST)
 	|| (spellType  	== SPL_Firerain)		
 	|| (spellType 	== SPL_Firebolt)		
 	|| (spellType 	== SPL_Firestorm)
+	|| (spellType 	== SPL_FireFist)
 	|| (spellType   == SPL_LargeFireStorm)
 	|| (spellType	== SPL_Deathbolt)
 	|| (spellType 	== SPL_Deathball)

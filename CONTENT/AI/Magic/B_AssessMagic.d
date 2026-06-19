@@ -36,9 +36,9 @@ func void B_AssessMagic ()
 	{
 		Npc_SendPassivePerc	(self, PERC_ASSESSFIGHTSOUND, self, other);
 	};
-	
-//###	Addon ###	
-	
+
+//###	Addon ###
+
 	// ------ Whirlwind ------
 	if (Npc_GetLastHitSpellID(self) == SPL_Whirlwind)
 	{
@@ -60,13 +60,13 @@ func void B_AssessMagic ()
 		return;
 	};
 	// ---- GreenTentacle ----
-	if (Npc_GetLastHitSpellID(self) == SPL_Greententacle)	
+	if (Npc_GetLastHitSpellID(self) == SPL_Greententacle)
 	{
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
 		AI_StartState	(self, ZS_Greententacle, 0, "");
 		return;
-		
+
 	};
 	// ---- SummonGuardian ----
 	// ---- Swarm ----
@@ -79,7 +79,7 @@ func void B_AssessMagic ()
 	};
 	// ---- SummonZombie ----
 	// ---- Skull ----
-	
+
 	// ------ IceCube, IceWave ------
 	if (Npc_GetLastHitSpellID(self) == SPL_IceCube)
 	|| (Npc_GetLastHitSpellID(self) == SPL_IceWave)
@@ -89,7 +89,16 @@ func void B_AssessMagic ()
 		AI_StartState		(self, ZS_MagicFreeze, 0, "");
 		return;
 	};
-	
+
+	// ------ FireWave ------
+	if (Npc_GetLastHitSpellID(self) == SPL_FireWave)
+	{
+		Npc_ClearAIQueue	(self);
+		B_ClearPerceptions	(self);
+		AI_StartState		(self, ZS_MagicBurn, 0, "");
+		return;
+	};
+
 	// ------ ChargeZap ------
 	if (Npc_GetLastHitSpellID(self) == SPL_ChargeZap)
 	{
@@ -136,12 +145,12 @@ func void B_AssessMagic ()
 		return;
 	};
 	// ------ Fear ------
-	if (Npc_GetLastHitSpellID(self) == SPL_Fear)	
+	if (Npc_GetLastHitSpellID(self) == SPL_Fear)
 	{
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
 		Npc_SetTarget		(self,	other);
-			
+
 		if (self.guild < GIL_SEPERATOR_HUM)
 		&& (self.guild != GIL_KDF)
 		&& (self.guild != GIL_PAL)
@@ -162,16 +171,16 @@ func void B_AssessMagic ()
 			return;
 		};
 	};
-	
+
 	// Firespells senden ein ASSESSMAGIC bei Kollision
-	if (Npc_GetLastHitSpellID(self) == SPL_Firerain)		
-	{	
+	if (Npc_GetLastHitSpellID(self) == SPL_Firerain)
+	{
 		Npc_ClearAIQueue	(self);
 		//B_ClearPerceptions	(self);	//Sonst reagiert der NPC nicht!
 		AI_StartState(self, ZS_MagicBurnShort, 0, "");
 		return;
 	};
-		
+
 };
 
 
@@ -181,9 +190,9 @@ func void B_AssessMagic ()
 // Spieler hat also IMMER PERC_ASSESSMAGIC aktiv
 // ***************************************************
 
-const func PLAYER_PERC_ASSESSMAGIC = B_AssessMagic; 	
+const func PLAYER_PERC_ASSESSMAGIC = B_AssessMagic;
 
 
-	
+
 
 

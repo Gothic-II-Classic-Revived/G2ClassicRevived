@@ -88,7 +88,9 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_LightningFlash)		{	PLAYER_TALENT_RUNES[SPL_LightningFlash] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_LightningFlash, 1);			
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Lightning´: 1 Rock Crystal and 1 Glacier Quartz.");	};	
 	if (spell == SPL_ChargeFireball)		{	PLAYER_TALENT_RUNES[SPL_ChargeFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_ChargeFireball, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Large Fireball´: 1 Sulfur and 1 Pitch.");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Large Fireball´: 1 Sulfur and 1 Pitch.");	};
+	if (spell == SPL_FireFist)			{	PLAYER_TALENT_RUNES[SPL_FireFist] 			= TRUE;	CreateInvItems (ScrollTrader, ITSC_REVIVED_FIREFIST, 1);
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune Fire Fist: 1 Coal and 1 Pitch.");	};
 	if (spell == SPL_SummonSkeleton)		{	PLAYER_TALENT_RUNES[SPL_SummonSkeleton] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumSkel, 1);					
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Create Skeleton´: 1 Skeletonbone.");	};		
 	if (spell == SPL_Fear)					{	PLAYER_TALENT_RUNES[SPL_Fear] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Fear, 1);					
@@ -106,7 +108,9 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_Firestorm)				{	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firestorm, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Small Fire Storm´: 1 Sulfur and 1 Pitch.");	};		
 	if (spell == SPL_IceWave)				{	PLAYER_TALENT_RUNES[SPL_IceWave] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_IceWave, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Wave of Ice´: 1 Glacier Quartz and 1 Aquamarin");	};		
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Wave of Ice´: 1 Glacier Quartz and 1 Aquamarin");	};
+	if (spell == SPL_FireWave)			{	PLAYER_TALENT_RUNES[SPL_FireWave] 			= TRUE;	CreateInvItems (ScrollTrader, ITSC_REVIVED_FIREWAVE, 1);
+	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune Fire Wave: 1 Sulfur and 1 Tongue of a Fire Lizard.");	};
 	if (spell == SPL_SummonDemon)			{	PLAYER_TALENT_RUNES[SPL_SummonDemon] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumDemon, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Summon Demon´: 1 Heart of a Demon");	};		
 	if (spell == SPL_FullHeal)				{	PLAYER_TALENT_RUNES[SPL_FullHeal] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_FullHeal, 1);				

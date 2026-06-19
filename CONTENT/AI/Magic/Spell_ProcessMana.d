@@ -48,6 +48,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_MediumHeal			)	{	return	Spell_Logic_MediumHeal		(manaInvested);	};
 	if (activeSpell == SPL_LightningFlash		) 	{	return	Spell_Logic_LightningFlash	(manaInvested);	};
 	if (activeSpell == SPL_ChargeFireball	    ) 	{	return	Spell_Logic_ChargeFireball	(manaInvested);	};
+	if (activeSpell == SPL_FireFist			) 	{	return	Spell_Logic_FireFist		(manaInvested);	};
 	if (activeSpell == SPL_ChargeZap		    ) 	{	return	Spell_Logic_ChargeZap		(manaInvested);	};
 	if (activeSpell == SPL_SummonSkeleton	    ) 	{	return	Spell_Logic_SummonSkeleton	(manaInvested);	};
 	if (activeSpell == SPL_Fear	    			) 	{	return	Spell_Logic_Fear			(manaInvested);	};
@@ -60,6 +61,7 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	//Kreis 5
 	if (activeSpell == SPL_Firestorm       		) 	{	return	Spell_Logic_Firestorm		(manaInvested);	};
 	if (activeSpell == SPL_IceWave        		) 	{	return	Spell_Logic_IceWave			(manaInvested);	};
+	if (activeSpell == SPL_FireWave       		) 	{	return	Spell_Logic_FireWave		(manaInvested);	};
 	if (activeSpell == SPL_SummonDemon			)	{	return	Spell_Logic_SummonDemon		(manaInvested);	};
 	if (activeSpell == SPL_FullHeal				)	{	return	Spell_Logic_FullHeal		(manaInvested);	};
 	//Kreis 6

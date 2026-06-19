@@ -1113,3 +1113,98 @@ INSTANCE ITSC_REVIVED_TRANSFORM_GOBLIN (C_Item)
 	TEXT[2]				= 	NAME_Manakosten;				COUNT[2]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
+
+//****************************************************************************
+//          REVIVED SPELLS
+//****************************************************************************
+
+const int REV_Value_FIREFIST_SCROLL = 75;
+const int REV_Value_FIREWAVE_SCROLL = 200;
+const int REV_Value_CONCUSSIONBOLT_SCROLL = 75;
+
+INSTANCE ITSC_REVIVED_FIREFIST (C_Item)
+{
+    name                =   NAME_SPL_FireFist;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_FIREFIST_SCROLL;
+
+    visual              =   "ItSc_Firestorm.3DS";
+    spell               =   SPL_FireFist;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   STEP_FireFist;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER_YELLOW";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_MinManakosten;
+    COUNT   [1]         =   STEP_FireFist;
+    TEXT    [2]         =   NAME_ManakostenMax;
+    COUNT   [2]         =   SPL_Cost_FireFist;
+    TEXT    [3]         =   NAME_Addon_Damage_Min;
+    COUNT   [3]         =   SPL_Damage_FireFist;
+    TEXT    [4]         =   NAME_Damage_Max;
+    COUNT   [4]         =   (SPL_Damage_FireFist*4);
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_FIREWAVE (C_Item)
+{
+    name                =   NAME_SPL_FireWave;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_FIREWAVE_SCROLL;
+
+    visual              =   "ItSc_Firestorm.3DS";
+    spell               =   SPL_FireWave;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER_YELLOW";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [2]         =   NAME_Dam_Magic;
+    COUNT   [2]         =   SPL_Damage_FireWave;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+INSTANCE ITSC_REVIVED_CONCUSSIONBOLT (C_Item)
+{
+    name                =   NAME_SPL_ConcussionBolt;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_CONCUSSIONBOLT_SCROLL;
+
+    visual              =   "ItSc_ThunderBall.3DS";
+    spell               =   SPL_ConcussionBolt;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [2]         =   NAME_Dam_Magic;
+    COUNT   [2]         =   SPL_Damage_ConcussionBolt;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};

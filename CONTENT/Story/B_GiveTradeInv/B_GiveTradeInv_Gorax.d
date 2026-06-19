@@ -63,6 +63,8 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 
 		CreateInvItems (slf, ItSc_MediumHeal, 5);
 		CreateInvItems (slf, ItSc_Thunderball, 2);
+		CreateInvItems (slf, ITSC_REVIVED_CONCUSSIONBOLT, 2);
+		CreateInvItems (slf, ITSC_REVIVED_FIREFIST, 2);
 
 		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_GOOD_03, 1);
 		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_BLADES_03, 1);
@@ -103,6 +105,7 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems (slf, ItMi_HolyWater, 3);
 		
 		CreateInvItems (slf, ITFO_REVIVED_MAGEWINE, 2);
+		CreateInvItems (slf, ITSC_REVIVED_FIREWAVE, 2);
 
 		Gorax_ItemsGiven_Chapter_5 = TRUE;
 	};

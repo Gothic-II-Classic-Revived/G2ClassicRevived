@@ -843,6 +843,7 @@ const string NAME_SPL_SummonStonepuma 	= "Summon Stonepuma";
 const int	SPL_SummonWisp				= 121;
 const string NAME_SPL_SummonWisp		= "Summon Wisp";
 
+
 const int	SPL_Pyrokinesis			= 122;
 const string NAME_SPL_Pyrokinesis	= "Pyrokinesis";
 const int	SPL_PYRO_DAMAGE_PER_SEC		= 20;
@@ -857,6 +858,7 @@ const int	SPL_SENDCAST_BERZERK	= 10;
 const int	SPL_SENDCAST_BERSERK	= 10;
 const int	SPL_TIME_BERZERK		= 30;
 const int	SPL_TIME_BERSERK		= 30;
+
 const int	SPL_HealOther			= 124;
 const string NAME_SPL_HealOther	= "Heal Other";
 const int	SPL_Cost_HealOther		= 30;

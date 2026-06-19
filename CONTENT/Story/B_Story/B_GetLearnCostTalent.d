@@ -238,6 +238,8 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == SPL_MediumHeal	    ) 	{	kosten = (5);	}
 		else if (skill == SPL_LightningFlash  	) 	{	kosten = (5);	}
 		else if (skill == SPL_ChargeFireball  	) 	{	kosten = (10);	}
+		else if (skill == SPL_ConcussionBolt	) 	{	kosten = (10);	}
+		else if (skill == SPL_FireFist			) 	{	kosten = (10);	}
 		else if (skill == SPL_SummonSkeleton  	) 	{	kosten = (10);	}
 		else if (skill == SPL_Fear				) 	{	kosten = (5);	}
 		else if (skill == SPL_IceCube		    ) 	{	kosten = (10);	}
@@ -252,6 +254,7 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		// 5                                                            
 		else if (skill == SPL_Firestorm			) 	{	kosten = (15);	}
 		else if (skill == SPL_IceWave		    ) 	{	kosten = (20);	}
+		else if (skill == SPL_FireWave			) 	{	kosten = (20);	}
 		else if (skill == SPL_SummonDemon	    ) 	{	kosten = (20);	}
 		else if (skill == SPL_FullHeal			) 	{	kosten = (10);	}
 		else if (skill == SPL_MasterOfDisaster	)	{	kosten = (15);	}

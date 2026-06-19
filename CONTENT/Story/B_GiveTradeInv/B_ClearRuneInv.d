@@ -43,6 +43,9 @@ func void B_ClearRuneInv (var C_NPC slf)
 		Npc_RemoveInvItems	(slf ,ItRu_Shrink 			, Npc_HasItems (slf, ItRu_Shrink ));
 		Npc_RemoveInvItems	(slf ,ItRu_Deathbolt 		, Npc_HasItems (slf, ItRu_Deathbolt ));
 		Npc_RemoveInvItems	(slf ,ItRu_Deathball 		, Npc_HasItems (slf, ItRu_Deathball ));
+        Npc_RemoveInvItems  (slf ,ITRU_REVIVED_FIREFIST, Npc_HasItems (slf, ITRU_REVIVED_FIREFIST ));
+        Npc_RemoveInvItems  (slf ,ITRU_REVIVED_FIREWAVE, Npc_HasItems (slf, ITRU_REVIVED_FIREWAVE ));
+        Npc_RemoveInvItems  (slf ,ITRU_REVIVED_CONCUSSIONBOLT, Npc_HasItems (slf, ITRU_REVIVED_CONCUSSIONBOLT ));
 		Npc_RemoveInvItems	(slf ,ItRu_Concussionbolt 	, Npc_HasItems (slf, ItRu_Concussionbolt ));
 		
 		//ADDON

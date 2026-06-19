@@ -1019,6 +1019,12 @@ func void DIA_Parlan_TEACH_Info ()
 		Info_AddChoice	(DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,DIA_Parlan_TEACH_MediumHeal);
 		abletolearn = (abletolearn +1);
 	};
+    if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
+    && (PLAYER_TALENT_RUNES [SPL_ConcussionBolt] == FALSE)
+    {
+        Info_AddChoice  (DIA_Parlan_TEACH, B_BuildLearnString (NAME_SPL_ConcussionBolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ConcussionBolt)) ,DIA_Parlan_TEACH_ConcussionBolt);
+        abletolearn = (abletolearn +1);
+    };
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
 	&& (PLAYER_TALENT_RUNES [SPL_DestroyUndead] == FALSE) 
 	{
@@ -1051,6 +1057,10 @@ FUNC VOID DIA_Parlan_TEACH_LIGHT()
 FUNC VOID DIA_Parlan_TEACH_MediumHeal()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);	
+};
+FUNC VOID DIA_Parlan_TEACH_ConcussionBolt()
+{
+    B_TeachPlayerTalentRunes (self, other, SPL_ConcussionBolt);
 };
 FUNC VOID DIA_Parlan_TEACH_DestroyUndead()
 {

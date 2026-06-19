@@ -294,6 +294,12 @@ func void DIA_Hyglas_TEACH_Info ()
 		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,DIA_Hyglas_TEACH_Firestorm);
 		abletolearn = (abletolearn +1);
 	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
+	&& (PLAYER_TALENT_RUNES [SPL_FireFist] == FALSE)
+	{
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_FireFist, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireFist)) ,DIA_Hyglas_TEACH_FireFist);
+		abletolearn = (abletolearn +1);
+	};
 	
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4) 
 	&& (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
@@ -307,6 +313,12 @@ func void DIA_Hyglas_TEACH_Info ()
 	&& (PLAYER_TALENT_RUNES [SPL_LargeFireStorm] == FALSE)
 	{
 		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)) ,DIA_Hyglas_TEACH_LargeFireStorm);
+		abletolearn = (abletolearn +1);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
+	&& (PLAYER_TALENT_RUNES [SPL_FireWave] == FALSE)
+	{
+		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_FireWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireWave)) ,DIA_Hyglas_TEACH_FireWave);
 		abletolearn = (abletolearn +1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6) 
@@ -340,6 +352,14 @@ FUNC VOID DIA_Hyglas_TEACH_LargeFireStorm()
 FUNC VOID DIA_Hyglas_TEACH_Firestorm()
 {
 	B_TeachPlayerTalentRunes (self, other, SPL_Firestorm);	
+};
+FUNC VOID DIA_Hyglas_TEACH_FireFist()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_FireFist);
+};
+FUNC VOID DIA_Hyglas_TEACH_FireWave()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_FireWave);
 };
 FUNC VOID DIA_Hyglas_TEACH_Firerain()
 {
