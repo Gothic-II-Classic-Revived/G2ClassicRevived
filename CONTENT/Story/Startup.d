@@ -1322,10 +1322,8 @@ func void STARTUP_SURFACE ()
 	
 	Wld_InsertNpc		(BDT_1002_LOAFER,"OW_SAWHUT_MOLERAT_MOVEMENT");
 
-	Wld_InsertNpc		(BDT_1008_Bandit_H,"PATH_OC_NC_3");
 	Wld_InsertNpc		(BDT_1003_Bandit_M,"PATH_OC_NC_3");
-
-	Wld_InsertNpc		(BDT_1006_Bandit_H,"PATH_OC_NC_5_1");	
+	
 	Wld_InsertNpc		(BDT_1001_Bandit_L,"PATH_OC_NC_4");
 
 

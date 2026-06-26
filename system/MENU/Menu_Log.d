@@ -126,7 +126,7 @@ instance MENU_ITEM_LIST_MISSIONS_ACT(C_MENU_ITEM_DEF)
 instance MENU_ITEM_LIST_MISSIONS_FAILED(C_MENU_ITEM_DEF)
 {
 	type		= 	MENU_ITEM_LISTBOX;	
-	text[0]		= 	"Old Missions";
+	text[0]		= 	"Failed Missions";
 	
 	posx		=	LOG_ITEM_LIST_X;
 	posy		=   LOG_ITEM_LIST_Y;
