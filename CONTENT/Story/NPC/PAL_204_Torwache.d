@@ -25,7 +25,7 @@ instance Pal_204_Torwache (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Whistler, BodyTex_N, ITAR_REVIVED_PAL_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Normal40, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

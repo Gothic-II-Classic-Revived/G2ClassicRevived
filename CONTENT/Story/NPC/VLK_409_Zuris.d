@@ -22,7 +22,7 @@ instance VLK_409_Zuris (Npc_Default)
 	// Händler
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_ImportantGrey, BodyTex_N, ITAR_VLK_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_W_Zuris, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_VLK_M);	
 	Mdl_SetModelFatness	(self, 0.9);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

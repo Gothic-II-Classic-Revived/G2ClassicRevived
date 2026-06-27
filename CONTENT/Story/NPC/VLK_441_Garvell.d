@@ -25,7 +25,7 @@ instance VLK_441_Garvell (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self,ItSe_GoldPocket25,1);	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Lefty, BodyTex_N,ITAR_Vlk_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Garvell, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	

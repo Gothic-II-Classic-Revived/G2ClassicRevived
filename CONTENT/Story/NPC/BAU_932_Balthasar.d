@@ -23,7 +23,7 @@ instance BAU_932_Balthasar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_NormalBart01, BodyTex_P, ITAR_Bau_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_P_Balthasar, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_Bau_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

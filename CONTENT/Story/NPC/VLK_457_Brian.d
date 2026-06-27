@@ -22,7 +22,7 @@ instance VLK_457_Brian (Npc_Default)
 	// Händler
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_B_Normal_Kirgo, BodyTex_B,ITAR_SMITH);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Brian, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_SMITH);	
 	Mdl_SetModelFatness	(self,0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

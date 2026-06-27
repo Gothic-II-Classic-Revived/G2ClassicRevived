@@ -25,7 +25,7 @@ instance BDT_3000_Gomez (Npc_Default)
 	CreateInvItems (self, ITKE_REVIVED_GOMEZ, 1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Gomez, BodyTex_N, ITAR_REVIVED_EBR_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Gomez, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_EBR_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

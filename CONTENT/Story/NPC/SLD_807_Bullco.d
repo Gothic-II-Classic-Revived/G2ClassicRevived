@@ -28,7 +28,7 @@ instance SLD_807_Bullco (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Normal_Olli_Kahn, BodyTex_N, ITAR_SLD_M);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Bullco, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_SLD_M);
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

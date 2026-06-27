@@ -23,7 +23,7 @@ instance VLK_2001_Syra (Npc_Default)
 	CreateInvItems		(self, ITPO_REVIVED_HEALTH_02, 	1);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_PinkHair, BodyTex_N, NO_ARMOR);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe", Face_W_Babe_Normal12, Body_W_Babe_Naked, Body_White, Teeth_Gold, NO_ARMOR);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds");
 

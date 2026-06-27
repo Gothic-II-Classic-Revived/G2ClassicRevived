@@ -21,7 +21,7 @@ instance BDT_10300_Addon_RangerBandit_L (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Normal02, BodyTex_P, ITAR_REVIVED_BDT_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Hum_Beard2, Body_P_Hum_Normal2, Body_Pale, Teeth_Broken, ITAR_REVIVED_BDT_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

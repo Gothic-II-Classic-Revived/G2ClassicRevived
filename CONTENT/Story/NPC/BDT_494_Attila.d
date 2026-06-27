@@ -26,7 +26,7 @@ instance BDT_494_ATTILA (Npc_Default)
 	CreateInvItem (self, ItKe_ThiefGuildKey_MIS);  // Schlüssel zur geheimen Diebesgilde
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough_Santino, BodyTex_L, ITAR_Leather_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Attila, Body_L_Hum_Naked, Body_Latino, Teeth_Broken, ITAR_Leather_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

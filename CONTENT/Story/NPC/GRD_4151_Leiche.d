@@ -21,7 +21,7 @@ instance GRD_4151_Leiche (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart10, BodyTex_N, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard22, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

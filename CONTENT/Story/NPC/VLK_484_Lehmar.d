@@ -27,7 +27,7 @@ instance VLK_484_Lehmar (Npc_Default)
 	CreateInvItems (self, ItWr_Schuldenbuch, 1);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Whistler, BodyTex_N,ITAR_Vlk_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Lehmar, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_Vlk_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

@@ -23,7 +23,7 @@ instance GRD_4152_Olav (Npc_Default)
 	CreateInvItems (self,ItSe_Olav,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart22, BodyTex_N, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Normal40, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

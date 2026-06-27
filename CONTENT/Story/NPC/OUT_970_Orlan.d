@@ -23,7 +23,7 @@ instance OUT_970_ORLAN (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fatbald", Face_B_Normal_Sharky, BodyTex_B, ITAR_Bau_M);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fatbald", Face_B_Orlan, Body_B_Hum_Naked, Body_Black, Teeth_Rotten, ITAR_Bau_M);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

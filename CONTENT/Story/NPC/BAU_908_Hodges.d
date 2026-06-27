@@ -29,7 +29,7 @@ instance BAU_908_Hodges (Npc_Default)
 	CreateInvItems (self, ItMw_Schwert, 1);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_L_NormalBart01, BodyTex_L, ITAR_Bau_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_L_Hodges, Body_L_Hum_Naked, Body_Latino, Teeth_Broken, ITAR_Bau_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

@@ -25,7 +25,7 @@ instance VLK_481_Buerger (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal20, BodyTex_N,ITAR_Vlk_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard7, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

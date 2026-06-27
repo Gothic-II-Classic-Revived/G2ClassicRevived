@@ -22,7 +22,7 @@ instance VLK_414_Hanna (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------						FaceBabe_N_HairAndCloth																
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", FaceBabe_N_WhiteCloth, BodyTex_N, ITAR_VlkBabe_L);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe1", Face_W_Hanna, Body_W_Babe_Naked, Body_White, Teeth_Normal, ITAR_VlkBabe_L);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 
 	// ------ TA anmelden ------

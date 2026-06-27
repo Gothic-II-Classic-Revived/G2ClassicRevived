@@ -24,7 +24,7 @@ instance BDT_3006_Santino (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough_Santino, BodyTex_L, ITAR_REVIVED_STT_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Santino, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_REVIVED_STT_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

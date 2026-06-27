@@ -25,7 +25,7 @@ instance VLK_488_Buergerin (Npc_Default)
 	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
 		
 	// ------ visuals ------						FaceBabe_N_HairAndCloth																
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_BabeHair", FaceBabe_N_HairAndCloth, BodyTex_N, ITAR_BauBabe_L);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_BabeHair", Face_W_Babe_Normal14, Body_W_Babe_Naked, Body_White, Teeth_Broken, ITAR_BauBabe_L);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 
 	// ------ TA anmelden ------

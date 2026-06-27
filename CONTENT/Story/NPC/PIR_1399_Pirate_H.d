@@ -21,7 +21,7 @@ instance PIR_1399_Pirate_H (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_P_Greg, BodyTex_P, ITAR_PIR_H_Addon);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_W_Greg, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_PIR_H_Addon);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds");
 

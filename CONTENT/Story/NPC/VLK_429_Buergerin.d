@@ -25,7 +25,7 @@ instance VLK_429_Buergerin (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe4", FaceBabe_N_VlkBlonde, BodyTex_N, ITAR_VlkBabe_L);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe4", Face_W_Babe_Normal14, Body_W_Babe_Naked, Body_White, Teeth_Normal, ITAR_VlkBabe_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 

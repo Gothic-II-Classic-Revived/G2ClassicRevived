@@ -22,7 +22,7 @@ instance VLK_407_Hakon (Npc_Default)
 	// Händler
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart20, BodyTex_N, ITAR_VLK_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hakon, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_VLK_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

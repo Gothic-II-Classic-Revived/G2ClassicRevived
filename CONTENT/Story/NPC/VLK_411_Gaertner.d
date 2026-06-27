@@ -22,7 +22,7 @@ instance VLK_411_Gaertner (Npc_Default)
 	//Händler
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_NormalBart_Graham, BodyTex_N, ITAR_BAU_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_W_Hum_Normal36, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_BAU_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

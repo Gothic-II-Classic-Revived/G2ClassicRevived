@@ -24,7 +24,7 @@ instance BDT_1063_Bandit_L (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_L_ToughBart_Quentin, BodyTex_L, ITAR_REVIVED_BDT_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_L_Hum_Normal6, Body_L_Hum_Naked, Body_Latino, Teeth_Yellow, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

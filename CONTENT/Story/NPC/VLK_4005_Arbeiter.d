@@ -21,7 +21,7 @@ instance VLK_4005_Arbeiter (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal_Olli_Kahn, BodyTex_N,ITAR_REVIVED_BEGGAR);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Normal32, Body_W_Hum_Normal1, Body_White, Teeth_Broken, ITAR_REVIVED_BEGGAR);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

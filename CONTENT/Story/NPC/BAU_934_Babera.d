@@ -23,7 +23,7 @@ instance BAU_934_Babera (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_BauBlonde, BodyTexBabe_N, ITAR_BauBabe_L);		
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe", Face_W_Babe_Normal4, Body_W_Babe_Naked, Body_White, Teeth_Normal, ITAR_BauBabe_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 

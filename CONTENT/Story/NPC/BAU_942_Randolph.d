@@ -22,7 +22,7 @@ instance BAU_942_Randolph (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Kharim, BodyTex_B, ITAR_Bau_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Randolph, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_Bau_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

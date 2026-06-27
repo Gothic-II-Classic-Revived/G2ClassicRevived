@@ -23,7 +23,7 @@ instance VLK_413_Bosper (Npc_Default)
 	// Händler
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald.", Face_L_Tough_Santino, BodyTex_L,ITAR_LEATHER_L );	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald.", Face_L_Bosper, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_LEATHER_L);	
 	
 	Mdl_SetModelFatness	(self, 0.8);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 

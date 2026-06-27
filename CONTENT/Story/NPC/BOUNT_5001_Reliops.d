@@ -26,7 +26,7 @@ instance BOUNT_5001_Reliops (Npc_Default)
 	CreateInvItems 		(self, ITRW_ARROW, 30);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Wolf, BodyTex_N, ITAR_REVIVED_STT_M_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Reliops, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_STT_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

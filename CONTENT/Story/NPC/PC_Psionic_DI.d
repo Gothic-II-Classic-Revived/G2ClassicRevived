@@ -27,7 +27,7 @@ INSTANCE PC_Psionic_DI (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_Lester, BodyTex_P, ITAR_REVIVED_PSI_NOV);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Lester, Body_P_Hum_Tattoo, Body_Pale, Teeth_Gold, ITAR_REVIVED_PSI_NOV);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

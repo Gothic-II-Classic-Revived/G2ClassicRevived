@@ -22,7 +22,7 @@ INSTANCE PC_Thief_NW (Npc_Default)
 	B_CreateAmbientInv 	(self);
 			
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief",Face_L_Diego, BodyTex_L, ITAR_VLK_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_L_Diego, Body_L_Hum_Naked, Body_Latino, Teeth_Broken, ITAR_VLK_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

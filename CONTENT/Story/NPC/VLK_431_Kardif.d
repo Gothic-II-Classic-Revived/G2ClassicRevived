@@ -25,7 +25,7 @@ instance VLK_431_Kardif (Npc_Default)
 	// Händler
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart04, BodyTex_N,ITAR_Smith );	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Kardif, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_Smith);	
 	Mdl_SetModelFatness	(self,2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

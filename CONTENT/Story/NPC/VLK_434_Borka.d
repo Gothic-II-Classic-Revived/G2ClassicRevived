@@ -25,7 +25,7 @@ instance VLK_434_Borka (Npc_Default)
 	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 20);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_L_Ian, BodyTex_L,ITAR_Vlk_L );	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_L_Borka, Body_L_Hum_Naked, Body_Latino, Teeth_Gold, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

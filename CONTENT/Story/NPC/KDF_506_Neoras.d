@@ -25,7 +25,7 @@ INSTANCE KDF_506_Neoras (Npc_Default)
 	B_CreateAmbientInv 	(self);
 			
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_NormalBart_Cronos, BodyTex_P, ITAR_REVIVED_KDF_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Neoras, Body_P_Hum_Naked, Body_Pale, Teeth_Rotten, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

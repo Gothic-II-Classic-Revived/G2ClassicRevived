@@ -562,7 +562,7 @@ var int 	PLAYER_MOBSI_PRODUCTION;
 // *****************************
 // Konstanten für B_SetNpcVisual
 // *****************************
-
+/* 
 // ------ Nacktmesh-Texturen für Männer und Frauen (je 4) ------
 const int BodyTex_P			= 0;	//Pale
 const int BodyTex_N			= 1;	//Normal
@@ -575,7 +575,7 @@ const int BodyTexBabe_B		= 7;	//Black Babe   //Frauen werden auch mit den "Männe
 const int BodyTex_Player	= 8;
 
 const int BodyTex_Sick		= 9;
-
+ */
 /* 
 const int Race_Pale					= 0;
 const int Race_Normal				= 1;
@@ -590,23 +590,11 @@ const int BodyTex_ClothesA		= 3;
 const int BodyTex_Player		= 4;
 const int BodyTex_Babe			= 5;
 */
-
+/* 
 //---------ADD ON----------------------
 const int BodyTex_T	= 10; //tätowierte psionikerhaut
 const int BodyTexBabe_F	= 11; //Fellkragen Babe 
 const int BodyTexBabe_S	= 12;//das kleine Schwarze 
-
-
-//---------SKELETON----------------------
-const int SkeBody_Normal 		= 0;
-const int SkeBody_Mage			= 1;
-
-const int SkeHead_Normal 		= 0;
-const int SkeHead_Mage			= 1;
-const int SkeHead_Templar		= 2;
-
-// ------ Keine Rüstung ------
-const int NO_ARMOR			= -1;
 
 // ------- Gesichter für Männer ------
 const int Face_N_Gomez 				=	0	;
@@ -788,4 +776,17 @@ const int Face_N_Fortuno		= 	159;
 //Piraten
 const int Face_P_Greg		= 	160;
 const int Face_N_Pirat01	= 	161;
-const int Face_N_ZombieMud	= 	162;
+const int Face_N_ZombieMud	= 	162; */
+
+
+
+//---------SKELETON----------------------
+const int SkeBody_Normal 		= 0;
+const int SkeBody_Mage			= 1;
+
+const int SkeHead_Normal 		= 0;
+const int SkeHead_Mage			= 1;
+const int SkeHead_Templar		= 2;
+
+// ------ Keine Rüstung ------
+const int NO_ARMOR			= -1;

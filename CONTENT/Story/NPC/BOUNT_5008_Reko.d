@@ -24,7 +24,7 @@ instance BOUNT_5008_Reko (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_NormalBart22, BodyTex_N, ITAR_REVIVED_SFB_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Reko, Body_W_Hum_Normal2, Body_White, Teeth_Yellow, ITAR_REVIVED_SFB_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

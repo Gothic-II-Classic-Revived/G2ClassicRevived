@@ -22,7 +22,7 @@ instance SLD_804_Rod (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_ToughBart01, BodyTex_N, ITAR_SLD_M);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Rod, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_SLD_M);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

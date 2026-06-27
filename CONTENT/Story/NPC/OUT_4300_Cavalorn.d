@@ -25,7 +25,7 @@ instance OUT_4300_CAVALORN (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Cavalorn, BodyTex_B, ITAR_REVIVED_STT_M);	 
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_B_Cavalorn, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_REVIVED_STT_M);	 
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

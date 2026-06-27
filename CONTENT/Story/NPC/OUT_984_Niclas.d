@@ -22,7 +22,7 @@ INSTANCE OUT_984_NICLAS (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_NormalBart12, BodyTex_N, ITAR_Leather_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_W_Niclas, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_Leather_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

@@ -22,7 +22,7 @@ instance Mil_322_Miliz (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough01, BodyTex_L, ITAR_REVIVED_GRD_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Hum_Bald1, Body_L_Hum_Naked, Body_Latino, Teeth_Normal, ITAR_REVIVED_GRD_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

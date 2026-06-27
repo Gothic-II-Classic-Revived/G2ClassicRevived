@@ -22,7 +22,7 @@ instance Mil_313_Boltan (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_B_Normal01, BodyTex_B, ITAR_REVIVED_GRD_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Boltan, Body_B_Hum_Naked, Body_Black, Teeth_Gold, ITAR_REVIVED_GRD_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

@@ -25,7 +25,7 @@ instance OUT_4110_JERGAN (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------					
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Whistler, BodyTex_N, ITAR_REVIVED_ORG_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Jergan, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_ORG_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	

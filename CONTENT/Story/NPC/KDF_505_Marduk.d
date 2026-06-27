@@ -25,7 +25,7 @@ INSTANCE KDF_505_Marduk (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_OldMan_Gravo, BodyTex_P, ITAR_REVIVED_KDF_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Marduk, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_REVIVED_KDF_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

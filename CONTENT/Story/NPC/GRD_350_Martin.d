@@ -24,7 +24,7 @@ instance GRD_350_Martin (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_P_OldMan_Gravo, BodyTex_P, ITAR_REVIVED_GRD_S);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_P_Martin, Body_P_Hum_Naked, Body_Pale, Teeth_Rotten, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

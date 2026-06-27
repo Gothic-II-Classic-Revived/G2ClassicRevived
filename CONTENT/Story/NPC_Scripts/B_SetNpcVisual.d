@@ -20,13 +20,13 @@ func void B_SetNpcVisual (var C_NPC slf, var int gender, var string headMesh, va
 		Mdl_SetVisualBody (slf,	"hum_body_Naked0", 	bodyTex,	0,			headMesh, 	faceTex,	0, 			armorInstance);
 		
 		// ------ schwache NSCs sind schmal ------
-		if (slf.attribute[ATR_STRENGTH] < 50)
+		if (slf.attribute[ATR_STRENGTH] < 30)
 		{
 			Mdl_SetModelScale		(slf, 0.9, 1, 1); 			//BREITE / Höhe / Tiefe
 		};
 
 		// ------ starke NSCs sind breit ------
-		if (slf.attribute[ATR_STRENGTH] > 100)
+		if (slf.attribute[ATR_STRENGTH] > 60)
 		{
 			Mdl_SetModelScale		(slf, 1.1, 1, 1);			//BREITE / Höhe / Tiefe
 		};
@@ -40,5 +40,37 @@ func void B_SetNpcVisual (var C_NPC slf, var int gender, var string headMesh, va
 		
 		// ------ Visual ------	"Bab_body_Mesh",	bodyTex		SkinColor	headMesh,	faceTex,	teethTex,	armorInstance		
 		Mdl_SetVisualBody (slf,	"Hum_Body_Babe0", 	bodyTex,	0,			headMesh, 	faceTex,  	0,			armorInstance);
+	};
+};
+
+// ***********************************************
+// B_SetNpcFullVisual
+// --------------
+// Supporting skin tone and teeth texture.
+// ***********************************************
+
+func void B_SetNpcFullVisual (var C_NPC slf, var int gender, var string headMesh, var int faceTex, var int bodyTex, var int skinColor, var int teethTex, var int armorInstance)
+{
+	slf.aivar[AIV_Gender] = gender;
+
+	Mdl_SetVisual (slf,"HUMANS.MDS");
+
+	if (gender == MALE)
+	{
+		Mdl_SetVisualBody (slf,	"hum_body_Naked0", bodyTex, skinColor, headMesh, faceTex, teethTex, armorInstance);
+		
+		if (slf.attribute[ATR_STRENGTH] < 30)
+		{
+			Mdl_SetModelScale		(slf, 0.9, 1, 1);
+		};
+
+		if (slf.attribute[ATR_STRENGTH] > 60)
+		{
+			Mdl_SetModelScale		(slf, 1.1, 1, 1);
+		};
+	}
+	else //gender == FEMALE
+	{
+		Mdl_SetVisualBody (slf,	"Hum_Body_Babe0", bodyTex, skinColor, headMesh, faceTex, teethTex, armorInstance);
 	};
 };

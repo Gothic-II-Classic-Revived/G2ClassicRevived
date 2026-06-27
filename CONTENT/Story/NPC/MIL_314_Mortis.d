@@ -22,7 +22,7 @@ instance Mil_314_Mortis (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Normal01, BodyTex_P, ITAR_SMITH);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Mortis, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_SMITH);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

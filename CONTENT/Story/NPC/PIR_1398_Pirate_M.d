@@ -19,7 +19,7 @@ instance PIR_1398_Pirate_M (Npc_Default)
 	CreateInvItems (self, ITAM_REVIVED_MELEE_01, 1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart21, BodyTex_N, ITAR_PIR_M_Addon);	  
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Angus, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_PIR_M_Addon);	  
 	Mdl_SetModelFatness	(self, 1.3);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

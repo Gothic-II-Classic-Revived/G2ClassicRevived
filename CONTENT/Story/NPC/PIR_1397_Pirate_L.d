@@ -18,7 +18,7 @@ instance PIR_1397_Pirate_L (Npc_Default)
 	EquipItem (self, ItMw_Addon_PIR1hSword);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Lefty, BodyTex_N, ITAR_PIR_L_Addon);	  
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hank, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_PIR_L_Addon);	  
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

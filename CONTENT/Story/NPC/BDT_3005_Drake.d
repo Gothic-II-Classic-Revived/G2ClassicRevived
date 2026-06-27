@@ -26,7 +26,7 @@ instance BDT_3005_Drake (Npc_Default)
 	CreateInvItems	(self, ITRW_BOLT, 30);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_ImportantGrey, BodyTex_N, ITAR_REVIVED_GRD_M_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Drake, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_GRD_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

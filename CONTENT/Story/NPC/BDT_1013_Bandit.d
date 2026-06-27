@@ -25,7 +25,7 @@ instance BDT_1013_BANDIT (Npc_Default)
 	CreateInvItems (self, ItWr_Poster_MIS,1);
 
 	// ------ visuals ------				
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter",  Face_N_Homer, BodyTex_N, ITAR_REVIVED_BDT_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Hum_Normal2, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

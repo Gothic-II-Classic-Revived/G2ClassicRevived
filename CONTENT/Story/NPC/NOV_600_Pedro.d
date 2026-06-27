@@ -25,7 +25,7 @@ INSTANCE NOV_600_Pedro (Npc_Default)
 	B_CreateAmbientInv 	(self);
 			
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_PSIONIC", Face_L_Normal_GorNaBar, BodyTex_L, ITAR_NOV_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_PSIONIC", Face_L_Pedro, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

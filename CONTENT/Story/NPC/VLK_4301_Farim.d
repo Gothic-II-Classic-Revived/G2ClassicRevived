@@ -25,7 +25,7 @@ instance VLK_4301_Farim (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_NormalBart08, BodyTex_N,ITAR_BAU_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Farim, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_BAU_L);	
 	Mdl_SetModelFatness	(self,2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

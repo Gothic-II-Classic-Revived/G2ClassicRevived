@@ -30,7 +30,7 @@ INSTANCE KDF_502_Ulthar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",Face_L_NormalBart01 , BodyTex_L, ITAR_REVIVED_KDF_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_L_Ulthar, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_REVIVED_KDF_H);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

@@ -22,7 +22,7 @@ instance VLK_401_Cornelius (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Ulf_Wohlers, BodyTex_P, ITAR_REVIVED_EBR_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Cornelius, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_REVIVED_EBR_L);	
 	Mdl_SetModelFatness	(self, 0.9);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

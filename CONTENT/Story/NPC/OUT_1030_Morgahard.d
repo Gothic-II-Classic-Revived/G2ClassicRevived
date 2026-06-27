@@ -26,7 +26,7 @@ instance OUT_1030_MORGAHARD (Npc_Default)
 	CreateInvItems (self, ItWr_RichterKomproBrief_MIS, 1);									
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Bartholo, BodyTex_N, ITAR_BDT_H );	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Morgahard, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_BDT_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

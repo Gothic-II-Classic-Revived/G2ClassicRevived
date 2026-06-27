@@ -25,7 +25,7 @@ instance VLK_432_Moe (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Scar, BodyTex_N,ITAR_VLK_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Moe, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_VLK_L);	
 	Mdl_SetModelFatness	(self,0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

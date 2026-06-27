@@ -24,7 +24,7 @@ instance BDT_3002_Arto (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Important_Arto, BodyTex_N, ITAR_REVIVED_EBR_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Arto, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_EBR_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

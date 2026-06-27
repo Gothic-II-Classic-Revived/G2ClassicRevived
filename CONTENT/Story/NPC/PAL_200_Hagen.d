@@ -29,7 +29,7 @@ instance Pal_200_Hagen (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Tough_Okyl, BodyTex_N, ITAR_REVIVED_PAL_H_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Hagen, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_PAL_H_02);	
 	Mdl_SetModelFatness	(self, 1.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

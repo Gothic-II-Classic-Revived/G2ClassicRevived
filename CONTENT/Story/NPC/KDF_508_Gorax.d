@@ -25,7 +25,7 @@ INSTANCE KDF_508_Gorax (Npc_Default)
 	//Händler!
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",Face_N_OldBald_Jeremiah, BodyTex_N, ITAR_REVIVED_KDF_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Gorax, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

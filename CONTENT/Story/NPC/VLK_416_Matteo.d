@@ -22,7 +22,7 @@ instance VLK_416_Matteo (Npc_Default)
 	// Händler
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Gomez , BodyTex_N, ITAR_VLK_M);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Matteo, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_VLK_M);
 	Mdl_SetModelFatness	(self, 1.8);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

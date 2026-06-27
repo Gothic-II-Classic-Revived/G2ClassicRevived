@@ -21,7 +21,7 @@ instance VLK_486_Buergerin (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);	
 	// ------ visuals ------																						
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_Lilo, BodyTex_N, ITAR_VlkBabe_M);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe8", Face_W_Babe_Normal5, Body_W_Babe_Naked, Body_White, Teeth_Broken, ITAR_VlkBabe_M);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 
 	// ------ TA anmelden ------

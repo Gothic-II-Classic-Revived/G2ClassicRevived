@@ -22,7 +22,7 @@ INSTANCE OUT_982_GRIMBALD (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Normal_Kirgo, BodyTex_B, ITAR_Leather_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_B_Grimbald, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_Leather_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

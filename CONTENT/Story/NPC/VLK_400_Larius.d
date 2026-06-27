@@ -22,7 +22,7 @@ instance VLK_400_Larius (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Weak_Cipher_alt, BodyTex_N, ITAR_REVIVED_EBR_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Larius, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_EBR_L);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 	

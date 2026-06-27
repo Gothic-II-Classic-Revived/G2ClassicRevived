@@ -30,7 +30,7 @@ instance MIL_2000_Thorus (Npc_Default)
 	//CreateInvItems		(self, ItFo_Potion_Health_02, 	1);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_B_Thorus, BodyTex_B, ITAR_REVIVED_GRD_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Thorus, Body_B_Hum_Naked, Body_Black, Teeth_Yellow, ITAR_REVIVED_GRD_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

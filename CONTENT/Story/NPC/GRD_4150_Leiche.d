@@ -21,7 +21,7 @@ instance GRD_4150_Leiche (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal01, BodyTex_B, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Hum_Normal5, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	// ------ TA anmelden ------

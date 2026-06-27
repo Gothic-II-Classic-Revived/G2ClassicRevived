@@ -22,7 +22,7 @@ instance GRD_4102_Waffenknecht (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Normal_Spassvogel, BodyTex_N, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hum_Beard10, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness    (self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

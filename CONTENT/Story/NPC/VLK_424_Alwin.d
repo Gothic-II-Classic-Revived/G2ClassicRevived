@@ -25,7 +25,7 @@ instance Vlk_424_Alwin (Npc_Default) //Metzger
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_NormalBart_Riordian, BodyTex_P, ITAR_Barkeeper);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Alwin, Body_P_Hum_Naked, Body_Pale, Teeth_Gold, ITAR_Barkeeper);
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

@@ -2,7 +2,7 @@
 instance DJG_715_Ferros (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Feros"; 
+	name 		= "Ferros"; 
 	guild 		= GIL_DJG;
 	id 			= 715;
 	voice 		= 1;
@@ -23,7 +23,7 @@ instance DJG_715_Ferros (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_Normal_Orik, BodyTex_B, ITAR_DJG_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_B_Feros, Body_B_Hum_Naked, Body_Black, Teeth_Broken, ITAR_DJG_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

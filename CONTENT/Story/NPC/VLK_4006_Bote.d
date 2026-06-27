@@ -22,7 +22,7 @@ instance VLK_4006_Bote (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Stone, BodyTex_N,ITAR_VLK_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Hum_Normal33, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_VLK_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

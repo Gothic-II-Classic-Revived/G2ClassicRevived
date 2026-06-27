@@ -23,7 +23,7 @@ instance BAU_941_Kati (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_Lilo, BodyTexBabe_N, ITAR_BauBabe_L);		
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe8", Face_W_Kati, Body_W_Babe_Naked, Body_White, Teeth_Rotten, ITAR_BauBabe_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 

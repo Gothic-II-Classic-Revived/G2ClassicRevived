@@ -26,7 +26,7 @@ instance SLD_840_Alvares (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_Tough_Silas, BodyTex_B, ITAR_REVIVED_SLD_L_02);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_B_Hum_Normal5, Body_B_Hum_Naked, Body_Black, Teeth_Yellow, ITAR_REVIVED_SLD_L_02);
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds");
 

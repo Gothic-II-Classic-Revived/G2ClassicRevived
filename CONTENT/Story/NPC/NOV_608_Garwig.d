@@ -22,7 +22,7 @@ INSTANCE NOV_608_Garwig (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough02, BodyTex_L, ITAR_NOV_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Garwig, Body_L_Hum_Naked, Body_Latino, Teeth_Normal, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	

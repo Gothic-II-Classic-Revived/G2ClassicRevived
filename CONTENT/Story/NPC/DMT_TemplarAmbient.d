@@ -45,7 +45,7 @@ instance DMT_TemplarAmbientL (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesForLevel(self, 50);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Bald2, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_PSI_TPL_02);	
 };
 
 instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
@@ -54,7 +54,7 @@ instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesForLevel(self, 60);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard8, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_PSI_TPL_02);	
 };
 
 instance DMT_TemplarAmbientH (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
@@ -63,5 +63,5 @@ instance DMT_TemplarAmbientH (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesForLevel(self, 70);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard19, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_PSI_TPL);	
 };

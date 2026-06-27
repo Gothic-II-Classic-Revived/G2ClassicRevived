@@ -23,7 +23,7 @@ instance VLK_421_Valentino (Npc_Default)
 	CreateInvItems 	(self,ItKe_Valentino,1);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald.", Face_N_Normal03, BodyTex_N, ITAR_VLK_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald.", Face_W_Valentino, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_VLK_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

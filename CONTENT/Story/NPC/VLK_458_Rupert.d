@@ -24,7 +24,7 @@ instance VLK_458_Rupert (Npc_Default)
 	CreateInvItems (self, ItFo_Milk,  5);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal20, BodyTex_N,ITAR_Vlk_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Rupert, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

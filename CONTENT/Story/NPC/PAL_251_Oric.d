@@ -23,7 +23,7 @@ instance PAL_251_Oric (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Tough_Lee_ähnlich, BodyTex_N, ITAR_REVIVED_PAL_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Oric, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

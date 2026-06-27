@@ -23,7 +23,7 @@ instance Mil_316_Wambo (Npc_Default)
 	CreateInvItems (self,ItKe_City_Tower_04,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart16, BodyTex_N, ITAR_REVIVED_GRD_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Wambo, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_GRD_H);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

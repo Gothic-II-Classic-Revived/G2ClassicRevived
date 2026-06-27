@@ -21,7 +21,7 @@ instance OUT_4250_JORGEN (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Tough_Skip, BodyTex_N, ITAR_VLK_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_W_Jorgen, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_VLK_L);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

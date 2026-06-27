@@ -24,7 +24,7 @@ instance VLK_479_Lucy (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);	
 	// ------ visuals ------						FaceBabe_N_HairAndCloth																
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", FaceBabe_N_Anne, BodyTex_N, ITAR_BauBabe_L);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe1", Face_W_Babe_Normal2, Body_W_Babe_Naked, Body_White, Teeth_Broken, ITAR_BauBabe_L);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 
 	// ------ TA anmelden ------

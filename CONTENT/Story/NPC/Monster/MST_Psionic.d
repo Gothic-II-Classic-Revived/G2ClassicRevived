@@ -84,7 +84,7 @@ INSTANCE Skeleton_Templar	(Mst_Default_Psionic)
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	//							Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, BodyTex_Sick, ITAR_REVIVED_PSI_TPL_02);
+	B_SetNpcFullVisual (self, MALE, "Ske_Head", 0, Body_P_Hum_Naked, Body_Sick, Teeth_Yellow, ITAR_REVIVED_PSI_TPL_02);
 
 	EquipItem (self, ITMW_REVIVED_2H_SWORD_LIGHT_02);
 };

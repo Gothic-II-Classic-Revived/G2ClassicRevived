@@ -32,7 +32,7 @@ instance BOUNT_5007_Delta (Npc_Default)
 	CreateInvItems 		(self, ItSc_SumSkel, 3);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_P_Tough_Rodriguez, BodyTex_P, ITAR_REVIVED_SHM_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_P_Delta, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_REVIVED_SHM_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

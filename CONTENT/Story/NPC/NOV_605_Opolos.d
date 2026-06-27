@@ -22,7 +22,7 @@ INSTANCE NOV_605_Opolos (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_B_Tough_Silas, BodyTex_B, ITAR_NOV_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Opolos, Body_B_Hum_Naked, Body_Black, Teeth_Broken, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

@@ -22,7 +22,7 @@ instance VLK_456_Abuyin (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Sharky, BodyTex_B,ITAR_Vlk_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Abuyin, Body_B_Hum_Naked, Body_Black, Teeth_Gold, ITAR_Vlk_M);	
 	Mdl_SetModelFatness	(self,0);
 	//Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds");
 

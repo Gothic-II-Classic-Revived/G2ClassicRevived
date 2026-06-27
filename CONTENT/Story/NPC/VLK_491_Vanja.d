@@ -25,7 +25,7 @@ instance VLK_491_Vanja (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------				
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_B_RedLocks, BodyTexBabe_B, ITAR_VlkBabe_H);		
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe", Face_B_Vanja, Body_B_Babe_Naked, Body_Black, Teeth_Gold, ITAR_VlkBabe_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 

@@ -22,7 +22,7 @@ instance DJG_731_ToterDrachenjaeger (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_Normal_Orik, BodyTex_B, ITAR_DJG_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_B_Hum_Bald3, Body_B_Hum_Naked, Body_Black, Teeth_Gold, ITAR_DJG_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

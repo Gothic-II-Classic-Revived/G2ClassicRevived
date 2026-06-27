@@ -26,7 +26,7 @@ instance VLK_480_Fellan (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NORMAL19, BodyTex_N,ITAR_VLK_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Fellan, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_VLK_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

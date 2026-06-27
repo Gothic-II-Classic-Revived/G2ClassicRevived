@@ -21,7 +21,7 @@ instance STRF_1156_Leiche (Npc_Default)
 	B_CreateAmbientInv (self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough02, BodyTex_L, ITAR_REVIVED_SFB_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Hum_Normal4, Body_L_Hum_Normal4, Body_Latino, Teeth_Broken, ITAR_REVIVED_SFB_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

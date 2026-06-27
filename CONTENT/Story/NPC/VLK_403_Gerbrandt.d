@@ -22,7 +22,7 @@ instance VLK_403_Gerbrandt (Npc_Default)
 	CreateInvItems (self,ItSe_GoldPocket100,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_L_Tough_Santino, BodyTex_L, ITAR_VLK_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_L_Gerbrandt, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_VLK_H);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

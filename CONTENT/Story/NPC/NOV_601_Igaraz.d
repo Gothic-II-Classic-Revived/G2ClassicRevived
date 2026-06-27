@@ -23,7 +23,7 @@ INSTANCE NOV_601_Igaraz (Npc_Default)
 	CreateInvItems (self, ItKe_IgarazChest_mis, 1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_Normal_Stone, BodyTex_N, ITAR_NOV_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_W_Igaraz, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

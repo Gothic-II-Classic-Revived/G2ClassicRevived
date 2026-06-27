@@ -27,7 +27,7 @@ instance SLD_800_Lee_DI (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Lee, BodyTex_N, ITAR_REVIVED_SLD_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Lee, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_SLD_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

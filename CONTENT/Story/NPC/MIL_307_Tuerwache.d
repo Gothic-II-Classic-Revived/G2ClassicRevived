@@ -22,7 +22,7 @@ instance MIL_307_Tuerwache (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																		
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Horatio, BodyTex_N, ITAR_REVIVED_GRD_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Normal9, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_GRD_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

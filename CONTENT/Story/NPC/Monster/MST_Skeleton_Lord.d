@@ -52,7 +52,7 @@ func void B_SetVisuals_Skeleton_Lord()
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, 0, ITAR_PAL_SKEL);
+	B_SetNpcFullVisual (self, MALE, "Ske_Head", 0, Body_P_Hum_Naked, Body_Pale, Teeth_Normal, ITAR_PAL_SKEL);
 };
 
 

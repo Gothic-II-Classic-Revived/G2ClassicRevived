@@ -21,7 +21,7 @@ instance BAU_914_MAID (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_BlackHair, BodyTexBabe_N, ITAR_BauBabe_L);			//ITAR_BauBabe_L
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe", Face_W_Babe_Makeup1, Body_W_Babe_Naked, Body_White, Teeth_Gold, ITAR_BauBabe_L);			//ITAR_BauBabe_L
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds");
 

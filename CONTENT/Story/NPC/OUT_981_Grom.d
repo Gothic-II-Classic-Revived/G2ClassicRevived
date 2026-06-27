@@ -21,7 +21,7 @@ INSTANCE OUT_981_GROM (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Gilbert, BodyTex_P, ITAR_BAU_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_P_Grom, Body_P_Hum_Naked, Body_Pale, Teeth_Gold, ITAR_BAU_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 	

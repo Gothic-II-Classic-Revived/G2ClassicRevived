@@ -25,7 +25,7 @@ instance VLK_471_Edda (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe.", FaceBabe_B_RedLocks, BodyTex_B, ITAR_VlkBabe_L);	
+	B_SetNpcFullVisual (self, FEMALE, "Hum_Head_Babe.", Face_B_Edda, Body_B_Babe_Naked, Body_Black, Teeth_Rotten, ITAR_VlkBabe_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

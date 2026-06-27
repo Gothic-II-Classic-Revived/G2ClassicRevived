@@ -26,7 +26,7 @@ instance BDT_445_RAMIREZ (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Tough_Okyl, BodyTex_N,ITAR_VLK_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Ramirez, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_VLK_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

@@ -22,7 +22,7 @@ instance BAU_969_Bauer (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Gilbert, BodyTex_P, ITAR_Bau_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Hum_Bald3, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_Bau_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

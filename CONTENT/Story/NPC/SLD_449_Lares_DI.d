@@ -29,7 +29,7 @@ instance SLD_449_Lares_DI (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Lares, BodyTex_N,ITAR_REVIVED_ORG_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Lares, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_ORG_H);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

@@ -23,7 +23,7 @@ instance VLK_499_Buerger (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak_BaalNetbek, BodyTex_N,ITAR_Vlk_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard9, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_Vlk_H);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

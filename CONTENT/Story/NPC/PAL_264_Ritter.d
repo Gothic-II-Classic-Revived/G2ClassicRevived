@@ -24,7 +24,7 @@ instance PAL_264_Ritter (Npc_Default)
 	CreateInvItems 	(self, ItKe_OC_Store, 1 );	//Joly: Lager wache im OC
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Ratford, BodyTex_L, ITAR_REVIVED_PAL_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Hum_Beard1, Body_L_Hum_Naked, Body_Latino, Teeth_Normal, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	

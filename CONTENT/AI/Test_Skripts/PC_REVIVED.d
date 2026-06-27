@@ -14,8 +14,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	bodyStateInterruptableOverride = TRUE;
 
 	//-------- visuals --------
-	Mdl_SetVisual		(self,"HUMANS.MDS");
-	Mdl_SetVisualBody 	(self,"HUM_BODY_NAKED0", BodyTex_Player, 0, "Hum_Head_Pony", FACE_N_Player, 0, ITAR_Fake_RANGER);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_Special_HeroAlt, Body_Special_Hero3, Body_Player, Teeth_Normal, NO_ARMOR);	
 	
 	Npc_SetTalentSkill	(self, NPC_TALENT_MAGE, 			6);
 	Npc_SetTalentSkill	(self, NPC_TALENT_PICKLOCK, 		1);

@@ -22,7 +22,7 @@ instance VLK_420_Coragon (Npc_Default)
 	//Händler
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald.", Face_N_Normal_Blade, BodyTex_N, ITAR_SMITH);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald.", Face_W_Coragon, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_SMITH);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

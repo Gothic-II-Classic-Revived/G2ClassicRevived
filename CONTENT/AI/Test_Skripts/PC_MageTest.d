@@ -15,10 +15,7 @@ INSTANCE PC_MageTest(NPC_DEFAULT)
 	bodyStateInterruptableOverride = TRUE;
 
 	//-------- visuals --------
-	// 						animations
-	Mdl_SetVisual		(self,"HUMANS.MDS");
-	//							Body-Mesh			Body-Tex		Skin-Color	Head-MMS    		Head-Tex		Teeth-Tex 	Armor-Tex
-	Mdl_SetVisualBody (self,	"hum_body_Naked0", 	BodyTex_Player,	0,			"Hum_Head_Pony", 	FACE_N_Player,	0, 			ITAR_REVIVED_DMT_H);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_Special_Hero, Body_Special_Hero2, Body_Player, Teeth_Normal, NO_ARMOR);	
 	
 	Npc_SetTalentSkill	(self, NPC_TALENT_MAGE, 			6);
 	Npc_SetTalentSkill	(self, NPC_TALENT_PICKLOCK, 		1);

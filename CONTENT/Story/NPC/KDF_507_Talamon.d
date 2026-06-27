@@ -25,7 +25,7 @@ INSTANCE KDF_507_Talamon (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_B_Saturas, BodyTex_B, ITAR_REVIVED_KDF_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Talamon, Body_B_Hum_Naked, Body_Black, Teeth_Yellow, ITAR_REVIVED_KDF_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

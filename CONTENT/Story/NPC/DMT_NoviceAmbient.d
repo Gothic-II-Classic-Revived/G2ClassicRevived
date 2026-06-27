@@ -19,7 +19,7 @@ PROTOTYPE Default_AmbientNovice (C_NPC)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_DMT_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard8, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_DMT_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	

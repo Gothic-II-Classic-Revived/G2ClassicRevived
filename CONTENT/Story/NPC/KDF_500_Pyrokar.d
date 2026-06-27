@@ -24,7 +24,7 @@ INSTANCE KDF_500_Pyrokar (Npc_Default)
 	// ------ Inventory ------
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_ImportantOld , BodyTex_N, ITAR_REVIVED_KDF_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Pyrokar, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_KDF_H);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

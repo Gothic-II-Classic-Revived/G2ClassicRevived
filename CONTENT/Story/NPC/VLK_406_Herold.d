@@ -23,7 +23,7 @@ instance VLK_406_Herold (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal_Sly, BodyTex_N, ITAR_REVIVED_EBR_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Herold, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_EBR_L);	
 	Mdl_SetModelFatness	(self, 1.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

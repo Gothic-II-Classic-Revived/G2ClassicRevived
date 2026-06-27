@@ -28,7 +28,7 @@ instance None_101_Mario_DI (Npc_Default)
 	CreateInvItems 		(self, ITWR_DementorObsessionBook_MIS, 1 );	
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_Normal_Kirgo, BodyTex_B, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_B_Mario, Body_B_Hum_Naked, Body_Black, Teeth_Broken, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1.2);
 	Mdl_ApplyOverlayMds	(self, "Humans_MILITIA.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 		

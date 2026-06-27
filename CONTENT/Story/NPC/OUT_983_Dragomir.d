@@ -22,7 +22,7 @@ INSTANCE OUT_983_DRAGOMIR (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Tough_Lee_ähnlich, BodyTex_N, ITAR_REVIVED_ARCHER);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Dragomir, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_ARCHER);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

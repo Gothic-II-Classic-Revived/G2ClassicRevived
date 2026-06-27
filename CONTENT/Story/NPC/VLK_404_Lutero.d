@@ -21,7 +21,7 @@ instance VLK_404_Lutero (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Normal02, BodyTex_P, ITAR_REVIVED_EBR_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Lutero, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_EBR_L);	
 	Mdl_SetModelFatness	(self, 3);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

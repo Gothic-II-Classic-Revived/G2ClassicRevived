@@ -21,7 +21,7 @@ instance GRD_4108_Engor (Npc_Default)
 	// ------ Inventory ------
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Jackal, BodyTex_L, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_L_Engor, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

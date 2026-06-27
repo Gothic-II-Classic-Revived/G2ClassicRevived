@@ -26,7 +26,7 @@ instance BOUNT_5003_Mist (Npc_Default)
 	CreateInvItems 		(self, ITRW_BOLT, 30);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Weak_Cipher_alt, BodyTex_N, ITAR_REVIVED_GRD_H_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Mist, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_GRD_H_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

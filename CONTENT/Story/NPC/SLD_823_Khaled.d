@@ -22,7 +22,7 @@ instance SLD_823_Khaled (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_B_Thorus, BodyTex_B, ITAR_SLD_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_B_Khaled, Body_B_Hum_Naked, Body_Black, Teeth_Broken, ITAR_SLD_H);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

@@ -25,7 +25,7 @@ instance OUT_1034_FLUECHTLING (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_Weak05, BodyTex_N,ITAR_Leather_L );	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_W_Hum_Normal35, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_Leather_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

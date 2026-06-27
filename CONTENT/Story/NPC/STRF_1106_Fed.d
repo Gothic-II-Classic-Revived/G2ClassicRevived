@@ -22,7 +22,7 @@ instance STRF_1106_Fed (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Gilbert, BodyTex_N, ITAR_REVIVED_SFB_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Fed, Body_P_Hum_Normal2, Body_Pale, Teeth_Gold, ITAR_REVIVED_SFB_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

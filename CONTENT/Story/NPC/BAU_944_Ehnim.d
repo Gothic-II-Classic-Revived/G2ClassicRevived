@@ -24,7 +24,7 @@ instance BAU_944_Ehnim (Npc_Default)
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);	
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Normal03, BodyTex_P, ITAR_Bau_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_P_EgilEhnim, Body_P_Hum_Naked, Body_Pale, Teeth_Normal, ITAR_Bau_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

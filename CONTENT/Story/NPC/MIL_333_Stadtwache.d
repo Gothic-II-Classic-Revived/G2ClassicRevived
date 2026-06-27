@@ -25,7 +25,7 @@ instance Mil_333_Stadtwache (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Normal03, BodyTex_P, ITAR_REVIVED_GRD_S);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_P_Hum_Normal3, Body_P_Hum_Naked, Body_Pale, Teeth_Yellow, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

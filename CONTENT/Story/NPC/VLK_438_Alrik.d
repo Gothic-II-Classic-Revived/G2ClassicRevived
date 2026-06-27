@@ -33,7 +33,7 @@ instance VLK_438_Alrik (Npc_Default)
 	//B_CreateAmbientInv 	(self); //NICHT, Alrik soll nicht mehr Gold haben!
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Bloodwyn, BodyTex_N,ITAR_Vlk_L );	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Alrik, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

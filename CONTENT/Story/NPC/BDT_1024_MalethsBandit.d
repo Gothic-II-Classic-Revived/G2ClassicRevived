@@ -22,7 +22,7 @@ instance BDT_1024_MalethsBandit (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_ToughBald_Nek, BodyTex_P, ITAR_REVIVED_ORG_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_P_Hum_Beard1, Body_P_Hum_Naked, Body_Pale, Teeth_Gold, ITAR_REVIVED_ORG_H);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

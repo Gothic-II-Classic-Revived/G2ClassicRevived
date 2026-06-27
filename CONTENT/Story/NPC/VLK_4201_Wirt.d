@@ -22,7 +22,7 @@ instance VLK_4201_Wirt (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------															
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_OldBald_Jeremiah, BodyTex_N, ITAR_BARKEEPER);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hum_Normal38, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_BARKEEPER);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

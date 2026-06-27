@@ -111,7 +111,7 @@ INSTANCE CH (NPC_DEFAULT)
 
 		
 	// ------ visuals ------				
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", FACE_N_Player, bodyTex_Player, -1);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_Special_Hero, Body_Special_Hero2, Body_Player, Teeth_Normal, NO_ARMOR);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

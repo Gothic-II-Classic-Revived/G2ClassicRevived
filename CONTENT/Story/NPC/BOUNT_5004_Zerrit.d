@@ -26,7 +26,7 @@ instance BOUNT_5004_Zerrit (Npc_Default)
 	CreateInvItems 		(self, ITRW_ARROW, 30);
 
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Normal_Erpresser, BodyTex_N, ITAR_REVIVED_STT_H_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Zerrit, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_STT_H_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

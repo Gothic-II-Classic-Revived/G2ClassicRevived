@@ -26,7 +26,7 @@ instance BDT_3003_Cutter (Npc_Default)
 	CreateInvItems	(self, ITRW_BOLT, 30);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Cutter, BodyTex_P, ITAR_REVIVED_GRD_H_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Cutter, Body_P_Hum_Naked, Body_Pale, Teeth_Normal, ITAR_REVIVED_GRD_H_02);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

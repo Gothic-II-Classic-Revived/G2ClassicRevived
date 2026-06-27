@@ -31,7 +31,7 @@ instance KDW_439_Vatras (Npc_Default)
 	CreateInvItems 		(self, ItSc_TrfScavenger,1);	
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Saturas, BodyTex_B, ITAR_REVIVED_KDW_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Psionic", Face_B_Vatras, Body_B_Hum_Naked, Body_Black, Teeth_Rotten, ITAR_REVIVED_KDW_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

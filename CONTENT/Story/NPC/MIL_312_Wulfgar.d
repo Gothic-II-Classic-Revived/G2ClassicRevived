@@ -22,7 +22,7 @@ instance Mil_312_Wulfgar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart06, BodyTex_N, ITAR_REVIVED_GRD_S);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Wulfgar, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

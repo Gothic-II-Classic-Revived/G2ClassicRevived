@@ -25,7 +25,7 @@ instance VLK_440_Bartok (Npc_Default)
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 5);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Important_Arto, BodyTex_N,ITAR_Vlk_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Bartok, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

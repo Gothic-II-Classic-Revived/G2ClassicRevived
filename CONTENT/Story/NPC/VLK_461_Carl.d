@@ -25,7 +25,7 @@ instance VLK_461_Carl (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_L_NormalBart01, BodyTex_L,ITAR_SMITH);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_L_Carl, Body_L_Hum_Naked, Body_Latino, Teeth_Rotten, ITAR_SMITH);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

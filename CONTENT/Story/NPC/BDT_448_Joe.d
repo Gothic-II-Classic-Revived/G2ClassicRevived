@@ -29,7 +29,7 @@ instance BDT_448_JOE (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_ToughBald, BodyTex_P,ITAR_REVIVED_BEGGAR);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_P_Joe, Body_P_Hum_Normal2, Body_Pale, Teeth_Normal, ITAR_REVIVED_BEGGAR);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

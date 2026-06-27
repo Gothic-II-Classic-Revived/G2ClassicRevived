@@ -21,7 +21,7 @@ INSTANCE PC_Fighter_NW_vor_DJG (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter",Face_B_Gorn, BodyTex_B, ITAR_REVIVED_SLD_M);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Gorn, Body_B_Hum_Naked, Body_Black, Teeth_Gold, ITAR_REVIVED_SLD_M);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

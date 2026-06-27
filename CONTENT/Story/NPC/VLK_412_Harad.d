@@ -23,7 +23,7 @@ instance VLK_412_Harad (Npc_Default)
 	// Händler
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart20, BodyTex_N, ITAR_Smith);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Harad, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_Smith);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

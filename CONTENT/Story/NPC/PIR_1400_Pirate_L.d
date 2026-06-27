@@ -21,7 +21,7 @@ instance PIR_1400_Pirate_L (Npc_Default)
 	CreateInvItems (self, ITMS_REVIVED_BALTRAMPACKAGE_PIRATES, 1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Pirat01, BodyTex_N, ITAR_PIR_L_Addon);
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Skip, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_PIR_L_Addon);
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

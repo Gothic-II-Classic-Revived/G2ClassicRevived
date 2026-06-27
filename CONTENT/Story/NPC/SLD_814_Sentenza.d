@@ -26,7 +26,7 @@ instance SLD_814_Sentenza (Npc_Default)
 	CreateInvItems (self, itfo_apple, 1); //KEIN Ambient-Inv
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Tough_Okyl, BodyTex_N, ITAR_SLD_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Sentenza, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_SLD_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	

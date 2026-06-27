@@ -23,7 +23,7 @@ INSTANCE PC_Mage_NW (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Milten, BodyTex_N, ITAR_REVIVED_KDF_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Milten, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

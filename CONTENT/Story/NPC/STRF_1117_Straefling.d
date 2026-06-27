@@ -22,7 +22,7 @@ instance STRF_1117_Straefling (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal17, BodyTex_N, ITAR_REVIVED_SFB_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Normal26, Body_W_Hum_Normal1, Body_White, Teeth_Gold, ITAR_REVIVED_SFB_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 

@@ -22,7 +22,7 @@ INSTANCE NOV_609_Novize (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal06, BodyTex_N, ITAR_NOV_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Normal23, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, -1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	

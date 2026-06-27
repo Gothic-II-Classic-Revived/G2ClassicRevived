@@ -26,7 +26,7 @@ instance BDT_3004_Bullit (Npc_Default)
 	CreateInvItems	(self, ITRW_BOLT, 30);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Bullit, BodyTex_N, ITAR_REVIVED_GRD_M_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_W_Bullit, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_GRD_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

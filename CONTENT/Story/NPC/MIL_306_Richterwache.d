@@ -22,7 +22,7 @@ instance MIL_306_RICHTERWACHE (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																		
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_L_ToughBald01, BodyTex_L, ITAR_REVIVED_PAL_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_L_Hum_Old1, Body_L_Hum_Naked, Body_Latino, Teeth_Yellow, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

@@ -31,7 +31,7 @@ INSTANCE KDF_504_Parlan (Npc_Default)
 	CreateInvItems 		(self, ItKe_KlosterBibliothek,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Corristo, BodyTex_N, ITAR_REVIVED_KDF_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Parlan, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

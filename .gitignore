@@ -4,3 +4,5 @@
 *.BIN
 *.CSL
 *.INF
+npc_face_zero_assignments.csv
+npc_face_zero_assignments.xlsx

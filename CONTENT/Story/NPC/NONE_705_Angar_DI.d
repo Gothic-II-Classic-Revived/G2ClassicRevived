@@ -28,7 +28,7 @@ instance NONE_705_ANGAR_DI (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_CorAngar, BodyTex_B, ITAR_CorAngar);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Angar, Body_B_Hum_Tattoo, Body_Black, Teeth_Gold, ITAR_CorAngar);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

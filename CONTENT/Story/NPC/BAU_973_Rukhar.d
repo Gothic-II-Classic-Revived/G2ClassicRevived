@@ -23,7 +23,7 @@ instance BAU_973_Rukhar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_L_NormalBart02, BodyTex_L, ITAR_Bau_M);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_L_Rukhar, Body_L_Hum_Naked, Body_Latino, Teeth_Gold, ITAR_Bau_M);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

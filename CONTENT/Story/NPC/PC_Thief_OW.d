@@ -26,7 +26,7 @@ INSTANCE PC_Thief_OW (Npc_Default)
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 10); 
 			
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief",Face_L_Diego, BodyTex_L, ITAR_REVIVED_STT_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_L_Diego, Body_L_Hum_Naked, Body_Latino, Teeth_Broken, ITAR_REVIVED_STT_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

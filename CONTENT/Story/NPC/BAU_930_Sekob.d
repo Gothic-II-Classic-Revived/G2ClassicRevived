@@ -26,7 +26,7 @@ instance BAU_930_Sekob (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fatbald", Face_P_OldMan_Gravo, BodyTex_P, ITAR_Vlk_H);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fatbald", Face_P_Sekob, Body_P_Hum_Naked, Body_Pale, Teeth_Gold, ITAR_Vlk_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
