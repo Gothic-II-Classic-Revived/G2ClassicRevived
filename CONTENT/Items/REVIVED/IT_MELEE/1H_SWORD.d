@@ -240,6 +240,11 @@ const int	REV_Condition_1H_Sword_Kalom		=	50;
 const int	REV_Range_1H_Sword_Kalom			=	100;
 const int	REV_Value_1H_Sword_Kalom			=	1000;
 //******************************************************************//
+const int	REV_Damage_1H_Sword_Feros			=	80;
+const int	REV_Condition_1H_Sword_Feros		=	60;
+const int	REV_Range_1H_Sword_Feros			=	100;
+const int	REV_Value_1H_Sword_Feros			=	1200;
+//******************************************************************//
 const int	REV_Damage_1H_Sword_Valentino		=	40;
 const int	REV_Condition_1H_Sword_Valentino	=	20;
 const int	REV_Range_1H_Sword_Valentino		=	120;
@@ -1252,7 +1257,7 @@ INSTANCE ITMW_REVIVED_1H_URIZIEL_01 (C_Item)
 	name 				=	"URIZIEL";
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
+	flags 				=	ITEM_MISSION|ITEM_SWD;	
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_1H_URIZIEL_01;
@@ -1278,7 +1283,7 @@ INSTANCE ITMW_REVIVED_1H_URIZIEL_02 (C_Item)
 	name 				=	"URIZIEL";
 
 	mainflag 			=	ITEM_KAT_NF;
-	flags 				=	ITEM_SWD;	
+	flags 				=	ITEM_MISSION|ITEM_SWD;	
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_1H_URIZIEL_02;
@@ -1493,6 +1498,33 @@ INSTANCE ITMW_REVIVED_1H_SWORD_KALOM (C_Item)
 	TEXT[0]				=	"It belongs to Cor Kalom";
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OneHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_1H_SWORD_FEROS (C_Item)
+{
+	name 				=	"Ferros' Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_MISSION|ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_1H_Sword_Feros;
+	//owner				= 	DJG_715_Ferros;
+
+	damageTotal			= 	REV_Damage_1H_Sword_Feros;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_1H_Sword_Feros;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_1H_Sword_Feros;
+	visual 				=	"ItMw_060_1h_Sword_smith_03.3DS";
+
+	description			= 	name;
+	TEXT[0]				=	"It belongs to Ferros";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

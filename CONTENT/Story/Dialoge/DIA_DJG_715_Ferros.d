@@ -120,12 +120,12 @@ FUNC VOID DIA_DJG_715_Ferros_OldCamp_Info()
 	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"I wish you luck with your search.",DIA_DJG_715_Ferros_OldCamp_No);
 	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"What will you give me if I find you a good sword?",DIA_DJG_715_Ferros_OldCamp_Price);
 	Info_AddChoice (DIA_DJG_715_Ferros_OldCamp,"I shall find your sword.",DIA_DJG_715_Ferros_OldCamp_Yes);
-	Wld_InsertItem		(ItMW_1H_FerrosSword_Mis , "FP_OW_ITEM_08"); 
+	Wld_InsertItem		(ITMW_REVIVED_1H_SWORD_FEROS , "FP_OW_ITEM_08"); 
 	MIS_FerrosSword = LOG_RUNNING; 
 	
 	Log_CreateTopic (TOPIC_FerrosSword, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FerrosSword, LOG_RUNNING);
-	B_LogEntry (TOPIC_FerrosSword,"Feros left his sword with the orcs. That was stupid."); 
+	B_LogEntry (TOPIC_FerrosSword,"Ferros left his sword with the orcs. That was stupid."); 
 };
 
 FUNC VOID DIA_DJG_715_Ferros_OldCamp_No ()
@@ -149,7 +149,7 @@ FUNC VOID DIA_DJG_715_Ferros_OldCamp_Yes ()
 	AI_Output (other,self ,"DIA_DJG_715_Ferros_OldCamp_Yes_15_00"); //I shall find your sword.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_01"); //That would be great. You should look for it on the high cliff to the south.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_02"); //I probably lost it there, near the orc tents.
-	B_LogEntry (TOPIC_FerrosSword,"It seems Feros lost his sword on the tall cliff in the south, where the orc tents are."); 
+	B_LogEntry (TOPIC_FerrosSword,"It seems Ferros lost his sword on the tall cliff in the south, where the orc tents are."); 
 	
 	Info_ClearChoices (DIA_DJG_715_Ferros_OldCamp);
 };
@@ -233,7 +233,7 @@ FUNC VOID B_Ferros_FerrosAnySword_Yes ()
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01"); //In return, I'll show you a couple of tricks that will allow you to use your strength and dexterity better in combat.
 
 	Log_CreateTopic	(TOPIC_Teacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher, "Feros can teach me to improve my strength and dexterity.");
+	B_LogEntry		(TOPIC_Teacher, "Ferros can teach me to improve my strength and dexterity.");
 
 	Info_ClearChoices (DIA_DJG_715_Ferros_FerrosAnySword);
 	MIS_FerrosSword = LOG_SUCCESS;
@@ -265,7 +265,7 @@ INSTANCE DIA_DJG_715_Ferros_FerrosHisSword   (C_INFO)
 FUNC INT DIA_DJG_715_Ferros_FerrosHisSword_Condition()
 {
 	IF 	(	(MIS_FerrosSword == LOG_RUNNING) 
-	&&	(Npc_HasItems (other,ItMW_1H_FerrosSword_Mis) >= 1))
+	&&	(Npc_HasItems (other,ITMW_REVIVED_1H_SWORD_FEROS) >= 1))
 	{
 		return TRUE;
 	};
@@ -274,13 +274,13 @@ FUNC INT DIA_DJG_715_Ferros_FerrosHisSword_Condition()
 FUNC VOID DIA_DJG_715_Ferros_FerrosHisSword_Info()
 {
 	AI_Output (other,self ,"DIA_DJG_715_Ferros_FerrosHisSword_15_00"); //I found your sword.
-	B_GiveInvItems (other,self,ItMw_1h_FerrosSword_Mis,1);
+	B_GiveInvItems (other,self,ITMW_REVIVED_1H_SWORD_FEROS,1);
 	
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_00"); //Thanks, I owe you.
 	AI_Output (self ,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01"); //In return, I'll show you a couple of tricks that will allow you to use your strength and dexterity better in combat.
 
 	Log_CreateTopic	(TOPIC_Teacher, LOG_NOTE);
-	B_LogEntry		(TOPIC_Teacher, "Feros can teach me to improve my strength and dexterity.");
+	B_LogEntry		(TOPIC_Teacher, "Ferros can teach me to improve my strength and dexterity.");
 
 	MIS_FerrosSword = LOG_SUCCESS;	
 	B_GivePlayerXP (XP_FerrosSword + XP_Ambient);
