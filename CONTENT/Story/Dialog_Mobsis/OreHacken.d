@@ -176,7 +176,7 @@ FUNC VOID OreHacken_S1 ()
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	{	
 		self.aivar[AIV_INVINCIBLE]=TRUE;
-		PLAYER_MOBSI_PRODUCTION	= MOBSI_OREHACKEN;
+		PLAYER_MOBSI_PRODUCTION	= MOBSI_ORE_MAGIC;
 		Ai_ProcessInfos (her);
 	};
 }; 
@@ -195,7 +195,7 @@ INSTANCE PC_OreHacken_End (C_Info)
 
 FUNC INT PC_OreHacken_End_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_OREHACKEN)
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_ORE_MAGIC)
 	{	
 		return TRUE;
 	};
@@ -222,7 +222,7 @@ INSTANCE PC_OreHacken_Hour (C_Info)
 
 FUNC INT PC_OreHacken_Hour_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_OREHACKEN)
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_ORE_MAGIC)
 	{	
 		return TRUE;
 	};
@@ -287,7 +287,7 @@ INSTANCE PC_OreHacken_TSchlag (C_Info)
 
 FUNC INT PC_OreHacken_TSchlag_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_OREHACKEN)
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_ORE_MAGIC)
 	&& (Truemmer_Count >= 2)
 	&& (Knows_Truemmerschlag == TRUE)
 	{	
@@ -347,7 +347,7 @@ INSTANCE PC_OreHacken_Chance (C_Info)
 
 FUNC INT PC_OreHacken_Chance_Condition ()
 {
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_OREHACKEN)
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_ORE_MAGIC)
 	{	
 		return TRUE;
 	};

@@ -1,14 +1,13 @@
-const int	REV_Value_Joint				= 60;
-const int	REV_Value_Nugget			= 100;
-const int	REV_Value_Stuff				= 10;
-const int	REV_Value_BloodOreNugget	= 10;
+const int	REV_Value_Joint				= 40;
+const int	REV_Value_Stuff				= 5;
+const int	REV_Value_Material			= 10;
 
-const int	REV_Value_Salt					=	50;
-const int	REV_Value_Sugar					=	60;
-const int	REV_Value_SyrianOil				=	50;
-const int	REV_Value_StoneOil				=	50;
+const int	REV_Value_Salt					=	20;
+const int	REV_Value_Sugar					=	20;
+const int	REV_Value_SyrianOil				=	40;
+const int	REV_Value_StoneOil				=	40;
 const int	REV_Value_PureAlcohol			=	80;
-const int	REV_Value_Vinegar				=	80;
+const int	REV_Value_Vinegar				=	60;
 const int	REV_Value_MagicWater			=	200;
 
 //****************************************************************************
@@ -325,39 +324,98 @@ func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 };
 
 //****************************************************************************
-//			COMPONENTS
+//			MATERIALS
 //****************************************************************************
 
-INSTANCE ITMI_REVIVED_WOOD (REVIVED_MISC)
+INSTANCE ITMI_REVIVED_MAGICORE (REVIVED_MISC)
 {
-    name                = "Wood for fletching";
-    value               = 0;
+    name                = "Faded Ore Nugget";
+	value 				= 0;
 
-    visual              = "ItMi_FletcherWood.3DS";
+    visual              = "REV_ITMI_NUGGET_NOMAGIC.3ds";
+    material            = MAT_METAL;
+    INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
+
+    description         = name;
+	TEXT[0]				= "The ore is faded and does not shine.";
+};
+
+INSTANCE ITMI_REVIVED_BLOODORE (REVIVED_MISC)
+{
+    name                = "Blood Ore Nugget";
+	value 				= 0;
+
+    visual              = "REV_ITMI_NUGGET_BLOOD.3ds";
+
+    material            = MAT_METAL;
+    INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
+
+    description         = name;
+	TEXT[0]				= "The ore is seeping out red vapor.";
+};
+
+INSTANCE ITMI_REVIVED_BLACKORE (REVIVED_MISC)
+{
+    name                = "Black Ore Nugget";
+	value 				= 0;
+
+    visual              = "REV_ITMI_NUGGET_BLACK.3ds";
+	scemename			= "MAPSEALED";	
+	on_state[0]			= REV_Use_BlackOre;
+
+    material            = MAT_METAL;
+    INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
+
+    description         = name;
+	TEXT[0]				= "The ore feels like glass, but...";
+};
+	func void REV_Use_BlackOre()
+	{
+		if (Npc_IsPlayer(self))
+		{
+			Wld_PlayEffect("spellFX_BELIARSRAGE",  self, self, 0, 0, 0, FALSE);
+
+			Npc_PlayAni(self, "T_WOUNDEDB_2_DEADB");
+			Npc_ChangeAttribute(self, ATR_MANA, -self.attribute[ATR_MANA]);
+			Npc_ChangeAttribute(self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS] + 2);
+
+			Wld_StopEffect("SLOW_MOTION");
+			Wld_PlayEffect("SLOW_MOTION", self, self, 0, 0, 0, FALSE);
+		};
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITMI_REVIVED_WOOD_RAW (REVIVED_MISC)
+{
+    name                = "Piece of wood";
+    value               = REV_Value_Material;
+
+    visual              = "REV_ITMI_WOOD_01.3DS";
     material            = MAT_WOOD;
 
     description         = name;
     TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
-INSTANCE ITMI_REVIVED_FLETCHER_KNIFE (REVIVED_MISC)
+INSTANCE ITMI_REVIVED_WOOD_STICK (REVIVED_MISC)
 {
-    name                = "Fletcher's Knife";
-    value               = 0;
+    name                = "Stick";
+    value               = REV_Value_Material;
 
-    visual              = "ItMi_FletcherKnife.3DS";
-    material            = MAT_METAL;
+    visual              = "REV_ITMI_WOOD_02.3DS";
+    material            = MAT_WOOD;
 
     description         = name;
     TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
-INSTANCE ITMI_REVIVED_BOW_WOOD (REVIVED_MISC)
+INSTANCE ITMI_REVIVED_WOOD_CUT (REVIVED_MISC)
 {
-    name                = "Bow Wood";
-    value               = 0;
+    name                = "Cut piece of wood";
+    value               = REV_Value_Material;
 
-    visual              = "BOWWOOD.mms";
+    visual              = "REV_ITMI_WOOD_03.3DS";
     material            = MAT_WOOD;
 
     description         = name;
@@ -366,81 +424,104 @@ INSTANCE ITMI_REVIVED_BOW_WOOD (REVIVED_MISC)
 
 /******************************************************************************************/
 
+INSTANCE ITMI_REVIVED_LEATHER (REVIVED_MISC)
+{
+    name                = "Piece of leather";
+    value               = REV_Value_Material;
+
+    visual              = "REV_ITMI_LEATHER_01.3DS";
+    material            = MAT_LEATHER;
+
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
+};
+
+//****************************************************************************
+//			COMPONENTS
+//****************************************************************************
+
 INSTANCE ITMI_REVIVED_SALT (REVIVED_MISC)
 {
-	name 				=	"Salt";
-	value 				=	REV_Value_Salt;
+	name 				= "Salt";
+	value 				= REV_Value_Salt;
 
-	visual 				=	"REV_ITMI_SALT.3DS";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_SALT.3DS";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_SUGAR (REVIVED_MISC)
 {
-	name 				=	"Sugar";
-	value 				=	REV_Value_Sugar;
+	name 				= "Sugar";
+	value 				= REV_Value_Sugar;
 
-	visual 				=	"REV_ITMI_SUGAR.3DS";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_SUGAR.3DS";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_SYRIANOIL (REVIVED_MISC)
 {
-	name 				=	"Syrianic Oil";
-	value 				=	REV_Value_SyrianOil;
+	name 				= "Syrianic Oil";
+	value 				= REV_Value_SyrianOil;
 
-	visual 				=	"REV_ITMI_SYRIANOIL.3DS";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_SYRIANOIL.3DS";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_STONEOIL (REVIVED_MISC)
 {
-	name 				=	"Stone Oil";
-	value 				=	REV_Value_StoneOil;
+	name 				= "Stone Oil";
+	value 				= REV_Value_StoneOil;
 
-	visual 				=	"REV_ITMI_STONEOIL.3DS";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_STONEOIL.3DS";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_PUREALCOHOL (REVIVED_MISC)
 {
-	name 				=	"Pure Alcohol";
-	value 				=	REV_Value_PureAlcohol;
+	name 				= "Pure Alcohol";
+	value 				= REV_Value_PureAlcohol;
 
-	visual 				=	"REV_ITMI_ALCOHOL.3DS";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_ALCOHOL.3DS";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_VINEGAR (REVIVED_MISC)
 {
-	name 				=	"Vinegar";
-	value 				=	REV_Value_Vinegar;
+	name 				= "Vinegar";
+	value 				= REV_Value_Vinegar;
 
-	visual 				=	"REV_ITMI_ALCOHOL.3DS";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_VINEGAR.3DS";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 INSTANCE ITMI_REVIVED_MAGICWATER (REVIVED_MISC)
 {
-	name 				=	"Magic Water";
-	value 				=	REV_Value_MagicWater;
+	name 				= "Magic Water";
+	value 				= REV_Value_MagicWater;
 
-	visual 				=	"REV_ITMI_MAGICWATER.3ds";
-	material 			=	MAT_GLAS;
+	visual 				= "REV_ITMI_MAGICWATER.3ds";
+	material 			= MAT_GLAS;
 
-	description			= 	name;
+    description         = name;
+    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
 };
 
 //****************************************************************************
@@ -470,31 +551,6 @@ INSTANCE ITMI_REVIVED_OLDCOIN (REVIVED_MISC)
 	description			= 	name;
 };
 
-INSTANCE ITMI_REVIVED_MAGICORE (REVIVED_MISC)
-{
-	name 				=	"Lump of Ore";
-
-	visual 				=	"REV_ItMi_Nugget_NoMagic.3ds";
-
-	TEXT[0]				=	"The ore is faded and does not shine.";
-	INV_ZBIAS			=	INVCAM_ENTF_MISC2_STANDARD;
-
-	description			= 	name;
-};
-
-INSTANCE ITMI_REVIVED_BLOODORE (REVIVED_MISC)
-{
-    name                = "Blood Ore Nugget";
-    value               = REV_Value_BloodOreNugget;
-
-    visual              = "ItMi_Nugget_02.3ds";
-    material            = MAT_METAL;
-    INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
-
-    description         = name;
-    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
-};
-
 INSTANCE ITMI_REVIVED_SILVER (REVIVED_MISC)
 {
     name                = "Silver Coin";
@@ -505,7 +561,7 @@ INSTANCE ITMI_REVIVED_SILVER (REVIVED_MISC)
     INV_ZBIAS           = INVCAM_ENTF_MISC2_STANDARD;
 
     description         = name;
-    TEXT[5]             = NAME_Value;                   COUNT[5] = value;
+	TEXT[0]				= "Completely useless in this part of the world.";
 };
 
 INSTANCE ITMI_REVIVED_STUFF_AMPHORE (REVIVED_MISC)
@@ -568,7 +624,7 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (REVIVED_MISC)
 {
 	name 				=	"Figurine";
 
-	visual 				=	"ItMi_Stuff_Idol_Sleeper_01.3DS";
+	visual 				=	"REV_ITMI_STUFF_IDOL_01.3DS";
 	material 			=	MAT_CLAY;
 
 	description			= 	name;
@@ -582,7 +638,7 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (REVIVED_MISC)
 {
 	name 				=	"Figurine";
 
-	visual 				=	"REV_ITMI_STUFF_IDOL_OGRONT_01.3DS";
+	visual 				=	"REV_ITMI_STUFF_IDOL_02.3DS";
 	material 			=	MAT_CLAY;
 
 	description			= 	name;

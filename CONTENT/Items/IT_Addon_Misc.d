@@ -497,9 +497,8 @@ instance ItMi_Zeitspalt_Addon(C_Item)
 			Wld_PlayEffect("spellFX_BELIARSRAGE",  self, self, 0, 0, 0, FALSE);
 
 			// FIXME_Nico: DropUnconscious (DropDead funktioniert bereits)
-			Npc_PlayAni(self, "T_WOUNDEDB_2_DEADB");
-			Npc_ChangeAttribute(self, ATR_MANA, -self.attribute[ATR_MANA]);
-			Npc_ChangeAttribute(self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS] + 2);
+			//Npc_ChangeAttribute(self, ATR_MANA, -self.attribute[ATR_MANA]);
+			//Npc_ChangeAttribute(self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS] + 2);
 			// Bereits laufenden Effekt beenden, damit die Kamera nicht ausrastet...
 			// (beim Wechsel immer noch starker Morph-Effekt, aber nicht mehr andauernd)
 			Wld_StopEffect("SLOW_MOTION");

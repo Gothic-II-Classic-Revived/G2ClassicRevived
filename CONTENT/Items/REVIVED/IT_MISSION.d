@@ -37,7 +37,7 @@ FUNC VOID Use_BaltramPackageRevived ()
 //****************************************************************************
 //			LETTERS
 //****************************************************************************
-INSTANCE ITWR_REVIVED_VATRASMESSAGE_COPY	(C_Item)
+INSTANCE ITMS_REVIVED_VATRASMESSAGE_COPY	(C_Item)
 {
 	name 				=	"Sealed Message";
 
@@ -53,6 +53,7 @@ INSTANCE ITWR_REVIVED_VATRASMESSAGE_COPY	(C_Item)
 	TEXT[2]				=   "A message from Vatras";
 	TEXT[3]				=   "for the Fire Mages.";
 };
+
 //****************************************************************************
 //			BOUNTIES
 //****************************************************************************

@@ -941,7 +941,7 @@ func VOID DIA_Vatras_MISSION_YES()
 	}
 	else
 	{
-		B_GiveInvItems (self, hero, ITWR_REVIVED_VATRASMESSAGE_COPY, 1);
+		B_GiveInvItems (self, hero, ITMS_REVIVED_VATRASMESSAGE_COPY, 1);
 	};
 	MIS_Vatras_Message = LOG_RUNNING;
 	

@@ -20,9 +20,11 @@ PROTOTYPE REVIVED_POCKET (C_Item)
 //****************************************************************************
 INSTANCE REVIVED_POCKET_BLUE (REVIVED_POCKET)
 {
-	name = "Blue Pocket";
-	visual = "REV_IT_POCKET_BLUE.3ds";
+	name		= "Blue Pocket";
+	visual		= "REV_IT_POCKET_BLUE.3ds";
 	on_state[0] = use_REVIVED_POCKET_BLUE;
+
+	description	= name;
 };
 
 func void use_REVIVED_POCKET_BLUE()
@@ -33,9 +35,11 @@ func void use_REVIVED_POCKET_BLUE()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_CYAN (REVIVED_POCKET)
 {
-	name = "Cyan Pocket";
-	visual = "REV_IT_POCKET_CYAN.3ds";
+	name		= "Cyan Pocket";
+	visual		= "REV_IT_POCKET_CYAN.3ds";
 	on_state[0] = use_REVIVED_POCKET_CYAN;
+
+	description	= name;
 };
 
 func void use_REVIVED_POCKET_CYAN()
@@ -46,9 +50,11 @@ func void use_REVIVED_POCKET_CYAN()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_PURPLE (REVIVED_POCKET)
 {
-	name = "Purple Pocket";
-	visual = "REV_IT_POCKET_PURPLE.3ds";
+	name		= "Purple Pocket";
+	visual		= "REV_IT_POCKET_PURPLE.3ds";
 	on_state[0] = use_REVIVED_POCKET_PURPLE;
+
+	description	= name;
 };
 
 func void use_REVIVED_POCKET_PURPLE()
@@ -59,9 +65,11 @@ func void use_REVIVED_POCKET_PURPLE()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_RED (REVIVED_POCKET)
 {
-	name = "Red Pocket";
-	visual = "REV_IT_POCKET_RED.3ds";
+	name		= "Red Pocket";
+	visual		= "REV_IT_POCKET_RED.3ds";
 	on_state[0] = use_REVIVED_POCKET_RED;
+
+	description	= name;
 };
 
 func void use_REVIVED_POCKET_RED()
@@ -72,9 +80,11 @@ func void use_REVIVED_POCKET_RED()
 //****************************************************************************
 INSTANCE REVIVED_POCKET_YELLOW (REVIVED_POCKET)
 {
-	name = "Yellow Pocket";
-	visual = "REV_IT_POCKET_YELLOW.3ds";
+	name		= "Yellow Pocket";
+	visual		= "REV_IT_POCKET_YELLOW.3ds";
 	on_state[0] = use_REVIVED_POCKET_YELLOW;
+
+	description	= name;
 };
 
 func void use_REVIVED_POCKET_YELLOW()
@@ -86,9 +96,11 @@ func void use_REVIVED_POCKET_YELLOW()
 
 INSTANCE REVIVED_POCKET_WHITE (REVIVED_POCKET)
 {
-	name = "White Pocket";
-	visual = "REV_IT_POCKET_WHITE.3ds";
+	name		= "White Pocket";
+	visual		= "REV_IT_POCKET_WHITE.3ds";
 	on_state[0] = use_REVIVED_POCKET_WHITE;
+
+	description	= name;
 };
 
 func void use_REVIVED_POCKET_WHITE()
@@ -100,11 +112,12 @@ func void use_REVIVED_POCKET_WHITE()
 
 INSTANCE REVIVED_POCKET_BLACK (REVIVED_POCKET)
 {
-	name = "Black Pocket";
-	visual = "REV_IT_POCKET_BLACK.3ds";
+	name		= "Black Pocket";
+	visual		= "REV_IT_POCKET_BLACK.3ds";
 	on_state[0] = use_REVIVED_POCKET_BLACK;
 
-	text[4] = "Debug items from the mod";
+	description	= name;
+	text[4] 	= "Debug items from the mod";
 };
 
 func void use_REVIVED_POCKET_BLACK()

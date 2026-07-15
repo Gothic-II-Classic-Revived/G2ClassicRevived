@@ -22,8 +22,8 @@ FUNC VOID B_SCGetTreasure_S1()
 	//NEWWORLD_ZEN
 				if ((Npc_GetDistToWP(hero,							"NW_BIGFARM_LAKE_CAVE_07"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[Greg_FirstSecret]==FALSE))
 				{
-					Wld_InsertItem 		(ITMI_REVIVED_MAGICORE, 	"NW_BIGFARM_LAKE_CAVE_07"	); 				 			 RAKEPLACE[Greg_FirstSecret]=TRUE;	//Joly: Auftrag von GREG_NW  RAKEPLACE[1] wird als Abfrage verwendet, nicht ändern.
-					RakeTreasureSuccess (ITMI_REVIVED_MAGICORE);
+					Wld_InsertItem 		(ITMI_REVIVED_BLOODORE, 	"NW_BIGFARM_LAKE_CAVE_07"	); 				 			 RAKEPLACE[Greg_FirstSecret]=TRUE;	//Joly: Auftrag von GREG_NW  RAKEPLACE[1] wird als Abfrage verwendet, nicht ändern.
+					RakeTreasureSuccess (ITMI_REVIVED_BLOODORE);
 				}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"NW_LAKE_GREG_TREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[2]==FALSE)){

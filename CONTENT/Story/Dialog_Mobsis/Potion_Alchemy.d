@@ -51,7 +51,6 @@ FUNC INT PC_PotionAlchemy_End_Condition ()
 
 FUNC VOID PC_PotionAlchemy_End_Info()
 {
-	CreateInvItems (self, ItMi_Flask,1);
 	B_ENDPRODUCTIONDIALOG ();
 };
 

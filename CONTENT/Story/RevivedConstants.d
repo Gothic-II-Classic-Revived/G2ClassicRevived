@@ -188,7 +188,12 @@ CONST STRING MOBNAME_STOMPER				= "Stomper";
 CONST STRING MOBNAME_WOODCHOPPIN			= "Tree Cut";
 
 CONST STRING MOBNAME_VINEYARD				= "Grapevine";
+
 CONST STRING MOBNAME_ORE_DEPLETED			= "Depleted Ore";
+CONST STRING MOBNAME_ORE_MAGIC				= "Lump of Magic Ore";
+CONST STRING MOBNAME_ORE_BLOOD				= "Lump of Blood Ore";
+CONST STRING MOBNAME_ORE_BLACK				= "Lump of Black Ore";
+CONST STRING MOBNAME_ORE_GOLD				= "Lump of Gold";
 
 CONST STRING MOBNAME_SARCOPHAGUS			= "Sarcophagus";
 
@@ -1406,10 +1411,14 @@ var int TabakBlend;
 // MOBSI
 // ***************
 
-const int	MOBSI_OREHACKEN					= 8;
-const int	MOBSI_CAULDRON					= 9;
-const int	MOBSI_PAN						= 10;	
-const int	MOBSI_PRAYADANOS				= 11;
+const int	MOBSI_ORE_MAGIC					= 8;
+const int	MOBSI_ORE_BLOOD					= 9;
+const int	MOBSI_ORE_BLACK					= 10;
+const int	MOBSI_WOODCUTTING				= 11;
+const int	MOBSI_LEATHERWORK				= 12;
+const int	MOBSI_CAULDRON					= 13;
+const int	MOBSI_PAN						= 14;	
+const int	MOBSI_PRAYADANOS				= 15;
 
 
 

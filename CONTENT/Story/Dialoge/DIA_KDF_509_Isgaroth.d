@@ -246,7 +246,7 @@ FUNC INT DIA_Isgaroth_Vatras_Condition()
 	if (MIS_Vatras_Message == LOG_RUNNING)
 	&& ((Npc_HasItems (other,ItWr_VatrasMessage) == 1)
 	||  (Npc_HasItems (other,ItWr_VatrasMessage_open) == 1)
-	||  (Npc_HasItems (other,ITWR_REVIVED_VATRASMESSAGE_COPY) == 1))
+	||  (Npc_HasItems (other,ITMS_REVIVED_VATRASMESSAGE_COPY) == 1))
 	{
 		return TRUE;
 	};	
@@ -258,7 +258,7 @@ FUNC VOID DIA_Isgaroth_Vatras_Info()
 	AI_Output (other,self ,"DIA_Isgaroth_Vatras_15_02"); //It's a letter. Here.
 	
 	if (Npc_HasItems (other,ItWr_VatrasMessage) == 1)
-	|| (Npc_HasItems (other,ITWR_REVIVED_VATRASMESSAGE_COPY) == 1)
+	|| (Npc_HasItems (other,ITMS_REVIVED_VATRASMESSAGE_COPY) == 1)
 	{
 		if (Npc_HasItems (other,ItWr_VatrasMessage) == 1)
 		{
@@ -267,11 +267,11 @@ FUNC VOID DIA_Isgaroth_Vatras_Info()
 				Npc_RemoveInvItems (self,ItWr_VatrasMessage,1);
 			};
 		}
-		else if (Npc_HasItems (other,ITWR_REVIVED_VATRASMESSAGE_COPY) == 1)
+		else if (Npc_HasItems (other,ITMS_REVIVED_VATRASMESSAGE_COPY) == 1)
 		{
-			if B_GiveInvItems (other,self ,ITWR_REVIVED_VATRASMESSAGE_COPY,1)
+			if B_GiveInvItems (other,self ,ITMS_REVIVED_VATRASMESSAGE_COPY,1)
 			{
-				Npc_RemoveInvItems (self,ITWR_REVIVED_VATRASMESSAGE_COPY,1);
+				Npc_RemoveInvItems (self,ITMS_REVIVED_VATRASMESSAGE_COPY,1);
 			};
 		};
 		B_UseFakeScroll();

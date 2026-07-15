@@ -766,7 +766,7 @@ func void STARTUP_DEMONTOWER ()
 	Wld_InsertNpc				(Skeleton,"DT_E3_04");
 	Wld_InsertNpc				(Skeleton,"DT_E3_07");
 
-	Wld_InsertItem	(ItMi_Zeitspalt_Addon,"FP_ITEM_XARDASALTERTURM_01");
+	Wld_InsertItem				(ITMI_REVIVED_BLACKORE,"FP_ITEM_XARDASALTERTURM_01");
 };
 
 	func void INIT_SUB_DEMONTOWER ()

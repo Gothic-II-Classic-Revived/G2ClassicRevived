@@ -36,7 +36,6 @@ FUNC INT PC_CookFood_End_Condition ()
 
 FUNC VOID PC_CookFood_End_Info()
 {
-	CreateInvItems (self, ITMI_SCOOP,1);
 	B_ENDPRODUCTIONDIALOG ();
 };
 
