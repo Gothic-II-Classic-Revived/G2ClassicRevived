@@ -88,8 +88,7 @@ INSTANCE BloodflyJuvenile	(Mst_Default_Bloodfly)
 	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 		
-	//B_SetVisuals_BloodflyJuvenile();
-	B_SetVisuals_Bloodfly();
+	B_SetVisuals_BloodflyJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 };

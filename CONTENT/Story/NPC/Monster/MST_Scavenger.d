@@ -59,7 +59,7 @@ func void B_SetVisuals_ScavengerJuvenile()
 {
 	Mdl_SetVisual			(self,	"Scavenger.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"SCAVENGER_FEATHER",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"SCAVENGER_JUVENILE",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 
@@ -89,8 +89,7 @@ INSTANCE ScavengerJuvenile	(Mst_Default_Scavenger)
 	protection	[PROT_FLY]			=	10;
 	protection	[PROT_MAGIC]		=	0;
 
-	//B_SetVisuals_ScavengerJuvenile();
-	B_SetVisuals_Scavenger();
+	B_SetVisuals_ScavengerJuvenile();
 	
 	Mdl_SetModelScale(self, 0.8, 0.8, 0.8);
 	Npc_SetToFistMode(self);
