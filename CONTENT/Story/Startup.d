@@ -871,11 +871,14 @@ func void STARTUP_SURFACE ()
 
 
 	// Exchange Place			
-	Wld_InsertNpc       (OrcElite_Sit,"WP_INTRO06_TREES");
-	Wld_InsertNpc       (OrcWarrior_Rest,"WP_INTRO04");	
+	Wld_InsertNpc       (OrcElite_Sit,"OW_EXCHANGE_022");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_EXCHANGE_020");	
 	
-	Wld_InsertNpc       (OrcWarrior_Roam,"WP_INTRO_WI07_005");			
-	Wld_InsertNpc       (OrcWarrior_Roam,"WP_INTRO_WI07");
+	Wld_InsertNpc       (OrcWarrior_Roam,"OW_EXCHANGE_006");	
+	Wld_InsertNpc       (OrcWarrior_Roam,"OW_EXCHANGE_010");	
+	
+	Wld_InsertNpc       (OrcWarrior_Roam,"OW_EXCHANGE_002");			
+	Wld_InsertNpc       (OrcWarrior_Roam,"OW_EXCHANGE_002");
 		
 	Wld_InsertNpc       (OrcWarrior_Roam,"OW_PATH_1_16_8");	
 	Wld_InsertNpc       (OrcWarrior_Roam,"OW_PATH_1_16_4");
